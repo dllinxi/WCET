@@ -1,0 +1,7 @@
+.deps
+Makefile.in
+Makefile
+*.a
+*.o
+*.so
+*.efi

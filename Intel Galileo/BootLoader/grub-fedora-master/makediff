@@ -1,0 +1,21 @@
+#!/bin/bash
+(
+cat << EOF
+From: Peter Jones <pjones@redhat.com>" 
+Date: $(date)
+Subject: [PATCH] Changes from grub-0.97 to master
+
+This patch is a bundle of the changes between grub-0.97 and master.
+It can be reginerated from the git repository at:
+
+git://github.com/vathpela/grub-fedora.git
+
+Using the command:
+
+git diff grub-0.97 master
+
+EOF
+git diff grub-0.97 master | diffstat -p1
+echo
+git diff grub-0.97 master
+) | cat

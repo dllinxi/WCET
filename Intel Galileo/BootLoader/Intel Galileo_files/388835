@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta property="og:site_name" content="爱范儿" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.ifanr.com/388835" />
+<meta property="og:title" content="x86 版的 Arduino 来了，Intel Galileo 开发板的体验、分析和应用【超长文多图】" />
+<meta property="og:image" content="http://images.ifanr.cn/wp-content/uploads/2013/12/147.jpg" />
+<meta name="weibo: article:create_at" content="2013-12-16 18:19:08" />
+<meta name="weibo: article:update_at" content="2013-12-16 23:57:01" />
+  <meta name="MSSmartTagsPreventParsing" content="true"/>
+  <meta http-equiv="imagetoolbar" content="no"/>
+  <meta name="robots" content="all"/>
+  <title> x86 版的 Arduino 来了，Intel Galileo 开发板的体验、分析和应用【超长文多图】 | 爱范儿 </title>
+  <link rel="dns-prefetch" href="//7tn0u2fl3q-dsn.algolia.net/">
+  <link rel="dns-prefetch" href="//at.alicdn.com/">
+  <link rel="dns-prefetch" href="//ifanr-cdn.b0.upaiyun.com/">
+  <link rel="dns-prefetch" href="//ifanr.b0.upaiyun.com/">
+  <link rel="dns-prefetch" href="//mindstore.io/">
+  <link rel="dns-prefetch" href="//sso.ifanr.com/">
+    <meta property="og:site_name" content="爱范儿" />
+  <meta property="og:type" content="article" />
+      <meta property="og:url" content="http://www.ifanr.com" />
+      
+<!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
+<meta name="description" content="RobotPeak 是上海的一家硬件创业团队，团队致力于民用机器人平台系统、机器人操作系统（ROS）以及相关设备的设计研发，并尝试将日新月异的机器人技术融入人们的日常生活与娱乐当中。同时，RobotPeak..." />
+<meta name="keywords" content="ifanr, 爱范儿, 产品, arduino, galileo, intel, linux, usb, windows" />
+<meta property="og:site_name" content="爱范儿" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="x86 版的 Arduino 来了，Intel Galileo 开发板的体验、分析和应用【超长文多图】" />
+<meta property="og:url" content="http://www.ifanr.com/388835" />
+<meta property="og:description" content="RobotPeak 是上海的一家硬件创业团队，团队致力于民用机器人平台系统、机器人操作系统（ROS）以及相关设备的设计研发，并尝试将日新月异的机器人技术融入人们的日常生活与娱乐当中。同时，RobotPeak..." />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:updated_time" content="2013-12-16T23:57:01+00:00" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/145.jpg" />
+<meta property="og:image:width" content="1269" />
+<meta property="og:image:height" content="956" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/146.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="451" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/228.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="425" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/317.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="381" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/412.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="288" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/510.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="261" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/69.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="426" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/73.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="405" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/81.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="489" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/9.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/101.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="304" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1114.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="482" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1210.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="253" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1310.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="293" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/14.png" />
+<meta property="og:image:width" content="1091" />
+<meta property="og:image:height" content="881" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/15.png" />
+<meta property="og:image:width" content="465" />
+<meta property="og:image:height" content="531" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/161.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="589" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/171.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="499" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/181.jpg" />
+<meta property="og:image:width" content="462" />
+<meta property="og:image:height" content="384" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/191.jpg" />
+<meta property="og:image:width" content="402" />
+<meta property="og:image:height" content="334" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/20.jpg" />
+<meta property="og:image:width" content="548" />
+<meta property="og:image:height" content="456" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/2110.jpg" />
+<meta property="og:image:width" content="556" />
+<meta property="og:image:height" content="685" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/229.jpg" />
+<meta property="og:image:width" content="382" />
+<meta property="og:image:height" content="262" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/231.jpg" />
+<meta property="og:image:width" content="555" />
+<meta property="og:image:height" content="435" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/241.jpg" />
+<meta property="og:image:width" content="572" />
+<meta property="og:image:height" content="252" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/251.jpg" />
+<meta property="og:image:width" content="1387" />
+<meta property="og:image:height" content="1158" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/261.jpg" />
+<meta property="og:image:width" content="564" />
+<meta property="og:image:height" content="283" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/271.jpg" />
+<meta property="og:image:width" content="892" />
+<meta property="og:image:height" content="820" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/281.jpg" />
+<meta property="og:image:width" content="545" />
+<meta property="og:image:height" content="187" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/30.jpg" />
+<meta property="og:image:width" content="804" />
+<meta property="og:image:height" content="888" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/318.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="441" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/321.jpg" />
+<meta property="og:image:width" content="535" />
+<meta property="og:image:height" content="556" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/331.jpg" />
+<meta property="og:image:width" content="553" />
+<meta property="og:image:height" content="345" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/341.jpg" />
+<meta property="og:image:width" content="710" />
+<meta property="og:image:height" content="402" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/351.jpg" />
+<meta property="og:image:width" content="245" />
+<meta property="og:image:height" content="230" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/361.jpg" />
+<meta property="og:image:width" content="173" />
+<meta property="og:image:height" content="162" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/371.jpg" />
+<meta property="og:image:width" content="554" />
+<meta property="og:image:height" content="272" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/381.jpg" />
+<meta property="og:image:width" content="572" />
+<meta property="og:image:height" content="126" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/391.jpg" />
+<meta property="og:image:width" content="580" />
+<meta property="og:image:height" content="343" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/40.jpg" />
+<meta property="og:image:width" content="988" />
+<meta property="og:image:height" content="651" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/413.jpg" />
+<meta property="og:image:width" content="1127" />
+<meta property="og:image:height" content="556" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/421.jpg" />
+<meta property="og:image:width" content="1194" />
+<meta property="og:image:height" content="578" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/431.jpg" />
+<meta property="og:image:width" content="836" />
+<meta property="og:image:height" content="831" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/441.jpg" />
+<meta property="og:image:width" content="225" />
+<meta property="og:image:height" content="242" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/451.jpg" />
+<meta property="og:image:width" content="554" />
+<meta property="og:image:height" content="195" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/461.jpg" />
+<meta property="og:image:width" content="547" />
+<meta property="og:image:height" content="232" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/462.jpg" />
+<meta property="og:image:width" content="547" />
+<meta property="og:image:height" content="232" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/471.jpg" />
+<meta property="og:image:width" content="882" />
+<meta property="og:image:height" content="476" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/491.jpg" />
+<meta property="og:image:width" content="821" />
+<meta property="og:image:height" content="196" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/50.jpg" />
+<meta property="og:image:width" content="869" />
+<meta property="og:image:height" content="195" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/511.jpg" />
+<meta property="og:image:width" content="464" />
+<meta property="og:image:height" content="318" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/521.jpg" />
+<meta property="og:image:width" content="865" />
+<meta property="og:image:height" content="596" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/531.jpg" />
+<meta property="og:image:width" content="1152" />
+<meta property="og:image:height" content="748" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/541.jpg" />
+<meta property="og:image:width" content="984" />
+<meta property="og:image:height" content="482" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/551.jpg" />
+<meta property="og:image:width" content="271" />
+<meta property="og:image:height" content="341" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/561.jpg" />
+<meta property="og:image:width" content="919" />
+<meta property="og:image:height" content="645" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/571.jpg" />
+<meta property="og:image:width" content="758" />
+<meta property="og:image:height" content="590" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/581.jpg" />
+<meta property="og:image:width" content="1270" />
+<meta property="og:image:height" content="789" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/591.jpg" />
+<meta property="og:image:width" content="704" />
+<meta property="og:image:height" content="426" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/60.jpg" />
+<meta property="og:image:width" content="1269" />
+<meta property="og:image:height" content="702" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/611.jpg" />
+<meta property="og:image:width" content="711" />
+<meta property="og:image:height" content="421" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/147.jpg" />
+<meta property="og:image:width" content="600" />
+<meta property="og:image:height" content="375" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2013-12-16T18:19:08+00:00" />
+<meta property="article:modified_time" content="2013-12-16T23:57:01+00:00" />
+<meta property="article:author" content="http://www.ifanr.com/author/weifanr" />
+<meta property="article:publisher" content="http://www.ifanr.com/" />
+<meta property="article:section" content="产品" />
+<meta property="article:tag" content="ifanr" />
+<meta property="article:tag" content="爱范儿" />
+<meta property="article:tag" content="产品" />
+<meta property="article:tag" content="arduino" />
+<meta property="article:tag" content="galileo" />
+<meta property="article:tag" content="intel" />
+<meta property="article:tag" content="linux" />
+<meta property="article:tag" content="usb" />
+<meta property="article:tag" content="windows" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@ifanr" />
+<meta name="twitter:title" content="x86 版的 Arduino 来了，Intel Galileo 开发板的体验、分析和应用【超长文多图】" />
+<meta name="twitter:description" content="RobotPeak 是上海的一家硬件创业团队，团队致力于民用机器人平台系统、机器人操作系统（ROS）以及相关设备的设计研发，并尝试将日新月异的机器人技术融入人们的日常生活与娱乐当中。同时，RobotPeak..." />
+<meta name="twitter:image:src" content="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/145.jpg" />
+<meta name="twitter:image:width" content="1269" />
+<meta name="twitter:image:height" content="956" />
+<!-- END Metadata added by Add-Meta-Tags WordPress plugin -->
+
+<link rel='dns-prefetch' href='//images.ifanr.cn' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel='stylesheet' id='doge-style-css'  href='//images.ifanr.cn/wp-content/themes/ifanr-4.0/static/dist/app-8df68ab2a2.min.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='widgetbuzz-css'  href='//images.ifanr.cn/wp-content/plugins/ifanr-widget-buzz/dist/build/buzz.auto_create_ts_1446046962.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='http://www.ifanr.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.ifanr.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://images.ifanr.cn/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Quebee：解放双手的移动摄像头' href='http://www.ifanr.com/389113' />
+<link rel='next' title='有无“数据摩尔定律”？' href='http://www.ifanr.com/389155' />
+<link rel="canonical" href="http://www.ifanr.com/388835" />
+<link rel="alternate" type="application/json+oembed" href="http://www.ifanr.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.ifanr.com%2F388835" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.ifanr.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.ifanr.com%2F388835&#038;format=xml" />
+<script type="text/javascript">
+/* Try to get out of frames! */
+if ( window.top != window.self ) {
+  window.top.location = self.location.href
+}
+
+var ga = ga || function() {(ga.q = ga.q || []).push(arguments)};
+</script>
+  
+  <script>
+    USER = {};
+    USER.SSO_URL_MYACCOUNT = 'https://sso.ifanr.com/myaccount/';
+    USER.SSO_URL_LOGIN = 'https://sso.ifanr.com/embed/login/?referer=http://www.ifanr.com/';
+    USER.SSO_URL_REGISTER = 'https://sso.ifanr.com/embed/login/#register?referer=http://www.ifanr.com/';
+    USER.SSO_URL_LOGOUT = 'https://sso.ifanr.com/logout/';
+    USER.SSO_USER_AVATAR = 'http://media.ifanrusercontent.com/media/user_files/uploaded/7b/fa/7bfa1010e44205abd5b240848b827f33e96f41f6-db765e23ddb307402d79e385612cba5c4fdfe70b.jpg';
+    USER.SSO_USER_ACTIVITY = 'https://sso.ifanr.com/myactivity/';
+
+    IFR = {};
+    IFR.apiUrl = '/api/v3.0/';
+    IFR.slideNum = 6;
+    IFR.apiNonce = {
+      appkey: 'lI5287M8UyxBI98U2YKq',
+      timestamp: '1515633201',
+      sign: 'f7c6b565863b030c494b22a2ee2ae8f2'
+    };
+
+      </script>
+<style>#BAIDU_DSPUI_FLOWBAR,.adsbygoogle,.ad,div[class^="ad-widsget"],div[id^="div-gpt-ad-"],a[href*="cpro.baidu.com"],a[href*="@"][href*=".exe"],a[href*="/?/"][href*=".exe"],.adpushwin{display:none !important;}</style></head>
+
+<body class="post-template-default single single-post postid-388835 single-format-standard single-featured" data-component="TextClamp">
+<div class="sidebar-drawer-menu-overlay js-drawer-menu-overlay--hide"
+    data-component="DrawerMenuOverlay">
+  <div class="sidebar-drawer-menu">
+    <header class="sidebar-drawer-menu__title menu-wrap-seprator">分类</header>
+    <div class="menu-wrap">
+      <ul>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/ces2018">CES 2018</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/ifanq">ifanQ</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/top-rank">ifanRank</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/mindtalk">MindTalk</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/product">产品</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/people">人物</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/business">公司</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/%e5%9b%be%e8%ae%b0">图记</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/%e5%b9%bf%e5%91%8a">广告</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/innovation">新创</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/ifanrnews">早报</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/game-special">游戏</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/special">特稿</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/life">生活</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/%e8%8c%83%e8%af%84">范评</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/intelligentcar">董车会</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/video">视频</a></li>
+                <li class="menu-wrap__item menu-wrap-seprator"><a href="http://www.ifanr.com/category/review">评测</a></li>
+              </ul>
+            <div class="special-section">
+              </div>
+    </div>
+  </div>
+</div>
+  <header class="c-global-header">
+  <div class="c-header-sns">
+  <div class="c-header-sns__icons">
+    <a class="ifanrx-weibo ifanrx"
+       href="http://weibo.com/ifanr"></a>
+    <a class="ifanrx-wechat ifanrx"
+       href="http://www.ifanr.com/weixin"></a>
+    <a class="ifanrx-twitter ifanrx"
+       href="https://twitter.com/ifanr"></a>
+    <a class="ifanrx-rss ifanrx"
+       href="http://www.ifanr.com/feed"></a>
+  </div>
+  <div class="c-header-sns__about">
+    <div class="c-header-sns__about--hover" href="javascript:;"><i class="ifanrx ifanrx-phone"></i>下载客户端</div>
+    <div class="c-download-client o-navbar-tooltip">
+      <div class="c-download-client-logo">
+        <img src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/ifanr/top-nav-down-logo.png" alt="爱范儿 logo">
+        <span class="c-download-client-logo__corp-name">爱范儿</span>
+        <span class="c-download-client-logo__device">iPhone & Android</span>
+      </div>
+      <img class="c-download-client__down" src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/ifanr-qrcode.png!100" alt="下载客户端">
+    </div>
+    <a href="http://www.ifanr.com/about/">关于我们</a>
+    <a href="http://www.ifanr.com/about/contribute/" ga-bind="click" ga-category="Bar" ga-action="Report">寻求报道</a>
+    <a href="https://www.lagou.com/gongsi/j25623.html" target="_blank">加入我们</a>
+  </div>
+</div>
+
+
+  <div class="c-header-navbar" data-component="Navbar">
+  <div class="c-header-navbar__menu" data-component="SidebarDrawerMenu">
+    <a class="ifanrx-menu ifanrx" ga-bind="click" ga-category="Head" ga-action="menu"></a>
+  </div>
+  <div class="c-header-navbar__content">
+    <div class="c-header-navbar－content__left">
+      <a href="http://www.ifanr.com/"><img class="c-header-navbar__logo" src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/ifanr/logo.png"></a>
+      <ul class="c-header-navigation">
+        <li class="c-header-navigation__item ">
+          <a href="http://www.ifanr.com/" target="_blank" ga-bind="click" ga-category="Head" ga-action="column" ga-label="home">首页</a>
+        </li>
+        <li class="c-header-navigation__item">
+          <a href="https://ifanr.in" target="_blank" ga-bind="click" ga-category="Head" ga-action="column" ga-label="coolbuy">玩物店</a>
+        </li>
+        <li class="c-header-navigation__item ">
+          <a href="/app/" target="_blank" ga-bind="click" ga-category="Head" ga-action="column" ga-label="appso">AppSo</a>
+        </li>
+        <li class="c-header-navigation__item">
+          <a href="/category/intelligentcar/" target="_blank" ga-bind="click" ga-category="Head" ga-action="column" ga-label="dongchehui">董车会</a>
+        </li>
+        <li class="c-header-navigation__item">
+          <a href="https://cloud.minapp.com/" target="_blank" ga-bind="click" ga-category="Head" ga-action="column" ga-label="mindstore">知晓云</a>
+        </li>
+        <li class="c-header-navigation__item">
+          <a href="https://minapp.com/" target="_blank" ga-bind="click" ga-category="Head" ga-action="column" ga-label="minapp">知晓程序</a>
+        </li>
+      </ul>
+    </div>
+    <div class="c-header-navbar－content__right">
+      <div class="c-header-navbar__search">
+        <div class="c-header-search__input">
+          <input class="js-navbar-search-input" type="input" name="" placeholder="iPhone 8" ga-bind="click" ga-category="Head" ga-action="search" ga-label="inputbox">
+          <i class="js-navbar-search-input-btn ifanrx-search ifanrx" ga-bind="click" ga-category="Head" ga-action="search" ga-label="searchbutton"></i>
+        </div>
+        <div class="js-navbar-search-box c-header-search__box is-hidden"  data-hot-word="true">
+          <div class="js-navbar-latest-search">
+          </div>
+                      <ul class="c-header-search__hot-word">
+              <li class="c-header-search-hot__title">最近大家在搜</li>
+                              <li><a href="http://www.ifanr.com/search/?query=iPhone 8" ga-bind="click" ga-category="Head" ga-action="search" ga-label="hotsearching">iPhone 8</a></li>
+                              <li><a href="http://www.ifanr.com/search/?query=优衣库" ga-bind="click" ga-category="Head" ga-action="search" ga-label="hotsearching">优衣库</a></li>
+                              <li><a href="http://www.ifanr.com/search/?query=共享单车" ga-bind="click" ga-category="Head" ga-action="search" ga-label="hotsearching">共享单车</a></li>
+                              <li><a href="http://www.ifanr.com/search/?query=小程序" ga-bind="click" ga-category="Head" ga-action="search" ga-label="hotsearching">小程序</a></li>
+                              <li><a href="http://www.ifanr.com/search/?query=星巴克" ga-bind="click" ga-category="Head" ga-action="search" ga-label="hotsearching">星巴克</a></li>
+                          </ul>
+                  </div>
+      </div>
+      <ul class="c-global-navbar__user c-user-bar" data-component="SSOUser">
+        <li class="js-navbar-user-unauthenticated c-user-bar__unauthenticated">
+          <a class="c-global-navbar-login js-button-login" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="login">登录</a>
+        </li>
+        <li class="js-navbar-user-authenticated c-user-bar__authenticated is-hidden">
+          <a href="https://sso.ifanr.com/mymessage/" class="c-user-bar__message ifanrx ifanrx-message" ga-bind="click" ga-category="Head" ga-action="Notification" ga-label="on">
+            <i class="js-message-dot c-user-bar__dot hidden"></i>
+          </a>
+          <img class="js-user-avatar c-user-bar__avatar"  src="" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="enter">
+        </li>
+      </ul>
+    </div>
+
+    <div class="user-pannel hidden" id="userPannel">
+  <div class="user-activity" data-component="Scrollbar">
+    <div class="user-activity-holder" ga-bind="hover" ga-category="Head" ga-action="Profile" ga-label="recent">
+      <h2>最近动态</h2>
+      <div class="user-activity-list" id="userActivityList">
+        <span class="c-loading"></span>
+      </div>
+    </div>
+  </div>
+  <div class="user-card">
+    <div class="user-info">
+      <img class="user-info__avatar" src="#" alt="" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="avator">
+      <span class="user-info__nickname"></span>
+      <a href="https://sso.ifanr.com/myaccount/" target="_blank" class="cover-block"></a>
+    </div>
+    <ul class="user-nav">
+      <li><a href="https://sso.ifanr.com/myactivity/" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="myrecent" target="_blank">我的动态<i class="ifanrx ifanrx-arrow-right"></i></a></li>
+      <li><a href="https://sso.ifanr.com/mymessage/" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="notice" target="_blank">消息中心<i class="ifanrx ifanrx-arrow-right"></i><span class="notification-count"></span></a></li>
+      <li><a href="https://sso.ifanr.com/mycollection/" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="mycollection" target="_blank">我的收藏<i class="ifanrx ifanrx-arrow-right"></i></a></li>
+      <li><a href="https://sso.ifanr.com/myaccount/" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="mysetting" target="_blank">账户设置<i class="ifanrx ifanrx-arrow-right"></i></a></li>
+    </ul>
+    <a href="https://sso.ifanr.com/logout/" class="user-card__logout-link" ga-bind="click" ga-category="Head" ga-action="Profile" ga-label="logout"><i class="ifanrx ifanrx-arrow-right"></i>退出登录</a>
+  </div>
+</div>
+  </div>
+</div>
+</header>
+  <div class="c-article-header c-article-header--featured o-full-width" style="background-image:url('http://images.ifanr.cn/wp-content/uploads/2013/12/147.jpg!1120')">
+    <div class="o-wrapper o-wrapper--medium">
+      <div class="c-article-header-meta">
+        <a class="text-link" href="http://www.ifanr.com/category/product" target="_blank">
+          <span class="c-article-header-meta__category">产品</span>
+        </a>
+        <span class="c-article-header-meta__time">2013-12-16 18:19</span>
+      </div>
+      <h1 class="c-article-header__title">x86 版的 Arduino 来了，Intel Galileo 开发板的体验、分析和应用【超长文多图】</h1>
+      <div class="o-article-header__author c-article-header__author">
+        <a class="c-article-header__author__name-link" href="http://www.ifanr.com/author/weifanr" target="_blank">
+          <img class="o-article-header__author__avatar c-article-header__author__avatar" src="http://tva4.sinaimg.cn/crop.30.58.925.925.180/61e9ece0gw1f20zs3o51mj20sg0sgdh1.jpg" alt="爱范儿">
+          <span class="o-article-header__author__name c-article-header__author__name">爱范儿</span>
+        </a>
+        <span class="o-article-header__author__job c-article-header__author__job">编辑</span>
+      </div>
+      <div class="c-article-header__social c-social-bar c-social-bar--horizontal c-social-bar--darken"
+           data-component="SocialBar"
+           data-post-title="x86 版的 Arduino 来了，Intel Galileo 开发板的体验、分析和应用【超长文多图】"
+           data-post-link="http%3A%2F%2Fwww.ifanr.com%2F388835"
+           data-post-summary="
+RobotPeak 是上海的一家硬件创业团队，团队致力于民用机器人平台系统、机器人操作系统（ROS）以及相关设备的设计研发，并尝试将日新月异的机器人技术融入人们的日常生活与娱乐当中。同时，RobotPeak 将尽力为机器人技术在开源硬件..."
+           data-post-id="388835"
+           data-post-id="388835">
+        <div class="c-social-bar__counter"><b class="js-share-counter">-</b>SHARES</div>
+        <a class="c-social-bar__icon c-social-bar__icon--weibo" data-weibo target="_blank"></a>
+        <div class="c-social-bar__icon c-social-bar__icon--wechat">
+          <div class="c-social-bar__icon--wechat__qrcode c-popup-qrcode">
+            <div class="c-popup-qrcode__title">分享到微信</div>
+            <div class="js-qrcode" data-qrcode-class="c-popup-qrcode__image"></div>
+            <div class="c-popup-qrcode__hint">使用微信扫码将网页分享到微信</div>
+          </div>
+        </div>
+        <a class="c-social-bar__icon c-social-bar__icon--twitter" data-twitter target="_blank"></a>
+        <a class="c-social-bar__icon c-social-bar__icon--linkedin" data-linkedin target="_blank"></a>
+        <a class="c-social-bar__icon c-social-bar__icon--douban" data-douban target="_blank"></a>
+        <a class="c-social-bar__icon c-social-bar__icon--qzone" data-qzone target="_blank"></a>
+                <a class="c-social-bar__icon c-social-bar__icon--comments js-goto-comments" data-share-ignored></a>
+      </div>
+    </div>
+  </div>  <div class="o-wrapper o-wrapper--medium c-article-content--featured">
+    <div class="c-article-meta c-article-meta--medium"
+         id="article-content" >
+      <div class="c-article-tags">
+                  <a href="http://www.ifanr.com/tags/arduino" class="c-article-tags__item">Arduino</a>
+                  <a href="http://www.ifanr.com/tags/galileo" class="c-article-tags__item">Galileo</a>
+                  <a href="http://www.ifanr.com/tags/intel" class="c-article-tags__item">Intel</a>
+                  <a href="http://www.ifanr.com/tags/linux" class="c-article-tags__item">Linux</a>
+                  <a href="http://www.ifanr.com/tags/usb" class="c-article-tags__item">USB</a>
+                  <a href="http://www.ifanr.com/tags/windows" class="c-article-tags__item">windows</a>
+              </div>
+      <div class="c-card-meta c-article-sns" data-component="ArticleContentMeta" data-post-id="388835">
+        <span class="c-article-sns__info c-card-meta__info c-card-meta__info--like js-article-like-count" data-component="Like" data-post-id="388835">-</span>
+        <span class="c-article-sns__info c-card-meta__info c-card-meta__info--comments js-article-comment-count js-goto-comments">-</span>
+      </div>
+    </div>
+    <aside class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
+       data-component="SocialBar"
+       data-post-title="x86 版的 Arduino 来了，Intel Galileo 开发板的体验、分析和应用【超长文多图】"
+       data-post-link="http%3A%2F%2Fwww.ifanr.com%2F388835"
+       data-post-summary="
+RobotPeak 是上海的一家硬件创业团队，团队致力于民用机器人平台系统、机器人操作系统（ROS）以及相关设备的设计研发，并尝试将日新月异的机器人技术融入人们的日常生活与娱乐当中。同时，RobotPeak 将尽力为机器人技术在开源硬件..."
+       data-post-id="388835"
+       data-fixed-start="#article-content"
+       data-fixed-end="#footerRecPosts">
+  <div class="c-social-bar__counter"><b class="js-share-counter">-</b>SHARES</div>
+  <a class="c-social-bar__icon c-social-bar__icon--weibo" data-weibo target="_blank"></a>
+  <div class="c-social-bar__icon c-social-bar__icon--wechat">
+    <div class="c-social-bar__icon--wechat__qrcode c-popup-qrcode">
+      <div class="c-popup-qrcode__title">分享到微信</div>
+      <div class="js-qrcode" data-qrcode-class="c-popup-qrcode__image"></div>
+      <div class="c-popup-qrcode__hint">使用微信扫码将网页分享到微信</div>
+    </div>
+  </div>
+  <a class="c-social-bar__icon c-social-bar__icon--twitter" data-twitter target="_blank"></a>
+  <a class="c-social-bar__icon c-social-bar__icon--linkedin" data-linkedin target="_blank"></a>
+  <a class="c-social-bar__icon c-social-bar__icon--douban" data-douban target="_blank"></a>
+  <a class="c-social-bar__icon c-social-bar__icon--qzone" data-qzone target="_blank"></a>
+    <!--<button class="c-social-bar__icon c-social-bar__icon--comments js-goto-comments" data-share-ignored></button>-->
+</aside>
+    <div class="c-article-content c-article-content--medium">
+      <article class="c-article-content__body s-single-article js-article">
+        
+<blockquote><p><a href="http://www.robopeak.com/index.php">RobotPeak </a>是上海的一家<a href="http://www.ifanr.com/295248">硬件创业团队</a>，团队致力于民用机器人平台系统、机器人操作系统（ROS）以及相关设备的设计研发，并尝试将日新月异的机器人技术融入人们的日常生活与娱乐当中。同时，RobotPeak 将尽力为机器人技术在开源硬件、开源软件社区的普及做出贡献。陈士凯是 RobotPeak 联合创始人，他给我们带来了最新的  x86 构架的 Arduino 开发板 Intel Galileo 的深度使用报告。</p></blockquote>
+<h3>1.前言</h3>
+<p>在今年(2013)罗马举办的首届欧洲 Make Faire 上，Intel 向对外发布了采用 x86 构架的 Arduino 开发板：Intel Galileo。这无疑是一个开源硬件领域的重磅消息。作为 CPU 领域的巨头 Intel，为开源硬件 /Maker 领域这个从前相对小众的圈子推出专门的硬件，无疑说明对开源硬件领域发展的重视程度。同时，Intel 也作为本届欧洲 Maker Faire 的主要赞助商。<!--more--></p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/146.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388843" alt="1" src="http://images.ifanr.cn/wp-content/uploads/2013/12/146.jpg" width="600" height="451" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/146.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/146-360x270.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">开发板，图片来自 </span>intel.com</p>
+<p>在 PC 行业，Intel x86 构架的强大性能一直被行业称道，自然这次推出的 Arduino 开发板，也给业界带来了无限的遐想。我相信很多人都会略带调侃问：这个开发板能不能运行 Windows 这样的问题。同时，相信也有不少人会关心 Intel Galileo 的功耗问题，以及开发使用上是否具有难度。</p>
+<p>作为曾在 Intel 工作过的作者，对老东家能够推出针对开源硬件市场的产品感到欣慰。通过朋友，我也有幸在较早时间拿到了一块 Intel Galileo。经过了一段时间的使用和体验，这里我就将我们对 Intel Galileo 的一些使用体验向大家分享。并且作为开源硬件和机器人开发的从业人员，聊聊 Intel Galileo 到底可以给我们带来哪些想象空间？</p>
+<p>这里也先针对那个调侃问题做个回应：<strong>是的，通过软件的调整，Intel Galileo 的确可以运行 Windows。</strong></p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/228.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388845" alt="2" src="http://images.ifanr.cn/wp-content/uploads/2013/12/228.jpg" width="600" height="425" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/228.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/228-360x255.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：使用 <span style="font-family: Calibri;">RoboPeak </span><span style="font-family: 宋体;">微型 </span><span style="font-family: Calibri;">USB </span><span style="font-family: 宋体;">显示屏，给 </span><span style="font-family: Calibri;">Galileo </span><span style="font-family: 宋体;">增加显示屏变成标准 </span><span style="font-family: Calibri;">PC</span></p>
+<h3>2.开箱体验与基本使用</h3>
+<p><strong>2.1 开箱体验</strong></p>
+<p>由于 Intel Galileo 对外批量出货还有一段时间，所以这里先给大家介绍开箱的过程。Intel 在外包装设计上也下了不少功夫，也有一些小惊喜，作为一贯的标志性色彩，Intel Galileo 的小盒子也用了与 Intel Logo 一样的蓝色，封面上的那个老人头像我想应该就是 Galileo 本人吧。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/317.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388853" alt="3" src="http://images.ifanr.cn/wp-content/uploads/2013/12/317.jpg" width="600" height="381" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/317.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/317-360x228.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>打开包装后，就能看到 Galileo 电路板了，还有一些说明书等。盒子的内部是表示 Intel 芯片线路的装饰画。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/412.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388855" alt="4" src="http://images.ifanr.cn/wp-content/uploads/2013/12/412.jpg" width="600" height="288" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/412.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/412-360x172.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/510.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388857" alt="5" src="http://images.ifanr.cn/wp-content/uploads/2013/12/510.jpg" width="600" height="261" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/510.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/510-360x156.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：简介的说明文档</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/69.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388859" alt="6" src="http://images.ifanr.cn/wp-content/uploads/2013/12/69.jpg" width="600" height="426" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/69.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/69-360x255.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：Intel Galileo <span style="font-family: 宋体;">电路板用防静电袋包装着</span></p>
+<p>在电路板旁边印着 Intel 为 Galileo 设计的宣传语：What will you make？ 在取出电路板的时候，突然从盒子里发出了 Intel 那令人熟悉的“灯，等灯等灯！”的音乐，这着实令人大吃一惊。这样一个看似细小的设计，却在客户打开包装是带来了巨大的惊喜，真的很用心！而这种感受可能也只有亲身体验才能感受到。</p>
+<p>将包装盒第二层拿开，我在这层纸板的背后发现了发出音乐的玄机：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/73.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388861" alt="7" src="http://images.ifanr.cn/wp-content/uploads/2013/12/73.jpg" width="600" height="405" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/73.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/73-360x243.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：包装盒背面暗藏的光敏发音盒</p>
+<p>不过这个发音盒只是个音乐贺卡用的音乐 IC，没啥可 hack 的部分，不然相信它会惨遭全球人民的恶搞修改命运。在打开第二层后，又发现一个小惊喜：Intel 工作服的人偶：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/81.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388863" alt="8" src="http://images.ifanr.cn/wp-content/uploads/2013/12/81.jpg" width="600" height="489" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/81.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/81-360x293.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>盒子中剩余的部分是电源适配器以及兼容不同国家地区插座规格的插头以及 PCB 的固定柱子以及 micro-usb 线。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/9.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388865" alt="9" src="http://images.ifanr.cn/wp-content/uploads/2013/12/9.jpg" width="600" height="435" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/9.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/9-360x261.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>就此所有东西都取出了，我们可以感受到 Intel 对这款产品的重视程度。当然为实现这些细节也是要考虑成本的，而最终为此买单的自然就是消费者。不过从目前 Mouser 网站的预订网页看，Intel Galileo 的售价为：$69，考虑到性能和 BOM 成本都较低的 Arduino Yún 同样在 Mouser 上售价为 $76，Intel Galileo 的售价绝对算是厚道了。</p>
+<p><strong>2.2 基本使用方式</strong></p>
+<p>在进一步介绍 Intel Galileo 构造和原理前，先介绍下作为一块 Arduino 开发板的基本使用过程。由于采用了 x86 构架，因此 Arduino 官方 IDE 尚不能直接用于 Intel Galileo，并且为基于传统 AVR 芯片设计的 Arduino 程序和库也可能需要做出修改。为此，Intel 提供了一个修改版本的 Arduino IDE，可以从 Inte l的 maker 官网 maker.intel.com 下载到[1]。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/101.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388869" alt="10" src="http://images.ifanr.cn/wp-content/uploads/2013/12/101.jpg" width="600" height="304" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/101.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/101-360x182.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel </span><span style="font-family: 宋体;">提供的配套开发工具、驱动等</span></p>
+<p>对于具体的驱动安装和使用，Intel 为用户提供了 Getting Started Guide 文档[2]，这里我也不在重复了。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/1114.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388871" alt="11" src="http://images.ifanr.cn/wp-content/uploads/2013/12/1114.jpg" width="600" height="482" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1114.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1114-360x289.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel </span><span style="font-family: 宋体;">编写的快速上手手册</span></p>
+<p><strong>这里需要提醒大家的是，使用时需要先给 Intel Galileo 使用电源适配器供电，方可再通过 USB 线连接至电脑。</strong>这一点非常重要，因为Galileo 有专门的 DCDC 电源控制，并且启动过程瞬间电流需求较大。如果只连接 USB 企图给电路板供电，则可能会损坏电路板或者电脑。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/1210.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388873" alt="12" src="http://images.ifanr.cn/wp-content/uploads/2013/12/1210.jpg" width="600" height="253" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1210.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1210-360x151.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">需要使用特殊的驱动连接 </span><span style="font-family: Calibri;">PC</span></p>
+<p>在后文我会提到，Intel Galileo 内部运行着 Linux，与 PC 连接时，它需要采用 Intel 专门提供的驱动描述来保证 PC 将它识别为串口设备（仅用于 Windows，MacOS 和 Linux 请参考文档）。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/1310.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388875" alt="13" src="http://images.ifanr.cn/wp-content/uploads/2013/12/1310.jpg" width="600" height="293" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1310.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/1310-360x175.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：被 <span style="font-family: Calibri;">PC </span><span style="font-family: 宋体;">识别为串口的 </span><span style="font-family: Calibri;">Galileo USB </span><span style="font-family: 宋体;">接口</span></p>
+<p>启动 Arduino IDE，此时我们就可以把 Intel Galileo 作为一个标准的 Arduino 开发板使用了：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/14.png" rel="lightbox[388835]"><img class="aligncenter  wp-image-388877" alt="14" src="http://images.ifanr.cn/wp-content/uploads/2013/12/14-1024x826.png" width="600" height="484" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/14-1024x826.png 1024w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/14-360x290.png 360w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/14.png 1091w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：与其他 <span style="font-family: Calibri;">Arduino </span><span style="font-family: 宋体;">开发板一样，</span><span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">也可以在 </span><span style="font-family: Calibri;">Arduino IDE </span><span style="font-family: 宋体;">中进行开发</span></p>
+<p><strong>2.2.1 解决 IDE 闪退问题</strong></p>
+<p>不少已经拿到 Intel Galileo 的朋友都会反映 Intel 提供的 Arduino IDE 会出现“闪退”问题，就是在启动 IDE 出现版本画面后，程序会默默退出。其实这并不是 Intel 的问题，而是新版本 Arduino IDE 的 bug。由于 Intel 定制的 Arduino IDE 采用了还未发布的 1.5.3 版本 IDE，如果当前 OS 的区域设置不是英文（En/US）的话，IDE 就会自己退出。为此，Arduino 开发团队和 Intel 也已经意识到了这个问题，也将在 1.5.4 修复[4]。</p>
+<p>目前为了解决这个问题，最直接的办法就是修改操作系统的语言设置，改为英文即可。不过这样需要重启系统，并且可能会对采用中文的应用程序造成影响。这里我给大家分享一个不用修改系统语言设置的办法，使用一个名为 Locale Emulator 的开源软件[3]：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/15.png" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388879" alt="15" src="http://images.ifanr.cn/wp-content/uploads/2013/12/15.png" width="465" height="531" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/15.png 465w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/15-360x411.png 360w" sizes="(max-width: 465px) 100vw, 465px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Locale Emulator </span><span style="font-family: 宋体;">界面</span></p>
+<p>该软件可以为特定程序虚拟出特定的语言区域配置，而不用修改整个操作系统。使用这个办法，就可以直接使用 Intel Galileo 的 Arduino IDE。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/161.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388881" alt="16" src="http://images.ifanr.cn/wp-content/uploads/2013/12/161.jpg" width="600" height="589" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/161.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/161-360x353.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：使用 <span style="font-family: Calibri;">Locale Emulator </span><span style="font-family: 宋体;">启动 </span><span style="font-family: Calibri;">Arduino IDE</span><span style="font-family: 宋体;">，解决闪退问题</span></p>
+<p><strong> 2.3 发热与功耗</strong></p>
+<p>功耗一直是困扰 x86 平台在移动嵌入式领域应用的重要问题，我对 Intel Galileo 做了几个简单的测试。相比其他 x86 平台，Intel Galileo 功耗的确算小，但是与 ARM/MIPS 等同主频等级的平台相比，就显得大很多。</p>
+<p>在 CPU 几乎空闲的工作状态下，测得的功耗水平是 5V 0.5A，也就是 2.5W 的耗电量。而在启动过程中，会出现 1A 以上的峰值电流。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/171.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388887" alt="17" src="http://images.ifanr.cn/wp-content/uploads/2013/12/171.jpg" width="600" height="499" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/171.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/171-360x299.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">运行的功耗情况</span></p>
+<p>不过考虑到目前 Galileo 中运行的 Linux Kernel 并没有开启动态 CPU 频率控制功能，因此即使在满负荷下，CPU 核心的功耗水平应该相比空闲状态差距不大，因此启动过程中的峰值电流应该是在开启外设产生的瞬间电流造成的。在启动后的工作当中，即使 CPU 满负荷运作，整体的功耗应该会维持在 0.5A 附近。</p>
+<p>这样的功耗水平对于使用电池供电就显得有些压力了，如果使用 2000mAh 3.7V 的锂电池供电，Galileo 理论最长的待机时间是 2.96 小时。</p>
+<p>从发热角度上看，Intel Galileo 采用的 Quark 处理器芯片的 max TDP 是 2.2W，不需要主动散热设备。Intel 也没有给 Galileo 的处理器配置被动散热片。但这并不表示运行过程中就不发热。在工作状态下，即使是 CPU 保持空闲状态，用手摸处理器表面仍旧会觉得烫手，实测的温度在 65 摄氏度左右。</p>
+<h3>3.Intel Galileo 技术浅析</h3>
+<p>通过前文的介绍，大家应该了解到通过 Intel 提供的 Arduino IDE，就可以像标准的 Arduino 版那样进行开发了。不过光是实现标准 Arduino 开发板能做的事情，这完全没法体现出 Intel Galileo 有何特殊之处，最多只能是一个速度更快的 Arduino 罢了。</p>
+<p>如果功能上没有任何比传统 Arduino 过人之处，相信 Intel 也不会推出这样的产品了。其实 Intel Galileo 真正强大之处并不在于前面提到的基于 Arduino IDE 的开发，而是背后基于 UEFI/Linux 的软件平台以及 Galileo 自身的硬件配置。为此，Intel 提供了丰富的开发文档、软件代码支持，方便开发人员真正的发挥出 Galileo 的所有潜力。而要了解使用这些功能，就需要我们更加深入的去了解 Intel Galileo 的内部构成和更深入的软件构架。</p>
+<p>大家可能也会有这几个问题：</p>
+<ul>
+<li> Galileo采用的处理器是Atom处理器还是别的？</li>
+<li> 处理器的功耗问题</li>
+<li> 外设/GPIO等是怎么与CPU互连的</li>
+<li> 有哪些接口和资源可以使用</li>
+<li> Arduino的程序是如何运行的</li>
+<li> Galileo可以运行Windows或者Linux吗？</li>
+</ul>
+<p>这里我将为大家揭开这些谜团。</p>
+<p><strong>3.1 硬件配置与构架分析</strong></p>
+<p>这里我们列出 Galileo 的基本配置：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/181.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388889" alt="18" src="http://images.ifanr.cn/wp-content/uploads/2013/12/181.jpg" width="462" height="384" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/181.jpg 462w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/181-360x299.jpg 360w" sizes="(max-width: 462px) 100vw, 462px" /></a></p>
+<p>Intel Galileo 的系统框图如下：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/20.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388893" alt="20" src="http://images.ifanr.cn/wp-content/uploads/2013/12/20.jpg" width="548" height="456" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/20.jpg 548w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/20-360x299.jpg 360w" sizes="(max-width: 548px) 100vw, 548px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Galileo </span><span style="font-family: 宋体;">的框图，来自 </span><span style="font-family: Calibri;">Galileo Datasheet[5]</span></p>
+<p>画面中最醒目的自然是名为 Quark SoC X1000 的处理器，这块芯片究竟有哪些功能？这个我们稍后再具体分析，不过看起来这块处理器更加像单片机（MCU），除了处理器外传统 x86 构架的南北桥芯片已经不见踪迹，PCIe、USB、串口等外设信号直接是从 Quark 处理器芯片连出。Intel官方也提过，他们会像 80 年代推动嵌入式领域那样(是指 8051？)推广 Quark 处理器构架[10]，从 Galileo 的构架上可见一斑。</p>
+<p>此外还可以注意到 Galileo 配备了共计 256MB 的 DDR3 内存。如此大的内存空间，足以让 Galileo 运行目前的各主流操作系统。</p>
+<p>不过与单片机不同的是，作为兼容标准 Arduino 板的各种 GPIO/PWM/ADC 信号，并没有与 CPU 芯片直接相连，而是采用了独立的 ADC 芯片和 IO 扩展芯片。</p>
+<p><strong>3.1.1  对外接口一览</strong></p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/2110.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388895" alt="21" src="http://images.ifanr.cn/wp-content/uploads/2013/12/2110.jpg" width="556" height="685" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/2110.jpg 556w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/2110-360x443.jpg 360w" sizes="(max-width: 556px) 100vw, 556px" /></a> <a href="http://images.ifanr.cn/wp-content/uploads/2013/12/229.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388897" alt="22" src="http://images.ifanr.cn/wp-content/uploads/2013/12/229.jpg" width="382" height="262" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/229.jpg 382w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/229-360x246.jpg 360w" sizes="(max-width: 382px) 100vw, 382px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">外部接口一览</span></p>
+<p>从 Galileo 提供的对外接口来看，与其说是 x86 版本的 Arduino，我更愿意认为它是一个完整的 PC 主板。除了连接显示器的 VGA/HDMI 等接口和 SATA 接口没有提供外，几乎 PC 主板该有的接口在 Galileo 上都提供了（也有办法连接显示器，如采用 PCI-E 或者 USB 接口的显示器/显卡）。丰富的接口给了今后基于 Galileo 进行扩展开发的无限可能。尤其它还带有我最中意的 Mini PCI-E 接口，这使得 Galileo 与 FPGA 结合运算加速成为可能，这是目前各种 ARM 开发板中很少能看到的接口。</p>
+<p>除了 Mini PCI-E，USB2.0 高速 Client/Host 口也为很多应用提供便利。一方面通过 USB Host 可以将各种 USB 外设连接在 Galileo 上，比如将 USB 摄像头连接与 Galileo 结合 OpenCV 进行视觉计算，此外，也可以通过 USB Client 将 Galileo 作为外设连接至 PC，就像目前 Galileo 实现的那样，当然，后文我们会分析到，用户是完全可以随意定义这个 USB Client 具体行为的，可以将 Galileo 作为任何希望的外设连接至 PC。</p>
+<p>不过比较怪异的是调试用的串口采用的是 3.5mm 音频接口，这给连接上带来了一定的麻烦，我将在后文提到这个问题。</p>
+<p><strong>3.1.2 主要芯片</strong></p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/231.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388909" alt="23" src="http://images.ifanr.cn/wp-content/uploads/2013/12/231.jpg" width="555" height="435" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/231.jpg 555w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/231-360x282.jpg 360w" sizes="(max-width: 555px) 100vw, 555px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">主要芯片一览</span></p>
+<p>上图给出了 Galileo 上主要芯片的布局以及其功能。其具体型号和说明见下表。在后文我们将挑选几个有代表性的进行说明。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/241.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388911" alt="24" src="http://images.ifanr.cn/wp-content/uploads/2013/12/241.jpg" width="572" height="252" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/241.jpg 572w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/241-360x158.jpg 360w" sizes="(max-width: 572px) 100vw, 572px" /></a></p>
+<p>这里我就不深入讨论这些芯片的具体参数、连接等问题了，对此感兴趣的朋友可以参考后文给出的 Intel Galileo 配套文档，参考官方提供的电路图了解具体细节。我将挑选几个代表性的芯片做分析。</p>
+<p><strong>3.1.3 Quark SoC X1000</strong></p>
+<p>Galileo上使用的这款 Quark SoC X1000 的处理器芯片相信是大家最关心的。那么它到底是不是属于 Intel Atom 系列的处理器呢？<strong>答案是否定的。</strong></p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/251.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-388913" alt="25" src="http://images.ifanr.cn/wp-content/uploads/2013/12/251-1024x854.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/251-1024x854.jpg 1024w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/251-360x300.jpg 360w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/251.jpg 1387w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Quark SoC X1000 </span><span style="font-family: 宋体;">特写</span></p>
+<p>在产品定位上，Intel 将 Quark 定位于面向物联网、可穿戴设备的 x86 处理器，他的内部代号为 Clanton。相比 Atom 系列处理器，Quark 差不多是 Atom 1/5 的尺寸，功耗也只有 Atom 的1/10 (详见[6])。这估计也是叫做 Quark（夸克）的原因。当然，作为减小尺寸、功耗、降低成本($5)的代价，Quark 的性能也弱很多。它比较像是改良了制程，但阉割了 MMX 指令集的奔腾 I 代处理器（参考文献[7]中猜测 Quark 是改良自 P54C 构架，P54C 构架是主频在 75, 90, 100 MHz 奔腾 I 代处理器采用的构架，当年采用 0.5um 制程工艺）。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/261.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388921" alt="26" src="http://images.ifanr.cn/wp-content/uploads/2013/12/261.jpg" width="564" height="283" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/261.jpg 564w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/261-360x180.jpg 360w" sizes="(max-width: 564px) 100vw, 564px" /></a></p>
+<p style="text-align: center;">表：<span style="font-family: Calibri;">Quark SoC X1000 </span><span style="font-family: 宋体;">部分配置，按照 </span><span style="font-family: Calibri;">Quark Datasheet[8] </span><span style="font-family: 宋体;">整理得到</span></p>
+<p>从支持的指令集看，Quark 并不像其他 Atom 芯片那样支持 x64、MMX、SSE 等高级的指令集，但包含了浮点指令集(x87)。虽然 Intel 的官方参数中提到 Quark 的指令集是与奔腾兼容的，但很明显，由于缺少了 MMX 指令这个作为奔腾处理器的重要标志，实际上很多可以在奔腾 I CPU上运行的程序在 Quark 上可能是不能运行的。这点算是一个遗憾，缺少 MMX、SSE 这类 SIMD 的指令集加速，使得 Quark 在处理多媒体、图像运算、计算机视觉等算法上可能会表现的较差。</p>
+<p>不过，除了 MMX 指令集外，其他奔腾指令集/构架在 Quark 中均有支持。因此现在的程序只要不带有 MMX、SSE 指令，理论上是可以在 Quark 上运行的很好的。这点我会在后续的软件开发部分提到注意事项。这也可以看到另一个细节，就是目前 PC 上的主流操作系统，Windows 和 Linux 都有望在 Quark 中运行（目前 Intel Galileo 上运行的就是 Linux）。</p>
+<p>作为一款面向小型化设备的处理器，Quark 在 SoC 集成上做的还是不错的，几乎是一个单片机该有的形态。即使不外接 DDR 内存，Quark 也可以利用芯片内集成的 512kbyte 的 SRAM 工作。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/271.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-388931" alt="27" src="http://images.ifanr.cn/wp-content/uploads/2013/12/271.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/271.jpg 892w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/271-360x330.jpg 360w" sizes="(max-width: 892px) 100vw, 892px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Quark SoC X1000 </span><span style="font-family: 宋体;">的内部框图，图片来自</span><span style="font-family: Calibri;">[8]</span></p>
+<p>在功耗方面，Quark 将 max TDP 控制在 2.2W。对于采用 3.3V 供电而言，也就是最大需要提供 660mA 的电流。这样的功耗相比其他 x86 CPU 而言已经小了很多，但是我们对比同样主频等级的其他构架的处理器，如 ARM、MIPS 构架的一些处理器，就会发现 Quark 的功耗还是相对偏高的。如果要将 Quark 作为低功耗应用，Intel 为此还需要做更多的功课。</p>
+<p><strong>3.1.4 GPIO/PWM/ADC 接口的实现和 Hack</strong></p>
+<p>从前面的框图可以发现，Galileo 上对外的 GPIO/PWM/ADC 接口并不是直接从 Quark 芯片中直接提供的，而是采用了额外的芯片来实现，Quark CPU 与这些接口芯片再使用 SPI/I2C 进行连接。</p>
+<p>这样做自然有不少的好处，比如可以做到电气隔离。Quark 处理器采用 3.3V 电平，因此也无法直接将自身的 GPIO 与 Arduino 接口直接连接。也可以避免用户由于连线错误连接直接导致 Quark 芯片烧毁的可能。同时也提高了系统的灵活度。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/281.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388943" alt="28" src="http://images.ifanr.cn/wp-content/uploads/2013/12/281.jpg" width="545" height="187" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/281.jpg 545w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/281-360x123.jpg 360w" sizes="(max-width: 545px) 100vw, 545px" /></a></p>
+<p style="text-align: center;">图：用于扩展 <span style="font-family: Calibri;">GPIO/PWM/ADC </span><span style="font-family: 宋体;">的接口芯片</span></p>
+<p>通过分析这些新品的数据手册，在了解 Galileo 的实现细节的同时，还可以发现更多可以用来 Hack 的特性。比如用于实现 GPIO/PWM 信号扩展的 CY8C9540A 芯片的框图：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/30.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-388947" alt="30" src="http://images.ifanr.cn/wp-content/uploads/2013/12/30.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/30.jpg 804w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/30-360x397.jpg 360w" sizes="(max-width: 804px) 100vw, 804px" /></a></p>
+<p style="text-align: center;">图：CY8C9540A IO <span style="font-family: 宋体;">扩展芯片框图，图片来自</span><span style="font-family: Calibri;">[9]</span></p>
+<p>从芯片框图可知，该芯片除了提供了 PWM/GPIO 的信号扩展外，还自带了一个可以被 Quark 使用的 EEPROM，可以存储 11kbyte 的数据[9]，用户可以使用 EEPROM 库来操作他。此外，该芯片实际提供了 8 组 PWM 口，多于 Intel Galileo手 册中描述的 6 组。不过额外的 PWM 输出是无法通过使用 Arduino IDE 来使用了，这便是今后可以 hack 的部分。</p>
+<p>观察用于数模信号采集的 ADC 芯片 AD7298，发现性能也尚可。具有 12bit 1Msample/s 的采集能力。这样的性能虽然不算高，但比基于 AVR 芯片的 Arduino 强很多，与目前的一些 32bit ARM MCU（如 STM32）的 ADC 处于同一等级。</p>
+<p><strong>3.1.5 SD 读卡器</strong></p>
+<p>Intel Galileo 上的 SD 读卡器直接与 Quark 处理器相连接。这个读卡器比较吸引人的特点在于在 Galileo 启动时，将尝试引导位于 SD 卡上的操作系统。就像 PC 上的引导 U 盘一样。用户可以将自定义的操作系统放置于 SD 卡，使得 Galileo 运行其他的系统成为可能。关于这点，我将在后续软件构架和可能性探讨部分具体涉及。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/318.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388955" alt="31" src="http://images.ifanr.cn/wp-content/uploads/2013/12/318.jpg" width="600" height="441" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/318.jpg 600w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/318-360x264.jpg 360w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">支持从 </span><span style="font-family: Calibri;">SD </span><span style="font-family: 宋体;">卡加载自定义操作系统</span></p>
+<p><strong>3.1.6 调试串口</strong></p>
+<p>Intel Galileo 提供了一个调试串口供开发人员通过终端连接 Galileo 调试底层的软件系统。不过比较怪异的是，Galileo 将该串口接口做成了 3.5mm 的耳机插口。这不但令人容易疑惑，此外要找到这样的串口接口也不容易，为此我专门 DIY 了一个音频插口转 RS232 插座的转接线：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/321.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388959" alt="32" src="http://images.ifanr.cn/wp-content/uploads/2013/12/321.jpg" width="535" height="556" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/321.jpg 535w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/321-360x374.jpg 360w" sizes="(max-width: 535px) 100vw, 535px" /></a></p>
+<p style="text-align: center;">图：看似音频输出，实则为调试串口插座</p>
+<p>通过使用 Putty 等软件，可以观测到 Intel Galileo 启动过程以及进入内部的 Linux 进行操作。我将在软件开发部分讨论这个问题。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/331.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388963" alt="33" src="http://images.ifanr.cn/wp-content/uploads/2013/12/331.jpg" width="553" height="345" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/331.jpg 553w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/331-360x224.jpg 360w" sizes="(max-width: 553px) 100vw, 553px" /></a></p>
+<p style="text-align: center;">图：透过调试串口，看到的 <span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">启动中的 </span><span style="font-family: Calibri;">Grub </span><span style="font-family: 宋体;">菜单</span></p>
+<p><strong>3.1.7 存放自带固件的 Flash</strong></p>
+<p>位于 Intel Gaileo 主板上有块 8MByte 大小的 SPI Flash，其中保存了 Galileo 启动中的固件程序。类比 PC 主板，其实这块芯片保存的就是 BIOS 程序。不过在后面的软件构架中我会提到，Galileo 采用了 UEFI，这块 Flash 芯片中包含了 UEFI 的固件程序用于 Galileo 初始化引导、以及一个小型的 Linux 操作系统，用于运行用户通过 Arduino IDE 开发的程序并和 PC 完成互联。</p>
+<p>为了方便用户 hack，Intel Galileo 也很友善的将这块 Flash 芯片的 SPI 接口引出，用户可以不需要拆下 Flash 芯片，直接使用编程器对 Flash 芯片内的固件程序做修改和备份。这个过程将在后续的扩展开发中讨论。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/341.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-388969" alt="34" src="http://images.ifanr.cn/wp-content/uploads/2013/12/341.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/341.jpg 710w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/341-360x203.jpg 360w" sizes="(max-width: 710px) 100vw, 710px" /></a></p>
+<p style="text-align: center;"> 图：保存固件的 <span style="font-family: Calibri;">SPI Flash </span><span style="font-family: 宋体;">芯片和方便编程的接口排针</span></p>
+<p>&nbsp;</p>
+<p><strong> 3.2 软件架构</strong></p>
+<p><strong>3.2.1 总体构架浅析</strong></p>
+<p>在前文中介绍的利用 Arduino IDE 给 Intel Galileo 编程完全只能看到 Galileo 软件系统的冰山一角。Intel Galileo 并不像其他单片机开发板那样，它并不是简单的运行用户所编写的程序那么简单。</p>
+<p>它的软件构架环境基本与一台标准PC一致：含有 UEFI（与传统的 BIOS 等价）、Grub 引导、运行 Linux 操作系统。而用户编写的 Arduino Sketch 程序，在实现上只是运行在 Linux 系统中的一个 App 而已：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/351.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388983" alt="35" src="http://images.ifanr.cn/wp-content/uploads/2013/12/351.jpg" width="245" height="230" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">的简易软件构架，图片来源</span><span style="font-family: Calibri;">[12]</span></p>
+<p>在 Intel Gaileo 主板的 SPI Flash 芯片内，保存了开机需要的 UEFI 初始化固件，以及一个微型的 Linux 操作系统。在编写 Arduino 程序时，Arduino IDE 将编写好的 Arduino 程序编译成为了一个标准的 Linux ELF 可执行文件，并下载进入 Galileo 上运行的 Linux 系统中执行。</p>
+<p>通过直接基于 Galileo 上 Linux 系统进行开发，我们可以发挥出 Galileo 更大的潜力。并且借助 Intel 提供的各种开发资料和开源的 UEFI 实现，我们也可以让 Galileo 运行更多的操作系统，比如 Windows。</p>
+<p>在 Intel Quark SoC 的介绍文档[11]中，Intel 给出了目前基于 Quark SoC 的软件栈的支持情况：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/361.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388985" alt="36" src="http://images.ifanr.cn/wp-content/uploads/2013/12/361.jpg" width="173" height="162" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Quark SoC X1000 Software Stack, </span><span style="font-family: 宋体;">图片来源</span><span style="font-family: Calibri;">[11]</span></p>
+<p>手上的 Intel Galileo 并不运行 Wind River Linux 或者 Vxwork。它采用了基于 Yocto 项目的定制版本的 Linux 系统，并分为运行在 SPI Flash 上的微型系统以及运行在 SD 卡的完整版本系统：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/371.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388987" alt="37" src="http://images.ifanr.cn/wp-content/uploads/2013/12/371.jpg" width="554" height="272" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/371.jpg 554w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/371-360x176.jpg 360w" sizes="(max-width: 554px) 100vw, 554px" /></a></p>
+<p style="text-align: center;">图：用于 <span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">的软件平台构架</span></p>
+<p>由于 Intel Gaileo 主板上的 SPI Flash 8Mbyte 空间限制，Intel 将一个微型版本的 Linux 系统集成在该芯片当中。在 Galileo 启动后将默认启动该版本的 Linux，它带有 Galileo 主板上基本的外设驱动，并保证 Arduino Sketch 能正常运作。但如果用户需要更多功能，就需要采用外接 SD 卡，使用 Intel 提供的完整版本 Linux。该 Linux 还额外包括了 Wifi 网卡驱动，以及 OpenCV 等库：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/381.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-388999" alt="38" src="http://images.ifanr.cn/wp-content/uploads/2013/12/381.jpg" width="572" height="126" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/381.jpg 572w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/381-360x79.jpg 360w" sizes="(max-width: 572px) 100vw, 572px" /></a></p>
+<p>在设计上，通过 Arduino IDE 编写的 Sketch 程序可以永久保存在 SPI Flash 芯片内或者 SD 卡中。当然，如果要保存在主板上的 SPI Flash 芯片内，编写的 Sketch 程序的大小就要有限制。</p>
+<p><strong>3.2.2 Intel Galileo 启动过程简介</strong></p>
+<p>在通电后，Intel Galileo 将会首先执行位于 SPI Flash 上的 UEFI 初始化程序，并逐渐进入 Linux 系统随后开始运行用户的 Sketch 程序。其大致启动过程如下图所示：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/391.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-389011" alt="39" src="http://images.ifanr.cn/wp-content/uploads/2013/12/391.jpg" width="580" height="343" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/391.jpg 580w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/391-360x212.jpg 360w" sizes="(max-width: 580px) 100vw, 580px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">的启动过程</span></p>
+<p>从上图可以看出，Galileo 的启动过程与传统 PC 一致。除了支持从 SD 卡引导，Intel Galileo 也同样支持引导 U 盘、从网络（可能需要修改 UEFI）等方式的启动。不过与 PC 不同的是 Galileo 并不是基于主引导记录（MBR）来判断是否需要进行引导的，毕竟 Galileo 并不含有传统的老式 BIOS，它的引导是通过 Grub 进行的，因此需要引导的介质需要有可以被 Galileo 自带 Grub 识别的文件系统以及对应的 Grub 引导配置。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/40.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389017" alt="40" src="http://images.ifanr.cn/wp-content/uploads/2013/12/40.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/40.jpg 988w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/40-360x237.jpg 360w" sizes="(max-width: 988px) 100vw, 988px" /></a></p>
+<p style="text-align: center;">图：从调试串口看到的 <span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">启动输出信息</span></p>
+<p>此外，在 UEFI 阶段，用户也可以要求运行其他的EFI程序，比如 EFI Shell。这使得引导过程更加的灵活。对于目前 Intel 已经提供的软件使用来说，引导过程最终都将启动 Linux 操作系统。并在 Linux 启动完毕后，从目录/sketch 下加载 sketch.elf 程序（如果有），运行用户保存在 Arduino 程序。</p>
+<p><strong>3.2.3 Arduino Sketch 是如何运行的？</strong></p>
+<p>前面已经提到为 Intel Galileo 编写的 Arduino 程序实质是标准的 Linux ELF 可执行 App。那么他是如何操作 Galileo 的硬件外设呢？为此我们就需要通过浏览相关源代码找到答案。</p>
+<p>打开 Intel Galileo 专门的 Arduino IDE 所在目录的 hardware\arduino\x86\cores\arduino 位置，这里存放了 Intel 为 Galileo 开发的 Arduino 库的源代码。可以看出 Intel 完全重写了原先整个基于 AVR 芯片的 Arduino 实现。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/413.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389025" alt="41" src="http://images.ifanr.cn/wp-content/uploads/2013/12/413-1024x505.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/413-1024x505.jpg 1024w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/413-360x177.jpg 360w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/413.jpg 1127w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Intel </span><span style="font-family: 宋体;">完全重写的 </span><span style="font-family: Calibri;">Arduino </span><span style="font-family: 宋体;">运行库代码</span></p>
+<p>这里我们挑选 fast_gpio_sc.c（实现 GPIO 操作）代码进行研究。该代码用于实现大家熟悉的 digitalWrite, digitalRead 等 IO 操作。从代码可知，Intel Galileo 上的 Linux 系统已经对应的 IO 设备包装成了 Linux 设备文件，用户编写的 Arduino 程序只需要像标准的 linux 程序那样使用 mmap/ioctl 等系统调用即可操作具体的硬件外设。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/421.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389027" alt="42" src="http://images.ifanr.cn/wp-content/uploads/2013/12/421-1024x495.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/421-1024x495.jpg 1024w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/421-360x174.jpg 360w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/421.jpg 1194w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Galileo </span><span style="font-family: 宋体;">上对 </span><span style="font-family: Calibri;">GPIO </span><span style="font-family: 宋体;">操作的代码实现片段</span></p>
+<p>上述代码使用 open() 系统调用开始访问 GPIO 外设，其 Linux 设备路径为 /dev/uio0。对于其他诸如 I2C、ADC、SPI 等设备，基本的实现都是一样的。</p>
+<p>同时，在 Galileo 版的 Arduino IDE 目录下也可以找到专门为 Quark 处理器定制的 gcc 编译器，这对于熟悉 Linux 程序开发的朋友来说，也意味着可以脱离 Arduino IDE，直接在 Galileo 的 Linux 中编写程序与外部电路进行控制。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/431.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389029" alt="43" src="http://images.ifanr.cn/wp-content/uploads/2013/12/431.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/431.jpg 836w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/431-360x357.jpg 360w" sizes="(max-width: 836px) 100vw, 836px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Arduino IDE </span><span style="font-family: 宋体;">中带有的 </span><span style="font-family: Calibri;">Quark </span><span style="font-family: 宋体;">平台的 </span><span style="font-family: Calibri;">GCC </span><span style="font-family: 宋体;">编译器和工具链</span></p>
+<h3>4. Intel Galileo 的高级操作</h3>
+<p>在分析了 Galileo 的软硬件构架后，我给大家分享一些除了使用 Arudino IDE 之外的进阶的使用方式。不过在本文中并不会涉及编程开发的话题。</p>
+<p><strong>4.1 直接操作 Linux 系统</strong></p>
+<p>这里聊聊如何直接操作 Galileo 中的 Linux。我们可以使用以太网或者调试串口连接到 Linux 中。具体的连接操作可以查看 Intel 给出的文档。<br />
+以串口为例，我使用自己 DIY 的 3.5mm 音频插座转串口线将 Galileo 的调试串口与 PC 互连。并使用 Putty 打开串口中断，设置 115200 波特率。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/441.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-389049" alt="44" src="http://images.ifanr.cn/wp-content/uploads/2013/12/441.jpg" width="225" height="242" /></a></p>
+<p style="text-align: center;">图：可以 <span style="font-family: Calibri;">DIY </span><span style="font-family: 宋体;">一个音频转串口连接线</span></p>
+<p>给 Intel Galileo 通电后，就可以看到启动过程的文本输出，最终将看到 Linux 登录提示画面。直接使用 root 账号登录：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/451.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-389051" alt="45" src="http://images.ifanr.cn/wp-content/uploads/2013/12/451.jpg" width="554" height="195" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/451.jpg 554w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/451-360x126.jpg 360w" sizes="(max-width: 554px) 100vw, 554px" /></a></p>
+<p style="text-align: center;">图：通过串口登录至板载的<span style="font-family: Calibri;">Linux</span><span style="font-family: 宋体;">终端</span></p>
+<p>接下来就可以像其他 Linux 系统一样进行操作了。</p>
+<p><strong>4.2 使用 SD 卡上的 Linux 系统</strong></p>
+<p>如果需要运行 Intel 提供的完整版 Galileo 定制的 Linux 系统，就需要从 SD 卡引导启动。在 Intel 的 Galileo 下载页面[1]提供了该 Linux 系统的 SD 卡文件。将他们复制到 FAT 格式的 SD 卡根目录下：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/461.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-389057" alt="46" src="http://images.ifanr.cn/wp-content/uploads/2013/12/461.jpg" width="547" height="232" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/461.jpg 547w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/461-360x152.jpg 360w" sizes="(max-width: 547px) 100vw, 547px" /></a></p>
+<p style="text-align: center;">图：将配套的文件复制入 <span style="font-family: Calibri;">SD </span><span style="font-family: 宋体;">卡</span></p>
+<p>将 SD 卡插入 Galileo，并给 Galileo 通电即可，Galileo 将会引导来自 SD 卡的 Linux 系统。可以通过串口或者以太网登录至该系统：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/471.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389063" alt="47" src="http://images.ifanr.cn/wp-content/uploads/2013/12/471.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/471.jpg 882w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/471-360x194.jpg 360w" sizes="(max-width: 882px) 100vw, 882px" /></a></p>
+<p style="text-align: center;">图：Grub 显示将引导 SD 卡上的 Linux 系统</p>
+<p>相比 SPI Flash 中的 Linux，SD 的 Linux 系统包含了更多的驱动，以及带有如下的库/程序：</p>
+<ul>
+<li>OpenCV</li>
+<li>Python</li>
+<li>node.js</li>
+</ul>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/491.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389073" alt="49" src="http://images.ifanr.cn/wp-content/uploads/2013/12/491.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/491.jpg 821w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/491-360x85.jpg 360w" sizes="(max-width: 821px) 100vw, 821px" /></a></p>
+<p style="text-align: center;">图：在 <span style="font-family: Calibri;">Galileo </span><span style="font-family: 宋体;">的 </span><span style="font-family: Calibri;">Linux </span><span style="font-family: 宋体;">中运行 </span><span style="font-family: Calibri;">python </span><span style="font-family: 宋体;">程序</span></p>
+<p><strong>4.2.1 与 UEFI直接打交道</strong></p>
+<p>除了操作 Linux 外，Galileo 也提供了 UEFI Shell 供我们操作更底层的固件以及在具体 OS 加载前，对 Galileo 进行一些简单的操作。UEFI Shell 提供了一系列的命令可以使用，可以操作文件、对内存/外设等调试或者编写脚本运行。如果需要修改 SPI Flash 的内容，但手头有没有硬件编程器，就可以借助 EFI Shell 来完成。具体的命令可以参考文献[13]。</p>
+<p>通过调试串口，并使用 Putty 连接至 Intel Galileo。在启动过程中进入 Grub 菜单后按住 c。并输入 quit 退出 grub：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/50.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389085" alt="50" src="http://images.ifanr.cn/wp-content/uploads/2013/12/50.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/50.jpg 869w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/50-360x80.jpg 360w" sizes="(max-width: 869px) 100vw, 869px" /></a></p>
+<p style="text-align: center;">图：退出 <span style="font-family: Calibri;">Grub EFI </span><span style="font-family: 宋体;">程序</span></p>
+<p>此时 UEFI 将会提示新的启动模式，选择 UEFI Internal Shell：</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/511.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-389087" alt="51" src="http://images.ifanr.cn/wp-content/uploads/2013/12/511.jpg" width="464" height="318" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/511.jpg 464w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/511-360x246.jpg 360w" sizes="(max-width: 464px) 100vw, 464px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">UEFI </span><span style="font-family: 宋体;">输出的启动提示菜单</span></p>
+<p>接下来即可进入 EFI Shell。后面提到的对 SPI Flash 进行更新的操作就是在 EFI Shell 当中进行的。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/521.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389089" alt="52" src="http://images.ifanr.cn/wp-content/uploads/2013/12/521.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/521.jpg 865w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/521-360x248.jpg 360w" sizes="(max-width: 865px) 100vw, 865px" /></a></p>
+<p style="text-align: center;">图：EFI Shell 界面</p>
+<h3>5. 扩展开发举例和可能性探讨</h3>
+<p>介绍完了 Intel Galileo 的实现细节以及各种使用后，我来向大家分享下基于 Intel Galileo 进行开发的心得。这里我主要围绕操作系统层次进行介绍。</p>
+<p><strong>5.1 参考资料一览</strong></p>
+<p>Intel 目前几乎提供了 Galileo 一切的资料，有了这些资料，只要能购买到 Quark SoC 芯片，自己 DIY 一块 Galileo 是完全没问题的。目前在 Intel Galileo 官方网站[1]中已经提供的资料有：</p>
+<ul>
+<li>Intel Galileo 的电路原理图</li>
+<li>Intel Galileo PCB Layout</li>
+<li>Intel Galileo BOM 清单</li>
+<li>Intel Galileo 采用的 UEFI、Grub、Linux 的源代码以及开发文档</li>
+<li>Quark SoC x1000 数据手册</li>
+<li>Quark SoC x1000 开发文档</li>
+</ul>
+<p>如果你打算基于 Galile o或者 Quark SoC X1000 进行开发，这些都是必读的内容。他们足以解释在对 Galileo 进行开发、系统定制、优化过程中出现的问题。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/531.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389097" alt="53" src="http://images.ifanr.cn/wp-content/uploads/2013/12/531-1024x664.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/531-1024x664.jpg 1024w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/531-360x233.jpg 360w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/531.jpg 1152w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p><strong>5.2 自定义 Linux 系统</strong></p>
+<p>Intel Galileo 中运行的 Linux 系统是由 Yocto Buildroot[14] 系统产生的。接触过路由器定制的朋友可能会对 OpenWRT 的系统定制有过研究，Yocto 与 Openwrt 的编译系统相比，显得更加的强大。它是一个高度可配置的嵌入式 Linux 的整合编译环境。开发人员可以比较方便的定制目标嵌入式设备所需要的 Linux kernel、各软件包。Yocto 将会自动将所需要的软件包进行代码下载、编译、打包动作，直接产生可以烧录进目标系统的镜像文件。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/541.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389099" alt="54" src="http://images.ifanr.cn/wp-content/uploads/2013/12/541.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/541.jpg 984w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/541-360x176.jpg 360w" sizes="(max-width: 984px) 100vw, 984px" /></a></p>
+<p style="text-align: center;">图：<span style="font-family: Calibri;">Yocto </span><span style="font-family: 宋体;">编译系统的构架，图片来源</span><span style="font-family: Calibri;">[14]</span></p>
+<p>在 Intel Galileo 软件下载页面[1]中提供了基于 Yocto 编译系统的 Galileo 的所有软件源代码。按照文档操作，即可自己编译出前面所提到 UEFI 固件、Grub、用于 SPI Flash 的 Linux 和在 SD 卡中运行的完整版本的 Linux 镜像。</p>
+<p>那么为什么要去自己定制 Linux 呢？原因有很多，比如希望让 Galileo 支持更多的硬件设备，例如让它识别你的 3G 上网卡、连接 Kinect 等等，亦或你希望在 Linux 中增加更多的软件包，比如希望运行 Apache 服务器。这是，只需要按照 Yocto 的配置过程定制系统即可。</p>
+<p><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/551.jpg" rel="lightbox[388835]"><img class="aligncenter size-full wp-image-389101" alt="55" src="http://images.ifanr.cn/wp-content/uploads/2013/12/551.jpg" width="271" height="341" /></a></p>
+<p style="text-align: center;">图：基于 Yocto 的 Intel Galileo BSP 代码目录结构</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/561.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389103" alt="56" src="http://images.ifanr.cn/wp-content/uploads/2013/12/561.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/561.jpg 919w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/561-360x252.jpg 360w" sizes="(max-width: 919px) 100vw, 919px" /></a></p>
+<p style="text-align: center;">图：配置 <span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">所使用的 </span><span style="font-family: Calibri;">Linux Kernel</span></p>
+<p><strong>5.3 为Galileo增加显示器、键盘等外设</strong></p>
+<p>这里以最普遍的各类 USB 设备为例，由于在 Intel Galileo 上的 USB Host 是 micro-usb 插座，标准的 USB 插头没法直接连接，所以首先要准备一条 micro-usb OTG 线：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/571.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389105" alt="57" src="http://images.ifanr.cn/wp-content/uploads/2013/12/571.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/571.jpg 758w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/571-360x280.jpg 360w" sizes="(max-width: 758px) 100vw, 758px" /></a></p>
+<p style="text-align: center;">图：准备一条 micro-usb OTG 线用于连接 USB 外设</p>
+<p>此外，如果需要连接多个 USB 设备，则可以使用 USB 集线器。</p>
+<p><strong>5.3.1 外接 USB 显示屏用于显示画面</strong></p>
+<p>Intel Galileo 的一个遗憾之处在于没有提供用于连接显示器的 VGA、DVI、HDMI 等视频输出接口。这给一些应用和调试带来不便，似乎这样就没法运行 Windows 的系统了。</p>
+<p>不过我们还有别的办法来实现让 Galileo 显示画面，这里我使用的是 RoboPeak 迷你 USB 显示器[15]，通过修改 Galileo 的内核增加对应的驱动支持，可以让 Linux 的命令行和 X 图形界面在 USB 显示器中显示：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/581.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389107" alt="58" src="http://images.ifanr.cn/wp-content/uploads/2013/12/581-1024x636.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/581-1024x636.jpg 1024w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/581-360x223.jpg 360w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/581.jpg 1270w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p style="text-align: center;">图：使用 <span style="font-family: Calibri;">USB </span><span style="font-family: 宋体;">显示屏为 </span><span style="font-family: Calibri;">Intel Galileo </span><span style="font-family: 宋体;">增加视频输出能力</span></p>
+<p><strong>5.3.2 外接鼠标键盘</strong></p>
+<p>在增加了视频输出后，很自然的就是尝试给 Galileo 配置鼠标和键盘等输入设备了。在 Intel 提供的 Linux kernel 配置中，并没有加入对鼠标键盘等 HID 设备的支持，这需要我们在 menuconfig 中增加。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/591.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389109" alt="59" src="http://images.ifanr.cn/wp-content/uploads/2013/12/591.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/591.jpg 704w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/591-360x217.jpg 360w" sizes="(max-width: 704px) 100vw, 704px" /></a></p>
+<p style="text-align: center;">图：在 <span style="font-family: Calibri;">Linux Kernel </span><span style="font-family: 宋体;">的 </span><span style="font-family: Calibri;">Menuconfig </span><span style="font-family: 宋体;">加入对 </span><span style="font-family: Calibri;">USB HID </span><span style="font-family: 宋体;">设备的支持</span></p>
+<p>在加入了对应配置后，就可以把 Intel Galileo 变成一台真正意义上的 PC，当然没中不足的是它暂时还没有运行 Windows，这将是下一步的工作。</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/60.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389111" alt="60" src="http://images.ifanr.cn/wp-content/uploads/2013/12/60-1024x566.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/60-1024x566.jpg 1024w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/60-360x199.jpg 360w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/60.jpg 1269w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p style="text-align: center;">图：给 <span style="font-family: Calibri;">Galileo </span><span style="font-family: 宋体;">配置鼠标键盘，变成完整的 </span><span style="font-family: Calibri;">PC</span></p>
+<p><strong>5.3.3 使用 USB 摄像头</strong></p>
+<p>对于希望使用 Intel Galileo 进行计算机视觉处理的应用，则需要增加对应的 USB 摄像头驱动。一般目前市面的 USB 摄像头多为采用 UVC 协议规范的芯片，而一些老式的摄像头或者特殊摄像头在 Linux 下则采用 GPSCA 驱动框架。同样在，在 Kernel 的 menuconfig 中增加对应的驱动即可：</p>
+<p style="text-align: center;"><a href="http://images.ifanr.cn/wp-content/uploads/2013/12/611.jpg" rel="lightbox[388835]"><img class="aligncenter  wp-image-389131" alt="61" src="http://images.ifanr.cn/wp-content/uploads/2013/12/611.jpg" width="600" srcset="//ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/611.jpg 711w, //ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2013/12/611-360x213.jpg 360w" sizes="(max-width: 711px) 100vw, 711px" /></a></p>
+<p style="text-align: center;">图：增加对 <span style="font-family: Calibri;">USB </span><span style="font-family: 宋体;">摄像头的支持</span></p>
+<p><strong>5.4 其他可能性讨论</strong></p>
+<p>前面向大家分享了目前我使用 Intel Galileo 做的一些扩展开发。由于目前刚使用 Galileo 不久，因此有更多好玩的可能性有待于去实现。这里说说今后打算尝试的可能性。</p>
+<p><strong>5.4.1 增加运算性能</strong></p>
+<p>由于 Intel Galileo 的主频只有 400Mhz，这的确给很多应用造成了不变。对于视觉运算而言，400Mhz 的主频对于很多应用都显得捉襟见肘。</p>
+<p>不过 Galileo 提供了高速的 PCI-E 接口，我们可以利用该接口与外部更加强劲的运算系统建立高速互联。最具代表的就是通过 PCI-E 与 FPGA 进行连接，通过 FPGA 实现视觉计算、密码学处理、人工神经网络等需要高速并行性的算法，并使用 Galileo 的 Quark 芯片实现高层的控制逻辑来协调运算。</p>
+<p>在传统的 PC 中，使用 PCI-E 接口的 FPGA 加速卡与 CPU 进行协同加速运算是比较常见的做法，借助同样是 x86 平台的优势，使用 Intel Galileo 可以将以往需要采用传统 PC 的 FPGA 加速项目移植到更加小、低功耗的环境下。这可以在移动机器人、飞行器等领域具有很大的应用前景。</p>
+<p><strong>5.4.2 运行其他的操作系统</strong></p>
+<p>目前的 Intel Galileo 只能运行 Linux，并且由于自身并没有视频输出接口，Intel 默认的 Linux 配置是没有 X 图形系统的。不过作为一个 x86 平台，大家自然会希望 Galileo 运行其他的操作系统，如 Windows。</p>
+<p>在前面的分析中，我们已经看到 Galileo 的构架和软件支持完全允许让 Windows 运行在其中。这或许最终没有什么实际价值，但也是值得尝试的事情。至少作为 geek 来说，这样做可以加强“我可以”的信条。此外，运行 Windows 也可以让 Galileo 驱动一些尚只有 Windows 驱动支持的外设，比如一些打印机设备、银行 U 盾等。</p>
+<h3>6.小结</h3>
+<p>本文是我对 Intel Galileo 的一些使用体会和经验分享，由于拿到手时间不长，因此很多 Galileo 的潜力还没有去尝试。不过通过对软硬件构架和开发过程的介绍，相信大家会了解 Intel Galileo 的巨大潜力，如果只是当作标准 Arduino 来使用，那就太可惜了。</p>
+<p><strong>参考文献</strong><br />
+[1] Intel Galileo 相关软件，https://communities.intel.com/community/makers/software/drivers<br />
+[2] Intel Galileo Getting Started Guide,，https://communities.intel.com/docs/DOC-21838<br />
+[3] Locale Emulator github,，https://github.com/xupefei/Locale-Emulator<br />
+[4] Arduino IDE crash issue on github， https://github.com/arduino/Arduino/issues/1626<br />
+[5] Intel Galileo Datasheet， https://communities.intel.com/docs/DOC-21835<br />
+[6] Intel’s New Chip ‘Quark’ is Designed for Wearable Tech，http://www.crunchwear.com/intels-new-chip-quark-designed-wearable-tech/<br />
+[7] What happens if you shrink a P54C Pentium to 32nm and call it Quark?， http://semiaccurate.com/2013/09/11/happens-shrink-p54c-pentium-32nm-call-quark/<br />
+[8] Intel Quark Soc Datasheet， https://communities.intel.com/docs/DOC-21828<br />
+[9] CY8C9520A,CY8C9540A, CY8C9560A,20-, 40-, and 60-Bit I/O Expander with EEPROM datasheet， http://www.cypress.com/?docID=31413<br />
+[10] 英特尔开源PC伽利略将第一时间入华， http://tech.qq.com/a/20131208/001118.htm<br />
+[11] Product Brief Intel® Quark SoC X1000, https://communities.intel.com/docs/DOC-21829<br />
+[12] Product Brief Intel® Galileo Board, https://communities.intel.com/docs/DOC-21836<br />
+[13] EFI Shells and Scripting, http://software.intel.com/en-us/articles/efi-shells-and-scripting<br />
+[14] Yocto Project, https://www.yoctoproject.org/<br />
+[15] RoboPeak迷你USB显示器开源项目, http://www.robopeak.com/blog/?p=377</p>
+
+      </article>
+      <div class="c-article-content__likes">
+        <div class="c-article-likes" data-component="ArticleLikes" data-post-id="388835"></div>
+      </div>
+      <div class="c-article-content__comments">
+        <div
+  id="article-comments"
+  class="c-article-comments c-article-comments--medium"
+  data-component="ArticleCommentsComponent"
+  data-post-id="388835">
+  <h5 class="c-card-category c-article-comments__headline">文章评论(<span class="js-placeholder-comments-counter">-</span>)
+  </h5>
+
+  <div class="c-article-comments-item is-unauthenticated js-article-comments-post-field">
+    <div class="c-article-comments-item__info">
+      <form class="c-article-comments-form is-unauthenticated js-article-comments-post-form">
+        <div class="c-article-comments-form__headline">
+          <div class="c-article-comments-form__head">
+            <div class="c-article-comments-form-left">
+              <img
+                class="c-article-comments-form-left__avatar js-user-avatar"
+                src=""
+                alt="">
+              <button
+                type="button"
+                class="c-article-comments-form-left__login c-article-comments-form-button c-article-comments-form-vertical-align">登录 </button>
+              <span class="c-article-comments-form__username c-article-comments-form-vertical-align"></span>
+              <span class="c-article-comments-form-tips c-article-comments-form-vertical-align">后参与讨论</span>
+            </div>
+            <button
+              type="button"
+              class="c-article-comments-form-anony c-article-comments-form-button c-article-comments-form-vertical-align">游客身份评论
+              <i class="ifanrx c-article-comments-form-icon-down"
+                 data-cont="&#xe633"></i>
+            </button>
+          </div>
+          <button type="button" class="ifanrx js-close-reply-form"></button>
+        </div>
+        <input
+          class="c-article-comments-form__input c-article-comments-form__user"
+          type="email"
+          name="author_email"
+          placeholder="你的邮箱*"
+          required
+          style="display: none;">
+        <input
+          class="c-article-comments-form__input c-article-comments-form__user"
+          type="text"
+          name="author_name"
+          placeholder="你的昵称*"
+          required
+          style="display: none;">
+        <div class="c-article-comments-form__textarea">
+          <textarea
+            class="c-article-comments-form__input c-article-comments-form__input--textarea"
+            name="content"
+            placeholder="参与讨论前请先登录"
+            disabled="true"></textarea>
+        </div>
+        <div class="c-article-comments-form__bottom-wrap">
+          <label class="c-article-comments-form__notifier" for="comment-email-notifier">
+            <input type="checkbox" id="comment-email-notifier">回复邮件通知</label>
+          <button type="button" class="c-article-comments-form__submit js-submit-comment">发表评论</button>
+        </div>
+
+        <input type="hidden" name="post_id" value="388835">
+        <input type="hidden" name="author_source" value="web" />
+        <input type="hidden" name="comment_mail_notify" value="0" />
+        <input type="hidden" name="comment_weixin_notify" value="0" />
+      </form>
+    </div>
+  </div>
+
+  <div class="c-article-comments__hint js-comments-hint">
+    <span class="js-comments-hint-content">正在加载中</span>
+  </div>
+
+  <div class="c-article-comments__body is-hidden js-comments-body">
+    <nav class="c-article-comments__nav">
+      <button class="is-active js-comments-sorting" data-comment-sort="time">时间</button>
+      <button class="js-comments-sorting" data-comment-sort="rate">热度</button>
+    </nav>
+
+    <ul class="c-article-comments__list js-comments-list">
+          </ul>
+
+    <div class="c-article-comments-item__info">
+      <a class="c-article-comments__submit-shortcut" href="#article-comments">说说你的看法</a>
+          </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-rec-posts" id="footerRecPosts" data-component="FooterRecPosts" data-post-id="388835">
+  <div class="inner-box" id="footer-articles-collection">
+    <h3 class="footer-articles-title">推荐文章</h3>
+  </div>
+</div>
+  <div class="u-clearfix footer-content"></div>
+<div class="ifanr-footer">
+  <div class="c-footer" id="footer">
+    <div class="o-wrapper">
+      <div class="u-clearfix"></div>
+      <div class="c-footer__navigation">
+        <h5>让未来触手可及</h5>
+        <a href="http://www.ifanr.com">爱范儿 : 报道未来，服务新生活引领者</a>
+        <a href="https://ifanr.in">玩物志 : 新生活必需品</a>
+        <a href="/app/">AppSo : 让手机更好用的数字生活媒体</a>
+        <a href="http://minapp.com/">知晓程序 : 第一家微信小程序商店</a>
+        <a href="https://cloud.minapp.com/">知晓云 : 微信小程序后端云</a>
+      </div>
+      <div class="c-footer__navigation c-footer-nav-aboutus">
+        <h5>关于我们</h5>
+        <a href="http://www.ifanr.com/about/our-team/">关于爱范儿</a>
+        <a href="http://www.ifanr.com/shequguize/">社区规则</a>
+        <a href="https://www.lagou.com/gongsi/j25623.html" target="_blank">加入我们</a>
+        <a href="http://www.ifanr.com/adinfo/">商务合作</a>
+      </div>
+      <div class="c-footer__navigation c-footer__navigation--inline-nav">
+        <h5>合作伙伴</h5>
+        <a href="https://www.upyun.com/"><img class="c-footer__sponsors__upyun" src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/upyun-colored2.png" alt="又拍云"></a>
+        <a href="javascript:;"><img class="c-footer__sponsors__rongcloud" src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/rongcloud-logo.png" alt="融云"></a>
+      </div>
+      <div class="c-footer__navigation c-foter-nav-down">
+        <div class="c-footer__navigation-downapp">
+          <div class="c-footer__navigation-downapp-wrap">
+            <img src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/app-qrcodes/appdown.png!100" alt="应用下载二维码">
+          </div>
+          <span>全新爱范儿 App 现已适配</span>
+          <span>Android 及 iPhone</span>
+        </div>
+      </div>
+      <div class="u-clearfix"></div>
+      <div class="c-footer__copyright">
+        <a class="u-text-right" href="http://www.miibeian.gov.cn/">粤 ICP 备 10211557 号</a>
+        <p class="u-text-left">版权所有 &copy; 广州爱范儿科技股份有限公司 2008 - 2018。以商业目的使用爱范儿网站内容需获许可。非商业目的使用授权遵循 <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>。</p>
+        <p class="u-text-english">All content is made available under the CC BY-NC 4.0 for non-commercial use. Commercial use of this content is prohibited without explicit permission.</p>
+        <div class="c-footer__contacts c-contacts">
+          <a class="c-contacts__icon c-contacts__icon--email" href="mailto:info@ifanr.com"></a>
+          <a class="c-contacts__icon c-contacts__icon--weibo" href="http://weibo.com/ifanr"></a>
+          <div class="c-contacts__icon c-contacts__icon--wechat">
+            <div class="c-contacts__icon--wechat__qrcode c-popup-qrcode">
+              <div class="c-popup-qrcode__title">关注爱范儿</div>
+              <img class="js-qrcode c-popup-qrcode__image" src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/ifanr-qrcode.jpg" />
+              <div class="c-popup-qrcode__hint">使用微信扫码关注爱范儿微信公众号</div>
+            </div>
+          </div>
+          <a class="c-contacts__icon c-contacts__icon--zhihu" href="https://www.zhihu.com/org/ai-fan-er-85"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="c-goto-top" data-component="VisibilityOnScroll"
+data-visibility-top-bound="1200" data-visibility-bottom-bound="#footer" style="visibility: hidden;">
+  <a ga-bind="click" ga-action="click" ga-category="Bar" ga-label="Report" href="http://www.ifanr.com/about/contribute/" class="c-goto-top-item c-goto-top-item--contribute c-goto-top-link"></a>
+  <div ga-bind="hover" ga-action="QRcode" ga-category="Bar" ga-label="hover" class="c-goto-top-item c-goto-top-item--qrcodes">
+    <div class="c-goto-top__qrcodes__container c-goto-top-qrcodes" data-component="Tab">
+      <div class=" o-grid-row" data-component="AwesomeUnderline">
+        <div class="o-grid-row__column--4">
+          <span class="c-goto-top-qrcodes-header" as-decorated data-tab="ifanr" data-default-tab>爱范儿</span>
+        </div>
+        <div class="o-grid-row__column--4 c-goto-top-qrcodes__tab">
+          <span class="c-goto-top-qrcodes-header" as-decorated data-tab="appso">AppSolution</span>
+        </div>
+        <div class="o-grid-row__column--4 c-goto-top-qrcodes__tab">
+          <span class="c-goto-top-qrcodes-header" as-decorated data-tab="coolbuy">玩物志</span>
+        </div>
+        <div class="c-goto-top-qrcodes__line" as-underline></div>
+      </div>
+      <div>
+        <div class="c-goto-top-qrcodes-body js-goto-top-qrcode" data-tab-target="ifanr">
+          <img src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/ifanrqrcode.jpg" alt="Ifanr QR Code" class="c-goto-top-qrcodes-body__image">
+          <p class="c-goto-top-qrcodes-body__text">关注爱范儿微信号，连接热爱，关注这个时代最好的产品。</p>
+        </div>
+        <div class="c-goto-top-qrcodes-body js-goto-top-qrcode" data-tab-target="appso">
+          <img src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/appsoqrcode.jpg" alt="AppSo QR Code" class="c-goto-top-qrcodes-body__image">
+          <p class="c-goto-top-qrcodes-body__text">想让你的手机好用到哭？关注这个号就够了。</p>
+        </div>
+        <div class="c-goto-top-qrcodes-body js-goto-top-qrcode" data-tab-target="coolbuy">
+          <img src="https://images.ifanr.cn/wp-content/themes/ifanr-4.0/static/images/coolbuyqrcode.jpg" alt="CoolBuy QR Code" class="c-goto-top-qrcodes-body__image">
+          <p class="c-goto-top-qrcodes-body__text">关注玩物志微信号，就是让你乱花钱。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="c-goto-top-item c-goto-top-item--go" ga-bind="click" ga-category="Bar" ga-action="BacktoTop" data-component="GotoTop"></div>
+</div>
+
+
+
+
+<script type='text/javascript' src='//images.ifanr.cn/wp-content/themes/ifanr-4.0/static/dist/app-64ee7273ee.min.js?ver=4.8.3'></script>
+      <!--[if gte IE 9]>
+    <script src="//ifanr.b0.upaiyun.com/vendor/raven.min.js"></script>
+    <script type="text/javascript">
+      Raven.config(
+        'https://d19b2d48c27542a2af4f6ff35063ebaf@app.getsentry.com/41363', {}
+      ).install();
+      window.onerror = Raven.process;
+    </script>
+    <![endif]-->
+    <script type="text/javascript">
+  _atrk_opts = { atrk_acct:"M/54m1aU8KL352", domain:"ifanr.com",dynamic: true};
+  (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+  </script>
+  <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=M/54m1aU8KL352" style="display:none" height="1" width="1" alt="" /></noscript>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </script>
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var widgetId = '';
+        if (widgetId) {
+          return new window.WidgetBuzz('#' + widgetId);
+        }
+        return;
+      });
+    </script>
+    
+<script>
+var el = document.querySelector('[ga-label="CES 2018"]');
+if (el) {
+  el.style.color = 'red'
+}
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":6,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!-- t:0.29075, h:'2018-01-11T01:13:21+00:00 0', H:'ip-172-31-12-38' --><!--
+Whitelist mode: 
+Remote address: 180.102.105.156
+Request REQUEST_URI: /388835
+Rebuilt REQUEST_URI: /388835
+Rebuilt QUERY_STRING: 
+
+Cacheable: 1
+Cache key: 0b55c9e1f5b31e06d4028449089eac7fef979d87
+Cache namespace: db99e7e417a46a9fb399eb0741008a64b67b0ae3
+Cache hit: 1
+Cache hits: 1
+Cache mtime: 1515633201.92
+Cache age: 0.14537501335144
+
+Memory usage: 2.25 MiB
+Peak memory usage: 2.25 MiB
+-->
+<!-- t:0.00771, h:'2018-01-11T09:13:22+08:00 28800', H:'ip-172-31-12-38' -->
