@@ -1,0 +1,17 @@
+<otawa-loader name="x86" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<label>x86</label>
+	<desc>
+		The X86 plugin allows to handle ELF binary code with 386ex instruction set.
+	</desc>
+	<configuration>
+		<item name="vle_enabled" type="bool" label="VLE mode" default="false">
+			<help>If true, the binary is considered encoded in VLE instruction set.</help></item></configuration>
+	<load>
+		<config name="otawa::x86::VLE_ENABLED">
+			<xsl:attribute name="value">
+				<xsl:value-of select="$vle_enabled">
+				</xsl:value-of>
+			</xsl:attribute>
+		</config>
+	</load>
+</otawa-loader>

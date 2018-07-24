@@ -1,0 +1,2 @@
+Index p_type     p_offset p_vaddr  p_paddr  p_filesz p_memsz  p_align  p_flags
+0     PT_LOAD    00010000 40000000 40000000 0000447c 00004b9c 10000    00000007 PF_X, PF_W, PF_R

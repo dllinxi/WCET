@@ -1,0 +1,6 @@
+/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/src/util.c:554: warning: argument 'hash' of command @param is not found in the argument list of gel_hash_enum_end(gel_hash_enum_t *en, gel_hash_t htab)
+/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/include/gel/util.h:115: warning: The following parameters of gel_hash_enum_end(gel_hash_enum_t *en, gel_hash_t htab) are not documented:
+  parameter 'htab'
+/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/src/util.c:554: warning: argument 'hash' of command @param is not found in the argument list of gel_hash_enum_end(gel_hash_enum_t *en, gel_hash_t htab)
+/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/src/util.c:558: warning: The following parameters of gel_hash_enum_end(gel_hash_enum_t *en, gel_hash_t htab) are not documented:
+  parameter 'htab'

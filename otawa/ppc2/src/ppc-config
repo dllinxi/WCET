@@ -1,0 +1,28 @@
+#!/bin/bash
+
+function syntax {
+	echo "SYNTAX: gliss-config [--cflags] [--libs]"
+	echo "	--cflags -- output C flags"
+	echo "	--libs -- output linked libraries"
+}
+
+while test "$1" != ""; do
+	case "$1" in
+		--cflags)
+			echo "-I/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/ppc2/include"
+			;;
+        --libs)
+        	echo "-L/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/ppc2/src -lppc           -lm  "
+			;;
+        --help|-h)
+        		syntax
+        		exit 0
+                ;;
+        *)
+        		echo "ERROR: unknown option $1"
+        		syntax
+                exit 1
+                ;;
+        esac
+        shift
+done

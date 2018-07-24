@@ -1,0 +1,1 @@
+/usr/bin/cc  -g  -Wl,--enable-auto-import CMakeFiles/gel-sym.dir/gel-sym.c.o  -o gel-sym.exe -Wl,--out-implib,libgel-sym.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -L/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/src  ../src/libgel.dll.a -ldl 

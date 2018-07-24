@@ -1,0 +1,11 @@
+Delta 2034 at no_scenario/an_is.c:315 in c_n_sp_is (total count=1) : then=3; else=2037;  // lv_act_sa_eol
+Delta 2034 at no_scenario/an_is.c:302 in c_n_sp_is (total count=1) : then=4; else=2038;  // lv_n_sp_is_lih_act
+Delta 2033 at no_scenario/an_is.c:321 in c_n_sp_is (total count=1) : then=3; else=2036;  // lv_act_n_sp_is_ext_adj
+Delta 2032 at no_scenario/an_is.c:327 in c_n_sp_is (total count=1) : then=3; else=2035;  // lv_act_n_sp_is_bas_ext_adj
+Delta 230 at no_scenario/an_is.c:412 in c_n_dif (total count=1) : then=234; else=4;  // lv_is
+Delta 218 at no_scenario/an_is.c:414 in c_n_dif (total count=1) : then=225; else=7;  // lv_n_dif_trans_is
+Delta 215 at no_scenario/an_is.c:377 in c_n_sp_is (total count=1) : then=218; else=3;  // lv_st_end
+Delta 184 at no_scenario/an_is.c:156 in c_n_sp_is (total count=1) : then=3; else=187;  // lv_var_acin
+Delta 182 at no_scenario/an_is.c:162 in c_n_sp_is (total count=1) : then=2; else=184;  // tam < c_tam_n_sp_heat
+Delta 16 at no_scenario/an_is.c:350 in c_n_sp_is (total count=1) : then=5; else=21;  // lv_n_sp_is_lih_act
+Delta 11 at no_scenario/an_is.c:357 in c_n_sp_is (total count=1) : then=6; else=17;  // lv_n_sp_is_cs ? n_sp_is_3 == n_sp_is_cs : lv_n_sp_is_ramp_cs

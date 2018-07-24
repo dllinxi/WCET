@@ -1,0 +1,25 @@
+Thot V0.1
+---------
+
+Thot is a document generator taking as input a textual document
+expressed in a wiki-like language (currently dokuwiki syntax is
+supported but more will be added) and produces as output a nice
+displayable document (HTML, Latex, PDF, etc). The main concept is to
+make document-making as less painful as possible while unleashing
+powerful textual dialect: the basic wiki syntax may be improved by
+augmenting the syntax thanks to external modules.
+
+Thot is delivered under the license GPL v2 delivered in the COPYING file.
+
+To install Thot, unpack the archive containing it and type:
+	> cd Thot-VXX/
+	> make install
+
+As a default, the install directory is /usr and thot command is installed
+in /usr/bin. You can change the installation direcory to INSTALL-DIRECTORY
+by typing:
+	> make install PREFIX=INSTALL-DIRECTORY
+
+For any problem, you can contact me to hugues.casse@laposte.net.
+
+	

@@ -1,0 +1,21 @@
+@use dokuwiki
+@use aafig
+@TITLE=aafig test
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+
+aafig examples below are extracted and gracefully provided by [[https://launchpad.net/aafigure|aafig website]].
+
+<aafig foreground=#ff0000,proportional=off>
+/-----------+
+| MediaWiki +----+
+\-----------+    |
+                 v
+                 o-----> Awesome!
+                 ^
+/-----------+    |
+| aafigure  +----+
+\-----------+
+</aafig>
+@label This is my first aafig.

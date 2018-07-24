@@ -1,0 +1,23 @@
+<flowfacts>
+      <context name="x">
+      <data name="lv_act_sa_eol"><const value="0"/></data>
+      <data name="lv_n_sp_is_lih_act"><const value="0"/></data>
+      <data name="lv_is"><const value="1"/></data>
+      <data name="lv_act_n_sp_is_ext_adj"><const value="0"/></data>
+      <data name="lv_act_n_sp_is_bas_ext_adj"><const value="0"/></data>
+      <data name="lv_st_end"><const value="1"/></data>
+      <data name="lv_var_acin"><const value="0"/></data>
+      <data name="tam"><const value="22"/></data>				
+      <data name="c_tam_n_sp_heat"><const value="51"/></data>
+      <data name="c_tam_hys"><const value="7"/></data>				
+      <data name="lv_pste_disable"><const value="1"/></data>	
+      <data name="vs"><const value="0"/></data>			
+      <data name="lv_cs"><const value="0"/></data>		
+      <data name="t_ast"><const value="0"/></data>	
+      <data name="c_vs_max_n_sp_cs"><const value="10"/></data>	
+      <data name="c_vs_hys_n_sp_cs"><const value="6"/></data>	
+      <data name="lv_var_ars"><const value="0"/></data>		
+      <data name="c_vs_min_n_sp_is_ars"><const value="0"/></data>
+      </context>
+</flowfacts>
+

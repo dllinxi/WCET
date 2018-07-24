@@ -1,0 +1,19 @@
+@use dokuwiki
+@TITLE=Thot Course
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=1.0
+@LANG=en_EN
+@use scorm
+
+====== First Lecture ======
+@scorm:controlMode: +choice
+
+This is the first lecture.
+{{gravure-thot.gif}}
+
+====== Second Lecture ======
+
+@scorm:pre:if satisfied then skip
+@scorm:limit: attemptLimit=3
+
+This is the second lecture.

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT otawa-extend		(message date package*)>
+
+<!ELEMENT message			(#PCDATA)>
+<!ELEMENT date 				(#PCDATA)>
+
+<!ELEMENT package			((req|reqs|use|desc|copyright|license|category|web|contact|version|build|uninstall)*)>
+<!ATTLIST package tool		(yes|no) "no">
+<!ATTLIST package version	#IMPLIED>
+
+<!-- deprecated element -->
+<!ELEMENT reqs				req+>
+
+<!ELEMENT req				EMPTY>
+<!ATTLIST req name			CDATA #REQUIRED>
+
+<!ELEMENT use				EMPTY>
+<!ATTLIST use name			CDATA #REQUIRED>
+
+<!ELEMENT desc				ANY>
+<!ELEMENT copyright			(#PCDATA)>
+<!ELEMENT license			(#PCDATA)>
+<!ATTLIST license ref		CDATA #IMPLIED>
+<!ELEMENT category			(#PCDATA)>
+<!ELEMENT contact			(#PCDATA)>
+<!ELEMENT web				(#PCDATA)>
+
+<!ELEMENT build				(dep|download|make)*>
+<!ELEMENT dep				EMPTY>
+<!ATTLIST dep type			CDATA #REQUIRED>
+<!ELEMENT download			ANY>
+<!ATTLIST type				CDATA #REQUIRED>
+<!ELEMENT make				ANY>
+<!ATTLIST make type			CDATA #REQUIRED>
+
+<!ELEMENT version			(file|size|checksum)*>
+<!ATTLIST version number 	CDATA #REQUIRED>
+<!ELEMENT file				(#PCDATA)>
+<!ELEMENT size				(#PCDATA)>
+<!ELEMENT checksum			(#PCDATA)>
+
+<!ELEMENT uninstall			(remove)*>
+<!ELEMENT remove path		CDATA #REQUIRED>

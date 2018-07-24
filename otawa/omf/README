@@ -1,0 +1,115 @@
+====== GEL ======
+
+===== Description =====
+
+==== Features ====
+
+GEL is a library and a set of tools to handle ELF executable files.
+
+GEL is delivered under the LGPL v2 license whose definition
+is provided in COPYING file.
+
+GEL supports the following features of ELF:
+  * 32-bits format,
+  * STABS debugging format for source lines,
+  * DWARF debugging format for source lines.
+
+GEL is developed by the TRACES team in IRIT labs, unversité of Toulouse.
+You can contact us at otawa@irit.fr.
+
+==== Supported OS ====
+
+GEL has been successfully compiled and used on the following OS:
+  * Linux (32 and 64-bits)
+  * Windows (32 and 64-bits)
+  * MacOSX
+
+
+===== How to use it ? =====
+
+==== Compiling from sources ====
+
+To compile sources, GEL is available as source package or from
+the Mercurial repository (for the latest versions):
+	$ hg clone https://anon:ok@wwwsecu.irit.fr/hg/TRACES/gel/trunk gel
+
+To compile it, the following dependencies must be meet:
+  * cmake
+  * gmake
+  * gcc
+
+Performs the following actions to compile it:
+  * go to the top directory of GEL sources
+	$ cd gel
+  * configure the Makefile with site to install to (named INSTALL_DIR)
+	$ cmake . -DCMAKE_INSTALL_PREFIX=INSTALL_DIR
+  * compile
+	$ make
+  * and install
+    $ make install
+
+To launch the tests, just type:
+	$ make test
+
+==== Selecting installation level ====
+
+Basically, the "install" goal install the whole sets of resources of GEL
+including libraries, commands, header files and documentation.
+This behavior may be controlled by the variable INSTALL_TYPE
+that may take the following values:
+  * all -- install all (default behavior),
+  * dev-only -- install development files (header files and documentation),
+  * dev-only -- dev with library,
+  * lib -- install only run-time libraries,
+  * bin -- install run-time libraries and commands.  
+
+To select the install type //type//:
+<code>
+cmake . -DINSTALL_TYPE=type
+</code>
+
+
+==== Using the tools ====
+
+Basically, GEL provides a list of commands that may be called from
+the command line:
+  * gel-file: display basic information of ELF file,
+  * gel-im: try to build and display the running image of the executable,
+  * gel-line: display debugging information about source line,
+  * gel-prog: display program headers of ELF file,
+  * gel-sect: display sections of ELF file,
+  * gel-sym: display symbols of ELF file.
+
+To get the instruction description, use the options "-h" or "--help".
+
+
+
+==== Using the library ====
+
+The commands described above are based on the GEL library that can be
+used in your own application. To compile with GEL, you have to pass
+the header directory to gcc compiler:
+	$ gcc -I INSTALL_DIR/include ...
+And to link with GEL :
+	$ gcc -L INSTALL_DIR/lib -lgel ...
+
+The automatic documentation of GEL can browsed from the file
+INSTALL_DIR/share/GEL/autodoc/index.html.
+
+
+
+
+===== How to develop it ? =====
+
+This documentation comes as an add-on to the previous section: read-it carefully first.
+
+==== Debugging mode activation ====
+
+Pass to the cmake call, the option "-DCMAKE_BUILD_TYPE=Debug".
+
+==== Regenerating diff test ====
+
+GEL testing use a set of reference files to ensure that the tools behave
+as expected. Bug fix and software evolution may invalidate the the reference file.
+To regenerate a set of reference file for a tool named TOOL, uses the following command:
+	$ cmake . -DDIFF_TOOL=TOOL

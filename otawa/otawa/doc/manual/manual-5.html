@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>OTAWA Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;casse@irit.fr&gt;, C. Rochange &lt;rochange@irit.fr&gt;, C. Ballabriga &lt;ballabri@irit.fr&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="manual-imports/../css/manual-5..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">OTAWA Manual</div>
+	<div class="authors"><a href="mailto:casse@irit.fr">H. Cassé </a>, <a href="mailto:rochange@irit.fr"> C. Rochange </a>, <a href="mailto:ballabri@irit.fr"> C. Ballabriga </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="manual-0.html">1  Building OTAWA  </a>
+  </li>
+  <li>
+  <a href="manual-1.html">2  Computing a WCET  </a>
+  </li>
+  <li>
+  <a href="manual-2.html">3  Writing an OTAWA Application  </a>
+  </li>
+  <li>
+  <a href="manual-3.html">4  Control Flow Graphs  </a>
+  </li>
+  <li>
+  <a href="manual-4.html">5  Property Work  </a>
+  </li>
+  <li>
+  <a href="manual-5.html">6  Code Processors  </a>
+    <ul class="toc">
+    <li>
+    <a href="manual-5.html#6.1">6.1  Writing a code processor  </a>
+    </li>
+    <li>
+    <a href="manual-5.html#6.2">6.2  Details about the Processing  </a>
+    </li>
+    <li>
+    <a href="manual-5.html#6.3">6.3  Requiring and providing features  </a>
+    </li>
+    <li>
+    <a href="manual-5.html#6.4">6.4  Code Processor Services  </a>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="manual-6.html">7  Features  </a>
+  </li>
+  <li>
+  <a href="manual-7.html">8  Using ELM  </a>
+  </li>
+  <li>
+  <a href="manual-8.html">9  Performing Iterative Data Flow Analysis  </a>
+  </li>
+  <li>
+  <a href="manual-9.html">10  Using Abstract Interpretation  </a>
+  </li>
+  <li>
+  <a href="manual-10.html">11  References  </a>
+  </li>
+  <li>
+  <a href="manual-11.html">12  Architecture Formats  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="6"></a>6 Code Processors  </h2>
+<p>
+As seen in the previous sections, the main class to analyze programs is called a code processor and is represented by the <tt>otawa::proc::Processor</tt> class. We have also shown how to use them to perform WCET computation. This section presents how to extend OTAWA by developing new code processors. </p>
+<p>
+As a common example, all along this section, we show how to build a code processor that counts the number of instructions in the basic blocks and stores them in a property called <tt>INSTRUCTION_COUNT</tt>. </p>
+<h2><a name="6.1"></a>6.1 Writing a code processor  </h2>
+<p>
+The usual way to add an analysis is to add a code processor. To write a code processor, we have to : </p>
+<ul >
+<li><p>
+ choose a name, </p>
+</li>
+<li><p>
+ choose a version, </p>
+</li>
+<li><p>
+ implement the algorithm performing the analysis. </p>
+</li>
+</ul>
+<p>
+To implement the code processor, we must implement a class inheriting from the <tt>otawa::Processor</tt> class and to pass the name and the version to the parent constructor as in the example below: </p>
+<div class="listing"><pre class="code">
+class InstructionCounter: public Processor {
+public:
+  InstructionCounter(void);
+  ...
+};
+
+InstructionCounter::InstructionCounter(void)
+: Processor("InstructionCounter", Version(1, 0, 0)) {
+  ...
+}</pre></div><p>
+Notice that the class declaration and the constructor definition are usually placed, respectively, in a <tt>.h</tt> header file and in a <tt>.cpp</tt> source file according to classic C++ coding rules. The constructor often contains none or very few things as a processor may be used many times with an initialization and termination phase. It is also advised to give the full C++ qualified name of the class as the processor name to support future processor plugin system in OTAWA. </p>
+<p>
+Now, to implement the algorithm, we have to overload the <tt>Processor::processWorkSpace()</tt> method as below. </p>
+<div class="listing"><pre class="code">
+class InstructionCounter: public Processor {
+public:
+  ...
+  virtual void processWorkSpace(WorkSpace *ws);
+};
+
+void InstructionCounter::processWorkSpace(WorkSpace *ws) {  
+  CFGCollection *cfgs = INVOLVED_CFGS(fw);
+  for(CFGCollection::Iterator cfg(cfgs); cfg; cfg++)
+    for(CFG::BBIterator bb(cfg); bb; bb++)
+      INSTRUCTION_COUNT(bb) = bb-&gt;countInstructions();
+}</pre></div><p>
+Details about the performed computation may be found in the previous sections. Shortly, the algorithm iterates on each CFG and basic blocks involved in the analysis and counts and stores the number of instructions. </p>
+<p>
+As the task to iterate on CFG and basic block is very common and tedious, OTAWA provides also helper processors performing this work automatically. If our processor inherit from <tt>CFGProcessor</tt> instead of <tt>Processor</tt>, the algorithm may be implemented as below: </p>
+<div class="listing"><pre class="code">
+class InstructionCounter: public CFGProcessor {
+public:
+  ...
+  virtual void processCFG(WorkSpace *ws, CFG *cfg);
+};
+
+void InstructionCounter::processCFG(WorkSpace *ws, CFG *cfg) {
+  for(CFG::BBIterator bb(cfg); bb; bb++)
+    INSTRUCTION_COUNT(bb) = bb-&gt;countInstructions();
+}</pre></div><p>
+And things become even shorter with the <tt>BBProcessor</tt>: </p>
+<div class="listing"><pre class="code">
+class InstructionCounter: public BBProcessor {
+public:
+  ...
+  virtual void processBB(WorkSpace *ws, CFG *cfg), BasicBlock *bb;
+};
+
+void InstructionCounter::processCFG(WorkSpace *ws, CFG *cfg, BasicBlock *bb) {
+  INSTRUCTION_COUNT(bb) = bb-&gt;countInstructions();
+}</pre></div><p>
+There are several helper processors listed below: </p>
+<ul >
+<li><p>
+ <tt>CFGProcessor</tt>: iterates on the involved CFG, </p>
+</li>
+<li><p>
+ <tt>BBProcessor</tt>: iterates on the involved basic blocks, </p>
+</li>
+<li><p>
+ <tt>FunProcessor</tt>: iterates on functions expressed as Abstract Syntax Trees (AST), </p>
+</li>
+<li><p>
+ <tt>ASTProcessor</tt>: iterates recursively in the AST. </p>
+</li>
+</ul>
+<p>
+Finally, notice that the helper processors do not only iterate on a subset of the program's representation. They handle also automatic facilities provided by the processor according to the configuration properties like: </p>
+<ol >
+<li><p>
+ <tt>Processor::VERBOSE</tt>: displays messages about the performed computation, </p>
+</li>
+<li><p>
+ <tt>Processor::TIMED</tt>: computes execution time of the processor, </p>
+</li>
+<li><p>
+ <tt>Processor::STATS</tt>: computes statistics about the analysis. As a final word, helper classes must be used as often as possible because (1) they already provide a lot of services and (2) they make your own processor benefiting from their future improvements. </p>
+</li>
+</ol>
+<h2><a name="6.2"></a>6.2 Details about the Processing  </h2>
+<p>
+As shown above, the <tt>otawa::proc::Processor</tt> class is the base class to implement a code processor: it is inherited by all code processors. It provides an interface to process workspace and an  interface to let actual analyzers perform their work. </p>
+<p>
+The method <tt>perform</tt> is the main entry point to a code processor. It is called to launch the code processor on the passed workspace with a configuration passed as a property list. Except for some information accessors, it is the only method publicly accessible. Other methods are only declared protected to be overloaded by child classes. They are used to specialize the behavior of the code processor, that is, to implement the performed analysis. </p>
+<p>
+These functions are : </p>
+<ul >
+<li><p>
+ <tt>void configure(const PropList *props)</tt>: this function is called to configure the code processors with the property list passed to the <tt>process()</tt> method; </p>
+</li>
+<li><p>
+ <tt>void setup(WorkSpace *workspace)</tt>: this method is called to setting up the processor, just before to perform the analysis: it may be used to perform resource allocation for example; </p>
+</li>
+<li><p>
+ <tt>void processWorkSpace(WorkSpace *workspace)</tt>: this method must implement the performed analysis; </p>
+</li>
+<li><p>
+ <tt>void cleanup(WorkSpace *workspace)</tt>: this is called just after the analysis  to clean up allocated resources. </p>
+</li>
+</ul>
+<p>
+OTAWA ensures that these four functions are ever called in the following order: </p>
+<ol >
+<li><p>
+ <tt>configure()</tt> </p>
+</li>
+<li><p>
+ <tt>setup()</tt> </p>
+</li>
+<li><p>
+ <tt>processWorkSpace()</tt> </p>
+</li>
+<li><p>
+ <tt>cleanup()</tt> </p>
+</li>
+</ol>
+<p>
+If you are using an helper processor, <tt>setup()</tt> and <tt>cleanup()</tt> are good points to allocate and free resources used throughout the analysis. Notice it is advised to ever call the <tt>configure()</tt> method of the parent class to let it initialize itself from the configuration properties. In the end, this the <tt>Processor::configure()</tt> method that is called and provide common services like verbosity, time measures and statistics gathering. In the contrary, these services may be unavailable. </p>
+<p>
+In our example, we want to collect statistics about the average instruction count of basic block. We add two variables in order to sum the count of instructions and one to count the number of basic blocks. Each time a processing is launched, these values must be reset first and, finally, the statistics are filled with the average count of instructions. The statistics item is returned in a variable whose address is passed in the configuration <tt>AVERAGE_INSTRUCTION_COUNT</tt> property. </p>
+<div class="listing"><pre class="code">
+class InstructionCounter: public BBProcessor {
+  ...
+protected:
+  virtual void configure(const PropList &amp;props);
+  virtual void setup(WorkSpace *ws);
+  virtual void cleanup(WorkSpace *ws);
+  virtual void processBB(WorkSpace *ws, CFG *cfg, BasicBlock *bb);
+private:
+  int sum, cnt, *avg;
+};</pre></div><p>
+The <tt>configure()</tt> just record the average variable pointer. </p>
+<div class="listing"><pre class="code">
+void InstructionCounter::configure(const PropList &amp;props) {
+  avg = AVERAGE_INSTRUCTION_COUNT(props);
+}</pre></div><p>
+The setup method initialize the attributes <tt>sum</tt> and <tt>cnt</tt> to zero before the processing. </p>
+<div class="listing"><pre class="code">
+void InstructionCounter::setup(WorkSpace *ws) {
+  sum = 0;
+  cnt = 0;
+}</pre></div><p>
+For each basic block, we record and sum the number of instructions and we increment the count of basic blocks. </p>
+<div class="listing"><pre class="code">
+void InstructionCounter::processBB(WorkSpace *ws, CFG *cfg, BasicBlock *bb) {
+  int inst_count = bb-&gt;countInstructions();
+  INSTRUCTION_COUNT(bb) = inst_count;
+  sum += inst_count;
+  cnt++;
+}</pre></div><p>
+Finally, at cleanup time, we record the statistics. </p>
+<div class="listing"><pre class="code">
+void InstructionCounter::cleanup(WorkSpace *ws) {
+  if(avg)
+    *avg = sum / cnt;
+}</pre></div><h2><a name="6.3"></a>6.3 Requiring and providing features  </h2>
+<p>
+As shown in the previous section, the dependencies between OTAWA processores are managed using the feature. A feature asserts that some services have performed on the current workspace and, consequently, that some properties become available. </p>
+<p>
+When you design a processor, you must : </p>
+<ol >
+<li><p>
+ list the properties used by your processor and the features creating them (the requirement list), </p>
+</li>
+<li><p>
+ list the built properties and find the feature matching them (the providing list). </p>
+</li>
+</ol>
+<p>
+Be careful: a processor can only declare to provide a feature if it builds all the required properties. To check a provided feature, one may use the <tt>check()</tt> of a feature. They are not automatically called as they may induce a big time overhead but they may be called at implementation time. </p>
+<p>
+To implement the processor, the constructor must declare required and provided feature. For each required feature <tt>RequiredFeature</tt>, it must be a line of the form: </p>
+<div class="listing"><pre class="code">
+  require(RequiredFeature);</pre></div><p>
+For each provided feature <tt>ProvidedFeature</tt>; it must be a line of the form: </p>
+<div class="listing"><pre class="code">
+  provide(ProvidedFeature);</pre></div><p>
+Do not forget to include the header file containing the declaration of the features. Details about the different features are given the automatic documentation, from <tt>&lt;install directory&gt;<i>share/Otawa/autodoc<tt>. </tt></i></tt></p>
+<p>
+As an example, the code below is an excerpt from the constructor of the <tt>ipet::WCETComputation</tt> class: </p>
+<div class="listing"><pre class="code">
+WCETComputation::WCETComputation(void)
+: Processor("otawa::ipet::WCETComputation", Version(1, 0, 0)) {
+	require(CONTROL_CONSTRAINTS_FEATURE);
+	require(OBJECT_FUNCTION_FEATURE);
+	require(FLOW_FACTS_CONSTRAINTS_FEATURE);
+	provide(WCET_FEATURE);
+}</pre></div><p>
+In our example, we must list the used features. We need to get basic blocks from the CFG. This feature is provided by the <tt>COLLECTED_CFG_FEATURE</tt> (declared in <tt>otawa/cfg.h</tt>). As we are adding a new property, there is not an already feature matching. So we need to declare our one (called INSTRUCTION_COUNT_FEATURE) in the header file of our processor. To declare a feature, we need to provide a default processor, that is, our example processor called <tt>InstructionCounter</tt>. </p>
+<div class="listing"><pre class="code">
+extern Feature&lt;InstructionCounter&gt; INSTRUCTION_COUNT_FEATURE;</pre></div><p>
+Then, in the source, we have to give the implementation of our feature. </p>
+<div class="listing"><pre class="code">
+Feature&lt;InstructionCounter&gt; INSTRUCTION_COUNT_FEATURE("INSTRUCTION_COUNT_FEATURE");</pre></div><p>
+The string passed to the <tt>Feature</tt> constructor is used to name it in OTAWA. To be compatible with future processor plugin, it is advised to give to it the same fully-qualified name as the C++ object. </p>
+<p>
+Now, we may define the constructor of our processor: </p>
+<div class="listing"><pre class="code">
+InstructionCounter::InstructionCounter(void)
+: Processor("InstructionCounter", Version(1, 0, 0)) {
+  require(COLLECTED_CFG_FEATURE);
+  provide(INSTRUCTION_COUNT_FEATURE);
+}</pre></div><h2><a name="6.4"></a>6.4 Code Processor Services  </h2>
+<p>
+To make the writing of processor easier, the <tt>Processor</tt> class provides many services listed in this section. </p>
+<p>
+First, the verbose option allows to activate verbose comments about the current processing. According the current code processor, some informations will be displayed. At least, the start and the end of each processor is displayed with different information items according the kind of the processor. To activate the verbose mode, the <tt>Processor::VERBOSE</tt> option must be set to true in the configuration properties. In the processor, the verbose mode state may be checked using the <tt>isVerbose()</tt> method. </p>
+<p>
+Then, the <tt>Processor</tt> class provides a common way to collect statistics about the performed analysis. To get these statistics, a property list pointer must be passed tp the <tt>Processor::STATS</tt> property in the configuration properties. In the processor, the <tt>stats</tt> protected attribute give access to this statistics property list and let the processor store the statistics in the usual way. If there is no statistics list, this pointer is simply null. </p>
+<p>
+The <tt>Processor::TIMED</tt> set to true, in the configuration property list, activates a stopwatch to measure the execution time of the processor. In the processor, this mode may be checked with <tt>isTimed()</tt> method. If the verbose mode is also activated, the measured time will be displayed. If the statistics are activated, the measured time is stored in the statistics with the <tt>Processor::RUNTIME</tt> property. </p>
+<p>
+With the verbose activated or no, the processors may perform some display. They must use the attribute <tt>out</tt> in the processor, a usual output stream like <tt>cout</tt>. As a default, this output is equal to the standard output but it may be redirected using the <tt>Processor::OUTPUT</tt> option in the configuration property list. </p>
+<p>
+The following example shows how to initialize and pass a configuration property list to our custom processor and how to exploit the statistics.  </p>
+<div class="listing"><pre class="code">
+PropList stats;
+PropList config;
+Processor::VERBOSE(config) = true;
+Processor::STATS(config) = &amp;stats;
+Processor::TIMED(config) = true;
+Processor::OUTPUT(config) = &amp;cerr.stream();
+
+InstructionCounter ic;
+ic.process(ws, config);
+cout &lt;&lt; "execution time: " &lt;&lt; Processor::RUNTIME(stats) &lt;&lt; io::endl;</pre></div><p>
+The processor provides also facilities to emit warning and error. The <tt>warn()</tt> method takes a string message and displays a warning line containing the message and the description of the processor. The best way to handle an error, in OTAWA, is to throw an exception. The processor may use the special <tt>ProcessorException</tt> that takes a processor reference and a message to string to build an exception message. </p>
+<p>
+In the examples below, we show first how to use the warning facility then the processor exception class when an empty basic block is found. </p>
+<div class="listing"><pre class="code">
+void InstructionCounter::processBB(WorkSpce *ws, CFG *cfg, BasicBlock *bb) {
+  int inst_cnt = bb-&gt;countInstructions();
+  if(inst_cnt == 0)
+    warn(_ &lt;&lt; "empty basic block at " &lt;&lt; bb-&gt;address());
+  ...
+}</pre></div><div class="listing"><pre class="code">
+void InstructionCounter::processBB(WorkSpce *ws, CFG *cfg, BasicBlock *bb) {
+  int inst_cnt = bb-&gt;countInstructions();
+  if(inst_cnt == 0)
+    throw ProcessorException(*this, _ &lt;&lt; "empty basic block at " &lt;&lt; bb-&gt;address());
+  ...
+}</pre></div></div>
+</div>
+</body>
+</html>

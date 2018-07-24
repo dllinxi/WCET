@@ -1,0 +1,11 @@
+"version.ml" 1 0 4 "version.ml" 1 0 11
+type(
+  string
+)
+ident(
+  def version "version.ml" 3 54 55 "version.ml" 1 0 -1
+)
+"version.ml" 1 0 12 "version.ml" 3 54 55
+type(
+  string
+)

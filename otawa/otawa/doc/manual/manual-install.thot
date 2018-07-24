@@ -1,0 +1,154 @@
+====== Building OTAWA ======
+
+This section describes the requirements to build and use the OTAWA framework.
+
+===== Requirements =====
+
+OTAWA has been mainly tested on a 32 and 64-bits Linux OS but it should work well with any other POSIX-compliant Unix system. Feel free to contact us for any problem at [[mailto:otawa@irit.fr|otawa@irit.fr]].
+
+To build OTAWA, the following tools are required:
+
+^ Package ^ Version ^ URL ^
+| GCC | 4.0.1 | http://gcc.gnu.org/ |
+| GMake | 3.80 | http://www.gnu.org/software/make/ |
+| CMake | 2.6 | http://www.cmake.org/ |
+| Flex | 2.5.4 |  |
+| Bison | 2.0 |  |
+
+Depending on the use of OTAWA, you should also install :
+
+^ Package ^ Version ^ URL ^
+| gliss2 | 1 | http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=54 |
+| ppc | 1 | http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=54 |
+| lp_solve | 4.0 | ftp://ftp.es.ele.tue.nl/pub/lp_solve/old_versions_which_you_probably_dont_want/ |
+| lp_solve | 5.0 | http://lpsolve.sourceforge.net/5.5/ |
+| OCAML | 3.0 | http://caml.inria.fr/ocaml/release.fr.html |
+| FrontC | 3.2 | http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=61 |
+| SystemC | 2.1, 2.2 | http://www.systemc.org/ |
+
+OTAWA has been tested on the following platforms:
+^ Distribution ^ Version ^ Architecture ^ Remarks ^
+| Linux | Ubuntu from 6.10 | x86, x86_64 |  |
+|  | Mandrake/driva | x86, x86_64 |  |
+| MacOSX |  | x86_64 |  |
+| Windows | XP, 7 | x86, x86_64 |  |
+
+
+
+===== Installing from the binary package =====
+
+Just download the binary version from http://www.otawa.fr .
+
+Unzip the archive and that is: it is ready to use:
+<code sh>
+$ tar xvf package.tar.bz2
+</code>
+
+Replace "package" with the right package name.
+
+OTAWA commands are available in the directory package/bin and you should want
+to add them to your PATH:
+<code sh>
+	set PATH=$PATH:absolute_path_to_otawa_package/bin
+</code>
+
+
+
+===== Building from source package =====
+
+Just download the source version from http://www.otawa.fr .
+
+Unzip the archive, choose an installation directory and launch the build script:
+<code sh>
+$ tar xvf package.tar.bz2
+$ cd package
+$ make PREFIX=installation_directory
+</code>
+
+Replace the "package" by the right package name and installation_directory by the directory
+where OTAWA has to be installed.
+
+
+===== Building from the source repository =====
+
+Although it is a bit harder, it may be useful to install OTAWA directly from the source repository
+to stay up to date with the OTAWA development process. OTAWA is using the Mercurial source manager
+(http://mercurial.selenic.com/).
+
+To get a module composing OTAWA (called MODULE in the commands below), you have to type:
+<code sh>
+hg clone https://anon:ok@wwwsecu.irit.fr/hg/TRACES/MODULE/trunk MODULE
+</code>
+
+
+==== Building the core ====
+
+The idea is that all OTAWA dependencies sources have been unpacked in a directory at the same level
+as the sources of OTAWA. We call this directory //BUILD_DIR// and call the installation directory //INSTALL_DIR//.
+
+  * move to the building directory
+<code>
+$ cd BUILD_DIR
+</code>
+
+  * retrieve and compile the GLISS2 utility
+<code>
+$ cd gliss2
+$ make
+</code>
+
+  * get the core architectures and compile them (in the same directory as GLISS2) such that they can be linked with dynamic libraries
+<code>
+$ cd ARCH
+$ make WITH_DYNLIB=1
+</code>
+
+  * get the the lp_solve package, unpack it and rename it ''lp_solve5''. Apply the following commands to compile it:
+<code>
+$ cd lp_solve5
+$ patch -p1 < PACTH_FILE
+$ cd lpsolve55
+$ sh ccc
+</code>
+
+The //PATCH_FILE// file may be accessed {{:download:lp_solve5.patch|here}}.
+
+  * finally, get ''gel'', ''elm'' and ''otawa'' and compile with the following commands:
+<code>
+$ cd PACK
+$ cmake . -DCMAKE_INSTALL_DIR=INSTALL_DIR
+$ make install
+</code>
+
+==== Building oRange ====
+
+oRange is tool used to determine automatically loop bounds. It is very handy to compute WCET and you should need it. To compile it,
+  * get ''frontc'' and compile it (a simple //make// invocation is enough),
+<code>
+$ cd frontc
+$ make
+</code>
+  * then compile oRange and install it
+<code>
+$ cd oRange
+$ make install PREFIX=INSTALL_DIR
+</code>
+
+
+==== Building extensions ====
+
+Building an extension is easier: you have just to check that the ''otawa-config'' utility is
+in the command path (add to your ''PATH'' or equivalent variable the path //INSTALL_DIR//'/bin'.
+Then, just type the following command:
+<code>
+$ cd PACKAGE
+$ cmake .
+$ make install
+</code>
+
+Notice that some extensions have dependencies on GLISS2 packages
+(for example, ''otawa-sparc'' extensions requires the ''sparc'' instruction set).
+In this case, compile the GLISS extension before the OTAWA extension.
+
+</code>
+

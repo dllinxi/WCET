@@ -1,0 +1,8 @@
+.deps
+Makefile
+Makefile.in
+libotawa_lp_solve.a
+.libs
+lp_solve.so
+*.lo
+*.la

@@ -1,0 +1,43 @@
+@TITLE=Thot @(THOT_VERSION) Manual
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.8
+@LANG=en_EN
+@THOT=//**Thot**//
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_green.css
+@HTML_ONE_FILE_PER=chapter
+@LATEX_CLASS=amsbook
+@use dokuwiki
+
+@(THOT) is a simple but powerful system to authorize document. The main
+idea is that classic document processor (like OpenOffice or M$ Office)
+are usually too complex to really get productivity gains. The melting of
+keyboard and mouse and other input devices use is too slow, too
+cumbersome to let the user develop its imagination and its creativity.
+
+In the opposite, some document generation systems like Latex or HTML
+(DocBook, etc) makes the user free from complex devices (and let it
+focus on the keyboard) but are usually hard to read: too much tags
+lessen the readbility of the text.
+
+Finally, the wiki tag system has shown to tie the lightness of keyboard
+with the readibility of not obfuscating notation. Yet, there are a lot
+of different wiki syntaxes and each people has its preferences.
+
+The @(THOT) project was started from this statement to provide a tool that
+allows:
+  * to the select the wiki syntax you like,
+  * to choose the output format,
+  * to enrich the syntax with domain-dedicated languages.
+
+In the first part of this document, you will find a tutorial to the
+@(THOT) usage. In the second part, an exhaustive description of features
+of @(THOT) is given and the last part is developper oriennted because
+@(THOT) has been designed as main barebone supporting use extensions.
+
+@include tutorial.thot
+
+@include writer.thot
+
+@include developper.thot
+
+

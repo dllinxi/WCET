@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>OTAWA Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;casse@irit.fr&gt;, C. Rochange &lt;rochange@irit.fr&gt;, C. Ballabriga &lt;ballabri@irit.fr&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="manual-imports/../css/manual-0..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">OTAWA Manual</div>
+	<div class="authors"><a href="mailto:casse@irit.fr">H. Cassé </a>, <a href="mailto:rochange@irit.fr"> C. Rochange </a>, <a href="mailto:ballabri@irit.fr"> C. Ballabriga </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="manual-0.html">1  Building OTAWA  </a>
+    <ul class="toc">
+    <li>
+    <a href="manual-0.html#1.1">1.1  Requirements  </a>
+    </li>
+    <li>
+    <a href="manual-0.html#1.2">1.2  Installing from the binary package  </a>
+    </li>
+    <li>
+    <a href="manual-0.html#1.3">1.3  Building from source package  </a>
+    </li>
+    <li>
+    <a href="manual-0.html#1.4">1.4  Building from the source repository  </a>
+      <ul class="toc">
+      <li>
+      <a href="manual-0.html#1.4.1">1.4.1  Building the core  </a>
+      </li>
+      <li>
+      <a href="manual-0.html#1.4.2">1.4.2  Building oRange  </a>
+      </li>
+      <li>
+      <a href="manual-0.html#1.4.3">1.4.3  Building extensions  </a>
+      </li>
+      </ul>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="manual-1.html">2  Computing a WCET  </a>
+  </li>
+  <li>
+  <a href="manual-2.html">3  Writing an OTAWA Application  </a>
+  </li>
+  <li>
+  <a href="manual-3.html">4  Control Flow Graphs  </a>
+  </li>
+  <li>
+  <a href="manual-4.html">5  Property Work  </a>
+  </li>
+  <li>
+  <a href="manual-5.html">6  Code Processors  </a>
+  </li>
+  <li>
+  <a href="manual-6.html">7  Features  </a>
+  </li>
+  <li>
+  <a href="manual-7.html">8  Using ELM  </a>
+  </li>
+  <li>
+  <a href="manual-8.html">9  Performing Iterative Data Flow Analysis  </a>
+  </li>
+  <li>
+  <a href="manual-9.html">10  Using Abstract Interpretation  </a>
+  </li>
+  <li>
+  <a href="manual-10.html">11  References  </a>
+  </li>
+  <li>
+  <a href="manual-11.html">12  Architecture Formats  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="1"></a>1 Building OTAWA  </h2>
+<p>
+This section describes the requirements to build and use the OTAWA framework. </p>
+<h2><a name="1.1"></a>1.1 Requirements  </h2>
+<p>
+OTAWA has been mainly tested on a 32 and 64-bits Linux OS but it should work well with any other POSIX-compliant Unix system. Feel free to contact us for any problem at <a href="mailto:otawa@irit.fr">otawa@irit.fr</a>. </p>
+<p>
+To build OTAWA, the following tools are required: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Package </th>
+<th colspan="1">Version </th>
+<th colspan="1">URL </th>
+</tr>
+<tr>
+<td colspan="1">GCC </td>
+<td colspan="1">4.0.1 </td>
+<td colspan="1"><a href="http://gcc.gnu.org/">http://gcc.gnu.org/</a> </td>
+</tr>
+<tr>
+<td colspan="1">GMake </td>
+<td colspan="1">3.80 </td>
+<td colspan="1"><a href="http://www.gnu.org/software/make/">http://www.gnu.org/software/make/</a> </td>
+</tr>
+<tr>
+<td colspan="1">CMake </td>
+<td colspan="1">2.6 </td>
+<td colspan="1"><a href="http://www.cmake.org/">http://www.cmake.org/</a> </td>
+</tr>
+<tr>
+<td colspan="1">Flex </td>
+<td colspan="1">2.5.4 </td>
+<td align="right" colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">Bison </td>
+<td colspan="1">2.0 </td>
+<td align="right" colspan="1"> </td>
+</tr>
+</table>
+</div><p>
+Depending on the use of OTAWA, you should also install : </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Package </th>
+<th colspan="1">Version </th>
+<th colspan="1">URL </th>
+</tr>
+<tr>
+<td colspan="1">gliss2 </td>
+<td colspan="1">1 </td>
+<td colspan="1"><a href="http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=54">http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=54</a> </td>
+</tr>
+<tr>
+<td colspan="1">ppc </td>
+<td colspan="1">1 </td>
+<td colspan="1"><a href="http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=54">http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=54</a> </td>
+</tr>
+<tr>
+<td colspan="1">lp_solve </td>
+<td colspan="1">4.0 </td>
+<td colspan="1"><a href="ftp://ftp.es.ele.tue.nl/pub/lp_solve/old_versions_which_you_probably_dont_want/">ftp://ftp.es.ele.tue.nl/pub/lp_solve/old_versions_which_you_probably_dont_want/</a> </td>
+</tr>
+<tr>
+<td colspan="1">lp_solve </td>
+<td colspan="1">5.0 </td>
+<td colspan="1"><a href="http://lpsolve.sourceforge.net/5.5/">http://lpsolve.sourceforge.net/5.5/</a> </td>
+</tr>
+<tr>
+<td colspan="1">OCAML </td>
+<td colspan="1">3.0 </td>
+<td colspan="1"><a href="http://caml.inria.fr/ocaml/release.fr.html">http://caml.inria.fr/ocaml/release.fr.html</a> </td>
+</tr>
+<tr>
+<td colspan="1">FrontC </td>
+<td colspan="1">3.2 </td>
+<td colspan="1"><a href="http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=61">http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=61</a> </td>
+</tr>
+<tr>
+<td colspan="1">SystemC </td>
+<td colspan="1">2.1, 2.2 </td>
+<td colspan="1"><a href="http://www.systemc.org/">http://www.systemc.org/</a> </td>
+</tr>
+</table>
+</div><p>
+OTAWA has been tested on the following platforms: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Distribution </th>
+<th colspan="1">Version </th>
+<th colspan="1">Architecture </th>
+<th colspan="1">Remarks </th>
+</tr>
+<tr>
+<td colspan="1">Linux </td>
+<td colspan="1">Ubuntu from 6.10 </td>
+<td colspan="1">x86, x86_64 </td>
+<td align="right" colspan="1"> </td>
+</tr>
+<tr>
+<td align="right" colspan="1"> </td>
+<td colspan="1">Mandrake/driva </td>
+<td colspan="1">x86, x86_64 </td>
+<td align="right" colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">MacOSX </td>
+<td align="right" colspan="1"> </td>
+<td colspan="1">x86_64 </td>
+<td align="right" colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">Windows </td>
+<td colspan="1">XP, 7 </td>
+<td colspan="1">x86, x86_64 </td>
+<td align="right" colspan="1"> </td>
+</tr>
+</table>
+</div><h2><a name="1.2"></a>1.2 Installing from the binary package  </h2>
+<p>
+Just download the binary version from <a href="http://www.otawa.fr">http://www.otawa.fr</a> . </p>
+<p>
+Unzip the archive and that is: it is ready to use: </p>
+<div class="listing"><pre class="code">
+$ tar xvf package.tar.bz2</pre></div><p>
+Replace "package" with the right package name. </p>
+<p>
+OTAWA commands are available in the directory package/bin and you should want to add them to your PATH: </p>
+<div class="listing"><pre class="code">
+	set PATH=$PATH:absolute_path_to_otawa_package/bin</pre></div><h2><a name="1.3"></a>1.3 Building from source package  </h2>
+<p>
+Just download the source version from <a href="http://www.otawa.fr">http://www.otawa.fr</a> . </p>
+<p>
+Unzip the archive, choose an installation directory and launch the build script: </p>
+<div class="listing"><pre class="code">
+$ tar xvf package.tar.bz2
+$ cd package
+$ make PREFIX=installation_directory</pre></div><p>
+Replace the "package" by the right package name and installation_directory by the directory where OTAWA has to be installed. </p>
+<h2><a name="1.4"></a>1.4 Building from the source repository  </h2>
+<p>
+Although it is a bit harder, it may be useful to install OTAWA directly from the source repository to stay up to date with the OTAWA development process. OTAWA is using the Mercurial source manager (<a href="http://mercurial.selenic.com/).">http://mercurial.selenic.com/).</a> </p>
+<p>
+To get a module composing OTAWA (called MODULE in the commands below), you have to type: </p>
+<div class="listing"><pre class="code">
+hg clone https://anon:ok@wwwsecu.irit.fr/hg/TRACES/MODULE/trunk MODULE</pre></div><h2><a name="1.4.1"></a>1.4.1 Building the core  </h2>
+<p>
+The idea is that all OTAWA dependencies sources have been unpacked in a directory at the same level as the sources of OTAWA. We call this directory <i>BUILD_DIR</i> and call the installation directory <i>INSTALL_DIR</i>. </p>
+<ul >
+<li><p>
+ move to the building directory </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+$ cd BUILD_DIR</pre></div><ul >
+<li><p>
+ retrieve and compile the GLISS2 utility </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+$ cd gliss2
+$ make</pre></div><ul >
+<li><p>
+ get the core architectures and compile them (in the same directory as GLISS2) such that they can be linked with dynamic libraries </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+$ cd ARCH
+$ make WITH_DYNLIB=1</pre></div><ul >
+<li><p>
+ get the the lp_solve package, unpack it and rename it <tt>lp_solve5</tt>. Apply the following commands to compile it: </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+$ cd lp_solve5
+$ patch -p1 &lt; PACTH_FILE
+$ cd lpsolve55
+$ sh ccc</pre></div><p>
+The <i>PATCH_FILE</i> file may be accessed <img src=":download:lp_solve5.patch|here"/>. </p>
+<ul >
+<li><p>
+ finally, get <tt>gel</tt>, <tt>elm</tt> and <tt>otawa</tt> and compile with the following commands: </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+$ cd PACK
+$ cmake . -DCMAKE_INSTALL_DIR=INSTALL_DIR
+$ make install</pre></div><h2><a name="1.4.2"></a>1.4.2 Building oRange  </h2>
+<p>
+oRange is tool used to determine automatically loop bounds. It is very handy to compute WCET and you should need it. To compile it, </p>
+<ul >
+<li><p>
+ get <tt>frontc</tt> and compile it (a simple <i>make</i> invocation is enough), </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+$ cd frontc
+$ make</pre></div><ul >
+<li><p>
+ then compile oRange and install it </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+$ cd oRange
+$ make install PREFIX=INSTALL_DIR</pre></div><h2><a name="1.4.3"></a>1.4.3 Building extensions  </h2>
+<p>
+Building an extension is easier: you have just to check that the <tt>otawa-config</tt> utility is in the command path (add to your <tt>PATH</tt> or equivalent variable the path <i>INSTALL_DIR</i>'/bin'. Then, just type the following command: </p>
+<div class="listing"><pre class="code">
+$ cd PACKAGE
+$ cmake .
+$ make install</pre></div><p>
+Notice that some extensions have dependencies on GLISS2 packages (for example, <tt>otawa-sparc</tt> extensions requires the <tt>sparc</tt> instruction set). In this case, compile the GLISS extension before the OTAWA extension. </p>
+<p>
+&lt;/code&gt; </p>
+</div>
+</div>
+</body>
+</html>

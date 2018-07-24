@@ -1,0 +1,46 @@
+====== Elm Developper Information ======
+
+===== Organization =====
+
+Directories:
+  * include/		ELM headers.
+  * src/			ELM sources.
+  * test/			Test programs.
+  * perf/			Performances test programs and data.
+  * tools/			Tool to work with ELM.
+
+===== Working with sources =====
+
+Bootstrap:
+<code sh>
+	cmake .
+</code>
+
+Under Windows (MINGW required):
+<code sh>
+	cmake . -G "MSYS Makefiles"
+</code>
+
+Auto-documentation:
+<code>
+	xdg-open autodoc/index.html
+</code>
+
+Re-generating the autodocumentation:
+	cmake . -DAUTODOC=ON
+
+Activating the test compilation:
+	cmake . -DELM_TEST=ON
+
+Testing:
+	cd test
+	./test			launch all automated tests
+	./test-thread	thread classes
+
+Under Windows:
+	move src/libelm.dll to test/
+
+
+===== Development Directives =====
+
+

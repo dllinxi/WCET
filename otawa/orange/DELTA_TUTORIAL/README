@@ -1,0 +1,65 @@
+author: jakob zwirchmayr
+
+
+a tutorial for orange and the delta analysis. examples contains all
+the example files mentioned in the slides (found in folder demo_slides).
+
+
+
+--- description from an email I sent to Armelle:
+
+
+The tutorial folder, it contains:
+
+- demo_slides folder: the tex, and images to build the slides
+
+		you might need to install 'pygmentize', since
+		I use 'minted' for source code listings.
+
+	I added another example (examples/hon.c) and a few
+	experiments/questions that can be answered by running
+	the delta tool (it's 9 questions). Although somewhat
+	similar, there are a few things to do.
+
+	I don't know, you might want to rearrange the slides a bit,
+	however you prefere.
+
+	In principle it contains the following 'sections':
+	
+		1) why deltas/what for, related to the conti module
+		2) illustrate output of orange (ffx, loopfacts)
+		   (using rex.c)
+		3) illustrate delta output (rex.c)
+		4) conti use-case example, gains, scenario etc
+		   (step by step illustration how we would
+		    analyze an_is)
+		5) hon.c + questions
+
+
+- examples folder: contains all the sources
+
+	rex.c: the file that is used to illustrate the output ffx
+	       and the delta list in the slides. (the purple-on-black-
+	       red-arrow images).
+
+	hon: contains hon.c and a few input ffx files. this is the
+	     source that should be analyzed to answer the 9 questions.
+	     (it's again a nonsensical example, solutions and 		
+	      invokations are in the slides, the input ffx files can
+	      be found in the folder)
+
+	an_is_no_scenario: the original conti module
+
+	an_is_scenario: same, original module, with in.ffx,
+                  the delta scenario
+
+	an_is_renamed: the source code with variables renamed to random
+                 strings
+	
+	an_is_10_highest_deltas: list of the 10 highest delta conds
+
+	an_is_cfg_param_vars.csv: the conti parameter list. this one and
+				  the 10_highest_delta are used in the
+				  'syntactic matching' part (the small
+				  shellscript).
+

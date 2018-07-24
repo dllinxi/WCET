@@ -1,0 +1,3672 @@
+"cvariables.ml" 14 254 258 "cvariables.ml" 14 254 265
+type(
+  string
+)
+ident(
+  def version "cvariables.ml" 16 321 321 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 14 254 268 "cvariables.ml" 14 254 299
+type(
+  string
+)
+"cvariables.ml" 16 321 325 "cvariables.ml" 16 321 337
+type(
+  'a list -> 'a -> bool
+)
+ident(
+  def rechercheVar "cvariables.ml" 19 377 377 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 16 321 338 "cvariables.ml" 16 321 343
+type(
+  'a list
+)
+ident(
+  def liste "cvariables.ml" 16 321 344 "cvariables.ml" 16 321 371
+)
+"cvariables.ml" 16 321 344 "cvariables.ml" 16 321 348
+type(
+  'a
+)
+ident(
+  def var1 "cvariables.ml" 16 321 352 "cvariables.ml" 16 321 371
+)
+"cvariables.ml" 16 321 352 "cvariables.ml" 16 321 360
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"cvariables.ml" 16 321 361 "cvariables.ml" 16 321 365
+type(
+  'a
+)
+ident(
+  int_ref var1 "cvariables.ml" 16 321 344 "cvariables.ml" 16 321 348
+)
+"cvariables.ml" 16 321 366 "cvariables.ml" 16 321 371
+type(
+  'a list
+)
+ident(
+  int_ref liste "cvariables.ml" 16 321 338 "cvariables.ml" 16 321 343
+)
+"cvariables.ml" 16 321 352 "cvariables.ml" 16 321 371
+call(
+  tail
+)
+type(
+  bool
+)
+"cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  def union "cvariables.ml" 19 377 377 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 19 377 391 "cvariables.ml" 19 377 393
+type(
+  'a list
+)
+ident(
+  def l1 "cvariables.ml" 19 377 394 "cvariables.ml" 29 579 582
+)
+"cvariables.ml" 19 377 394 "cvariables.ml" 19 377 396
+type(
+  'a list
+)
+ident(
+  def l2 "cvariables.ml" 20 399 399 "cvariables.ml" 29 579 582
+)
+"cvariables.ml" 20 399 402 "cvariables.ml" 20 399 404
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 19 377 391 "cvariables.ml" 19 377 393
+)
+"cvariables.ml" 20 399 405 "cvariables.ml" 20 399 406
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 20 399 407 "cvariables.ml" 20 399 409
+type(
+  'a list
+)
+"cvariables.ml" 20 399 402 "cvariables.ml" 20 399 409
+type(
+  bool
+)
+"cvariables.ml" 20 399 415 "cvariables.ml" 20 399 417
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 19 377 394 "cvariables.ml" 19 377 396
+)
+"cvariables.ml" 23 431 435 "cvariables.ml" 23 431 437
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 19 377 394 "cvariables.ml" 19 377 396
+)
+"cvariables.ml" 23 431 438 "cvariables.ml" 23 431 439
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 23 431 440 "cvariables.ml" 23 431 442
+type(
+  'a list
+)
+"cvariables.ml" 23 431 435 "cvariables.ml" 23 431 442
+type(
+  bool
+)
+"cvariables.ml" 23 431 448 "cvariables.ml" 23 431 450
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 19 377 391 "cvariables.ml" 19 377 393
+)
+"cvariables.ml" 26 466 472 "cvariables.ml" 26 466 480
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"cvariables.ml" 26 466 482 "cvariables.ml" 26 466 489
+type(
+  'a list -> 'a
+)
+ident(
+  ext_ref List.hd
+)
+"cvariables.ml" 26 466 490 "cvariables.ml" 26 466 492
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 19 377 391 "cvariables.ml" 19 377 393
+)
+"cvariables.ml" 26 466 481 "cvariables.ml" 26 466 493
+call(
+  stack
+)
+type(
+  'a
+)
+"cvariables.ml" 26 466 494 "cvariables.ml" 26 466 496
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 19 377 394 "cvariables.ml" 19 377 396
+)
+"cvariables.ml" 26 466 472 "cvariables.ml" 26 466 496
+call(
+  stack
+)
+type(
+  bool
+)
+"cvariables.ml" 26 466 502 "cvariables.ml" 26 466 507
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 26 466 509 "cvariables.ml" 26 466 516
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.tl
+)
+"cvariables.ml" 26 466 517 "cvariables.ml" 26 466 519
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 19 377 391 "cvariables.ml" 19 377 393
+)
+"cvariables.ml" 26 466 508 "cvariables.ml" 26 466 520
+call(
+  stack
+)
+type(
+  'a list
+)
+"cvariables.ml" 26 466 521 "cvariables.ml" 26 466 523
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 19 377 394 "cvariables.ml" 19 377 396
+)
+"cvariables.ml" 26 466 502 "cvariables.ml" 26 466 523
+call(
+  tail
+)
+type(
+  'a list
+)
+"cvariables.ml" 27 524 533 "cvariables.ml" 27 524 540
+type(
+  'a list -> 'a
+)
+ident(
+  ext_ref List.hd
+)
+"cvariables.ml" 27 524 541 "cvariables.ml" 27 524 543
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 19 377 391 "cvariables.ml" 19 377 393
+)
+"cvariables.ml" 27 524 532 "cvariables.ml" 27 524 544
+call(
+  stack
+)
+type(
+  'a
+)
+"cvariables.ml" 27 524 548 "cvariables.ml" 27 524 553
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 27 524 555 "cvariables.ml" 27 524 562
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.tl
+)
+"cvariables.ml" 27 524 563 "cvariables.ml" 27 524 565
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 19 377 391 "cvariables.ml" 19 377 393
+)
+"cvariables.ml" 27 524 554 "cvariables.ml" 27 524 566
+call(
+  stack
+)
+type(
+  'a list
+)
+"cvariables.ml" 27 524 569 "cvariables.ml" 27 524 571
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 19 377 394 "cvariables.ml" 19 377 396
+)
+"cvariables.ml" 27 524 547 "cvariables.ml" 27 524 572
+call(
+  stack
+)
+type(
+  'a list
+)
+"cvariables.ml" 27 524 532 "cvariables.ml" 27 524 572
+type(
+  'a list
+)
+"cvariables.ml" 25 458 460 "cvariables.ml" 28 573 578
+type(
+  'a list
+)
+"cvariables.ml" 22 425 425 "cvariables.ml" 29 579 582
+type(
+  'a list
+)
+"cvariables.ml" 20 399 399 "cvariables.ml" 29 579 582
+type(
+  'a list
+)
+"cvariables.ml" 33 586 594 "cvariables.ml" 33 586 600
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  def inclus "cvariables.ml" 33 586 586 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 33 586 601 "cvariables.ml" 33 586 603
+type(
+  'a list
+)
+ident(
+  def l1 "cvariables.ml" 33 586 604 "cvariables.ml" 43 760 763
+)
+"cvariables.ml" 33 586 604 "cvariables.ml" 33 586 606
+type(
+  'a list
+)
+ident(
+  def l2 "cvariables.ml" 34 609 609 "cvariables.ml" 43 760 763
+)
+"cvariables.ml" 34 609 612 "cvariables.ml" 34 609 614
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 33 586 601 "cvariables.ml" 33 586 603
+)
+"cvariables.ml" 34 609 615 "cvariables.ml" 34 609 616
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 34 609 617 "cvariables.ml" 34 609 619
+type(
+  'a list
+)
+"cvariables.ml" 34 609 612 "cvariables.ml" 34 609 619
+type(
+  bool
+)
+"cvariables.ml" 34 609 625 "cvariables.ml" 34 609 629
+type(
+  bool
+)
+"cvariables.ml" 37 643 647 "cvariables.ml" 37 643 649
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 33 586 604 "cvariables.ml" 33 586 606
+)
+"cvariables.ml" 37 643 650 "cvariables.ml" 37 643 651
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 37 643 652 "cvariables.ml" 37 643 654
+type(
+  'a list
+)
+"cvariables.ml" 37 643 647 "cvariables.ml" 37 643 654
+type(
+  bool
+)
+"cvariables.ml" 37 643 660 "cvariables.ml" 37 643 665
+type(
+  bool
+)
+"cvariables.ml" 40 681 687 "cvariables.ml" 40 681 695
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"cvariables.ml" 40 681 697 "cvariables.ml" 40 681 704
+type(
+  'a list -> 'a
+)
+ident(
+  ext_ref List.hd
+)
+"cvariables.ml" 40 681 705 "cvariables.ml" 40 681 707
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 33 586 601 "cvariables.ml" 33 586 603
+)
+"cvariables.ml" 40 681 696 "cvariables.ml" 40 681 708
+call(
+  stack
+)
+type(
+  'a
+)
+"cvariables.ml" 40 681 709 "cvariables.ml" 40 681 711
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 33 586 604 "cvariables.ml" 33 586 606
+)
+"cvariables.ml" 40 681 687 "cvariables.ml" 40 681 711
+call(
+  stack
+)
+type(
+  bool
+)
+"cvariables.ml" 40 681 717 "cvariables.ml" 40 681 723
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  int_ref inclus "cvariables.ml" 33 586 594 "cvariables.ml" 33 586 600
+)
+"cvariables.ml" 40 681 725 "cvariables.ml" 40 681 732
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.tl
+)
+"cvariables.ml" 40 681 733 "cvariables.ml" 40 681 735
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 33 586 601 "cvariables.ml" 33 586 603
+)
+"cvariables.ml" 40 681 724 "cvariables.ml" 40 681 736
+call(
+  stack
+)
+type(
+  'a list
+)
+"cvariables.ml" 40 681 737 "cvariables.ml" 40 681 739
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 33 586 604 "cvariables.ml" 33 586 606
+)
+"cvariables.ml" 40 681 717 "cvariables.ml" 40 681 739
+call(
+  tail
+)
+type(
+  bool
+)
+"cvariables.ml" 41 740 748 "cvariables.ml" 41 740 753
+type(
+  bool
+)
+"cvariables.ml" 39 673 675 "cvariables.ml" 42 754 759
+type(
+  bool
+)
+"cvariables.ml" 36 637 637 "cvariables.ml" 43 760 763
+type(
+  bool
+)
+"cvariables.ml" 34 609 609 "cvariables.ml" 43 760 763
+type(
+  bool
+)
+"cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+type(
+  Cabs.expression -> string list
+)
+ident(
+  def listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1495 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 55 1495 1527 "cvariables.ml" 55 1495 1530
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cvariables.ml" 56 1533 1534 "cvariables.ml" 71 2384 2403
+)
+"cvariables.ml" 56 1533 1540 "cvariables.ml" 56 1533 1543
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cvariables.ml" 55 1495 1527 "cvariables.ml" 55 1495 1530
+)
+"cvariables.ml" 57 1549 1558 "cvariables.ml" 57 1549 1559
+type(
+  Cabs.unary_operator
+)
+"cvariables.ml" 57 1549 1561 "cvariables.ml" 57 1549 1562
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 57 1549 1571 "cvariables.ml" 57 1549 1596
+)
+"cvariables.ml" 57 1549 1551 "cvariables.ml" 57 1549 1563
+type(
+  Cabs.expression
+)
+"cvariables.ml" 57 1549 1571 "cvariables.ml" 57 1549 1594
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 57 1549 1595 "cvariables.ml" 57 1549 1596
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 57 1549 1561 "cvariables.ml" 57 1549 1562
+)
+"cvariables.ml" 57 1549 1571 "cvariables.ml" 57 1549 1596
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 58 1598 1609 "cvariables.ml" 58 1598 1610
+type(
+  Cabs.binary_operator
+)
+"cvariables.ml" 58 1598 1612 "cvariables.ml" 58 1598 1616
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 58 1598 1629 "cvariables.ml" 58 1598 1697
+)
+"cvariables.ml" 58 1598 1618 "cvariables.ml" 58 1598 1622
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 58 1598 1629 "cvariables.ml" 58 1598 1697
+)
+"cvariables.ml" 58 1598 1601 "cvariables.ml" 58 1598 1623
+type(
+  Cabs.expression
+)
+"cvariables.ml" 58 1598 1629 "cvariables.ml" 58 1598 1634
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 58 1598 1636 "cvariables.ml" 58 1598 1659
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 58 1598 1661 "cvariables.ml" 58 1598 1665
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 58 1598 1612 "cvariables.ml" 58 1598 1616
+)
+"cvariables.ml" 58 1598 1634 "cvariables.ml" 58 1598 1666
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 58 1598 1668 "cvariables.ml" 58 1598 1691
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 58 1598 1692 "cvariables.ml" 58 1598 1696
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 58 1598 1618 "cvariables.ml" 58 1598 1622
+)
+"cvariables.ml" 58 1598 1667 "cvariables.ml" 58 1598 1697
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 58 1598 1629 "cvariables.ml" 58 1598 1697
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 59 1698 1711 "cvariables.ml" 59 1698 1715
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 59 1698 1732 "cvariables.ml" 59 1698 1839
+)
+"cvariables.ml" 59 1698 1717 "cvariables.ml" 59 1698 1721
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 59 1698 1732 "cvariables.ml" 59 1698 1839
+)
+"cvariables.ml" 59 1698 1723 "cvariables.ml" 59 1698 1727
+type(
+  Cabs.expression
+)
+ident(
+  def exp3 "cvariables.ml" 59 1698 1732 "cvariables.ml" 59 1698 1839
+)
+"cvariables.ml" 59 1698 1701 "cvariables.ml" 59 1698 1728
+type(
+  Cabs.expression
+)
+"cvariables.ml" 59 1698 1732 "cvariables.ml" 59 1698 1737
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 59 1698 1739 "cvariables.ml" 59 1698 1762
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 59 1698 1763 "cvariables.ml" 59 1698 1767
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 59 1698 1711 "cvariables.ml" 59 1698 1715
+)
+"cvariables.ml" 59 1698 1738 "cvariables.ml" 59 1698 1768
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 59 1698 1770 "cvariables.ml" 59 1698 1775
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 59 1698 1777 "cvariables.ml" 59 1698 1800
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 59 1698 1801 "cvariables.ml" 59 1698 1805
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 59 1698 1717 "cvariables.ml" 59 1698 1721
+)
+"cvariables.ml" 59 1698 1776 "cvariables.ml" 59 1698 1806
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 59 1698 1808 "cvariables.ml" 59 1698 1831
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 59 1698 1833 "cvariables.ml" 59 1698 1837
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp3 "cvariables.ml" 59 1698 1723 "cvariables.ml" 59 1698 1727
+)
+"cvariables.ml" 59 1698 1807 "cvariables.ml" 59 1698 1838
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 59 1698 1769 "cvariables.ml" 59 1698 1839
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 59 1698 1732 "cvariables.ml" 59 1698 1839
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 60 1840 1849 "cvariables.ml" 60 1840 1850
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 60 1840 1852 "cvariables.ml" 60 1840 1853
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 60 1840 1862 "cvariables.ml" 60 1840 1888
+)
+"cvariables.ml" 60 1840 1843 "cvariables.ml" 60 1840 1854
+type(
+  Cabs.expression
+)
+"cvariables.ml" 60 1840 1862 "cvariables.ml" 60 1840 1885
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 60 1840 1887 "cvariables.ml" 60 1840 1888
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 60 1840 1852 "cvariables.ml" 60 1840 1853
+)
+"cvariables.ml" 60 1840 1862 "cvariables.ml" 60 1840 1888
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 61 1889 1898 "cvariables.ml" 61 1889 1899
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 61 1889 1952 "cvariables.ml" 61 1889 1975
+)
+"cvariables.ml" 61 1889 1901 "cvariables.ml" 61 1889 1905
+type(
+  Cabs.expression list
+)
+ident(
+  def args "cvariables.ml" 61 1889 1952 "cvariables.ml" 61 1889 1975
+)
+"cvariables.ml" 61 1889 1892 "cvariables.ml" 61 1889 1906
+type(
+  Cabs.expression
+)
+"cvariables.ml" 61 1889 1954 "cvariables.ml" 61 1889 1969
+type(
+  Cabs.expression list -> string list
+)
+ident(
+  int_ref traiterCommaExp "cvariables.ml" 74 2409 2413 "cvariables.ml" 74 2409 2428
+)
+"cvariables.ml" 61 1889 1970 "cvariables.ml" 61 1889 1974
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref args "cvariables.ml" 61 1889 1901 "cvariables.ml" 61 1889 1905
+)
+"cvariables.ml" 61 1889 1952 "cvariables.ml" 61 1889 1975
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 62 1976 1985 "cvariables.ml" 62 1976 1986
+type(
+  Cabs.expression list
+)
+ident(
+  def e "cvariables.ml" 62 1976 1996 "cvariables.ml" 62 1976 2013
+)
+"cvariables.ml" 62 1976 1979 "cvariables.ml" 62 1976 1986
+type(
+  Cabs.expression
+)
+"cvariables.ml" 62 1976 1996 "cvariables.ml" 62 1976 2011
+type(
+  Cabs.expression list -> string list
+)
+ident(
+  int_ref traiterCommaExp "cvariables.ml" 74 2409 2413 "cvariables.ml" 74 2409 2428
+)
+"cvariables.ml" 62 1976 2012 "cvariables.ml" 62 1976 2013
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref e "cvariables.ml" 62 1976 1985 "cvariables.ml" 62 1976 1986
+)
+"cvariables.ml" 62 1976 1996 "cvariables.ml" 62 1976 2013
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 63 2014 2026 "cvariables.ml" 63 2014 2027
+type(
+  Cabs.constant
+)
+"cvariables.ml" 63 2014 2017 "cvariables.ml" 63 2014 2027
+type(
+  Cabs.expression
+)
+"cvariables.ml" 63 2014 2036 "cvariables.ml" 63 2014 2038
+type(
+  string list
+)
+"cvariables.ml" 64 2039 2051 "cvariables.ml" 64 2039 2055
+type(
+  string
+)
+ident(
+  def name "cvariables.ml" 64 2039 2064 "cvariables.ml" 64 2039 2071
+)
+"cvariables.ml" 64 2039 2042 "cvariables.ml" 64 2039 2055
+type(
+  Cabs.expression
+)
+"cvariables.ml" 64 2039 2065 "cvariables.ml" 64 2039 2069
+type(
+  string
+)
+ident(
+  int_ref name "cvariables.ml" 64 2039 2051 "cvariables.ml" 64 2039 2055
+)
+"cvariables.ml" 64 2039 2064 "cvariables.ml" 64 2039 2071
+type(
+  string list
+)
+"cvariables.ml" 65 2073 2088 "cvariables.ml" 65 2073 2089
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 65 2073 2097 "cvariables.ml" 65 2073 2122
+)
+"cvariables.ml" 65 2073 2076 "cvariables.ml" 65 2073 2089
+type(
+  Cabs.expression
+)
+"cvariables.ml" 65 2073 2097 "cvariables.ml" 65 2073 2120
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 65 2073 2121 "cvariables.ml" 65 2073 2122
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 65 2073 2088 "cvariables.ml" 65 2073 2089
+)
+"cvariables.ml" 65 2073 2097 "cvariables.ml" 65 2073 2122
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 66 2123 2138 "cvariables.ml" 66 2123 2139
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 66 2123 2126 "cvariables.ml" 66 2123 2139
+type(
+  Cabs.expression
+)
+"cvariables.ml" 66 2123 2147 "cvariables.ml" 66 2123 2149
+type(
+  string list
+)
+"cvariables.ml" 67 2150 2160 "cvariables.ml" 67 2150 2161
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 67 2150 2175 "cvariables.ml" 67 2150 2239
+)
+"cvariables.ml" 67 2150 2163 "cvariables.ml" 67 2150 2166
+type(
+  Cabs.expression
+)
+ident(
+  def idx "cvariables.ml" 67 2150 2175 "cvariables.ml" 67 2150 2239
+)
+"cvariables.ml" 67 2150 2153 "cvariables.ml" 67 2150 2167
+type(
+  Cabs.expression
+)
+"cvariables.ml" 67 2150 2175 "cvariables.ml" 67 2150 2180
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 67 2150 2182 "cvariables.ml" 67 2150 2205
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 67 2150 2207 "cvariables.ml" 67 2150 2208
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 67 2150 2160 "cvariables.ml" 67 2150 2161
+)
+"cvariables.ml" 67 2150 2181 "cvariables.ml" 67 2150 2209
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 67 2150 2211 "cvariables.ml" 67 2150 2234
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 67 2150 2235 "cvariables.ml" 67 2150 2238
+type(
+  Cabs.expression
+)
+ident(
+  int_ref idx "cvariables.ml" 67 2150 2163 "cvariables.ml" 67 2150 2166
+)
+"cvariables.ml" 67 2150 2210 "cvariables.ml" 67 2150 2239
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 67 2150 2175 "cvariables.ml" 67 2150 2239
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 68 2240 2253 "cvariables.ml" 68 2240 2254
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 68 2240 2265 "cvariables.ml" 68 2240 2290
+)
+"cvariables.ml" 68 2240 2256 "cvariables.ml" 68 2240 2257
+type(
+  string
+)
+"cvariables.ml" 68 2240 2243 "cvariables.ml" 68 2240 2258
+type(
+  Cabs.expression
+)
+"cvariables.ml" 68 2240 2265 "cvariables.ml" 68 2240 2288
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 68 2240 2289 "cvariables.ml" 68 2240 2290
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 68 2240 2253 "cvariables.ml" 68 2240 2254
+)
+"cvariables.ml" 68 2240 2265 "cvariables.ml" 68 2240 2290
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 69 2291 2307 "cvariables.ml" 69 2291 2308
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 69 2291 2319 "cvariables.ml" 69 2291 2345
+)
+"cvariables.ml" 69 2291 2310 "cvariables.ml" 69 2291 2311
+type(
+  string
+)
+"cvariables.ml" 69 2291 2294 "cvariables.ml" 69 2291 2312
+type(
+  Cabs.expression
+)
+"cvariables.ml" 69 2291 2319 "cvariables.ml" 69 2291 2342
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 69 2291 2344 "cvariables.ml" 69 2291 2345
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 69 2291 2307 "cvariables.ml" 69 2291 2308
+)
+"cvariables.ml" 69 2291 2319 "cvariables.ml" 69 2291 2345
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 70 2346 2359 "cvariables.ml" 70 2346 2360
+type(
+  Cabs.definition list
+)
+"cvariables.ml" 70 2346 2361 "cvariables.ml" 70 2346 2362
+type(
+  Cabs.statement
+)
+"cvariables.ml" 70 2346 2358 "cvariables.ml" 70 2346 2363
+type(
+  Cabs.body
+)
+"cvariables.ml" 70 2346 2349 "cvariables.ml" 70 2346 2363
+type(
+  Cabs.expression
+)
+"cvariables.ml" 70 2346 2381 "cvariables.ml" 70 2346 2383
+type(
+  string list
+)
+"cvariables.ml" 71 2384 2387 "cvariables.ml" 71 2384 2388
+type(
+  Cabs.expression
+)
+"cvariables.ml" 71 2384 2401 "cvariables.ml" 71 2384 2403
+type(
+  string list
+)
+"cvariables.ml" 56 1533 1534 "cvariables.ml" 71 2384 2403
+type(
+  string list
+)
+"cvariables.ml" 74 2409 2413 "cvariables.ml" 74 2409 2428
+type(
+  Cabs.expression list -> string list
+)
+ident(
+  def traiterCommaExp "cvariables.ml" 55 1495 1495 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 74 2409 2429 "cvariables.ml" 74 2409 2434
+type(
+  Cabs.expression list
+)
+ident(
+  def liste "cvariables.ml" 75 2437 2437 "cvariables.ml" 75 2437 2545
+)
+"cvariables.ml" 75 2437 2440 "cvariables.ml" 75 2437 2445
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref liste "cvariables.ml" 74 2409 2429 "cvariables.ml" 74 2409 2434
+)
+"cvariables.ml" 75 2437 2446 "cvariables.ml" 75 2437 2447
+type(
+  Cabs.expression list -> Cabs.expression list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 75 2437 2448 "cvariables.ml" 75 2437 2450
+type(
+  Cabs.expression list
+)
+"cvariables.ml" 75 2437 2440 "cvariables.ml" 75 2437 2450
+type(
+  bool
+)
+"cvariables.ml" 75 2437 2456 "cvariables.ml" 75 2437 2458
+type(
+  string list
+)
+"cvariables.ml" 75 2437 2464 "cvariables.ml" 75 2437 2469
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 75 2437 2471 "cvariables.ml" 75 2437 2494
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 75 2437 2496 "cvariables.ml" 75 2437 2503
+type(
+  Cabs.expression list -> Cabs.expression
+)
+ident(
+  ext_ref List.hd
+)
+"cvariables.ml" 75 2437 2504 "cvariables.ml" 75 2437 2509
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref liste "cvariables.ml" 74 2409 2429 "cvariables.ml" 74 2409 2434
+)
+"cvariables.ml" 75 2437 2495 "cvariables.ml" 75 2437 2510
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"cvariables.ml" 75 2437 2470 "cvariables.ml" 75 2437 2511
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 75 2437 2513 "cvariables.ml" 75 2437 2528
+type(
+  Cabs.expression list -> string list
+)
+ident(
+  int_ref traiterCommaExp "cvariables.ml" 74 2409 2413 "cvariables.ml" 74 2409 2428
+)
+"cvariables.ml" 75 2437 2530 "cvariables.ml" 75 2437 2537
+type(
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  ext_ref List.tl
+)
+"cvariables.ml" 75 2437 2538 "cvariables.ml" 75 2437 2543
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref liste "cvariables.ml" 74 2409 2429 "cvariables.ml" 74 2409 2434
+)
+"cvariables.ml" 75 2437 2529 "cvariables.ml" 75 2437 2544
+call(
+  stack
+)
+type(
+  Cabs.expression list
+)
+"cvariables.ml" 75 2437 2512 "cvariables.ml" 75 2437 2545
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 75 2437 2464 "cvariables.ml" 75 2437 2545
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 75 2437 2437 "cvariables.ml" 75 2437 2545
+type(
+  string list
+)
+"cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+type(
+  Cabs.expression -> string list
+)
+ident(
+  def listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2548 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 77 2548 2583 "cvariables.ml" 77 2548 2586
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cvariables.ml" 78 2589 2590 "cvariables.ml" 93 3339 3358
+)
+"cvariables.ml" 78 2589 2596 "cvariables.ml" 78 2589 2599
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cvariables.ml" 77 2548 2583 "cvariables.ml" 77 2548 2586
+)
+"cvariables.ml" 79 2605 2614 "cvariables.ml" 79 2605 2615
+type(
+  Cabs.unary_operator
+)
+"cvariables.ml" 79 2605 2617 "cvariables.ml" 79 2605 2618
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 79 2605 2627 "cvariables.ml" 79 2605 2655
+)
+"cvariables.ml" 79 2605 2607 "cvariables.ml" 79 2605 2619
+type(
+  Cabs.expression
+)
+"cvariables.ml" 79 2605 2627 "cvariables.ml" 79 2605 2653
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 79 2605 2654 "cvariables.ml" 79 2605 2655
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 79 2605 2617 "cvariables.ml" 79 2605 2618
+)
+"cvariables.ml" 79 2605 2627 "cvariables.ml" 79 2605 2655
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 80 2657 2668 "cvariables.ml" 80 2657 2669
+type(
+  Cabs.binary_operator
+)
+"cvariables.ml" 80 2657 2671 "cvariables.ml" 80 2657 2675
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 80 2657 2688 "cvariables.ml" 80 2657 2762
+)
+"cvariables.ml" 80 2657 2677 "cvariables.ml" 80 2657 2681
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 80 2657 2688 "cvariables.ml" 80 2657 2762
+)
+"cvariables.ml" 80 2657 2660 "cvariables.ml" 80 2657 2682
+type(
+  Cabs.expression
+)
+"cvariables.ml" 80 2657 2688 "cvariables.ml" 80 2657 2693
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 80 2657 2695 "cvariables.ml" 80 2657 2721
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 80 2657 2723 "cvariables.ml" 80 2657 2727
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 80 2657 2671 "cvariables.ml" 80 2657 2675
+)
+"cvariables.ml" 80 2657 2693 "cvariables.ml" 80 2657 2728
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 80 2657 2730 "cvariables.ml" 80 2657 2756
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 80 2657 2757 "cvariables.ml" 80 2657 2761
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 80 2657 2677 "cvariables.ml" 80 2657 2681
+)
+"cvariables.ml" 80 2657 2729 "cvariables.ml" 80 2657 2762
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 80 2657 2688 "cvariables.ml" 80 2657 2762
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 81 2763 2776 "cvariables.ml" 81 2763 2780
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 81 2763 2797 "cvariables.ml" 81 2763 2913
+)
+"cvariables.ml" 81 2763 2782 "cvariables.ml" 81 2763 2786
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 81 2763 2797 "cvariables.ml" 81 2763 2913
+)
+"cvariables.ml" 81 2763 2788 "cvariables.ml" 81 2763 2792
+type(
+  Cabs.expression
+)
+ident(
+  def exp3 "cvariables.ml" 81 2763 2797 "cvariables.ml" 81 2763 2913
+)
+"cvariables.ml" 81 2763 2766 "cvariables.ml" 81 2763 2793
+type(
+  Cabs.expression
+)
+"cvariables.ml" 81 2763 2797 "cvariables.ml" 81 2763 2802
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 81 2763 2804 "cvariables.ml" 81 2763 2830
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 81 2763 2831 "cvariables.ml" 81 2763 2835
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 81 2763 2776 "cvariables.ml" 81 2763 2780
+)
+"cvariables.ml" 81 2763 2803 "cvariables.ml" 81 2763 2836
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 81 2763 2838 "cvariables.ml" 81 2763 2843
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 81 2763 2845 "cvariables.ml" 81 2763 2871
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 81 2763 2872 "cvariables.ml" 81 2763 2876
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 81 2763 2782 "cvariables.ml" 81 2763 2786
+)
+"cvariables.ml" 81 2763 2844 "cvariables.ml" 81 2763 2877
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 81 2763 2879 "cvariables.ml" 81 2763 2905
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 81 2763 2907 "cvariables.ml" 81 2763 2911
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp3 "cvariables.ml" 81 2763 2788 "cvariables.ml" 81 2763 2792
+)
+"cvariables.ml" 81 2763 2878 "cvariables.ml" 81 2763 2912
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 81 2763 2837 "cvariables.ml" 81 2763 2913
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 81 2763 2797 "cvariables.ml" 81 2763 2913
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 82 2914 2923 "cvariables.ml" 82 2914 2924
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 82 2914 2926 "cvariables.ml" 82 2914 2927
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 82 2914 2936 "cvariables.ml" 82 2914 2965
+)
+"cvariables.ml" 82 2914 2917 "cvariables.ml" 82 2914 2928
+type(
+  Cabs.expression
+)
+"cvariables.ml" 82 2914 2936 "cvariables.ml" 82 2914 2962
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 82 2914 2964 "cvariables.ml" 82 2914 2965
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 82 2914 2926 "cvariables.ml" 82 2914 2927
+)
+"cvariables.ml" 82 2914 2936 "cvariables.ml" 82 2914 2965
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 83 2966 2975 "cvariables.ml" 83 2966 2976
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 83 2966 2991 "cvariables.ml" 83 2966 2993
+)
+"cvariables.ml" 83 2966 2978 "cvariables.ml" 83 2966 2982
+type(
+  Cabs.expression list
+)
+ident(
+  def args "cvariables.ml" 83 2966 2991 "cvariables.ml" 83 2966 2993
+)
+"cvariables.ml" 83 2966 2969 "cvariables.ml" 83 2966 2983
+type(
+  Cabs.expression
+)
+"cvariables.ml" 83 2966 2991 "cvariables.ml" 83 2966 2993
+type(
+  string list
+)
+"cvariables.ml" 84 2994 3003 "cvariables.ml" 84 2994 3004
+type(
+  Cabs.expression list
+)
+ident(
+  def e "cvariables.ml" 84 2994 3014 "cvariables.ml" 84 2994 3016
+)
+"cvariables.ml" 84 2994 2997 "cvariables.ml" 84 2994 3004
+type(
+  Cabs.expression
+)
+"cvariables.ml" 84 2994 3014 "cvariables.ml" 84 2994 3016
+type(
+  string list
+)
+"cvariables.ml" 85 3017 3029 "cvariables.ml" 85 3017 3030
+type(
+  Cabs.constant
+)
+"cvariables.ml" 85 3017 3020 "cvariables.ml" 85 3017 3030
+type(
+  Cabs.expression
+)
+"cvariables.ml" 85 3017 3039 "cvariables.ml" 85 3017 3041
+type(
+  string list
+)
+"cvariables.ml" 86 3042 3054 "cvariables.ml" 86 3042 3058
+type(
+  string
+)
+ident(
+  def name "cvariables.ml" 86 3042 3067 "cvariables.ml" 86 3042 3074
+)
+"cvariables.ml" 86 3042 3045 "cvariables.ml" 86 3042 3058
+type(
+  Cabs.expression
+)
+"cvariables.ml" 86 3042 3068 "cvariables.ml" 86 3042 3072
+type(
+  string
+)
+ident(
+  int_ref name "cvariables.ml" 86 3042 3054 "cvariables.ml" 86 3042 3058
+)
+"cvariables.ml" 86 3042 3067 "cvariables.ml" 86 3042 3074
+type(
+  string list
+)
+"cvariables.ml" 87 3076 3091 "cvariables.ml" 87 3076 3092
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 87 3076 3100 "cvariables.ml" 87 3076 3102
+)
+"cvariables.ml" 87 3076 3079 "cvariables.ml" 87 3076 3092
+type(
+  Cabs.expression
+)
+"cvariables.ml" 87 3076 3100 "cvariables.ml" 87 3076 3102
+type(
+  string list
+)
+"cvariables.ml" 88 3103 3118 "cvariables.ml" 88 3103 3119
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 88 3103 3106 "cvariables.ml" 88 3103 3119
+type(
+  Cabs.expression
+)
+"cvariables.ml" 88 3103 3127 "cvariables.ml" 88 3103 3129
+type(
+  string list
+)
+"cvariables.ml" 89 3130 3140 "cvariables.ml" 89 3130 3141
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 89 3130 3156 "cvariables.ml" 89 3130 3187
+)
+"cvariables.ml" 89 3130 3143 "cvariables.ml" 89 3130 3146
+type(
+  Cabs.expression
+)
+ident(
+  def idx "cvariables.ml" 89 3130 3156 "cvariables.ml" 89 3130 3187
+)
+"cvariables.ml" 89 3130 3133 "cvariables.ml" 89 3130 3147
+type(
+  Cabs.expression
+)
+"cvariables.ml" 89 3130 3157 "cvariables.ml" 89 3130 3183
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 89 3130 3185 "cvariables.ml" 89 3130 3186
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 89 3130 3140 "cvariables.ml" 89 3130 3141
+)
+"cvariables.ml" 89 3130 3156 "cvariables.ml" 89 3130 3187
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 90 3189 3202 "cvariables.ml" 90 3189 3203
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 90 3189 3214 "cvariables.ml" 90 3189 3242
+)
+"cvariables.ml" 90 3189 3205 "cvariables.ml" 90 3189 3206
+type(
+  string
+)
+"cvariables.ml" 90 3189 3192 "cvariables.ml" 90 3189 3207
+type(
+  Cabs.expression
+)
+"cvariables.ml" 90 3189 3214 "cvariables.ml" 90 3189 3240
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 90 3189 3241 "cvariables.ml" 90 3189 3242
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 90 3189 3202 "cvariables.ml" 90 3189 3203
+)
+"cvariables.ml" 90 3189 3214 "cvariables.ml" 90 3189 3242
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 91 3243 3259 "cvariables.ml" 91 3243 3260
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 91 3243 3271 "cvariables.ml" 91 3243 3300
+)
+"cvariables.ml" 91 3243 3262 "cvariables.ml" 91 3243 3263
+type(
+  string
+)
+"cvariables.ml" 91 3243 3246 "cvariables.ml" 91 3243 3264
+type(
+  Cabs.expression
+)
+"cvariables.ml" 91 3243 3271 "cvariables.ml" 91 3243 3297
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeulesTab "cvariables.ml" 77 2548 2556 "cvariables.ml" 77 2548 2582
+)
+"cvariables.ml" 91 3243 3299 "cvariables.ml" 91 3243 3300
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 91 3243 3259 "cvariables.ml" 91 3243 3260
+)
+"cvariables.ml" 91 3243 3271 "cvariables.ml" 91 3243 3300
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 92 3301 3314 "cvariables.ml" 92 3301 3315
+type(
+  Cabs.definition list
+)
+"cvariables.ml" 92 3301 3316 "cvariables.ml" 92 3301 3317
+type(
+  Cabs.statement
+)
+"cvariables.ml" 92 3301 3313 "cvariables.ml" 92 3301 3318
+type(
+  Cabs.body
+)
+"cvariables.ml" 92 3301 3304 "cvariables.ml" 92 3301 3318
+type(
+  Cabs.expression
+)
+"cvariables.ml" 92 3301 3336 "cvariables.ml" 92 3301 3338
+type(
+  string list
+)
+"cvariables.ml" 93 3339 3342 "cvariables.ml" 93 3339 3343
+type(
+  Cabs.expression
+)
+"cvariables.ml" 93 3339 3356 "cvariables.ml" 93 3339 3358
+type(
+  string list
+)
+"cvariables.ml" 78 2589 2590 "cvariables.ml" 93 3339 3358
+type(
+  string list
+)
+"cvariables.ml" 94 3359 3367 "cvariables.ml" 94 3359 3397
+type(
+  Cabs.expression -> string list
+)
+ident(
+  def listeDesVarsDeExpSeulesWCAndIF "cvariables.ml" 94 3359 3359 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 94 3359 3398 "cvariables.ml" 94 3359 3401
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cvariables.ml" 95 3404 3405 "cvariables.ml" 110 4255 4274
+)
+"cvariables.ml" 95 3404 3411 "cvariables.ml" 95 3404 3414
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cvariables.ml" 94 3359 3398 "cvariables.ml" 94 3359 3401
+)
+"cvariables.ml" 96 3420 3429 "cvariables.ml" 96 3420 3430
+type(
+  Cabs.unary_operator
+)
+"cvariables.ml" 96 3420 3432 "cvariables.ml" 96 3420 3433
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 96 3420 3442 "cvariables.ml" 96 3420 3467
+)
+"cvariables.ml" 96 3420 3422 "cvariables.ml" 96 3420 3434
+type(
+  Cabs.expression
+)
+"cvariables.ml" 96 3420 3442 "cvariables.ml" 96 3420 3465
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 96 3420 3466 "cvariables.ml" 96 3420 3467
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 96 3420 3432 "cvariables.ml" 96 3420 3433
+)
+"cvariables.ml" 96 3420 3442 "cvariables.ml" 96 3420 3467
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 97 3469 3480 "cvariables.ml" 97 3469 3481
+type(
+  Cabs.binary_operator
+)
+"cvariables.ml" 97 3469 3483 "cvariables.ml" 97 3469 3487
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 97 3469 3500 "cvariables.ml" 97 3469 3568
+)
+"cvariables.ml" 97 3469 3489 "cvariables.ml" 97 3469 3493
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 97 3469 3500 "cvariables.ml" 97 3469 3568
+)
+"cvariables.ml" 97 3469 3472 "cvariables.ml" 97 3469 3494
+type(
+  Cabs.expression
+)
+"cvariables.ml" 97 3469 3500 "cvariables.ml" 97 3469 3505
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 97 3469 3507 "cvariables.ml" 97 3469 3530
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 97 3469 3532 "cvariables.ml" 97 3469 3536
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 97 3469 3483 "cvariables.ml" 97 3469 3487
+)
+"cvariables.ml" 97 3469 3505 "cvariables.ml" 97 3469 3537
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 97 3469 3539 "cvariables.ml" 97 3469 3562
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 97 3469 3563 "cvariables.ml" 97 3469 3567
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 97 3469 3489 "cvariables.ml" 97 3469 3493
+)
+"cvariables.ml" 97 3469 3538 "cvariables.ml" 97 3469 3568
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 97 3469 3500 "cvariables.ml" 97 3469 3568
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 98 3569 3582 "cvariables.ml" 98 3569 3586
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 98 3569 3603 "cvariables.ml" 98 3569 3710
+)
+"cvariables.ml" 98 3569 3588 "cvariables.ml" 98 3569 3592
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 98 3569 3603 "cvariables.ml" 98 3569 3710
+)
+"cvariables.ml" 98 3569 3594 "cvariables.ml" 98 3569 3598
+type(
+  Cabs.expression
+)
+ident(
+  def exp3 "cvariables.ml" 98 3569 3603 "cvariables.ml" 98 3569 3710
+)
+"cvariables.ml" 98 3569 3572 "cvariables.ml" 98 3569 3599
+type(
+  Cabs.expression
+)
+"cvariables.ml" 98 3569 3603 "cvariables.ml" 98 3569 3608
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 98 3569 3610 "cvariables.ml" 98 3569 3633
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 98 3569 3634 "cvariables.ml" 98 3569 3638
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 98 3569 3582 "cvariables.ml" 98 3569 3586
+)
+"cvariables.ml" 98 3569 3609 "cvariables.ml" 98 3569 3639
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 98 3569 3641 "cvariables.ml" 98 3569 3646
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 98 3569 3648 "cvariables.ml" 98 3569 3671
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 98 3569 3672 "cvariables.ml" 98 3569 3676
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 98 3569 3588 "cvariables.ml" 98 3569 3592
+)
+"cvariables.ml" 98 3569 3647 "cvariables.ml" 98 3569 3677
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 98 3569 3679 "cvariables.ml" 98 3569 3702
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 98 3569 3704 "cvariables.ml" 98 3569 3708
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp3 "cvariables.ml" 98 3569 3594 "cvariables.ml" 98 3569 3598
+)
+"cvariables.ml" 98 3569 3678 "cvariables.ml" 98 3569 3709
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 98 3569 3640 "cvariables.ml" 98 3569 3710
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 98 3569 3603 "cvariables.ml" 98 3569 3710
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 99 3711 3720 "cvariables.ml" 99 3711 3721
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 99 3711 3723 "cvariables.ml" 99 3711 3724
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 99 3711 3733 "cvariables.ml" 99 3711 3759
+)
+"cvariables.ml" 99 3711 3714 "cvariables.ml" 99 3711 3725
+type(
+  Cabs.expression
+)
+"cvariables.ml" 99 3711 3733 "cvariables.ml" 99 3711 3756
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 99 3711 3758 "cvariables.ml" 99 3711 3759
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 99 3711 3723 "cvariables.ml" 99 3711 3724
+)
+"cvariables.ml" 99 3711 3733 "cvariables.ml" 99 3711 3759
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 100 3760 3769 "cvariables.ml" 100 3760 3770
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 100 3760 3823 "cvariables.ml" 100 3760 3846
+)
+"cvariables.ml" 100 3760 3772 "cvariables.ml" 100 3760 3776
+type(
+  Cabs.expression list
+)
+ident(
+  def args "cvariables.ml" 100 3760 3823 "cvariables.ml" 100 3760 3846
+)
+"cvariables.ml" 100 3760 3763 "cvariables.ml" 100 3760 3777
+type(
+  Cabs.expression
+)
+"cvariables.ml" 100 3760 3825 "cvariables.ml" 100 3760 3840
+type(
+  Cabs.expression list -> string list
+)
+ident(
+  int_ref traiterCommaExp "cvariables.ml" 74 2409 2413 "cvariables.ml" 74 2409 2428
+)
+"cvariables.ml" 100 3760 3841 "cvariables.ml" 100 3760 3845
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref args "cvariables.ml" 100 3760 3772 "cvariables.ml" 100 3760 3776
+)
+"cvariables.ml" 100 3760 3823 "cvariables.ml" 100 3760 3846
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 101 3847 3856 "cvariables.ml" 101 3847 3857
+type(
+  Cabs.expression list
+)
+ident(
+  def e "cvariables.ml" 101 3847 3867 "cvariables.ml" 101 3847 3884
+)
+"cvariables.ml" 101 3847 3850 "cvariables.ml" 101 3847 3857
+type(
+  Cabs.expression
+)
+"cvariables.ml" 101 3847 3867 "cvariables.ml" 101 3847 3882
+type(
+  Cabs.expression list -> string list
+)
+ident(
+  int_ref traiterCommaExp "cvariables.ml" 74 2409 2413 "cvariables.ml" 74 2409 2428
+)
+"cvariables.ml" 101 3847 3883 "cvariables.ml" 101 3847 3884
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref e "cvariables.ml" 101 3847 3856 "cvariables.ml" 101 3847 3857
+)
+"cvariables.ml" 101 3847 3867 "cvariables.ml" 101 3847 3884
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 102 3885 3897 "cvariables.ml" 102 3885 3898
+type(
+  Cabs.constant
+)
+"cvariables.ml" 102 3885 3888 "cvariables.ml" 102 3885 3898
+type(
+  Cabs.expression
+)
+"cvariables.ml" 102 3885 3907 "cvariables.ml" 102 3885 3909
+type(
+  string list
+)
+"cvariables.ml" 103 3910 3922 "cvariables.ml" 103 3910 3926
+type(
+  string
+)
+ident(
+  def name "cvariables.ml" 103 3910 3935 "cvariables.ml" 103 3910 3942
+)
+"cvariables.ml" 103 3910 3913 "cvariables.ml" 103 3910 3926
+type(
+  Cabs.expression
+)
+"cvariables.ml" 103 3910 3936 "cvariables.ml" 103 3910 3940
+type(
+  string
+)
+ident(
+  int_ref name "cvariables.ml" 103 3910 3922 "cvariables.ml" 103 3910 3926
+)
+"cvariables.ml" 103 3910 3935 "cvariables.ml" 103 3910 3942
+type(
+  string list
+)
+"cvariables.ml" 104 3944 3959 "cvariables.ml" 104 3944 3960
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 104 3944 3968 "cvariables.ml" 104 3944 3993
+)
+"cvariables.ml" 104 3944 3947 "cvariables.ml" 104 3944 3960
+type(
+  Cabs.expression
+)
+"cvariables.ml" 104 3944 3968 "cvariables.ml" 104 3944 3991
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 104 3944 3992 "cvariables.ml" 104 3944 3993
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 104 3944 3959 "cvariables.ml" 104 3944 3960
+)
+"cvariables.ml" 104 3944 3968 "cvariables.ml" 104 3944 3993
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 105 3994 4009 "cvariables.ml" 105 3994 4010
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 105 3994 3997 "cvariables.ml" 105 3994 4010
+type(
+  Cabs.expression
+)
+"cvariables.ml" 105 3994 4018 "cvariables.ml" 105 3994 4020
+type(
+  string list
+)
+"cvariables.ml" 106 4021 4031 "cvariables.ml" 106 4021 4032
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 106 4021 4046 "cvariables.ml" 106 4021 4110
+)
+"cvariables.ml" 106 4021 4034 "cvariables.ml" 106 4021 4037
+type(
+  Cabs.expression
+)
+ident(
+  def idx "cvariables.ml" 106 4021 4046 "cvariables.ml" 106 4021 4110
+)
+"cvariables.ml" 106 4021 4024 "cvariables.ml" 106 4021 4038
+type(
+  Cabs.expression
+)
+"cvariables.ml" 106 4021 4046 "cvariables.ml" 106 4021 4051
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref union "cvariables.ml" 19 377 385 "cvariables.ml" 19 377 390
+)
+"cvariables.ml" 106 4021 4053 "cvariables.ml" 106 4021 4076
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 106 4021 4078 "cvariables.ml" 106 4021 4079
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 106 4021 4031 "cvariables.ml" 106 4021 4032
+)
+"cvariables.ml" 106 4021 4052 "cvariables.ml" 106 4021 4080
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 106 4021 4082 "cvariables.ml" 106 4021 4105
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 106 4021 4106 "cvariables.ml" 106 4021 4109
+type(
+  Cabs.expression
+)
+ident(
+  int_ref idx "cvariables.ml" 106 4021 4034 "cvariables.ml" 106 4021 4037
+)
+"cvariables.ml" 106 4021 4081 "cvariables.ml" 106 4021 4110
+call(
+  stack
+)
+type(
+  string list
+)
+"cvariables.ml" 106 4021 4046 "cvariables.ml" 106 4021 4110
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 107 4111 4124 "cvariables.ml" 107 4111 4125
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 107 4111 4136 "cvariables.ml" 107 4111 4161
+)
+"cvariables.ml" 107 4111 4127 "cvariables.ml" 107 4111 4128
+type(
+  string
+)
+"cvariables.ml" 107 4111 4114 "cvariables.ml" 107 4111 4129
+type(
+  Cabs.expression
+)
+"cvariables.ml" 107 4111 4136 "cvariables.ml" 107 4111 4159
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 107 4111 4160 "cvariables.ml" 107 4111 4161
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 107 4111 4124 "cvariables.ml" 107 4111 4125
+)
+"cvariables.ml" 107 4111 4136 "cvariables.ml" 107 4111 4161
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 108 4162 4178 "cvariables.ml" 108 4162 4179
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 108 4162 4190 "cvariables.ml" 108 4162 4216
+)
+"cvariables.ml" 108 4162 4181 "cvariables.ml" 108 4162 4182
+type(
+  string
+)
+"cvariables.ml" 108 4162 4165 "cvariables.ml" 108 4162 4183
+type(
+  Cabs.expression
+)
+"cvariables.ml" 108 4162 4190 "cvariables.ml" 108 4162 4213
+type(
+  Cabs.expression -> string list
+)
+ident(
+  int_ref listeDesVarsDeExpSeules "cvariables.ml" 55 1495 1503 "cvariables.ml" 55 1495 1526
+)
+"cvariables.ml" 108 4162 4215 "cvariables.ml" 108 4162 4216
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 108 4162 4178 "cvariables.ml" 108 4162 4179
+)
+"cvariables.ml" 108 4162 4190 "cvariables.ml" 108 4162 4216
+call(
+  tail
+)
+type(
+  string list
+)
+"cvariables.ml" 109 4217 4230 "cvariables.ml" 109 4217 4231
+type(
+  Cabs.definition list
+)
+"cvariables.ml" 109 4217 4232 "cvariables.ml" 109 4217 4233
+type(
+  Cabs.statement
+)
+"cvariables.ml" 109 4217 4229 "cvariables.ml" 109 4217 4234
+type(
+  Cabs.body
+)
+"cvariables.ml" 109 4217 4220 "cvariables.ml" 109 4217 4234
+type(
+  Cabs.expression
+)
+"cvariables.ml" 109 4217 4252 "cvariables.ml" 109 4217 4254
+type(
+  string list
+)
+"cvariables.ml" 110 4255 4258 "cvariables.ml" 110 4255 4259
+type(
+  Cabs.expression
+)
+"cvariables.ml" 110 4255 4272 "cvariables.ml" 110 4255 4274
+type(
+  string list
+)
+"cvariables.ml" 95 3404 3405 "cvariables.ml" 110 4255 4274
+type(
+  string list
+)
+"cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  def getNbIt "cvariables.ml" 120 4284 4284 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+type(
+  string
+)
+ident(
+  def v "cvariables.ml" 120 4284 4302 "cvariables.ml" 136 4980 4998
+)
+"cvariables.ml" 120 4284 4302 "cvariables.ml" 120 4284 4305
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cvariables.ml" 121 4308 4309 "cvariables.ml" 136 4980 4998
+)
+"cvariables.ml" 121 4308 4315 "cvariables.ml" 121 4308 4318
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cvariables.ml" 120 4284 4302 "cvariables.ml" 120 4284 4305
+)
+"cvariables.ml" 122 4324 4333 "cvariables.ml" 122 4324 4334
+type(
+  Cabs.unary_operator
+)
+"cvariables.ml" 122 4324 4336 "cvariables.ml" 122 4324 4337
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 122 4324 4346 "cvariables.ml" 122 4324 4357
+)
+"cvariables.ml" 122 4324 4326 "cvariables.ml" 122 4324 4338
+type(
+  Cabs.expression
+)
+"cvariables.ml" 122 4324 4346 "cvariables.ml" 122 4324 4353
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 122 4324 4354 "cvariables.ml" 122 4324 4355
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 122 4324 4356 "cvariables.ml" 122 4324 4357
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 122 4324 4336 "cvariables.ml" 122 4324 4337
+)
+"cvariables.ml" 122 4324 4346 "cvariables.ml" 122 4324 4357
+call(
+  tail
+)
+type(
+  int
+)
+"cvariables.ml" 123 4359 4370 "cvariables.ml" 123 4359 4371
+type(
+  Cabs.binary_operator
+)
+"cvariables.ml" 123 4359 4373 "cvariables.ml" 123 4359 4377
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 123 4359 4391 "cvariables.ml" 123 4359 4428
+)
+"cvariables.ml" 123 4359 4379 "cvariables.ml" 123 4359 4383
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 123 4359 4391 "cvariables.ml" 123 4359 4428
+)
+"cvariables.ml" 123 4359 4362 "cvariables.ml" 123 4359 4384
+type(
+  Cabs.expression
+)
+"cvariables.ml" 123 4359 4393 "cvariables.ml" 123 4359 4400
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 123 4359 4401 "cvariables.ml" 123 4359 4402
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 123 4359 4404 "cvariables.ml" 123 4359 4408
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 123 4359 4373 "cvariables.ml" 123 4359 4377
+)
+"cvariables.ml" 123 4359 4391 "cvariables.ml" 123 4359 4409
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 123 4359 4410 "cvariables.ml" 123 4359 4411
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cvariables.ml" 123 4359 4413 "cvariables.ml" 123 4359 4420
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 123 4359 4421 "cvariables.ml" 123 4359 4422
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 123 4359 4423 "cvariables.ml" 123 4359 4427
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 123 4359 4379 "cvariables.ml" 123 4359 4383
+)
+"cvariables.ml" 123 4359 4412 "cvariables.ml" 123 4359 4428
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 123 4359 4391 "cvariables.ml" 123 4359 4428
+type(
+  int
+)
+"cvariables.ml" 124 4429 4442 "cvariables.ml" 124 4429 4446
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cvariables.ml" 124 4429 4464 "cvariables.ml" 124 4429 4519
+)
+"cvariables.ml" 124 4429 4448 "cvariables.ml" 124 4429 4452
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cvariables.ml" 124 4429 4464 "cvariables.ml" 124 4429 4519
+)
+"cvariables.ml" 124 4429 4454 "cvariables.ml" 124 4429 4458
+type(
+  Cabs.expression
+)
+ident(
+  def exp3 "cvariables.ml" 124 4429 4464 "cvariables.ml" 124 4429 4519
+)
+"cvariables.ml" 124 4429 4432 "cvariables.ml" 124 4429 4459
+type(
+  Cabs.expression
+)
+"cvariables.ml" 124 4429 4465 "cvariables.ml" 124 4429 4472
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 124 4429 4473 "cvariables.ml" 124 4429 4474
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 124 4429 4475 "cvariables.ml" 124 4429 4479
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cvariables.ml" 124 4429 4442 "cvariables.ml" 124 4429 4446
+)
+"cvariables.ml" 124 4429 4464 "cvariables.ml" 124 4429 4480
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 124 4429 4481 "cvariables.ml" 124 4429 4482
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cvariables.ml" 124 4429 4484 "cvariables.ml" 124 4429 4491
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 124 4429 4492 "cvariables.ml" 124 4429 4493
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 124 4429 4494 "cvariables.ml" 124 4429 4498
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cvariables.ml" 124 4429 4448 "cvariables.ml" 124 4429 4452
+)
+"cvariables.ml" 124 4429 4483 "cvariables.ml" 124 4429 4499
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 124 4429 4464 "cvariables.ml" 124 4429 4499
+type(
+  int
+)
+"cvariables.ml" 124 4429 4500 "cvariables.ml" 124 4429 4501
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cvariables.ml" 124 4429 4503 "cvariables.ml" 124 4429 4510
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 124 4429 4511 "cvariables.ml" 124 4429 4512
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 124 4429 4514 "cvariables.ml" 124 4429 4518
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp3 "cvariables.ml" 124 4429 4454 "cvariables.ml" 124 4429 4458
+)
+"cvariables.ml" 124 4429 4502 "cvariables.ml" 124 4429 4519
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 124 4429 4464 "cvariables.ml" 124 4429 4519
+type(
+  int
+)
+"cvariables.ml" 125 4520 4529 "cvariables.ml" 125 4520 4530
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 125 4520 4532 "cvariables.ml" 125 4520 4533
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 125 4520 4542 "cvariables.ml" 125 4520 4554
+)
+"cvariables.ml" 125 4520 4523 "cvariables.ml" 125 4520 4534
+type(
+  Cabs.expression
+)
+"cvariables.ml" 125 4520 4542 "cvariables.ml" 125 4520 4549
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 125 4520 4550 "cvariables.ml" 125 4520 4551
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 125 4520 4553 "cvariables.ml" 125 4520 4554
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 125 4520 4532 "cvariables.ml" 125 4520 4533
+)
+"cvariables.ml" 125 4520 4542 "cvariables.ml" 125 4520 4554
+call(
+  tail
+)
+type(
+  int
+)
+"cvariables.ml" 126 4555 4564 "cvariables.ml" 126 4555 4565
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 126 4555 4580 "cvariables.ml" 126 4555 4623
+)
+"cvariables.ml" 126 4555 4567 "cvariables.ml" 126 4555 4571
+type(
+  Cabs.expression list
+)
+ident(
+  def args "cvariables.ml" 126 4555 4580 "cvariables.ml" 126 4555 4623
+)
+"cvariables.ml" 126 4555 4558 "cvariables.ml" 126 4555 4572
+type(
+  Cabs.expression
+)
+"cvariables.ml" 126 4555 4581 "cvariables.ml" 126 4555 4588
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 126 4555 4589 "cvariables.ml" 126 4555 4590
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 126 4555 4591 "cvariables.ml" 126 4555 4592
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 126 4555 4564 "cvariables.ml" 126 4555 4565
+)
+"cvariables.ml" 126 4555 4580 "cvariables.ml" 126 4555 4593
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 126 4555 4593 "cvariables.ml" 126 4555 4594
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cvariables.ml" 126 4555 4598 "cvariables.ml" 126 4555 4615
+type(
+  string -> Cabs.expression list -> int
+)
+ident(
+  int_ref traiterCommaExpNb "cvariables.ml" 137 4999 5003 "cvariables.ml" 137 4999 5020
+)
+"cvariables.ml" 126 4555 4616 "cvariables.ml" 126 4555 4617
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 126 4555 4618 "cvariables.ml" 126 4555 4622
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref args "cvariables.ml" 126 4555 4567 "cvariables.ml" 126 4555 4571
+)
+"cvariables.ml" 126 4555 4596 "cvariables.ml" 126 4555 4623
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 126 4555 4580 "cvariables.ml" 126 4555 4623
+type(
+  int
+)
+"cvariables.ml" 127 4624 4633 "cvariables.ml" 127 4624 4634
+type(
+  Cabs.expression list
+)
+ident(
+  def e "cvariables.ml" 127 4624 4644 "cvariables.ml" 127 4624 4666
+)
+"cvariables.ml" 127 4624 4627 "cvariables.ml" 127 4624 4634
+type(
+  Cabs.expression
+)
+"cvariables.ml" 127 4624 4644 "cvariables.ml" 127 4624 4661
+type(
+  string -> Cabs.expression list -> int
+)
+ident(
+  int_ref traiterCommaExpNb "cvariables.ml" 137 4999 5003 "cvariables.ml" 137 4999 5020
+)
+"cvariables.ml" 127 4624 4662 "cvariables.ml" 127 4624 4663
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 127 4624 4665 "cvariables.ml" 127 4624 4666
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref e "cvariables.ml" 127 4624 4633 "cvariables.ml" 127 4624 4634
+)
+"cvariables.ml" 127 4624 4644 "cvariables.ml" 127 4624 4666
+call(
+  tail
+)
+type(
+  int
+)
+"cvariables.ml" 128 4667 4679 "cvariables.ml" 128 4667 4680
+type(
+  Cabs.constant
+)
+"cvariables.ml" 128 4667 4670 "cvariables.ml" 128 4667 4680
+type(
+  Cabs.expression
+)
+"cvariables.ml" 128 4667 4689 "cvariables.ml" 128 4667 4690
+type(
+  int
+)
+"cvariables.ml" 129 4691 4703 "cvariables.ml" 129 4691 4707
+type(
+  string
+)
+ident(
+  def name "cvariables.ml" 129 4691 4716 "cvariables.ml" 129 4691 4741
+)
+"cvariables.ml" 129 4691 4694 "cvariables.ml" 129 4691 4707
+type(
+  Cabs.expression
+)
+"cvariables.ml" 129 4691 4719 "cvariables.ml" 129 4691 4723
+type(
+  string
+)
+ident(
+  int_ref name "cvariables.ml" 129 4691 4703 "cvariables.ml" 129 4691 4707
+)
+"cvariables.ml" 129 4691 4724 "cvariables.ml" 129 4691 4725
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 129 4691 4726 "cvariables.ml" 129 4691 4727
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 129 4691 4719 "cvariables.ml" 129 4691 4727
+type(
+  bool
+)
+"cvariables.ml" 129 4691 4733 "cvariables.ml" 129 4691 4734
+type(
+  int
+)
+"cvariables.ml" 129 4691 4740 "cvariables.ml" 129 4691 4741
+type(
+  int
+)
+"cvariables.ml" 129 4691 4716 "cvariables.ml" 129 4691 4741
+type(
+  int
+)
+"cvariables.ml" 130 4742 4757 "cvariables.ml" 130 4742 4758
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 130 4742 4766 "cvariables.ml" 130 4742 4778
+)
+"cvariables.ml" 130 4742 4745 "cvariables.ml" 130 4742 4758
+type(
+  Cabs.expression
+)
+"cvariables.ml" 130 4742 4766 "cvariables.ml" 130 4742 4773
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 130 4742 4774 "cvariables.ml" 130 4742 4775
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 130 4742 4777 "cvariables.ml" 130 4742 4778
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 130 4742 4757 "cvariables.ml" 130 4742 4758
+)
+"cvariables.ml" 130 4742 4766 "cvariables.ml" 130 4742 4778
+call(
+  tail
+)
+type(
+  int
+)
+"cvariables.ml" 131 4779 4794 "cvariables.ml" 131 4779 4795
+type(
+  Cabs.base_type
+)
+"cvariables.ml" 131 4779 4782 "cvariables.ml" 131 4779 4795
+type(
+  Cabs.expression
+)
+"cvariables.ml" 131 4779 4803 "cvariables.ml" 131 4779 4804
+type(
+  int
+)
+"cvariables.ml" 132 4805 4815 "cvariables.ml" 132 4805 4816
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 132 4805 4830 "cvariables.ml" 132 4805 4863
+)
+"cvariables.ml" 132 4805 4818 "cvariables.ml" 132 4805 4821
+type(
+  Cabs.expression
+)
+ident(
+  def idx "cvariables.ml" 132 4805 4830 "cvariables.ml" 132 4805 4863
+)
+"cvariables.ml" 132 4805 4808 "cvariables.ml" 132 4805 4822
+type(
+  Cabs.expression
+)
+"cvariables.ml" 132 4805 4831 "cvariables.ml" 132 4805 4838
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 132 4805 4839 "cvariables.ml" 132 4805 4840
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 132 4805 4842 "cvariables.ml" 132 4805 4843
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 132 4805 4815 "cvariables.ml" 132 4805 4816
+)
+"cvariables.ml" 132 4805 4830 "cvariables.ml" 132 4805 4844
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 132 4805 4845 "cvariables.ml" 132 4805 4846
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cvariables.ml" 132 4805 4848 "cvariables.ml" 132 4805 4855
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 132 4805 4856 "cvariables.ml" 132 4805 4857
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 132 4805 4859 "cvariables.ml" 132 4805 4862
+type(
+  Cabs.expression
+)
+ident(
+  int_ref idx "cvariables.ml" 132 4805 4818 "cvariables.ml" 132 4805 4821
+)
+"cvariables.ml" 132 4805 4847 "cvariables.ml" 132 4805 4863
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 132 4805 4830 "cvariables.ml" 132 4805 4863
+type(
+  int
+)
+"cvariables.ml" 133 4864 4877 "cvariables.ml" 133 4864 4878
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 133 4864 4889 "cvariables.ml" 133 4864 4901
+)
+"cvariables.ml" 133 4864 4880 "cvariables.ml" 133 4864 4881
+type(
+  string
+)
+"cvariables.ml" 133 4864 4867 "cvariables.ml" 133 4864 4882
+type(
+  Cabs.expression
+)
+"cvariables.ml" 133 4864 4889 "cvariables.ml" 133 4864 4896
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 133 4864 4897 "cvariables.ml" 133 4864 4898
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 133 4864 4900 "cvariables.ml" 133 4864 4901
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 133 4864 4877 "cvariables.ml" 133 4864 4878
+)
+"cvariables.ml" 133 4864 4889 "cvariables.ml" 133 4864 4901
+call(
+  tail
+)
+type(
+  int
+)
+"cvariables.ml" 134 4902 4918 "cvariables.ml" 134 4902 4919
+type(
+  Cabs.expression
+)
+ident(
+  def e "cvariables.ml" 134 4902 4930 "cvariables.ml" 134 4902 4942
+)
+"cvariables.ml" 134 4902 4921 "cvariables.ml" 134 4902 4922
+type(
+  string
+)
+"cvariables.ml" 134 4902 4905 "cvariables.ml" 134 4902 4923
+type(
+  Cabs.expression
+)
+"cvariables.ml" 134 4902 4930 "cvariables.ml" 134 4902 4937
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 134 4902 4938 "cvariables.ml" 134 4902 4939
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 120 4284 4300 "cvariables.ml" 120 4284 4301
+)
+"cvariables.ml" 134 4902 4941 "cvariables.ml" 134 4902 4942
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "cvariables.ml" 134 4902 4918 "cvariables.ml" 134 4902 4919
+)
+"cvariables.ml" 134 4902 4930 "cvariables.ml" 134 4902 4942
+call(
+  tail
+)
+type(
+  int
+)
+"cvariables.ml" 135 4943 4956 "cvariables.ml" 135 4943 4957
+type(
+  Cabs.definition list
+)
+"cvariables.ml" 135 4943 4958 "cvariables.ml" 135 4943 4959
+type(
+  Cabs.statement
+)
+"cvariables.ml" 135 4943 4955 "cvariables.ml" 135 4943 4960
+type(
+  Cabs.body
+)
+"cvariables.ml" 135 4943 4946 "cvariables.ml" 135 4943 4960
+type(
+  Cabs.expression
+)
+"cvariables.ml" 135 4943 4978 "cvariables.ml" 135 4943 4979
+type(
+  int
+)
+"cvariables.ml" 136 4980 4983 "cvariables.ml" 136 4980 4984
+type(
+  Cabs.expression
+)
+"cvariables.ml" 136 4980 4997 "cvariables.ml" 136 4980 4998
+type(
+  int
+)
+"cvariables.ml" 121 4308 4309 "cvariables.ml" 136 4980 4998
+type(
+  int
+)
+"cvariables.ml" 137 4999 5003 "cvariables.ml" 137 4999 5020
+type(
+  string -> Cabs.expression list -> int
+)
+ident(
+  def traiterCommaExpNb "cvariables.ml" 120 4284 4284 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 137 4999 5021 "cvariables.ml" 137 4999 5022
+type(
+  string
+)
+ident(
+  def v "cvariables.ml" 137 4999 5023 "cvariables.ml" 138 5031 5127
+)
+"cvariables.ml" 137 4999 5023 "cvariables.ml" 137 4999 5028
+type(
+  Cabs.expression list
+)
+ident(
+  def liste "cvariables.ml" 138 5031 5031 "cvariables.ml" 138 5031 5127
+)
+"cvariables.ml" 138 5031 5034 "cvariables.ml" 138 5031 5039
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref liste "cvariables.ml" 137 4999 5023 "cvariables.ml" 137 4999 5028
+)
+"cvariables.ml" 138 5031 5040 "cvariables.ml" 138 5031 5041
+type(
+  Cabs.expression list -> Cabs.expression list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 138 5031 5042 "cvariables.ml" 138 5031 5044
+type(
+  Cabs.expression list
+)
+"cvariables.ml" 138 5031 5034 "cvariables.ml" 138 5031 5044
+type(
+  bool
+)
+"cvariables.ml" 138 5031 5050 "cvariables.ml" 138 5031 5051
+type(
+  int
+)
+"cvariables.ml" 138 5031 5060 "cvariables.ml" 138 5031 5067
+type(
+  string -> Cabs.expression -> int
+)
+ident(
+  int_ref getNbIt "cvariables.ml" 120 4284 4292 "cvariables.ml" 120 4284 4299
+)
+"cvariables.ml" 138 5031 5068 "cvariables.ml" 138 5031 5069
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 137 4999 5021 "cvariables.ml" 137 4999 5022
+)
+"cvariables.ml" 138 5031 5072 "cvariables.ml" 138 5031 5079
+type(
+  Cabs.expression list -> Cabs.expression
+)
+ident(
+  ext_ref List.hd
+)
+"cvariables.ml" 138 5031 5080 "cvariables.ml" 138 5031 5085
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref liste "cvariables.ml" 137 4999 5023 "cvariables.ml" 137 4999 5028
+)
+"cvariables.ml" 138 5031 5071 "cvariables.ml" 138 5031 5086
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"cvariables.ml" 138 5031 5059 "cvariables.ml" 138 5031 5087
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 138 5031 5088 "cvariables.ml" 138 5031 5089
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cvariables.ml" 138 5031 5091 "cvariables.ml" 138 5031 5108
+type(
+  string -> Cabs.expression list -> int
+)
+ident(
+  int_ref traiterCommaExpNb "cvariables.ml" 137 4999 5003 "cvariables.ml" 137 4999 5020
+)
+"cvariables.ml" 138 5031 5109 "cvariables.ml" 138 5031 5110
+type(
+  string
+)
+ident(
+  int_ref v "cvariables.ml" 137 4999 5021 "cvariables.ml" 137 4999 5022
+)
+"cvariables.ml" 138 5031 5112 "cvariables.ml" 138 5031 5119
+type(
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  ext_ref List.tl
+)
+"cvariables.ml" 138 5031 5120 "cvariables.ml" 138 5031 5125
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref liste "cvariables.ml" 137 4999 5023 "cvariables.ml" 137 4999 5028
+)
+"cvariables.ml" 138 5031 5111 "cvariables.ml" 138 5031 5126
+call(
+  stack
+)
+type(
+  Cabs.expression list
+)
+"cvariables.ml" 138 5031 5090 "cvariables.ml" 138 5031 5127
+call(
+  stack
+)
+type(
+  int
+)
+"cvariables.ml" 138 5031 5059 "cvariables.ml" 138 5031 5127
+type(
+  int
+)
+"cvariables.ml" 138 5031 5031 "cvariables.ml" 138 5031 5127
+type(
+  int
+)
+"cvariables.ml" 147 5141 5145 "cvariables.ml" 147 5141 5164
+type(
+  string list -> unit
+)
+ident(
+  def afficherListeVarExp "cvariables.ml" 151 5233 5233 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 147 5141 5165 "cvariables.ml" 147 5141 5166
+type(
+  string list
+)
+ident(
+  def l "cvariables.ml" 148 5169 5169 "cvariables.ml" 149 5213 5231
+)
+"cvariables.ml" 148 5169 5169 "cvariables.ml" 148 5169 5178
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"cvariables.ml" 148 5169 5184 "cvariables.ml" 148 5169 5185
+type(
+  string
+)
+ident(
+  def e "cvariables.ml" 148 5169 5188 "cvariables.ml" 148 5169 5209
+)
+"cvariables.ml" 148 5169 5188 "cvariables.ml" 148 5169 5201
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"cvariables.ml" 148 5169 5202 "cvariables.ml" 148 5169 5207
+type(
+  (string -> unit, out_channel, unit) format
+)
+"cvariables.ml" 148 5169 5208 "cvariables.ml" 148 5169 5209
+type(
+  string
+)
+ident(
+  int_ref e "cvariables.ml" 148 5169 5184 "cvariables.ml" 148 5169 5185
+)
+"cvariables.ml" 148 5169 5188 "cvariables.ml" 148 5169 5209
+call(
+  tail
+)
+type(
+  unit
+)
+"cvariables.ml" 148 5169 5179 "cvariables.ml" 148 5169 5210
+type(
+  string -> unit
+)
+"cvariables.ml" 148 5169 5210 "cvariables.ml" 148 5169 5211
+type(
+  string list
+)
+ident(
+  int_ref l "cvariables.ml" 147 5141 5165 "cvariables.ml" 147 5141 5166
+)
+"cvariables.ml" 148 5169 5169 "cvariables.ml" 148 5169 5211
+call(
+  stack
+)
+type(
+  unit
+)
+"cvariables.ml" 149 5213 5213 "cvariables.ml" 149 5213 5226
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"cvariables.ml" 149 5213 5227 "cvariables.ml" 149 5213 5231
+type(
+  (unit, out_channel, unit) format
+)
+"cvariables.ml" 149 5213 5213 "cvariables.ml" 149 5213 5231
+call(
+  tail
+)
+type(
+  unit
+)
+"cvariables.ml" 148 5169 5169 "cvariables.ml" 149 5213 5231
+type(
+  unit
+)
+"cvariables.ml" 151 5233 5241 "cvariables.ml" 151 5233 5256
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  def estDansListeVar "cvariables.ml" 151 5233 5233 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 151 5233 5257 "cvariables.ml" 151 5233 5259
+type(
+  'a
+)
+ident(
+  def id "cvariables.ml" 151 5233 5260 "cvariables.ml" 152 5268 5285
+)
+"cvariables.ml" 151 5233 5260 "cvariables.ml" 151 5233 5265
+type(
+  'a list
+)
+ident(
+  def liste "cvariables.ml" 152 5268 5268 "cvariables.ml" 152 5268 5285
+)
+"cvariables.ml" 152 5268 5268 "cvariables.ml" 152 5268 5276
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"cvariables.ml" 152 5268 5277 "cvariables.ml" 152 5268 5279
+type(
+  'a
+)
+ident(
+  int_ref id "cvariables.ml" 151 5233 5257 "cvariables.ml" 151 5233 5259
+)
+"cvariables.ml" 152 5268 5280 "cvariables.ml" 152 5268 5285
+type(
+  'a list
+)
+ident(
+  int_ref liste "cvariables.ml" 151 5233 5260 "cvariables.ml" 151 5233 5265
+)
+"cvariables.ml" 152 5268 5268 "cvariables.ml" 152 5268 5285
+call(
+  tail
+)
+type(
+  bool
+)
+"cvariables.ml" 154 5288 5296 "cvariables.ml" 154 5288 5308
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  def intersection "cvariables.ml" 154 5288 5288 "cvariables.ml" 1 0 -1
+)
+"cvariables.ml" 154 5288 5309 "cvariables.ml" 154 5288 5311
+type(
+  'a list
+)
+ident(
+  def l1 "cvariables.ml" 154 5288 5312 "cvariables.ml" 160 5499 5502
+)
+"cvariables.ml" 154 5288 5312 "cvariables.ml" 154 5288 5314
+type(
+  'a list
+)
+ident(
+  def l2 "cvariables.ml" 155 5318 5318 "cvariables.ml" 160 5499 5502
+)
+"cvariables.ml" 155 5318 5321 "cvariables.ml" 155 5318 5323
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 154 5288 5309 "cvariables.ml" 154 5288 5311
+)
+"cvariables.ml" 155 5318 5324 "cvariables.ml" 155 5318 5325
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 155 5318 5326 "cvariables.ml" 155 5318 5328
+type(
+  'a list
+)
+"cvariables.ml" 155 5318 5321 "cvariables.ml" 155 5318 5328
+type(
+  bool
+)
+"cvariables.ml" 155 5318 5329 "cvariables.ml" 155 5318 5331
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"cvariables.ml" 155 5318 5332 "cvariables.ml" 155 5318 5334
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 154 5288 5312 "cvariables.ml" 154 5288 5314
+)
+"cvariables.ml" 155 5318 5335 "cvariables.ml" 155 5318 5336
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cvariables.ml" 155 5318 5337 "cvariables.ml" 155 5318 5339
+type(
+  'a list
+)
+"cvariables.ml" 155 5318 5332 "cvariables.ml" 155 5318 5339
+type(
+  bool
+)
+"cvariables.ml" 155 5318 5321 "cvariables.ml" 155 5318 5339
+type(
+  bool
+)
+"cvariables.ml" 155 5318 5345 "cvariables.ml" 155 5318 5357
+type(
+  'a list
+)
+"cvariables.ml" 158 5370 5374 "cvariables.ml" 158 5370 5382
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"cvariables.ml" 158 5370 5384 "cvariables.ml" 158 5370 5391
+type(
+  'a list -> 'a
+)
+ident(
+  ext_ref List.hd
+)
+"cvariables.ml" 158 5370 5392 "cvariables.ml" 158 5370 5394
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 154 5288 5312 "cvariables.ml" 154 5288 5314
+)
+"cvariables.ml" 158 5370 5383 "cvariables.ml" 158 5370 5395
+call(
+  stack
+)
+type(
+  'a
+)
+"cvariables.ml" 158 5370 5396 "cvariables.ml" 158 5370 5398
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 154 5288 5309 "cvariables.ml" 154 5288 5311
+)
+"cvariables.ml" 158 5370 5374 "cvariables.ml" 158 5370 5398
+call(
+  stack
+)
+type(
+  bool
+)
+"cvariables.ml" 158 5370 5404 "cvariables.ml" 158 5370 5415
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.append
+)
+"cvariables.ml" 158 5370 5417 "cvariables.ml" 158 5370 5424
+type(
+  'a list -> 'a
+)
+ident(
+  ext_ref List.hd
+)
+"cvariables.ml" 158 5370 5425 "cvariables.ml" 158 5370 5427
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 154 5288 5312 "cvariables.ml" 154 5288 5314
+)
+"cvariables.ml" 158 5370 5417 "cvariables.ml" 158 5370 5427
+call(
+  stack
+)
+type(
+  'a
+)
+"cvariables.ml" 158 5370 5416 "cvariables.ml" 158 5370 5428
+type(
+  'a list
+)
+"cvariables.ml" 158 5370 5431 "cvariables.ml" 158 5370 5443
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  int_ref intersection "cvariables.ml" 154 5288 5296 "cvariables.ml" 154 5288 5308
+)
+"cvariables.ml" 158 5370 5444 "cvariables.ml" 158 5370 5446
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 154 5288 5309 "cvariables.ml" 154 5288 5311
+)
+"cvariables.ml" 158 5370 5448 "cvariables.ml" 158 5370 5455
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.tl
+)
+"cvariables.ml" 158 5370 5456 "cvariables.ml" 158 5370 5458
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 154 5288 5312 "cvariables.ml" 154 5288 5314
+)
+"cvariables.ml" 158 5370 5447 "cvariables.ml" 158 5370 5459
+call(
+  stack
+)
+type(
+  'a list
+)
+"cvariables.ml" 158 5370 5429 "cvariables.ml" 158 5370 5461
+call(
+  stack
+)
+type(
+  'a list
+)
+"cvariables.ml" 158 5370 5404 "cvariables.ml" 158 5370 5461
+call(
+  tail
+)
+type(
+  'a list
+)
+"cvariables.ml" 159 5462 5469 "cvariables.ml" 159 5462 5481
+type(
+  'a list -> 'a list -> 'a list
+)
+ident(
+  int_ref intersection "cvariables.ml" 154 5288 5296 "cvariables.ml" 154 5288 5308
+)
+"cvariables.ml" 159 5462 5482 "cvariables.ml" 159 5462 5484
+type(
+  'a list
+)
+ident(
+  int_ref l1 "cvariables.ml" 154 5288 5309 "cvariables.ml" 154 5288 5311
+)
+"cvariables.ml" 159 5462 5486 "cvariables.ml" 159 5462 5493
+type(
+  'a list -> 'a list
+)
+ident(
+  ext_ref List.tl
+)
+"cvariables.ml" 159 5462 5494 "cvariables.ml" 159 5462 5496
+type(
+  'a list
+)
+ident(
+  int_ref l2 "cvariables.ml" 154 5288 5312 "cvariables.ml" 154 5288 5314
+)
+"cvariables.ml" 159 5462 5485 "cvariables.ml" 159 5462 5497
+call(
+  stack
+)
+type(
+  'a list
+)
+"cvariables.ml" 159 5462 5469 "cvariables.ml" 159 5462 5497
+call(
+  tail
+)
+type(
+  'a list
+)
+"cvariables.ml" 157 5364 5364 "cvariables.ml" 160 5499 5502
+type(
+  'a list
+)
+"cvariables.ml" 155 5318 5318 "cvariables.ml" 160 5499 5502
+type(
+  'a list
+)

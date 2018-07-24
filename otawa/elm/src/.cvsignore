@@ -1,0 +1,23 @@
+<<<<<<< .cvsignore
+.deps
+Makefile
+Makefile.in
+libelm.a
+build-Linux2_6_11_6mdk_i686_up_4GB
+AAPDIR
+*.la
+*.lo
+*.libs
+cmake_install.cmake
+=======
+.deps
+Makefile
+Makefile.in
+libelm.a
+build-Linux2_6_11_6mdk_i686_up_4GB
+AAPDIR
+*.la
+*.lo
+*.libs
+cmake_install.cmake
+>>>>>>> 1.5

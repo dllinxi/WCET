@@ -1,0 +1,76 @@
+<!--
+
+  the below ffx corresponds roughly to a program with the
+  following structure:
+
+  void n ()
+  {
+    for (...) { ... }       // bounds: 80 1st call, 10 2nd call
+      for (...) { ... }     // bounds: 400 1st call, 40 2nd call
+    if () { ... }           // not executed in 2nd call
+    else  { ... }           // not executed in 1st call
+  }
+
+  void main ()
+  {
+    n();                    // bounds annotated above
+
+    if (...) { ... }        // not executed
+    else { ... }
+
+    for (...) { ... }       // 20
+
+    n();                    // different bounds, c.f. above
+
+    if (...) { ... }        // not executed
+    else { ... }
+  }
+-->
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowfacts>
+  <function name="main" executed="true" extern="false">
+    <call numcall="1" name="n" line="10" source="SMALL.c">
+      <function name="n" executed="true" extern="false">
+        <loop loopId="1" line="13" source="ext.c" exact="true" maxcount="80" totalcount="100">
+          <loop loopId="2" line="15" source="ext.c" exact="true" maxcount="400" totalcount="600">
+          </loop>
+        </loop>
+        <conditional id="IF-1">
+          <condition id="1" line="10000" source="small.c"/>
+          <case id="0" executed="true" line="10001" source="ext.c"/>
+          <case id="1" executed="false" line="10002" source="ext.c"/>
+        </conditional>
+      </function>
+    </call>
+
+    <conditional id="IF-2">
+      <condition id="1" line="17" source="small.c"/>
+      <case id="0" executed="false" line="19" source="small.c"/>
+      <case id="1" executed="true" line="21" source="small.c"/>
+    </conditional>
+
+    <loop loopId="3" line="24" source="small.c" exact="true" maxcount="20" totalcount="100">
+    </loop>
+
+    <call numcall="2" name="n" line="23" source="SMALL.C">
+      <function name="n">
+        <loop loopId="1" line="13" source="ext.c" exact="true" maxcount="10" totalcount="10">
+          <loop loopId="2" line="15" source="ext.c" exact="true" maxcount="40" totalcount="60">
+           </loop>
+       </loop>
+        <conditional id="IF-3">
+          <condition id="1" line="10000" source="small.c"/>
+          <case id="0" executed="false" line="10001" source="ext.c"/>
+          <case id="1" executed="true" line="10002" source="ext.c"/>
+        </conditional>
+      </function>
+    </call>
+
+    <conditional id="IF-4">
+      <condition executed="false" id="5" line="25" source="small.c"/>
+      <case id="0" executed="false" line="27" source="small.c"/>
+      <case id="1" executed="true" line="29" source="small.c"/>
+    </conditional>
+  </function>
+</flowfacts>

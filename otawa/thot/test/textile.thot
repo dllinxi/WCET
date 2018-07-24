@@ -1,0 +1,255 @@
+@use textile
+@TITLE=Textile Test File
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_green.css
+
+h1. Basic Text
+
+h2. Word Styles
+
+This is *strong*.
+
+This is **bolt**.
+
+This is _emphasized_.
+
+This is __italic__.
+
+This is -strikethrough-.
+
+This +underline+.
+
+This is ++bigger++.
+
+This is --smaller--.
+
+This is ~subscript~.
+
+This is ??citation??.
+
+This is ^superscript^.
+
+This is %simple span%.
+
+This is @code@.
+
+This is ==es^cap^ing==.
+
+Combined __example **here** here__
+
+h2. Paragraphs
+
+a paragraph
+
+p. a new paragraph
+p. next paragraph
+p. last paragraph
+
+bq. Single line blockquote!
+
+And following paragraph.
+
+bq.. multi-line blockquote
+and a line
+and another line
+
+p. comeback to normal paragraph.
+
+h2. Lists
+
+Here, a simple item list:
+* a
+* b
+* c
+
+Now a numbered list:
+# a
+# b
+# c
+
+Multi-level list:
+* a
+** aa
+** bb
+* b
+* c
+**cc
+
+Melted list:
+* a
+*# A
+*# B
+* b
+* c
+
+h2. Definitions
+
+- HTML := HyperText Markup Language
+- HTTP := HyperText Transfer Protocol
+- WCET := Worst Case Execution Time
+
+Another definition kind:
+; HTML
+; HyperText Markup Language
+; HTTP
+; HyperText Transfer Protocol
+; WCET
+; Worst Case Execution Time
+
+
+h1. Other items
+
+h2. Images
+
+An image below:
+!gravure-thot.gif!
+
+An image 20x20:
+!gravure-thot.gif 20x20!
+
+An image 30w 30h:
+!gravure-thot.gif 30w 30h!
+
+An image with alternate text:
+!gravure-thot.gif(Alternate text.)!
+
+An image with 20% percent size:
+!gravure-thot.gif 20%! (how to implement this in XHTML?)
+
+An image !gravure-thot.gif!:http://google.fr with a link.
+
+
+h2. Special symbols
+
+	(c) 	copyright
+
+	(r) 	?
+
+	(tm)	trademark
+
+	{c|}	cent
+
+	{L-}	pound
+
+	{Y=}	yen
+
+This should be a long dash: &#8212;.
+
+Another long dash: --
+
+Now an ellipsis: ...
+
+And a size: 100 x 100
+
+Now we try english quote: "here".
+
+Now we try english simple quote: 'here'.
+
+h2. Links
+
+A linke to "google":http://www.google.fr .
+
+Another with single quote, 'google':http://www.google.fr .
+
+Now with brackets: ["google":http://www.google.fr].
+
+Backets and single quotes: ['google':http://www.google.fr].
+
+Now brackets alone with URL: [google]http://www.google.fr .
+
+h2. Foot Notes
+
+Here is a single bracket footnote[1] and some text after.
+
+Here is # reference[#reff].
+
+Third reference[2].
+
+h2. Table
+
+Simple table:
+|_ Header 1 |_ Header 2 |_ Header 3 |
+| value 11 | value 12 | value 13 |
+| value 21 | value 22 | value 23 |
+| value 31 | value 32 | value 33 |
+
+Table with horizontal span:
+|_ Header 1 |_ Header 2 |_ Header 3 |
+|\2 value 11 | value 13 |
+| value 21 |\2 value 22 |
+| value 31 | value 32 | value 33 |
+
+Table with vertical span:
+|_ Header 1 |_ Header 2 |_ Header 3 |
+|/2 value 11 | value 12 | value 13 |
+|/2 value 22 | value 23 |
+| value 31 | value 33 |
+
+fn1. Footnote 1 described here!
+fn#reff. Footnote 2 with a reference name.
+fn2.. multi-line
+note
+
+p. And a paragraph.
+
+h2. Code
+
+bc. Single line code!
+
+And now multi-line:
+bc..
+int main(void) {
+	return 0;
+}
+p.
+
+And the end!
+
+h1. Stylish
+
+h2. word styles
+
+This is **(myclass)bold with class** here.
+
+This is **(#identifier)bold with identifier** here.
+
+This is **(class2#id2)bold with both class and identifier** here.
+
+This is **{mycss=red}bold with css** here.
+
+This is **[fr]bold with language** here.
+
+Now this is **[en]{css=blue}(lastclass#lastid)bold with all together.** here.
+
+h2. paragraph styles
+
+p[fr]. Paragraph with language.
+
+p<. Paragraph with alignment.
+
+p<[fr]{ok=0}. Paragraph with alignment, language and CSS.
+
+h2[fr]. Header with french language
+
+p{color=blue}. Paragraph with blue color[5].
+
+bq.(quotes). Blockquote with "quotes" class.
+
+fn5[en]. Styled footnote in english.
+
+h2. Styled Table
+
+table[fr].
+|_ french |_ table |
+| styled | table |
+|[fr] styled cell | normal |
+[fr]|styled row | |
+
+h2. Styled Image
+
+![fr]gravure-thot.gif! French image!
+
+Right-aligned image:
+!>gravure-thot.gif!

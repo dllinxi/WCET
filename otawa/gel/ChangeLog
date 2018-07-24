@@ -1,0 +1,6 @@
+2012.01.02
+	STABS integration.
+	Added gel_debug library.
+	No more dynamic link for debug library: DWARF is automatically to libgel.
+	gel_dwarf library will become quicly become deprecared.
+	debug access from gel library will also become deprecated.

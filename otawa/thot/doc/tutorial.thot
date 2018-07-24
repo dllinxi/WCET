@@ -1,0 +1,202 @@
+@use dot
+
+====== Tutorial ======
+
+To use @(THOT), you just need a CLI (Command Line Interface) to launch
+the ''thot'' command and a text editor. Other requirements includes
+of course [[http://www.python.org/|Python]], the language @(THOT) is
+written in.
+
+Not mandatory but enabling some additional features, we can add:
+  * [[http://www.andre-simon.de/|highlight]] to produce colored source code,
+  * [[http://www.graphviz.org/|GraphViz]] to display graphs.
+
+===== First Steps =====
+
+To write your first document, you have to start your favorite text editor
+and to type the following text for example ((You are also allowed
+to copy'n'paste it)):
+<code>
+@TITLE=My First Document
+@AUTHORS=Rick Hunter <rick.hunter@policy.org>
+@LANG=en_EN
+@use dokuwiki
+
+Hello, I'm Rick Hunter.
+
+====== My Life ======
+
+This is my first chapter.
+
+====== My Foes ======
+
+  * criminal one,
+  * criminal two,
+  * criminal three.
+</code>
+
+Once you saved you first file as ''hunter.thot'' (for example),
+you have just to open a CLI and go in the directory containing this file
+and to type:
+<code sh>
+thot hunter.thot
+</code>
+
+This creates a file named ''hunter.html'' that you can view with your
+favorite web browser. As a default, @(THOT) uses the ''html'' back-end
+to generate the document but more are available like ''latex'' or
+''docbook''. They will require some specific programs of which details
+are given in the //Writer Manual// part.
+
+If you open the obtained ''html'' page, you will something crude.
+To make things pretty, you have to configure @(THOT) to use CSS stylesheet
+of your choice (for ''html'' back-end only).
+
+Basically, @(THOT) propose a small list of available styles but you
+may add your own ones:
+  * ''minima/initial.css'',
+  * ''minima/style_blue.css'',
+  * ''minima/style_brown.css'',
+  * ''minima/style_gray.css'',
+  * ''minima/style_green.css'',
+  * ''minima/style_pink.css'',
+  * ''minima/style_purple.css''.
+
+Once you have done your choice (for example blue), you have just to
+add the line blow at the head of your document:
+<code>
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_blue.css
+</code>
+
+Then, you have to rebuild the document with ''thot'' command and you
+may appreciate the new look of the page on the browser (don't 
+forget to refresh the page to get the new version). Now, you started to
+touch the power of @(THOT), we can dig further in the details of the
+lighweight tags.
+
+
+=====  Explanation of the Example =====
+
+In this section, we detail the example given above.
+
+The first part of the document contains meta-définitions used by
+@(THOT) to generate the document.
+
+<code>
+@TITLE=My First Document
+@AUTHORS=Rick Hunter <rick.hunter@policy.org>
+@LANG=en_EN
+</code>
+
+This three lines gives, respectively, the title, the authors and the
+language of the document. The language must be defined according to
+[[http://tools.ietf.org/html/rfc4647|RFC4646]] and
+[[http://tools.ietf.org/html/rfc4647|RFC4647]] standard rules. ''en_EN''
+means english language of England. ''title'' and ''authors'' may contain
+any free text.
+
+<code>
+@use dokuwiki
+</code>
+This lines registers the syntax of [[http://www.dokuwiki.org/dokuwiki|Dokuwiki]]
+as the document syntax. Without such a line, no markup is scanned in the document
+and you would get a flat document output. Note that, from this point,
+@(THOT) will accept Dokuwiki syntax. Tags in the previous lines was just
+pure @(THOT) meta-information. If you prefer, you can also use a different
+like [[http://txstyle.org/|textile]].
+
+<code>
+Hello, I'm Rick Hunter.
+</code>
+Here we have simple text paragraph that is dumped to the output document
+as-is. Notice that, in Dokuwiki syntax, the paragraphs are separated by
+blank lines.
+
+<code>
+====== My Life ======
+</code>
+This is also Dokuwiki syntax to define a top-level header title and
+the sepparation between two sections. The
+number of '=' defines the level of the header: 6 for top level,
+5 for level just below and so on.
+
+<code>
+This is my firts chapter.
+
+====== My Foes ======
+</code>
+Here we still have a simple paragraph and a top level header.
+
+<code>
+  * first one,
+  * second one,
+  * third one.
+</code>
+This paragraph is more interesting. Two spaces and a star are used to
+denote items of dotted list. One may observe that this syntax is also
+easy to read and to use.
+
+This example show only a little part of the Dokuwiki syntax.
+For more details, you can refer to
+[[http://www.dokuwiki.org/syntax|Dokuwiki syntax description]]. Notice
+also that @(THOT) does not enforce the use of Dokuwiki.
+
+
+===== Using a simple module ===== 
+
+In this last step of the tutorial, we show how the Dokuwiki syntax
+may be easily augmented to support domain specific languages, like
+''.dot'' graph description language of [[http://www.graphviz.org/|GraphViz]].
+
+First, you have to inform @(THOT) about the use of a new module
+(''dot'' in this case).
+<code>
+@use dot
+</code>
+
+Then, you must get documentation about the syntax added by the module.
+In the case of ''dot'', the graph description must be framed by
+''<dot>'' and ''</dot>'' marks and the graph description must follow
+the normal rules of [[http://www.graphviz.org/|GraphViz]].
+
+For example, you may add the following graph:
+<code>
+<dot>
+digraph mine {
+	1 -> 2 ;
+	1 -> 3 ;
+	3 -> 4 ;
+	4 -> 5 ;
+	2 -> 5 ;
+}
+</dot>
+</code>
+
+Then, you can generate the page as usually by typing:
+<code sh>
+thot hunter.thot
+</code>
+
+In this case, the graph description is replaced by the insertion of
+an image produced by GraphViz.
+
+<dot>
+digraph mine {
+	1 -> 2 ;
+	1 -> 3 ;
+	3 -> 4 ;
+	4 -> 5 ;
+	2 -> 5 ;
+}
+</dot>
+
+This image created in a specific directory called ''hunter-imports''
+that contains all images and resources required by the generated document.
+This directory has to be including with the ''html'' file if you want
+to move or send your document. Otherwise, the display will be degraded.
+
+That's it! After this fast introduction to @(THOT), you can read the next
+section to get deeper details and options on the different modules
+delivered with @(THOT).
+
+

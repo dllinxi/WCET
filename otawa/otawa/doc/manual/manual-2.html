@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>OTAWA Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;casse@irit.fr&gt;, C. Rochange &lt;rochange@irit.fr&gt;, C. Ballabriga &lt;ballabri@irit.fr&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="manual-imports/../css/manual-2..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">OTAWA Manual</div>
+	<div class="authors"><a href="mailto:casse@irit.fr">H. Cassé </a>, <a href="mailto:rochange@irit.fr"> C. Rochange </a>, <a href="mailto:ballabri@irit.fr"> C. Ballabriga </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="manual-0.html">1  Building OTAWA  </a>
+  </li>
+  <li>
+  <a href="manual-1.html">2  Computing a WCET  </a>
+  </li>
+  <li>
+  <a href="manual-2.html">3  Writing an OTAWA Application  </a>
+    <ul class="toc">
+    <li>
+    <a href="manual-2.html#3.1">3.1  Application Design  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.2">3.2  Source Header  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.3">3.3  Main Function  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.4">3.4  Writing the Analysis  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.5">3.5  Compiling the Sources  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.6">3.6  Running the Application  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.7">3.7  Specializing the Computation  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.8">3.8  Fast Way  </a>
+    </li>
+    <li>
+    <a href="manual-2.html#3.9">3.9  Conclusion  </a>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="manual-3.html">4  Control Flow Graphs  </a>
+  </li>
+  <li>
+  <a href="manual-4.html">5  Property Work  </a>
+  </li>
+  <li>
+  <a href="manual-5.html">6  Code Processors  </a>
+  </li>
+  <li>
+  <a href="manual-6.html">7  Features  </a>
+  </li>
+  <li>
+  <a href="manual-7.html">8  Using ELM  </a>
+  </li>
+  <li>
+  <a href="manual-8.html">9  Performing Iterative Data Flow Analysis  </a>
+  </li>
+  <li>
+  <a href="manual-9.html">10  Using Abstract Interpretation  </a>
+  </li>
+  <li>
+  <a href="manual-10.html">11  References  </a>
+  </li>
+  <li>
+  <a href="manual-11.html">12  Architecture Formats  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="3"></a>3 Writing an OTAWA Application  </h2>
+<p>
+Basically, OTAWA is a framework providing a bunch of classes for static analysis and particularly Worst Case Execution Time Computation. Although OTAWA provides some ready-to-use utilities, more interesting is the implementation of an application filling exactly your needs or extending the OTAWA features. </p>
+<p>
+To achieve this goal, the following skills are required : </p>
+<ul >
+<li><p>
+ a basic experience in C++, </p>
+</li>
+<li><p>
+ some experience with Makefiles, </p>
+</li>
+<li><p>
+ a solid knowledge about the IPET method to compute WCET. </p>
+</li>
+</ul>
+<p>
+This tutorial will show you how to make and compile a little application using the OTAWA framework. First of all, you need to have compiled and installed OTAWA (see <a href="OTAWA Installation">OTAWA Installation</a>). </p>
+<h2><a name="3.1"></a>3.1 Application Design  </h2>
+<p>
+Once you have installed OTAWA, you can start to write your first OTAWA application. As a first example, we want to use OTAWA to apply basic IPET method on some embedded program (whose architecture is supported by OTAWA). Our program will include the following passes : </p>
+<ol >
+<li><p>
+ select the task entry point for which to compute the WCET, </p>
+</li>
+<li><p>
+ compute the execution time of each basic block using an instruction-level simulator and the delta approach, </p>
+</li>
+<li><p>
+ build the ILP system for the program control flow, </p>
+</li>
+<li><p>
+ resolve it to get the WCET. </p>
+</li>
+</ol>
+<h2><a name="3.2"></a>3.2 Source Header  </h2>
+<p>
+Now, we will write a simple C++ source file to perform our work. We call it <tt>ipet.cpp</tt> and it will start with the following lines : </p>
+<div class="listing"><pre class="code">
+#include &lt;elm/io.h&gt;
+#include &lt;otawa/otawa.h&gt;
+#include &lt;otawa/ipet.h&gt;
+#include &lt;iostream&gt;
+
+using namespace elm;
+using namespace otawa;</pre></div><p>
+The first include <tt>&lt;elm/io.h&gt;</tt> imports classes to perform outputs. ELM is a general purpose library delivered and used by OTAWA. It provides I/O facilities and generic data structures (OTAWA main author is allergic to STL but this one may be used seamlessly with OTAWA). </p>
+<p>
+The following inclusion <tt>&lt;otawa/otawa.h&gt;</tt> provides OTAWA main classes while the next one, <tt>otawa/ipet.h</tt>, is dedicated to IPET classes. The last two lines just open the namespaces where ELM and OTAWA classes lie in. </p>
+<h2><a name="3.3"></a>3.3 Main Function  </h2>
+<p>
+Now, we can write the main function : </p>
+<div class="listing"><pre class="code">
+int main(void) {
+  try {
+    WorkSpace *ws = MANAGER.load("program to analyze");
+    ...
+  }
+  catch(elm::Exception&amp; e) {
+    std::cerr &lt;&lt; "ERROR: " &lt;&lt; e.message() &lt;&lt; '\n';
+  }</pre></div><p>
+The first step is to load the program into OTAWA. This is performed by the static object <tt>MANAGER</tt> that stores common ressources used in OTAWA. To open the file, we use the <tt>load</tt> method. This method return a <tt>WorkSpace</tt>, that is, a location where the loaded binary file may be analyzed to get a WCET. </p>
+<p>
+The binary file <tt>open()</tt> call is enclosed in a <tt>try { &#8943; } catch(&#8943;)</tt> statement in order, if an error arises during the file load, to catch the thrown  exception and to display the error message in the <tt>catch</tt> part. </p>
+<p>
+Most OTAWA objects throw an exception when an error is encountered. You may, at choice, process it immediately or simply ignore it and let the main function do the display work. The latter approach makes your program a bit easier to write and to read (providing that you have a way to free the allocated resources). </p>
+<h2><a name="3.4"></a>3.4 Writing the Analysis  </h2>
+<p>
+The easiest way to perform the IPET analysis it to call the <tt>otawa::ipet::WCETComputation</tt> code processor as below: </p>
+<div class="listing"><pre class="code">
+    ipet::WCETComputation comp;
+    comp.process(ws);
+    cout &lt;&lt; "the wcet is " &lt;&lt; ipet::WCET(ws) &lt;&lt; io::endl;</pre></div><p>
+In OTAWA, a code processor is a piece of code that performs an analysis on the workspace. Usually, a workspace contains the program representation augmented with a lot of annotations produced by the code processor. As an example, the last line is used to display the final <tt>ipet::WCET</tt> annotation linked to the workspace, that is, the WCET expressed in cycles. </p>
+<p>
+The code processors work on the framework and either of them use already tied annotations, or create new annotations. Here, <tt>WCETComputation</tt> has computed the WCET and has linked it with the <tt>ipet::WCET</tt> annotation. But computing a WCET is a big task involving many different code processors like CFG &#8211; Control Flow Graph &#8211; building, ILP &#8211; Integer Linear Programming &#8211; system generation, etc. </p>
+<p>
+To achieve the trick, the code processor automatically records some required features to the framework that, in turn, ensures the availability of this feature before launching the code processor. Attached to this feature, there is often a default processor that is called if the feature is not already available. In our case, as only the last code processor &#8211; <tt>WCETComputation</tt> &#8211; is called, all default analyses are performed based on the feature providers. To prove this point, you may ask OTAWA to display the chain of applied code processors using the <tt>Processor::VERBOSE</tt> annotation passed to the processor configuration: </p>
+<div class="listing"><pre class="code">
+    PropList props;
+    Processor::VERBOSE(props) = true;
+    ipet::WCETComputation comp;
+    comp.process(ws, props);
+    cout &lt;&lt; "the wcet is " &lt;&lt; ipet::WCET(ws) &lt;&lt; io::endl;</pre></div><p>
+In this piece of code, you may see that the annotations are encoded by the <tt>Property</tt> class and that they are tied to <tt>PropList</tt> class. To assign the property to some property list, we have just to assign the value to the <tt>property_name(property_list)</tt> expression. Please note that simply accessing a property in a property list uses the same syntax: <tt>property_name(property_list</tt> as in the display of the WCET. </p>
+<p>
+To configure the <tt>WCETComputation</tt> processor, we just declare an empty property list, <tt>props</tt> ; we assign the configuration property <tt>Processor::VERBOSE</tt> and we pass it to the <tt>process</tt> method of the processor. This method launch the analysis of the processor on the given framework with the given configuration. </p>
+<h2><a name="3.5"></a>3.5 Compiling the Sources  </h2>
+<p>
+In order to get the results of our analysis, we need first to compile the application. As OTAWA compilation is a bit complex to configure, we advise to use a <tt>Makefile</tt> like below: </p>
+<div class="listing"><pre class="code">
+MODULES         = lp_solve ppc              # gensim
+PROGRAM         = ipet
+SOURCES         = ipet.cpp
+
+# Configuration
+FLAGS           = $(shell otawa-config --cflags $(MODULES))
+DATADIR         = $(shell otawa-config --data $(MODULES))
+CXXFLAGS        = $(FLAGS) -DDATA_DIR="$(DATADIR)"
+LDLIBS          = $(shell otawa-config --libs $(MODULES))
+LDFLAGS         = -dlopen force
+CXX             = g++
+LD              = libtool --mode=link --tag=CXX g++
+
+# Derivated
+OBJECTS         = $(SOURCES:.cpp=.o)
+DEPS            = $(addprefix .deps,$(SOURCES:.cpp=.d))
+
+# Rules
+all: .deps $(PROGRAM)
+
+$(PROGRAM): $(OBJECTS)
+        $(LD) -o $@ $^ $(LDFLAGS) $(LDLIBS)
+
+clean:
+        rm -rf *.o $(PROGRAM) *~ core.* *.lo .libs .deps
+
+.deps:
+        mkdir .deps
+
+%.o: %.cpp
+        $(CXX) $(CXXFLAGS) -MM -MF .deps/$*.d -c $&lt;
+        $(CXX) $(CXXFLAGS) -c $&lt; -o $@ 
+
+-include $(DEPS)</pre></div><p>
+The utility <tt>otawa-config</tt> provides all details about the OTAWA installation: C++ flags, libraries to link and path to shared resources. You may also configure which OTAWA modules you want to use. Usual modules includes: </p>
+<ul >
+<li><p>
+ ast: AST (Abstract Syntax Tree) classes </p>
+</li>
+<li><p>
+ display: use of the display namespace classes, </p>
+</li>
+<li><p>
+ ets: ETS (Extended Timing Schema) code processors, </p>
+</li>
+<li><p>
+ gensim: use of the generic simulator, </p>
+</li>
+<li><p>
+ bpred: branch prediction classes. </p>
+</li>
+</ul>
+<p>
+If you choose to perform static link of OTAWA, you may also link with some plugins: </p>
+<ul >
+<li><p>
+ lp_solve: ILP solver, </p>
+</li>
+<li><p>
+ lp_solve5: last version of lp_solve, </p>
+</li>
+<li><p>
+ ppc: PowerPC loader, </p>
+</li>
+<li><p>
+ s12x: Star12X loader, </p>
+</li>
+<li><p>
+ arm loader. </p>
+</li>
+</ul>
+<p>
+For now, we have just selected <tt>lp_solve</tt> &#8211; required by IPET approach &#8211; and ppc &#8211; to process PowerPC binaries. Then, you have to launch the compilation (and possibly fix some syntax errors): </p>
+<div class="listing"><pre class="code">
+$ make</pre></div><p>
+To get all available modules, you may perform the following call: </p>
+<div class="listing"><pre class="code">
+$ otawa-config --modules</pre></div><h2><a name="3.6"></a>3.6 Running the Application  </h2>
+<p>
+If the <tt>make</tt> is successful, you get your executable analyzer that you can launch with: </p>
+<div class="listing"><pre class="code">
+$ ./ipet</pre></div><p>
+The output of the command is presented below (applied to the <tt>fibcall</tt> program of SNU-RT benchmark). </p>
+<div class="listing"><pre class="code">
+Starting otawa::CFGBuilder (1.0.0)
+Ending otawa::CFGBuilder
+Starting CFGCollector (1.0.0)
+Ending CFGCollector
+Starting otawa::VarAssignment (1.0.0)
+	process CFG main
+		process BB 0 (00000000)
+		process BB 1 (00050158)
+		...
+	process CFG fib
+		process BB 0 (00000000)
+		process BB 1 (00050124)
+		...
+Ending otawa::VarAssignment
+Starting otawa::BasicConstraintsBuilder (1.0.0)
+	...
+Ending otawa::BasicConstraintsBuilder
+Starting otawa::TrivialBBTime (1.0.0)
+	...
+Ending otawa::TrivialBBTime
+Starting otawa::BasicObjectFunctionBuilder (1.0.0)
+	...
+Ending otawa::BasicObjectFunctionBuilder
+Starting otawa::dominance (1.1.0)
+	...
+Ending otawa::dominance
+Starting otawa::ipet::FlowFactLoader (1.0.0)
+Ending otawa::ipet::FlowFactLoader
+Starting otawa::WCETComputation (1.0.0)
+Ending otawa::WCETComputation
+the wcet is -1</pre></div><p>
+One can see that the following analyses are performed: </p>
+<ol >
+<li><p>
+ the CFG are built &#8211; <tt>CFGBuilder</tt>, </p>
+</li>
+<li><p>
+ the involved CFG are collected &#8211; <tt>CFGCollector</tt>, </p>
+</li>
+<li><p>
+ the ILP variables are assigned &#8211; <tt>VarAssignment</tt>, </p>
+</li>
+<li><p>
+ the ILP flow constraints are built &#8211; <tt>BasicConstraintBuilder</tt>, </p>
+</li>
+<li><p>
+ the basic block execution time are computed &#8211; <tt>TrivialBBTime</tt>, </p>
+</li>
+<li><p>
+ the ILP object function is built &#8211; <tt>BasicObjectFunctionBuilder</tt>, </p>
+</li>
+<li><p>
+ the flow facts are loaded &#8211; <tt>FlowFactLoader</tt>, </p>
+</li>
+<li><p>
+ and the WCET is computed &#8211; <tt>WCETComputation</tt>. </p>
+</li>
+</ol>
+<p>
+Yet, in all this work, something goes wrong: the computed WCET is -1, that is, no solution can be computed. The problem comes from the loop contained in the tested program. OTAWA can not automatically compute the bound of the loop and, consequently, the generated system has an infinite maximal value. </p>
+<p>
+To get a right result, you have to provides loop bounds in a flow fact file. Refer to <a href="Computing a WCET">Computing a WCET</a>, "Specifying the Flow Facts" for a description of flow facts files. Actually, the flow fact file are managed by the <tt>FlowFactLoader</tt> processor. As no flow fact file was available, it gave up silently. </p>
+<h2><a name="3.7"></a>3.7 Specializing the Computation  </h2>
+<p>
+OTAWA code processors chain themselves depending on the so-called <tt>Feature</tt> objects. A <tt>Feature</tt> simply asserts that a set of properties are available in the current workspace. To this end, each code processor declares its list of required features and provided framework. Shortly, required features are computed before the code processor execution is launched and provided features are granted once that the code processor has been executed. </p>
+<p>
+If a required feature is not present, a default code processor is invoked to compute lacking information. Often, the default code processor is very simple and its results are very approximative but conservative overestimations of the WCET. This work is well illustrated by our application where the WCET is only computed with all default code processors of features. Yet, notice that several features provide a fully functional processor (<tt>CFGBuilder</tt>, <tt>CFGConstraintBuilder</tt>). </p>
+<p>
+Now, we will exploit the behavior of the feature system to specialize the performed analysis, that is, a feature is computed by its default processor only if it is not already defined. For example, we want to replace the coarse grain <tt>TrivialBBTime</tt> computation by the inter-block aware basic block timing Delta analysis [Engblom] implemented in the <tt>Delta</tt> code processor. To implement this, we have just to invoke this processor before the <tt>WCETComputation</tt> processor as in the following code: </p>
+<div class="listing"><pre class="code">
+    PropList props;
+    Processor::VERBOSE(props) = true;
+    ipet::Delta delta;
+    delta.process(ws, props);
+    ipet::WCETComputation comp;
+    comp.process(ws, props);
+    cout &lt;&lt; "the wcet is " &lt;&lt; ipet::WCET(ws) &lt;&lt; io::endl;</pre></div><p>
+Now, we can compile again and launch the generated analyzer. Below is presented the interesting part of the output. You may notice that there is no more <tt>TrivialBBTime</tt> invocation that is replaced by <tt>Delta</tt>. </p>
+<div class="listing"><pre class="code">
+</pre></div><p>
+At this point, you know how to customize the computation of the WCET. To go further, you have just to read the documentation of the different code processors to know: </p>
+<ul >
+<li><p>
+ which features are available, </p>
+</li>
+<li><p>
+ how to configure it. The auto-documentation of OTAWA code processors is available at <tt>INSTALL_DIR/share/Otawa/autodoc</tt>. </p>
+</li>
+</ul>
+<h2><a name="3.8"></a>3.8 Fast Way  </h2>
+<p>
+The previous sections have presented the hard way to make an OTAWA application but OTAWA implements some utilities and classes to simplify the work. </p>
+<p>
+First, <tt>otawa-new</tt> is a small program to generate an OTAWA project. Just pass the name of the project as argument and it generates a directory containing the <tt>Makefile</tt> for your project: </p>
+<div class="listing"><pre class="code">
+$ otawa-new my_project</pre></div><p>
+Then, you have just to configure the <tt>Makefile</tt> by editing it.  </p>
+<p>
+Second, it is usually a burden and a repetitive task to scan the application arguments, to open the binary file and to process each entry point passed as argument. With the class otawa::Application, you have just to provide the function to process the entry points: </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/app/Application.h&gt;
+
+using namespace otawa;
+
+class MyApplication: public Application {
+public:
+	MyApplication: Application("MyApplication", Version(1, 0, 0)) {
+		// initialization
+	}
+
+protected:
+	virtual void work(const string &amp;entry, PropList &amp;props) throw (elm::Exception) {
+		// do the work here
+	} 
+};
+
+OTAWA_RUN(MyApplication)</pre></div><p>
+Notice that the <tt>main</tt> is automatically handled by the <tt>OTAWA_RUN</tt> macro  and the application class automatically supports <tt>-v</tt> and <tt>-h</tt> options. You may additional options as below: </p>
+<div class="listing"><pre class="code">
+class MyApplication: public Application {
+public:
+	MyApplication:
+		Application("MyApplication", Version(1, 0, 0)),
+		option1(*this, ...),
+		option2(*this, ...)
+	{ // initialization }
+
+private:
+	MyOption1 option1;
+	MyOption2 option2;
+};</pre></div><p>
+Please, refer to the <tt>options</tt> module of ELM library to get details on the option classes (inheriting from <tt>elm::option::Option</tt>). </p>
+<h2><a name="3.9"></a>3.9 Conclusion  </h2>
+<p>
+In this tutorial, we have learned : </p>
+<ul >
+<li><p>
+ to write a little analyzer using the OTAWA API, </p>
+</li>
+<li><p>
+ how to compile this application, </p>
+</li>
+<li><p>
+ to change the default behaviour of an analysis by straight invocation of code processors. </p>
+</li>
+</ul>
+<p>
+Although OTAWA provides working analyses, the use of the framework is more valuable if we have to write new analyses and if we combine these analyses with the OTAWA framework. This will be presented in the next tutorial. </p>
+</div>
+</div>
+</body>
+</html>

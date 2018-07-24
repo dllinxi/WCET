@@ -1,0 +1,1 @@
+/usr/bin/cc  -g  -Wl,--enable-auto-import CMakeFiles/gel-sect.dir/gel-sect.c.o  -o gel-sect.exe -Wl,--out-implib,libgel-sect.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -L/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/src  ../src/libgel.dll.a -ldl 

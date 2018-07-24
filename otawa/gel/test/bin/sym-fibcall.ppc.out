@@ -1,0 +1,4 @@
+st_value st_size  binding type    st_shndx         name
+100004d4        4 global  object  .rodata          _IO_stdin_used
+10010614      190 global  func    undef            __libc_start_main
+00000000        0 weak    notype  undef            __gmon_start__

@@ -1,0 +1,8 @@
+.deps
+test_dwarf_line
+Makefile.in
+Makefile
+.libs
+test_stabs
+cmake_install.cmake
+CMakeFiles

@@ -1,0 +1,211 @@
+author: jakob zwirchmayr
+
+script to translate ffx to pval expressions.
+
+hard coded ffx file path: small.ffx
+
+requires analysis of main (hardcoded)
+
+
+---
+
+slides are a short introduction, but not quite up-to-date
+(the later examples are borked).
+
+nevertheless, the script is updated to produce (kinda) correct
+pval clauses. to see an example, check small.ffx and out.pval.
+
+
+
+--- quoting the email I wrote to Armelle and Bjoern:
+
+
+
+Hi Armelle, hi Björn,
+
+
+TLDR for Björn:
+
+  This might come as a bit of a surprise for you, and it's quite
+  a lot of text. Nevertheless, maybe it's still interesting.
+
+  Recently, we were thinking about annotations carried in the code
+  instead of an external (ffx) file. To this end, the idea is to
+  ``fold'' the ffx annotations onto the source code. There's no
+  proposal yet how the source based annotations should look like, but
+  since it's information on a ``per-statement'' basis, it will be
+  somewhat related to what you presented at WCET.
+
+  Maybe, if you find the time to read this and check the attached
+  example, you have some additional comments.
+
+
+
+Now, if you're bored:
+
+
+I did some preliminary work on translating our ffx annotations
+to the value annotation language you presented at WCET (I call
+it ``pval -- principle value annotation language''  here).
+
+Currently there might be a few mistakes in the translation,
+they should become obvious when finally translating to ILP
+(there's currently no script for that).
+
+
+Find below a short overview about the current state of the
+ffx to pval translation and a small example and the translation
+scripts' output attached:
+
+The general idea is to scan the ffx and translate each element
+and its children to pval clauses. This works fine for
+the ``standard IPET clauses'' but does not work in general
+for contextual information carried in ffx (loop bounds, executed).
+
+Recall: ffx ``inlines'' each call, i.e. if a function ``n'' is
+called twice in func ``main'', then the ffx will contain twice a
+<call> element and a <function> element. The <function> elements
+then contain tags representing the statements within ``n''. Thus, if
+``n'' contains a loop, the ffx for the program will look something
+like this:
+
+       <call n numcall=1>
+         <func n>
+	   <loop>                  <---- ``inlined loop''
+         </func>
+       </call>
+       ...
+       <call n numcall=2>
+         <func n>
+	   <loop>                  <---- ``inlined loop'', again
+         </func>
+       </call>
+
+the <loop> element within the <func> represents both times
+the same source location (file/line where the function is found),
+but can carry distinct bound information.
+
+Thus, a ``global'' constraint on the loop bound can only encode
+the ``worst'' loopbound, which reduces precision. Therefore,
+I use the ``through'' construct to identify such statements
+and to encode contextual bounds.
+
+
+
+Attached you find an overview of the current translation:
+
+small.ffx  ... the ffx that gets translated
+out.pval ... the output of the translation
+
+I am making heavy use of the ``through'' string -- even
+for those clauses where it's not necessary (e.g. Fn-main).
+Let me shortly illustrate this below.
+
+A through string boils down to a separate ILP variable:
+
+  Suppose we have a function ``n'' called twice, containing
+  other ffx elements. The call clauses looks like this:
+    ``Ca-name-line-src-callnum'', e.g. Ca-n-1-10-1 and Ca-n-2-23
+
+  (or Fn-name -- I currently use the call and function tags
+  interchangeable).
+
+  Now suppose there is a nested loop within ``n'', with different
+  bounds in the two calls. The translation is the following:
+
+@exit -> #Lp-1-13-ext.c <= #Fn-n*80 through [Ca-n-1-10-src.c]
+@exit -> #Lp-2-15-ext.c <= #Lp-1-13-ext.c*400 through [Ca-n-1-10-src.c]
+@exit -> #Lp-1-13-ext.c <= #Fn-n * 10 through [Ca-n-2-23-src.c]
+@exit -> #Lp-2-15-ext.c <= #Lp-1-13-ext.c*40 through [Ca-n-2-23-src.c]
+
+(again, maybe instead of #Fn-n I should use Ca-n-1-10-src.c,
+but as mentioned, this is just a small change in the script)
+
+  Translating to ILP will introduce two distinct variables for the
+  calls and distinct variables for the loops.
+  Thus, different loop bounds (or exectued) can be set within a
+  context for a call.
+
+  Something like below, ignoring loop bounds:
+   last_stmt1 = ...
+   in_call-1 = last_stmt1
+   Lp-1-13-Ca-n-1-10-src.c = in_call-1
+   Lp-2-15-Ca-n-1-10-src.c = Lp-1-13-Ca-n-1-10-src.c
+    ...
+   in_call-2 = last_stmt2
+   Lp-1-13-Ca-n-2-23-src.c = in_call-2
+   Lp-2-15-Ca-n-2-23-src.c = Lp-1-13-Ca-n-2-23-src.c
+
+One option for optimization is then to drop the ``through [Fn-main]''
+clauses after translation. Another one (optimizes further) is to scan
+all the information and merge clauses -- i.e if we discover that the
+bounds are similar over two calls, we only need one ``set of ilp
+variables''.
+
+In the attached ffx file, I outlined the structure of the original C
+program in a comment.
+
+
+
+small.ffx
+out.pval
+
+
+PVAL Loop Max Clauses:
+  @exit -> #Lp-2-15-ext.c_cond <= #Lp-1-13-ext.c * 41 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-2-15-ext.c <= #Lp-1-13-ext.c * 40 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-1-13-ext.c_cond <= #Fn-n * 11 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-1-13-ext.c <= #Fn-n * 10 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-3-24-small.c_cond <= #Fn-main * 21 through [Fn-main]
+  @exit -> #Lp-3-24-small.c <= #Fn-main * 20 through [Fn-main]
+  @exit -> #Lp-2-15-ext.c_cond <= #Lp-1-13-ext.c * 401 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-2-15-ext.c <= #Lp-1-13-ext.c * 400 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-1-13-ext.c_cond <= #Fn-n * 81 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-1-13-ext.c <= #Fn-n * 80 through [Ca-n-1-10-SMALL.c]
+
+
+PVAL Loop Total Clauses:
+  @exit -> #Lp-2-15-ext.c_cond <= #Ca-n-2-23-SMALL.C * 60 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-1-13-ext.c_cond <= #Ca-n-2-23-SMALL.C * 10 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-3-24-small.c_cond <= #Fn-main * 100 through [Fn-main]
+  @exit -> #Lp-2-15-ext.c_cond <= #Ca-n-1-10-SMALL.c * 600 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-1-13-ext.c_cond <= #Ca-n-1-10-SMALL.c * 100 through [Ca-n-1-10-SMALL.c]
+
+
+PVAL IPET Clauses:
+  @exit -> #Fn-main = 1
+  @exit /\ #Ci-IF-4 = i -> #Cs-27-small.c + #Cs-29-small.c <= i through [Fn-main]
+  @exit -> #Cn-IF-4-25-small.c <= #Ci-IF-4
+  @exit -> #Ci-IF-4 <= #Fn-main
+  @exit /\ #Ci-IF-3 = i -> #Cs-10001-ext.c + #Cs-10002-ext.c <= i through [Ca-n-2-23-SMALL.C]
+  @exit -> #Cn-IF-3-10000-small.c <= #Ci-IF-3
+  @exit -> #Ci-IF-3 <= #Fn-n
+  @exit -> #Ca-n-2-23-SMALL.C <= #Fn-main through [Fn-main]
+  @exit /\ #Ci-IF-2 = i -> #Cs-19-small.c + #Cs-21-small.c <= i through [Fn-main]
+  @exit -> #Cn-IF-2-17-small.c <= #Ci-IF-2
+  @exit -> #Ci-IF-2 <= #Fn-main
+  @exit /\ #Ci-IF-1 = i -> #Cs-10001-ext.c + #Cs-10002-ext.c <= i through [Ca-n-1-10-SMALL.c]
+  @exit -> #Cn-IF-1-10000-small.c <= #Ci-IF-1
+  @exit -> #Ci-IF-1 <= #Fn-n
+  @exit -> #Ca-n-1-10-SMALL.c <= #Fn-main through [Fn-main]
+  @exit -> #exit = 1
+
+
+PVAL Executed Clauses:
+  @exit -> #Cs-27-small.c = 0 through [Fn-main]
+  @exit -> #Ci-IF-4 = 0 through [Fn-main]
+  @exit -> #Cs-10001-ext.c = 0 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Cs-19-small.c = 0 through [Fn-main]
+  @exit -> #Cs-10002-ext.c = 0 through [Ca-n-1-10-SMALL.c]
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT sis-install		(copy*)>
+
+<!ELEMENT install			>
+<!ATTLIST install file		CDATA #IMPLIED>
+<!ATTLIST install dynlib	CDATA #IMPLIED>
+<!ATTLIST install as		CDATA #IMPLIED>

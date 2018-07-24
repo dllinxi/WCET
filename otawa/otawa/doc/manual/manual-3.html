@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>OTAWA Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;casse@irit.fr&gt;, C. Rochange &lt;rochange@irit.fr&gt;, C. Ballabriga &lt;ballabri@irit.fr&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="manual-imports/../css/manual-3..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">OTAWA Manual</div>
+	<div class="authors"><a href="mailto:casse@irit.fr">H. Cassé </a>, <a href="mailto:rochange@irit.fr"> C. Rochange </a>, <a href="mailto:ballabri@irit.fr"> C. Ballabriga </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="manual-0.html">1  Building OTAWA  </a>
+  </li>
+  <li>
+  <a href="manual-1.html">2  Computing a WCET  </a>
+  </li>
+  <li>
+  <a href="manual-2.html">3  Writing an OTAWA Application  </a>
+  </li>
+  <li>
+  <a href="manual-3.html">4  Control Flow Graphs  </a>
+    <ul class="toc">
+    <li>
+    <a href="manual-3.html#4.1">4.1  Principle of the CFG  </a>
+    </li>
+    <li>
+    <a href="manual-3.html#4.2">4.2  Getting the CFG  </a>
+    </li>
+    <li>
+    <a href="manual-3.html#4.3">4.3  Getting the basic blocks  </a>
+    </li>
+    <li>
+    <a href="manual-3.html#4.4">4.4  Working with a basic block  </a>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="manual-4.html">5  Property Work  </a>
+  </li>
+  <li>
+  <a href="manual-5.html">6  Code Processors  </a>
+  </li>
+  <li>
+  <a href="manual-6.html">7  Features  </a>
+  </li>
+  <li>
+  <a href="manual-7.html">8  Using ELM  </a>
+  </li>
+  <li>
+  <a href="manual-8.html">9  Performing Iterative Data Flow Analysis  </a>
+  </li>
+  <li>
+  <a href="manual-9.html">10  Using Abstract Interpretation  </a>
+  </li>
+  <li>
+  <a href="manual-10.html">11  References  </a>
+  </li>
+  <li>
+  <a href="manual-11.html">12  Architecture Formats  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="4"></a>4 Control Flow Graphs  </h2>
+<p>
+OTAWA provides several high-level program representations like Abstract Syntax Trees (AST) or Context Trees (CT). Yet, the Control Flow Graph (CFG) explained here is certainly the most used in the IPET approach. </p>
+<h2><a name="4.1"></a>4.1 Principle of the CFG  </h2>
+<p>
+A CFG is a graph used to represent the program control flow. The nodes of the graph are blocks of code, called <i>basic blocks</i>, while the edges shows how the execution of the program passes from one block to another one. </p>
+<p>
+There are many different ways to split the code into CFG blocks. The only rule to keep sound basic blocks is that, whatever the execution of a program before the execution of the block: </p>
+<ol >
+<li><p>
+ the first instruction of the block is the first executed and, </p>
+</li>
+<li><p>
+ when the first instruction is executed, all the following instructions are ever executed subsequently in order. </p>
+</li>
+</ol>
+<p>
+If we cut the program according to this rule and if we take the maximal sequence of instructions to form block, we get a minimal CFG. </p>
+<h2><a name="4.2"></a>4.2 Getting the CFG  </h2>
+<p>
+To use the CFG, we must first include the right header file defining the main classes involved (<tt>CFGInfo</tt>, <tt>CFG</tt>, <tt>BasicBlock</tt>). </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/cfg.h&gt;</pre></div><p>
+The CFG are built by any code processor implementing the feature <tt>CFG_INFO_FEATURE</tt> (<tt>CFGBuilder</tt> is used as a usual default). To get the CFG of a specific function, a <tt>CFGInfo</tt> object may retrieved from the framework using the <tt>CFGInfo::ID</tt> property. </p>
+<div class="listing"><pre class="code">
+ws-&gt;require(CFG_INFO_FEATURE);
+CFGInfo *info = CFGInfo::ID(ws);</pre></div><p>
+Then, we can ask for the CFG of a specific function, <i>f</i>: </p>
+<div class="listing"><pre class="code">
+CFG *cfg = info-&gt;findCFG("f");</pre></div><p>
+If the function can not be found, the returned value is null. Either the function is not contained in the current program, or the OTAWA CFG builder has not succeeded in its analysis. The function recognition is performed using several sources : </p>
+<ol >
+<li><p>
+ the target of a call instruction is considered as a function entry, </p>
+</li>
+<li><p>
+ the binary format (currently ELF) contains label definitions whose type are explicit functions, </p>
+</li>
+<li><p>
+ in the future, OTAWA will also use debugging information from the program. </p>
+</li>
+</ol>
+<p>
+  </p>
+<h2><a name="4.3"></a>4.3 Getting the basic blocks  </h2>
+<p>
+There are many ways to examine the basic blocks of a CFG. First, the <tt>CFG</tt> class provides a simple unordered iterator <tt>CFG::BBIterator</tt> to handle all the basic blocks of a CFG. The sample below computes the length in instructions of a CFG. </p>
+<div class="listing"><pre class="code">
+int length = 0;
+for(CFG::BBIterator bb(cfg); bb; bb++)
+  length += bb-&gt;countInstructions();</pre></div><p>
+Another way to access the basic blocks is to exploration of the graph. This graph has a unique entry (method <tt>cfg&#8594;entry()</tt>) and a unique exit (method <tt>cfg&#8594;exit()</tt>). Both methods returns a <tt>BasicBlock *</tt>, two syntactic basic block that does not match any code<a class="footnumber" href="#footnote-1">1</a>. They may be used to traverse the CFG forward or backward according to the program control flow. </p>
+<p>
+Then, each basic block is connected to some other ones by directed edges. The input edges may examined with the <tt>BasicBlock::InIterator()</tt> and the output edges with the <tt>BasicBlock::OutIterator()</tt>. The edges are represented by the <tt>Edge</tt> class that provides the following information: </p>
+<ul >
+<li><p>
+ <tt>source()</tt> - the source basic block of the edge, </p>
+</li>
+<li><p>
+ <tt>target()</tt> - the target basic block of the edge, </p>
+</li>
+<li><p>
+ <tt>calledCFG()</tt> - when the edge represents a program call, this points to the called CFG, </p>
+</li>
+<li><p>
+ <tt>kind()</tt> - the kind of edge. </p>
+</li>
+</ul>
+<p>
+In OTAWA, there are several kinds of edge: </p>
+<ul >
+<li><p>
+ <tt>Edge::TAKEN</tt> - represents the control when a branch instruction is taken, </p>
+</li>
+<li><p>
+ <tt>Edge::NOT_TAKEN</tt> - represents the control in sequence or when a branch instruction is not taken, </p>
+</li>
+<li><p>
+ <tt>Edge::CALL</tt> - represents the control of a taken call instruction (the <tt>calledCFG()</tt> returns a valid CFG). </p>
+</li>
+</ul>
+<p>
+Be careful! As the source BB is ever defined, the target BB of an edge is undefined (null) in the following cases: </p>
+<ul >
+<li><p>
+ the kind of the edge is <tt>Edge::CALL</tt> (use only the <tt>calledCFG()</tt> method), </p>
+</li>
+<li><p>
+ the branch instruction is indirect and OTAWA has not been able to compute it. In the same way, the <tt>calledCFG()</tt> may return a null if the call instruction is indirect and the call target has not been computed. </p>
+</li>
+</ul>
+<p>
+In the following example, we use the graph traversal to test if there is a path between two basic blocks, from <tt>bb1</tt> to <tt>bb2</tt>. The PROCESSED property is used to mark the traversed BB and avoid to be caught in loops. </p>
+<div class="listing"><pre class="code">
+Identifier&lt;bool&gt; PROCESSED("", false);
+BasicBlock *queue[MAX], *bb;
+int h =0, t = 1;
+for(queue[0] = bb1; h &lt; t &amp;&amp; queue[h] != bb2; h++) {
+  for(BasicBlock::OutIterator edge(queue[h]); edge; edge++)
+    if(edge-&gt;target() &amp;&amp; !PROCESSED(edge-&gt;target())) {
+      queue[t] = edge-&gt;target();
+      PROCESSED(queue[t]) = true;
+      t++;
+    }
+}
+if(h &lt; t)
+  cout &lt;&lt; "path from bb1 to bb2 !\n";
+else
+  cout &lt;&lt; "no path from bb1 to bb2.\n";</pre></div><h2><a name="4.4"></a>4.4 Working with a basic block  </h2>
+<p>
+The basic blocks provides a lot of methods to get information (refer to the API documentation for more details). First, a list of accessors to known the nature of the basic block: </p>
+<ul >
+<li><p>
+ <tt>isCall()</tt> returns true if the BB ends with a call instruction, </p>
+</li>
+<li><p>
+ <tt>isReturn()</tt> returns true if the BB ends with a return instruction, </p>
+</li>
+<li><p>
+ <tt>isTargetUnknown()</tt> returns true if the BB ends with a branch instruction whose target has not been computed, </p>
+</li>
+<li><p>
+ <tt>isEntry()</tt> returns true if the BB is the CFG entry, </p>
+</li>
+<li><p>
+ <tt>isExit()</tt> returns true if the BB is the CFG exit. </p>
+</li>
+</ul>
+<p>
+BB instrinsic properties may also be accessed: </p>
+<ul >
+<li><p>
+ <tt>cfg()</tt> returns the owner CFG, </p>
+</li>
+<li><p>
+ <tt>address()</tt> returns the address of the first instruction of the BB, </p>
+</li>
+<li><p>
+ <tt>size()</tt> returns the size of the BB in bytes, </p>
+</li>
+<li><p>
+ <tt>countInstructions()</tt> counts instructions in the BB, </p>
+</li>
+<li><p>
+ <tt>number()</tt> get the number of the BB in the CFG (notice that the number 0 is used for the entry and the number <i>n</i>-1 is used for the exit). </p>
+</li>
+</ul>
+<p>
+To visit instructions in the BB, one may use the <tt>BasicBlock::InstIter</tt> class as in the example below that computes the size of the BB: </p>
+<div class="listing"><pre class="code">
+int size = 0;
+for(BasicBlock::InstIter inst(bb); inst; inst++)
+  size += inst-&gt;size();</pre></div><div class="footnotes">
+<p class="footnote">
+<a class="footnumber" name="footnote-1">1</a> the unity of the graph ends makes easier some algorithm applied on the CFG</p>
+</div></div>
+</div>
+</body>
+</html>

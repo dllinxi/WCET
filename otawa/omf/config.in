@@ -1,0 +1,7 @@
+#define CMAKE_FLAG
+#define PREFIX				"@CMAKE_INSTALL_PREFIX@"
+#define PLUGINPATH			PREFIX "/lib"
+#if @BIG_ENDIAN@ == 1
+#	define WORDS_BIGENDIAN	1
+#endif
+

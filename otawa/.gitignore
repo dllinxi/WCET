@@ -1,0 +1,12 @@
+/otawa/autodoc/
+/gel/autodoc/
+/omf/autodoc/
+
+/.metadata/
+
+*.o
+*.cmo
+*.dll
+*.a
+*.dylib
+*.exe

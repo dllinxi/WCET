@@ -1,0 +1,50 @@
+@use dokuwiki
+@TITLE=Test for section structure
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_green.css
+
+introduction 0
+
+====== section 1 ======
+
+introduction 1
+
+===== subsection 1.1 =====
+
+content 1.1
+
+===== subsection 1.2 =====
+
+content 1.2
+
+
+
+====== section 2 ======
+
+introduction 2
+
+===== subsection 2.1 =====
+
+content 2.1
+
+===== subsection 2.2 =====
+
+content 2.2
+
+
+
+
+
+====== section 3 ======
+
+introduction 3
+
+===== subsection 3.1 =====
+
+content 3.1
+
+===== subsection 3.2 =====
+
+content 3.2

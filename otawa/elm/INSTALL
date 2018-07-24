@@ -1,0 +1,43 @@
+====== Installation ======
+
+===== Requirements =====
+
+  * GCC (or MinGW GCC)
+  * CMake
+  * libxml2, libxslt (optional)
+
+==== To install =====
+
+to install in directory DIR:
+
+<code sh>
+> cd elm
+> cmake . -DCMAKE_INSTALL_PREFIX=DIR
+> make install
+</code>
+
+The type of installation may be selected from the ''cmake''
+using ''INSTALL_TYPE'' definition:
+<code sh>
+> cmake . -DINSTALL_TYPE=type
+</code>
+
+With //type// one of:
+  * all -- install all,
+  * dev-only -- to install header files and documentation,
+  * dev -- same as above with library installation,
+  * lib -- install libraries themselves,
+  * bin -- install libraries and commands.
+
+  
+==== Getting Statistics ====
+  
+Some data structure provides statistics about their internal work: efficiency, memory footprint, etc.
+As these features are not essential for the work of these data structures and as they may take place
+or time, they are only compiled conditionally by passing this option to CMake:
+
+<code sh>
+> cmake . -DELM_STAT
+</code>
+
+The name of these special methods are usually prefixed by "_stat_".

@@ -1,0 +1,345 @@
+@use dokuwiki
+@TITLE=Thot Manual @(THOT_VERSION)
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>, moi oui <ici@labas.fr>
+@VERSION=0.1
+@LANG=en_EN
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_green.css
+
+introduction
+
+====== chapitre 1 ======
+
+introduction chapitre 1
+
+===== section 1.1 =====
+
+text 1.1
+
+===== section 1.2 =====
+
+texte 1.2
+
+texte 1.2 b
+
+====== List Tests ======
+
+===== unumbered list =====
+
+  * item 1
+  * item 2
+  * item 3
+
+===== numbered list =====
+
+  - item 1
+  - item 2
+  - item 3
+
+===== nested list =====
+
+  * item a
+  * item b
+    * item b1
+    * item b2
+    * item b3
+  * item c
+
+====== Word tests ======
+
+It's a test for word level tags.
+
+There is **bold** here and //italic// here.
+
+Now, <sub>subscript</sub> here !
+
+First, an URL http://www.google.fr here.
+
+And bold at **end**.
+
+====== Link tests ======
+
+A mail link ici@labas.fr ok ?
+
+An internal linl [[wiki:internal]] here !
+
+A link with label [[ici.html|ICI]] et la.
+
+====== symbols and images ======
+
+Equivallence <=> ca marche ?
+
+Et simple flêche ? <->
+
+And the french quote ? >>
+
+Un smiley :-) ???
+
+Ume image !!!
+
+{{@(THOT_BASE)/pix/thot5.gif}}
+
+{{@(THOT_BASE)/pix/thot5.gif?16|16xN}}		16 x N
+
+{{@(THOT_BASE)/pix/thot5.gif?x16|Nx16}}	N x 16
+
+{{@(THOT_BASE)/pix/thot5.gif?16x16|16x16}}	16 x 16
+
+Image with relative name:
+{{gravure-thot.gif}}
+
+Image to left:
+{{gravure-thot.gif  }}
+
+Image to right:
+{{  gravure-thot.gif}}
+
+Image centered:
+{{  gravure-thot.gif  }}
+
+
+====== tables ======
+
+This is a table:
+
+^ col 1 ^ col 2 ^ col 3 ^
+| item 1 | item 2 | item 3 |
+| center |left | right|
+
+Another table:
+
+^ col 1 ^ col 2 ^
+^ line 1 | val 1 |
+^ line 2 | val 3 |
+^ line 3 | val 3 |
+^ line 4 | val 4 |
+
+Now, we test spanning:
+
+^ col 1 ^ col 2 ^ col 3 ^
+| val 1 | val 2 | val 3 |
+| val a || val b |
+| val a | val b ||
+| val |||
+
+====== footnotes ======
+
+There is one footnote ((here and now)).
+
+
+====== Block tests ======
+
+And now, a piece of code
+<code py>
+print "Hello, world !"
+</code>
+
+And now some C code
+<code c>
+#include <stdio.h>
+
+int main(void) {
+	printf("Hello, world !\n");
+}
+</code>
+
+A file below:
+<file>
+line1
+line2
+line3
+line4
+</file>
+
+nowiki area:
+<nowiki>
+<code>
+no code !
+</code>
+no **bold** here !
+</nowiki>
+
+Non parsed word %%her **and** % here %%.
+
+An horizontal line below:
+---------------
+
+Now, some indented non-parsed block
+  word 1
+  word 2 **too bad **
+  <code>
+  final word
+
+Ended now !
+
+====== quotes ======
+
+I think we should do it
+
+> No we shouldn't
+
+>> Well, I say we should
+
+> Really?
+
+>> Yes!
+
+>>> Then lets do it!
+
+
+====== variables ======
+
+<code>
+@V1=hello, world !
+I say "@(V1)" !!!!
+</code>
+
+@V1=hello, world !
+I say "@(V1)" !!!!
+
+<code>
+@V2=Did you say @(V1) ?
+@(V2)
+</code>
+
+@V2=Did you say @(V1) ?
+@(V2)
+
+====== Example of inclusion ======
+
+<code>
+@include include.thot
+</code>
+
+gives :
+
+@include include.thot
+
+====== Example of math module ======
+
+@use latexmath
+
+And an equation $x^2 + y^2$ and a single $$ !
+
+And another time $x^2 + y^2$ ...
+
+And a nice example : $\LARGE e^x=\sum_{n=0}^\infty\frac{x^n}{n!}$
+
+
+====== Example of GNUPlot ======
+
+@use gnuplot
+
+An example of GNUPlot below:
+
+<gnuplot>
+# set terminal png transparent nocrop enhanced font arial 8 size 420,320 
+# set output 'surface2.6.png'
+set dummy u,v
+set key bmargin center horizontal Right noreverse enhanced autotitles nobox
+set parametric
+set view 45, 50, 1, 1
+set isosamples 100, 20
+set hidden3d offset 1 trianglepattern 3 undefined 1 altdiagonal bentover
+set ticslevel 0
+set title "Parametric Helix" 
+set urange [ 0.00000 : 31.4159 ] noreverse nowriteback
+set vrange [ 0.00000 : 6.28319 ] noreverse nowriteback
+set zrange [ * : * ] noreverse nowriteback  # (currently [-1.00000:1.00000] )
+splot (1-0.1*cos(v))*cos(u),(1-0.1*cos(v))*sin(u),0.1*(sin(v)+u/1.7-10)
+</gnuplot>
+
+
+====== Definitions ======
+
+This is a definition:
+
+  ? term 1 : definition 1
+  ? term 2 with **bold** : definition 2
+  ? term 3 : multiline definition
+And there ?
+And here !
+
+With only case:
+  ? lonely case : lonely definition
+
+And that continues...
+
+
+====== Escape ======
+
+Sentence with //italic//.
+
+Sentence without %%//italic//%%.
+
+With a table.
+
+^ Header 1 ^ Header 2 ^
+| //italic// | %%//not italic//%% |
+| %%/%% | %%^%% |
+| harder | %%**not bold**%% **bold** |
+
+
+====== Dot Example ======
+
+@use dot
+
+Below is a //dot// mebedding example:
+<dot>
+digraph mine {
+	1 -> 2 ;
+	1 -> 3 ;
+	3 -> 4 ;
+	4 -> 5 ;
+	2 -> 5 ;
+}
+</dot>
+
+
+====== //aafig// Example ======
+
+@use aafig
+
+A sample of //aafig// embedding in **THOT**:
+<aafig textual=yes>
+                              /-------\
+                          /-->| HTML  |
+                          |   \-------/
+/-----------\   +------+  |   /-------\    
+| Thot text |-->| Thot |--O-->| Latex |---+    /-----\  
+\-----------/   +------+  |   \-------/   o--->| PDF |
+                          |   /-------\   |    \-----/
+                          +-->|DocBook|---+
+                              \-------/
+</aafig>
+
+
+====== //ditaa// Example ======
+
+@use ditaa
+
+A sample of //ditaa// embedding in **THOT**:
+<ditaa>
+    +--------+   +-------+    +-------+
+    |cBLU    | --+ ditaa +--> | cRED  |
+    |  Text  |   +-------+    |diagram|
+    |Document|   |!magic!|    |       |
+    |     {d}|   |       |    |       |
+    +---+----+   +-------+    +-------+
+        :                         ^
+        |       Lots of work      |
+        +-------------------------+--->
+</ditaa>
+
+
+====== //PlantUML// Example ======
+
+@use plantuml
+
+This is a diagram in PlantUML:
+<plantuml>
+Class01 <|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+</plantuml>

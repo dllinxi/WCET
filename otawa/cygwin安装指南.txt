@@ -1,0 +1,138 @@
+Mingw下安装似乎存在诸多__WIN32等宏定义的缺失问题. Cygwin下安装相对顺利一点，
+但尽管能够通过编译，比较容易出现找不到文件问题。Cygwin下的动态链接库后缀为dll，otawa中常常处理为so，导致无法加载
+
+
+
+1. 安装cygwin
+   安装 cmake, make, ocaml, graphviz, doxygen, flex, bison, 
+        libxml2, libxml2-dev, libxslt, libxslt-dev, python2, python2-devel
+        
+   本次编译的结果安装到 C:/otawa下
+
+2. 安装GEL
+cd gel
+
+#删除上一轮cmake留下的垃圾，包括Makefile, CMakeCache.txt, cmake_install.cmake, CTestTestfile.cmake
+# install_manifest.txt, config.h, CMakeFiles\*等
+make clean
+
+cd D:/Seafile/Workspace/MyProject/WCET/WCET/otawa-win32/gel
+cmake . -DCMAKE_INSTALL_PREFIX=/cygdrive/c/otawa -DCMAKE_BUILD_TYPE=Debug
+make install
+cd ..
+
+3. 安装gliss2 
+cd gliss2
+make clean 
+make 
+cd ..cd ../lp	
+
+ 
+4. 安装ppc2
+cd ppc2
+make clean 
+# ppc2\src\ppc-config是gliss2自动生成的，在cygwin下生成时行分隔格式不对，要用UltraEditr等工具另存为“Unix Terminators -LF”格式，然后才可以顺利make
+make WITH_DYNLIB=1 
+cd ..
+
+4. 安装lp_solve5
+cd lp_solve5/lpsolve55
+sh ccc.linux
+cd ../..
+
+5. 安装ELM
+cd elm
+make clean
+#删除上一轮cmake留下的垃圾
+
+修改代码
+(1) include/elm/json/Parser.h中定义了一个名为 _NULL的枚举常量，
+    该名称和mingw中定义的宏冲突，需要首先用 #undef _NULL屏蔽掉之前定义的宏
+    
+(2) src/elm/debug_CrashHandler.cpp中注解掉两处对sa.sa_restorer的访问，否则无法通过编译
+(3) src/elm/debug_GDBCrashHandler.cpp中注释掉第18行 
+    //#	include <sys/prctl.h>
+(4) src/system_Plugger.cpp中53行PLUG_EXT变量描述了插件的后缀，在cygwin下后缀为dll而不是so，
+    需要加以修改
+    #	elif defined(__CYGWIN__)
+		   "dll";
+		在函数static inline bool isLibrary(FileItem *file) 中添加类似代码
+		#elif defined(__CYGWIN__)
+		   return file->path().toString().endsWith(".dll");
+(5) src/system_System.cpp中546行cstring System::library_suffix中添加cygwin下的动态链接库后缀
+    #	elif defined(__CYGWIN__)
+		   ".dll";
+(6) CMakeList.txt中63行修改如下，使得cygwin下能够找到ILP的动态链接库
+    add_definitions(-DILP_PATHS=\"${PROJECT_BINARY_DIR}/lib/otawa/ilp:${CMAKE_INSTALL_PREFIX}/lib/otawa/ilp\")
+
+
+cmake . -DCMAKE_INSTALL_PREFIX=/cygdrive/c/otawa -DCMAKE_BUILD_TYPE=Debug
+make install 
+cd ..
+
+6. 安装thot
+cd thot
+make clean
+make all
+cd ..
+
+7. 安装otawa
+cd otawa
+make clean
+#删除上一轮cmake留下的垃圾(CMakeUserUse*系列文件不要删除)
+#src/prog/prop_AbstractIdentifier.cpp中269~300行左右存在若干泛型实例化编译错误，必须针对cygwin环境进行修改。
+为此加入一系列 #if defined(__CYGWIN__) 条件编译处理
+
+cmake . -DCMAKE_INSTALL_PREFIX=/cygdrive/c/otawa -DCMAKE_BUILD_TYPE=Debug  
+make install
+cd ..
+
+8 测试
+
+export OTAWA=/cygdrive/c/otawa
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OTAWA/lib/otawa/loader:$OTAWA/lib/otawa/ilp:$OTAWA/lib/otawa/proc
+export PATH=$PATH:$OTAWA/bin:$OTAWA/lib:$OTAWA/lib/otawa/loader:$OTAWA/lib/otawa/ilp:$OTAWA/lib/otawa/proc
+oipet -v D:/Seafile/Workspace/MyProject/WCET/WCET/test_bin/linear_powerpc_elf
+
+9. 调试
+
+启动调试器
+   如(8)所示设置环境变量，如果已经设置则忽略本步骤
+   在cygwin窗口下启动Eclipse CDT调试器（通过cygwin子进程方式确保相关环境变量得到设置）
+
+配置路径映射
+   cygwin下的路径都是/cygdrive/c这种形式，可能导致找不到代码，需要设置代码映射。 
+   In Eclipse in Preferences->C/C++->Debug->"Common Source Lookup Path" add new "Path Mapping".
+   把Cygwin的路径映射到windows的路径: 比如  /cygwin/c   映射成 C:/ 
+
+配置调试命令
+   Eclipse -> Run -> Debug Configure下设置待调试程序的相关信息
+      Main -> Project: Executables
+      Main -> C/C++ Application: C:\otawa\bin\oipet.exe
+      Arguments -> Program arguments: -v linear_x86_32_elf    (如果是调试powerpc，则为-v linear_powerpc_elf）
+      Arguments -> Working Directory: 设置待分析elf文件的所在目录，例如 D:\Seafile\Workspace\MyProject\WCET\WCET\test_bin\x86_elf_gcc
+      Debugger -> Shared Libraries: 加入otawa编译后生成目录中的所有相关dll，例如：
+          C:\otawa\bin 
+          
+C:\otawa\lib\otawa\loader 
+
+          C:\otawa\lib\otawa\ilp 
+
+          C:\otawa\lib\otawa\proc 
+
+          C:\otawa\lib 
+
+          C:\otawa\lib\otawa\proc\otawa 
+
+ 
+9. frontc和orange未用到，暂不安装
+cd frontc
+make clean 
+make NATIVE=1 
+cd ..
+ 
+cd orange
+make clean 
+sudo make install PREFIX=/usr/local NATIVE=1 
+cd ..
+

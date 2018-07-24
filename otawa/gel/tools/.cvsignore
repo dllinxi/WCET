@@ -1,0 +1,11 @@
+.deps
+gel-prog
+Makefile
+Makefile.in
+gel-line
+.libs
+gel-file
+gel-sym
+gel-sect
+CMakeFiles
+cmake_install.cmake

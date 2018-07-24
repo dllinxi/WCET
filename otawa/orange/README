@@ -1,0 +1,233 @@
+====== oRange ======
+
+===== Introduction =====
+
+oRange is a tool that extracts informations about the loops found in a C program.
+oRange works on C source files. Before analyzing loop bounds, oRange pre-process
+the input source files with Frontc Tools.
+
+If several C files are provided as input, oRange calls MergeC (part of FrontC)
+to merge them into a single file. This often requires code transformations
+(e.g renaming). Then oRange calls Calipso.
+
+Calipso is a tool (subtool of FrontC) which preprocesses C source code to remove
+hard-to-analyze constructions (goto, several return for the same function,  switch,
+break, continue).  The result is an equivalent well-structured C code.
+
+oRange can run in one of the four following modes:
+  * call graph: in this mode, oRange returns the call graphs of the specified functions.
+    These graphs may be used to help partialization.
+  * partial analysis: in this mode, oRange performs partial analysis of the specified functions.
+  * full analysis: in this mode, the whole program is analyzed. It can use the results
+    of previous partial analyses.
+  * automated: this mode automatically control the partial analyses performed preliminary
+    to the full analysis. It might be used for complex input programs but it likely to generate
+	less accurate results.
+
+
+===== Installation =====
+
+Dependencies:
+  * OCaml
+  * FrontC
+  * oRange
+
+Use "make" to compile oRange. 
+
+
+==== Source Installation ====
+
+You can build and install oRange from its source repository but you will first need
+to resolve some dependencies.
+
+PACKAGE - MINIMAL VERSION
+http://caml.inria.fr/index.fr.html|OCAML]] - V3
+http://www.irit.fr/recherches/ARCHI/MARCH/rubrique.php3?id_rubrique=61|FrontC - 3.3
+
+oRange sources are accessible from a Bazaar repository:
+  - check out: bzr export orange http://www.irit.fr/recherches/ARCHI/MARCH/BZR/orange
+  - change to directory: cd orange
+  - compilation and installation: make OPTIONS
+
+OPTIONS may a combination of:
+  * PREFIX=PATH: to select the installation directory
+  * NATIVE=1: to activate the native compilation
+
+
+===== Using oRange =====
+
+Synopsis:
+  * orange/main/orange [pre-processing options] [-g | --auto] [i/o options] <filename> [<filename> ...] [<function name> ...]''
+  * orange/main/orange [pre-processing options] [-g | --auto] [i/o options] <filename> [<filename> ...]
+  [-funlist <filename> ...]
+
+
+This command runs oRange:
+  * for the specified files (C source code). -- can be used to specify the standard input
+    as an input file.
+  * considering the specified functions: the functions may specified as a list
+    in the command or given in a specific file using the ''-funlist'' option. 
+
+
+
+==== Pre-processing options ====
+
+All these options that can be used with all oRange modes:
+  * -nogcc: do not use the GCC extensions.
+  * -proc preprocessor'': use the given preprocessor.
+  * -D definition: pass this definition to the preprocessor.
+  * -U undefinition: pass this undefinition to the preprocessor.
+  * -i file: include the given file.
+  * -I dir: include retrieval directory.
+  * -l: generate #line directive.
+
+
+==== Mode options ====
+
+The oRange running mode can be selected using the following options:
+  * -g: enables the call graph mode
+  * -k: enables the partial analysis mode
+  * -auto: enables the automated mode. For this mode,
+    the  ''-allow-pessimism'' might be enabled.
+ 
+The default mode (when no mode option is specified) is full analysis.
+
+See below for a description of each mode.
+
+
+==== I/O options ====
+ 
+  * -o <filename>: specifies the output file name. When this option is not used,
+    the output is on the standard output. Only the full analysis and automated
+	modes generate an output file: it contains the description of flow facts
+	for the analysed code.
+  * -outdir <output dirname>: specified the ouput directory name. When this option
+    is not used, the output directory is the current directory.
+   * ''-l'': keep line numbers information
+
+Some of these options have a special meaning according to the oRange mode. See mode
+description for further details.
+
+
+
+===== Call graph mode =====
+
+In this mode, oRange returns the call graphs of the specified functions. These graphs
+may be used to help partialization.
+
+When running in the call graph mode, oRange generates partial or full call graphs
+of the input files. Only the specified functions (main by default) are considered. 
+
+The graphs (.dot files) are produced in the specified output directory (-outdir option).
+Dot is a graph format. Tools to display or convert .dot files can be found on the
+http://www.graphviz.org/|Dot website.
+
+
+
+===== Partial analysis mode =====
+
+When running in this mode, oRange performs a partial analysis of the specified
+functions. It produces two types of outputs:
+  * one .rpo file for each partialized function, that will be used for later
+    analysis. It contains abstract stores of the function the specification
+	of the total and maximum number of iterations for each loop and call trees.
+  * a summary of the results to be read by the user (the .rpo files are not
+    human-readable).
+
+The partial results files are written to the output directory (see option -outdir).
+ 
+
+===== Full analysis mode =====
+
+When running in this mode, oRange analyses the whole program.
+
+In case of external function in the C file and partial files (.rpo extension)
+in the current directory (or the directory specified by the -outdir option),
+oRange uses them in order to resolve the loop bounds concerned by the external
+functions and the effect of the addition of partial data on the whole program.
+You can also set with the -up option a list of function names to be
+considered as external and so for which oRange will use partial files.
+
+Example: if myfunction and function42 have already been partialized,
+
+$ ls part-results/
+myfunction.rpo function42.rpo
+$ orange/main/main -pp -l -c -o flowfacts.xml *.c main -up myfunction -up function42 > result.res
+ 
+Other informations are written in the standard outputs:
+  * number of call from entry point for functions of nb_calls list. The number
+    may be a value or an expression of loop bounds, if conditions result value...
+	The list can also be retrieved from a file with the -funlist option
+  * maximum value of loops for any call (maximum of maximum) ...
+
+
+===== Automated mode =====
+
+In order to reduce the run time, it is possible to perform partial analyses where
+functions are analyzed independently and then partial results are composed
+to generate the results for the whole program.
+
+In the automated mode, oRange executes three steps:
+  * selection of a partialization strategy (if needed): determines which
+    functions must be partialized, and in which order. Two strategies are available:
+    * the accurate strategy (enabled by default) generates accurate results
+    * the fast strategy (enabled with option -allow-pessimism) is quicker but most
+	  pessimistic.
+  * partialization of the mandatory function, in the order retrieved from the strategy.
+  * full analysis, using previously computed partial results.
+
+WARNING: the automated mode may not use the best partialization strategy and ma
+exhibit long run times. For better results and shorter run time, a user-defined
+partialization strategy, based on results provided by the call graph mode, may
+be preferable. 
+
+Partial results (.rpo files) are written to the output directory (see the
+-outdir option).
+
+
+===== Warning or error messages =====
+
+  * Some loops with floats have conditions like i != 0 but it is changed by oRange by i> 0
+    or i < 0 to evaluate bounds but sometime this kind of loops never terminate.
+	In these cases the user have to decide if the result is ok or not. So if
+	this kind of loop is found, oRange write on stderr a message :
+	  WARNING != condition => bound is either this one or infini 
+	and gives the line number of the loop and its source file.
+
+As an example
+
+while (i != 3.14) { ... i++;}
+
+the loop may never terminate: 
+     * if the initial value of i is 0 the result is 4 and the WARNING
+     * if the initial value of  i is 0.14 the result is 3 and the WARNING but the loop terminate
+
+
+  * oRange needs to be given an entry point to perform analysis. If the given
+    entry point is not found in the input source code, oRange stops with the
+	error message: "no entry point". 
+
+
+====== Frontc usage and advanced options ======
+
+oRange works on C source files. Before analyzing loop bounds, oRange pre-process
+the input source files with Frontc Tools.
+
+=== File merging (automatic) ===
+
+
+=== Control flow simplication  (automatic may be enable (ADVANCED MODE) when
+the files are already Calipso preprocessing)  ===
+
+To enable preprocessing with Calipso, run oRange with the -c option
+(if the current file is already Calipso preprocess only).  
+
+
+=== Recursive functions reduction (iftofor) or classification (sortrec) see Frontc ===
+
+    * orange/main/orange [pre-processing options] [-g | \u2013auto] [i/o options] <filename> [<filename> ...] [-funlist <filename> ...] FIXME --funlist ?
+
+This command runs oRange:
+
+    * for the specified files (C source code). -- can be used to specify the standard input as an input file. FIXME A quoi ça sert ? Si c\u2019est pour le debug, ce n\u2019est peut être pas nécessaire de le mettre dans la doc.C\u2019est pour Clément on peut effectivement le sortir
+

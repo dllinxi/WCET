@@ -1,0 +1,2691 @@
+"flowfacts.ml" 8 141 147 "flowfacts.ml" 8 141 154
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "flowfacts.ml" 8 141 175 "flowfacts.ml" 9 176 179
+)
+"flowfacts.ml" 8 141 157 "flowfacts.ml" 8 141 175
+type(
+  'a -> 'a -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"flowfacts.ml" 11 181 198 "flowfacts.ml" 11 181 214
+call(
+  stack
+)
+"flowfacts.ml" 17 282 288 "flowfacts.ml" 17 282 295
+type(
+  int -> t
+)
+ident(
+  def bounded "flowfacts.ml" 18 310 312 "flowfacts.ml" 33 797 800
+)
+"flowfacts.ml" 17 282 296 "flowfacts.ml" 17 282 297
+type(
+  int
+)
+ident(
+  def n "flowfacts.ml" 17 282 300 "flowfacts.ml" 17 282 309
+)
+"flowfacts.ml" 17 282 308 "flowfacts.ml" 17 282 309
+type(
+  int
+)
+ident(
+  int_ref n "flowfacts.ml" 17 282 296 "flowfacts.ml" 17 282 297
+)
+"flowfacts.ml" 17 282 300 "flowfacts.ml" 17 282 309
+type(
+  t
+)
+"flowfacts.ml" 18 310 316 "flowfacts.ml" 18 310 325
+type(
+  t
+)
+ident(
+  def unbounded "flowfacts.ml" 19 338 340 "flowfacts.ml" 33 797 800
+)
+"flowfacts.ml" 18 310 328 "flowfacts.ml" 18 310 337
+type(
+  t
+)
+"flowfacts.ml" 19 338 344 "flowfacts.ml" 19 338 349
+type(
+  t -> t -> t
+)
+ident(
+  def worst "flowfacts.ml" 23 479 481 "flowfacts.ml" 33 797 800
+)
+"flowfacts.ml" 19 338 350 "flowfacts.ml" 19 338 352
+type(
+  t
+)
+ident(
+  def b1 "flowfacts.ml" 19 338 353 "flowfacts.ml" 22 427 478
+)
+"flowfacts.ml" 19 338 353 "flowfacts.ml" 19 338 355
+type(
+  t
+)
+ident(
+  def b2 "flowfacts.ml" 19 338 358 "flowfacts.ml" 22 427 478
+)
+"flowfacts.ml" 19 338 364 "flowfacts.ml" 19 338 366
+type(
+  t
+)
+ident(
+  int_ref b1 "flowfacts.ml" 19 338 350 "flowfacts.ml" 19 338 352
+)
+"flowfacts.ml" 19 338 368 "flowfacts.ml" 19 338 370
+type(
+  t
+)
+ident(
+  int_ref b2 "flowfacts.ml" 19 338 353 "flowfacts.ml" 19 338 355
+)
+"flowfacts.ml" 19 338 364 "flowfacts.ml" 19 338 370
+type(
+  t * t
+)
+"flowfacts.ml" 20 376 382 "flowfacts.ml" 20 376 391
+type(
+  t
+)
+"flowfacts.ml" 20 376 393 "flowfacts.ml" 20 376 394
+type(
+  t
+)
+"flowfacts.ml" 20 376 382 "flowfacts.ml" 20 376 394
+type(
+  t * t
+)
+"flowfacts.ml" 21 395 401 "flowfacts.ml" 21 395 402
+type(
+  t
+)
+"flowfacts.ml" 21 395 404 "flowfacts.ml" 21 395 413
+type(
+  t
+)
+"flowfacts.ml" 21 395 401 "flowfacts.ml" 21 395 413
+type(
+  t * t
+)
+"flowfacts.ml" 20 376 382 "flowfacts.ml" 21 395 413
+type(
+  t * t
+)
+"flowfacts.ml" 21 395 417 "flowfacts.ml" 21 395 426
+type(
+  t
+)
+"flowfacts.ml" 22 427 441 "flowfacts.ml" 22 427 443
+type(
+  int
+)
+ident(
+  def b1 "flowfacts.ml" 22 427 459 "flowfacts.ml" 22 427 478
+)
+"flowfacts.ml" 22 427 433 "flowfacts.ml" 22 427 443
+type(
+  t
+)
+"flowfacts.ml" 22 427 453 "flowfacts.ml" 22 427 455
+type(
+  int
+)
+ident(
+  def b2 "flowfacts.ml" 22 427 459 "flowfacts.ml" 22 427 478
+)
+"flowfacts.ml" 22 427 445 "flowfacts.ml" 22 427 455
+type(
+  t
+)
+"flowfacts.ml" 22 427 433 "flowfacts.ml" 22 427 455
+type(
+  t * t
+)
+"flowfacts.ml" 22 427 468 "flowfacts.ml" 22 427 471
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.max
+)
+"flowfacts.ml" 22 427 472 "flowfacts.ml" 22 427 474
+type(
+  int
+)
+ident(
+  int_ref b1 "flowfacts.ml" 22 427 441 "flowfacts.ml" 22 427 443
+)
+"flowfacts.ml" 22 427 475 "flowfacts.ml" 22 427 477
+type(
+  int
+)
+ident(
+  int_ref b2 "flowfacts.ml" 22 427 453 "flowfacts.ml" 22 427 455
+)
+"flowfacts.ml" 22 427 467 "flowfacts.ml" 22 427 478
+call(
+  stack
+)
+type(
+  int
+)
+"flowfacts.ml" 22 427 459 "flowfacts.ml" 22 427 478
+type(
+  t
+)
+"flowfacts.ml" 19 338 358 "flowfacts.ml" 22 427 478
+type(
+  t
+)
+"flowfacts.ml" 23 479 485 "flowfacts.ml" 23 479 506
+type(
+  Cvarabs.expressionEvaluee -> t
+)
+ident(
+  def of_expression_evaluee "flowfacts.ml" 27 599 601 "flowfacts.ml" 33 797 800
+)
+"flowfacts.ml" 23 479 507 "flowfacts.ml" 23 479 509
+type(
+  Cvarabs.expressionEvaluee
+)
+ident(
+  def ee "flowfacts.ml" 24 512 516 "flowfacts.ml" 26 580 598
+)
+"flowfacts.ml" 24 512 519 "flowfacts.ml" 24 512 536
+type(
+  Cvarabs.expressionEvaluee -> bool
+)
+ident(
+  ext_ref Cvarabs.estDefExp
+)
+"flowfacts.ml" 24 512 537 "flowfacts.ml" 24 512 539
+type(
+  Cvarabs.expressionEvaluee
+)
+ident(
+  int_ref ee "flowfacts.ml" 23 479 507 "flowfacts.ml" 23 479 509
+)
+"flowfacts.ml" 24 512 519 "flowfacts.ml" 24 512 539
+call(
+  stack
+)
+type(
+  bool
+)
+"flowfacts.ml" 25 540 558 "flowfacts.ml" 25 540 575
+type(
+  Cvarabs.expressionEvaluee -> int
+)
+ident(
+  ext_ref Cvarabs.getIntVal
+)
+"flowfacts.ml" 25 540 576 "flowfacts.ml" 25 540 578
+type(
+  Cvarabs.expressionEvaluee
+)
+ident(
+  int_ref ee "flowfacts.ml" 23 479 507 "flowfacts.ml" 23 479 509
+)
+"flowfacts.ml" 25 540 557 "flowfacts.ml" 25 540 579
+call(
+  stack
+)
+type(
+  int
+)
+"flowfacts.ml" 25 540 549 "flowfacts.ml" 25 540 579
+type(
+  t
+)
+"flowfacts.ml" 26 580 589 "flowfacts.ml" 26 580 598
+type(
+  t
+)
+"flowfacts.ml" 24 512 516 "flowfacts.ml" 26 580 598
+type(
+  t
+)
+"flowfacts.ml" 27 599 605 "flowfacts.ml" 27 599 609
+type(
+  out_channel -> t -> unit
+)
+ident(
+  def dump "flowfacts.ml" 30 720 722 "flowfacts.ml" 33 797 800
+)
+"flowfacts.ml" 27 599 610 "flowfacts.ml" 27 599 612
+type(
+  out_channel
+)
+ident(
+  def oc "flowfacts.ml" 27 599 615 "flowfacts.ml" 29 673 719
+)
+"flowfacts.ml" 28 624 630 "flowfacts.ml" 28 624 639
+type(
+  t
+)
+"flowfacts.ml" 28 624 643 "flowfacts.ml" 28 624 657
+type(
+  out_channel -> (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"flowfacts.ml" 28 624 658 "flowfacts.ml" 28 624 660
+type(
+  out_channel
+)
+ident(
+  int_ref oc "flowfacts.ml" 27 599 610 "flowfacts.ml" 27 599 612
+)
+"flowfacts.ml" 28 624 661 "flowfacts.ml" 28 624 672
+type(
+  (unit, out_channel, unit) format
+)
+"flowfacts.ml" 28 624 643 "flowfacts.ml" 28 624 672
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 29 673 687 "flowfacts.ml" 29 673 688
+type(
+  int
+)
+ident(
+  def n "flowfacts.ml" 29 673 692 "flowfacts.ml" 29 673 719
+)
+"flowfacts.ml" 29 673 679 "flowfacts.ml" 29 673 688
+type(
+  t
+)
+"flowfacts.ml" 29 673 692 "flowfacts.ml" 29 673 706
+type(
+  out_channel -> (int -> unit, out_channel, unit) format -> int -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"flowfacts.ml" 29 673 707 "flowfacts.ml" 29 673 709
+type(
+  out_channel
+)
+ident(
+  int_ref oc "flowfacts.ml" 27 599 610 "flowfacts.ml" 27 599 612
+)
+"flowfacts.ml" 29 673 710 "flowfacts.ml" 29 673 717
+type(
+  (int -> unit, out_channel, unit) format
+)
+"flowfacts.ml" 29 673 718 "flowfacts.ml" 29 673 719
+type(
+  int
+)
+ident(
+  int_ref n "flowfacts.ml" 29 673 687 "flowfacts.ml" 29 673 688
+)
+"flowfacts.ml" 29 673 692 "flowfacts.ml" 29 673 719
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 27 599 615 "flowfacts.ml" 29 673 719
+type(
+  t -> unit
+)
+"flowfacts.ml" 30 720 726 "flowfacts.ml" 30 720 735
+type(
+  t -> int option
+)
+ident(
+  def to_option "flowfacts.ml" 32 771 796 "flowfacts.ml" 33 797 800
+)
+"flowfacts.ml" 31 747 753 "flowfacts.ml" 31 747 762
+type(
+  t
+)
+"flowfacts.ml" 31 747 766 "flowfacts.ml" 31 747 770
+type(
+  int option
+)
+"flowfacts.ml" 32 771 785 "flowfacts.ml" 32 771 786
+type(
+  int
+)
+ident(
+  def n "flowfacts.ml" 32 771 790 "flowfacts.ml" 32 771 796
+)
+"flowfacts.ml" 32 771 777 "flowfacts.ml" 32 771 786
+type(
+  t
+)
+"flowfacts.ml" 32 771 795 "flowfacts.ml" 32 771 796
+type(
+  int
+)
+ident(
+  int_ref n "flowfacts.ml" 32 771 785 "flowfacts.ml" 32 771 786
+)
+"flowfacts.ml" 32 771 790 "flowfacts.ml" 32 771 796
+type(
+  int option
+)
+"flowfacts.ml" 30 720 738 "flowfacts.ml" 32 771 796
+type(
+  t -> int option
+)
+"flowfacts.ml" 40 956 962 "flowfacts.ml" 40 956 978
+type(
+  Bound.t LoopMap.t -> Bound.t LoopMap.t -> Bound.t LoopMap.t
+)
+ident(
+  def worst_loop_bound "flowfacts.ml" 46 1166 1168 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 40 956 981 "flowfacts.ml" 40 956 994
+type(
+  (LoopMap.key -> Bound.t option -> Bound.t option -> Bound.t option) ->
+  Bound.t LoopMap.t -> Bound.t LoopMap.t -> Bound.t LoopMap.t
+)
+ident(
+  ext_ref LoopMap.merge
+)
+"flowfacts.ml" 40 956 1000 "flowfacts.ml" 40 956 1001
+type(
+  LoopMap.key
+)
+"flowfacts.ml" 40 956 1002 "flowfacts.ml" 40 956 1004
+type(
+  Bound.t option
+)
+ident(
+  def b1 "flowfacts.ml" 40 956 1005 "flowfacts.ml" 44 1129 1161
+)
+"flowfacts.ml" 40 956 1005 "flowfacts.ml" 40 956 1007
+type(
+  Bound.t option
+)
+ident(
+  def b2 "flowfacts.ml" 40 956 1011 "flowfacts.ml" 44 1129 1161
+)
+"flowfacts.ml" 40 956 1018 "flowfacts.ml" 40 956 1020
+type(
+  Bound.t option
+)
+ident(
+  int_ref b1 "flowfacts.ml" 40 956 1002 "flowfacts.ml" 40 956 1004
+)
+"flowfacts.ml" 40 956 1021 "flowfacts.ml" 40 956 1023
+type(
+  Bound.t option
+)
+ident(
+  int_ref b2 "flowfacts.ml" 40 956 1005 "flowfacts.ml" 40 956 1007
+)
+"flowfacts.ml" 40 956 1017 "flowfacts.ml" 40 956 1024
+type(
+  Bound.t option * Bound.t option
+)
+"flowfacts.ml" 41 1030 1036 "flowfacts.ml" 41 1030 1040
+type(
+  Bound.t option
+)
+"flowfacts.ml" 41 1030 1047 "flowfacts.ml" 41 1030 1048
+type(
+  Bound.t
+)
+ident(
+  def b "flowfacts.ml" 42 1049 1071 "flowfacts.ml" 42 1049 1077
+)
+"flowfacts.ml" 41 1030 1042 "flowfacts.ml" 41 1030 1048
+type(
+  Bound.t option
+)
+"flowfacts.ml" 41 1030 1036 "flowfacts.ml" 41 1030 1048
+type(
+  Bound.t option * Bound.t option
+)
+"flowfacts.ml" 42 1049 1060 "flowfacts.ml" 42 1049 1061
+type(
+  Bound.t
+)
+ident(
+  def b "flowfacts.ml" 42 1049 1071 "flowfacts.ml" 42 1049 1077
+)
+"flowfacts.ml" 42 1049 1055 "flowfacts.ml" 42 1049 1061
+type(
+  Bound.t option
+)
+"flowfacts.ml" 42 1049 1063 "flowfacts.ml" 42 1049 1067
+type(
+  Bound.t option
+)
+"flowfacts.ml" 42 1049 1055 "flowfacts.ml" 42 1049 1067
+type(
+  Bound.t option * Bound.t option
+)
+"flowfacts.ml" 41 1030 1036 "flowfacts.ml" 42 1049 1067
+type(
+  Bound.t option * Bound.t option
+)
+"flowfacts.ml" 42 1049 1076 "flowfacts.ml" 42 1049 1077
+type(
+  Bound.t
+)
+ident(
+  int_ref b "flowfacts.ml" 41 1030 1047 "flowfacts.ml" 41 1030 1048
+)
+"flowfacts.ml" 42 1049 1071 "flowfacts.ml" 42 1049 1077
+type(
+  Bound.t option
+)
+"flowfacts.ml" 43 1078 1089 "flowfacts.ml" 43 1078 1091
+type(
+  Bound.t
+)
+ident(
+  def b1 "flowfacts.ml" 43 1078 1104 "flowfacts.ml" 43 1078 1128
+)
+"flowfacts.ml" 43 1078 1084 "flowfacts.ml" 43 1078 1091
+type(
+  Bound.t option
+)
+"flowfacts.ml" 43 1078 1098 "flowfacts.ml" 43 1078 1100
+type(
+  Bound.t
+)
+ident(
+  def b2 "flowfacts.ml" 43 1078 1104 "flowfacts.ml" 43 1078 1128
+)
+"flowfacts.ml" 43 1078 1093 "flowfacts.ml" 43 1078 1100
+type(
+  Bound.t option
+)
+"flowfacts.ml" 43 1078 1084 "flowfacts.ml" 43 1078 1100
+type(
+  Bound.t option * Bound.t option
+)
+"flowfacts.ml" 43 1078 1110 "flowfacts.ml" 43 1078 1121
+type(
+  Bound.t -> Bound.t -> Bound.t
+)
+ident(
+  int_ref Bound.worst "flowfacts.ml" 19 338 344 "flowfacts.ml" 19 338 349
+)
+"flowfacts.ml" 43 1078 1122 "flowfacts.ml" 43 1078 1124
+type(
+  Bound.t
+)
+ident(
+  int_ref b1 "flowfacts.ml" 43 1078 1089 "flowfacts.ml" 43 1078 1091
+)
+"flowfacts.ml" 43 1078 1125 "flowfacts.ml" 43 1078 1127
+type(
+  Bound.t
+)
+ident(
+  int_ref b2 "flowfacts.ml" 43 1078 1098 "flowfacts.ml" 43 1078 1100
+)
+"flowfacts.ml" 43 1078 1109 "flowfacts.ml" 43 1078 1128
+call(
+  stack
+)
+type(
+  Bound.t
+)
+"flowfacts.ml" 43 1078 1104 "flowfacts.ml" 43 1078 1128
+type(
+  Bound.t option
+)
+"flowfacts.ml" 44 1129 1135 "flowfacts.ml" 44 1129 1139
+type(
+  Bound.t option
+)
+"flowfacts.ml" 44 1129 1141 "flowfacts.ml" 44 1129 1145
+type(
+  Bound.t option
+)
+"flowfacts.ml" 44 1129 1135 "flowfacts.ml" 44 1129 1145
+type(
+  Bound.t option * Bound.t option
+)
+"flowfacts.ml" 44 1129 1156 "flowfacts.ml" 44 1129 1161
+type(
+  bool
+)
+"flowfacts.ml" 44 1129 1149 "flowfacts.ml" 44 1129 1161
+type(
+  Bound.t option
+)
+"flowfacts.ml" 40 956 1011 "flowfacts.ml" 44 1129 1161
+type(
+  Bound.t option
+)
+"flowfacts.ml" 40 956 995 "flowfacts.ml" 44 1129 1162
+type(
+  LoopMap.key -> Bound.t option -> Bound.t option -> Bound.t option
+)
+"flowfacts.ml" 40 956 981 "flowfacts.ml" 44 1129 1162
+call(
+  stack
+)
+type(
+  Bound.t LoopMap.t -> Bound.t LoopMap.t -> Bound.t LoopMap.t
+)
+"flowfacts.ml" 48 1195 1201 "flowfacts.ml" 48 1195 1205
+type(
+  t
+)
+ident(
+  def null "flowfacts.ml" 49 1239 1241 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 48 1195 1223 "flowfacts.ml" 48 1195 1236
+type(
+  Bound.t LoopMap.t
+)
+ident(
+  ext_ref LoopMap.empty
+)
+"flowfacts.ml" 48 1195 1208 "flowfacts.ml" 48 1195 1238
+type(
+  t
+)
+"flowfacts.ml" 49 1239 1245 "flowfacts.ml" 49 1239 1251
+type(
+  t ->
+  LoopMap.key ->
+  'a ->
+  'b ->
+  'c ->
+  Cvarabs.expressionEvaluee -> 'd -> 'e -> 'f -> 'g -> 'h -> 'i -> 'j -> t
+)
+ident(
+  def onLoop "flowfacts.ml" 51 1391 1393 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 49 1239 1252 "flowfacts.ml" 49 1239 1253
+type(
+  t
+)
+ident(
+  def x "flowfacts.ml" 49 1239 1254 "flowfacts.ml" 50 1283 1390
+)
+"flowfacts.ml" 49 1239 1254 "flowfacts.ml" 49 1239 1256
+type(
+  LoopMap.key
+)
+ident(
+  def id "flowfacts.ml" 49 1239 1257 "flowfacts.ml" 50 1283 1390
+)
+"flowfacts.ml" 49 1239 1257 "flowfacts.ml" 49 1239 1258
+type(
+  'a
+)
+"flowfacts.ml" 49 1239 1259 "flowfacts.ml" 49 1239 1260
+type(
+  'b
+)
+"flowfacts.ml" 49 1239 1261 "flowfacts.ml" 49 1239 1262
+type(
+  'c
+)
+"flowfacts.ml" 49 1239 1263 "flowfacts.ml" 49 1239 1266
+type(
+  Cvarabs.expressionEvaluee
+)
+ident(
+  def max "flowfacts.ml" 49 1239 1267 "flowfacts.ml" 50 1283 1390
+)
+"flowfacts.ml" 49 1239 1267 "flowfacts.ml" 49 1239 1268
+type(
+  'd
+)
+"flowfacts.ml" 49 1239 1269 "flowfacts.ml" 49 1239 1270
+type(
+  'e
+)
+"flowfacts.ml" 49 1239 1271 "flowfacts.ml" 49 1239 1272
+type(
+  'f
+)
+"flowfacts.ml" 49 1239 1273 "flowfacts.ml" 49 1239 1274
+type(
+  'g
+)
+"flowfacts.ml" 49 1239 1275 "flowfacts.ml" 49 1239 1276
+type(
+  'h
+)
+"flowfacts.ml" 49 1239 1277 "flowfacts.ml" 49 1239 1278
+type(
+  'i
+)
+"flowfacts.ml" 49 1239 1279 "flowfacts.ml" 49 1239 1280
+type(
+  'j
+)
+"flowfacts.ml" 50 1283 1302 "flowfacts.ml" 50 1283 1318
+type(
+  Bound.t LoopMap.t -> Bound.t LoopMap.t -> Bound.t LoopMap.t
+)
+ident(
+  int_ref worst_loop_bound "flowfacts.ml" 40 956 962 "flowfacts.ml" 40 956 978
+)
+"flowfacts.ml" 50 1283 1319 "flowfacts.ml" 50 1283 1320
+type(
+  t
+)
+ident(
+  int_ref x "flowfacts.ml" 49 1239 1252 "flowfacts.ml" 49 1239 1253
+)
+"flowfacts.ml" 50 1283 1319 "flowfacts.ml" 50 1283 1331
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 50 1283 1333 "flowfacts.ml" 50 1283 1350
+type(
+  LoopMap.key -> Bound.t -> Bound.t LoopMap.t
+)
+ident(
+  ext_ref LoopMap.singleton
+)
+"flowfacts.ml" 50 1283 1351 "flowfacts.ml" 50 1283 1353
+type(
+  LoopMap.key
+)
+ident(
+  int_ref id "flowfacts.ml" 49 1239 1254 "flowfacts.ml" 49 1239 1256
+)
+"flowfacts.ml" 50 1283 1355 "flowfacts.ml" 50 1283 1382
+type(
+  Cvarabs.expressionEvaluee -> Bound.t
+)
+ident(
+  int_ref Bound.of_expression_evaluee "flowfacts.ml" 23 479 485 "flowfacts.ml" 23 479 506
+)
+"flowfacts.ml" 50 1283 1383 "flowfacts.ml" 50 1283 1386
+type(
+  Cvarabs.expressionEvaluee
+)
+ident(
+  int_ref max "flowfacts.ml" 49 1239 1263 "flowfacts.ml" 49 1239 1266
+)
+"flowfacts.ml" 50 1283 1354 "flowfacts.ml" 50 1283 1387
+call(
+  stack
+)
+type(
+  Bound.t
+)
+"flowfacts.ml" 50 1283 1332 "flowfacts.ml" 50 1283 1388
+call(
+  stack
+)
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 50 1283 1302 "flowfacts.ml" 50 1283 1388
+call(
+  stack
+)
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 50 1283 1287 "flowfacts.ml" 50 1283 1390
+type(
+  t
+)
+"flowfacts.ml" 51 1391 1397 "flowfacts.ml" 51 1391 1403
+type(
+  t -> t -> t
+)
+ident(
+  def concat "flowfacts.ml" 55 1477 1479 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 51 1391 1404 "flowfacts.ml" 51 1391 1405
+type(
+  t
+)
+ident(
+  def x "flowfacts.ml" 51 1391 1406 "flowfacts.ml" 52 1410 1473
+)
+"flowfacts.ml" 51 1391 1406 "flowfacts.ml" 51 1391 1407
+type(
+  t
+)
+ident(
+  def y "flowfacts.ml" 52 1410 1414 "flowfacts.ml" 52 1410 1473
+)
+"flowfacts.ml" 52 1410 1429 "flowfacts.ml" 52 1410 1445
+type(
+  Bound.t LoopMap.t -> Bound.t LoopMap.t -> Bound.t LoopMap.t
+)
+ident(
+  int_ref worst_loop_bound "flowfacts.ml" 40 956 962 "flowfacts.ml" 40 956 978
+)
+"flowfacts.ml" 52 1410 1446 "flowfacts.ml" 52 1410 1447
+type(
+  t
+)
+ident(
+  int_ref x "flowfacts.ml" 51 1391 1404 "flowfacts.ml" 51 1391 1405
+)
+"flowfacts.ml" 52 1410 1446 "flowfacts.ml" 52 1410 1458
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 52 1410 1459 "flowfacts.ml" 52 1410 1460
+type(
+  t
+)
+ident(
+  int_ref y "flowfacts.ml" 51 1391 1406 "flowfacts.ml" 51 1391 1407
+)
+"flowfacts.ml" 52 1410 1459 "flowfacts.ml" 52 1410 1471
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 52 1410 1429 "flowfacts.ml" 52 1410 1471
+call(
+  stack
+)
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 52 1410 1414 "flowfacts.ml" 52 1410 1473
+type(
+  t
+)
+"flowfacts.ml" 57 1512 1518 "flowfacts.ml" 57 1512 1525
+type(
+  'k -> 'k
+)
+ident(
+  def onBegin "flowfacts.ml" 58 1532 1534 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 57 1512 1526 "flowfacts.ml" 57 1512 1527
+type(
+  'k
+)
+ident(
+  def x "flowfacts.ml" 57 1512 1530 "flowfacts.ml" 57 1512 1531
+)
+"flowfacts.ml" 57 1512 1530 "flowfacts.ml" 57 1512 1531
+type(
+  'k
+)
+ident(
+  int_ref x "flowfacts.ml" 57 1512 1526 "flowfacts.ml" 57 1512 1527
+)
+"flowfacts.ml" 58 1532 1538 "flowfacts.ml" 58 1532 1543
+type(
+  'l -> 'l
+)
+ident(
+  def onEnd "flowfacts.ml" 59 1550 1552 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 58 1532 1544 "flowfacts.ml" 58 1532 1545
+type(
+  'l
+)
+ident(
+  def x "flowfacts.ml" 58 1532 1548 "flowfacts.ml" 58 1532 1549
+)
+"flowfacts.ml" 58 1532 1548 "flowfacts.ml" 58 1532 1549
+type(
+  'l
+)
+ident(
+  int_ref x "flowfacts.ml" 58 1532 1544 "flowfacts.ml" 58 1532 1545
+)
+"flowfacts.ml" 59 1550 1556 "flowfacts.ml" 59 1550 1566
+type(
+  'm -> 'n -> 'o -> 'p -> 'q -> 'm
+)
+ident(
+  def onFunction "flowfacts.ml" 60 1581 1583 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 59 1550 1567 "flowfacts.ml" 59 1550 1568
+type(
+  'm
+)
+ident(
+  def x "flowfacts.ml" 59 1550 1569 "flowfacts.ml" 59 1550 1580
+)
+"flowfacts.ml" 59 1550 1569 "flowfacts.ml" 59 1550 1570
+type(
+  'n
+)
+"flowfacts.ml" 59 1550 1571 "flowfacts.ml" 59 1550 1572
+type(
+  'o
+)
+"flowfacts.ml" 59 1550 1573 "flowfacts.ml" 59 1550 1574
+type(
+  'p
+)
+"flowfacts.ml" 59 1550 1575 "flowfacts.ml" 59 1550 1576
+type(
+  'q
+)
+"flowfacts.ml" 59 1550 1579 "flowfacts.ml" 59 1550 1580
+type(
+  'm
+)
+ident(
+  int_ref x "flowfacts.ml" 59 1550 1567 "flowfacts.ml" 59 1550 1568
+)
+"flowfacts.ml" 60 1581 1587 "flowfacts.ml" 60 1581 1593
+type(
+  'r -> 's -> 't -> 'u -> 'v -> 'w -> 'x -> 'y -> 'z -> 'a1 -> 'r
+)
+ident(
+  def onCall "flowfacts.ml" 61 1618 1620 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 60 1581 1594 "flowfacts.ml" 60 1581 1595
+type(
+  'r
+)
+ident(
+  def x "flowfacts.ml" 60 1581 1596 "flowfacts.ml" 60 1581 1617
+)
+"flowfacts.ml" 60 1581 1596 "flowfacts.ml" 60 1581 1597
+type(
+  's
+)
+"flowfacts.ml" 60 1581 1598 "flowfacts.ml" 60 1581 1599
+type(
+  't
+)
+"flowfacts.ml" 60 1581 1600 "flowfacts.ml" 60 1581 1601
+type(
+  'u
+)
+"flowfacts.ml" 60 1581 1602 "flowfacts.ml" 60 1581 1603
+type(
+  'v
+)
+"flowfacts.ml" 60 1581 1604 "flowfacts.ml" 60 1581 1605
+type(
+  'w
+)
+"flowfacts.ml" 60 1581 1606 "flowfacts.ml" 60 1581 1607
+type(
+  'x
+)
+"flowfacts.ml" 60 1581 1608 "flowfacts.ml" 60 1581 1609
+type(
+  'y
+)
+"flowfacts.ml" 60 1581 1610 "flowfacts.ml" 60 1581 1611
+type(
+  'z
+)
+"flowfacts.ml" 60 1581 1612 "flowfacts.ml" 60 1581 1613
+type(
+  'a1
+)
+"flowfacts.ml" 60 1581 1616 "flowfacts.ml" 60 1581 1617
+type(
+  'r
+)
+ident(
+  int_ref x "flowfacts.ml" 60 1581 1594 "flowfacts.ml" 60 1581 1595
+)
+"flowfacts.ml" 61 1618 1624 "flowfacts.ml" 61 1618 1632
+type(
+  'b1 -> 'b1
+)
+ident(
+  def onReturn "flowfacts.ml" 62 1639 1641 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 61 1618 1633 "flowfacts.ml" 61 1618 1634
+type(
+  'b1
+)
+ident(
+  def x "flowfacts.ml" 61 1618 1637 "flowfacts.ml" 61 1618 1638
+)
+"flowfacts.ml" 61 1618 1637 "flowfacts.ml" 61 1618 1638
+type(
+  'b1
+)
+ident(
+  int_ref x "flowfacts.ml" 61 1618 1633 "flowfacts.ml" 61 1618 1634
+)
+"flowfacts.ml" 62 1639 1645 "flowfacts.ml" 62 1639 1654
+type(
+  'c1 -> 'c1
+)
+ident(
+  def onLoopEnd "flowfacts.ml" 63 1661 1663 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 62 1639 1655 "flowfacts.ml" 62 1639 1656
+type(
+  'c1
+)
+ident(
+  def x "flowfacts.ml" 62 1639 1659 "flowfacts.ml" 62 1639 1660
+)
+"flowfacts.ml" 62 1639 1659 "flowfacts.ml" 62 1639 1660
+type(
+  'c1
+)
+ident(
+  int_ref x "flowfacts.ml" 62 1639 1655 "flowfacts.ml" 62 1639 1656
+)
+"flowfacts.ml" 63 1661 1667 "flowfacts.ml" 63 1661 1672
+type(
+  'd1 -> 'e1 -> 'f1 -> 'd1
+)
+ident(
+  def onIfT "flowfacts.ml" 64 1683 1685 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 63 1661 1673 "flowfacts.ml" 63 1661 1674
+type(
+  'd1
+)
+ident(
+  def x "flowfacts.ml" 63 1661 1675 "flowfacts.ml" 63 1661 1682
+)
+"flowfacts.ml" 63 1661 1675 "flowfacts.ml" 63 1661 1676
+type(
+  'e1
+)
+"flowfacts.ml" 63 1661 1677 "flowfacts.ml" 63 1661 1678
+type(
+  'f1
+)
+"flowfacts.ml" 63 1661 1681 "flowfacts.ml" 63 1661 1682
+type(
+  'd1
+)
+ident(
+  int_ref x "flowfacts.ml" 63 1661 1673 "flowfacts.ml" 63 1661 1674
+)
+"flowfacts.ml" 64 1683 1689 "flowfacts.ml" 64 1683 1694
+type(
+  'g1 -> 'h1 -> 'i1 -> 'g1
+)
+ident(
+  def onIfF "flowfacts.ml" 65 1705 1707 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 64 1683 1695 "flowfacts.ml" 64 1683 1696
+type(
+  'g1
+)
+ident(
+  def x "flowfacts.ml" 64 1683 1697 "flowfacts.ml" 64 1683 1704
+)
+"flowfacts.ml" 64 1683 1697 "flowfacts.ml" 64 1683 1698
+type(
+  'h1
+)
+"flowfacts.ml" 64 1683 1699 "flowfacts.ml" 64 1683 1700
+type(
+  'i1
+)
+"flowfacts.ml" 64 1683 1703 "flowfacts.ml" 64 1683 1704
+type(
+  'g1
+)
+ident(
+  int_ref x "flowfacts.ml" 64 1683 1695 "flowfacts.ml" 64 1683 1696
+)
+"flowfacts.ml" 65 1705 1711 "flowfacts.ml" 65 1705 1715
+type(
+  'j1 ->
+  'k1 -> 'l1 -> 'm1 -> 'n1 -> 'o1 -> 'p1 -> 'q1 -> 'r1 -> 's1 -> 't1 -> 'j1
+)
+ident(
+  def onIf "flowfacts.ml" 66 1742 1744 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 65 1705 1716 "flowfacts.ml" 65 1705 1717
+type(
+  'j1
+)
+ident(
+  def x "flowfacts.ml" 65 1705 1718 "flowfacts.ml" 65 1705 1741
+)
+"flowfacts.ml" 65 1705 1718 "flowfacts.ml" 65 1705 1719
+type(
+  'k1
+)
+"flowfacts.ml" 65 1705 1720 "flowfacts.ml" 65 1705 1721
+type(
+  'l1
+)
+"flowfacts.ml" 65 1705 1722 "flowfacts.ml" 65 1705 1723
+type(
+  'm1
+)
+"flowfacts.ml" 65 1705 1724 "flowfacts.ml" 65 1705 1725
+type(
+  'n1
+)
+"flowfacts.ml" 65 1705 1726 "flowfacts.ml" 65 1705 1727
+type(
+  'o1
+)
+"flowfacts.ml" 65 1705 1728 "flowfacts.ml" 65 1705 1729
+type(
+  'p1
+)
+"flowfacts.ml" 65 1705 1730 "flowfacts.ml" 65 1705 1731
+type(
+  'q1
+)
+"flowfacts.ml" 65 1705 1732 "flowfacts.ml" 65 1705 1733
+type(
+  'r1
+)
+"flowfacts.ml" 65 1705 1734 "flowfacts.ml" 65 1705 1735
+type(
+  's1
+)
+"flowfacts.ml" 65 1705 1736 "flowfacts.ml" 65 1705 1737
+type(
+  't1
+)
+"flowfacts.ml" 65 1705 1740 "flowfacts.ml" 65 1705 1741
+type(
+  'j1
+)
+ident(
+  int_ref x "flowfacts.ml" 65 1705 1716 "flowfacts.ml" 65 1705 1717
+)
+"flowfacts.ml" 66 1742 1748 "flowfacts.ml" 66 1742 1761
+type(
+  'u1 -> 'u1
+)
+ident(
+  def onFunctionEnd "flowfacts.ml" 67 1768 1770 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 66 1742 1762 "flowfacts.ml" 66 1742 1763
+type(
+  'u1
+)
+ident(
+  def x "flowfacts.ml" 66 1742 1766 "flowfacts.ml" 66 1742 1767
+)
+"flowfacts.ml" 66 1742 1766 "flowfacts.ml" 66 1742 1767
+type(
+  'u1
+)
+ident(
+  int_ref x "flowfacts.ml" 66 1742 1762 "flowfacts.ml" 66 1742 1763
+)
+"flowfacts.ml" 67 1768 1774 "flowfacts.ml" 67 1768 1781
+type(
+  'v1 -> 'v1
+)
+ident(
+  def onIfEnd "flowfacts.ml" 68 1788 1790 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 67 1768 1782 "flowfacts.ml" 67 1768 1783
+type(
+  'v1
+)
+ident(
+  def x "flowfacts.ml" 67 1768 1786 "flowfacts.ml" 67 1768 1787
+)
+"flowfacts.ml" 67 1768 1786 "flowfacts.ml" 67 1768 1787
+type(
+  'v1
+)
+ident(
+  int_ref x "flowfacts.ml" 67 1768 1782 "flowfacts.ml" 67 1768 1783
+)
+"flowfacts.ml" 68 1788 1794 "flowfacts.ml" 68 1788 1802
+type(
+  'w1 -> 'w1
+)
+ident(
+  def onIfTEnd "flowfacts.ml" 69 1809 1811 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 68 1788 1803 "flowfacts.ml" 68 1788 1804
+type(
+  'w1
+)
+ident(
+  def x "flowfacts.ml" 68 1788 1807 "flowfacts.ml" 68 1788 1808
+)
+"flowfacts.ml" 68 1788 1807 "flowfacts.ml" 68 1788 1808
+type(
+  'w1
+)
+ident(
+  int_ref x "flowfacts.ml" 68 1788 1803 "flowfacts.ml" 68 1788 1804
+)
+"flowfacts.ml" 69 1809 1815 "flowfacts.ml" 69 1809 1823
+type(
+  'x1 -> 'x1
+)
+ident(
+  def onIfFEnd "flowfacts.ml" 71 1831 1833 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 69 1809 1824 "flowfacts.ml" 69 1809 1825
+type(
+  'x1
+)
+ident(
+  def x "flowfacts.ml" 69 1809 1828 "flowfacts.ml" 69 1809 1829
+)
+"flowfacts.ml" 69 1809 1828 "flowfacts.ml" 69 1809 1829
+type(
+  'x1
+)
+ident(
+  int_ref x "flowfacts.ml" 69 1809 1824 "flowfacts.ml" 69 1809 1825
+)
+"flowfacts.ml" 73 1852 1858 "flowfacts.ml" 73 1852 1862
+type(
+  out_channel -> t -> unit
+)
+ident(
+  def dump "flowfacts.ml" 85 2178 2180 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 73 1852 1863 "flowfacts.ml" 73 1852 1865
+type(
+  out_channel
+)
+ident(
+  def oc "flowfacts.ml" 73 1852 1866 "flowfacts.ml" 83 2169 2176
+)
+"flowfacts.ml" 73 1852 1866 "flowfacts.ml" 73 1852 1867
+type(
+  t
+)
+ident(
+  def x "flowfacts.ml" 74 1870 1874 "flowfacts.ml" 83 2169 2176
+)
+"flowfacts.ml" 74 1870 1878 "flowfacts.ml" 74 1870 1893
+type(
+  out_channel -> Bound.t LoopMap.t -> unit
+)
+ident(
+  def dump_loop_bound "flowfacts.ml" 77 1986 1990 "flowfacts.ml" 83 2169 2176
+)
+"flowfacts.ml" 74 1870 1894 "flowfacts.ml" 74 1870 1896
+type(
+  out_channel
+)
+ident(
+  def oc "flowfacts.ml" 75 1899 1905 "flowfacts.ml" 76 1931 1982
+)
+"flowfacts.ml" 75 1899 1905 "flowfacts.ml" 75 1899 1917
+type(
+  (LoopMap.key -> Bound.t -> unit) -> Bound.t LoopMap.t -> unit
+)
+ident(
+  ext_ref LoopMap.iter
+)
+"flowfacts.ml" 75 1899 1923 "flowfacts.ml" 75 1899 1925
+type(
+  LoopMap.key
+)
+ident(
+  def id "flowfacts.ml" 75 1899 1926 "flowfacts.ml" 76 1931 1981
+)
+"flowfacts.ml" 75 1899 1926 "flowfacts.ml" 75 1899 1927
+type(
+  Bound.t
+)
+ident(
+  def b "flowfacts.ml" 76 1931 1932 "flowfacts.ml" 76 1931 1981
+)
+"flowfacts.ml" 76 1931 1932 "flowfacts.ml" 76 1931 1946
+type(
+  out_channel ->
+  (LoopMap.key -> (out_channel -> Bound.t -> unit) -> Bound.t -> unit,
+   out_channel, unit)
+  format ->
+  LoopMap.key -> (out_channel -> Bound.t -> unit) -> Bound.t -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"flowfacts.ml" 76 1931 1947 "flowfacts.ml" 76 1931 1949
+type(
+  out_channel
+)
+ident(
+  int_ref oc "flowfacts.ml" 74 1870 1894 "flowfacts.ml" 74 1870 1896
+)
+"flowfacts.ml" 76 1931 1950 "flowfacts.ml" 76 1931 1965
+type(
+  (LoopMap.key -> (out_channel -> Bound.t -> unit) -> Bound.t -> unit,
+   out_channel, unit)
+  format
+)
+"flowfacts.ml" 76 1931 1966 "flowfacts.ml" 76 1931 1968
+type(
+  LoopMap.key
+)
+ident(
+  int_ref id "flowfacts.ml" 75 1899 1923 "flowfacts.ml" 75 1899 1925
+)
+"flowfacts.ml" 76 1931 1969 "flowfacts.ml" 76 1931 1979
+type(
+  out_channel -> Bound.t -> unit
+)
+ident(
+  int_ref Bound.dump "flowfacts.ml" 27 599 605 "flowfacts.ml" 27 599 609
+)
+"flowfacts.ml" 76 1931 1980 "flowfacts.ml" 76 1931 1981
+type(
+  Bound.t
+)
+ident(
+  int_ref b "flowfacts.ml" 75 1899 1926 "flowfacts.ml" 75 1899 1927
+)
+"flowfacts.ml" 76 1931 1932 "flowfacts.ml" 76 1931 1981
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 75 1899 1918 "flowfacts.ml" 76 1931 1982
+type(
+  LoopMap.key -> Bound.t -> unit
+)
+"flowfacts.ml" 75 1899 1905 "flowfacts.ml" 76 1931 1982
+call(
+  tail
+)
+type(
+  Bound.t LoopMap.t -> unit
+)
+"flowfacts.ml" 77 1986 1993 "flowfacts.ml" 77 1986 2009
+type(
+  Bound.t LoopMap.t -> bool
+)
+ident(
+  ext_ref LoopMap.is_empty
+)
+"flowfacts.ml" 77 1986 2010 "flowfacts.ml" 77 1986 2011
+type(
+  t
+)
+ident(
+  int_ref x "flowfacts.ml" 73 1852 1866 "flowfacts.ml" 73 1852 1867
+)
+"flowfacts.ml" 77 1986 2010 "flowfacts.ml" 77 1986 2022
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 77 1986 1993 "flowfacts.ml" 77 1986 2022
+call(
+  stack
+)
+type(
+  bool
+)
+"flowfacts.ml" 79 2032 2038 "flowfacts.ml" 79 2032 2052
+type(
+  out_channel -> (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"flowfacts.ml" 79 2032 2053 "flowfacts.ml" 79 2032 2055
+type(
+  out_channel
+)
+ident(
+  int_ref oc "flowfacts.ml" 73 1852 1863 "flowfacts.ml" 73 1852 1865
+)
+"flowfacts.ml" 79 2032 2056 "flowfacts.ml" 79 2032 2068
+type(
+  (unit, out_channel, unit) format
+)
+"flowfacts.ml" 79 2032 2038 "flowfacts.ml" 79 2032 2068
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 81 2084 2090 "flowfacts.ml" 81 2084 2104
+type(
+  out_channel -> (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.fprintf
+)
+"flowfacts.ml" 81 2084 2105 "flowfacts.ml" 81 2084 2107
+type(
+  out_channel
+)
+ident(
+  int_ref oc "flowfacts.ml" 73 1852 1863 "flowfacts.ml" 73 1852 1865
+)
+"flowfacts.ml" 81 2084 2108 "flowfacts.ml" 81 2084 2129
+type(
+  (unit, out_channel, unit) format
+)
+"flowfacts.ml" 81 2084 2090 "flowfacts.ml" 81 2084 2129
+call(
+  stack
+)
+type(
+  unit
+)
+"flowfacts.ml" 82 2131 2137 "flowfacts.ml" 82 2131 2152
+type(
+  out_channel -> Bound.t LoopMap.t -> unit
+)
+ident(
+  int_ref dump_loop_bound "flowfacts.ml" 74 1870 1878 "flowfacts.ml" 74 1870 1893
+)
+"flowfacts.ml" 82 2131 2153 "flowfacts.ml" 82 2131 2155
+type(
+  out_channel
+)
+ident(
+  int_ref oc "flowfacts.ml" 73 1852 1863 "flowfacts.ml" 73 1852 1865
+)
+"flowfacts.ml" 82 2131 2156 "flowfacts.ml" 82 2131 2157
+type(
+  t
+)
+ident(
+  int_ref x "flowfacts.ml" 73 1852 1866 "flowfacts.ml" 73 1852 1867
+)
+"flowfacts.ml" 82 2131 2156 "flowfacts.ml" 82 2131 2168
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 82 2131 2137 "flowfacts.ml" 82 2131 2168
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 80 2069 2078 "flowfacts.ml" 83 2169 2176
+type(
+  unit
+)
+"flowfacts.ml" 77 1986 1990 "flowfacts.ml" 83 2169 2176
+type(
+  unit
+)
+"flowfacts.ml" 74 1870 1874 "flowfacts.ml" 83 2169 2176
+type(
+  unit
+)
+"flowfacts.ml" 85 2178 2184 "flowfacts.ml" 85 2178 2194
+type(
+  t -> Bound.t LoopMap.t
+)
+ident(
+  def loop_bound "flowfacts.ml" 85 2178 2211 "flowfacts.ml" 86 2212 2215
+)
+"flowfacts.ml" 85 2178 2195 "flowfacts.ml" 85 2178 2196
+type(
+  t
+)
+ident(
+  def x "flowfacts.ml" 85 2178 2199 "flowfacts.ml" 85 2178 2211
+)
+"flowfacts.ml" 85 2178 2199 "flowfacts.ml" 85 2178 2200
+type(
+  t
+)
+ident(
+  int_ref x "flowfacts.ml" 85 2178 2195 "flowfacts.ml" 85 2178 2196
+)
+"flowfacts.ml" 85 2178 2199 "flowfacts.ml" 85 2178 2211
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 90 2265 2271 "flowfacts.ml" 90 2265 2278
+type(
+  'a -> 'a -> int
+)
+ident(
+  def compare "flowfacts.ml" 90 2265 2299 "flowfacts.ml" 91 2300 2303
+)
+"flowfacts.ml" 90 2265 2281 "flowfacts.ml" 90 2265 2299
+type(
+  'a -> 'a -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"flowfacts.ml" 93 2305 2323 "flowfacts.ml" 93 2305 2338
+call(
+  stack
+)
+"flowfacts.ml" 102 2498 2504 "flowfacts.ml" 102 2498 2516
+type(
+  Cabs.definition list -> int CStmtMap.t
+)
+ident(
+  def make_cabs_id "flowfacts.ml" 132 3379 3381 "flowfacts.ml" 152 4051 4054
+)
+"flowfacts.ml" 102 2498 2517 "flowfacts.ml" 102 2498 2521
+type(
+  Cabs.definition list
+)
+ident(
+  def file "flowfacts.ml" 103 2524 2528 "flowfacts.ml" 130 3369 3377
+)
+"flowfacts.ml" 103 2524 2532 "flowfacts.ml" 103 2524 2539
+type(
+  int ref
+)
+ident(
+  def counter "flowfacts.ml" 104 2551 2555 "flowfacts.ml" 130 3369 3377
+)
+"flowfacts.ml" 103 2524 2542 "flowfacts.ml" 103 2524 2545
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"flowfacts.ml" 103 2524 2546 "flowfacts.ml" 103 2524 2547
+type(
+  int
+)
+"flowfacts.ml" 103 2524 2542 "flowfacts.ml" 103 2524 2547
+type(
+  int ref
+)
+"flowfacts.ml" 104 2551 2559 "flowfacts.ml" 104 2551 2562
+type(
+  int CStmtMap.t ref
+)
+ident(
+  def map "flowfacts.ml" 105 2587 2591 "flowfacts.ml" 130 3369 3377
+)
+"flowfacts.ml" 104 2551 2565 "flowfacts.ml" 104 2551 2568
+type(
+  int CStmtMap.t -> int CStmtMap.t ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"flowfacts.ml" 104 2551 2569 "flowfacts.ml" 104 2551 2583
+type(
+  int CStmtMap.t
+)
+ident(
+  ext_ref CStmtMap.empty
+)
+"flowfacts.ml" 104 2551 2565 "flowfacts.ml" 104 2551 2583
+type(
+  int CStmtMap.t ref
+)
+"flowfacts.ml" 106 2608 2620 "flowfacts.ml" 106 2608 2632
+type(
+  Cabs.definition list -> unit
+)
+ident(
+  def process_file "flowfacts.ml" 106 2608 2612 "flowfacts.ml" 130 3369 3377
+)
+"flowfacts.ml" 106 2608 2633 "flowfacts.ml" 106 2608 2634
+type(
+  Cabs.definition list
+)
+ident(
+  def f "flowfacts.ml" 106 2608 2637 "flowfacts.ml" 106 2608 2660
+)
+"flowfacts.ml" 106 2608 2637 "flowfacts.ml" 106 2608 2646
+type(
+  (Cabs.definition -> unit) -> Cabs.definition list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"flowfacts.ml" 106 2608 2647 "flowfacts.ml" 106 2608 2658
+type(
+  Cabs.definition -> unit
+)
+ident(
+  int_ref process_def "flowfacts.ml" 107 2661 2669 "flowfacts.ml" 107 2661 2680
+)
+"flowfacts.ml" 106 2608 2659 "flowfacts.ml" 106 2608 2660
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref f "flowfacts.ml" 106 2608 2633 "flowfacts.ml" 106 2608 2634
+)
+"flowfacts.ml" 106 2608 2637 "flowfacts.ml" 106 2608 2660
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 107 2661 2669 "flowfacts.ml" 107 2661 2680
+type(
+  Cabs.definition -> unit
+)
+ident(
+  def process_def "flowfacts.ml" 106 2608 2612 "flowfacts.ml" 130 3369 3377
+)
+"flowfacts.ml" 108 2692 2708 "flowfacts.ml" 108 2692 2709
+type(
+  Cabs.single_name
+)
+"flowfacts.ml" 108 2692 2710 "flowfacts.ml" 108 2692 2711
+type(
+  Cabs.body
+)
+ident(
+  def b "flowfacts.ml" 109 2713 2742 "flowfacts.ml" 109 2713 2756
+)
+"flowfacts.ml" 108 2692 2700 "flowfacts.ml" 108 2692 2712
+type(
+  Cabs.definition
+)
+"flowfacts.ml" 109 2713 2732 "flowfacts.ml" 109 2713 2733
+type(
+  Cabs.single_name
+)
+"flowfacts.ml" 109 2713 2734 "flowfacts.ml" 109 2713 2735
+type(
+  Cabs.name_group list
+)
+"flowfacts.ml" 109 2713 2736 "flowfacts.ml" 109 2713 2737
+type(
+  Cabs.body
+)
+ident(
+  def b "flowfacts.ml" 109 2713 2742 "flowfacts.ml" 109 2713 2756
+)
+"flowfacts.ml" 109 2713 2721 "flowfacts.ml" 109 2713 2738
+type(
+  Cabs.definition
+)
+"flowfacts.ml" 108 2692 2700 "flowfacts.ml" 109 2713 2738
+type(
+  Cabs.definition
+)
+"flowfacts.ml" 109 2713 2742 "flowfacts.ml" 109 2713 2754
+type(
+  Cabs.body -> unit
+)
+ident(
+  int_ref process_body "flowfacts.ml" 111 2773 2781 "flowfacts.ml" 111 2773 2793
+)
+"flowfacts.ml" 109 2713 2755 "flowfacts.ml" 109 2713 2756
+type(
+  Cabs.body
+)
+ident(
+  int_ref b "flowfacts.ml" 108 2692 2710 "flowfacts.ml" 108 2692 2711
+)
+"flowfacts.ml" 109 2713 2742 "flowfacts.ml" 109 2713 2756
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 110 2757 2765 "flowfacts.ml" 110 2757 2766
+type(
+  Cabs.definition
+)
+"flowfacts.ml" 110 2757 2770 "flowfacts.ml" 110 2757 2772
+type(
+  unit
+)
+"flowfacts.ml" 107 2661 2683 "flowfacts.ml" 110 2757 2772
+type(
+  Cabs.definition -> unit
+)
+"flowfacts.ml" 111 2773 2781 "flowfacts.ml" 111 2773 2793
+type(
+  Cabs.body -> unit
+)
+ident(
+  def process_body "flowfacts.ml" 106 2608 2612 "flowfacts.ml" 130 3369 3377
+)
+"flowfacts.ml" 111 2773 2795 "flowfacts.ml" 111 2773 2796
+type(
+  Cabs.definition list
+)
+"flowfacts.ml" 111 2773 2797 "flowfacts.ml" 111 2773 2798
+type(
+  CStmtMap.key
+)
+ident(
+  def s "flowfacts.ml" 111 2773 2802 "flowfacts.ml" 111 2773 2816
+)
+"flowfacts.ml" 111 2773 2794 "flowfacts.ml" 111 2773 2799
+type(
+  Cabs.body
+)
+"flowfacts.ml" 111 2773 2802 "flowfacts.ml" 111 2773 2814
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  int_ref process_stmt "flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+)
+"flowfacts.ml" 111 2773 2815 "flowfacts.ml" 111 2773 2816
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s "flowfacts.ml" 111 2773 2797 "flowfacts.ml" 111 2773 2798
+)
+"flowfacts.ml" 111 2773 2802 "flowfacts.ml" 111 2773 2816
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  def process_stmt "flowfacts.ml" 106 2608 2612 "flowfacts.ml" 130 3369 3377
+)
+"flowfacts.ml" 112 2817 2838 "flowfacts.ml" 112 2817 2839
+type(
+  CStmtMap.key
+)
+ident(
+  def s "flowfacts.ml" 113 2842 2848 "flowfacts.ml" 128 3327 3342
+)
+"flowfacts.ml" 113 2842 2852 "flowfacts.ml" 113 2842 2858
+type(
+  unit -> unit
+)
+ident(
+  def number "flowfacts.ml" 116 2919 2925 "flowfacts.ml" 128 3327 3342
+)
+"flowfacts.ml" 113 2842 2859 "flowfacts.ml" 113 2842 2861
+type(
+  unit
+)
+"flowfacts.ml" 114 2864 2865 "flowfacts.ml" 114 2864 2868
+type(
+  int CStmtMap.t ref
+)
+ident(
+  int_ref map "flowfacts.ml" 104 2551 2559 "flowfacts.ml" 104 2551 2562
+)
+"flowfacts.ml" 114 2864 2869 "flowfacts.ml" 114 2864 2871
+type(
+  int CStmtMap.t ref -> int CStmtMap.t -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"flowfacts.ml" 114 2864 2872 "flowfacts.ml" 114 2864 2884
+type(
+  CStmtMap.key -> int -> int CStmtMap.t -> int CStmtMap.t
+)
+ident(
+  ext_ref CStmtMap.add
+)
+"flowfacts.ml" 114 2864 2885 "flowfacts.ml" 114 2864 2886
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s "flowfacts.ml" 112 2817 2838 "flowfacts.ml" 112 2817 2839
+)
+"flowfacts.ml" 114 2864 2887 "flowfacts.ml" 114 2864 2888
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"flowfacts.ml" 114 2864 2888 "flowfacts.ml" 114 2864 2895
+type(
+  int ref
+)
+ident(
+  int_ref counter "flowfacts.ml" 103 2524 2532 "flowfacts.ml" 103 2524 2539
+)
+"flowfacts.ml" 114 2864 2887 "flowfacts.ml" 114 2864 2895
+type(
+  int
+)
+"flowfacts.ml" 114 2864 2896 "flowfacts.ml" 114 2864 2897
+type(
+  int CStmtMap.t ref -> int CStmtMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"flowfacts.ml" 114 2864 2897 "flowfacts.ml" 114 2864 2900
+type(
+  int CStmtMap.t ref
+)
+ident(
+  int_ref map "flowfacts.ml" 104 2551 2559 "flowfacts.ml" 104 2551 2562
+)
+"flowfacts.ml" 114 2864 2896 "flowfacts.ml" 114 2864 2900
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 114 2864 2872 "flowfacts.ml" 114 2864 2900
+call(
+  stack
+)
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 114 2864 2865 "flowfacts.ml" 114 2864 2900
+type(
+  unit
+)
+"flowfacts.ml" 115 2902 2903 "flowfacts.ml" 115 2902 2907
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"flowfacts.ml" 115 2902 2908 "flowfacts.ml" 115 2902 2915
+type(
+  int ref
+)
+ident(
+  int_ref counter "flowfacts.ml" 103 2524 2532 "flowfacts.ml" 103 2524 2539
+)
+"flowfacts.ml" 115 2902 2903 "flowfacts.ml" 115 2902 2915
+type(
+  unit
+)
+"flowfacts.ml" 114 2864 2865 "flowfacts.ml" 115 2902 2915
+type(
+  unit
+)
+"flowfacts.ml" 116 2919 2931 "flowfacts.ml" 116 2919 2932
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s "flowfacts.ml" 112 2817 2838 "flowfacts.ml" 112 2817 2839
+)
+"flowfacts.ml" 117 2938 2952 "flowfacts.ml" 117 2938 2953
+type(
+  Cabs.body
+)
+ident(
+  def b "flowfacts.ml" 117 2938 2957 "flowfacts.ml" 117 2938 2971
+)
+"flowfacts.ml" 117 2938 2946 "flowfacts.ml" 117 2938 2953
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 117 2938 2957 "flowfacts.ml" 117 2938 2969
+type(
+  Cabs.body -> unit
+)
+ident(
+  int_ref process_body "flowfacts.ml" 111 2773 2781 "flowfacts.ml" 111 2773 2793
+)
+"flowfacts.ml" 117 2938 2970 "flowfacts.ml" 117 2938 2971
+type(
+  Cabs.body
+)
+ident(
+  int_ref b "flowfacts.ml" 117 2938 2952 "flowfacts.ml" 117 2938 2953
+)
+"flowfacts.ml" 117 2938 2957 "flowfacts.ml" 117 2938 2971
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 118 2972 2990 "flowfacts.ml" 118 2972 2992
+type(
+  Cabs.statement
+)
+ident(
+  def s1 "flowfacts.ml" 119 2997 3021 "flowfacts.ml" 119 2997 3053
+)
+"flowfacts.ml" 118 2972 2993 "flowfacts.ml" 118 2972 2995
+type(
+  Cabs.statement
+)
+ident(
+  def s2 "flowfacts.ml" 119 2997 3021 "flowfacts.ml" 119 2997 3053
+)
+"flowfacts.ml" 118 2972 2980 "flowfacts.ml" 118 2972 2996
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 119 2997 3009 "flowfacts.ml" 119 2997 3010
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 119 2997 3011 "flowfacts.ml" 119 2997 3013
+type(
+  Cabs.statement
+)
+ident(
+  def s1 "flowfacts.ml" 119 2997 3021 "flowfacts.ml" 119 2997 3053
+)
+"flowfacts.ml" 119 2997 3014 "flowfacts.ml" 119 2997 3016
+type(
+  Cabs.statement
+)
+ident(
+  def s2 "flowfacts.ml" 119 2997 3021 "flowfacts.ml" 119 2997 3053
+)
+"flowfacts.ml" 119 2997 3005 "flowfacts.ml" 119 2997 3017
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 118 2972 2980 "flowfacts.ml" 119 2997 3017
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 119 2997 3021 "flowfacts.ml" 119 2997 3033
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  int_ref process_stmt "flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+)
+"flowfacts.ml" 119 2997 3034 "flowfacts.ml" 119 2997 3036
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s1 "flowfacts.ml" 118 2972 2990 "flowfacts.ml" 118 2972 2992
+)
+"flowfacts.ml" 119 2997 3021 "flowfacts.ml" 119 2997 3036
+call(
+  stack
+)
+type(
+  unit
+)
+"flowfacts.ml" 119 2997 3038 "flowfacts.ml" 119 2997 3050
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  int_ref process_stmt "flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+)
+"flowfacts.ml" 119 2997 3051 "flowfacts.ml" 119 2997 3053
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s2 "flowfacts.ml" 118 2972 2993 "flowfacts.ml" 118 2972 2995
+)
+"flowfacts.ml" 119 2997 3038 "flowfacts.ml" 119 2997 3053
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 119 2997 3021 "flowfacts.ml" 119 2997 3053
+type(
+  unit
+)
+"flowfacts.ml" 120 3054 3069 "flowfacts.ml" 120 3054 3070
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 120 3054 3071 "flowfacts.ml" 120 3054 3072
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 120 3054 3077 "flowfacts.ml" 120 3054 3102
+)
+"flowfacts.ml" 120 3054 3062 "flowfacts.ml" 120 3054 3073
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 120 3054 3077 "flowfacts.ml" 120 3054 3083
+type(
+  unit -> unit
+)
+ident(
+  int_ref number "flowfacts.ml" 113 2842 2852 "flowfacts.ml" 113 2842 2858
+)
+"flowfacts.ml" 120 3054 3084 "flowfacts.ml" 120 3054 3086
+type(
+  unit
+)
+"flowfacts.ml" 120 3054 3077 "flowfacts.ml" 120 3054 3086
+call(
+  stack
+)
+type(
+  unit
+)
+"flowfacts.ml" 120 3054 3088 "flowfacts.ml" 120 3054 3100
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  int_ref process_stmt "flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+)
+"flowfacts.ml" 120 3054 3101 "flowfacts.ml" 120 3054 3102
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s "flowfacts.ml" 120 3054 3071 "flowfacts.ml" 120 3054 3072
+)
+"flowfacts.ml" 120 3054 3088 "flowfacts.ml" 120 3054 3102
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 120 3054 3077 "flowfacts.ml" 120 3054 3102
+type(
+  unit
+)
+"flowfacts.ml" 121 3103 3120 "flowfacts.ml" 121 3103 3121
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 121 3103 3122 "flowfacts.ml" 121 3103 3123
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 121 3103 3128 "flowfacts.ml" 121 3103 3153
+)
+"flowfacts.ml" 121 3103 3111 "flowfacts.ml" 121 3103 3124
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 121 3103 3128 "flowfacts.ml" 121 3103 3134
+type(
+  unit -> unit
+)
+ident(
+  int_ref number "flowfacts.ml" 113 2842 2852 "flowfacts.ml" 113 2842 2858
+)
+"flowfacts.ml" 121 3103 3135 "flowfacts.ml" 121 3103 3137
+type(
+  unit
+)
+"flowfacts.ml" 121 3103 3128 "flowfacts.ml" 121 3103 3137
+call(
+  stack
+)
+type(
+  unit
+)
+"flowfacts.ml" 121 3103 3139 "flowfacts.ml" 121 3103 3151
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  int_ref process_stmt "flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+)
+"flowfacts.ml" 121 3103 3152 "flowfacts.ml" 121 3103 3153
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s "flowfacts.ml" 121 3103 3122 "flowfacts.ml" 121 3103 3123
+)
+"flowfacts.ml" 121 3103 3139 "flowfacts.ml" 121 3103 3153
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 121 3103 3128 "flowfacts.ml" 121 3103 3153
+type(
+  unit
+)
+"flowfacts.ml" 122 3154 3167 "flowfacts.ml" 122 3154 3168
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 122 3154 3169 "flowfacts.ml" 122 3154 3170
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 122 3154 3171 "flowfacts.ml" 122 3154 3172
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 122 3154 3173 "flowfacts.ml" 122 3154 3174
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 122 3154 3179 "flowfacts.ml" 122 3154 3204
+)
+"flowfacts.ml" 122 3154 3162 "flowfacts.ml" 122 3154 3175
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 122 3154 3179 "flowfacts.ml" 122 3154 3185
+type(
+  unit -> unit
+)
+ident(
+  int_ref number "flowfacts.ml" 113 2842 2852 "flowfacts.ml" 113 2842 2858
+)
+"flowfacts.ml" 122 3154 3186 "flowfacts.ml" 122 3154 3188
+type(
+  unit
+)
+"flowfacts.ml" 122 3154 3179 "flowfacts.ml" 122 3154 3188
+call(
+  stack
+)
+type(
+  unit
+)
+"flowfacts.ml" 122 3154 3190 "flowfacts.ml" 122 3154 3202
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  int_ref process_stmt "flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+)
+"flowfacts.ml" 122 3154 3203 "flowfacts.ml" 122 3154 3204
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s "flowfacts.ml" 122 3154 3173 "flowfacts.ml" 122 3154 3174
+)
+"flowfacts.ml" 122 3154 3190 "flowfacts.ml" 122 3154 3204
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 122 3154 3179 "flowfacts.ml" 122 3154 3204
+type(
+  unit
+)
+"flowfacts.ml" 123 3205 3221 "flowfacts.ml" 123 3205 3222
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 123 3205 3223 "flowfacts.ml" 123 3205 3224
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 127 3283 3312 "flowfacts.ml" 127 3283 3326
+)
+"flowfacts.ml" 123 3205 3213 "flowfacts.ml" 123 3205 3225
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 124 3226 3240 "flowfacts.ml" 124 3226 3241
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 124 3226 3242 "flowfacts.ml" 124 3226 3243
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 127 3283 3312 "flowfacts.ml" 127 3283 3326
+)
+"flowfacts.ml" 124 3226 3234 "flowfacts.ml" 124 3226 3244
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 123 3205 3213 "flowfacts.ml" 124 3226 3244
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 125 3245 3261 "flowfacts.ml" 125 3245 3262
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 127 3283 3312 "flowfacts.ml" 127 3283 3326
+)
+"flowfacts.ml" 125 3245 3253 "flowfacts.ml" 125 3245 3262
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 123 3205 3213 "flowfacts.ml" 125 3245 3262
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 126 3263 3278 "flowfacts.ml" 126 3263 3279
+type(
+  string
+)
+"flowfacts.ml" 126 3263 3280 "flowfacts.ml" 126 3263 3281
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 127 3283 3312 "flowfacts.ml" 127 3283 3326
+)
+"flowfacts.ml" 126 3263 3271 "flowfacts.ml" 126 3263 3282
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 123 3205 3213 "flowfacts.ml" 126 3263 3282
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 127 3283 3302 "flowfacts.ml" 127 3283 3303
+type(
+  Cabs.statement
+)
+ident(
+  def s "flowfacts.ml" 127 3283 3312 "flowfacts.ml" 127 3283 3326
+)
+"flowfacts.ml" 127 3283 3304 "flowfacts.ml" 127 3283 3305
+type(
+  string
+)
+"flowfacts.ml" 127 3283 3306 "flowfacts.ml" 127 3283 3307
+type(
+  int
+)
+"flowfacts.ml" 127 3283 3291 "flowfacts.ml" 127 3283 3308
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 123 3205 3213 "flowfacts.ml" 127 3283 3308
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 127 3283 3312 "flowfacts.ml" 127 3283 3324
+type(
+  CStmtMap.key -> unit
+)
+ident(
+  int_ref process_stmt "flowfacts.ml" 112 2817 2825 "flowfacts.ml" 112 2817 2837
+)
+"flowfacts.ml" 127 3283 3325 "flowfacts.ml" 127 3283 3326
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref s "flowfacts.ml" 123 3205 3223 "flowfacts.ml" 123 3205 3224
+)
+"flowfacts.ml" 127 3283 3312 "flowfacts.ml" 127 3283 3326
+call(
+  tail
+)
+type(
+  unit
+)
+"flowfacts.ml" 128 3327 3335 "flowfacts.ml" 128 3327 3336
+type(
+  CStmtMap.key
+)
+"flowfacts.ml" 128 3327 3340 "flowfacts.ml" 128 3327 3342
+type(
+  unit
+)
+"flowfacts.ml" 116 2919 2925 "flowfacts.ml" 128 3327 3342
+type(
+  unit
+)
+"flowfacts.ml" 113 2842 2848 "flowfacts.ml" 128 3327 3342
+type(
+  unit
+)
+"flowfacts.ml" 129 3346 3350 "flowfacts.ml" 129 3346 3362
+type(
+  Cabs.definition list -> unit
+)
+ident(
+  int_ref process_file "flowfacts.ml" 106 2608 2620 "flowfacts.ml" 106 2608 2632
+)
+"flowfacts.ml" 129 3346 3363 "flowfacts.ml" 129 3346 3367
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref file "flowfacts.ml" 102 2498 2517 "flowfacts.ml" 102 2498 2521
+)
+"flowfacts.ml" 129 3346 3350 "flowfacts.ml" 129 3346 3367
+call(
+  stack
+)
+type(
+  unit
+)
+"flowfacts.ml" 130 3369 3373 "flowfacts.ml" 130 3369 3374
+type(
+  int CStmtMap.t ref -> int CStmtMap.t
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"flowfacts.ml" 130 3369 3374 "flowfacts.ml" 130 3369 3377
+type(
+  int CStmtMap.t ref
+)
+ident(
+  int_ref map "flowfacts.ml" 104 2551 2559 "flowfacts.ml" 104 2551 2562
+)
+"flowfacts.ml" 130 3369 3373 "flowfacts.ml" 130 3369 3377
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 129 3346 3350 "flowfacts.ml" 130 3369 3377
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 106 2608 2612 "flowfacts.ml" 130 3369 3377
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 104 2551 2555 "flowfacts.ml" 130 3369 3377
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 103 2524 2528 "flowfacts.ml" 130 3369 3377
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 132 3379 3385 "flowfacts.ml" 132 3379 3389
+type(
+  Cabs.definition list -> Coarse.t -> t
+)
+ident(
+  def make "flowfacts.ml" 138 3546 3548 "flowfacts.ml" 152 4051 4054
+)
+"flowfacts.ml" 132 3379 3390 "flowfacts.ml" 132 3379 3394
+type(
+  Cabs.definition list
+)
+ident(
+  def file "flowfacts.ml" 132 3379 3395 "flowfacts.ml" 136 3517 3544
+)
+"flowfacts.ml" 132 3379 3395 "flowfacts.ml" 132 3379 3402
+type(
+  Coarse.t
+)
+ident(
+  def results "flowfacts.ml" 133 3405 3409 "flowfacts.ml" 136 3517 3544
+)
+"flowfacts.ml" 133 3405 3413 "flowfacts.ml" 133 3405 3420
+type(
+  int CStmtMap.t
+)
+ident(
+  def cabs_id "flowfacts.ml" 134 3444 3448 "flowfacts.ml" 136 3517 3544
+)
+"flowfacts.ml" 133 3405 3423 "flowfacts.ml" 133 3405 3435
+type(
+  Cabs.definition list -> int CStmtMap.t
+)
+ident(
+  int_ref make_cabs_id "flowfacts.ml" 102 2498 2504 "flowfacts.ml" 102 2498 2516
+)
+"flowfacts.ml" 133 3405 3436 "flowfacts.ml" 133 3405 3440
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref file "flowfacts.ml" 132 3379 3390 "flowfacts.ml" 132 3379 3394
+)
+"flowfacts.ml" 133 3405 3423 "flowfacts.ml" 133 3405 3440
+call(
+  stack
+)
+type(
+  int CStmtMap.t
+)
+"flowfacts.ml" 134 3444 3452 "flowfacts.ml" 134 3444 3460
+type(
+  Bound.t LoopMap.t
+)
+ident(
+  def id_bound "flowfacts.ml" 135 3492 3496 "flowfacts.ml" 136 3517 3544
+)
+"flowfacts.ml" 134 3444 3463 "flowfacts.ml" 134 3444 3480
+type(
+  Coarse.t -> Bound.t LoopMap.t
+)
+ident(
+  int_ref Coarse.loop_bound "flowfacts.ml" 85 2178 2184 "flowfacts.ml" 85 2178 2194
+)
+"flowfacts.ml" 134 3444 3481 "flowfacts.ml" 134 3444 3488
+type(
+  Coarse.t
+)
+ident(
+  int_ref results "flowfacts.ml" 132 3379 3395 "flowfacts.ml" 132 3379 3402
+)
+"flowfacts.ml" 134 3444 3463 "flowfacts.ml" 134 3444 3488
+call(
+  stack
+)
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 135 3492 3508 "flowfacts.ml" 135 3492 3515
+type(
+  LoopId.t CStmtMap.t
+)
+ident(
+  int_ref cabs_id "flowfacts.ml" 133 3405 3413 "flowfacts.ml" 133 3405 3420
+)
+"flowfacts.ml" 136 3517 3534 "flowfacts.ml" 136 3517 3542
+type(
+  Bound.t LoopMap.t
+)
+ident(
+  int_ref id_bound "flowfacts.ml" 134 3444 3452 "flowfacts.ml" 134 3444 3460
+)
+"flowfacts.ml" 135 3492 3496 "flowfacts.ml" 136 3517 3544
+type(
+  t
+)
+"flowfacts.ml" 134 3444 3448 "flowfacts.ml" 136 3517 3544
+type(
+  t
+)
+"flowfacts.ml" 133 3405 3409 "flowfacts.ml" 136 3517 3544
+type(
+  t
+)
+"flowfacts.ml" 138 3546 3552 "flowfacts.ml" 138 3546 3563
+type(
+  t -> Balance.ff_input
+)
+ident(
+  def to_ff_input "flowfacts.ml" 151 4021 4050 "flowfacts.ml" 152 4051 4054
+)
+"flowfacts.ml" 138 3546 3564 "flowfacts.ml" 138 3546 3565
+type(
+  t
+)
+ident(
+  def x "flowfacts.ml" 139 3568 3572 "flowfacts.ml" 151 4021 4050
+)
+"flowfacts.ml" 139 3568 3576 "flowfacts.ml" 139 3568 3586
+type(
+  CStmtMap.key -> int option
+)
+ident(
+  def loop_bound "flowfacts.ml" 143 3712 3716 "flowfacts.ml" 151 4021 4050
+)
+"flowfacts.ml" 139 3568 3587 "flowfacts.ml" 139 3568 3591
+type(
+  CStmtMap.key
+)
+ident(
+  def stmt "flowfacts.ml" 140 3594 3600 "flowfacts.ml" 142 3685 3708
+)
+"flowfacts.ml" 140 3594 3604 "flowfacts.ml" 140 3594 3606
+type(
+  LoopId.t
+)
+ident(
+  def id "flowfacts.ml" 141 3641 3647 "flowfacts.ml" 142 3685 3708
+)
+"flowfacts.ml" 140 3594 3609 "flowfacts.ml" 140 3594 3622
+type(
+  CStmtMap.key -> LoopId.t CStmtMap.t -> LoopId.t
+)
+ident(
+  ext_ref CStmtMap.find
+)
+"flowfacts.ml" 140 3594 3623 "flowfacts.ml" 140 3594 3627
+type(
+  CStmtMap.key
+)
+ident(
+  int_ref stmt "flowfacts.ml" 139 3568 3587 "flowfacts.ml" 139 3568 3591
+)
+"flowfacts.ml" 140 3594 3628 "flowfacts.ml" 140 3594 3629
+type(
+  t
+)
+ident(
+  int_ref x "flowfacts.ml" 138 3546 3564 "flowfacts.ml" 138 3546 3565
+)
+"flowfacts.ml" 140 3594 3628 "flowfacts.ml" 140 3594 3637
+type(
+  LoopId.t CStmtMap.t
+)
+"flowfacts.ml" 140 3594 3609 "flowfacts.ml" 140 3594 3637
+call(
+  stack
+)
+type(
+  LoopId.t
+)
+"flowfacts.ml" 141 3641 3651 "flowfacts.ml" 141 3641 3652
+type(
+  Bound.t
+)
+ident(
+  def b "flowfacts.ml" 142 3685 3691 "flowfacts.ml" 142 3685 3708
+)
+"flowfacts.ml" 141 3641 3655 "flowfacts.ml" 141 3641 3667
+type(
+  LoopMap.key -> Bound.t LoopMap.t -> Bound.t
+)
+ident(
+  ext_ref LoopMap.find
+)
+"flowfacts.ml" 141 3641 3668 "flowfacts.ml" 141 3641 3670
+type(
+  LoopId.t
+)
+ident(
+  int_ref id "flowfacts.ml" 140 3594 3604 "flowfacts.ml" 140 3594 3606
+)
+"flowfacts.ml" 141 3641 3671 "flowfacts.ml" 141 3641 3672
+type(
+  t
+)
+ident(
+  int_ref x "flowfacts.ml" 138 3546 3564 "flowfacts.ml" 138 3546 3565
+)
+"flowfacts.ml" 141 3641 3671 "flowfacts.ml" 141 3641 3681
+type(
+  Bound.t LoopMap.t
+)
+"flowfacts.ml" 141 3641 3655 "flowfacts.ml" 141 3641 3681
+call(
+  stack
+)
+type(
+  Bound.t
+)
+"flowfacts.ml" 142 3685 3691 "flowfacts.ml" 142 3685 3706
+type(
+  Bound.t -> int option
+)
+ident(
+  int_ref Bound.to_option "flowfacts.ml" 30 720 726 "flowfacts.ml" 30 720 735
+)
+"flowfacts.ml" 142 3685 3707 "flowfacts.ml" 142 3685 3708
+type(
+  Bound.t
+)
+ident(
+  int_ref b "flowfacts.ml" 141 3641 3651 "flowfacts.ml" 141 3641 3652
+)
+"flowfacts.ml" 142 3685 3691 "flowfacts.ml" 142 3685 3708
+call(
+  tail
+)
+type(
+  int option
+)
+"flowfacts.ml" 141 3641 3647 "flowfacts.ml" 142 3685 3708
+type(
+  int option
+)
+"flowfacts.ml" 140 3594 3600 "flowfacts.ml" 142 3685 3708
+type(
+  int option
+)
+"flowfacts.ml" 143 3712 3720 "flowfacts.ml" 143 3712 3738
+type(
+  Cabs.statement -> bool list
+)
+ident(
+  def branch_feasibility "flowfacts.ml" 147 3884 3888 "flowfacts.ml" 151 4021 4050
+)
+"flowfacts.ml" 144 3750 3766 "flowfacts.ml" 144 3750 3767
+type(
+  Cabs.statement
+)
+type(
+  Cabs.statement
+)
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 144 3750 3758 "flowfacts.ml" 144 3750 3767
+type(
+  Cabs.statement
+)
+"flowfacts.ml" 144 3750 3772 "flowfacts.ml" 144 3750 3776
+type(
+  bool
+)
+"flowfacts.ml" 144 3750 3778 "flowfacts.ml" 144 3750 3782
+type(
+  bool
+)
+"flowfacts.ml" 144 3750 3771 "flowfacts.ml" 144 3750 3783
+type(
+  bool list
+)
+"flowfacts.ml" 145 3784 3802 "flowfacts.ml" 145 3784 3803
+type(
+  Cabs.statement
+)
+type(
+  Cabs.expression
+)
+"flowfacts.ml" 145 3784 3792 "flowfacts.ml" 145 3784 3803
+type(
+  Cabs.statement
+)
+"flowfacts.ml" 145 3784 3807 "flowfacts.ml" 145 3784 3815
+type(
+  string -> bool list
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"flowfacts.ml" 145 3784 3816 "flowfacts.ml" 145 3784 3822
+type(
+  string
+)
+"flowfacts.ml" 145 3784 3807 "flowfacts.ml" 145 3784 3822
+call(
+  tail
+)
+type(
+  bool list
+)
+"flowfacts.ml" 146 3823 3831 "flowfacts.ml" 146 3823 3832
+type(
+  Cabs.statement
+)
+"flowfacts.ml" 146 3823 3836 "flowfacts.ml" 146 3823 3841
+type(
+  exn -> bool list
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"flowfacts.ml" 146 3823 3860 "flowfacts.ml" 146 3823 3879
+type(
+  string
+)
+"flowfacts.ml" 146 3823 3842 "flowfacts.ml" 146 3823 3880
+type(
+  exn
+)
+"flowfacts.ml" 146 3823 3836 "flowfacts.ml" 146 3823 3880
+type(
+  bool list
+)
+"flowfacts.ml" 143 3712 3741 "flowfacts.ml" 146 3823 3880
+type(
+  Cabs.statement -> bool list
+)
+"flowfacts.ml" 147 3884 3892 "flowfacts.ml" 147 3884 3901
+type(
+  'a -> string
+)
+ident(
+  def branch_id "flowfacts.ml" 148 3919 3923 "flowfacts.ml" 151 4021 4050
+)
+"flowfacts.ml" 147 3884 3902 "flowfacts.ml" 147 3884 3906
+type(
+  'a
+)
+ident(
+  def stmt "flowfacts.ml" 147 3884 3909 "flowfacts.ml" 147 3884 3915
+)
+"flowfacts.ml" 147 3884 3909 "flowfacts.ml" 147 3884 3915
+type(
+  string
+)
+"flowfacts.ml" 149 3943 3962 "flowfacts.ml" 149 3943 3972
+type(
+  CStmtMap.key -> int option
+)
+ident(
+  int_ref loop_bound "flowfacts.ml" 139 3568 3576 "flowfacts.ml" 139 3568 3586
+)
+"flowfacts.ml" 150 3974 4001 "flowfacts.ml" 150 3974 4019
+type(
+  Cabs.statement -> bool list
+)
+ident(
+  int_ref branch_feasibility "flowfacts.ml" 143 3712 3720 "flowfacts.ml" 143 3712 3738
+)
+"flowfacts.ml" 151 4021 4039 "flowfacts.ml" 151 4021 4048
+type(
+  Cabs.statement -> string
+)
+ident(
+  int_ref branch_id "flowfacts.ml" 147 3884 3892 "flowfacts.ml" 147 3884 3901
+)
+"flowfacts.ml" 149 3943 3947 "flowfacts.ml" 151 4021 4050
+type(
+  Balance.ff_input
+)
+"flowfacts.ml" 147 3884 3888 "flowfacts.ml" 151 4021 4050
+type(
+  Balance.ff_input
+)
+"flowfacts.ml" 143 3712 3716 "flowfacts.ml" 151 4021 4050
+type(
+  Balance.ff_input
+)
+"flowfacts.ml" 139 3568 3572 "flowfacts.ml" 151 4021 4050
+type(
+  Balance.ff_input
+)

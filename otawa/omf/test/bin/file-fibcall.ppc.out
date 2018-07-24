@@ -1,0 +1,13 @@
+file name = /home/casse/otawa/gel/test/bin/fibcall.ppc
+type = ET_EXEC (0x0002)
+machine = EM_PPC (0x0014)
+version = 1
+entry = 0x10000260
+identification
+7f454c46	.ELF
+01020100	....
+00000000	....
+00000000	....
+ident[EI_CLASS] = ELFCLASS32 (1)
+ident[EI_DATA] = ELFDATA2MSB (2)
+ident[EI_OSABI] = 0

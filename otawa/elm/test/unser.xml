@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<SimpleClass>
+	<ref ref="id1"/>
+	<x>666</x>
+	<c>b</c>
+	<f>1.9</f>
+	<str>ko</str>
+	<list>
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+	</list>
+	<list2>
+		<item id="id0"><x>0</x></item>
+		<item id="id1"><x>1</x></item>
+		<item><!--x>2</x--></item>
+	</list2>
+	<list3>
+		<item ref="id0"/>
+		<item><x>1</x></item>
+		<item class="Item2Class"><x>2</x></item>
+	</list3>
+	<en>VAL2</en>
+</SimpleClass>

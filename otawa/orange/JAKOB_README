@@ -1,0 +1,5 @@
+the input ffx changes use xml-light, which can be found in the FFX2PVAL directory
+(the makefile assumes a similar location as for frontc, which is the parent folder).
+
+all my changes should be commented, if you want to search/grep them, then probably
+'grep "jz:" *.ml' should do the job.

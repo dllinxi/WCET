@@ -1,0 +1,4553 @@
+"conditionAnalysis.ml" 9 295 301 "conditionAnalysis.ml" 9 295 304
+type(
+  'a -> 'a -> bool
+)
+ident(
+  def leq "conditionAnalysis.ml" 10 318 320 "conditionAnalysis.ml" 12 370 373
+)
+"conditionAnalysis.ml" 9 295 305 "conditionAnalysis.ml" 9 295 306
+type(
+  'a
+)
+ident(
+  def a "conditionAnalysis.ml" 9 295 307 "conditionAnalysis.ml" 9 295 317
+)
+"conditionAnalysis.ml" 9 295 307 "conditionAnalysis.ml" 9 295 308
+type(
+  'a
+)
+ident(
+  def b "conditionAnalysis.ml" 9 295 311 "conditionAnalysis.ml" 9 295 317
+)
+"conditionAnalysis.ml" 9 295 311 "conditionAnalysis.ml" 9 295 312
+type(
+  'a
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 9 295 305 "conditionAnalysis.ml" 9 295 306
+)
+"conditionAnalysis.ml" 9 295 313 "conditionAnalysis.ml" 9 295 315
+type(
+  'a -> 'a -> bool
+)
+ident(
+  ext_ref Pervasives.( <= )
+)
+"conditionAnalysis.ml" 9 295 316 "conditionAnalysis.ml" 9 295 317
+type(
+  'a
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 9 295 307 "conditionAnalysis.ml" 9 295 308
+)
+"conditionAnalysis.ml" 9 295 311 "conditionAnalysis.ml" 9 295 317
+type(
+  bool
+)
+"conditionAnalysis.ml" 10 318 324 "conditionAnalysis.ml" 10 318 333
+type(
+  int
+)
+ident(
+  def min_value "conditionAnalysis.ml" 11 344 346 "conditionAnalysis.ml" 12 370 373
+)
+"conditionAnalysis.ml" 10 318 336 "conditionAnalysis.ml" 10 318 343
+type(
+  int
+)
+ident(
+  ext_ref Pervasives.min_int
+)
+"conditionAnalysis.ml" 11 344 350 "conditionAnalysis.ml" 11 344 359
+type(
+  int
+)
+ident(
+  def max_value "conditionAnalysis.ml" 11 344 369 "conditionAnalysis.ml" 12 370 373
+)
+"conditionAnalysis.ml" 11 344 362 "conditionAnalysis.ml" 11 344 369
+type(
+  int
+)
+ident(
+  ext_ref Pervasives.max_int
+)
+"conditionAnalysis.ml" 20 509 515 "conditionAnalysis.ml" 20 509 518
+type(
+  t -> t -> bool
+)
+ident(
+  def leq "conditionAnalysis.ml" 26 658 660 "conditionAnalysis.ml" 32 843 846
+)
+"conditionAnalysis.ml" 20 509 519 "conditionAnalysis.ml" 20 509 520
+type(
+  t
+)
+ident(
+  def a "conditionAnalysis.ml" 20 509 521 "conditionAnalysis.ml" 25 617 657
+)
+"conditionAnalysis.ml" 20 509 521 "conditionAnalysis.ml" 20 509 522
+type(
+  t
+)
+ident(
+  def b "conditionAnalysis.ml" 20 509 525 "conditionAnalysis.ml" 25 617 657
+)
+"conditionAnalysis.ml" 20 509 532 "conditionAnalysis.ml" 20 509 533
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 20 509 519 "conditionAnalysis.ml" 20 509 520
+)
+"conditionAnalysis.ml" 20 509 534 "conditionAnalysis.ml" 20 509 535
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 20 509 521 "conditionAnalysis.ml" 20 509 522
+)
+"conditionAnalysis.ml" 20 509 531 "conditionAnalysis.ml" 20 509 536
+type(
+  t * t
+)
+"conditionAnalysis.ml" 21 542 548 "conditionAnalysis.ml" 21 542 549
+type(
+  t
+)
+"conditionAnalysis.ml" 21 542 551 "conditionAnalysis.ml" 21 542 556
+type(
+  t
+)
+"conditionAnalysis.ml" 21 542 548 "conditionAnalysis.ml" 21 542 556
+type(
+  t * t
+)
+"conditionAnalysis.ml" 22 557 563 "conditionAnalysis.ml" 22 557 568
+type(
+  t
+)
+"conditionAnalysis.ml" 22 557 569 "conditionAnalysis.ml" 22 557 570
+type(
+  t
+)
+"conditionAnalysis.ml" 22 557 563 "conditionAnalysis.ml" 22 557 570
+type(
+  t * t
+)
+"conditionAnalysis.ml" 21 542 548 "conditionAnalysis.ml" 22 557 570
+type(
+  t * t
+)
+"conditionAnalysis.ml" 22 557 574 "conditionAnalysis.ml" 22 557 579
+type(
+  bool
+)
+"conditionAnalysis.ml" 23 580 586 "conditionAnalysis.ml" 23 580 591
+type(
+  t
+)
+"conditionAnalysis.ml" 23 580 593 "conditionAnalysis.ml" 23 580 594
+type(
+  t
+)
+"conditionAnalysis.ml" 23 580 586 "conditionAnalysis.ml" 23 580 594
+type(
+  t * t
+)
+"conditionAnalysis.ml" 24 595 601 "conditionAnalysis.ml" 24 595 602
+type(
+  t
+)
+"conditionAnalysis.ml" 24 595 603 "conditionAnalysis.ml" 24 595 608
+type(
+  t
+)
+"conditionAnalysis.ml" 24 595 601 "conditionAnalysis.ml" 24 595 608
+type(
+  t * t
+)
+"conditionAnalysis.ml" 23 580 586 "conditionAnalysis.ml" 24 595 608
+type(
+  t * t
+)
+"conditionAnalysis.ml" 24 595 612 "conditionAnalysis.ml" 24 595 616
+type(
+  bool
+)
+"conditionAnalysis.ml" 25 617 628 "conditionAnalysis.ml" 25 617 630
+type(
+  Data.t
+)
+ident(
+  def da "conditionAnalysis.ml" 25 617 643 "conditionAnalysis.ml" 25 617 657
+)
+"conditionAnalysis.ml" 25 617 623 "conditionAnalysis.ml" 25 617 630
+type(
+  t
+)
+"conditionAnalysis.ml" 25 617 637 "conditionAnalysis.ml" 25 617 639
+type(
+  Data.t
+)
+ident(
+  def db "conditionAnalysis.ml" 25 617 643 "conditionAnalysis.ml" 25 617 657
+)
+"conditionAnalysis.ml" 25 617 632 "conditionAnalysis.ml" 25 617 639
+type(
+  t
+)
+"conditionAnalysis.ml" 25 617 623 "conditionAnalysis.ml" 25 617 639
+type(
+  t * t
+)
+"conditionAnalysis.ml" 25 617 643 "conditionAnalysis.ml" 25 617 651
+type(
+  Data.t -> Data.t -> bool
+)
+ident(
+  int_ref Data.leq "conditionAnalysis.ml" 9 295 301 "conditionAnalysis.ml" 9 295 304
+)
+"conditionAnalysis.ml" 25 617 652 "conditionAnalysis.ml" 25 617 654
+type(
+  Data.t
+)
+ident(
+  int_ref da "conditionAnalysis.ml" 25 617 628 "conditionAnalysis.ml" 25 617 630
+)
+"conditionAnalysis.ml" 25 617 655 "conditionAnalysis.ml" 25 617 657
+type(
+  Data.t
+)
+ident(
+  int_ref db "conditionAnalysis.ml" 25 617 637 "conditionAnalysis.ml" 25 617 639
+)
+"conditionAnalysis.ml" 25 617 643 "conditionAnalysis.ml" 25 617 657
+call(
+  tail
+)
+type(
+  bool
+)
+"conditionAnalysis.ml" 20 509 525 "conditionAnalysis.ml" 25 617 657
+type(
+  bool
+)
+"conditionAnalysis.ml" 26 658 664 "conditionAnalysis.ml" 26 658 667
+type(
+  t -> t -> t
+)
+ident(
+  def min "conditionAnalysis.ml" 27 699 701 "conditionAnalysis.ml" 32 843 846
+)
+"conditionAnalysis.ml" 26 658 668 "conditionAnalysis.ml" 26 658 669
+type(
+  t
+)
+ident(
+  def a "conditionAnalysis.ml" 26 658 670 "conditionAnalysis.ml" 26 658 698
+)
+"conditionAnalysis.ml" 26 658 670 "conditionAnalysis.ml" 26 658 671
+type(
+  t
+)
+ident(
+  def b "conditionAnalysis.ml" 26 658 674 "conditionAnalysis.ml" 26 658 698
+)
+"conditionAnalysis.ml" 26 658 677 "conditionAnalysis.ml" 26 658 680
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref leq "conditionAnalysis.ml" 20 509 515 "conditionAnalysis.ml" 20 509 518
+)
+"conditionAnalysis.ml" 26 658 681 "conditionAnalysis.ml" 26 658 682
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 26 658 668 "conditionAnalysis.ml" 26 658 669
+)
+"conditionAnalysis.ml" 26 658 683 "conditionAnalysis.ml" 26 658 684
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 26 658 670 "conditionAnalysis.ml" 26 658 671
+)
+"conditionAnalysis.ml" 26 658 677 "conditionAnalysis.ml" 26 658 684
+call(
+  stack
+)
+type(
+  bool
+)
+"conditionAnalysis.ml" 26 658 690 "conditionAnalysis.ml" 26 658 691
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 26 658 668 "conditionAnalysis.ml" 26 658 669
+)
+"conditionAnalysis.ml" 26 658 697 "conditionAnalysis.ml" 26 658 698
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 26 658 670 "conditionAnalysis.ml" 26 658 671
+)
+"conditionAnalysis.ml" 26 658 674 "conditionAnalysis.ml" 26 658 698
+type(
+  t
+)
+"conditionAnalysis.ml" 27 699 705 "conditionAnalysis.ml" 27 699 708
+type(
+  t -> t -> t
+)
+ident(
+  def max "conditionAnalysis.ml" 28 740 742 "conditionAnalysis.ml" 32 843 846
+)
+"conditionAnalysis.ml" 27 699 709 "conditionAnalysis.ml" 27 699 710
+type(
+  t
+)
+ident(
+  def a "conditionAnalysis.ml" 27 699 711 "conditionAnalysis.ml" 27 699 739
+)
+"conditionAnalysis.ml" 27 699 711 "conditionAnalysis.ml" 27 699 712
+type(
+  t
+)
+ident(
+  def b "conditionAnalysis.ml" 27 699 715 "conditionAnalysis.ml" 27 699 739
+)
+"conditionAnalysis.ml" 27 699 718 "conditionAnalysis.ml" 27 699 721
+type(
+  t -> t -> bool
+)
+ident(
+  int_ref leq "conditionAnalysis.ml" 20 509 515 "conditionAnalysis.ml" 20 509 518
+)
+"conditionAnalysis.ml" 27 699 722 "conditionAnalysis.ml" 27 699 723
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 27 699 709 "conditionAnalysis.ml" 27 699 710
+)
+"conditionAnalysis.ml" 27 699 724 "conditionAnalysis.ml" 27 699 725
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 27 699 711 "conditionAnalysis.ml" 27 699 712
+)
+"conditionAnalysis.ml" 27 699 718 "conditionAnalysis.ml" 27 699 725
+call(
+  stack
+)
+type(
+  bool
+)
+"conditionAnalysis.ml" 27 699 731 "conditionAnalysis.ml" 27 699 732
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 27 699 711 "conditionAnalysis.ml" 27 699 712
+)
+"conditionAnalysis.ml" 27 699 738 "conditionAnalysis.ml" 27 699 739
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 27 699 709 "conditionAnalysis.ml" 27 699 710
+)
+"conditionAnalysis.ml" 27 699 715 "conditionAnalysis.ml" 27 699 739
+type(
+  t
+)
+"conditionAnalysis.ml" 28 740 746 "conditionAnalysis.ml" 28 740 753
+type(
+  t -> Data.t
+)
+ident(
+  def to_data "conditionAnalysis.ml" 31 813 842 "conditionAnalysis.ml" 32 843 846
+)
+"conditionAnalysis.ml" 29 765 771 "conditionAnalysis.ml" 29 765 776
+type(
+  t
+)
+"conditionAnalysis.ml" 29 765 780 "conditionAnalysis.ml" 29 765 794
+type(
+  Data.t
+)
+ident(
+  int_ref Data.min_value "conditionAnalysis.ml" 10 318 324 "conditionAnalysis.ml" 10 318 333
+)
+"conditionAnalysis.ml" 30 795 806 "conditionAnalysis.ml" 30 795 807
+type(
+  Data.t
+)
+ident(
+  def x "conditionAnalysis.ml" 30 795 811 "conditionAnalysis.ml" 30 795 812
+)
+"conditionAnalysis.ml" 30 795 801 "conditionAnalysis.ml" 30 795 807
+type(
+  t
+)
+"conditionAnalysis.ml" 30 795 811 "conditionAnalysis.ml" 30 795 812
+type(
+  Data.t
+)
+ident(
+  int_ref x "conditionAnalysis.ml" 30 795 806 "conditionAnalysis.ml" 30 795 807
+)
+"conditionAnalysis.ml" 31 813 819 "conditionAnalysis.ml" 31 813 824
+type(
+  t
+)
+"conditionAnalysis.ml" 31 813 828 "conditionAnalysis.ml" 31 813 842
+type(
+  Data.t
+)
+ident(
+  int_ref Data.max_value "conditionAnalysis.ml" 11 344 350 "conditionAnalysis.ml" 11 344 359
+)
+"conditionAnalysis.ml" 28 740 756 "conditionAnalysis.ml" 31 813 842
+type(
+  t -> Data.t
+)
+"conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  def make "conditionAnalysis.ml" 44 1203 1205 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 40 1097 1108 "conditionAnalysis.ml" 40 1097 1111
+type(
+  Bound.t
+)
+ident(
+  def low "conditionAnalysis.ml" 40 1097 1112 "conditionAnalysis.ml" 43 1181 1202
+)
+"conditionAnalysis.ml" 40 1097 1112 "conditionAnalysis.ml" 40 1097 1116
+type(
+  Bound.t
+)
+ident(
+  def high "conditionAnalysis.ml" 41 1119 1123 "conditionAnalysis.ml" 43 1181 1202
+)
+"conditionAnalysis.ml" 41 1119 1126 "conditionAnalysis.ml" 41 1119 1135
+type(
+  Bound.t -> Bound.t -> bool
+)
+ident(
+  int_ref Bound.leq "conditionAnalysis.ml" 20 509 515 "conditionAnalysis.ml" 20 509 518
+)
+"conditionAnalysis.ml" 41 1119 1136 "conditionAnalysis.ml" 41 1119 1139
+type(
+  Bound.t
+)
+ident(
+  int_ref low "conditionAnalysis.ml" 40 1097 1108 "conditionAnalysis.ml" 40 1097 1111
+)
+"conditionAnalysis.ml" 41 1119 1140 "conditionAnalysis.ml" 41 1119 1144
+type(
+  Bound.t
+)
+ident(
+  int_ref high "conditionAnalysis.ml" 40 1097 1112 "conditionAnalysis.ml" 40 1097 1116
+)
+"conditionAnalysis.ml" 41 1119 1126 "conditionAnalysis.ml" 41 1119 1144
+call(
+  stack
+)
+type(
+  bool
+)
+"conditionAnalysis.ml" 42 1145 1162 "conditionAnalysis.ml" 42 1145 1165
+type(
+  Bound.t
+)
+ident(
+  int_ref low "conditionAnalysis.ml" 40 1097 1108 "conditionAnalysis.ml" 40 1097 1111
+)
+"conditionAnalysis.ml" 42 1145 1174 "conditionAnalysis.ml" 42 1145 1178
+type(
+  Bound.t
+)
+ident(
+  int_ref high "conditionAnalysis.ml" 40 1097 1112 "conditionAnalysis.ml" 40 1097 1116
+)
+"conditionAnalysis.ml" 42 1145 1154 "conditionAnalysis.ml" 42 1145 1180
+type(
+  t
+)
+"conditionAnalysis.ml" 43 1181 1190 "conditionAnalysis.ml" 43 1181 1195
+type(
+  exn -> t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"conditionAnalysis.ml" 43 1181 1196 "conditionAnalysis.ml" 43 1181 1202
+type(
+  exn
+)
+"conditionAnalysis.ml" 43 1181 1190 "conditionAnalysis.ml" 43 1181 1202
+type(
+  t
+)
+"conditionAnalysis.ml" 41 1119 1123 "conditionAnalysis.ml" 43 1181 1202
+type(
+  t
+)
+"conditionAnalysis.ml" 44 1203 1209 "conditionAnalysis.ml" 44 1203 1218
+type(
+  t
+)
+ident(
+  def unbounded "conditionAnalysis.ml" 45 1250 1252 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 44 1203 1221 "conditionAnalysis.ml" 44 1203 1225
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  int_ref make "conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+)
+"conditionAnalysis.ml" 44 1203 1226 "conditionAnalysis.ml" 44 1203 1237
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 44 1203 1238 "conditionAnalysis.ml" 44 1203 1249
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 44 1203 1221 "conditionAnalysis.ml" 44 1203 1249
+call(
+  stack
+)
+type(
+  t
+)
+"conditionAnalysis.ml" 45 1250 1256 "conditionAnalysis.ml" 45 1250 1269
+type(
+  Data.t -> t
+)
+ident(
+  def lower_bounded "conditionAnalysis.ml" 46 1306 1308 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 45 1250 1270 "conditionAnalysis.ml" 45 1250 1271
+type(
+  Data.t
+)
+ident(
+  def l "conditionAnalysis.ml" 45 1250 1274 "conditionAnalysis.ml" 45 1250 1305
+)
+"conditionAnalysis.ml" 45 1250 1274 "conditionAnalysis.ml" 45 1250 1278
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  int_ref make "conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+)
+"conditionAnalysis.ml" 45 1250 1291 "conditionAnalysis.ml" 45 1250 1292
+type(
+  Data.t
+)
+ident(
+  int_ref l "conditionAnalysis.ml" 45 1250 1270 "conditionAnalysis.ml" 45 1250 1271
+)
+"conditionAnalysis.ml" 45 1250 1279 "conditionAnalysis.ml" 45 1250 1293
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 45 1250 1294 "conditionAnalysis.ml" 45 1250 1305
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 45 1250 1274 "conditionAnalysis.ml" 45 1250 1305
+call(
+  tail
+)
+type(
+  t
+)
+"conditionAnalysis.ml" 46 1306 1312 "conditionAnalysis.ml" 46 1306 1325
+type(
+  Data.t -> t
+)
+ident(
+  def upper_bounded "conditionAnalysis.ml" 47 1362 1364 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 46 1306 1326 "conditionAnalysis.ml" 46 1306 1327
+type(
+  Data.t
+)
+ident(
+  def h "conditionAnalysis.ml" 46 1306 1330 "conditionAnalysis.ml" 46 1306 1361
+)
+"conditionAnalysis.ml" 46 1306 1330 "conditionAnalysis.ml" 46 1306 1334
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  int_ref make "conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+)
+"conditionAnalysis.ml" 46 1306 1335 "conditionAnalysis.ml" 46 1306 1346
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 46 1306 1359 "conditionAnalysis.ml" 46 1306 1360
+type(
+  Data.t
+)
+ident(
+  int_ref h "conditionAnalysis.ml" 46 1306 1326 "conditionAnalysis.ml" 46 1306 1327
+)
+"conditionAnalysis.ml" 46 1306 1347 "conditionAnalysis.ml" 46 1306 1361
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 46 1306 1330 "conditionAnalysis.ml" 46 1306 1361
+call(
+  tail
+)
+type(
+  t
+)
+"conditionAnalysis.ml" 47 1362 1368 "conditionAnalysis.ml" 47 1362 1375
+type(
+  Data.t -> Data.t -> t
+)
+ident(
+  def bounded "conditionAnalysis.ml" 48 1417 1419 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 47 1362 1376 "conditionAnalysis.ml" 47 1362 1377
+type(
+  Data.t
+)
+ident(
+  def l "conditionAnalysis.ml" 47 1362 1378 "conditionAnalysis.ml" 47 1362 1416
+)
+"conditionAnalysis.ml" 47 1362 1378 "conditionAnalysis.ml" 47 1362 1379
+type(
+  Data.t
+)
+ident(
+  def h "conditionAnalysis.ml" 47 1362 1382 "conditionAnalysis.ml" 47 1362 1416
+)
+"conditionAnalysis.ml" 47 1362 1382 "conditionAnalysis.ml" 47 1362 1386
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  int_ref make "conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+)
+"conditionAnalysis.ml" 47 1362 1399 "conditionAnalysis.ml" 47 1362 1400
+type(
+  Data.t
+)
+ident(
+  int_ref l "conditionAnalysis.ml" 47 1362 1376 "conditionAnalysis.ml" 47 1362 1377
+)
+"conditionAnalysis.ml" 47 1362 1387 "conditionAnalysis.ml" 47 1362 1401
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 47 1362 1414 "conditionAnalysis.ml" 47 1362 1415
+type(
+  Data.t
+)
+ident(
+  int_ref h "conditionAnalysis.ml" 47 1362 1378 "conditionAnalysis.ml" 47 1362 1379
+)
+"conditionAnalysis.ml" 47 1362 1402 "conditionAnalysis.ml" 47 1362 1416
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 47 1362 1382 "conditionAnalysis.ml" 47 1362 1416
+call(
+  tail
+)
+type(
+  t
+)
+"conditionAnalysis.ml" 48 1417 1423 "conditionAnalysis.ml" 48 1417 1432
+type(
+  Data.t -> t
+)
+ident(
+  def singleton "conditionAnalysis.ml" 49 1472 1474 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 48 1417 1433 "conditionAnalysis.ml" 48 1417 1434
+type(
+  Data.t
+)
+ident(
+  def x "conditionAnalysis.ml" 48 1417 1437 "conditionAnalysis.ml" 48 1417 1471
+)
+"conditionAnalysis.ml" 48 1417 1437 "conditionAnalysis.ml" 48 1417 1441
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  int_ref make "conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+)
+"conditionAnalysis.ml" 48 1417 1454 "conditionAnalysis.ml" 48 1417 1455
+type(
+  Data.t
+)
+ident(
+  int_ref x "conditionAnalysis.ml" 48 1417 1433 "conditionAnalysis.ml" 48 1417 1434
+)
+"conditionAnalysis.ml" 48 1417 1442 "conditionAnalysis.ml" 48 1417 1456
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 48 1417 1469 "conditionAnalysis.ml" 48 1417 1470
+type(
+  Data.t
+)
+ident(
+  int_ref x "conditionAnalysis.ml" 48 1417 1433 "conditionAnalysis.ml" 48 1417 1434
+)
+"conditionAnalysis.ml" 48 1417 1457 "conditionAnalysis.ml" 48 1417 1471
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 48 1417 1437 "conditionAnalysis.ml" 48 1417 1471
+call(
+  tail
+)
+type(
+  t
+)
+"conditionAnalysis.ml" 49 1472 1478 "conditionAnalysis.ml" 49 1472 1482
+type(
+  t -> t -> t
+)
+ident(
+  def join "conditionAnalysis.ml" 50 1544 1546 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 49 1472 1483 "conditionAnalysis.ml" 49 1472 1484
+type(
+  t
+)
+ident(
+  def a "conditionAnalysis.ml" 49 1472 1485 "conditionAnalysis.ml" 49 1472 1543
+)
+"conditionAnalysis.ml" 49 1472 1485 "conditionAnalysis.ml" 49 1472 1486
+type(
+  t
+)
+ident(
+  def b "conditionAnalysis.ml" 49 1472 1489 "conditionAnalysis.ml" 49 1472 1543
+)
+"conditionAnalysis.ml" 49 1472 1489 "conditionAnalysis.ml" 49 1472 1493
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  int_ref make "conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+)
+"conditionAnalysis.ml" 49 1472 1495 "conditionAnalysis.ml" 49 1472 1504
+type(
+  Bound.t -> Bound.t -> Bound.t
+)
+ident(
+  int_ref Bound.min "conditionAnalysis.ml" 26 658 664 "conditionAnalysis.ml" 26 658 667
+)
+"conditionAnalysis.ml" 49 1472 1505 "conditionAnalysis.ml" 49 1472 1506
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 49 1472 1483 "conditionAnalysis.ml" 49 1472 1484
+)
+"conditionAnalysis.ml" 49 1472 1505 "conditionAnalysis.ml" 49 1472 1510
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 49 1472 1511 "conditionAnalysis.ml" 49 1472 1512
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 49 1472 1485 "conditionAnalysis.ml" 49 1472 1486
+)
+"conditionAnalysis.ml" 49 1472 1511 "conditionAnalysis.ml" 49 1472 1516
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 49 1472 1494 "conditionAnalysis.ml" 49 1472 1517
+call(
+  stack
+)
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 49 1472 1519 "conditionAnalysis.ml" 49 1472 1528
+type(
+  Bound.t -> Bound.t -> Bound.t
+)
+ident(
+  int_ref Bound.max "conditionAnalysis.ml" 27 699 705 "conditionAnalysis.ml" 27 699 708
+)
+"conditionAnalysis.ml" 49 1472 1529 "conditionAnalysis.ml" 49 1472 1530
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 49 1472 1483 "conditionAnalysis.ml" 49 1472 1484
+)
+"conditionAnalysis.ml" 49 1472 1529 "conditionAnalysis.ml" 49 1472 1535
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 49 1472 1536 "conditionAnalysis.ml" 49 1472 1537
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 49 1472 1485 "conditionAnalysis.ml" 49 1472 1486
+)
+"conditionAnalysis.ml" 49 1472 1536 "conditionAnalysis.ml" 49 1472 1542
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 49 1472 1518 "conditionAnalysis.ml" 49 1472 1543
+call(
+  stack
+)
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 49 1472 1489 "conditionAnalysis.ml" 49 1472 1543
+call(
+  tail
+)
+type(
+  t
+)
+"conditionAnalysis.ml" 50 1544 1550 "conditionAnalysis.ml" 50 1544 1554
+type(
+  t -> t -> t
+)
+ident(
+  def meet "conditionAnalysis.ml" 51 1616 1618 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 50 1544 1555 "conditionAnalysis.ml" 50 1544 1556
+type(
+  t
+)
+ident(
+  def a "conditionAnalysis.ml" 50 1544 1557 "conditionAnalysis.ml" 50 1544 1615
+)
+"conditionAnalysis.ml" 50 1544 1557 "conditionAnalysis.ml" 50 1544 1558
+type(
+  t
+)
+ident(
+  def b "conditionAnalysis.ml" 50 1544 1561 "conditionAnalysis.ml" 50 1544 1615
+)
+"conditionAnalysis.ml" 50 1544 1561 "conditionAnalysis.ml" 50 1544 1565
+type(
+  Bound.t -> Bound.t -> t
+)
+ident(
+  int_ref make "conditionAnalysis.ml" 40 1097 1103 "conditionAnalysis.ml" 40 1097 1107
+)
+"conditionAnalysis.ml" 50 1544 1567 "conditionAnalysis.ml" 50 1544 1576
+type(
+  Bound.t -> Bound.t -> Bound.t
+)
+ident(
+  int_ref Bound.max "conditionAnalysis.ml" 27 699 705 "conditionAnalysis.ml" 27 699 708
+)
+"conditionAnalysis.ml" 50 1544 1577 "conditionAnalysis.ml" 50 1544 1578
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 50 1544 1555 "conditionAnalysis.ml" 50 1544 1556
+)
+"conditionAnalysis.ml" 50 1544 1577 "conditionAnalysis.ml" 50 1544 1582
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 50 1544 1583 "conditionAnalysis.ml" 50 1544 1584
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 50 1544 1557 "conditionAnalysis.ml" 50 1544 1558
+)
+"conditionAnalysis.ml" 50 1544 1583 "conditionAnalysis.ml" 50 1544 1588
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 50 1544 1566 "conditionAnalysis.ml" 50 1544 1589
+call(
+  stack
+)
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 50 1544 1591 "conditionAnalysis.ml" 50 1544 1600
+type(
+  Bound.t -> Bound.t -> Bound.t
+)
+ident(
+  int_ref Bound.min "conditionAnalysis.ml" 26 658 664 "conditionAnalysis.ml" 26 658 667
+)
+"conditionAnalysis.ml" 50 1544 1601 "conditionAnalysis.ml" 50 1544 1602
+type(
+  t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 50 1544 1555 "conditionAnalysis.ml" 50 1544 1556
+)
+"conditionAnalysis.ml" 50 1544 1601 "conditionAnalysis.ml" 50 1544 1607
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 50 1544 1608 "conditionAnalysis.ml" 50 1544 1609
+type(
+  t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 50 1544 1557 "conditionAnalysis.ml" 50 1544 1558
+)
+"conditionAnalysis.ml" 50 1544 1608 "conditionAnalysis.ml" 50 1544 1614
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 50 1544 1590 "conditionAnalysis.ml" 50 1544 1615
+call(
+  stack
+)
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 50 1544 1561 "conditionAnalysis.ml" 50 1544 1615
+call(
+  tail
+)
+type(
+  t
+)
+"conditionAnalysis.ml" 51 1616 1622 "conditionAnalysis.ml" 51 1616 1634
+type(
+  t -> bool
+)
+ident(
+  def is_unbounded "conditionAnalysis.ml" 52 1653 1655 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 51 1616 1635 "conditionAnalysis.ml" 51 1616 1636
+type(
+  t
+)
+ident(
+  def i "conditionAnalysis.ml" 51 1616 1639 "conditionAnalysis.ml" 51 1616 1652
+)
+"conditionAnalysis.ml" 51 1616 1639 "conditionAnalysis.ml" 51 1616 1640
+type(
+  t
+)
+ident(
+  int_ref i "conditionAnalysis.ml" 51 1616 1635 "conditionAnalysis.ml" 51 1616 1636
+)
+"conditionAnalysis.ml" 51 1616 1641 "conditionAnalysis.ml" 51 1616 1642
+type(
+  t -> t -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"conditionAnalysis.ml" 51 1616 1643 "conditionAnalysis.ml" 51 1616 1652
+type(
+  t
+)
+ident(
+  int_ref unbounded "conditionAnalysis.ml" 44 1203 1209 "conditionAnalysis.ml" 44 1203 1218
+)
+"conditionAnalysis.ml" 51 1616 1639 "conditionAnalysis.ml" 51 1616 1652
+type(
+  bool
+)
+"conditionAnalysis.ml" 52 1653 1659 "conditionAnalysis.ml" 52 1653 1672
+type(
+  t -> Data.t * Data.t
+)
+ident(
+  def to_data_range "conditionAnalysis.ml" 52 1653 1718 "conditionAnalysis.ml" 53 1719 1722
+)
+"conditionAnalysis.ml" 52 1653 1673 "conditionAnalysis.ml" 52 1653 1674
+type(
+  t
+)
+ident(
+  def i "conditionAnalysis.ml" 52 1653 1677 "conditionAnalysis.ml" 52 1653 1718
+)
+"conditionAnalysis.ml" 52 1653 1677 "conditionAnalysis.ml" 52 1653 1690
+type(
+  Bound.t -> Data.t
+)
+ident(
+  int_ref Bound.to_data "conditionAnalysis.ml" 28 740 746 "conditionAnalysis.ml" 28 740 753
+)
+"conditionAnalysis.ml" 52 1653 1691 "conditionAnalysis.ml" 52 1653 1692
+type(
+  t
+)
+ident(
+  int_ref i "conditionAnalysis.ml" 52 1653 1673 "conditionAnalysis.ml" 52 1653 1674
+)
+"conditionAnalysis.ml" 52 1653 1691 "conditionAnalysis.ml" 52 1653 1696
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 52 1653 1677 "conditionAnalysis.ml" 52 1653 1696
+call(
+  stack
+)
+type(
+  Data.t
+)
+"conditionAnalysis.ml" 52 1653 1698 "conditionAnalysis.ml" 52 1653 1711
+type(
+  Bound.t -> Data.t
+)
+ident(
+  int_ref Bound.to_data "conditionAnalysis.ml" 28 740 746 "conditionAnalysis.ml" 28 740 753
+)
+"conditionAnalysis.ml" 52 1653 1712 "conditionAnalysis.ml" 52 1653 1713
+type(
+  t
+)
+ident(
+  int_ref i "conditionAnalysis.ml" 52 1653 1673 "conditionAnalysis.ml" 52 1653 1674
+)
+"conditionAnalysis.ml" 52 1653 1712 "conditionAnalysis.ml" 52 1653 1718
+type(
+  Bound.t
+)
+"conditionAnalysis.ml" 52 1653 1698 "conditionAnalysis.ml" 52 1653 1718
+call(
+  stack
+)
+type(
+  Data.t
+)
+"conditionAnalysis.ml" 52 1653 1677 "conditionAnalysis.ml" 52 1653 1718
+type(
+  Data.t * Data.t
+)
+"conditionAnalysis.ml" 58 1836 1842 "conditionAnalysis.ml" 58 1836 1849
+type(
+  t -> t -> int
+)
+ident(
+  def compare "conditionAnalysis.ml" 59 1897 1899 "conditionAnalysis.ml" 83 2733 2736
+)
+"conditionAnalysis.ml" 58 1836 1856 "conditionAnalysis.ml" 58 1836 1858
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 58 1836 1860 "conditionAnalysis.ml" 58 1836 1896
+)
+"conditionAnalysis.ml" 58 1836 1850 "conditionAnalysis.ml" 58 1836 1859
+type(
+  t
+)
+"conditionAnalysis.ml" 58 1836 1866 "conditionAnalysis.ml" 58 1836 1868
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 58 1836 1872 "conditionAnalysis.ml" 58 1836 1896
+)
+"conditionAnalysis.ml" 58 1836 1860 "conditionAnalysis.ml" 58 1836 1869
+type(
+  t
+)
+"conditionAnalysis.ml" 58 1836 1872 "conditionAnalysis.ml" 58 1836 1890
+type(
+  Cabs.expression -> Cabs.expression -> int
+)
+ident(
+  ext_ref Pervasives.compare
+)
+"conditionAnalysis.ml" 58 1836 1891 "conditionAnalysis.ml" 58 1836 1893
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 58 1836 1856 "conditionAnalysis.ml" 58 1836 1858
+)
+"conditionAnalysis.ml" 58 1836 1894 "conditionAnalysis.ml" 58 1836 1896
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 58 1836 1866 "conditionAnalysis.ml" 58 1836 1868
+)
+"conditionAnalysis.ml" 58 1836 1872 "conditionAnalysis.ml" 58 1836 1896
+type(
+  int
+)
+"conditionAnalysis.ml" 59 1897 1903 "conditionAnalysis.ml" 59 1897 1907
+type(
+  Cabs.expression -> t
+)
+ident(
+  def make "conditionAnalysis.ml" 82 2706 2708 "conditionAnalysis.ml" 83 2733 2736
+)
+"conditionAnalysis.ml" 59 1897 1908 "conditionAnalysis.ml" 59 1897 1912
+type(
+  Cabs.expression
+)
+ident(
+  def expr "conditionAnalysis.ml" 60 1915 1919 "conditionAnalysis.ml" 81 2679 2705
+)
+"conditionAnalysis.ml" 60 1915 1927 "conditionAnalysis.ml" 60 1915 1937
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  def annot_free "conditionAnalysis.ml" 60 1915 1919 "conditionAnalysis.ml" 81 2679 2705
+)
+"conditionAnalysis.ml" 60 1915 1938 "conditionAnalysis.ml" 60 1915 1942
+type(
+  Cabs.expression
+)
+ident(
+  def expr "conditionAnalysis.ml" 61 1945 1951 "conditionAnalysis.ml" 79 2638 2671
+)
+"conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  def rf "conditionAnalysis.ml" 62 1974 1980 "conditionAnalysis.ml" 79 2638 2671
+)
+"conditionAnalysis.ml" 61 1945 1960 "conditionAnalysis.ml" 61 1945 1970
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref annot_free "conditionAnalysis.ml" 60 1915 1927 "conditionAnalysis.ml" 60 1915 1937
+)
+"conditionAnalysis.ml" 63 1997 2009 "conditionAnalysis.ml" 63 1997 2013
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 60 1915 1938 "conditionAnalysis.ml" 60 1915 1942
+)
+"conditionAnalysis.ml" 64 2019 2027 "conditionAnalysis.ml" 64 2019 2034
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 64 2019 2038 "conditionAnalysis.ml" 64 2019 2045
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 65 2046 2061 "conditionAnalysis.ml" 65 2046 2062
+type(
+  Cabs.unary_operator
+)
+ident(
+  def o "conditionAnalysis.ml" 65 2046 2069 "conditionAnalysis.ml" 65 2046 2083
+)
+"conditionAnalysis.ml" 65 2046 2063 "conditionAnalysis.ml" 65 2046 2064
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 65 2046 2069 "conditionAnalysis.ml" 65 2046 2083
+)
+"conditionAnalysis.ml" 65 2046 2054 "conditionAnalysis.ml" 65 2046 2065
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 65 2046 2076 "conditionAnalysis.ml" 65 2046 2077
+type(
+  Cabs.unary_operator
+)
+ident(
+  int_ref o "conditionAnalysis.ml" 65 2046 2061 "conditionAnalysis.ml" 65 2046 2062
+)
+"conditionAnalysis.ml" 65 2046 2078 "conditionAnalysis.ml" 65 2046 2080
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 65 2046 2081 "conditionAnalysis.ml" 65 2046 2082
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 65 2046 2063 "conditionAnalysis.ml" 65 2046 2064
+)
+"conditionAnalysis.ml" 65 2046 2078 "conditionAnalysis.ml" 65 2046 2082
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 65 2046 2069 "conditionAnalysis.ml" 65 2046 2083
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 66 2084 2100 "conditionAnalysis.ml" 66 2084 2101
+type(
+  Cabs.binary_operator
+)
+ident(
+  def o "conditionAnalysis.ml" 66 2084 2112 "conditionAnalysis.ml" 66 2084 2134
+)
+"conditionAnalysis.ml" 66 2084 2102 "conditionAnalysis.ml" 66 2084 2104
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 66 2084 2112 "conditionAnalysis.ml" 66 2084 2134
+)
+"conditionAnalysis.ml" 66 2084 2105 "conditionAnalysis.ml" 66 2084 2107
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 66 2084 2112 "conditionAnalysis.ml" 66 2084 2134
+)
+"conditionAnalysis.ml" 66 2084 2092 "conditionAnalysis.ml" 66 2084 2108
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 66 2084 2120 "conditionAnalysis.ml" 66 2084 2121
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref o "conditionAnalysis.ml" 66 2084 2100 "conditionAnalysis.ml" 66 2084 2101
+)
+"conditionAnalysis.ml" 66 2084 2122 "conditionAnalysis.ml" 66 2084 2124
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 66 2084 2125 "conditionAnalysis.ml" 66 2084 2127
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 66 2084 2102 "conditionAnalysis.ml" 66 2084 2104
+)
+"conditionAnalysis.ml" 66 2084 2122 "conditionAnalysis.ml" 66 2084 2127
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 66 2084 2128 "conditionAnalysis.ml" 66 2084 2130
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 66 2084 2131 "conditionAnalysis.ml" 66 2084 2133
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 66 2084 2105 "conditionAnalysis.ml" 66 2084 2107
+)
+"conditionAnalysis.ml" 66 2084 2128 "conditionAnalysis.ml" 66 2084 2133
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 66 2084 2112 "conditionAnalysis.ml" 66 2084 2134
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 67 2135 2153 "conditionAnalysis.ml" 67 2135 2155
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 67 2135 2166 "conditionAnalysis.ml" 67 2135 2194
+)
+"conditionAnalysis.ml" 67 2135 2156 "conditionAnalysis.ml" 67 2135 2158
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 67 2135 2166 "conditionAnalysis.ml" 67 2135 2194
+)
+"conditionAnalysis.ml" 67 2135 2159 "conditionAnalysis.ml" 67 2135 2161
+type(
+  Cabs.expression
+)
+ident(
+  def e3 "conditionAnalysis.ml" 67 2135 2166 "conditionAnalysis.ml" 67 2135 2194
+)
+"conditionAnalysis.ml" 67 2135 2143 "conditionAnalysis.ml" 67 2135 2162
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 67 2135 2176 "conditionAnalysis.ml" 67 2135 2178
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 67 2135 2179 "conditionAnalysis.ml" 67 2135 2181
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 67 2135 2153 "conditionAnalysis.ml" 67 2135 2155
+)
+"conditionAnalysis.ml" 67 2135 2176 "conditionAnalysis.ml" 67 2135 2181
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 67 2135 2182 "conditionAnalysis.ml" 67 2135 2184
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 67 2135 2185 "conditionAnalysis.ml" 67 2135 2187
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 67 2135 2156 "conditionAnalysis.ml" 67 2135 2158
+)
+"conditionAnalysis.ml" 67 2135 2182 "conditionAnalysis.ml" 67 2135 2187
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 67 2135 2188 "conditionAnalysis.ml" 67 2135 2190
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 67 2135 2191 "conditionAnalysis.ml" 67 2135 2193
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e3 "conditionAnalysis.ml" 67 2135 2159 "conditionAnalysis.ml" 67 2135 2161
+)
+"conditionAnalysis.ml" 67 2135 2188 "conditionAnalysis.ml" 67 2135 2193
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 67 2135 2166 "conditionAnalysis.ml" 67 2135 2194
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 68 2195 2209 "conditionAnalysis.ml" 68 2195 2210
+type(
+  Cabs.base_type
+)
+ident(
+  def t "conditionAnalysis.ml" 68 2195 2217 "conditionAnalysis.ml" 68 2195 2230
+)
+"conditionAnalysis.ml" 68 2195 2211 "conditionAnalysis.ml" 68 2195 2212
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 68 2195 2217 "conditionAnalysis.ml" 68 2195 2230
+)
+"conditionAnalysis.ml" 68 2195 2203 "conditionAnalysis.ml" 68 2195 2213
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 68 2195 2223 "conditionAnalysis.ml" 68 2195 2224
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref t "conditionAnalysis.ml" 68 2195 2209 "conditionAnalysis.ml" 68 2195 2210
+)
+"conditionAnalysis.ml" 68 2195 2225 "conditionAnalysis.ml" 68 2195 2227
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 68 2195 2228 "conditionAnalysis.ml" 68 2195 2229
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 68 2195 2211 "conditionAnalysis.ml" 68 2195 2212
+)
+"conditionAnalysis.ml" 68 2195 2225 "conditionAnalysis.ml" 68 2195 2229
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 68 2195 2217 "conditionAnalysis.ml" 68 2195 2230
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 69 2231 2245 "conditionAnalysis.ml" 69 2231 2246
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 69 2231 2256 "conditionAnalysis.ml" 69 2231 2284
+)
+"conditionAnalysis.ml" 69 2231 2247 "conditionAnalysis.ml" 69 2231 2251
+type(
+  Cabs.expression list
+)
+ident(
+  def args "conditionAnalysis.ml" 69 2231 2256 "conditionAnalysis.ml" 69 2231 2284
+)
+"conditionAnalysis.ml" 69 2231 2239 "conditionAnalysis.ml" 69 2231 2252
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 69 2231 2261 "conditionAnalysis.ml" 69 2231 2263
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 69 2231 2264 "conditionAnalysis.ml" 69 2231 2265
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 69 2231 2245 "conditionAnalysis.ml" 69 2231 2246
+)
+"conditionAnalysis.ml" 69 2231 2261 "conditionAnalysis.ml" 69 2231 2265
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 69 2231 2267 "conditionAnalysis.ml" 69 2231 2275
+type(
+  (Cabs.expression -> Cabs.expression) ->
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  ext_ref List.map
+)
+"conditionAnalysis.ml" 69 2231 2276 "conditionAnalysis.ml" 69 2231 2278
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 69 2231 2279 "conditionAnalysis.ml" 69 2231 2283
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref args "conditionAnalysis.ml" 69 2231 2247 "conditionAnalysis.ml" 69 2231 2251
+)
+"conditionAnalysis.ml" 69 2231 2267 "conditionAnalysis.ml" 69 2231 2283
+call(
+  stack
+)
+type(
+  Cabs.expression list
+)
+"conditionAnalysis.ml" 69 2231 2256 "conditionAnalysis.ml" 69 2231 2284
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 70 2285 2302 "conditionAnalysis.ml" 70 2285 2303
+type(
+  Cabs.constant
+)
+"conditionAnalysis.ml" 70 2285 2293 "conditionAnalysis.ml" 70 2285 2303
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 70 2285 2307 "conditionAnalysis.ml" 70 2285 2311
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 60 1915 1938 "conditionAnalysis.ml" 60 1915 1942
+)
+"conditionAnalysis.ml" 71 2312 2326 "conditionAnalysis.ml" 71 2312 2328
+type(
+  Cabs.expression list
+)
+ident(
+  def el "conditionAnalysis.ml" 71 2312 2332 "conditionAnalysis.ml" 71 2312 2354
+)
+"conditionAnalysis.ml" 71 2312 2320 "conditionAnalysis.ml" 71 2312 2328
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 71 2312 2339 "conditionAnalysis.ml" 71 2312 2347
+type(
+  (Cabs.expression -> Cabs.expression) ->
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  ext_ref List.map
+)
+"conditionAnalysis.ml" 71 2312 2348 "conditionAnalysis.ml" 71 2312 2350
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 71 2312 2351 "conditionAnalysis.ml" 71 2312 2353
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref el "conditionAnalysis.ml" 71 2312 2326 "conditionAnalysis.ml" 71 2312 2328
+)
+"conditionAnalysis.ml" 71 2312 2338 "conditionAnalysis.ml" 71 2312 2354
+call(
+  stack
+)
+type(
+  Cabs.expression list
+)
+"conditionAnalysis.ml" 71 2312 2332 "conditionAnalysis.ml" 71 2312 2354
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 72 2355 2375 "conditionAnalysis.ml" 72 2355 2376
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 72 2355 2380 "conditionAnalysis.ml" 72 2355 2398
+)
+"conditionAnalysis.ml" 72 2355 2363 "conditionAnalysis.ml" 72 2355 2376
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 72 2355 2393 "conditionAnalysis.ml" 72 2355 2395
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 72 2355 2396 "conditionAnalysis.ml" 72 2355 2397
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 72 2355 2375 "conditionAnalysis.ml" 72 2355 2376
+)
+"conditionAnalysis.ml" 72 2355 2392 "conditionAnalysis.ml" 72 2355 2398
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 72 2355 2380 "conditionAnalysis.ml" 72 2355 2398
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 73 2399 2416 "conditionAnalysis.ml" 73 2399 2417
+type(
+  string
+)
+"conditionAnalysis.ml" 73 2399 2407 "conditionAnalysis.ml" 73 2399 2417
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 73 2399 2421 "conditionAnalysis.ml" 73 2399 2425
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 60 1915 1938 "conditionAnalysis.ml" 60 1915 1942
+)
+"conditionAnalysis.ml" 74 2426 2446 "conditionAnalysis.ml" 74 2426 2447
+type(
+  Cabs.base_type
+)
+"conditionAnalysis.ml" 74 2426 2434 "conditionAnalysis.ml" 74 2426 2447
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 74 2426 2451 "conditionAnalysis.ml" 74 2426 2455
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 60 1915 1938 "conditionAnalysis.ml" 60 1915 1942
+)
+"conditionAnalysis.ml" 75 2456 2471 "conditionAnalysis.ml" 75 2456 2473
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 75 2456 2481 "conditionAnalysis.ml" 75 2456 2500
+)
+"conditionAnalysis.ml" 75 2456 2474 "conditionAnalysis.ml" 75 2456 2476
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 75 2456 2481 "conditionAnalysis.ml" 75 2456 2500
+)
+"conditionAnalysis.ml" 75 2456 2464 "conditionAnalysis.ml" 75 2456 2477
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 75 2456 2488 "conditionAnalysis.ml" 75 2456 2490
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 75 2456 2491 "conditionAnalysis.ml" 75 2456 2493
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 75 2456 2471 "conditionAnalysis.ml" 75 2456 2473
+)
+"conditionAnalysis.ml" 75 2456 2488 "conditionAnalysis.ml" 75 2456 2493
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 75 2456 2494 "conditionAnalysis.ml" 75 2456 2496
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 75 2456 2497 "conditionAnalysis.ml" 75 2456 2499
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 75 2456 2474 "conditionAnalysis.ml" 75 2456 2476
+)
+"conditionAnalysis.ml" 75 2456 2494 "conditionAnalysis.ml" 75 2456 2499
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 75 2456 2481 "conditionAnalysis.ml" 75 2456 2500
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 76 2501 2519 "conditionAnalysis.ml" 76 2501 2520
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 76 2501 2527 "conditionAnalysis.ml" 76 2501 2544
+)
+"conditionAnalysis.ml" 76 2501 2521 "conditionAnalysis.ml" 76 2501 2522
+type(
+  string
+)
+ident(
+  def m "conditionAnalysis.ml" 76 2501 2527 "conditionAnalysis.ml" 76 2501 2544
+)
+"conditionAnalysis.ml" 76 2501 2509 "conditionAnalysis.ml" 76 2501 2523
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 76 2501 2537 "conditionAnalysis.ml" 76 2501 2539
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 76 2501 2540 "conditionAnalysis.ml" 76 2501 2541
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 76 2501 2519 "conditionAnalysis.ml" 76 2501 2520
+)
+"conditionAnalysis.ml" 76 2501 2537 "conditionAnalysis.ml" 76 2501 2541
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 76 2501 2542 "conditionAnalysis.ml" 76 2501 2543
+type(
+  string
+)
+ident(
+  int_ref m "conditionAnalysis.ml" 76 2501 2521 "conditionAnalysis.ml" 76 2501 2522
+)
+"conditionAnalysis.ml" 76 2501 2527 "conditionAnalysis.ml" 76 2501 2544
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 77 2545 2566 "conditionAnalysis.ml" 77 2545 2567
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 77 2545 2574 "conditionAnalysis.ml" 77 2545 2594
+)
+"conditionAnalysis.ml" 77 2545 2568 "conditionAnalysis.ml" 77 2545 2569
+type(
+  string
+)
+ident(
+  def m "conditionAnalysis.ml" 77 2545 2574 "conditionAnalysis.ml" 77 2545 2594
+)
+"conditionAnalysis.ml" 77 2545 2553 "conditionAnalysis.ml" 77 2545 2570
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 77 2545 2587 "conditionAnalysis.ml" 77 2545 2589
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 77 2545 2590 "conditionAnalysis.ml" 77 2545 2591
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 77 2545 2566 "conditionAnalysis.ml" 77 2545 2567
+)
+"conditionAnalysis.ml" 77 2545 2587 "conditionAnalysis.ml" 77 2545 2591
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 77 2545 2592 "conditionAnalysis.ml" 77 2545 2593
+type(
+  string
+)
+ident(
+  int_ref m "conditionAnalysis.ml" 77 2545 2568 "conditionAnalysis.ml" 77 2545 2569
+)
+"conditionAnalysis.ml" 77 2545 2574 "conditionAnalysis.ml" 77 2545 2594
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 78 2595 2612 "conditionAnalysis.ml" 78 2595 2613
+type(
+  Cabs.body
+)
+"conditionAnalysis.ml" 78 2595 2603 "conditionAnalysis.ml" 78 2595 2613
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 78 2595 2617 "conditionAnalysis.ml" 78 2595 2625
+type(
+  string -> Cabs.expression
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"conditionAnalysis.ml" 78 2595 2626 "conditionAnalysis.ml" 78 2595 2637
+type(
+  string
+)
+"conditionAnalysis.ml" 78 2595 2617 "conditionAnalysis.ml" 78 2595 2637
+call(
+  tail
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 79 2638 2657 "conditionAnalysis.ml" 79 2638 2658
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 79 2638 2667 "conditionAnalysis.ml" 79 2638 2671
+)
+"conditionAnalysis.ml" 79 2638 2659 "conditionAnalysis.ml" 79 2638 2660
+type(
+  string
+)
+"conditionAnalysis.ml" 79 2638 2661 "conditionAnalysis.ml" 79 2638 2662
+type(
+  int
+)
+"conditionAnalysis.ml" 79 2638 2646 "conditionAnalysis.ml" 79 2638 2663
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 79 2638 2667 "conditionAnalysis.ml" 79 2638 2669
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref rf "conditionAnalysis.ml" 61 1945 1955 "conditionAnalysis.ml" 61 1945 1957
+)
+"conditionAnalysis.ml" 79 2638 2670 "conditionAnalysis.ml" 79 2638 2671
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 79 2638 2657 "conditionAnalysis.ml" 79 2638 2658
+)
+"conditionAnalysis.ml" 79 2638 2667 "conditionAnalysis.ml" 79 2638 2671
+call(
+  tail
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 63 1997 2003 "conditionAnalysis.ml" 79 2638 2671
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 61 1945 1951 "conditionAnalysis.ml" 79 2638 2671
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 81 2679 2689 "conditionAnalysis.ml" 81 2679 2699
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref annot_free "conditionAnalysis.ml" 60 1915 1927 "conditionAnalysis.ml" 60 1915 1937
+)
+"conditionAnalysis.ml" 81 2679 2700 "conditionAnalysis.ml" 81 2679 2704
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 59 1897 1908 "conditionAnalysis.ml" 59 1897 1912
+)
+"conditionAnalysis.ml" 81 2679 2688 "conditionAnalysis.ml" 81 2679 2705
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 81 2679 2683 "conditionAnalysis.ml" 81 2679 2705
+type(
+  t
+)
+"conditionAnalysis.ml" 60 1915 1919 "conditionAnalysis.ml" 81 2679 2705
+type(
+  t
+)
+"conditionAnalysis.ml" 82 2706 2712 "conditionAnalysis.ml" 82 2706 2719
+type(
+  t -> Cabs.expression
+)
+ident(
+  def to_cabs "conditionAnalysis.ml" 82 2706 2732 "conditionAnalysis.ml" 83 2733 2736
+)
+"conditionAnalysis.ml" 82 2706 2726 "conditionAnalysis.ml" 82 2706 2727
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 82 2706 2731 "conditionAnalysis.ml" 82 2706 2732
+)
+"conditionAnalysis.ml" 82 2706 2720 "conditionAnalysis.ml" 82 2706 2728
+type(
+  t
+)
+"conditionAnalysis.ml" 82 2706 2731 "conditionAnalysis.ml" 82 2706 2732
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 82 2706 2726 "conditionAnalysis.ml" 82 2706 2727
+)
+"conditionAnalysis.ml" 85 2738 2755 "conditionAnalysis.ml" 85 2738 2770
+call(
+  stack
+)
+"conditionAnalysis.ml" 92 2924 2930 "conditionAnalysis.ml" 92 2924 2933
+type(
+  'a ExprMap.t
+)
+ident(
+  def top "conditionAnalysis.ml" 93 2950 2952 "conditionAnalysis.ml" 108 3461 3464
+)
+"conditionAnalysis.ml" 92 2924 2936 "conditionAnalysis.ml" 92 2924 2949
+type(
+  'a ExprMap.t
+)
+ident(
+  ext_ref ExprMap.empty
+)
+"conditionAnalysis.ml" 93 2950 2956 "conditionAnalysis.ml" 93 2950 2966
+type(
+  ExprMap.key -> 'b -> 'b ExprMap.t
+)
+ident(
+  def expr_bound "conditionAnalysis.ml" 94 2993 2995 "conditionAnalysis.ml" 108 3461 3464
+)
+"conditionAnalysis.ml" 93 2950 2967 "conditionAnalysis.ml" 93 2950 2968
+type(
+  ExprMap.key
+)
+ident(
+  def e "conditionAnalysis.ml" 93 2950 2969 "conditionAnalysis.ml" 93 2950 2992
+)
+"conditionAnalysis.ml" 93 2950 2969 "conditionAnalysis.ml" 93 2950 2970
+type(
+  'b
+)
+ident(
+  def i "conditionAnalysis.ml" 93 2950 2973 "conditionAnalysis.ml" 93 2950 2992
+)
+"conditionAnalysis.ml" 93 2950 2973 "conditionAnalysis.ml" 93 2950 2984
+type(
+  ExprMap.key -> 'b -> 'b ExprMap.t -> 'b ExprMap.t
+)
+ident(
+  ext_ref ExprMap.add
+)
+"conditionAnalysis.ml" 93 2950 2985 "conditionAnalysis.ml" 93 2950 2986
+type(
+  ExprMap.key
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 93 2950 2967 "conditionAnalysis.ml" 93 2950 2968
+)
+"conditionAnalysis.ml" 93 2950 2987 "conditionAnalysis.ml" 93 2950 2988
+type(
+  'b
+)
+ident(
+  int_ref i "conditionAnalysis.ml" 93 2950 2969 "conditionAnalysis.ml" 93 2950 2970
+)
+"conditionAnalysis.ml" 93 2950 2989 "conditionAnalysis.ml" 93 2950 2992
+type(
+  'b ExprMap.t
+)
+ident(
+  int_ref top "conditionAnalysis.ml" 92 2924 2930 "conditionAnalysis.ml" 92 2924 2933
+)
+"conditionAnalysis.ml" 93 2950 2973 "conditionAnalysis.ml" 93 2950 2992
+call(
+  tail
+)
+type(
+  'b ExprMap.t
+)
+"conditionAnalysis.ml" 94 2993 2999 "conditionAnalysis.ml" 94 2993 3003
+type(
+  Interval.t ExprMap.t -> Interval.t ExprMap.t -> Interval.t ExprMap.t
+)
+ident(
+  def meet "conditionAnalysis.ml" 100 3200 3202 "conditionAnalysis.ml" 108 3461 3464
+)
+"conditionAnalysis.ml" 94 2993 3004 "conditionAnalysis.ml" 94 2993 3005
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  def a "conditionAnalysis.ml" 94 2993 3006 "conditionAnalysis.ml" 99 3167 3199
+)
+"conditionAnalysis.ml" 94 2993 3006 "conditionAnalysis.ml" 94 2993 3007
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  def b "conditionAnalysis.ml" 95 3010 3014 "conditionAnalysis.ml" 99 3167 3199
+)
+"conditionAnalysis.ml" 95 3010 3014 "conditionAnalysis.ml" 95 3010 3027
+type(
+  (ExprMap.key -> Interval.t option -> Interval.t option -> Interval.t option) ->
+  Interval.t ExprMap.t -> Interval.t ExprMap.t -> Interval.t ExprMap.t
+)
+ident(
+  ext_ref ExprMap.merge
+)
+"conditionAnalysis.ml" 95 3010 3033 "conditionAnalysis.ml" 95 3010 3034
+type(
+  ExprMap.key
+)
+"conditionAnalysis.ml" 95 3010 3035 "conditionAnalysis.ml" 95 3010 3038
+type(
+  Interval.t option
+)
+ident(
+  def oia "conditionAnalysis.ml" 95 3010 3039 "conditionAnalysis.ml" 99 3167 3194
+)
+"conditionAnalysis.ml" 95 3010 3039 "conditionAnalysis.ml" 95 3010 3042
+type(
+  Interval.t option
+)
+ident(
+  def oib "conditionAnalysis.ml" 95 3010 3046 "conditionAnalysis.ml" 99 3167 3194
+)
+"conditionAnalysis.ml" 95 3010 3052 "conditionAnalysis.ml" 95 3010 3055
+type(
+  Interval.t option
+)
+ident(
+  int_ref oia "conditionAnalysis.ml" 95 3010 3035 "conditionAnalysis.ml" 95 3010 3038
+)
+"conditionAnalysis.ml" 95 3010 3057 "conditionAnalysis.ml" 95 3010 3060
+type(
+  Interval.t option
+)
+ident(
+  int_ref oib "conditionAnalysis.ml" 95 3010 3039 "conditionAnalysis.ml" 95 3010 3042
+)
+"conditionAnalysis.ml" 95 3010 3052 "conditionAnalysis.ml" 95 3010 3060
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 96 3066 3077 "conditionAnalysis.ml" 96 3066 3078
+type(
+  Interval.t
+)
+ident(
+  def i "conditionAnalysis.ml" 97 3085 3107 "conditionAnalysis.ml" 97 3085 3113
+)
+"conditionAnalysis.ml" 96 3066 3072 "conditionAnalysis.ml" 96 3066 3078
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 96 3066 3080 "conditionAnalysis.ml" 96 3066 3084
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 96 3066 3072 "conditionAnalysis.ml" 96 3066 3084
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 97 3085 3091 "conditionAnalysis.ml" 97 3085 3095
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 97 3085 3102 "conditionAnalysis.ml" 97 3085 3103
+type(
+  Interval.t
+)
+ident(
+  def i "conditionAnalysis.ml" 97 3085 3107 "conditionAnalysis.ml" 97 3085 3113
+)
+"conditionAnalysis.ml" 97 3085 3097 "conditionAnalysis.ml" 97 3085 3103
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 97 3085 3091 "conditionAnalysis.ml" 97 3085 3103
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 96 3066 3072 "conditionAnalysis.ml" 97 3085 3103
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 97 3085 3112 "conditionAnalysis.ml" 97 3085 3113
+type(
+  Interval.t
+)
+ident(
+  int_ref i "conditionAnalysis.ml" 96 3066 3077 "conditionAnalysis.ml" 96 3066 3078
+)
+"conditionAnalysis.ml" 97 3085 3107 "conditionAnalysis.ml" 97 3085 3113
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 98 3114 3125 "conditionAnalysis.ml" 98 3114 3127
+type(
+  Interval.t
+)
+ident(
+  def ia "conditionAnalysis.ml" 98 3114 3140 "conditionAnalysis.ml" 98 3114 3166
+)
+"conditionAnalysis.ml" 98 3114 3120 "conditionAnalysis.ml" 98 3114 3127
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 98 3114 3134 "conditionAnalysis.ml" 98 3114 3136
+type(
+  Interval.t
+)
+ident(
+  def ib "conditionAnalysis.ml" 98 3114 3140 "conditionAnalysis.ml" 98 3114 3166
+)
+"conditionAnalysis.ml" 98 3114 3129 "conditionAnalysis.ml" 98 3114 3136
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 98 3114 3120 "conditionAnalysis.ml" 98 3114 3136
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 98 3114 3146 "conditionAnalysis.ml" 98 3114 3159
+type(
+  Interval.t -> Interval.t -> Interval.t
+)
+ident(
+  int_ref Interval.meet "conditionAnalysis.ml" 50 1544 1550 "conditionAnalysis.ml" 50 1544 1554
+)
+"conditionAnalysis.ml" 98 3114 3160 "conditionAnalysis.ml" 98 3114 3162
+type(
+  Interval.t
+)
+ident(
+  int_ref ia "conditionAnalysis.ml" 98 3114 3125 "conditionAnalysis.ml" 98 3114 3127
+)
+"conditionAnalysis.ml" 98 3114 3163 "conditionAnalysis.ml" 98 3114 3165
+type(
+  Interval.t
+)
+ident(
+  int_ref ib "conditionAnalysis.ml" 98 3114 3134 "conditionAnalysis.ml" 98 3114 3136
+)
+"conditionAnalysis.ml" 98 3114 3145 "conditionAnalysis.ml" 98 3114 3166
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 98 3114 3140 "conditionAnalysis.ml" 98 3114 3166
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 99 3167 3173 "conditionAnalysis.ml" 99 3167 3174
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 99 3167 3178 "conditionAnalysis.ml" 99 3167 3186
+type(
+  string -> Interval.t option
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"conditionAnalysis.ml" 99 3167 3187 "conditionAnalysis.ml" 99 3167 3194
+type(
+  string
+)
+"conditionAnalysis.ml" 99 3167 3178 "conditionAnalysis.ml" 99 3167 3194
+call(
+  tail
+)
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 95 3010 3046 "conditionAnalysis.ml" 99 3167 3194
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 95 3010 3028 "conditionAnalysis.ml" 99 3167 3195
+type(
+  ExprMap.key -> Interval.t option -> Interval.t option -> Interval.t option
+)
+"conditionAnalysis.ml" 99 3167 3196 "conditionAnalysis.ml" 99 3167 3197
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 94 2993 3004 "conditionAnalysis.ml" 94 2993 3005
+)
+"conditionAnalysis.ml" 99 3167 3198 "conditionAnalysis.ml" 99 3167 3199
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 94 2993 3006 "conditionAnalysis.ml" 94 2993 3007
+)
+"conditionAnalysis.ml" 95 3010 3014 "conditionAnalysis.ml" 99 3167 3199
+call(
+  tail
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 100 3200 3206 "conditionAnalysis.ml" 100 3200 3210
+type(
+  Interval.t ExprMap.t -> Interval.t ExprMap.t -> Interval.t ExprMap.t
+)
+ident(
+  def join "conditionAnalysis.ml" 107 3435 3437 "conditionAnalysis.ml" 108 3461 3464
+)
+"conditionAnalysis.ml" 100 3200 3211 "conditionAnalysis.ml" 100 3200 3212
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  def a "conditionAnalysis.ml" 100 3200 3213 "conditionAnalysis.ml" 106 3373 3434
+)
+"conditionAnalysis.ml" 100 3200 3213 "conditionAnalysis.ml" 100 3200 3214
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  def b "conditionAnalysis.ml" 101 3217 3221 "conditionAnalysis.ml" 106 3373 3434
+)
+"conditionAnalysis.ml" 101 3217 3221 "conditionAnalysis.ml" 101 3217 3234
+type(
+  (ExprMap.key -> Interval.t option -> Interval.t option -> Interval.t option) ->
+  Interval.t ExprMap.t -> Interval.t ExprMap.t -> Interval.t ExprMap.t
+)
+ident(
+  ext_ref ExprMap.merge
+)
+"conditionAnalysis.ml" 101 3217 3240 "conditionAnalysis.ml" 101 3217 3241
+type(
+  ExprMap.key
+)
+"conditionAnalysis.ml" 101 3217 3242 "conditionAnalysis.ml" 101 3217 3245
+type(
+  Interval.t option
+)
+ident(
+  def oia "conditionAnalysis.ml" 101 3217 3246 "conditionAnalysis.ml" 106 3373 3429
+)
+"conditionAnalysis.ml" 101 3217 3246 "conditionAnalysis.ml" 101 3217 3249
+type(
+  Interval.t option
+)
+ident(
+  def oib "conditionAnalysis.ml" 101 3217 3253 "conditionAnalysis.ml" 106 3373 3429
+)
+"conditionAnalysis.ml" 101 3217 3259 "conditionAnalysis.ml" 101 3217 3262
+type(
+  Interval.t option
+)
+ident(
+  int_ref oia "conditionAnalysis.ml" 101 3217 3242 "conditionAnalysis.ml" 101 3217 3245
+)
+"conditionAnalysis.ml" 101 3217 3264 "conditionAnalysis.ml" 101 3217 3267
+type(
+  Interval.t option
+)
+ident(
+  int_ref oib "conditionAnalysis.ml" 101 3217 3246 "conditionAnalysis.ml" 101 3217 3249
+)
+"conditionAnalysis.ml" 101 3217 3259 "conditionAnalysis.ml" 101 3217 3267
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 102 3273 3279 "conditionAnalysis.ml" 102 3273 3283
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 102 3273 3285 "conditionAnalysis.ml" 102 3273 3286
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 102 3273 3279 "conditionAnalysis.ml" 102 3273 3286
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 103 3287 3293 "conditionAnalysis.ml" 103 3287 3294
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 103 3287 3296 "conditionAnalysis.ml" 103 3287 3300
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 103 3287 3293 "conditionAnalysis.ml" 103 3287 3300
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 102 3273 3279 "conditionAnalysis.ml" 103 3287 3300
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 103 3287 3304 "conditionAnalysis.ml" 103 3287 3308
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 104 3309 3320 "conditionAnalysis.ml" 104 3309 3322
+type(
+  Interval.t
+)
+ident(
+  def ia "conditionAnalysis.ml" 105 3335 3341 "conditionAnalysis.ml" 106 3373 3429
+)
+"conditionAnalysis.ml" 104 3309 3315 "conditionAnalysis.ml" 104 3309 3322
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 104 3309 3329 "conditionAnalysis.ml" 104 3309 3331
+type(
+  Interval.t
+)
+ident(
+  def ib "conditionAnalysis.ml" 105 3335 3341 "conditionAnalysis.ml" 106 3373 3429
+)
+"conditionAnalysis.ml" 104 3309 3324 "conditionAnalysis.ml" 104 3309 3331
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 104 3309 3315 "conditionAnalysis.ml" 104 3309 3331
+type(
+  Interval.t option * Interval.t option
+)
+"conditionAnalysis.ml" 105 3335 3345 "conditionAnalysis.ml" 105 3335 3347
+type(
+  Interval.t
+)
+ident(
+  def ir "conditionAnalysis.ml" 106 3373 3379 "conditionAnalysis.ml" 106 3373 3429
+)
+"conditionAnalysis.ml" 105 3335 3350 "conditionAnalysis.ml" 105 3335 3363
+type(
+  Interval.t -> Interval.t -> Interval.t
+)
+ident(
+  int_ref Interval.join "conditionAnalysis.ml" 49 1472 1478 "conditionAnalysis.ml" 49 1472 1482
+)
+"conditionAnalysis.ml" 105 3335 3364 "conditionAnalysis.ml" 105 3335 3366
+type(
+  Interval.t
+)
+ident(
+  int_ref ia "conditionAnalysis.ml" 104 3309 3320 "conditionAnalysis.ml" 104 3309 3322
+)
+"conditionAnalysis.ml" 105 3335 3367 "conditionAnalysis.ml" 105 3335 3369
+type(
+  Interval.t
+)
+ident(
+  int_ref ib "conditionAnalysis.ml" 104 3309 3329 "conditionAnalysis.ml" 104 3309 3331
+)
+"conditionAnalysis.ml" 105 3335 3350 "conditionAnalysis.ml" 105 3335 3369
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 106 3373 3382 "conditionAnalysis.ml" 106 3373 3403
+type(
+  Interval.t -> bool
+)
+ident(
+  int_ref Interval.is_unbounded "conditionAnalysis.ml" 51 1616 1622 "conditionAnalysis.ml" 51 1616 1634
+)
+"conditionAnalysis.ml" 106 3373 3404 "conditionAnalysis.ml" 106 3373 3406
+type(
+  Interval.t
+)
+ident(
+  int_ref ir "conditionAnalysis.ml" 105 3335 3345 "conditionAnalysis.ml" 105 3335 3347
+)
+"conditionAnalysis.ml" 106 3373 3382 "conditionAnalysis.ml" 106 3373 3406
+call(
+  stack
+)
+type(
+  bool
+)
+"conditionAnalysis.ml" 106 3373 3412 "conditionAnalysis.ml" 106 3373 3416
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 106 3373 3427 "conditionAnalysis.ml" 106 3373 3429
+type(
+  Interval.t
+)
+ident(
+  int_ref ir "conditionAnalysis.ml" 105 3335 3345 "conditionAnalysis.ml" 105 3335 3347
+)
+"conditionAnalysis.ml" 106 3373 3422 "conditionAnalysis.ml" 106 3373 3429
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 106 3373 3379 "conditionAnalysis.ml" 106 3373 3429
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 105 3335 3341 "conditionAnalysis.ml" 106 3373 3429
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 101 3217 3253 "conditionAnalysis.ml" 106 3373 3429
+type(
+  Interval.t option
+)
+"conditionAnalysis.ml" 101 3217 3235 "conditionAnalysis.ml" 106 3373 3430
+type(
+  ExprMap.key -> Interval.t option -> Interval.t option -> Interval.t option
+)
+"conditionAnalysis.ml" 106 3373 3431 "conditionAnalysis.ml" 106 3373 3432
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref a "conditionAnalysis.ml" 100 3200 3211 "conditionAnalysis.ml" 100 3200 3212
+)
+"conditionAnalysis.ml" 106 3373 3433 "conditionAnalysis.ml" 106 3373 3434
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref b "conditionAnalysis.ml" 100 3200 3213 "conditionAnalysis.ml" 100 3200 3214
+)
+"conditionAnalysis.ml" 101 3217 3221 "conditionAnalysis.ml" 106 3373 3434
+call(
+  tail
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 107 3435 3441 "conditionAnalysis.ml" 107 3435 3445
+type(
+  (ExprMap.key -> 'c -> 'd -> 'd) -> 'c ExprMap.t -> 'd -> 'd
+)
+ident(
+  def fold "conditionAnalysis.ml" 107 3435 3460 "conditionAnalysis.ml" 108 3461 3464
+)
+"conditionAnalysis.ml" 107 3435 3448 "conditionAnalysis.ml" 107 3435 3460
+type(
+  (ExprMap.key -> 'c -> 'd -> 'd) -> 'c ExprMap.t -> 'd -> 'd
+)
+ident(
+  ext_ref ExprMap.fold
+)
+"conditionAnalysis.ml" 115 3706 3716 "conditionAnalysis.ml" 115 3706 3724
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  def push_not "conditionAnalysis.ml" 115 3706 3708 "conditionAnalysis.ml" 159 5256 5259
+)
+"conditionAnalysis.ml" 115 3706 3725 "conditionAnalysis.ml" 115 3706 3729
+type(
+  Cabs.expression
+)
+ident(
+  def expr "conditionAnalysis.ml" 116 3732 3736 "conditionAnalysis.ml" 129 4262 4314
+)
+"conditionAnalysis.ml" 117 3753 3761 "conditionAnalysis.ml" 117 3753 3767
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  def mk_not "conditionAnalysis.ml" 118 3789 3793 "conditionAnalysis.ml" 129 4262 4314
+)
+"conditionAnalysis.ml" 117 3753 3768 "conditionAnalysis.ml" 117 3753 3769
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 117 3753 3772 "conditionAnalysis.ml" 117 3753 3785
+)
+"conditionAnalysis.ml" 117 3753 3779 "conditionAnalysis.ml" 117 3753 3782
+type(
+  Cabs.unary_operator
+)
+"conditionAnalysis.ml" 117 3753 3783 "conditionAnalysis.ml" 117 3753 3784
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 117 3753 3768 "conditionAnalysis.ml" 117 3753 3769
+)
+"conditionAnalysis.ml" 117 3753 3772 "conditionAnalysis.ml" 117 3753 3785
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 118 3789 3799 "conditionAnalysis.ml" 118 3789 3803
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 115 3706 3725 "conditionAnalysis.ml" 115 3706 3729
+)
+"conditionAnalysis.ml" 119 3809 3822 "conditionAnalysis.ml" 119 3809 3825
+type(
+  Cabs.unary_operator
+)
+"conditionAnalysis.ml" 119 3809 3826 "conditionAnalysis.ml" 119 3809 3827
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 119 3809 3832 "conditionAnalysis.ml" 119 3809 3833
+)
+"conditionAnalysis.ml" 119 3809 3815 "conditionAnalysis.ml" 119 3809 3828
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 119 3809 3832 "conditionAnalysis.ml" 119 3809 3833
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 119 3809 3826 "conditionAnalysis.ml" 119 3809 3827
+)
+"conditionAnalysis.ml" 120 3834 3848 "conditionAnalysis.ml" 120 3834 3851
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 120 3834 3852 "conditionAnalysis.ml" 120 3834 3854
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 120 3834 3862 "conditionAnalysis.ml" 120 3834 3893
+)
+"conditionAnalysis.ml" 120 3834 3855 "conditionAnalysis.ml" 120 3834 3857
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 120 3834 3862 "conditionAnalysis.ml" 120 3834 3893
+)
+"conditionAnalysis.ml" 120 3834 3840 "conditionAnalysis.ml" 120 3834 3858
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 120 3834 3870 "conditionAnalysis.ml" 120 3834 3872
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 120 3834 3873 "conditionAnalysis.ml" 120 3834 3879
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref mk_not "conditionAnalysis.ml" 117 3753 3761 "conditionAnalysis.ml" 117 3753 3767
+)
+"conditionAnalysis.ml" 120 3834 3880 "conditionAnalysis.ml" 120 3834 3882
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 120 3834 3852 "conditionAnalysis.ml" 120 3834 3854
+)
+"conditionAnalysis.ml" 120 3834 3873 "conditionAnalysis.ml" 120 3834 3882
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 120 3834 3883 "conditionAnalysis.ml" 120 3834 3889
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref mk_not "conditionAnalysis.ml" 117 3753 3761 "conditionAnalysis.ml" 117 3753 3767
+)
+"conditionAnalysis.ml" 120 3834 3890 "conditionAnalysis.ml" 120 3834 3892
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 120 3834 3855 "conditionAnalysis.ml" 120 3834 3857
+)
+"conditionAnalysis.ml" 120 3834 3883 "conditionAnalysis.ml" 120 3834 3892
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 120 3834 3862 "conditionAnalysis.ml" 120 3834 3893
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 121 3894 3908 "conditionAnalysis.ml" 121 3894 3910
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 121 3894 3911 "conditionAnalysis.ml" 121 3894 3913
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 121 3894 3921 "conditionAnalysis.ml" 121 3894 3953
+)
+"conditionAnalysis.ml" 121 3894 3914 "conditionAnalysis.ml" 121 3894 3916
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 121 3894 3921 "conditionAnalysis.ml" 121 3894 3953
+)
+"conditionAnalysis.ml" 121 3894 3900 "conditionAnalysis.ml" 121 3894 3917
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 121 3894 3929 "conditionAnalysis.ml" 121 3894 3932
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 121 3894 3933 "conditionAnalysis.ml" 121 3894 3939
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref mk_not "conditionAnalysis.ml" 117 3753 3761 "conditionAnalysis.ml" 117 3753 3767
+)
+"conditionAnalysis.ml" 121 3894 3940 "conditionAnalysis.ml" 121 3894 3942
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 121 3894 3911 "conditionAnalysis.ml" 121 3894 3913
+)
+"conditionAnalysis.ml" 121 3894 3933 "conditionAnalysis.ml" 121 3894 3942
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 121 3894 3943 "conditionAnalysis.ml" 121 3894 3949
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref mk_not "conditionAnalysis.ml" 117 3753 3761 "conditionAnalysis.ml" 117 3753 3767
+)
+"conditionAnalysis.ml" 121 3894 3950 "conditionAnalysis.ml" 121 3894 3952
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 121 3894 3914 "conditionAnalysis.ml" 121 3894 3916
+)
+"conditionAnalysis.ml" 121 3894 3943 "conditionAnalysis.ml" 121 3894 3952
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 121 3894 3921 "conditionAnalysis.ml" 121 3894 3953
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 122 3954 3968 "conditionAnalysis.ml" 122 3954 3970
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 122 3954 3971 "conditionAnalysis.ml" 122 3954 3973
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 122 3954 3981 "conditionAnalysis.ml" 122 3954 3998
+)
+"conditionAnalysis.ml" 122 3954 3974 "conditionAnalysis.ml" 122 3954 3976
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 122 3954 3981 "conditionAnalysis.ml" 122 3954 3998
+)
+"conditionAnalysis.ml" 122 3954 3960 "conditionAnalysis.ml" 122 3954 3977
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 122 3954 3989 "conditionAnalysis.ml" 122 3954 3991
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 122 3954 3992 "conditionAnalysis.ml" 122 3954 3994
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 122 3954 3971 "conditionAnalysis.ml" 122 3954 3973
+)
+"conditionAnalysis.ml" 122 3954 3995 "conditionAnalysis.ml" 122 3954 3997
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 122 3954 3974 "conditionAnalysis.ml" 122 3954 3976
+)
+"conditionAnalysis.ml" 122 3954 3981 "conditionAnalysis.ml" 122 3954 3998
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 123 3999 4013 "conditionAnalysis.ml" 123 3999 4015
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 123 3999 4016 "conditionAnalysis.ml" 123 3999 4018
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 123 3999 4026 "conditionAnalysis.ml" 123 3999 4043
+)
+"conditionAnalysis.ml" 123 3999 4019 "conditionAnalysis.ml" 123 3999 4021
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 123 3999 4026 "conditionAnalysis.ml" 123 3999 4043
+)
+"conditionAnalysis.ml" 123 3999 4005 "conditionAnalysis.ml" 123 3999 4022
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 123 3999 4034 "conditionAnalysis.ml" 123 3999 4036
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 123 3999 4037 "conditionAnalysis.ml" 123 3999 4039
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 123 3999 4016 "conditionAnalysis.ml" 123 3999 4018
+)
+"conditionAnalysis.ml" 123 3999 4040 "conditionAnalysis.ml" 123 3999 4042
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 123 3999 4019 "conditionAnalysis.ml" 123 3999 4021
+)
+"conditionAnalysis.ml" 123 3999 4026 "conditionAnalysis.ml" 123 3999 4043
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 124 4044 4058 "conditionAnalysis.ml" 124 4044 4060
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 124 4044 4061 "conditionAnalysis.ml" 124 4044 4063
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 124 4044 4071 "conditionAnalysis.ml" 124 4044 4088
+)
+"conditionAnalysis.ml" 124 4044 4064 "conditionAnalysis.ml" 124 4044 4066
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 124 4044 4071 "conditionAnalysis.ml" 124 4044 4088
+)
+"conditionAnalysis.ml" 124 4044 4050 "conditionAnalysis.ml" 124 4044 4067
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 124 4044 4079 "conditionAnalysis.ml" 124 4044 4081
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 124 4044 4082 "conditionAnalysis.ml" 124 4044 4084
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 124 4044 4061 "conditionAnalysis.ml" 124 4044 4063
+)
+"conditionAnalysis.ml" 124 4044 4085 "conditionAnalysis.ml" 124 4044 4087
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 124 4044 4064 "conditionAnalysis.ml" 124 4044 4066
+)
+"conditionAnalysis.ml" 124 4044 4071 "conditionAnalysis.ml" 124 4044 4088
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 125 4089 4103 "conditionAnalysis.ml" 125 4089 4105
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 125 4089 4106 "conditionAnalysis.ml" 125 4089 4108
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 125 4089 4116 "conditionAnalysis.ml" 125 4089 4133
+)
+"conditionAnalysis.ml" 125 4089 4109 "conditionAnalysis.ml" 125 4089 4111
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 125 4089 4116 "conditionAnalysis.ml" 125 4089 4133
+)
+"conditionAnalysis.ml" 125 4089 4095 "conditionAnalysis.ml" 125 4089 4112
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 125 4089 4124 "conditionAnalysis.ml" 125 4089 4126
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 125 4089 4127 "conditionAnalysis.ml" 125 4089 4129
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 125 4089 4106 "conditionAnalysis.ml" 125 4089 4108
+)
+"conditionAnalysis.ml" 125 4089 4130 "conditionAnalysis.ml" 125 4089 4132
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 125 4089 4109 "conditionAnalysis.ml" 125 4089 4111
+)
+"conditionAnalysis.ml" 125 4089 4116 "conditionAnalysis.ml" 125 4089 4133
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 126 4134 4148 "conditionAnalysis.ml" 126 4134 4150
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 126 4134 4151 "conditionAnalysis.ml" 126 4134 4153
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 126 4134 4161 "conditionAnalysis.ml" 126 4134 4178
+)
+"conditionAnalysis.ml" 126 4134 4154 "conditionAnalysis.ml" 126 4134 4156
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 126 4134 4161 "conditionAnalysis.ml" 126 4134 4178
+)
+"conditionAnalysis.ml" 126 4134 4140 "conditionAnalysis.ml" 126 4134 4157
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 126 4134 4169 "conditionAnalysis.ml" 126 4134 4171
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 126 4134 4172 "conditionAnalysis.ml" 126 4134 4174
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 126 4134 4151 "conditionAnalysis.ml" 126 4134 4153
+)
+"conditionAnalysis.ml" 126 4134 4175 "conditionAnalysis.ml" 126 4134 4177
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 126 4134 4154 "conditionAnalysis.ml" 126 4134 4156
+)
+"conditionAnalysis.ml" 126 4134 4161 "conditionAnalysis.ml" 126 4134 4178
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 127 4179 4193 "conditionAnalysis.ml" 127 4179 4195
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 127 4179 4196 "conditionAnalysis.ml" 127 4179 4198
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 127 4179 4206 "conditionAnalysis.ml" 127 4179 4223
+)
+"conditionAnalysis.ml" 127 4179 4199 "conditionAnalysis.ml" 127 4179 4201
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 127 4179 4206 "conditionAnalysis.ml" 127 4179 4223
+)
+"conditionAnalysis.ml" 127 4179 4185 "conditionAnalysis.ml" 127 4179 4202
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 127 4179 4214 "conditionAnalysis.ml" 127 4179 4216
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 127 4179 4217 "conditionAnalysis.ml" 127 4179 4219
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 127 4179 4196 "conditionAnalysis.ml" 127 4179 4198
+)
+"conditionAnalysis.ml" 127 4179 4220 "conditionAnalysis.ml" 127 4179 4222
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 127 4179 4199 "conditionAnalysis.ml" 127 4179 4201
+)
+"conditionAnalysis.ml" 127 4179 4206 "conditionAnalysis.ml" 127 4179 4223
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 128 4224 4241 "conditionAnalysis.ml" 128 4224 4242
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 128 4224 4251 "conditionAnalysis.ml" 128 4224 4261
+)
+"conditionAnalysis.ml" 128 4224 4243 "conditionAnalysis.ml" 128 4224 4244
+type(
+  string
+)
+"conditionAnalysis.ml" 128 4224 4245 "conditionAnalysis.ml" 128 4224 4246
+type(
+  int
+)
+"conditionAnalysis.ml" 128 4224 4230 "conditionAnalysis.ml" 128 4224 4247
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 128 4224 4251 "conditionAnalysis.ml" 128 4224 4259
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref push_not "conditionAnalysis.ml" 115 3706 3716 "conditionAnalysis.ml" 115 3706 3724
+)
+"conditionAnalysis.ml" 128 4224 4260 "conditionAnalysis.ml" 128 4224 4261
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 128 4224 4241 "conditionAnalysis.ml" 128 4224 4242
+)
+"conditionAnalysis.ml" 128 4224 4251 "conditionAnalysis.ml" 128 4224 4261
+call(
+  tail
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 129 4262 4268 "conditionAnalysis.ml" 129 4262 4269
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 129 4262 4281 "conditionAnalysis.ml" 129 4262 4283
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 129 4262 4284 "conditionAnalysis.ml" 129 4262 4288
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 115 3706 3725 "conditionAnalysis.ml" 115 3706 3729
+)
+"conditionAnalysis.ml" 129 4262 4309 "conditionAnalysis.ml" 129 4262 4312
+type(
+  string
+)
+"conditionAnalysis.ml" 129 4262 4298 "conditionAnalysis.ml" 129 4262 4313
+type(
+  Cabs.constant
+)
+"conditionAnalysis.ml" 129 4262 4289 "conditionAnalysis.ml" 129 4262 4313
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 129 4262 4273 "conditionAnalysis.ml" 129 4262 4314
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 118 3789 3793 "conditionAnalysis.ml" 129 4262 4314
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 117 3753 3757 "conditionAnalysis.ml" 129 4262 4314
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 130 4315 4321 "conditionAnalysis.ml" 130 4315 4345
+type(
+  Cabs.binary_operator ->
+  Cabs.expression -> Cabs.expression -> (Expr.t * Interval.t) option
+)
+ident(
+  def interval_from_comparison "conditionAnalysis.ml" 158 5226 5255 "conditionAnalysis.ml" 159 5256 5259
+)
+"conditionAnalysis.ml" 130 4315 4346 "conditionAnalysis.ml" 130 4315 4349
+type(
+  Cabs.binary_operator
+)
+ident(
+  def cmp "conditionAnalysis.ml" 130 4315 4350 "conditionAnalysis.ml" 158 5226 5255
+)
+"conditionAnalysis.ml" 130 4315 4350 "conditionAnalysis.ml" 130 4315 4354
+type(
+  Cabs.expression
+)
+ident(
+  def left "conditionAnalysis.ml" 130 4315 4355 "conditionAnalysis.ml" 158 5226 5255
+)
+"conditionAnalysis.ml" 130 4315 4355 "conditionAnalysis.ml" 130 4315 4360
+type(
+  Cabs.expression
+)
+ident(
+  def right "conditionAnalysis.ml" 131 4363 4367 "conditionAnalysis.ml" 158 5226 5255
+)
+"conditionAnalysis.ml" 132 4384 4392 "conditionAnalysis.ml" 132 4384 4396
+type(
+  Cabs.binary_operator -> Cabs.binary_operator
+)
+ident(
+  def flip "conditionAnalysis.ml" 137 4538 4542 "conditionAnalysis.ml" 158 5226 5255
+)
+"conditionAnalysis.ml" 133 4408 4416 "conditionAnalysis.ml" 133 4408 4418
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 133 4408 4422 "conditionAnalysis.ml" 133 4408 4424
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 133 4408 4427 "conditionAnalysis.ml" 133 4408 4429
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 133 4408 4433 "conditionAnalysis.ml" 133 4408 4435
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 134 4436 4444 "conditionAnalysis.ml" 134 4436 4446
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 134 4436 4450 "conditionAnalysis.ml" 134 4436 4452
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 134 4436 4455 "conditionAnalysis.ml" 134 4436 4457
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 134 4436 4461 "conditionAnalysis.ml" 134 4436 4463
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 135 4464 4472 "conditionAnalysis.ml" 135 4464 4474
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 135 4464 4478 "conditionAnalysis.ml" 135 4464 4480
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 135 4464 4483 "conditionAnalysis.ml" 135 4464 4485
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 135 4464 4489 "conditionAnalysis.ml" 135 4464 4491
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 136 4492 4500 "conditionAnalysis.ml" 136 4492 4501
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 136 4492 4505 "conditionAnalysis.ml" 136 4492 4513
+type(
+  string -> Cabs.binary_operator
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"conditionAnalysis.ml" 136 4492 4514 "conditionAnalysis.ml" 136 4492 4534
+type(
+  string
+)
+"conditionAnalysis.ml" 136 4492 4505 "conditionAnalysis.ml" 136 4492 4534
+call(
+  tail
+)
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 132 4384 4399 "conditionAnalysis.ml" 136 4492 4534
+type(
+  Cabs.binary_operator -> Cabs.binary_operator
+)
+"conditionAnalysis.ml" 137 4538 4550 "conditionAnalysis.ml" 137 4538 4554
+type(
+  bool ->
+  Cabs.binary_operator ->
+  Cabs.expression -> Cabs.expression -> (Expr.t * Interval.t) option
+)
+ident(
+  def rifc "conditionAnalysis.ml" 137 4538 4542 "conditionAnalysis.ml" 158 5226 5255
+)
+"conditionAnalysis.ml" 137 4538 4555 "conditionAnalysis.ml" 137 4538 4566
+type(
+  bool
+)
+ident(
+  def justFlipped "conditionAnalysis.ml" 137 4538 4567 "conditionAnalysis.ml" 157 5205 5222
+)
+"conditionAnalysis.ml" 137 4538 4567 "conditionAnalysis.ml" 137 4538 4570
+type(
+  Cabs.binary_operator
+)
+ident(
+  def cmp "conditionAnalysis.ml" 137 4538 4571 "conditionAnalysis.ml" 157 5205 5222
+)
+"conditionAnalysis.ml" 137 4538 4571 "conditionAnalysis.ml" 137 4538 4575
+type(
+  Cabs.expression
+)
+ident(
+  def left "conditionAnalysis.ml" 137 4538 4576 "conditionAnalysis.ml" 157 5205 5222
+)
+"conditionAnalysis.ml" 137 4538 4576 "conditionAnalysis.ml" 137 4538 4581
+type(
+  Cabs.expression
+)
+ident(
+  def right "conditionAnalysis.ml" 138 4584 4590 "conditionAnalysis.ml" 157 5205 5222
+)
+"conditionAnalysis.ml" 138 4584 4596 "conditionAnalysis.ml" 138 4584 4600
+type(
+  Cabs.expression
+)
+ident(
+  int_ref left "conditionAnalysis.ml" 137 4538 4571 "conditionAnalysis.ml" 137 4538 4575
+)
+"conditionAnalysis.ml" 138 4584 4602 "conditionAnalysis.ml" 138 4584 4607
+type(
+  Cabs.expression
+)
+ident(
+  int_ref right "conditionAnalysis.ml" 137 4538 4576 "conditionAnalysis.ml" 137 4538 4581
+)
+"conditionAnalysis.ml" 138 4584 4596 "conditionAnalysis.ml" 138 4584 4607
+type(
+  Cabs.expression * Cabs.expression
+)
+"conditionAnalysis.ml" 139 4613 4632 "conditionAnalysis.ml" 139 4613 4633
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 139 4613 4645 "conditionAnalysis.ml" 139 4613 4667
+)
+"conditionAnalysis.ml" 139 4613 4634 "conditionAnalysis.ml" 139 4613 4635
+type(
+  string
+)
+"conditionAnalysis.ml" 139 4613 4636 "conditionAnalysis.ml" 139 4613 4637
+type(
+  int
+)
+"conditionAnalysis.ml" 139 4613 4621 "conditionAnalysis.ml" 139 4613 4638
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 139 4613 4640 "conditionAnalysis.ml" 139 4613 4641
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 139 4613 4621 "conditionAnalysis.ml" 139 4613 4641
+type(
+  Cabs.expression * Cabs.expression
+)
+"conditionAnalysis.ml" 139 4613 4645 "conditionAnalysis.ml" 139 4613 4649
+type(
+  bool ->
+  Cabs.binary_operator ->
+  Cabs.expression -> Cabs.expression -> (Expr.t * Interval.t) option
+)
+ident(
+  int_ref rifc "conditionAnalysis.ml" 137 4538 4550 "conditionAnalysis.ml" 137 4538 4554
+)
+"conditionAnalysis.ml" 139 4613 4650 "conditionAnalysis.ml" 139 4613 4655
+type(
+  bool
+)
+"conditionAnalysis.ml" 139 4613 4656 "conditionAnalysis.ml" 139 4613 4659
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref cmp "conditionAnalysis.ml" 137 4538 4567 "conditionAnalysis.ml" 137 4538 4570
+)
+"conditionAnalysis.ml" 139 4613 4660 "conditionAnalysis.ml" 139 4613 4661
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 139 4613 4632 "conditionAnalysis.ml" 139 4613 4633
+)
+"conditionAnalysis.ml" 139 4613 4662 "conditionAnalysis.ml" 139 4613 4667
+type(
+  Cabs.expression
+)
+ident(
+  int_ref right "conditionAnalysis.ml" 137 4538 4576 "conditionAnalysis.ml" 137 4538 4581
+)
+"conditionAnalysis.ml" 139 4613 4645 "conditionAnalysis.ml" 139 4613 4667
+call(
+  tail
+)
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 140 4668 4685 "conditionAnalysis.ml" 140 4668 4686
+type(
+  string
+)
+"conditionAnalysis.ml" 140 4668 4676 "conditionAnalysis.ml" 140 4668 4686
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 140 4668 4708 "conditionAnalysis.ml" 140 4668 4710
+type(
+  string
+)
+ident(
+  def ns "conditionAnalysis.ml" 141 4715 4716 "conditionAnalysis.ml" 155 5134 5138
+)
+"conditionAnalysis.ml" 140 4668 4697 "conditionAnalysis.ml" 140 4668 4711
+type(
+  Cabs.constant
+)
+"conditionAnalysis.ml" 140 4668 4688 "conditionAnalysis.ml" 140 4668 4711
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 140 4668 4676 "conditionAnalysis.ml" 140 4668 4711
+type(
+  Cabs.expression * Cabs.expression
+)
+"conditionAnalysis.ml" 141 4715 4720 "conditionAnalysis.ml" 141 4715 4721
+type(
+  Expr.t
+)
+ident(
+  def e "conditionAnalysis.ml" 142 4742 4743 "conditionAnalysis.ml" 155 5134 5138
+)
+"conditionAnalysis.ml" 141 4715 4724 "conditionAnalysis.ml" 141 4715 4733
+type(
+  Cabs.expression -> Expr.t
+)
+ident(
+  int_ref Expr.make "conditionAnalysis.ml" 59 1897 1903 "conditionAnalysis.ml" 59 1897 1907
+)
+"conditionAnalysis.ml" 141 4715 4734 "conditionAnalysis.ml" 141 4715 4738
+type(
+  Cabs.expression
+)
+ident(
+  int_ref left "conditionAnalysis.ml" 137 4538 4571 "conditionAnalysis.ml" 137 4538 4575
+)
+"conditionAnalysis.ml" 141 4715 4724 "conditionAnalysis.ml" 141 4715 4738
+call(
+  stack
+)
+type(
+  Expr.t
+)
+"conditionAnalysis.ml" 144 4756 4765 "conditionAnalysis.ml" 144 4756 4766
+type(
+  int
+)
+ident(
+  def n "conditionAnalysis.ml" 145 4789 4794 "conditionAnalysis.ml" 153 5077 5092
+)
+"conditionAnalysis.ml" 144 4756 4769 "conditionAnalysis.ml" 144 4756 4782
+type(
+  string -> int
+)
+ident(
+  ext_ref Pervasives.int_of_string
+)
+"conditionAnalysis.ml" 144 4756 4783 "conditionAnalysis.ml" 144 4756 4785
+type(
+  string
+)
+ident(
+  int_ref ns "conditionAnalysis.ml" 140 4668 4708 "conditionAnalysis.ml" 140 4668 4710
+)
+"conditionAnalysis.ml" 144 4756 4769 "conditionAnalysis.ml" 144 4756 4785
+type(
+  int
+)
+"conditionAnalysis.ml" 145 4789 4798 "conditionAnalysis.ml" 145 4789 4799
+type(
+  Interval.t
+)
+ident(
+  def i "conditionAnalysis.ml" 153 5077 5082 "conditionAnalysis.ml" 153 5077 5092
+)
+"conditionAnalysis.ml" 145 4789 4808 "conditionAnalysis.ml" 145 4789 4811
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref cmp "conditionAnalysis.ml" 137 4538 4567 "conditionAnalysis.ml" 137 4538 4570
+)
+"conditionAnalysis.ml" 146 4817 4826 "conditionAnalysis.ml" 146 4817 4828
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 146 4817 4832 "conditionAnalysis.ml" 146 4817 4850
+type(
+  Data.t -> Interval.t
+)
+ident(
+  int_ref Interval.singleton "conditionAnalysis.ml" 48 1417 1423 "conditionAnalysis.ml" 48 1417 1432
+)
+"conditionAnalysis.ml" 146 4817 4851 "conditionAnalysis.ml" 146 4817 4852
+type(
+  Data.t
+)
+ident(
+  int_ref n "conditionAnalysis.ml" 144 4756 4765 "conditionAnalysis.ml" 144 4756 4766
+)
+"conditionAnalysis.ml" 146 4817 4832 "conditionAnalysis.ml" 146 4817 4852
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 147 4853 4862 "conditionAnalysis.ml" 147 4853 4864
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 147 4853 4868 "conditionAnalysis.ml" 147 4853 4890
+type(
+  Data.t -> Interval.t
+)
+ident(
+  int_ref Interval.upper_bounded "conditionAnalysis.ml" 46 1306 1312 "conditionAnalysis.ml" 46 1306 1325
+)
+"conditionAnalysis.ml" 147 4853 4892 "conditionAnalysis.ml" 147 4853 4893
+type(
+  int
+)
+ident(
+  int_ref n "conditionAnalysis.ml" 144 4756 4765 "conditionAnalysis.ml" 144 4756 4766
+)
+"conditionAnalysis.ml" 147 4853 4894 "conditionAnalysis.ml" 147 4853 4895
+type(
+  int -> int -> Data.t
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"conditionAnalysis.ml" 147 4853 4896 "conditionAnalysis.ml" 147 4853 4897
+type(
+  int
+)
+"conditionAnalysis.ml" 147 4853 4891 "conditionAnalysis.ml" 147 4853 4898
+type(
+  Data.t
+)
+"conditionAnalysis.ml" 147 4853 4868 "conditionAnalysis.ml" 147 4853 4898
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 148 4899 4908 "conditionAnalysis.ml" 148 4899 4910
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 148 4899 4914 "conditionAnalysis.ml" 148 4899 4936
+type(
+  Data.t -> Interval.t
+)
+ident(
+  int_ref Interval.upper_bounded "conditionAnalysis.ml" 46 1306 1312 "conditionAnalysis.ml" 46 1306 1325
+)
+"conditionAnalysis.ml" 148 4899 4937 "conditionAnalysis.ml" 148 4899 4938
+type(
+  Data.t
+)
+ident(
+  int_ref n "conditionAnalysis.ml" 144 4756 4765 "conditionAnalysis.ml" 144 4756 4766
+)
+"conditionAnalysis.ml" 148 4899 4914 "conditionAnalysis.ml" 148 4899 4938
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 149 4939 4948 "conditionAnalysis.ml" 149 4939 4950
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 149 4939 4954 "conditionAnalysis.ml" 149 4939 4976
+type(
+  Data.t -> Interval.t
+)
+ident(
+  int_ref Interval.lower_bounded "conditionAnalysis.ml" 45 1250 1256 "conditionAnalysis.ml" 45 1250 1269
+)
+"conditionAnalysis.ml" 149 4939 4978 "conditionAnalysis.ml" 149 4939 4979
+type(
+  int
+)
+ident(
+  int_ref n "conditionAnalysis.ml" 144 4756 4765 "conditionAnalysis.ml" 144 4756 4766
+)
+"conditionAnalysis.ml" 149 4939 4980 "conditionAnalysis.ml" 149 4939 4981
+type(
+  int -> int -> Data.t
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"conditionAnalysis.ml" 149 4939 4982 "conditionAnalysis.ml" 149 4939 4983
+type(
+  int
+)
+"conditionAnalysis.ml" 149 4939 4977 "conditionAnalysis.ml" 149 4939 4984
+type(
+  Data.t
+)
+"conditionAnalysis.ml" 149 4939 4954 "conditionAnalysis.ml" 149 4939 4984
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 150 4985 4994 "conditionAnalysis.ml" 150 4985 4996
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 150 4985 5000 "conditionAnalysis.ml" 150 4985 5022
+type(
+  Data.t -> Interval.t
+)
+ident(
+  int_ref Interval.lower_bounded "conditionAnalysis.ml" 45 1250 1256 "conditionAnalysis.ml" 45 1250 1269
+)
+"conditionAnalysis.ml" 150 4985 5023 "conditionAnalysis.ml" 150 4985 5024
+type(
+  Data.t
+)
+ident(
+  int_ref n "conditionAnalysis.ml" 144 4756 4765 "conditionAnalysis.ml" 144 4756 4766
+)
+"conditionAnalysis.ml" 150 4985 5000 "conditionAnalysis.ml" 150 4985 5024
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 151 5025 5034 "conditionAnalysis.ml" 151 5025 5035
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 151 5025 5039 "conditionAnalysis.ml" 151 5025 5047
+type(
+  string -> Interval.t
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"conditionAnalysis.ml" 151 5025 5048 "conditionAnalysis.ml" 151 5025 5068
+type(
+  string
+)
+"conditionAnalysis.ml" 151 5025 5039 "conditionAnalysis.ml" 151 5025 5068
+call(
+  stack
+)
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 145 4789 4802 "conditionAnalysis.ml" 151 5025 5068
+type(
+  Interval.t
+)
+"conditionAnalysis.ml" 153 5077 5088 "conditionAnalysis.ml" 153 5077 5089
+type(
+  Expr.t
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 141 4715 4720 "conditionAnalysis.ml" 141 4715 4721
+)
+"conditionAnalysis.ml" 153 5077 5090 "conditionAnalysis.ml" 153 5077 5091
+type(
+  Interval.t
+)
+ident(
+  int_ref i "conditionAnalysis.ml" 145 4789 4798 "conditionAnalysis.ml" 145 4789 4799
+)
+"conditionAnalysis.ml" 153 5077 5087 "conditionAnalysis.ml" 153 5077 5092
+type(
+  Expr.t * Interval.t
+)
+"conditionAnalysis.ml" 153 5077 5082 "conditionAnalysis.ml" 153 5077 5092
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 145 4789 4794 "conditionAnalysis.ml" 153 5077 5092
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 144 4756 4761 "conditionAnalysis.ml" 153 5077 5092
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 154 5093 5108 "conditionAnalysis.ml" 154 5093 5125
+type(
+  string
+)
+"conditionAnalysis.ml" 154 5093 5101 "conditionAnalysis.ml" 154 5093 5125
+type(
+  exn
+)
+"conditionAnalysis.ml" 154 5093 5129 "conditionAnalysis.ml" 154 5093 5133
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 142 4742 4743 "conditionAnalysis.ml" 155 5134 5138
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 141 4715 4716 "conditionAnalysis.ml" 155 5134 5138
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 156 5139 5147 "conditionAnalysis.ml" 156 5139 5148
+type(
+  Cabs.expression * Cabs.expression
+)
+"conditionAnalysis.ml" 156 5139 5154 "conditionAnalysis.ml" 156 5139 5157
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"conditionAnalysis.ml" 156 5139 5158 "conditionAnalysis.ml" 156 5139 5169
+type(
+  bool
+)
+ident(
+  int_ref justFlipped "conditionAnalysis.ml" 137 4538 4555 "conditionAnalysis.ml" 137 4538 4566
+)
+"conditionAnalysis.ml" 156 5139 5154 "conditionAnalysis.ml" 156 5139 5169
+type(
+  bool
+)
+"conditionAnalysis.ml" 156 5139 5173 "conditionAnalysis.ml" 156 5139 5177
+type(
+  bool ->
+  Cabs.binary_operator ->
+  Cabs.expression -> Cabs.expression -> (Expr.t * Interval.t) option
+)
+ident(
+  int_ref rifc "conditionAnalysis.ml" 137 4538 4550 "conditionAnalysis.ml" 137 4538 4554
+)
+"conditionAnalysis.ml" 156 5139 5178 "conditionAnalysis.ml" 156 5139 5182
+type(
+  bool
+)
+"conditionAnalysis.ml" 156 5139 5184 "conditionAnalysis.ml" 156 5139 5188
+type(
+  Cabs.binary_operator -> Cabs.binary_operator
+)
+ident(
+  int_ref flip "conditionAnalysis.ml" 132 4384 4392 "conditionAnalysis.ml" 132 4384 4396
+)
+"conditionAnalysis.ml" 156 5139 5189 "conditionAnalysis.ml" 156 5139 5192
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref cmp "conditionAnalysis.ml" 137 4538 4567 "conditionAnalysis.ml" 137 4538 4570
+)
+"conditionAnalysis.ml" 156 5139 5183 "conditionAnalysis.ml" 156 5139 5193
+call(
+  stack
+)
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 156 5139 5194 "conditionAnalysis.ml" 156 5139 5199
+type(
+  Cabs.expression
+)
+ident(
+  int_ref right "conditionAnalysis.ml" 137 4538 4576 "conditionAnalysis.ml" 137 4538 4581
+)
+"conditionAnalysis.ml" 156 5139 5200 "conditionAnalysis.ml" 156 5139 5204
+type(
+  Cabs.expression
+)
+ident(
+  int_ref left "conditionAnalysis.ml" 137 4538 4571 "conditionAnalysis.ml" 137 4538 4575
+)
+"conditionAnalysis.ml" 156 5139 5173 "conditionAnalysis.ml" 156 5139 5204
+call(
+  tail
+)
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 157 5205 5213 "conditionAnalysis.ml" 157 5205 5214
+type(
+  Cabs.expression * Cabs.expression
+)
+"conditionAnalysis.ml" 157 5205 5218 "conditionAnalysis.ml" 157 5205 5222
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 138 4584 4590 "conditionAnalysis.ml" 157 5205 5222
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 158 5226 5230 "conditionAnalysis.ml" 158 5226 5234
+type(
+  bool ->
+  Cabs.binary_operator ->
+  Cabs.expression -> Cabs.expression -> (Expr.t * Interval.t) option
+)
+ident(
+  int_ref rifc "conditionAnalysis.ml" 137 4538 4550 "conditionAnalysis.ml" 137 4538 4554
+)
+"conditionAnalysis.ml" 158 5226 5235 "conditionAnalysis.ml" 158 5226 5240
+type(
+  bool
+)
+"conditionAnalysis.ml" 158 5226 5241 "conditionAnalysis.ml" 158 5226 5244
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref cmp "conditionAnalysis.ml" 130 4315 4346 "conditionAnalysis.ml" 130 4315 4349
+)
+"conditionAnalysis.ml" 158 5226 5245 "conditionAnalysis.ml" 158 5226 5249
+type(
+  Cabs.expression
+)
+ident(
+  int_ref left "conditionAnalysis.ml" 130 4315 4350 "conditionAnalysis.ml" 130 4315 4354
+)
+"conditionAnalysis.ml" 158 5226 5250 "conditionAnalysis.ml" 158 5226 5255
+type(
+  Cabs.expression
+)
+ident(
+  int_ref right "conditionAnalysis.ml" 130 4315 4355 "conditionAnalysis.ml" 130 4315 4360
+)
+"conditionAnalysis.ml" 158 5226 5230 "conditionAnalysis.ml" 158 5226 5255
+call(
+  tail
+)
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 137 4538 4542 "conditionAnalysis.ml" 158 5226 5255
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 132 4384 4388 "conditionAnalysis.ml" 158 5226 5255
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 164 5319 5327 "conditionAnalysis.ml" 164 5319 5341
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  def cond_to_ranges "conditionAnalysis.ml" 164 5319 5319 "conditionAnalysis.ml" 1 0 -1
+)
+"conditionAnalysis.ml" 164 5319 5342 "conditionAnalysis.ml" 164 5319 5346
+type(
+  Cabs.expression
+)
+ident(
+  def expr "conditionAnalysis.ml" 165 5349 5351 "conditionAnalysis.ml" 180 5996 6015
+)
+"conditionAnalysis.ml" 166 5368 5374 "conditionAnalysis.ml" 166 5368 5376
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  def rr "conditionAnalysis.ml" 167 5397 5399 "conditionAnalysis.ml" 180 5996 6015
+)
+"conditionAnalysis.ml" 166 5368 5379 "conditionAnalysis.ml" 166 5368 5393
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  int_ref cond_to_ranges "conditionAnalysis.ml" 164 5319 5327 "conditionAnalysis.ml" 164 5319 5341
+)
+"conditionAnalysis.ml" 167 5397 5405 "conditionAnalysis.ml" 167 5397 5409
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 164 5319 5342 "conditionAnalysis.ml" 164 5319 5346
+)
+"conditionAnalysis.ml" 168 5415 5426 "conditionAnalysis.ml" 168 5415 5429
+type(
+  Cabs.unary_operator
+)
+"conditionAnalysis.ml" 168 5415 5431 "conditionAnalysis.ml" 168 5415 5432
+type(
+  Cabs.expression
+)
+ident(
+  def e "conditionAnalysis.ml" 168 5415 5437 "conditionAnalysis.ml" 168 5415 5474
+)
+"conditionAnalysis.ml" 168 5415 5419 "conditionAnalysis.ml" 168 5415 5433
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 168 5415 5437 "conditionAnalysis.ml" 168 5415 5451
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  int_ref cond_to_ranges "conditionAnalysis.ml" 164 5319 5327 "conditionAnalysis.ml" 164 5319 5341
+)
+"conditionAnalysis.ml" 168 5415 5453 "conditionAnalysis.ml" 168 5415 5471
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref CondUtils.push_not "conditionAnalysis.ml" 115 3706 3716 "conditionAnalysis.ml" 115 3706 3724
+)
+"conditionAnalysis.ml" 168 5415 5472 "conditionAnalysis.ml" 168 5415 5473
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "conditionAnalysis.ml" 168 5415 5431 "conditionAnalysis.ml" 168 5415 5432
+)
+"conditionAnalysis.ml" 168 5415 5452 "conditionAnalysis.ml" 168 5415 5474
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 168 5415 5437 "conditionAnalysis.ml" 168 5415 5474
+call(
+  tail
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 169 5475 5487 "conditionAnalysis.ml" 169 5475 5490
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 169 5475 5491 "conditionAnalysis.ml" 169 5475 5493
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 169 5475 5501 "conditionAnalysis.ml" 170 5539 5596
+)
+"conditionAnalysis.ml" 169 5475 5494 "conditionAnalysis.ml" 169 5475 5496
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 169 5475 5501 "conditionAnalysis.ml" 170 5539 5596
+)
+"conditionAnalysis.ml" 169 5475 5479 "conditionAnalysis.ml" 169 5475 5497
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 169 5475 5511 "conditionAnalysis.ml" 169 5475 5522
+type(
+  Interval.t ExprMap.t -> Interval.t ExprMap.t -> Interval.t ExprMap.t
+)
+ident(
+  int_ref Ranges.meet "conditionAnalysis.ml" 94 2993 2999 "conditionAnalysis.ml" 94 2993 3003
+)
+"conditionAnalysis.ml" 169 5475 5524 "conditionAnalysis.ml" 169 5475 5526
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  int_ref rr "conditionAnalysis.ml" 166 5368 5374 "conditionAnalysis.ml" 166 5368 5376
+)
+"conditionAnalysis.ml" 169 5475 5527 "conditionAnalysis.ml" 169 5475 5529
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 169 5475 5491 "conditionAnalysis.ml" 169 5475 5493
+)
+"conditionAnalysis.ml" 169 5475 5523 "conditionAnalysis.ml" 169 5475 5530
+call(
+  stack
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 169 5475 5532 "conditionAnalysis.ml" 169 5475 5534
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  int_ref rr "conditionAnalysis.ml" 166 5368 5374 "conditionAnalysis.ml" 166 5368 5376
+)
+"conditionAnalysis.ml" 169 5475 5535 "conditionAnalysis.ml" 169 5475 5537
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 169 5475 5494 "conditionAnalysis.ml" 169 5475 5496
+)
+"conditionAnalysis.ml" 169 5475 5531 "conditionAnalysis.ml" 169 5475 5538
+call(
+  stack
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 169 5475 5511 "conditionAnalysis.ml" 169 5475 5538
+call(
+  stack
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 170 5539 5548 "conditionAnalysis.ml" 170 5539 5563
+type(
+  exn
+)
+"conditionAnalysis.ml" 170 5539 5567 "conditionAnalysis.ml" 170 5539 5572
+type(
+  exn -> Interval.t ExprMap.t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"conditionAnalysis.ml" 170 5539 5573 "conditionAnalysis.ml" 170 5539 5592
+type(
+  exn
+)
+"conditionAnalysis.ml" 170 5539 5567 "conditionAnalysis.ml" 170 5539 5592
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 169 5475 5501 "conditionAnalysis.ml" 170 5539 5596
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 171 5597 5609 "conditionAnalysis.ml" 171 5597 5611
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 171 5597 5612 "conditionAnalysis.ml" 171 5597 5614
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 171 5597 5622 "conditionAnalysis.ml" 171 5597 5649
+)
+"conditionAnalysis.ml" 171 5597 5615 "conditionAnalysis.ml" 171 5597 5617
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 171 5597 5622 "conditionAnalysis.ml" 171 5597 5649
+)
+"conditionAnalysis.ml" 171 5597 5601 "conditionAnalysis.ml" 171 5597 5618
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 171 5597 5622 "conditionAnalysis.ml" 171 5597 5633
+type(
+  Interval.t ExprMap.t -> Interval.t ExprMap.t -> Interval.t ExprMap.t
+)
+ident(
+  int_ref Ranges.join "conditionAnalysis.ml" 100 3200 3206 "conditionAnalysis.ml" 100 3200 3210
+)
+"conditionAnalysis.ml" 171 5597 5635 "conditionAnalysis.ml" 171 5597 5637
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  int_ref rr "conditionAnalysis.ml" 166 5368 5374 "conditionAnalysis.ml" 166 5368 5376
+)
+"conditionAnalysis.ml" 171 5597 5638 "conditionAnalysis.ml" 171 5597 5640
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 171 5597 5612 "conditionAnalysis.ml" 171 5597 5614
+)
+"conditionAnalysis.ml" 171 5597 5634 "conditionAnalysis.ml" 171 5597 5641
+call(
+  stack
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 171 5597 5643 "conditionAnalysis.ml" 171 5597 5645
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  int_ref rr "conditionAnalysis.ml" 166 5368 5374 "conditionAnalysis.ml" 166 5368 5376
+)
+"conditionAnalysis.ml" 171 5597 5646 "conditionAnalysis.ml" 171 5597 5648
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 171 5597 5615 "conditionAnalysis.ml" 171 5597 5617
+)
+"conditionAnalysis.ml" 171 5597 5642 "conditionAnalysis.ml" 171 5597 5649
+call(
+  stack
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 171 5597 5622 "conditionAnalysis.ml" 171 5597 5649
+call(
+  tail
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 172 5650 5662 "conditionAnalysis.ml" 172 5650 5664
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 172 5650 5665 "conditionAnalysis.ml" 172 5650 5666
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 172 5650 5667 "conditionAnalysis.ml" 172 5650 5668
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 172 5650 5654 "conditionAnalysis.ml" 172 5650 5669
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 172 5650 5673 "conditionAnalysis.ml" 172 5650 5683
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref Ranges.top "conditionAnalysis.ml" 92 2924 2930 "conditionAnalysis.ml" 92 2924 2933
+)
+"conditionAnalysis.ml" 173 5684 5696 "conditionAnalysis.ml" 173 5684 5698
+type(
+  Cabs.binary_operator
+)
+ident(
+  def op "conditionAnalysis.ml" 173 5684 5711 "conditionAnalysis.ml" 177 5935 5942
+)
+"conditionAnalysis.ml" 173 5684 5699 "conditionAnalysis.ml" 173 5684 5701
+type(
+  Cabs.expression
+)
+ident(
+  def e1 "conditionAnalysis.ml" 173 5684 5711 "conditionAnalysis.ml" 177 5935 5942
+)
+"conditionAnalysis.ml" 173 5684 5702 "conditionAnalysis.ml" 173 5684 5704
+type(
+  Cabs.expression
+)
+ident(
+  def e2 "conditionAnalysis.ml" 173 5684 5711 "conditionAnalysis.ml" 177 5935 5942
+)
+"conditionAnalysis.ml" 173 5684 5688 "conditionAnalysis.ml" 173 5684 5705
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 173 5684 5711 "conditionAnalysis.ml" 173 5684 5713
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "conditionAnalysis.ml" 173 5684 5696 "conditionAnalysis.ml" 173 5684 5698
+)
+"conditionAnalysis.ml" 173 5684 5714 "conditionAnalysis.ml" 173 5684 5715
+type(
+  Cabs.binary_operator -> Cabs.binary_operator -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"conditionAnalysis.ml" 173 5684 5716 "conditionAnalysis.ml" 173 5684 5718
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 173 5684 5711 "conditionAnalysis.ml" 173 5684 5718
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5719 "conditionAnalysis.ml" 173 5684 5721
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"conditionAnalysis.ml" 173 5684 5722 "conditionAnalysis.ml" 173 5684 5724
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "conditionAnalysis.ml" 173 5684 5696 "conditionAnalysis.ml" 173 5684 5698
+)
+"conditionAnalysis.ml" 173 5684 5725 "conditionAnalysis.ml" 173 5684 5726
+type(
+  Cabs.binary_operator -> Cabs.binary_operator -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"conditionAnalysis.ml" 173 5684 5727 "conditionAnalysis.ml" 173 5684 5729
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 173 5684 5722 "conditionAnalysis.ml" 173 5684 5729
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5730 "conditionAnalysis.ml" 173 5684 5732
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"conditionAnalysis.ml" 173 5684 5733 "conditionAnalysis.ml" 173 5684 5735
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "conditionAnalysis.ml" 173 5684 5696 "conditionAnalysis.ml" 173 5684 5698
+)
+"conditionAnalysis.ml" 173 5684 5736 "conditionAnalysis.ml" 173 5684 5737
+type(
+  Cabs.binary_operator -> Cabs.binary_operator -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"conditionAnalysis.ml" 173 5684 5738 "conditionAnalysis.ml" 173 5684 5740
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 173 5684 5733 "conditionAnalysis.ml" 173 5684 5740
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5741 "conditionAnalysis.ml" 173 5684 5743
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"conditionAnalysis.ml" 173 5684 5744 "conditionAnalysis.ml" 173 5684 5746
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "conditionAnalysis.ml" 173 5684 5696 "conditionAnalysis.ml" 173 5684 5698
+)
+"conditionAnalysis.ml" 173 5684 5747 "conditionAnalysis.ml" 173 5684 5748
+type(
+  Cabs.binary_operator -> Cabs.binary_operator -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"conditionAnalysis.ml" 173 5684 5749 "conditionAnalysis.ml" 173 5684 5751
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 173 5684 5744 "conditionAnalysis.ml" 173 5684 5751
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5752 "conditionAnalysis.ml" 173 5684 5754
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"conditionAnalysis.ml" 173 5684 5755 "conditionAnalysis.ml" 173 5684 5757
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "conditionAnalysis.ml" 173 5684 5696 "conditionAnalysis.ml" 173 5684 5698
+)
+"conditionAnalysis.ml" 173 5684 5758 "conditionAnalysis.ml" 173 5684 5759
+type(
+  Cabs.binary_operator -> Cabs.binary_operator -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"conditionAnalysis.ml" 173 5684 5760 "conditionAnalysis.ml" 173 5684 5762
+type(
+  Cabs.binary_operator
+)
+"conditionAnalysis.ml" 173 5684 5755 "conditionAnalysis.ml" 173 5684 5762
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5744 "conditionAnalysis.ml" 173 5684 5762
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5733 "conditionAnalysis.ml" 173 5684 5762
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5722 "conditionAnalysis.ml" 173 5684 5762
+type(
+  bool
+)
+"conditionAnalysis.ml" 173 5684 5711 "conditionAnalysis.ml" 173 5684 5762
+type(
+  bool
+)
+"conditionAnalysis.ml" 174 5766 5782 "conditionAnalysis.ml" 174 5766 5816
+type(
+  Cabs.binary_operator ->
+  Cabs.expression -> Cabs.expression -> (Expr.t * Interval.t) option
+)
+ident(
+  int_ref CondUtils.interval_from_comparison "conditionAnalysis.ml" 130 4315 4321 "conditionAnalysis.ml" 130 4315 4345
+)
+"conditionAnalysis.ml" 174 5766 5817 "conditionAnalysis.ml" 174 5766 5819
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "conditionAnalysis.ml" 173 5684 5696 "conditionAnalysis.ml" 173 5684 5698
+)
+"conditionAnalysis.ml" 174 5766 5820 "conditionAnalysis.ml" 174 5766 5822
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e1 "conditionAnalysis.ml" 173 5684 5699 "conditionAnalysis.ml" 173 5684 5701
+)
+"conditionAnalysis.ml" 174 5766 5823 "conditionAnalysis.ml" 174 5766 5825
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e2 "conditionAnalysis.ml" 173 5684 5702 "conditionAnalysis.ml" 173 5684 5704
+)
+"conditionAnalysis.ml" 174 5766 5782 "conditionAnalysis.ml" 174 5766 5825
+call(
+  stack
+)
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 175 5831 5837 "conditionAnalysis.ml" 175 5831 5841
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 175 5831 5845 "conditionAnalysis.ml" 175 5831 5855
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref Ranges.top "conditionAnalysis.ml" 92 2924 2930 "conditionAnalysis.ml" 92 2924 2933
+)
+"conditionAnalysis.ml" 176 5856 5868 "conditionAnalysis.ml" 176 5856 5880
+type(
+  Expr.t
+)
+ident(
+  def bounded_expr "conditionAnalysis.ml" 176 5856 5895 "conditionAnalysis.ml" 176 5856 5934
+)
+"conditionAnalysis.ml" 176 5856 5882 "conditionAnalysis.ml" 176 5856 5890
+type(
+  Interval.t
+)
+ident(
+  def interval "conditionAnalysis.ml" 176 5856 5895 "conditionAnalysis.ml" 176 5856 5934
+)
+"conditionAnalysis.ml" 176 5856 5867 "conditionAnalysis.ml" 176 5856 5891
+type(
+  Expr.t * Interval.t
+)
+"conditionAnalysis.ml" 176 5856 5862 "conditionAnalysis.ml" 176 5856 5891
+type(
+  (Expr.t * Interval.t) option
+)
+"conditionAnalysis.ml" 176 5856 5895 "conditionAnalysis.ml" 176 5856 5912
+type(
+  ExprMap.key -> Interval.t -> Interval.t ExprMap.t
+)
+ident(
+  int_ref Ranges.expr_bound "conditionAnalysis.ml" 93 2950 2956 "conditionAnalysis.ml" 93 2950 2966
+)
+"conditionAnalysis.ml" 176 5856 5913 "conditionAnalysis.ml" 176 5856 5925
+type(
+  ExprMap.key
+)
+ident(
+  int_ref bounded_expr "conditionAnalysis.ml" 176 5856 5868 "conditionAnalysis.ml" 176 5856 5880
+)
+"conditionAnalysis.ml" 176 5856 5926 "conditionAnalysis.ml" 176 5856 5934
+type(
+  Interval.t
+)
+ident(
+  int_ref interval "conditionAnalysis.ml" 176 5856 5882 "conditionAnalysis.ml" 176 5856 5890
+)
+"conditionAnalysis.ml" 176 5856 5895 "conditionAnalysis.ml" 176 5856 5934
+call(
+  tail
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 174 5766 5770 "conditionAnalysis.ml" 177 5935 5942
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 178 5943 5956 "conditionAnalysis.ml" 178 5943 5957
+type(
+  Cabs.body
+)
+"conditionAnalysis.ml" 178 5943 5947 "conditionAnalysis.ml" 178 5943 5957
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 179 5958 5962 "conditionAnalysis.ml" 179 5958 5969
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 178 5943 5947 "conditionAnalysis.ml" 179 5958 5969
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 179 5958 5973 "conditionAnalysis.ml" 179 5958 5978
+type(
+  exn -> Interval.t ExprMap.t
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"conditionAnalysis.ml" 179 5958 5979 "conditionAnalysis.ml" 179 5958 5995
+type(
+  exn
+)
+"conditionAnalysis.ml" 179 5958 5973 "conditionAnalysis.ml" 179 5958 5995
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 180 5996 6000 "conditionAnalysis.ml" 180 5996 6001
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 180 5996 6005 "conditionAnalysis.ml" 180 5996 6015
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref Ranges.top "conditionAnalysis.ml" 92 2924 2930 "conditionAnalysis.ml" 92 2924 2933
+)
+"conditionAnalysis.ml" 167 5397 5399 "conditionAnalysis.ml" 180 5996 6015
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 166 5368 5370 "conditionAnalysis.ml" 180 5996 6015
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 182 6039 6043 "conditionAnalysis.ml" 182 6039 6069
+type(
+  Cabs.expression -> bool -> (Cabs.expression * (Data.t * Data.t)) list
+)
+ident(
+  def constraints_from_condition "conditionAnalysis.ml" 191 6317 6380 "conditionAnalysis.ml" 1 0 -1
+)
+"conditionAnalysis.ml" 183 6070 6075 "conditionAnalysis.ml" 183 6070 6079
+type(
+  Cabs.expression
+)
+ident(
+  def expr "conditionAnalysis.ml" 184 6099 6103 "conditionAnalysis.ml" 191 6317 6380
+)
+"conditionAnalysis.ml" 184 6099 6104 "conditionAnalysis.ml" 184 6099 6110
+type(
+  bool
+)
+ident(
+  def result "conditionAnalysis.ml" 185 6119 6123 "conditionAnalysis.ml" 191 6317 6380
+)
+"conditionAnalysis.ml" 188 6178 6184 "conditionAnalysis.ml" 188 6178 6189
+type(
+  Cabs.expression
+)
+ident(
+  def expr' "conditionAnalysis.ml" 189 6247 6249 "conditionAnalysis.ml" 191 6317 6380
+)
+"conditionAnalysis.ml" 188 6178 6195 "conditionAnalysis.ml" 188 6178 6201
+type(
+  bool
+)
+ident(
+  int_ref result "conditionAnalysis.ml" 184 6099 6104 "conditionAnalysis.ml" 184 6099 6110
+)
+"conditionAnalysis.ml" 188 6178 6207 "conditionAnalysis.ml" 188 6178 6211
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 183 6070 6075 "conditionAnalysis.ml" 183 6070 6079
+)
+"conditionAnalysis.ml" 188 6178 6229 "conditionAnalysis.ml" 188 6178 6237
+type(
+  Cabs.unary_operator
+)
+"conditionAnalysis.ml" 188 6178 6238 "conditionAnalysis.ml" 188 6178 6242
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "conditionAnalysis.ml" 183 6070 6075 "conditionAnalysis.ml" 183 6070 6079
+)
+"conditionAnalysis.ml" 188 6178 6217 "conditionAnalysis.ml" 188 6178 6243
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 188 6178 6192 "conditionAnalysis.ml" 188 6178 6243
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 189 6247 6253 "conditionAnalysis.ml" 189 6247 6259
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  def ranges "conditionAnalysis.ml" 190 6286 6288 "conditionAnalysis.ml" 191 6317 6380
+)
+"conditionAnalysis.ml" 189 6247 6262 "conditionAnalysis.ml" 189 6247 6276
+type(
+  Cabs.expression -> Interval.t ExprMap.t
+)
+ident(
+  int_ref cond_to_ranges "conditionAnalysis.ml" 164 5319 5327 "conditionAnalysis.ml" 164 5319 5341
+)
+"conditionAnalysis.ml" 189 6247 6277 "conditionAnalysis.ml" 189 6247 6282
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr' "conditionAnalysis.ml" 188 6178 6184 "conditionAnalysis.ml" 188 6178 6189
+)
+"conditionAnalysis.ml" 189 6247 6262 "conditionAnalysis.ml" 189 6247 6282
+call(
+  stack
+)
+type(
+  Interval.t ExprMap.t
+)
+"conditionAnalysis.ml" 190 6286 6288 "conditionAnalysis.ml" 190 6286 6299
+type(
+  (ExprMap.key ->
+   Interval.t ->
+   (Cabs.expression * (Data.t * Data.t)) list ->
+   (Cabs.expression * (Data.t * Data.t)) list) ->
+  Interval.t ExprMap.t ->
+  (Cabs.expression * (Data.t * Data.t)) list ->
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+ident(
+  int_ref Ranges.fold "conditionAnalysis.ml" 107 3435 3441 "conditionAnalysis.ml" 107 3435 3445
+)
+"conditionAnalysis.ml" 190 6286 6305 "conditionAnalysis.ml" 190 6286 6307
+type(
+  ExprMap.key
+)
+ident(
+  def lv "conditionAnalysis.ml" 190 6286 6308 "conditionAnalysis.ml" 191 6317 6369
+)
+"conditionAnalysis.ml" 190 6286 6308 "conditionAnalysis.ml" 190 6286 6309
+type(
+  Interval.t
+)
+ident(
+  def i "conditionAnalysis.ml" 190 6286 6310 "conditionAnalysis.ml" 191 6317 6369
+)
+"conditionAnalysis.ml" 190 6286 6310 "conditionAnalysis.ml" 190 6286 6313
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+ident(
+  def acc "conditionAnalysis.ml" 191 6317 6321 "conditionAnalysis.ml" 191 6317 6369
+)
+"conditionAnalysis.ml" 191 6317 6322 "conditionAnalysis.ml" 191 6317 6334
+type(
+  ExprMap.key -> Cabs.expression
+)
+ident(
+  int_ref Expr.to_cabs "conditionAnalysis.ml" 82 2706 2712 "conditionAnalysis.ml" 82 2706 2719
+)
+"conditionAnalysis.ml" 191 6317 6335 "conditionAnalysis.ml" 191 6317 6337
+type(
+  ExprMap.key
+)
+ident(
+  int_ref lv "conditionAnalysis.ml" 190 6286 6305 "conditionAnalysis.ml" 190 6286 6307
+)
+"conditionAnalysis.ml" 191 6317 6322 "conditionAnalysis.ml" 191 6317 6337
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"conditionAnalysis.ml" 191 6317 6339 "conditionAnalysis.ml" 191 6317 6361
+type(
+  Interval.t -> Data.t * Data.t
+)
+ident(
+  int_ref Interval.to_data_range "conditionAnalysis.ml" 52 1653 1659 "conditionAnalysis.ml" 52 1653 1672
+)
+"conditionAnalysis.ml" 191 6317 6362 "conditionAnalysis.ml" 191 6317 6363
+type(
+  Interval.t
+)
+ident(
+  int_ref i "conditionAnalysis.ml" 190 6286 6308 "conditionAnalysis.ml" 190 6286 6309
+)
+"conditionAnalysis.ml" 191 6317 6339 "conditionAnalysis.ml" 191 6317 6363
+call(
+  stack
+)
+type(
+  Data.t * Data.t
+)
+"conditionAnalysis.ml" 191 6317 6321 "conditionAnalysis.ml" 191 6317 6364
+type(
+  Cabs.expression * (Data.t * Data.t)
+)
+"conditionAnalysis.ml" 191 6317 6366 "conditionAnalysis.ml" 191 6317 6369
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+ident(
+  int_ref acc "conditionAnalysis.ml" 190 6286 6310 "conditionAnalysis.ml" 190 6286 6313
+)
+"conditionAnalysis.ml" 191 6317 6321 "conditionAnalysis.ml" 191 6317 6369
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+"conditionAnalysis.ml" 190 6286 6300 "conditionAnalysis.ml" 191 6317 6370
+type(
+  ExprMap.key ->
+  Interval.t ->
+  (Cabs.expression * (Data.t * Data.t)) list ->
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+"conditionAnalysis.ml" 191 6317 6371 "conditionAnalysis.ml" 191 6317 6377
+type(
+  Interval.t ExprMap.t
+)
+ident(
+  int_ref ranges "conditionAnalysis.ml" 189 6247 6253 "conditionAnalysis.ml" 189 6247 6259
+)
+"conditionAnalysis.ml" 191 6317 6378 "conditionAnalysis.ml" 191 6317 6380
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+"conditionAnalysis.ml" 190 6286 6288 "conditionAnalysis.ml" 191 6317 6380
+call(
+  tail
+)
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+"conditionAnalysis.ml" 189 6247 6249 "conditionAnalysis.ml" 191 6317 6380
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+"conditionAnalysis.ml" 188 6178 6180 "conditionAnalysis.ml" 191 6317 6380
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)
+type(
+  (Cabs.expression * (Data.t * Data.t)) list
+)

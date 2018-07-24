@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>OTAWA Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;casse@irit.fr&gt;, C. Rochange &lt;rochange@irit.fr&gt;, C. Ballabriga &lt;ballabri@irit.fr&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="manual-imports/../css/manual-4..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">OTAWA Manual</div>
+	<div class="authors"><a href="mailto:casse@irit.fr">H. Cassé </a>, <a href="mailto:rochange@irit.fr"> C. Rochange </a>, <a href="mailto:ballabri@irit.fr"> C. Ballabriga </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="manual-0.html">1  Building OTAWA  </a>
+  </li>
+  <li>
+  <a href="manual-1.html">2  Computing a WCET  </a>
+  </li>
+  <li>
+  <a href="manual-2.html">3  Writing an OTAWA Application  </a>
+  </li>
+  <li>
+  <a href="manual-3.html">4  Control Flow Graphs  </a>
+  </li>
+  <li>
+  <a href="manual-4.html">5  Property Work  </a>
+    <ul class="toc">
+    <li>
+    <a href="manual-4.html#5.1">5.1  Using the properties  </a>
+    </li>
+    <li>
+    <a href="manual-4.html#5.2">5.2  Creating an identifier  </a>
+    </li>
+    <li>
+    <a href="manual-4.html#5.3">5.3  Creating an object supporting annotations  </a>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="manual-5.html">6  Code Processors  </a>
+  </li>
+  <li>
+  <a href="manual-6.html">7  Features  </a>
+  </li>
+  <li>
+  <a href="manual-7.html">8  Using ELM  </a>
+  </li>
+  <li>
+  <a href="manual-8.html">9  Performing Iterative Data Flow Analysis  </a>
+  </li>
+  <li>
+  <a href="manual-9.html">10  Using Abstract Interpretation  </a>
+  </li>
+  <li>
+  <a href="manual-10.html">11  References  </a>
+  </li>
+  <li>
+  <a href="manual-11.html">12  Architecture Formats  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="5"></a>5 Property Work  </h2>
+<p>
+The properties are the first-class citizens of the OTAWA core used to annotate a program representation. They form a simple and usable facility to attach to/retrieve from the program representation some pieces of information. This section describes in details the use of properties. </p>
+<h2><a name="5.1"></a>5.1 Using the properties  </h2>
+<p>
+A property is triple formed by: </p>
+<ul >
+<li><p>
+ an identifier (usually an object of the class <tt>otawa::Identifier</tt>), </p>
+</li>
+<li><p>
+ the type of the stored data, </p>
+</li>
+<li><p>
+ the stored data itself. </p>
+</li>
+</ul>
+<p>
+The properties work as dynamic fields of the object they are hooked to. As C++ does not support such a kind of field, OTAWA encapsulates the management of properties in a specific syntax based on the C++ operator overload ability. So, the syntax to read a property the identifier of which is <tt>ID</tt>, attached to the object <tt>list</tt> (an object that has some properties attached to it is called a property list) is: </p>
+<div class="listing"><pre class="code">
+ID ( list )</pre></div><p>
+To set a property, one has just to use the same syntax followed by the <tt>=</tt> equal assignment symbol and the assigned expression. If the annotation is already hooked to the property list, its value is easily replaced. </p>
+<div class="listing"><pre class="code">
+ID ( list ) = expression ;</pre></div><p>
+The property system allow hooking several properties with the same identifier to a list. The trick is easily performed using the <tt>add()</tt> method. </p>
+<div class="listing"><pre class="code">
+ID ( list ).add( expression );</pre></div><p>
+To retrieve properties with the same identifier, one has to use a clumsy syntax as below: </p>
+<div class="listing"><pre class="code">
+for(Identifier&lt; data type &gt; data( list , ID ); data; data++)
+use(data);</pre></div><p>
+The properties may also be removed using the <tt>remove</tt> method of the <tt>Identifier</tt> class. </p>
+<div class="listing"><pre class="code">
+ID ( list ) . remove ( ) ;</pre></div><p>
+Although the access time to OTAWA properties is longer than an access to classical C++ fields, the penalty is reduced thanks to a cache system that benefits from the temporal locality of accesses. The properties also have a slightly larger size in memory. Yet, these drawbacks are balanced by the induced improvement in flexibility and usability to work on the program representation. </p>
+<p>
+This section has listed the main primitives used to handle properties. The following section will show how to declare <tt>Identifier</tt> objects. </p>
+<h2><a name="5.2"></a>5.2 Creating an identifier  </h2>
+<p>
+An <tt>Identifier</tt> is a static object used to identify properties hooked to objects. As static objects, they must be declared in the <tt>.h</tt> header file to be used out of the current module and defined in the <tt>.cpp</tt> source file to get existence. In both files, the type of the stored data must be specified. </p>
+<p>
+The following example shows how to declare in a header file an identifier called <tt>EXECUTION_TIME</tt> that stores a time expressed by a simple <tt>long long</tt> integer. Here, the extern C++ modifier ensures that the static object will not be defined in each source that includes the header file. </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/prop/Identifier.h&gt;
+
+extern Identifier&lt;long long&gt; EXECUTION_TIME;</pre></div><p>
+The definition of an identifier follows the usual rule of C++ but two arguments must be passed to the constructor: the string name of the identifier and its default value. This default value is returned by the property accessor if the property has not been not assigned. It may be a valid default value or an invalid value to show that the property is not defined. </p>
+<p>
+In our example, we specify a default value of -1 (invalid time) to show that the property is not set. </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/prop/Identifier.h&gt;
+
+Identifier&lt;long long&gt; EXECUTION_TIME("execution_time", -1);</pre></div><p>
+If the identifier is used as a static member of class named <tt>MyCLASS</tt>, it must be declared as follows: </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/prop/Identifier.h&gt;
+
+class MyClass: ... {
+  ...
+  static Identifier&lt;long long&gt; EXECUTION_TIME;
+  ...
+};</pre></div><p>
+and defined as below: </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/prop/Identifier.h&gt;
+
+Identifier&lt;long long&gt; MyClass::EXECUTION_TIME("MyClass::execution_time", -1);</pre></div><p>
+Specifying the type of the stored data when defining an <tt>Identifier</tt> allows the type checking system of C++ to be applied to properties which might help to avoid a bunch of errors. The data type is also used to provide many automatic facilities like pretty printing, "&#8943;" arguments scanning, serialization and so on, for the usual scalar types. </p>
+<p>
+To maintain consistency in naming, we advise to use capital letters for the identifier names (it recalls the constant used in the <tt>#define</tt> directives). </p>
+<h2><a name="5.3"></a>5.3 Creating an object supporting annotations  </h2>
+<p>
+To support properties, a class has to inherit publicly from the <tt>otawa::PropList</tt> class. </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/prop/PropList.h&gt;
+
+class MyClass: public PropList {
+public:
+  ...
+};</pre></div><p>
+This <tt>PropList</tt> has a really little memory overhead (a single pointer), making it useful even for small objects. Allocating and freeing the property is automatically handled by the <tt>PropList</tt> class and does not require any additional action for the new class. </p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@use dokuwiki
+@use dot
+@TITLE=Label test
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+
+This is a C source.
+<code c>
+#include <stdio.h>
+
+int main(void) {
+	return 0;
+}
+</code>
+@label a simple C //program//
+
+And now, a dot example.
+
+@<dot>
+digraph mine {
+	1 -> 2 ;
+	1 -> 3 ;
+	3 -> 4 ;
+	4 -> 5 ;
+	2 -> 5 ;
+}
+@</dot>
+@label A fine graph ! Isn't it ?
+

@@ -1,0 +1,5 @@
+*.deps
+*.libs
+example
+Makefile
+*.in

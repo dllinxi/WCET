@@ -1,0 +1,46 @@
+PVAL Loop Max Clauses:
+  @exit -> #Lp-2-15-ext.c_cond <= #Lp-1-13-ext.c * 41 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-2-15-ext.c <= #Lp-1-13-ext.c * 40 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-1-13-ext.c_cond <= #Fn-n * 11 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-1-13-ext.c <= #Fn-n * 10 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-3-24-small.c_cond <= #Fn-main * 21 through [Fn-main]
+  @exit -> #Lp-3-24-small.c <= #Fn-main * 20 through [Fn-main]
+  @exit -> #Lp-2-15-ext.c_cond <= #Lp-1-13-ext.c * 401 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-2-15-ext.c <= #Lp-1-13-ext.c * 400 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-1-13-ext.c_cond <= #Fn-n * 81 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-1-13-ext.c <= #Fn-n * 80 through [Ca-n-1-10-SMALL.c]
+
+
+PVAL Loop Total Clauses:
+  @exit -> #Lp-2-15-ext.c_cond <= #Ca-n-2-23-SMALL.C * 60 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-1-13-ext.c_cond <= #Ca-n-2-23-SMALL.C * 10 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Lp-3-24-small.c_cond <= #Fn-main * 100 through [Fn-main]
+  @exit -> #Lp-2-15-ext.c_cond <= #Ca-n-1-10-SMALL.c * 600 through [Ca-n-1-10-SMALL.c]
+  @exit -> #Lp-1-13-ext.c_cond <= #Ca-n-1-10-SMALL.c * 100 through [Ca-n-1-10-SMALL.c]
+
+
+PVAL IPET Clauses:
+  @exit -> #Fn-main = 1
+  @exit /\ #Ci-IF-4 = i -> #Cs-27-small.c + #Cs-29-small.c <= i through [Fn-main]
+  @exit -> #Cn-IF-4-25-small.c <= #Ci-IF-4
+  @exit -> #Ci-IF-4 <= #Fn-main
+  @exit /\ #Ci-IF-3 = i -> #Cs-10001-ext.c + #Cs-10002-ext.c <= i through [Ca-n-2-23-SMALL.C]
+  @exit -> #Cn-IF-3-10000-small.c <= #Ci-IF-3
+  @exit -> #Ci-IF-3 <= #Fn-n
+  @exit -> #Ca-n-2-23-SMALL.C <= #Fn-main through [Fn-main]
+  @exit /\ #Ci-IF-2 = i -> #Cs-19-small.c + #Cs-21-small.c <= i through [Fn-main]
+  @exit -> #Cn-IF-2-17-small.c <= #Ci-IF-2
+  @exit -> #Ci-IF-2 <= #Fn-main
+  @exit /\ #Ci-IF-1 = i -> #Cs-10001-ext.c + #Cs-10002-ext.c <= i through [Ca-n-1-10-SMALL.c]
+  @exit -> #Cn-IF-1-10000-small.c <= #Ci-IF-1
+  @exit -> #Ci-IF-1 <= #Fn-n
+  @exit -> #Ca-n-1-10-SMALL.c <= #Fn-main through [Fn-main]
+  @exit -> #exit = 1
+
+
+PVAL Executed Clauses:
+  @exit -> #Cs-27-small.c = 0 through [Fn-main]
+  @exit -> #Ci-IF-4 = 0 through [Fn-main]
+  @exit -> #Cs-10001-ext.c = 0 through [Ca-n-2-23-SMALL.C]
+  @exit -> #Cs-19-small.c = 0 through [Fn-main]
+  @exit -> #Cs-10002-ext.c = 0 through [Ca-n-1-10-SMALL.c]

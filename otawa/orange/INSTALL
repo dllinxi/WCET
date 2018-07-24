@@ -1,0 +1,28 @@
+
+FRONTC DEPENDENCY
+
+FrontC library is required to build oRange.
+Just unpack and compile its sources at the same level as the oRange directory.
+FrontC may be obtained as source package from http://www.irit.fr/recherches/ARCHI/MARCH/frontc.
+
+> wget http://www.irit.fr/recherches/ARCHI/MARCH/frontc/Frontc-3.4.tgz
+> tar xvfz Frontc-3.4.tgz
+> cd ..
+> ln -s Frontc-3.4 frontc
+
+Or checked out form CVS:
+> cvs co -r :pserver:anonymous@cvs.irit.fr:/usr/local/CVS_IRIT/CVS_OTAWA
+
+In both cases, to compile FrontC:
+> cd frontc
+> make
+
+
+
+BUILDING ORANGE
+
+Just type:
+> cd orange
+> make
+
+oRange executable may be found in "main/orange".

@@ -1,0 +1,13 @@
+file name = /home/casse/otawa/gel/test/bin/crc-stabs.elf
+type = ET_EXEC (0x0002)
+machine = EM_SPARC (0x0002)
+version = 1
+entry = 0x40000000
+identification
+7f454c46	.ELF
+01020100	....
+00000000	....
+00000000	....
+ident[EI_CLASS] = ELFCLASS32 (1)
+ident[EI_DATA] = ELFDATA2MSB (2)
+ident[EI_OSABI] = 0

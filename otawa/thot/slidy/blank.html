@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-US">
+
+<head>
+<meta name="generator" content="Thot (http://hcasse.github.io/Thot/)" />
+<title>@(TITLE)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="copyright" content="@(COPYRIGHT)"/>
+@(IF_DURATION)
+<link rel="stylesheet" href="@(IMPORTS)/styles/slidy.css" type="text/css" />
+@(IF_IMPORTED_STYLE)
+<script src="@(IMPORTS)/scripts/slidy.js" charset="utf-8" type="text/javascript">
+</script>
+</head>
+
+<body>
+
+<div class="background">
+	@(IF_DOC_LOGO)
+	@(IF_ORG_LOGO)
+</div> 
+
+<div class="slide cover title">
+	<div class="block">
+		@(IF_COVER_IMAGE)
+		<h1>@(TITLE)</h1>
+		<p class="subtitle">@(SUBTITLE)</p>
+		<p class="authors">@(AUTHORS)</p>
+		<p class="organization">@(ORGANIZATION)</p>
+	</div>
+</div>
+
+@(SLIDES)
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+@use dokuwiki
+@use ditaa
+@TITLE=aafig test
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+
+ditaa examples below are extracted and gracefully provided by [[http://ditaa.sourceforge.net|ditaa website]].
+
+<ditaa>
+    +--------+   +-------+    +-------+
+    |        | --+ ditaa +--> |       |
+    |  Text  |   +-------+    |diagram|
+    |Document|   |!magic!|    |   2   |
+    |     {d}|   |       |    |       |
+    +---+----+   +-------+    +-------+
+        :                         ^
+        |       Lots of work      |
+        +-------------------------+
+</ditaa>
+@label This is my first ditaa.

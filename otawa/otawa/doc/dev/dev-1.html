@@ -1,0 +1,781 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>OTAWA Development Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;casse@irit.fr&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="dev-imports/../css/manual-1..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">OTAWA Development Manual</div>
+	<div class="authors"><a href="mailto:casse@irit.fr">H. Cassé </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="dev-0.html">1  Script Development  </a>
+  </li>
+  <li>
+  <a href="dev-1.html">2  Development of Loader  </a>
+    <ul class="toc">
+    <li>
+    <a href="dev-1.html#2.1">2.1  The Architecture Abstraction Layer  </a>
+      <ul class="toc">
+      <li>
+      <a href="dev-1.html#2.1.1">2.1.1  Overview  </a>
+      </li>
+      <li>
+      <a href="dev-1.html#2.1.2">2.1.2  Abstraction Objects  </a>
+      </li>
+      <li>
+      <a href="dev-1.html#2.1.3">2.1.3  Semantics Instructions  </a>
+      </li>
+      </ul>
+    </li>
+    <li>
+    <a href="dev-1.html#2.2">2.2  Developing a Loader  </a>
+      <ul class="toc">
+      <li>
+      <a href="dev-1.html#2.2.1">2.2.1  Developing a loader with GEL  </a>
+      </li>
+      </ul>
+    </li>
+    <li>
+    <a href="dev-1.html#2.3">2.3  Developing a Loader with GLISS2  </a>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="dev-2.html">3  Analyzer Development  </a>
+  </li>
+  <li>
+  <a href="dev-3.html">4  ILP Solver Development  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="2"></a>2 Development of Loader  </h2>
+<p>
+OTAWA supports different API thanks to a plugin mechanism and to an <i>architecture abstraction layer</i>. Developing a loader is mainly providing actual implementation of this layer for a particular ISA. </p>
+<h2><a name="2.1"></a>2.1 The Architecture Abstraction Layer  </h2>
+<h2><a name="2.1.1"></a>2.1.1 Overview  </h2>
+<div class="figure"><center><img src="otawa-overview.png"/></center></div><p>
+As shown in the figure above, this layer allows to make analysis implemented on OTAWA independent of the actual architecture of the processed program. This does not mean that the analyzes cannot be aware of the particular properties of the processed program but that they do not have to be tuned for a particular instruction (ISA). Yet, the analyzes can have as many information as required from the actual form of the processed program. </p>
+<p>
+The <i>architecture abstraction layer</i> is mainly formed of two parts: </p>
+<ul >
+<li><p>
+ a set of objects describing program image in memory, the files, the symbols and the instructions, </p>
+</li>
+<li><p>
+ a translator to get semantics of the actual instruction set expressed in a language of semantics instructions. </p>
+</li>
+</ul>
+<h2><a name="2.1.2"></a>2.1.2 Abstraction Objects  </h2>
+<p>
+The UML diagram below describes the classes and the relationship of C++ objects involved in the <i>architecture description layer</i>. </p>
+<div class="figure"><center><img src="aal-uml.png"/></center></div><p>
+The root class of the <i>architecture abstract layer</i> is the <tt>Process</tt> that represents the program ready to run in memory. It contains all information about the program in memory (start instruction, platform, file composing the memory image) with other information provided in the executable files like debugging information (matches between source lines and memory addresses). The <tt>Process</tt> is the root object and the result of a loader work. </p>
+<p>
+In addition, the <tt>Process</tt> contains also information about the programming model of the architecture thanks to the <tt>Platform</tt> object: mainly, the list of register banks with their description. </p>
+<p>
+From the <tt>Process</tt>, one can get the list of executable file composing the program image in memory. Although most OTAWA loader, at this time, only supports applications made of a monolithic executable file, the framework is able to cope with processes made of several file: at least one <tt>program</tt> file and possibly several library files. </p>
+<p>
+The files, in turn, contains bits composing the program image in memory, called the <tt>Segments</tt> but also more functional information like <tt>Symbol</tt>. The <tt>Symbol</tt> matches any object with a name produced by the compiler, that is, function, data, labels, etc. The symbols may occupy a place in the memory (defined by its address and its size) or not (constants values, compiler or OS internal symbols). </p>
+<p>
+The <tt>Segment</tt> objects represents slices of memory sharing common properties. They may be initialized or not. Closer concepts from the ELF file format are either sections, or program headers. Whatever, a <tt>Segment</tt> has usually a name, an address, a size and may be executable or writable. They are composed of <tt>ProgItem</tt> object. </p>
+<p>
+A <tt>ProgItem</tt> object represents any atomic entity in the program, mainly, instructions and data items. The current version of OTAWA only supports instructions, <tt>Inst</tt> class, but next versions may be able to recognize data and add representation objects. Whatever, a program item is identified by its address and its size. </p>
+<p>
+Specializing the <tt>ProgItem</tt> class, the <tt>Inst</tt> objects represents the actual machine instructions of the current ISA. The role of these objects is to give an abstract description of machine instructions as precise as possible to let higher level analyzes to work with the instruction. An <tt>Inst</tt> object have the following interface: </p>
+<ul >
+<li><p>
+ <tt>dump</tt> - to get a textual representation (useful for debugging or for user output), </p>
+</li>
+<li><p>
+ <tt>kind</tt> - information about the nature of the instruction, </p>
+</li>
+<li><p>
+ <tt>readRegs</tt> - set of read registers, </p>
+</li>
+<li><p>
+ <tt>writtenRegs</tt> - set of written registers, </p>
+</li>
+<li><p>
+ <tt>target</tt> - when the instruction is a control, the target of the branch (if one can be determined), </p>
+</li>
+<li><p>
+ <tt>semInsts</tt> - translate the instruction into semantics instructions. </p>
+</li>
+</ul>
+<p>
+The <tt>kind</tt> allows to identify the type of an instruction whatever the used instruction set. It is composed of a bit vector with each bit giving a specific information: </p>
+<ul >
+<li><p>
+ <tt>IS_COND</tt> - set if the instruction is conditional, </p>
+</li>
+<li><p>
+ <tt>IS_CONTROL</tt> - set if the instruction performs a branch, that is, changes the PC, </p>
+<ul >
+<li><p>
+ <tt>IS_CALL</tt> - set if the instruction is a sub-program call (ever induces <tt>IS_CONTROL</tt> to be set), </p>
+</li>
+<li><p>
+ <tt>IS_RETURN</tt> - set if the instruction is sub-program return (ever induces <tt>IS_CONTROL</tt> to be set), </p>
+</li>
+<li><p>
+ <tt>IS_TRAP</tt> - set if the instruction performs a system trap like exception or system call (ever induces <tt>IS_CONTROL</tt> to be set), </p>
+</li>
+</ul>
+</li>
+<li><p>
+ <tt>IS_MEM</tt> - set if the instruction performs memory access, </p>
+<ul >
+<li><p>
+ <tt>IS_LOAD</tt> - set if the instruction performs memory load (ever induces <tt>IS_MEM</tt> to be set), </p>
+</li>
+<li><p>
+ <tt>IS_STORE</tt> - set if the instruction performs memory store (ever induces <tt>IS_MEM</tt> to be set), </p>
+</li>
+<li><p>
+ <tt>IS_MULTI</tt> - set if the instruction performs multiple memory accesses of the same type (ever induces <tt>IS_MEM</tt> to be set), </p>
+</li>
+</ul>
+</li>
+<li><p>
+ <tt>IS_INT</tt> - set if the instruction handles integer, </p>
+</li>
+<li><p>
+ <tt>IS_FLOAT</tt> - set if the  instruction handles floats, </p>
+</li>
+<li><p>
+ <tt>IS_ALU</tt> - set if the instruction performs arithmetic or logic operations, </p>
+</li>
+<li><p>
+ <tt>IS_MUL</tt> - set if the instruction performs multiplication operation, </p>
+</li>
+<li><p>
+ <tt>IS_DIV</tt> - set if the instruction performs division operation, </p>
+</li>
+<li><p>
+ <tt>IS_SHIFT</tt> - set if the instructions performs shift operation, </p>
+</li>
+<li><p>
+ <tt>IS_INTERN</tt> - set if the instructions performs operation internal to the microprocessor (hardware driving), </p>
+</li>
+<li><p>
+ <tt>IS_SPECIAL</tt> - set if the instruction is unusual (often found in old CISC ISA). </p>
+</li>
+</ul>
+<p>
+A lot of facilities provided by the <i>architecture abstraction layer</i> are optional and the analyzes must be able to handle this: either assuming worst case configuration, or aborting the analysis. Whatever, each information availability is represented by a specific feature put on the <tt>Process</tt> and included in the <tt>WorkSpace</tt>: </p>
+<ul >
+<li><p>
+	<tt>MEMORY_ACCESS_FEATURE</tt> &#8211; analyzes can read integer values in the process memory, </p>
+</li>
+<li><p>
+ <tt>FLOAT_MEMORY_ACCESS_FEATURE</tt> &#8211; analyzes can read float values in the process memory, </p>
+</li>
+<li><p>
+ <tt>REGISTER_USAGE_FEATURE</tt> &#8211; ensures that lists of read and written registers are available, </p>
+</li>
+<li><p>
+ <tt>CONTROL_DECODING_FEATURE</tt> &#8211; ensures that the control instruction target is decoded, </p>
+</li>
+<li><p>
+ <tt>SOURCE_LINE_FEATURE</tt> &#8211; ensures that the source/line debugging information is available, </p>
+</li>
+<li><p>
+ <tt>SEMANTICS_INFO</tt> &#8211; ensures that the semantics instruction translation is provided, </p>
+</li>
+<li><p>
+ <tt>DELAYED_FEATURE</tt> &#8211; means that information about delayed control is provided, </p>
+</li>
+<li><p>
+ <tt>SEMANTICS_INFO_EXTENDED</tt> - means that the semantics instructions extension is available (multiplication, division, binary operations), </p>
+</li>
+</ul>
+<h2><a name="2.1.3"></a>2.1.3 Semantics Instructions  </h2>
+<p>
+Semantics instructions provides a way to cope with the functional behavior of the instructions independently of the ISA. Basically, the semantic instruction set is a minimal regular instruction set including usual operations with the following features: </p>
+<ul >
+<li><p>
+ the control flow is bound to a forward-branching conditional instruction (no loop can be created), </p>
+</li>
+<li><p>
+ the memory operations are only performed by two specific instruction, <tt>load</tt> and <tt>store</tt>, </p>
+</li>
+<li><p>
+ the instructions can either use registers, or temporaries (not involved in the program state), </p>
+</li>
+<li><p>
+ constant values can only be processed through a specific instruction, <tt>seti</tt>, </p>
+</li>
+<li><p>
+ the comparison instructions can only produces results based on the usual comparison operators, </p>
+</li>
+<li><p>
+ as it is impossible, without adding a lot of complexity, to cope with all possible machine instructions, the instruction, <tt>scratch</tt>, can inform that a result is unknown. </p>
+</li>
+</ul>
+<p>
+The goal of this language is to make possible data flow analysis of the program, that is static analyzes like abstract interpretation without needing to specialize it to a specific ISA. As such analyzes may have polynomial complexity, the interpretation must be as fast as possible. Hence, the semantics instructions can not create loops (inside the machine instruction they are defining) to avoid to have to compute fix points on the translation of the instruction. The idea is that the machine control flow is viewable inside the instruction but the control flow of the program is handled at an upper level (in the Control Flow Graph for example). </p>
+<p>
+The only conditional instruction, <tt>if</tt>(<i>c</i>, <i>r</i>, <i>s</i>) allows to have several parallel interpretation paths but no loop. It means that if the condition <i>c</i> is true in register <i>r</i>, the interpretation path continue, else <i>s</i> instructions must be skipped. The misnamed instructions <tt>branch</tt> or <tt>trap</tt> means the instruction is performing a branch instruction here, that is, from a CFG point of view, that the branch-taken edge is followed. Finally <tt>cont</tt> semantic instruction stops the execution of the semantic instruction for the current machine instruction. If no <tt>branch</tt> has been found on the current execution path, the CFG edge representing sequential control flow is considered to be followed. Notice that <tt>branch</tt> does not stop the execution of the semantic instruction: from an ISA point of view, it just changes the PC register of the machine. </p>
+<p>
+For computation, the following instructions are available. Most of them works as three-operand operations on register or variable registers with <i>d</i> the destination register, <i>a</i> the first source operand and <i>b</i> the second source operand. </p>
+<ul >
+<li><p>
+ <tt>set(d, a)</tt> &#8211; register copy, </p>
+</li>
+<li><p>
+ <tt>add</tt>(d, a, b) &#8211; addition, </p>
+</li>
+<li><p>
+ <tt>sub</tt>(d, a, b) &#8211; subtraction, </p>
+</li>
+<li><p>
+ <tt>shl</tt>(d, a, b) &#8211; logical shift left, </p>
+</li>
+<li><p>
+ <tt>shr</tt>(d, a, b) &#8211; logical shift right, </p>
+</li>
+<li><p>
+ <tt>asr</tt>(d, a, b) &#8211; arithmetic shift right, </p>
+</li>
+<li><p>
+ <tt>cmp</tt>(d, a, b) &#8211; comparison of a and b, </p>
+</li>
+<li><p>
+ <tt>cmpu</tt>(d, a, b) &#8211; unsigned comparison of a and b. </p>
+</li>
+</ul>
+<p>
+If the feature <tt>SEMANTICS_INFO_EXTENDED</tt> is provided by the process, the following instructions may also be used: </p>
+<ul >
+<li><p>
+ <tt>neg</tt>(d, a) &#8211; sign inversion, </p>
+</li>
+<li><p>
+ <tt>mul</tt>(d, a, b) &#8211; signed multiplication, </p>
+</li>
+<li><p>
+ <tt>mulu</tt>(d, a, b) &#8211; unsigned multiplication, </p>
+</li>
+<li><p>
+ <tt>div</tt>(d, a, b) &#8211; signed division, </p>
+</li>
+<li><p>
+ <tt>divu</tt>(d, a, b) &#8211; unsigned division, </p>
+</li>
+<li><p>
+ <tt>mod</tt>(d, a, b) &#8211; signed modulo, </p>
+</li>
+<li><p>
+ <tt>modu</tt>(d, a, b) &#8211; unsigned modulo, </p>
+</li>
+<li><p>
+ <tt>not</tt>(d, a) &#8211; bit-to-bit not, </p>
+</li>
+<li><p>
+ <tt>and</tt>(d, a, b) &#8211; bit-to-bit and, </p>
+</li>
+<li><p>
+ <tt>or</tt>(d, a, b) &#8211; bit-to-bit inclusive-or, </p>
+</li>
+<li><p>
+ <tt>xor</tt>(d, a, b) &#8211; bit-to-bit exclusive-or, </p>
+</li>
+</ul>
+<h2><a name="2.2"></a>2.2 Developing a Loader  </h2>
+<p>
+A loader is basically a plugin whose handle implements <tt>otawa::Loader</tt>. The handle object is used to load a binary file and to build the process representing the program. To illustrate the procedure, we will implement (partially) a loader for a MIPS ISA. Let declare the loader handle: </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/prog/Loader.h&gt;
+
+namespace mips {
+
+// loader class
+static string table[] = { "elf_20" };
+static elm::genstruct::Table&lt;string&gt; aliases(table, 1);
+
+class Loader: public otawa::Loader {
+public:
+	Loader(void): otawa::Loader("mips", Version(1, 0, 0), OTAWA_LOADER_VERSION, aliases)
+		{ }
+	virtual CString getName(void) const
+		{ return "mips"; }
+
+	virtual otawa::Process *load(Manager *man, CString path, const PropList&amp; props) {
+		otawa::Process *proc = create(man, props);
+		if(!proc-&gt;loadProgram(path)) {
+			delete proc;
+			proc = 0;
+		}
+		return proc;
+	}
+
+	virtual otawa::Process *create(Manager *man, const PropList&amp; props)
+		{ return new Process(man, new Platform(props), props); }
+};
+
+}	// mips
+
+mips::Loader OTAWA_LOADER_HOOK;
+mips::Loader&amp; mips_plugin = OTAWA_LOADER_HOOK;</pre></div><p>
+The more interesting part is in <tt>create</tt>() method that builds a platform of types <tt>mips::Platform</tt> and the process itself of type <tt>mips::Process</tt>. The description of these object is detailed below. When a binary is opened from an ELF file, OTAWA looks for the matching plugin using ISA field of ELF header, install the loader and call method <tt>load</tt>(). This one creates a process and and load the program in the process. If there is an error, process object is cleaned and a null is returned. </p>
+<p>
+Now, we have to describe the structure of MIPS state in the platform object. First, we have to declare the platform that is mainly composed of registers as a banks of identical register or separate registers: </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/hard/Platform.h&gt;
+#include &lt;otawa/hard/Register.h&gt;
+
+namespace mips {
+
+class Platform: public hard::Platform {
+public:
+	static const Identification ID;
+	Platform(const PropList&amp; props = PropList::EMPTY): hard::Platform(ID, props)
+		{ setBanks(banks); }
+
+	static const hard::Register PC, HI, LO;
+	static const hard::PlainBank GR;
+	static const hard::PlainBank FPR;
+	static const hard::MeltedBank MISC;
+	static const elm::genstruct::Table&lt;const hard::RegBank *&gt; banks;
+
+	virtual bool accept(const Identification&amp; id)
+		{ return id.abi() == "elf" &amp;&amp; id.architecture() == "mips"; }
+};
+
+const Platform::Identification Platform::ID("mips-elf-");
+
+const hard::PlainBank Platform::GR("GR", hard::Register::INT,  32, "$%d", 32);
+const hard::PlainBank Platform::FPR("FPR", hard::Register::FLOAT,  64, "$f%d", 32);
+const hard::Register Platform::PC("pc", hard::Register::INT, 32);
+const hard::Register Platform::HI("hi", hard::Register::INT, 32);
+const hard::Register Platform::LO("lo", hard::Register::INT, 32);
+const hard::MeltedBank Platform::MISC("MISC", &amp;Platform::PC, &amp;Platform::HI, &amp;Platform::LO, 0);
+
+static const hard::RegBank *banks_array[] = {
+	&amp;Platform::GR,
+	&amp;Platform::FPR,
+	&amp;Platform::MISC
+};
+const elm::genstruct::Table&lt;const hard::RegBank *&gt; Platform::banks(banks_array, 3);
+
+}	// mips</pre></div><p>
+The main point here is that the constructor of MIPS platform <b>must</b> record the hardware register using the <tt>setBanks</tt>() method. This method takes as input a <tt>genstruct::Table</tt>, that is, a list of register banks. In the banks array, some may be uniforms like <i>GR</i> or <i>FPR</i>, some are a melt of different registers like <i>MISC</i>. A uniform <tt>PlainBank</tt> register bank is constructed using its name, its type (one of <tt>INT</tt>, <tt>FLOAT</tt>, <tt>ADDR</tt> or <tt>BITS</tt>), the size of its register in bits, a format string to name bank register containing a "%d" that will be replaced by the actual register index and the count of registers in the bank. </p>
+<p>
+To declare a register alone (like <i>PC</i>, <i>HI</i> or <i>LO</i>), one has to pass the register name, its type and its size in bits. Non-regular registers are then grouped in <i>MISC</i>. They are passed to the bank constructor as a null-ended list of register pointers. </p>
+<p>
+<tt>ID</tt> and <tt>accept</tt> are added here for backward compatibility, to identify the platform, but they are rarely used by OTAWA. </p>
+<p>
+Now the MIPS <tt>Process</tt> itself may be declared (this is the minimal version): </p>
+<div class="listing"><pre class="code">
+#include &lt;otawa/proc/Process.h&gt;
+
+namespace mips {
+
+class Process: public otawa::Process {
+public:
+	Process(Manager *manager, hard::Platform *pf, const PropList&amp; props = PropList::EMPTY);
+
+	virtual hard::Platform *platform(void) { return _pf; }
+	virtual Inst *start(void);
+	virtual int instSize(void) const;
+	virtual File *loadFile(elm::CString path);
+
+private:
+	hard::Platform *_pf;
+};
+
+}	// mips</pre></div><p>
+The method <tt>start</tt>() gives the first instruction of the program while <tt>loadFile</tt> is called by <tt>loadProgram</tt>() to install the executable file in the current process (copying code and data segments). <tt>instSize</tt>() provides the size of instruction in bytes if the instruction set is regular, 0 else. This declaration is a very minimal <tt>Process</tt>, more customization will be added afterward in the following sections to provide more facilities. </p>
+<p>
+To go further in the description of MIPS <tt>Process</tt>, a loader library must be chosen and used. The following section gives the implemetation using the GEL library (GEL is delivered with OTAWA). </p>
+<h2><a name="2.2.1"></a>2.2.1 Developing a loader with GEL  </h2>
+<p>
+GEL is the usual library used by OTAWA to handle ELF binaries. It is a C library but it is perfectly compatible with OTAWA C++. The very first method that will use GEL is <tt>loadFile</tt>() so we extend our process description with data structure useful for GEL: </p>
+<div class="listing"><pre class="code">
+#include &lt;gel/gel.h&gt;
+#include &lt;gel/gel_elf.h&gt;
+#include &lt;gel/image.h&gt;
+#include &lt;otawa/prog/Segment.h&gt;
+
+namespace mips {
+
+class Process: public otawa Process {
+public:
+	...
+	virtual Inst *start(void) { return _start; }
+private:
+	...
+	Inst *_start;
+	gel_file_t *gel_file;
+	gel_line_map_t *map;
+};
+
+}	// mips</pre></div><p>
+The <tt>loadFile</tt>() is described now: </p>
+<div class="listing"><pre class="code">
+File *Process::loadFile(elm::CString path) {
+
+	// (a) Check if there is not an already opened file !
+	if(program())
+		throw LoadException("loader cannot open multiple files !");
+
+	// (b) create file
+	File *file = new otawa::File(path);
+	addFile(file);
+
+	// (c) open the binary
+	gel_file = gel_open(&amp;path, 0, GEL_OPEN_NOPLUGINS | GEL_OPEN_QUIET);
+	if(!gel_file)
+		throw LoadException(_ &lt;&lt; "cannot load \"" &lt;&lt; path &lt;&lt; "\".");
+
+	// (d) build the segments
+	gel_file_info_t infos;
+	gel_file_infos(gel_file, &amp;infos);
+	for (int i = 0; i &lt; infos.sectnum; i++) {
+		gel_sect_info_t infos;
+		gel_sect_t *sect = gel_getsectbyidx(gel_file, i);
+		gel_sect_infos(sect, &amp;infos);
+		if(infos.flags &amp; SHF_EXECINSTR) {
+			Segment *seg = new Segment(*this, infos.name, infos.vaddr, infos.size);
+			file-&gt;addSegment(seg);
+		}
+	}
+
+	// (e) initialize symbols
+	gel_enum_t *iter = gel_enum_file_symbol(gel_file);
+	gel_enum_initpos(iter);
+	for(char *name = (char *)gel_enum_next(iter); name; name = (char *)gel_enum_next(iter)) {
+
+		// scan the symbol
+		address_t addr = 0;
+		Symbol::kind_t kind;
+		gel_sym_t *sym = gel_find_file_symbol(gel_file, name);
+		gel_sym_info_t infos;
+		gel_sym_infos(sym, &amp;infos);
+		switch(ELF32_ST_TYPE(infos.info)) {
+		case STT_FUNC:
+			kind = Symbol::FUNCTION;
+			addr = (address_t)infos.vaddr;
+			break;
+		case STT_NOTYPE:
+			kind = Symbol::LABEL;
+			addr = (address_t)infos.vaddr;
+			break;
+		default:
+			continue;
+		}
+
+		// build the label if required
+		if(addr) {
+			String label(infos.name);
+			Symbol *sym = new Symbol(*file, label, kind, addr);
+			file-&gt;addSymbol(sym);
+		}
+	}
+	gel_enum_free(iter);
+
+	// (f) find sart point
+	_start = findInstAt(Address(infos.entry));
+	return file;
+}
+</pre></div><p>
+This method is the more complex part of the loading procedure as it opens the binary and examine it to build the OTAWA program representation. For the sake of simplicity, the presented version accepts in the process only one binary, the main program, but OTAWA is designed to support shared libraries also. So the first block of code (a) ensures there is no other program opened.Block &#169; create the file itself and at it to the process. Block &#169; uses GEL to open the binary file and stores the handle in <tt>gel_file</tt>. This handle will be used all along the process life and is stored in attributes. </p>
+<p>
+Block (d) looks in the section composing the executable and builds OTAWA <tt>Segment</tt> for each section that represents a part of the program in memory. ELF contains lots of sections but only some aims to be involved in the execution. Some contains informations on the code like symbols table or debugging sections. Block (e) allows translating symbols in ELF executable as symbols in the process. Notice that only symbols corresponding to an address in the memory are kept. Finally, block (f) retrieve the OTAWA instruction representing the first instruction of the program. </p>
+<p>
+Each time an instruction is accessed, it must be decoded and built as an <tt>Inst</tt> object. This is usually done by calling <tt>findInstAt</tt>(). Yet, it is not straight: OTAWA maintains a list of decoded instruction to reduce memory footprint. In fact, the decoding is performed by a call to the segment, containing the instruction (through <tt>findInstAt</tt>() ), that manages the list of instructions. This will be shown in the next section. </p>
+<p>
+Whatever, GEL provides also access to debugging information of the ELF file. So it may be used to implement <tt>SOURCE_LINE_FEATURE</tt> as below: </p>
+<div class="listing"><pre class="code">
+class Process: public otawa::Process {
+public:
+	...
+
+	Option&lt;Pair&lt;cstring, int&gt; &gt; Process::getSourceLine(Address addr) throw (UnsupportedFeatureException) {
+
+		// build line map
+		setup();
+		if (!map)
+			return none;
+
+		// look for address
+		const char *file;
+		int line;
+		if(!map || gel_line_from_address(map, addr.offset(), &amp;file, &amp;line) &lt; 0)
+			return none;
+		return some(pair(cstring(file), line));
+	}
+
+	void Process::getAddresses(cstring file, int line, Vector&lt;Pair&lt;Address, Address&gt; &gt;&amp; addresses) throw (UnsupportedFeatureException) {
+
+		// build line map
+		setup();
+
+		// look for source line
+		addresses.clear();
+		if (!map)
+			return;
+		gel_line_iter_t iter;
+		gel_location_t loc, ploc = { 0, 0, 0, 0 };
+		for (loc = gel_first_line(&amp;iter, map); loc.file; loc = gel_next_line(&amp;iter)) {
+		cstring lfile = loc.file;
+		if (file == loc.file || lfile.endsWith(file))
+		{
+			if (line == loc.line)
+				addresses.add(pair(Address(loc.low_addr), Address(loc.high_addr)));
+			else if(loc.file == ploc.file &amp;&amp; line &gt; ploc.line &amp;&amp; line &lt; loc.line)
+				addresses.add(pair(Address(ploc.low_addr), Address(ploc.high_addr)));
+		}
+		ploc = loc;
+	}
+
+	void Process::setup(void) {
+		if(init)
+			return;
+		init = true;
+		map = gel_new_line_map(gel_file);
+	}
+
+private:
+	...
+	struct gel_line_map_t *map;
+	bool init;
+};</pre></div><p>
+The first function, <tt>getSourceLine</tt>() returns, if any, source name and source file matching the given address. The second, <tt>getAddresses</tt>() computes a set of addresses matching the given source file and source line. Both use a call to <tt>setup</tt>() to obtain the line map. The <tt>setup</tt>() function simply checks wether an attempt to build the line map has not already been done otherwise it tries to build the line map, that may fail if no debugging information is available. </p>
+<h2><a name="2.3"></a>2.3 Developing a Loader with GLISS2  </h2>
+<p>
+If GEL is used to build the program image in memory, it does not provide facilities to support instruction set. Instead, OTAWA uses an ISS (Instruction Set Simulatpor) called GLISS. The instruction set is described using an ADL (Architecture Description Language), SimNML for GLISS, and the generator produces what is required to perform the simulation : memory emulator, system call emulator, simulator and, what is specially used by OTAWA, an instruction decoder and a disassembler. Using an ADL like SimNML and a generator like GLISS allows adding user attributes and also generating code to access to these attributes from a decoded instruction. This feature is exploited a lot by OTAWA to obtain information on the semantic of instructions. </p>
+<p>
+Below is an excerpt from a SimNML file describing the <tt>add</tt> instruction of MIPS ISA: </p>
+<div class="listing"><pre class="code">
+op add(rd: card(5), rs: card(5), rt: card(5))
+	image = format("000000 %5b %5b %5b 00000 100000", rs, rt, rd)
+	syntax = format("add $%d, $%d, $%d", rd, rs, rt)
+	action = {
+		temp = (GPR[rs]&lt;31..31&gt; :: GPR[rs]) + (GPR[rd]&lt;31..31&gt; :: GPR[rt]);
+		if temp&lt;32..32&gt; != temp&lt;31..31&gt; then
+			SignalException(IntegerOverflow);
+		else
+			GPR[rd] = temp;
+		endif;
+	}</pre></div><p>
+The first line identify the instruction with 3 logical parameters, <i>rd</i>, <i>rs</i> and <i>rt</i> then come attribute definitions. The <i>syntax</i> attributes specifies the opcode of the instruction and particularly bits dedicated to encode the parameters. The <i>syntax</i> attibutes defines the assembly form of the instruction. Both previous attributes use a-la <tt>printf</tt> format string and arguments. Finally, the <i>action</i> attribute provides the semantics of the instruction using an algorithmic-like language. Basically, the information required by OTAWA is fully available in the SimNML but not so easy to extract, particularly about instruction behaviour. </p>
+<p>
+Whatever, SimNML provides a good base for decoding instructions. The first thing to do is to instantiate a GLISS decode inside our plugin and to build the program image in the memory emulation of GLISS. The following modifications are done to our <tt>Process</tt> class: </p>
+<div class="listing"><pre class="code">
+#include &lt;mips/api.h&gt;
+...
+
+class Process: public otawa::Process {
+	...
+private:
+	...
+	mips_platform_t *_mips_pf;
+	mips_memory_t *_mips_mem;
+	mips_decoder_t *_mips_dec;
+};
+
+File *Process::loadFile(elm::CString path) {
+	...
+
+	// (g) allocate GLISS resources
+	_mips_pf = mips_new_platform();
+	_mips_dec = mips_new_decoder(_mips_pf);
+	_mips_mem = mips_get_memory(_mips_pf, ARM_MAIN_MEMORY);
+	mips_lock_platform(_mips_platform);
+
+	// (h) build the memory
+	gel_image_t *gimage = gel_image_load(_file, 0, 0);
+	if(!gimage) {
+		gel_close(_file);
+		throw LoadException(_ &lt;&lt; "cannot build image of \"" &lt;&lt; path &lt;&lt; "\": " &lt;&lt; gel_strerror());
+	}
+	gel_image_info_t iinfo;
+	gel_image_infos(gimage, &amp;iinfo);
+	for(t::uint32 i = 0; i &lt; iinfo.membersnum; i++) {
+		gel_cursor_t cursor;
+		gel_block2cursor(iinfo.members[i], &amp;cursor);
+		mips_mem_write(_memory,
+			gel_cursor_vaddr(cursor),
+			gel_cursor_addr(&amp;cursor),
+			gel_cursor_avail(cursor));
+	}
+
+}</pre></div><p>
+The block (g) obtains all required resources from MIPS GLISS to perform decoding and disassembly while block (h) build the program image in the GLISS memory emulator. </p>
+<p>
+It becomes now possible to decode instructions from memory emulator and to build an OTAWA instruction: </p>
+<div class="listing"><pre class="code">
+namespace mips {
+
+class Inst: public otawa::Inst {
+public:
+	inline Inst(Process&amp; process, kind_t kind, Address addr, int size)
+		: proc(process), _kind(kind), _size(size), _addr(addr), isRegsDone(false) { }
+	virtual void dump(io::Output&amp; out);
+	virtual kind_t kind() { return _kind; }
+	virtual address_t address() const { return _addr; }
+	virtual t::uint32 size() const { return _size; }
+	virtual const elm::genstruct::Table&lt;hard::Register *&gt;&amp; readRegs(void);
+	virtual const elm::genstruct::Table&lt;hard::Register *&gt;&amp; writtenRegs(void);
+	virtual void semInsts (sem::Block &amp;block);
+
+protected:
+	Process &amp;proc;
+	kind_t _kind;
+	int _size;
+private:
+	elm::genstruct::AllocatedTable&lt;hard::Register *&gt; in_regs;
+	elm::genstruct::AllocatedTable&lt;hard::Register *&gt; out_regs;
+	mips_address_t _addr;
+	bool isRegsDone;
+};</pre></div><p>
+The instruction class store very basic information like kind, address and size of the instruction and a reference on the process. Very basic method like <tt>kind</tt>(), <tt>address</tt>() or <tt>size</tt>() or easy to implement from information passed to the instruction constructor. Other information are more complex as obtaining the disassembly of the instruction and required calls to the GLISS API: </p>
+<div class="listing"><pre class="code">
+void Inst::dump(io::Output&amp; out) {
+	char out_buffer[200];
+	mips_inst_t *inst = mips_decode(proc._mips_dec, mips_address_t(addr.offset()));
+	mips_disasm(out_buffer, inst);
+	mips_free_inst(inst);
+	out &lt;&lt; out_buffer;
+}</pre></div><p>
+In the previous code, a decoded handle of the instruction is first obtaine from the address of the instruction. This handle is used to get the disassembled instruction in <tt>out_buffer</tt> that is displayed on the <tt>out</tt> stream. To be clean, the handle needs then to be fried. </p>
+<p>
+In fact, the decoding of an instruction works in the same way. But it is performed in a customized <tt>Segment</tt> class: </p>
+<div class="listing"><pre class="code">
+class Segment: public otawa::Segment {
+public:
+	Segment(Process&amp; process, CString name, address_t address, t::uint32 size, int flags = EXECUTABLE)
+		: otawa::Segment(name, address, size, flags), proc(process) { }
+protected:
+	virtual otawa::Inst *decode(Address addr) {
+		mips_inst_t *inst = mips_decode(proc._mips_dec, mips_address_t(_addr.offset()));
+		Inst::kind_t kind = 0;
+		otawa::Inst *result = 0;
+		kind = mips_kind(inst);
+		int size = mips_get_inst_size(inst) &gt;&gt; 3;
+		free_inst(inst);
+		result = new Inst(proc, kind, addr, size);
+		return result;
+	}
+private:
+	Process&amp; proc;
+};</pre></div><p>
+The main work is done in <tt>decode</tt>() function. As in the previous example, a GLISS instruction handle is obtained and used to collect information on the instruction. The obtained information allows building the OTAWA instruction in the end. Instruction address is part of the decoding call cause by a call ton <tt>findInstAt</tt>(). Notice that an instruction is only decoded once and then saved by OTAWA in a dedicated structure. The size of the instruction is also a standard information provided by GLISS in function <tt>mips_size</tt>. It is given bits and so must be divided by 8 to convert in bytes. </p>
+<p>
+Yet, GLISS has not the concept of kind as used by OTAWA. Basically, we need to assign to each information declared in the ADL. According to the instruction, this may be relatively complex as not only the type of instruction is needed but also, sometimes, the value of the parameters. For example, on ARM instruction set, as the PC is like a general purpose register, any instruction assigning it can be considered as a control. Fortunately, GLISS provides custom attributes to help to build kind according the full set of parameters. First, a NMP file (in SimNML) with the definition of the kind must be written; an excerpt of <tt>kind.nmp</tt> for MIPS is given below: </p>
+<div class="listing"><pre class="code">
+let NO_KIND		= 0x00000000
+let IS_COND		= 0x00000001
+let IS_CONTROL	= 0x00000002
+let IS_CALL		= 0x00000004
+let IS_RETURN	= 0x00000008
+let IS_MEM		= 0x00000010
+let IS_LOAD		= 0x00000020
+let IS_STORE	= 0x00000040
+let IS_INT		= 0x00000080
+let IS_FLOAT	= 0x00000100
+let IS_ALU		= 0x00000200
+let IS_MUL		= 0x00000400
+let IS_DIV		= 0x00000800
+let IS_SHIFT	= 0x00001000
+let IS_TRAP		= 0x00002000
+let IS_SPECIAL	= 0x00010000
+
+extend add
+	otawa_kind = IS_ALU | IS_INT
+
+...</pre></div><p>
+Then, a template file for code generation needs to be written. We name it <tt>kind.tpl</tt>: </p>
+<div class="listing"><pre class="code">
+/* Generated by gliss-attr ($(date)) copyright (c) 2009 IRIT - UPS */
+#include &lt;$(proc)/api.h&gt;
+#include &lt;$(proc)/id.h&gt;
+#include &lt;$(proc)/macros.h&gt;
+#include &lt;$(proc)/grt.h&gt;
+
+typedef unsigned long otawa_kind_t;
+typedef otawa_kind_t (*fun_t)($(proc)_inst_t *inst);
+
+/*** function definition ***/
+static otawa_kind_t otawa_kind_UNKNOWN($(proc)_inst_t *inst) {
+	return 0;
+}
+
+$(foreach instructions)
+static otawa_kind_t otawa_kind_$(IDENT)($(proc)_inst_t *inst) {
+$(otawa_kind)
+};
+
+$(end)
+
+
+/*** function table ***/
+static fun_t kind_funs[] = {
+	otawa_kind_UNKNOWN$(foreach instructions),
+	otawa_kind_$(IDENT)$(end)
+};
+
+otawa_kind_t $(proc)_kind($(proc)_inst_t *inst) {
+	return kind_funs[inst-&gt;ident](inst);
+}</pre></div><p>
+Finally the actual C will be generated with a command like: </p>
+<div class="listing"><pre class="code">
+gliss-attr mips.irg -o kind.c -a kind -f -t kind.tpl -d "return 0\\;" -e kind.nmp</pre></div><p>
+The only special file in the command above is <tt>mips.irg</tt> that is available in the generation of the ISS for MIPS by GLISS. This approach may be used also to compute branch address of a control instruction. Let the inconditional branch instruction of MIPS described in SimNML with: </p>
+<div class="listing"><pre class="code">
+op J(instr_index: card(26))
+	image = format("000010 %26b", instr_index)
+	target = __IADDR&lt;31..28&gt; :: instr_index :: 0b00
+	syntax = format("J %l", target)
+	action = { PC = target; }</pre></div><p>
+Now, it is easy to provide a new template like: </p>
+<div class="listing"><pre class="code">
+/* Generated by gliss-attr ($(date)) copyright (c) 2009 IRIT - UPS */
+#include &lt;$(proc)/api.h&gt;
+#include &lt;$(proc)/id.h&gt;
+#include &lt;$(proc)/macros.h&gt;
+
+typedef uint32_t otawa_target_t;
+typedef otawa_target_t (*target_fun_t)($(proc)_inst_t *inst);
+
+/* functions */
+static otawa_target_t otawa_target_UNKNOWN($(proc)_inst_t *inst) {
+        /* this code should also be used as default value if
+        an instruction has no otawa_target field */
+        return 0;
+}
+
+$(foreach instructions)
+static otawa_target_t otawa_target_$(IDENT)($(proc)_inst_t *inst) {
+$(otawa_target)
+};
+
+$(end)
+
+/* function table */
+static target_fun_t $(proc)_target_table[] = {
+	otawa_target_UNKNOWN$(foreach instructions),
+	otawa_target_$(IDENT)$(end)
+};
+
+otawa_target_t $(proc)_target($(proc)_inst_t *inst) {
+        return $(proc)_target_table[inst-&gt;ident](inst);
+}</pre></div><p>
+And the generation command will be: </p>
+<div class="listing"><pre class="code">
+gliss-attr mips.irg -o target.c -a target -f -t target.tpl -d "return 0\\;"</pre></div><p>
+As <i>target</i> attribute is already available in the original NMP file, we do not add extension fill with option <tt>-e</tt>. </p>
+</div>
+</div>
+</body>
+</html>

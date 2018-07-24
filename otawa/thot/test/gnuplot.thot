@@ -1,0 +1,57 @@
+@use dokuwiki
+@use gnuplot
+@TITLE=GnuPlot test
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+
+GnuPlot examples below are extracted and gracefully provided by [[http://gnuplot.sourceforge.net/demo_4.4/|GnuPlot website]].
+
+<gnuplot>
+set samples 20
+set isosamples 21
+set xlabel "X axis"
+set ylabel "Y axis"
+set zlabel "Z axis" offset 1, 0
+set view 60, 30, 0.85, 1.1
+set title "3D gnuplot demo - contour plot"
+set contour
+splot x*y
+</gnuplot>
+@label This is my first gnuplot.
+
+<gnuplot?256x256>
+set xlabel "x"
+set ylabel "y"
+set key top
+set border 4095
+set xrange [-15:15]
+set yrange [-15:15]
+set zrange [-0.25:1]
+set samples 25
+set isosamples 20
+
+set title "pm3d demo. Radial sinc function. Default options."
+set pm3d; set palette
+#show pm3d
+#show palette
+splot sin(sqrt(x**2+y**2))/sqrt(x**2+y**2)
+</gnuplot>
+
+<gnuplot>
+set xlabel "x"
+set ylabel "y"
+set key top
+set border 4095
+set xrange [-15:15]
+set yrange [-15:15]
+set zrange [-0.25:1]
+set samples 25
+set isosamples 20
+
+set title "pm3d demo. Radial sinc function. Default options."
+set pm3d; set palette
+#show pm3d
+#show palette
+splot sin(sqrt(x**2+y**2))/sqrt(x**2+y**2)
+</gnuplot>

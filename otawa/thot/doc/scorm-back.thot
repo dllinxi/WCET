@@ -1,0 +1,52 @@
+
+==== SCORM Back-end ====
+
+This back-end implements partially the [[http://www.adlnet.org/scorm/scorm-2004-4th/|SCORM 2004 format]]
+dedicated to publication of e-learning courses. To invoke it, pass the option ''-t scorm''
+to the @(THOT) command. The result is a ''.zip'' archive that may be submitted, as is,
+to software or LMS/CMS supporting the SCORM format.
+
+The //scorm// back-end is basically an //html// back-end with option ''HTML_ONE_PAGE_PER=chapter''.
+The resulting SCORM course contains one SCO((Sharable Content Object)) per chapter and
+one organization containing the SCOs as a sequential list. Resources are automatically handled
+by this back-end if they are images or styles included in the @(THOT) file.
+If not, just define a variable named SCORM_FILES with the list of files to add.
+
+To use specific SCORM command, you have to include the following line
+((SCORM is a back-end and an associated module.)):
+<code>
+@use scorm
+</code>
+
+=== Commands ===
+
+The following commands are supported (refer to [[http://www.adlnet.org/scorm/scorm-2004-4th/|SCORM documentation]]
+for details on the options). These commands must be put on a single line.
+Boolean options must be prefixed either by ''+'' for true value or ''-'' for false value.
+  * ''@scorm:controlMode:'' //options// with possible boolean ''choice'', ''choiceExit'', ''flow'', ''forwardOnly'',
+''useCurrentAttemptObjectiveInfo'' or ''useCurrentAttemptProgressInfo''.
+  * ''@scorm:pre:'' //selection// implements a pre-condition.
+  * ''@scorm:post:'' //selection// implements a post-condition.
+  * ''@scorm:exit:'' //selection// implements an exitcondition.
+
+//selection// has the following format: ''if'' (''all''|''any'')? //tests// ''then'' //action//.
+
+//tests// is a list of comma-separated //test//.
+
+//test// matches (//objective identifier//)? ''is'' (''not'')? //condition//.
+
+//condition// is one of ''satisfied'', ''objectiveStatusKnown'', ''objectiveMeasureKnown''
+''objectiveMeasureGreaterThan(''//value//'')'',  ''objectiveMeasureLessThan(''//value//'')'',
+''completed'', ''activityProgressKnown'', ''attempted'', ''attemptLimitExceeded'', ''timeLimitExceeded'',
+''outsideAvailableTimeRange'', ''always''.
+
+//action// is one of ''skip'', ''disabled'', ''hiddenFromChoice'',
+''stopForwardTraversal'', ''exitParent'', ''exitAll'', ''retry'', ''retryAll'',
+''continue'', ''previous'', ''exit''.
+
+
+=== Unsupported Tags ===
+
+  * ''<auxiliaryResources>''
+
+

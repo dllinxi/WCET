@@ -1,0 +1,1038 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>OTAWA Development Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;casse@irit.fr&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="dev-imports/../css/manual-0..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">OTAWA Development Manual</div>
+	<div class="authors"><a href="mailto:casse@irit.fr">H. Cassé </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="dev-0.html">1  Script Development  </a>
+    <ul class="toc">
+    <li>
+    <a href="dev-0.html#1.1">1.1  Notation  </a>
+    </li>
+    <li>
+    <a href="dev-0.html#1.2">1.2  Script Format  </a>
+      <ul class="toc">
+      <li>
+      <a href="dev-0.html#1.2.1">1.2.1  Script Description  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.2.2">1.2.2  Script Identification  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.2.3">1.2.3  Platform Description  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.2.4">1.2.4  Configuration Description  </a>
+        <ul class="toc">
+        <li>
+        <a href="dev-0.html#1.2.4.1">1.2.4.1  <tt>bool</tt> type  </a>
+        </li>
+        <li>
+        <a href="dev-0.html#1.2.4.2">1.2.4.2  <tt>int</tt> type  </a>
+        </li>
+        <li>
+        <a href="dev-0.html#1.2.4.3">1.2.4.3  <tt>string</tt> type  </a>
+        </li>
+        <li>
+        <a href="dev-0.html#1.2.4.4">1.2.4.4  <tt>range</tt> type  </a>
+        </li>
+        <li>
+        <a href="dev-0.html#1.2.4.5">1.2.4.5  <tt>enum</tt> type  </a>
+        </li>
+        </ul>
+      </li>
+      <li>
+      <a href="dev-0.html#1.2.5">1.2.5  Script Description  </a>
+      </li>
+      </ul>
+    </li>
+    <li>
+    <a href="dev-0.html#1.3">1.3  File Organization and XInclude  </a>
+    </li>
+    <li>
+    <a href="dev-0.html#1.4">1.4  Smart Scripts and XSLT  </a>
+    </li>
+    <li>
+    <a href="dev-0.html#1.5">1.5  Pipeline Description  </a>
+      <ul class="toc">
+      <li>
+      <a href="dev-0.html#1.5.1">1.5.1  Top-Level  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.5.2">1.5.2  Stage Description  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.5.3">1.5.3  Functional Unit Description  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.5.4">1.5.4  Queue Description  </a>
+      </li>
+      </ul>
+    </li>
+    <li>
+    <a href="dev-0.html#1.6">1.6  Cache Description  </a>
+      <ul class="toc">
+      <li>
+      <a href="dev-0.html#1.6.1">1.6.1  Cache Configuration Level  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.6.2">1.6.2  Cache elements  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.6.3">1.6.3  Examples  </a>
+      </li>
+      </ul>
+    </li>
+    <li>
+    <a href="dev-0.html#1.7">1.7  Memory Space Description  </a>
+      <ul class="toc">
+      <li>
+      <a href="dev-0.html#1.7.1">1.7.1  Memory Element  </a>
+      </li>
+      <li>
+      <a href="dev-0.html#1.7.2">1.7.2  Bank Element  </a>
+      </li>
+      </ul>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="dev-1.html">2  Development of Loader  </a>
+  </li>
+  <li>
+  <a href="dev-2.html">3  Analyzer Development  </a>
+  </li>
+  <li>
+  <a href="dev-3.html">4  ILP Solver Development  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="1"></a>1 Script Development  </h2>
+<p>
+A script, in OTAWA, allows to configure a WCET computation. It contains : </p>
+<ul >
+<li><p>
+ step-by-step code processor invocations, </p>
+</li>
+<li><p>
+ a way to let the user fine-tune the computation thanks to user parameters, </p>
+</li>
+<li><p>
+ description of the involved architecture, </p>
+</li>
+<li><p>
+ possible documentation about the computation (allowing to inform the user about limitations for example). </p>
+</li>
+</ul>
+<p>
+The scripts are described in <a href="http://www.w3.org/XML/">XML format</a> and, therefore, easy to read and write by a human user. They are mostly the simpler way to extend OTAWA without the need to understand the internal API of the framework. In addition, scripts are easy to write because they use well-known formats based on XML like <a href="http://www.w3.org/TR/2006/REC-xinclude-20061115/">XInclude</a> or <a href="http://www.w3.org/TR/xslt20/">XSLT</a> that gives a lot of power in the script behavior. </p>
+<p>
+Scripts have basically two usage. First, they are used to configure the computation for a particular architecture. Instead of using the main stream computation approach, they allows to easily perform and automate specific analyzes to fine-tune a computation. Another use of the script is to provide support in OTAWA for a new micro-architecture: indeed, they allows to describe the components of an architecture or a model processor (pipeline, caches, memory space) and then to invoke all analyzes required to support the architecture. Obviously, this way to describe a micro-architecture is bound to the feature supported by OTAWA. For more exotic architectures, you will need to implements plugins described in the following sections. </p>
+<p>
+In addition, describing a WCET computation allows to seamlessly use it under the OTAWA plugin inside Eclipse. The plugin has the ability to understand the script and to translate the configuration into a user interface form adapted to Eclipse.  </p>
+<h2><a name="1.1"></a>1.1 Notation  </h2>
+<p>
+The description of the XML files in this document merges  <a href="http://www.w3.org/XML/">XML</a> textual format with <a href="http://fr.wikipedia.org/wiki/Extended_Backus-Naur_Form">EBNF</a>. </p>
+<p>
+The grammar is formed of a list of rules whose root is the first one. Each rule is made of: </p>
+<ul >
+<li><p>
+ an XML comment giving the name of the rule, </p>
+</li>
+<li><p>
+ the matching XML element possibly containing other elements giving the shape of the rule (as below). </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+&lt;!-- RULE_NAME ::= --&gt;
+&lt;tag&gt; ... &lt;/tag&gt;</pre></div><p>
+This description element may contain a sequence of symbols that may be : </p>
+<ul >
+<li><p>
+ other elements (that in turn contains also the same type of item that the rule element), </p>
+</li>
+<li><p>
+ identifiers in uppercase (to represent terminal symbols, see below for the list of accepted terminals), </p>
+</li>
+<li><p>
+ empty XML element to refer to subsequently defined rules (they are replaced in actual files by their definition element), </p>
+</li>
+<li><p>
+ EBNF symbols (described below). </p>
+</li>
+</ul>
+<p>
+EBNF symbols allows to repeat elements, make them optional or select alternatives. They may be : </p>
+<ul >
+<li><p>
+ <tt>*</tt> &#8211; repeat 0 or <i>n</i> times the previous symbol, </p>
+</li>
+<li><p>
+ <tt>+</tt> &#8211; repeat 1 or <i>n</i> times the previous symbol, </p>
+</li>
+<li><p>
+ <tt>?</tt> &#8211; the previous symbol is optional, </p>
+</li>
+<li><p>
+ <i>sym<sub>1</sub></i> <tt>|</tt> <i>sym<sub>2</sub></i> <tt>|</tt> &#8943; &#8211; symbols separated by pipes are alternative, only one is selected at one time, </p>
+</li>
+<li><p>
+ <tt>(</tt> symbols <tt>)</tt> &#8211; parentheses allows to group symbols in order to support previous operators on a group of symbols. </p>
+</li>
+</ul>
+<p>
+The XML elements attributes are defined at their normal location, after the opening XML tag. They conform to the usual XML notation except for their content and their activation. An attribute definition may be followed by a question mark <tt>?</tt> to denote it as optional. Otherwise, it is considered as mandatory. The content of the attribute, between simple or double quotes, supports the EBNF annotations for the contained text. Finally, an optional attribute defined as an alternative may provide a default value by appending to the alternative list the string <tt>; default=</tt> <i>default value</i>. </p>
+<p>
+The terminal identifier have the following meaning: </p>
+<ul >
+<li><p>
+ <tt>ID</tt> &#8211; an XML identifier (any non-blank sequence of characters), </p>
+</li>
+<li><p>
+ <tt>INT</tt> &#8211; a decimal or hexadecimal (prefixed by <tt>0[xX]</tt>) integer, </p>
+</li>
+<li><p>
+ <tt>TEXT</tt> &#8211;  any text, </p>
+</li>
+<li><p>
+ <tt>ADDRESS</tt> &#8211; an address (synonym of <tt>INT</tt>), </p>
+</li>
+<li><p>
+ <tt>BOOL</tt> &#8211; a boolean value (<tt>true</tt> ou <tt>false</tt>). </p>
+</li>
+</ul>
+<h2><a name="1.2"></a>1.2 Script Format  </h2>
+<p>
+A script is a textual XML file whose extension is usually <tt>.osx</tt> for Otawa Script XML. It follows the usual rule of XML and the top-level element is called <tt>otawa-script</tt>: </p>
+<div class="listing"><pre class="code">
+&lt;!-- OTAWA-SCRIPT ::= --&gt;
+  &lt;?xml version="1.0"?&gt;
+  &lt;otawa-script
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;!-- DESCRIPTION --&gt;
+
+  &lt;!-- IDENTIFICATION --&gt;
+  
+  &lt;!-- CONFIGURATION --&gt;?
+  
+  &lt;!-- PLATFORM --&gt;?
+  
+  &lt;!-- SCRIPT --&gt;?
+</pre></div><p>
+Notice the two namespace declarations <tt>xmlns:</tt>: they are not mandatory but are very useful if you to use <i>XInclude</i> or <i>XSLT</i>. </p>
+<p>
+The script is made of 5 different parts detailed below: </p>
+<ul >
+<li><p>
+ <i>DESCRIPTION</i> provides various information targeting the human user, </p>
+</li>
+<li><p>
+ <i>IDENTIFICATION</i> contains mainly identifier about the hardware (architecture, model, ABI), </p>
+</li>
+<li><p>
+ <i>CONFIGURATION</i> provides a list of items the user may tune, </p>
+</li>
+<li><p>
+ <i>PLATFORM</i> describes the hardware, </p>
+</li>
+<li><p>
+ <i>SCRIPT</i> details the performed computation steps. </p>
+</li>
+</ul>
+<h2><a name="1.2.1"></a>1.2.1 Script Description  </h2>
+<p>
+The description is made of the following items: </p>
+<div class="listing"><pre class="code">
+&lt;!-- DESCRIPTION ::= --&gt;
+&lt;name&gt; TEXT &lt;/name&gt;
+&lt;info&gt; XHTML &lt;/info&gt;?
+&lt;path to="PATH"/&gt;*</pre></div><p>
+The <tt>name</tt> tag is mandatory and provide the name of the script as displayed to the human user. The <tt>info</tt> element may contain a whole documentation describing the script, its applications and its limitation. As it is intended displayed to the human user and as it may contains a structured documentation, it is described in <a href="http://www.w3.org/TR/xhtml1/">XHTML</a>. Finally, the <tt>path</tt> is used for the internal work of the script inside OTAWA. The <tt>to</tt> attributes contain paths that are used to retrieve plugins used in the WCET computation. If a relative path is used, it is based on the directory containing the script file.  </p>
+<h2><a name="1.2.2"></a>1.2.2 Script Identification  </h2>
+<p>
+The identification part has the following structure: </p>
+<div class="listing"><pre class="code">
+&lt;!-- IDENTIFICATION ::= --&gt;
+&lt;id&gt;
+	&lt;arch&gt;TEXT&lt;/arch&gt;
+	&lt;abi&gt;TEXT&lt;abi&gt;
+	&lt;mach&gt;TEXT&lt;/mach&gt;
+&lt;/id&gt;</pre></div><p>
+The <tt>arch</tt> tag allows to identify the progamming model, also called the ISA (Instruction Set Architecture) of the supported hardware. Common values include <tt>arm</tt>, <tt>powerpc</tt>, <tt>sparc</tt>, <tt>x86</tt>, etc. The <tt>abi</tt> element gives the Application Binary Interface with common values being <tt>eabi</tt>, <tt>elf</tt>, <tt>linux</tt>, etc. Finaly, the <tt>mach</tt> element allows to precisely identify the processor model the script is targetting. Only the <tt>arch</tt> element is mandatory to be able to check if it supports the instruction set used in the processed executable file. </p>
+<h2><a name="1.2.3"></a>1.2.3 Platform Description  </h2>
+<p>
+The platform provide details about the hardware feature of the targeted system. </p>
+<div class="listing"><pre class="code">
+&lt;!-- PLATFORM :: --&gt;
+&lt;platform&gt;
+	&lt;!-- PIPELINE --&gt;?
+	&lt;!-- CACHES --&gt;?
+	&lt;!-- MEMORY --&gt;?
+&lt;/platform&gt;</pre></div><p>
+The items found in the <i>PLATFORM</i> may described directly in the script or in a separate file included by <i>XInclude</i>. In the latter case, the file must be prefixed by the usual XML identification line: </p>
+<div class="listing"><pre class="code">
+&lt;?xml version="1.0"?&gt;</pre></div><p>
+The example belows uses <i>XInclude</i> to get the hardware description from three different external files: </p>
+<div class="listing"><pre class="code">
+&lt;platform&gt;
+  &lt;xi:include href="mpc5554/pipeline.xml"/&gt;
+  &lt;xi:include href="mpc5554/cache.xml"/&gt;
+  &lt;xi:include href="mpc5554/memory.xml"/&gt;
+&lt;/platform&gt;</pre></div><p>
+Notice that the relative paths passed in the <tt>href</tt> attribute are resolved from the XML base of the document, that is, the directory containing the script file. </p>
+<p>
+Their content being very complex is described in their own parts. </p>
+<h2><a name="1.2.4"></a>1.2.4 Configuration Description  </h2>
+<p>
+The configuration lists a set of items to let the human user parameterize the computation: </p>
+<div class="listing"><pre class="code">
+&lt;!-- CONFIGURATION ::= --&gt;
+  &lt;configuration&gt;
+    &lt;!-- CONFIGURATION-ITEM --&gt;*
+  &lt;/configuration&gt;
+
+&lt;!-- CONFIGURATION-ITEM ::= --&gt;
+  &lt;item
+    name="TEXT"
+    type="bool|int|string|range|enum"
+    default="TEXT"?
+    label="TEXT"?&gt;
+    	&lt;help&gt; &lt;!-- TEXT --&gt; &lt;/help&gt;
+  &lt;/item&gt;</pre></div><p>
+A configuration item is made of: </p>
+<ul >
+<li><p>
+ an internal <tt>name</tt> used to identify the variable containing their value in <i>XSLT</i>, </p>
+</li>
+<li><p>
+ a <tt>label</tt>, the name of the configuration item displayed to the user, </p>
+</li>
+<li><p>
+ a <tt>default</tt> value, </p>
+</li>
+<li><p>
+ a <tt>type</tt> that describes the type of value, </p>
+</li>
+<li><p>
+ an <tt>help</tt> sub-element that contains human-readable information to help the user understanding the configuration item. </p>
+</li>
+</ul>
+<p>
+In addition, each type of items may have its own set for attributes and sub-elements. </p>
+<h2><a name="1.2.4.1"></a>1.2.4.1 <tt>bool</tt> type  </h2>
+<p>
+The <tt>bool</tt> type allows to get boolean information from the user. Possible values are <tt>true</tt> or <tt>false</tt>. They are used to enable or disable specific features of the script. The example below allows to activate or not the use of prefetching from a flash memory: </p>
+<div class="listing"><pre class="code">
+&lt;item name="flash_prefetch" type="bool" default="true" label="Flash Prefetch"&gt;
+	&lt;help&gt;MPC5554 provides flash prefetching to improve performances.
+	You may activate it or no.&lt;/help&gt;
+&lt;/item&gt;</pre></div><h2><a name="1.2.4.2"></a>1.2.4.2 <tt>int</tt> type  </h2>
+<p>
+The integer type allows to get an integer configuration value from the user. If no default value is given, it is assumed to be 0. The argument may be expressed as a decimal integer or hexadecimal one prefixed by <tt>0x</tt> or <tt>0X</tt>. An integer configuration item is used to pass any integer quantitive value as a number of functional units in a pipeline description, a specific address in the memory space or the size of any part of the architecture. </p>
+<p>
+In the example below, the <tt>intt' configuration item is isued to configure the number of wait states used to write in the static RAM. </tt></p>
+<div class="listing"><pre class="code">
+&lt;item name="ramwws" type="int" default="0" label="SRAM write wait states"&gt;
+&lt;help&gt;Defines the number of wait state for a SRAM write. One wait cycle delays one cycle.&lt;/help&gt;
+&lt;/item&gt;</pre></div><h2><a name="1.2.4.3"></a>1.2.4.3 <tt>string</tt> type  </h2>
+<p>
+This configuration item type is used to pass a string to the script. If no default value is given, an empty string is assumed. A common usage of this type of item is to pass a path in the file system to a specific resource used in the computation but any use of a string is supported. </p>
+<h2><a name="1.2.4.4"></a>1.2.4.4 <tt>range</tt> type  </h2>
+<p>
+A <tt>range</tt> configuration item is a bit like the <tt>int</tt> type but with bounds on the possible given value. The bounds are inclusive and given by two additional attributes, <tt>low</tt> and <tt>high</tt>. The default value must be in the bounds and, if not given, the <tt>low</tt> bound is assumed as default. </p>
+<p>
+The code below shows the <tt>range</tt> in action to define the pre-charge time of a dynamic ram in the range of [2, 3]. </p>
+<div class="listing"><pre class="code">
+&lt;item name="trp" type="range" default="2" label="SDRAM precharge time" low="2" high="3"&gt;
+	&lt;help&gt;In cycles.&lt;/help&gt;
+&lt;/item&gt;</pre></div><h2><a name="1.2.4.5"></a>1.2.4.5 <tt>enum</tt> type  </h2>
+<p>
+The <tt>enum</tt> type allows to support the selection of value from a collection of different values. </p>
+<p>
+The enumerated values are declared with the syntax below: </p>
+<div class="listing"><pre class="code">
+&lt;!-- ITEM ::= --&gt;
+&lt;item name="TEXT" type="enum" label="TEXT"&gt;
+	&lt;value label="TEXT" value="INT"  default="BOOL"?/&gt;+
+&lt;/item&gt;</pre></div><p>
+Each value is defined from a <tt>value</tt> XML element with a <tt>label</tt>, to display to the user and an integer value that represents the value handled by the script if the enumerated value is selected. In addition, a <tt>default</tt> attribute may be set to indicate if the current value is the default one. If no <tt>default</tt> attribute is set to true, the first enumeration value is considered as the default. </p>
+<p>
+The <tt>range</tt> configuration type is useful to display a choice to the user in a textual way while keeping hidden the associated integer value. The example allows to select a multiplier implementation in order to compute for a processor delivered as an IP.  </p>
+<div class="listing"><pre class="code">
+	&lt;item name="multiplier" type="enum" label="multiplier" default="m32x32"&gt;
+		&lt;help&gt;Multiplier implementation: defines the multiplier latency.&lt;/help&gt;
+		&lt;value label="iterative" value="0" default="true"/&gt;
+		&lt;value label="m16x16 + pipeline" value="1"/&gt;
+		&lt;value label="m16x16" value="2"/&gt;
+		&lt;value label="m32x8" value="3"/&gt;
+		&lt;value label="m32x16" value="4"/&gt;
+		&lt;value label="m32x32" value="5"/&gt;
+	&lt;/item&gt;</pre></div><h2><a name="1.2.5"></a>1.2.5 Script Description  </h2>
+<p>
+This element describes the script itself, that is, the analyzes to apply to get the WCET. In fact, the script works directly on the code processor structure of OTAWA that is composed: </p>
+<ul >
+<li><p>
+ code processors that implements simple analyzes or may transform the program representation, </p>
+</li>
+<li><p>
+ features are required or provided by code processors and represent information retrieved by the analyzes, </p>
+</li>
+<li><p>
+ properties that are annotations representing results of analyzes, hooked to the program representation and grouped in features. </p>
+</li>
+</ul>
+<p>
+Code processors, features and properties are documented in the <a href="http://www.irit.fr/recherches/ARCHI/MARCH/OTAWA//autodoc/group__features.html">automatic documentation of OTAWA</a>. </p>
+<p>
+In OTAWA, computing the WCET is invoking either the code processor computing the WCET, or requiring the feature provided by this code processor. In turn, this processor may require other features that will be achieved by other code processors and so on. The rule is that if an already-provided feature is required, it is used as is. If it is not provided, the default processor associated to the feature is invoked. </p>
+<p>
+It comes out that the order of feature requirements or code processor invocations matters! To substitute an analysis <i>A</i> to the default analyses <i>B</i>  of a feature <i>F</i>, the <i>A</i> analysis must be invoked first to let it providing the feature <i>F</i>. When a code processor will require the feature <i>F</i>, it will use the feature provided by <i>A</i> as it is already available. </p>
+<p>
+Yet, one may observe that, thanks to the default processor associated with a feature, it is not mandatory to provided the whole chain f analyzes to perform the WCET computation. Instead, the script writer has only to focus only on the particular analyzes of its script. </p>
+<p>
+The script part has the syntax below and is made of a sequence of steps, possibly with configuration items that apply to all steps: </p>
+<div class="listing"><pre class="code">
+&lt;!-- SCRIPT ::= --&gt;
+    &lt;script&gt;
+    	&lt;!-- CONFIG --&gt;*
+    	&lt;!-- STEP --&gt;+
+    &lt;/script&gt;</pre></div><p>
+A step may invoke a code processor (attribute <tt>processor</tt>) or require a feature (attribute <tt>feature</tt>). If a step contains configuration items, they are only applied to this step and to code processors automatically invoked from this step. </p>
+<div class="listing"><pre class="code">
+&lt;!-- STEP ::= --&gt;
+    &lt;step processor="C++PATH"? require="C++PATH"?&gt;
+        &lt;!-- CONFIG --&gt;*
+    &lt;/step&gt;</pre></div><p>
+The <i>C++PATH</i> used to identify a processor or a feature (but also a property) is the full-qualified path of the object in the C++ implementation of OTAWA. For example, if a code processor implementing class is <tt>MyAnalysis</tt> that is contained in namespace <tt>my</tt> and <tt>otawa</tt>, the matching <i>C++PATH</i> is <tt>otawa::my::MyAnalysis</tt>. </p>
+<p>
+The configuration items allows to provide important parameters or to tune the behavior of the analysis. They matches exactly the properties in OTAWA but only some properties provide a converter from XML text to C++ values. The syntax is below: </p>
+<div class="listing"><pre class="code">
+&lt;!-- CONFIG ::= --&gt;
+    &lt;config name="C++PATH" value="TEXT" add="yes|true|no|false"?/&gt;</pre></div><p>
+The matching property identifier is retrieved from its <i>C++PATH</i> and its <tt>value</tt> is converted according to the type of the identifier and pushed in the property list used to configure the code processor. If the <tt>add</tt> attribute is to <tt>yes</tt> or <tt>true</tt>, the value is added to the property list such that several values with the same identifier can be added to the configuration property list.  </p>
+<p>
+Below is a small example for the <i>LPC2138</i> microprocessor:  </p>
+<div class="listing"><pre class="code">
+&lt;script&gt;
+    &lt;step require="otawa::VIRTUALIZED_CFG_FEATURE"/&gt;
+    &lt;step processor="otawa::lpc2138::CATMAMBuilder"/&gt;
+    &lt;step processor="otawa::lpc2138::ARM7ParamExeGraphBBTime"&gt;
+	    &lt;config name="otawa::lpc2138::FLASH_MISS" value="56"/&gt;
+    &lt;/step&gt;
+    &lt;step require="otawa::ipet::WCET_FEATURE"/&gt;
+&lt;/script&gt;</pre></div><p>
+This script requires first the feature <tt>otawa::VIRTUALIZED_CFG_FEATURE</tt> ensures that all functions calls have been inlined. In fact, this requirement will cause the invocation of several analyses like the flow fact loader, program text decoder, CFG building, etc. </p>
+<p>
+The the <tt>otawa::lpc2138::CATMAMBuilder</tt> analyzes the prefetcher of the LPC2138 flash memory and computes the execution of the blocks with <tt>otawa::lpc2138::ARM7ParamExeGraphBBTime</tt>. In this step, a configuration parameter is passed to configure the time for a memory flash miss. As will be presented below, the value is rarely a constant: it may be derived from the configuration variables. </p>
+<p>
+Finally, the WCET computation is required, <tt>otawa::ipet::WCET_FEATURE</tt>, that will build the ILP system, flowfact constraints but will re-use the block timings already provided by <tt>otawa::lpc2138::ARM7ParamExeGraphBBTime</tt> without invoking the default computation of block timings. </p>
+<h2><a name="1.3"></a>1.3 File Organization and XInclude  </h2>
+<p>
+Using the <i>XInclude</i> XML extension, a script can be made of several different files. An <i>XInclude</i> element looks like: </p>
+<div class="listing"><pre class="code">
+	&lt;xi:include href="PATH"/&gt;</pre></div><p>
+Where <i>PATH</i> is an URL pointing to the file to include. The included file must be a valid XML file (prefixed by the <tt>&lt;?xml &#8943; &gt;</tt> tag and the top level element will replaced the <tt>xi:include</tt> element so that the application processing the resulting XML file does not have to do any more processing. </p>
+<p>
+A common use of this feature is to split the script description in several files, one for the script, the entry point whose name is suffixed by <tt>.osx</tt> and one for each aspect of the hardware (pipeline, caches, memory space). The example shows a summary of the entry point in such an organization: </p>
+<div class="listing"><pre class="code">
+&lt;?xml version="1.0"?&gt;
+  &lt;otawa-script
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+ 
+    &lt;info&gt; ... &lt;/info&gt;?
+    &lt;name&gt; ... &lt;/name&gt;
+ 	&lt;configuration&gt; ... &lt;/configuration&gt;
+ 	&lt;id&gt; ... &lt;/id&gt;
+
+	&lt;platform&gt;
+		&lt;xi:include href="mpc5554/pipeline.xml"/&gt;
+  		&lt;xi:include href="mpc5554/cache.xml"/&gt;
+  		&lt;xi:include href="mpc5554/memory.xml"/&gt;
+	&lt;/platform&gt;		
+
+	&lt;script&gt; ... &lt;/script&gt; 
+&lt;/otawa-script&gt;</pre></div><p>
+The <i>PATH</i> attribute of <tt>xi:include</tt> element can contains any type of path, absolute or relative, but the latter option allows to preserve the consistency of the script. Indeed, the script interpreter considers that any relative path is relative to the directory containing the script. Therefore, if the script is moved in the file system tree, they will be correctly retrieved if the relative position of the script file and the included file is not changed. Such a method allows also to deliver easily a package containing a script without to have to fix the paths of the included file. </p>
+<p>
+In the example above, the script is contained in a file named <tt>mpc5554.osx</tt> and the included files are found out from a directory named <tt>mpc5554</tt> installed in the same directory than the entry file <tt>mpc5554.osx</tt>. It is also advised  to put the included file in a sub-directory and to not suffix these files with <tt>.osx</tt> in order to not confuse application using the <tt>.osx</tt> files (as the OTAWA Eclipse plugin). </p>
+<h2><a name="1.4"></a>1.4 Smart Scripts and XSLT  </h2>
+<p>
+<a href="http://www.w3.org/TR/xslt">XSLT</a> is an XML-based language to describe templates to perform automatic transformation on XML files. In the OTAWA scripts, we do not use its templating system but only the interpreter of its algorithmic components, that is, its capacity to have variables and perform computation with conditional structure allowing to insert or not XML elements. This section gives basic commands of the <i>XSLT</i> language but more details can be found in the <a href="http://www.w3.org/TR/xslt">XSLT</a> documentation. </p>
+<p>
+In <i>XSLT</i>, the variable are accessed by prefixing them with <tt>$</tt>: an element attribute whose value is "here is my $myvar !" will get as value the given string with the variable reference <tt>$myvar</tt> replaced by the actual value of <i>myvar</i>. Basically, the available variables, when the script is processed by the <i>XSLT</i> interpreter, is made of the variables declared for the configuration items, named according to the <tt>name</tt> attribute <tt>name</tt> and whose value is the one passed by the user or, else, the default value. </p>
+<p>
+These variables may be used throughout the script file to provide more flexibility in the configuration of the script. Using the following syntax, one may change the value stored in a script element: </p>
+<div class="listing"><pre class="code">
+&lt;element&gt; &lt;xsl:value-of select="XPATH expression"/&gt; &lt;/element&gt;</pre></div><p>
+In the example below, the content of the element <tt>write_latency</tt> is replaced by the value computed bu the <tt>xsl-value-of</tt> element, that is, the sum of 2, value of variable <tt>trp</tt> and value of variable <tt>sdrcas</tt>. </p>
+<div class="listing"><pre class="code">
+&lt;otawa-script&gt;
+	&lt;platform&gt;
+		&lt;memory&gt;
+			...
+			&lt;bank&gt;
+				&lt;write_latency&gt;&lt;xsl:value-of select="2+$trp+$sdrcas"/&gt;&lt;/write_latency&gt;
+			&lt;/bank&gt;
+			...
+		&lt;/meory&gt;
+	&lt;/platform&gt;</pre></div><p>
+The <a href="http://www.w3.org/TR/xpath20/">XPATH</a> expression (follow the link for more details) is very versatile and provide usually operators to perform computation: </p>
+<ul >
+<li><p>
+ <tt>$</tt><i>name</i> to access a variable content, </p>
+</li>
+<li><p>
+ <tt>(</tt> and <tt>)</tt>, parentheses, </p>
+</li>
+<li><p>
+ usually unary and binary operators like <tt>+</tt>, <tt>-</tt>, <tt>*</tt>, <tt>/</tt>, etc </p>
+</li>
+<li><p>
+ and a lot of common mathematic, textual and logic functions. </p>
+</li>
+</ul>
+<p>
+To set the value of an attribute of a script element, one can use the following syntax. The <tt>xsl:value</tt> will be first evaluated to produce the <i>VALUE</i> and, then,  the <tt>xsl::attribute</tt> takes effect to add an attribute named <i>NAME</i> to <tt>my-element</tt> with the computed <i>VALUE</i>. </p>
+<div class="listing"><pre class="code">
+&lt;my-element&gt; &lt;xsl:attribute name="NAME"&gt; &lt;xsl:value-of select="VALUE" /&gt; &lt;/xsl:attribute&gt; &lt;/my-element&gt;</pre></div><p>
+<i>XSLT</i> allows to compute values but also to add conditionally XML elements thanks to <tt>xsl:if</tt> and <tt>xsl:choose</tt>. The former syntax allows to keep the containted XML element if an <i>XPath</i> condition evaluates to true or to remove it: </p>
+<div class="listing"><pre class="code">
+&lt;!-- xsl::if ::= --&gt;
+	&lt;xsl:if test="xpath-test"&gt; &lt;!-- contained elements --&gt; &lt;/xsl:if&gt;</pre></div><p>
+The <i>xpath-test</i> is any valid <i>XPath</i> expressions evaluating to non-zero with the following operators: </p>
+<ul >
+<li><p>
+ <tt>=</tt>, '!=<tt> &#8211; equality, inequality, </tt></p>
+</li>
+<li><p>
+ <tt>&gt;</tt>, <tt>&gt;=</tt> &#8211; greater than, greater or or equal, </p>
+</li>
+<li><p>
+ <tt>&lt;</tt>, <tt>&#8656;</tt> &#8211; less than, less or equal. In additions, the comparisons may be combined with: </p>
+</li>
+<li><p>
+ <tt>and</tt> &#8211; logical and, </p>
+</li>
+<li><p>
+ <tt>or</tt> &#8211; logical or, </p>
+</li>
+<li><p>
+ <tt>not</tt> &#8211; logical not. </p>
+</li>
+</ul>
+<p>
+The example below shows the use of <tt>xsl:if</tt>. Depending of the definition of the configuration item <tt>$virtual</tt>, the code processor <tt>otawa::Virtualizer</tt> will be launched because its XML element will be maintained in the script or not, because its <tt>step</tt> element will be removed from the script. </p>
+<div class="listing"><pre class="code">
+&lt;script&gt;
+	&lt;xsl:if test="$virtual!=0"&gt;
+		&lt;step processor="otawa::Virtualizer"/&gt;
+	&lt;/xsl:if&gt;
+	&lt;step processor="otawa::ipet::WCETComputation"/&gt;
+&lt;/script&gt;&lt;/code&gt;
+
+The latter form of conditional is ''xsl:choose''. It supports several test and an //otherwise// case.
+&lt;code xml&gt;
+&lt;!-- xsl:choose ::= --&gt;
+	&lt;xsl:choose&gt;
+  		&lt;xsl:when test="xpath-test"&gt; &lt;!-- contained elements --&gt; &lt;/xsl:when&gt;+
+  		&lt;xsl:otherwise&gt; &lt;!-- contained elements --&gt; &lt;/xsl:when&gt;?
+	&lt;/xsl:choose&gt;</pre></div><p>
+In this conditional structure, the <tt>test</tt> attributes are evaluated sequentially, in the order of the XML file, and the result, as an XML result, are the contained elements of the first test resulting to true. If all tests fail, the result is the elements contained in the <tt>xsl:otherwise</tt> node. </p>
+<p>
+The example below shows that, using the name of <tt>$processor_model</tt>  variable, we can select precisely the size of ROM memory of the processed architecture. </p>
+<div class="listing"><pre class="code">
+	&lt;bank&gt;
+		&lt;name&gt;ON-CHIP NON-VOLATILE MEMORY&lt;/name&gt;
+		&lt;address&gt;0x00000000&lt;/address&gt;
+		&lt;xsl:choose&gt;
+			&lt;xsl:when test="$processor_model='lpc2131'"&gt;&lt;size&gt;0x8000&lt;/size&gt;&lt;/xsl:when&gt;
+			&lt;xsl:when test="$processor_model='lpc2132'"&gt;&lt;size&gt;0x10000&lt;/size&gt;&lt;/xsl:when&gt;
+			&lt;xsl:when test="$processor_model='lpc2134'"&gt;&lt;size&gt;0x20000&lt;/size&gt;&lt;/xsl:when&gt;
+			&lt;xsl:when test="$processor_model='lpc2136'"&gt;&lt;size&gt;0x40000&lt;/size&gt;&lt;/xsl:when&gt;
+			&lt;xsl:when test="$processor_model='lpc2138'"&gt;&lt;size&gt;0x80000&lt;/size&gt;&lt;/xsl:when&gt;
+		&lt;/xsl:choose&gt;
+		&lt;type&gt;ROM&lt;/type&gt;
+	&lt;/bank&gt;</pre></div><h2><a name="1.5"></a>1.5 Pipeline Description  </h2>
+<p>
+This section provides the XML format description used to represent pipeline of microprocessor. It is used to compute time for block of code either trivially (see otawa::ipet::TrivialBBTime analysis), or by simulation (see otawa::ipet::BBTimeSimulator analysis), or by execution graphs (see otawa::BasicGraphBBTime.h&gt;). </p>
+<p>
+Each of these analysis uses these information in a specific way but, more often, it is insufficient to describe the whole complexity of an actual microprocessor pipeline. The goal of such a format could be to describe the whole complexity of the pipeline but there are so heterogeneous and complex features that the right level should be VHDL, a pipeline description complete but indadequate to infer static analysis. In a more realistic goal, this format provides only a big picture of the pipeline and the exotic features of actual processors is left to a plugin implementation. </p>
+<h2><a name="1.5.1"></a>1.5.1 Top-Level  </h2>
+<p>
+A pipeline description can be found lonely in an XML file (in this case, the first element must be <tt>&lt;?xml &#8943;&gt;</tt> or inside another file like scripts. The top-level element must be: </p>
+<div class="listing"><pre class="code">
+&lt;!-- pipeline ::= --&gt;
+	&lt;processor class="otawa::hard::Processor"&gt;
+		&lt;arch&gt;ARCH&lt;/arch&gt;
+		&lt;model&gt;MODEL&lt;/model&gt;
+		&lt;builder&gt;BUILDER&lt;/builder&gt;
+		&lt;stages&gt; &lt;!-- stage --&gt;+ &lt;/stages&gt;
+		&lt;queues&gt; &lt;!-- queue --&gt;+ &lt;/qeues&gt;
+	&lt;/processor&gt;</pre></div><p>
+The <i>ARCH</i> gives the programming model (instruction set, registers, etc) supported by the pipeline. Current values includes <tt>arm</tt>, <tt>ppc</tt>, <tt>sparc</tt>, <tt>tricore</tt>, etc. It is mainly used to check that the processor description supports the programming model of loaded binary program. </p>
+<p>
+<i>MODEL</i> and <i>BUILDER</i> are only informative data but may help to identify a pipeline description. <i>MODEL</i> represents the accurate model of the hardware: for example, if <i>ARCH</i> is <tt>arm</tt>, usual models includes <tt>armv5t</tt>, <tt>cortexa8</tt>. The <i>BUILDER</i> item gives the name of the microprocessor builder like <tt>atmel</tt>, <tt>nxp</tt>, etc for an <tt>arm</tt> architecture. </p>
+<p>
+The <tt>stages</tt> elements gives the list of stages composing the pipeline that are detailed in the following sections. Notice this list is ordered according to the order of stages in the actual pipeline. The first stage must be of type <tt>fetch</tt> while the last stage must be of type <tt>commit</tt>. </p>
+<p>
+The <tt>queues</tt> contains the list of queues in the pipeline. The queues represents any pipeline feature storing a set of instructions, that is, FIFO buffer, reorder buffer, etc. As a default, if there are no queue is declared between two stages, it is considered implicitly that there is a latch whose dimension is the width of incoming stage. Only queues that does not match the previous description must be put here. </p>
+<h2><a name="1.5.2"></a>1.5.2 Stage Description  </h2>
+<p>
+A stage has the following syntax: </p>
+<div class="listing"><pre class="code">
+&lt;!-- stage ::= --&gt;
+	&lt;stage id="ID"&gt;
+		&lt;name&gt;STRING&lt;/name&gt;?
+		&lt;width&gt;INT&lt;/width&gt;?
+		&lt;latency&gt;INT&lt;/latency&gt;?
+		&lt;type&gt;fetch|lazy|commit|exec&lt;/type&gt;?
+	&lt;/stage&gt;</pre></div><p>
+An <tt>id</tt> attribute is not required but it allows to link a stage with a queue. </p>
+<p>
+The <tt>name</tt> gives the name of the stage only used to display to a human user. As a default, the stage has an empty string for name. </p>
+<p>
+The <tt>width</tt> represents the number of instructions that are processed in parallel by the stage. If not given, the default is 1. </p>
+<p>
+The <tt>latency</tt> gives the basic latency (in cycle) of the stage in order to process as many instructions as its width. As a default, the latency is of 1 cycle. </p>
+<p>
+The <tt>type</tt> is the more interesting part of the stage as it provides insight on the work of the stage. Notice that the work of a stage, from the point of view OTAWA, is mainly its effect on the execution time. The <tt>type</tt> must be one the enumerated value below: </p>
+<ul >
+<li><p>
+ <tt>fetch</tt> &#8211; ever the first stage of the pipeline, it is reponsible for fetching instrucions from the memory. Consequently, its throughput depends not only on its own properties but also on the time spent to access the memory. </p>
+</li>
+<li><p>
+ <tt>lazy</tt> &#8211; the simpler stage type whose only goal is to spent time in the instruction execution. </p>
+</li>
+<li><p>
+ <tt>commit</tt> &#8211; the last stage where the instructions go out of the pipeline. </p>
+</li>
+<li><p>
+ <tt>exec</tt> &#8211; represents the stage where an instruction is executed. It is complexe because (a) it is often split in different function units (see below) and (b) this stage handles the data dependencies between the instruction. </p>
+</li>
+</ul>
+<p>
+A stage of type <tt>exec</tt> has two more elements: </p>
+<div class="listing"><pre class="code">
+&lt;!-- exec-stage ::= --&gt;
+	...
+	&lt;dispatch&gt; &lt;!-- instruction match --&gt;+ &lt;/dispatch&gt;
+	&lt;fus&gt; &lt;!-- fu --&gt;+ &lt;/fus&gt;</pre></div><p>
+The <tt>fus</tt> element gives the list of functional unit (described in the next section). The <tt>dispatch</tt> allows to dispatch instruction for functional unit. It is made of a list of <tt>inst</tt> elements: </p>
+<div class="listing"><pre class="code">
+&lt;!-- instruction match ::= --&gt;
+	&lt;inst&gt;
+		&lt;type&gt;masks&lt;/type&gt;
+		&lt;fu ref="ID"/&gt;
+	&lt;/inst&gt;</pre></div><p>
+The <tt>type</tt> allows to select an instruction from its kind mask. The kind mask of the <tt>otawa::Inst</tt> class is a set of flags describing the nature of the instruction. Each bit is identified by mask named <tt>IS_</tt><i>xxx</i> and the <tt>type</tt> element can supports several of these masks separated by a pipe <tt>|</tt>. To be selected, an instruction must match <b>all</b> the flags in the <tt>type</tt>. If no flags is given, any instruction will be selected. The <tt>fu</tt> gives the functional unit that will receive the instruction matching the type. The <i>ID</i> is one of the functional unit <tt>id</tt> describing in the next section. </p>
+<p>
+The supported flags are: </p>
+<ul >
+<li><p>
+ <tt>IS_COND</tt> if the instruction is conditional, </p>
+</li>
+<li><p>
+ <tt>IS_CONTROL</tt> if the instruction changes the PC, </p>
+</li>
+<li><p>
+ <tt>IS_CALL</tt> if the instruction performs a sub-program call, </p>
+</li>
+<li><p>
+ <tt>IS_RETURN</tt> if the instruction returns from a sub-program, </p>
+</li>
+<li><p>
+ <tt>IS_MEM</tt> if the instruction performs memory accesss, </p>
+</li>
+<li><p>
+ <tt>IS_LOAD</tt> if the instruction loads of data from memory, </p>
+</li>
+<li><p>
+ <tt>IS_STORE</tt> if the instruction stores data to memory, </p>
+</li>
+<li><p>
+ <tt>IS_INT</tt> if the instruction works on integer values, </p>
+</li>
+<li><p>
+ <tt>IS_FLOAT</tt> if the instruction works on float values, </p>
+</li>
+<li><p>
+ <tt>IS_ALU</tt> if the instruction performs arithmetic or logic operation (not address calculation), </p>
+</li>
+<li><p>
+ <tt>IS_MUL</tt> if the instruction performs a multiplication, </p>
+</li>
+<li><p>
+ <tt>IS_DIV</tt> if the instruction performs a division, </p>
+</li>
+<li><p>
+ <tt>IS_SHIFT</tt> if the instruction performs a shift, </p>
+</li>
+<li><p>
+ <tt>IS_TRAP</tt> if the instruction performs a trap (system call, exception raise, debugging, etc) </p>
+</li>
+<li><p>
+ <tt>IS_INTERN</tt> if the instruction has an effect on the internal work of the microprocessor, </p>
+</li>
+<li><p>
+ <tt>IS_MULTI</tt> if the instruction performs multiple accesses to memory, </p>
+</li>
+<li><p>
+ <tt>IS_SPECIAL</tt>, other types of instructions not covered by the existing flags, </p>
+</li>
+<li><p>
+ <tt>IS_INDIRECT</tt> if the instruction performs an indirect branch, </p>
+</li>
+<li><p>
+ <tt>IS_ATOMIC</tt> if the instruction performs atomic access to memory (in case of parallel access to memory).  </p>
+</li>
+</ul>
+<p>
+Hexadecimal numbers are also accepted as flag masks to cope with the specificities of some instruction sets. </p>
+<p>
+Below is the example of the Leon 3 dispatch element of the execution stage: </p>
+<div class="listing"><pre class="code">
+	&lt;dispatch&gt;
+		&lt;inst&gt; &lt;type&gt;IS_MEM&lt;/type&gt; &lt;fu ref="INT"/&gt; &lt;/inst&gt;
+		&lt;inst&gt; &lt;type&gt;IS_CONTROL&lt;/type&gt; &lt;fu ref="INT"/&gt; &lt;/inst&gt;
+		&lt;inst&gt; &lt;type&gt;IS_INT&lt;/type&gt; &lt;fu ref="INT"/&gt; &lt;/inst&gt;
+		&lt;inst&gt; &lt;type&gt;IS_FLOAT|IS_DIV&lt;/type&gt; &lt;fu ref="FDIV"/&gt; &lt;/inst&gt;
+		&lt;inst&gt; &lt;type&gt;&lt;/type&gt; &lt;fu ref="FPU"/&gt; &lt;/inst&gt;
+	&lt;/dispatch&gt;</pre></div><p>
+Any memory, control or integer instruction goes in the <tt>INT</tt> functional unit. The first three instructions matches works like an disjunctive condition as they branching to the same functional unit. Otherwise, if the instruction is working on float and performs a division, it moves to the <tt>FDIV</tt> functional unit. Finally, it can be stated from the instruction set of the Leon that remaining instruction are working on floating-point numbers and must go to the <tt>FPU</tt> functional unit. </p>
+<h2><a name="1.5.3"></a>1.5.3 Functional Unit Description  </h2>
+<p>
+A functional unit is like a stage but dedicated to the execution / work of an instruction. The syntax of functional units is given below: </p>
+<div class="listing"><pre class="code">
+&lt;!-- fu ::= --&gt;
+	&lt;name&gt;STRING&lt;/name&gt;?
+	&lt;width&gt;INT&lt;/width&gt;?
+	&lt;latency&gt;INT&lt;/latency&gt;?
+	&lt;pipelined&gt;BOOL&lt;/pipelined&gt;	</pre></div><p>
+The <tt>name</tt> allows to associatve the functional unit with a name and is only used foer human user convenience, or with the <tt>dispatch</tt> element described in the previous section. </p>
+<p>
+The <tt>width</tt> defines the number of functional unit existing, that is, the number of instruction that may be executed in the current functional unit. Its value is 1 instruction as a default. </p>
+<p>
+The <tt>latency</tt> describes how many cycles is required for an instruction to traverse the functional unit. Its value is 1 cycle as a default. </p>
+<p>
+Finally,<tt>pipelined</tt> express a fact that a multiple-cycle functional unit is not blocked until the end of the instruction: at each cycle, it can accept another instruction. Considered false as default. </p>
+<p>
+Below is an example of a multiple ALU functional unit in a superscalar microprocessor: </p>
+<div class="listing"><pre class="code">
+&lt;fu&gt;
+	&lt;name&gt;ALU&lt;/name&gt;
+	&lt;width&gt;4&lt;/width&gt;
+	&lt;latency&gt;1&lt;/latency&gt;
+&lt;/fu&gt;</pre></div><p>
+The coming example is a multiplication of 4-cycles supporting pipelining of operations: </p>
+<div class="listing"><pre class="code">
+&lt;fu&gt;
+	&lt;name&gt;MUL&lt;/name&gt;
+	&lt;latency&gt;4&lt;/latency&gt;
+	&lt;pipelined&gt;true&lt;/pipelined&gt;
+&lt;/fu&gt;</pre></div><p>
+The final example represents a floating-point division functional unit of 10-cyles but that does not support pipelinging <a class="footnumber" href="#footnote-1">1</a>: </p>
+<div class="listing"><pre class="code">
+&lt;fu&gt;
+	&lt;name&gt;FDIV&lt;/name&gt;
+	&lt;latency&gt;10&lt;/latency&gt;
+	&lt;pipelined&gt;false&lt;/false&gt;
+&lt;/fu&gt;</pre></div><h2><a name="1.5.4"></a>1.5.4 Queue Description  </h2>
+<p>
+A queue is a small data structure containing and buffering instruction between stages. The syntax of queues is: </p>
+<div class="listing"><pre class="code">
+&lt;!-- queue ::= --&gt;
+&lt;queue&gt;
+	&lt;name&gt;STRING&lt;/name&gt;?
+	&lt;size&gt;INT&lt;/size&gt;
+	&lt;input ref="ID"/&gt;
+	&lt;output ref="ID"/&gt;
+	&lt;intern&gt;  &lt;stage ref="ID"/&gt;+ &lt;/intern&gt;?
+&lt;/queue&gt;</pre></div><p>
+The <tt>name</tt> element allows to associate a human-readable identifier with a queue. </p>
+<p>
+The <tt>size</tt> gives the maximum number of instructions the queue can contain. </p>
+<p>
+The <tt>ref</tt> attribute of <tt>input</tt> element represents the stage that deposits instructions in the queue. </p>
+<p>
+The <tt>ref</tt> attribute of <tt>output</tt> element represents the stage that extract instructions from the queue. </p>
+<p>
+The <tt>intern</tt> element is only used in the case of queues implementing a re-order buffer. In this case, an instruction can only be extracted if it has been processed by one or several calculation stages (usually execution stages). The list of <tt>stage</tt> elements gives the list of stages that will validate an instruction (that is, execute it). </p>
+<p>
+Below is the example of simple FIFO queue between a fetch stage and a decode stage: </p>
+<div class="listing"><pre class="code">
+&lt;queue&gt;
+	&lt;name&gt;FETCH_QUEUE&lt;/name&gt;
+	&lt;size&gt;8&lt;/size&gt;
+	&lt;input ref="FI"/&gt;
+	&lt;output ref="DI"/&gt;
+&lt;/queue&gt;</pre></div><p>
+  In this second example, a reorder buffer stores instructions until they have been executed by the <tt>EX</tt> stage: </p>
+<div class="listing"><pre class="code">
+&lt;queue&gt;
+	&lt;name&gt;ROB_QUEUE&lt;/name&gt;
+	&lt;size&gt;16&lt;/size&gt;
+	&lt;input ref="DI"/&gt;
+	&lt;intern&gt;
+		&lt;stage ref="EX"/&gt;
+	&lt;/intern&gt;
+	&lt;ouput ref="CM"/&gt;
+&lt;/queue&gt;</pre></div><h2><a name="1.6"></a>1.6 Cache Description  </h2>
+<p>
+A cache is a small fast memory that allows to store and access fastly little block of bytes of the main memory. Caches are a main feature feature to speed up processor execution by allowing to avoid long-time access to the main memory. </p>
+<p>
+From the point of view of caches, the main memory is divided in blocks of same size and the cache is divided in sets. Based on its address, each memory block is assigned to a cache set that, in turn, may contrain one (direct-mapped cache) or several blocks (associative cache). </p>
+<p>
+To be compliant with the binary encoding of address, the block size, the set number and the cache size are power of 2. </p>
+<p>
+There are a lot of different way to configure the caches: </p>
+<ul >
+<li><p>
+ they may be split between instruction and data or unified, </p>
+</li>
+<li><p>
+ they have different configurations for block size, set size, cache size, </p>
+</li>
+<li><p>
+ there are different levels of cache from L1 (close to the core) to L2, L3 (close to the main memory), </p>
+</li>
+<li><p>
+ there are different wayq to manage blocks stored in a set (replacement policy, write-through or write-back save model, etc). </p>
+</li>
+</ul>
+<h2><a name="1.6.1"></a>1.6.1 Cache Configuration Level  </h2>
+<p>
+OTAWA try to provide a consistent and versatile representation of caches as below: </p>
+<div class="listing"><pre class="code">
+&lt;!-- CACHES ::= --&gt;
+&lt;cache-config&gt;
+	(&lt;icache ref="ID"/&gt; | &lt;icache&gt; CACHE &lt;/icache&gt;)
+	(&lt;dcache ref="ID"/&gt; | &lt;dcache&gt; CACHE &lt;/dcache&gt;)
+	(&lt;cache id="ID"/&gt; | &lt;cache&gt; CACHE &lt;/cache&gt;)*
+&lt;cache-config&gt;</pre></div><p>
+A cache configuration may: </p>
+<ul >
+<li><p>
+ have without cache &#8211; <tt>cache-config</tt>  is empty, </p>
+</li>
+<li><p>
+ contain only instruction cache &#8211; <tt>cache-config</tt> contains only an <tt>icache</tt> element, </p>
+</li>
+<li><p>
+ be split (Harvard architecture) &#8211; <tt>cache-config</tt> contains an element <tt>icache</tt> and an element <tt>dcache</tt>, </p>
+</li>
+<li><p>
+ or unified &#8211; <tt>cache-config</tt> contains only an element named <tt>cache</tt>. </p>
+</li>
+</ul>
+<p>
+This describes only the first level of cache, L1. If there is an L2 cache, its description is provided inside the L1 cache element called <tt>next</tt>. If the L2 is unified while the L1 is split, the first <tt>next</tt> element contains the L2 unified cache description and with an <tt>id</tt> attribute while the second <tt>next</tt> element is ampty but provides a <tt>ref</tt> attribute that design the identifier of the first <tt>next</tt> element. Of course, the scheme may repeated as far as needed. </p>
+<h2><a name="1.6.2"></a>1.6.2 Cache elements  </h2>
+<p>
+The content of a cache element, <i>CACHE</i>, is defined below: </p>
+<div class="listing"><pre class="code">
+&lt;!-- CACHE ::= --&gt;
+	&lt;block_bits&gt;INT&lt;/block_bits&gt;
+	&lt;row_bits&gt;INT&lt;/row_bits&gt;
+	&lt;set_bits&gt;INT&lt;set_bits&gt;
+	(&lt;next ref="ID"/&gt; | &lt;next&gt; CACHE &lt;/next&gt;)?
+  	&lt;replace&gt;NONE|OTHER||LRU|RANDOM|FIFO|PLRU&lt;/replace&gt;?	&lt;!-- default: LRU --&gt;
+ 	&lt;write&gt;WRITE_THROUGH|WRITE_BACK&lt;/write&gt;?				&lt;!-- default: WRITE_THROUGH --&gt; 
+	&lt;allocate&gt;BOOL&lt;/allocate&gt;?								&lt;!-- default: true --&gt;</pre></div><p>
+<tt>block_bits</tt> defines the size of the cache blocks: if its value is <i>N</i>, the block size is 2^<i>B</i> and means that the <i>B</i> less significant bits of the addresses design the accessed byte in the block. </p>
+<p>
+<tt>row_bits</tt><a class="footnumber" href="#footnote-2">2</a> value, <i>S</i>, determines the number of sets in the cache, that is, 2^<i>S</i>. In the address, the bits selecting the set ranges from <i>B</i> to <i>B</i> + <i>S</i> - 1. </p>
+<p>
+Finally, the <tt>set_bits</tt> <i>A</i> determines the number of blocks in each set, that is, 2^<i>A</i>. As any block may go any way of a set, there is no matching in the address. In the end, the cache size in bytes is 2^(<i>B</i> + <i>S</i> + <i>A</i>). </p>
+<p>
+The <tt>next</tt> element allows to link the current cache at level L<i>i</i> to a cache at level L<i>i+1</i>. The cache at level L<i>i+1</i> may either be described in the <tt>next</tt> element or just contain a reference to an element describing this cache. </p>
+<p>
+The following elements are used to describe the policy of use of the blocks stored in a set. As a set contains several blocks in an unordered way, a policy must be applied to know which block to wipe out when a new cache block needs to be loaded. Notice that this element can be ignored if the number of way, <i>A</i>, is equal to 0 as the set contains only one block. </p>
+<p>
+<tt>replace</tt> describes the replacement policy that may be: </p>
+<ul >
+<li><p>
+ <tt>NONE</tt> &#8211; null value (usually unused in this format), </p>
+</li>
+<li><p>
+ <tt>OTHER</tt> &#8211; unknown policy, </p>
+</li>
+<li><p>
+ <tt>LRU</tt> (Least Recently Used) &#8211; the replaced block is the least recently used, </p>
+</li>
+<li><p>
+ <tt>RANDOM</tt> &#8211; the replaced block is selected randomly, </p>
+</li>
+<li><p>
+ <tt>FIFO</tt> (First-In First-Out) &#8211; also called Round-Robin, blocks are organized as a queue and the last block is replaced, </p>
+</li>
+<li><p>
+ <tt>PLRU</tt> (Pseudo-LRU) &#8211; this policy mimics <a href="http://en.wikipedia.org/wiki/PLRU">LRU</a> but with a lower hardware cost. </p>
+</li>
+</ul>
+<p>
+It's likely that this list be extended in the future. </p>
+<p>
+<tt>write</tt> and <tt>allocate</tt> elements are only used with data or unified caches. <tt>write</tt> describes the write policy of the cache (when a block is modified): </p>
+<ul >
+<li><p>
+ <tt>WRITE_THROUGH</tt> &#8211; means that a write to block is immediately propagated to the main memory to avoid to write-back the block when it is wiped out; if the <tt>allocate</tt> element is set to true, a write-through is performed but, if the block is not already in the cache, it is allocated and loaded. </p>
+</li>
+<li><p>
+ <tt>WRITE_BACK</tt> &#8211; means that a write to a block is just performed in the cache and the memory modification will be propagated to the main memory only when the block is wiped out; if the block is not in the cache, it is loaded; <tt>allocate</tt> element is not used. </p>
+</li>
+</ul>
+<h2><a name="1.6.3"></a>1.6.3 Examples  </h2>
+<p>
+Below is a simple configuration of an architecture with only one instruction cache (block of 16 bytes, 4-way associative, 128 sets, 8 Kb size): </p>
+<div class="listing"><pre class="code">
+&lt;cache-config&gt;
+	&lt;icache&gt;
+		&lt;block_bits&gt;4&lt;/block_bits&gt;
+		&lt;row_bits&gt;7&lt;/row_bits&gt;
+		&lt;way_bits&gt;2&lt;/way_bits&gt;
+		&lt;replace&gt;LRU&lt;/replace&gt;
+	&lt;/icache&gt;
+&lt;/cache-config&gt;</pre></div><p>
+Below is the cache structure of the ARM9, that is, split with random replacement policy (64 ways, 32 b per block, 15Kb size): </p>
+<div class="listing"><pre class="code">
+&lt;cache-config&gt;
+	&lt;icache&gt;
+		&lt;block_bits&gt;6&lt;/block_bits&gt;
+		&lt;row_bits&gt;3&lt;/row_bits&gt;
+		&lt;way_bits&gt;5&lt;/way_bits&gt;
+		&lt;replace&gt;RANDOM&lt;/replace&gt;
+	&lt;/icache&gt;
+	&lt;dcache&gt;
+		&lt;block_bits&gt;6&lt;/block_bits&gt;
+		&lt;row_bits&gt;3&lt;/row_bits&gt;
+		&lt;way_bits&gt;5&lt;/way_bits&gt;
+		&lt;replace&gt;RANDOM&lt;/replace&gt;
+	&lt;/dcache&gt;
+&lt;/cache-config&gt;</pre></div><p>
+This example represents a unified cache of 16 Kb: </p>
+<div class="listing"><pre class="code">
+&lt;cache-config&gt;
+	&lt;cache&gt;
+		&lt;block_bits&gt;5&lt;/block_bits&gt;
+		&lt;row_bits&gt;3&lt;/row_bits&gt;
+		&lt;way_bits&gt;6&lt;/way_bits&gt;
+		&lt;replace&gt;PLRU&lt;/replace&gt;
+	&lt;/cache&gt;
+&lt;/cache-config&gt;</pre></div><p>
+Finally, the example shows an example of split L1 cache (16 Kb) and unified L2 (256 Kb): </p>
+<div class="listing"><pre class="code">
+&lt;cache-config&gt;
+	&lt;icache&gt;
+		&lt;block_bits&gt;5&lt;/block_bits&gt;
+		&lt;row_bits&gt;9&lt;/row_bits&gt;
+		&lt;way_bits&gt;2&lt;/way_bits&gt;
+		&lt;replace&gt;RANDOM&lt;/replace&gt;
+		&lt;next id="M2"&gt;
+			&lt;block_bits&gt;6&lt;/block_bits&gt;
+			&lt;row_bits&gt;8&lt;/row_bits&gt;
+			&lt;way_bits&gt;4&lt;/way_bits&gt;
+			&lt;replace&gt;RANDOM&lt;/replace&gt;
+		&lt;/next&gt;
+	&lt;/icache&gt;
+	&lt;dcache&gt;
+		&lt;block_bits&gt;5&lt;/block_bits&gt;
+		&lt;row_bits&gt;9&lt;/row_bits&gt;
+		&lt;way_bits&gt;2&lt;/way_bits&gt;
+		&lt;replace&gt;RANDOM&lt;/replace&gt;
+		&lt;next ref="L2"/&gt;
+	&lt;/dcache&gt;</pre></div><h2><a name="1.7"></a>1.7 Memory Space Description  </h2>
+<p>
+The memory space description defines properties of the different areas of the address space. So, a <tt>bank</tt> element is mainly a memory area described by its base address and its size. </p>
+<p>
+OTAWA allows to represent addresses over different address spaces. An address is made of two components: </p>
+<ul >
+<li><p>
+ page &#8211;identification of the address space on 32-bits, </p>
+</li>
+<li><p>
+ offset &#8211; identification of a byte in an address space on 32-bits. </p>
+</li>
+</ul>
+<p>
+One must observe that the address space (-1) or 0xffffffff is used to represent the null address, that is, the abstract value representing no address.  </p>
+<div class="listing"><pre class="code">
+&lt;!-- ADDRESS ::= --&gt;
+	INT
+	| (&lt;page&gt;INT&lt;/page&gt;?&lt;/page&gt; &lt;offset&gt;INT&lt;/offset&gt;)</pre></div><p>
+If the <tt>page</tt> element is not given, the default address space (e.g. page) is 0. </p>
+<h2><a name="1.7.1"></a>1.7.1 Memory Element  </h2>
+<div class="listing"><pre class="code">
+&lt;!-- MEMORY ::= --&gt;
+	&lt;memory&gt;
+		&lt;banks&gt;
+			BANK*
+		&lt;/banks&gt;
+	&lt;/memory&gt;</pre></div><p>
+A memory is just a collection of memory areas that are called banks. </p>
+<h2><a name="1.7.2"></a>1.7.2 Bank Element  </h2>
+<div class="listing"><pre class="code">
+&lt;!-- BANK ::= --&gt;
+	&lt;bank&gt;
+		&lt;name&gt;TEXT&lt;/name&gt;
+	  	&lt;address&gt;ADDRESS&lt;/address&gt;
+	  	&lt;size&gt;INT&lt;/size&gt;
+	  	&lt;type&gt;DRAM|SPM|ROM|IO&lt;/type&gt;
+	  	&lt;latency&gt;INT&lt;/latency&gt;?
+	  	&lt;write_latency&gt;INT&lt;/write_latency&gt;?
+		&lt;cached&gt;BOOL&lt;/cached&gt;		&lt;!-- default: false --&gt;
+	  	&lt;writable&gt;BOOL&lt;/writable&gt;	&lt;!-- default: true --&gt;
+	&lt;/bank&gt;</pre></div><p>
+<tt>name</tt> assign a name to a memory area and exists only for human user interaction. </p>
+<p>
+<tt>address</tt> defines the base address of the memory area. </p>
+<p>
+<tt>size</tt> defines the memory area size in bytes. As the representation of this value is on 32-bits and as the 0 value does not mean anything for size, 0 size represents a full coverage of the address space, that is, a memory of size 2^32. </p>
+<p>
+The <tt>type</tt> gives hints on the nature of the memory. Possible values may be: </p>
+<ul >
+<li><p>
+ DRAM &#8211; usual dynamic RAM, </p>
+</li>
+<li><p>
+ SPM &#8211; on-chip static RAM (usually accessed in 1 cycle), </p>
+</li>
+<li><p>
+ ROM &#8211; read-only memory (EEPROM or anything else) but also NAND flash memory with random access, </p>
+</li>
+<li><p>
+ IO &#8211; represents input/output register of peripherals (access time is usually high). </p>
+</li>
+</ul>
+<p>
+The <tt>latency</tt> defines the number of cycle to access the memory space to read a data item. If there is no <tt>write_latency</tt>, this defines also the time in cycle to write a data item. </p>
+<p>
+The <tt>write_latency</tt> element provides the write time in cycles. </p>
+<p>
+<tt>cached</tt> allows to know if the memory area is accessed through the cache or directly. IO memory areas are often not cached. </p>
+<p>
+With the <tt>writable</tt> element, one can know if a memory area is writable or not: ROM are often considered as not writable using the classic load / store instruction of a microprocessor. For example, flash memories are readable word by word but are written block by block through dedicated IO registers. </p>
+<div class="footnotes">
+<p class="footnote">
+<a class="footnumber" name="footnote-1">1</a> Notice that the <tt>pipelined</tt> is not required</p>
+<p class="footnote">
+<a class="footnumber" name="footnote-2">2</a> This name is relatively old and misleading.</p>
+</div></div>
+</div>
+</body>
+</html>

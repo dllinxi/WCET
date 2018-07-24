@@ -1,0 +1,46 @@
+# uses
+# 	ALL: targets for all
+# 	INSTALL: targets for install
+# 	CLEAN: targets for clean
+#	CLEAN_FILES: files to remove
+#	DIST_FILES: files to distribute
+# provides
+#	IDIR: installation directory
+
+PREFIX = /usr
+IDIR=$(PREFIX)/share/thot
+TOPDIR:=$(abspath $(dir $(lastword $(MAKEFILE_LIST))))
+RPATH=$(subst $(TOPDIR)/,,$(PWD)/)
+
+all: $(ALL)
+	@for dir in $(SUBDIRS); do cd $$dir; $(MAKE) all; cd ..; done
+
+install: all install-dir $(INSTALL)
+	@for dir in $(SUBDIRS); do cd $$dir; $(MAKE) install; cd ..; done
+
+clean: $(CLEAN)
+	@for dir in $(SUBDIRS); do cd $$dir; $(MAKE) clean; cd ..; done
+	rm -rf $(CLEAN_FILES)
+
+install-dir:
+	mkdir -p $(IDIR)
+
+
+# source distribution
+include $(TOPDIR)/Makefile.spec
+SRCDISTNAME=$(PACKAGE)-$(VERSION)
+SRCDISTDIR=$(TOPDIR)/$(SRCDISTNAME)
+SRCDISTFILES=$(DIST_FILES) $(SOURCES) Makefile
+
+src-dist: src-dist-sub
+	tar cvfz $(SRCDISTNAME).tgz $(SRCDISTNAME)
+
+src-dist-sub:
+	test -d $(SRCDISTDIR)/$(RPATH) || mkdir -p $(SRCDISTDIR)/$(RPATH)
+	for f in $(SRCDISTFILES); do cp -R $$f $(SRCDISTDIR)/$(RPATH); done
+	@for dir in $(SUBDIRS); do cd $$dir; $(MAKE) src-dist-sub; cd ..; done
+
+
+# patterns
+%.pyc: %.py
+	python -c 'import py_compile; py_compile.compile("$<")'

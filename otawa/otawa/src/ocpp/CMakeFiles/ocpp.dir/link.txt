@@ -1,0 +1,1 @@
+/usr/bin/c++.exe  -Wall -g   -shared -Wl,--enable-auto-import -o cygocpp.dll -Wl,--out-implib,libocpp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 CMakeFiles/ocpp.dir/Unmangler.cpp.o /cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/elm/src/libelm.dll.a 

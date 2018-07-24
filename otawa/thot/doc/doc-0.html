@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Thot 0.8 Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;hugues.casse@laposte.net&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="doc-imports/style_green-0..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">Thot 0.8 Manual</div>
+	<div class="authors"><a href="mailto:hugues.casse@laposte.net">H. Cassé </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="doc-0.html">1  Tutorial  </a>
+    <ul class="toc">
+    <li>
+    <a href="doc-0.html#1.1">1.1  First Steps  </a>
+    </li>
+    <li>
+    <a href="doc-0.html#1.2">1.2   Explanation of the Example  </a>
+    </li>
+    <li>
+    <a href="doc-0.html#1.3">1.3  Using a simple module  </a>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="doc-1.html">2  Writer Manual  </a>
+  </li>
+  <li>
+  <a href="doc-2.html">3  Developper Manual  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="1"></a>1 Tutorial  </h2>
+<p>
+To use <i><b>Thot</b></i>, you just need a CLI (Command Line Interface) to launch the <tt>thot</tt> command and a text editor. Other requirements includes of course <a href="http://www.python.org/">Python</a>, the language <i><b>Thot</b></i> is written in. </p>
+<p>
+Not mandatory but enabling some additional features, we can add: </p>
+<ul >
+<li><p>
+ <a href="http://www.andre-simon.de/">highlight</a> to produce colored source code, </p>
+</li>
+<li><p>
+ <a href="http://www.graphviz.org/">GraphViz</a> to display graphs. </p>
+</li>
+</ul>
+<h2><a name="1.1"></a>1.1 First Steps  </h2>
+<p>
+To write your first document, you have to start your favorite text editor and to type the following text for example <a class="footnumber" href="#footnote-1">1</a>: </p>
+<div class="listing"><pre class="code">
+@TITLE=My First Document
+@AUTHORS=Rick Hunter &lt;rick.hunter@policy.org&gt;
+@LANG=en_EN
+@use dokuwiki
+
+Hello, I'm Rick Hunter.
+
+====== My Life ======
+
+This is my first chapter.
+
+====== My Foes ======
+
+  * criminal one,
+  * criminal two,
+  * criminal three.</pre></div><p>
+Once you saved you first file as <tt>hunter.thot</tt> (for example), you have just to open a CLI and go in the directory containing this file and to type: </p>
+<div class="listing"><pre class="code">
+thot hunter.thot</pre></div><p>
+This creates a file named <tt>hunter.html</tt> that you can view with your favorite web browser. As a default, <i><b>Thot</b></i> uses the <tt>html</tt> back-end to generate the document but more are available like <tt>latex</tt> or <tt>docbook</tt>. They will require some specific programs of which details are given in the <i>Writer Manual</i> part. </p>
+<p>
+If you open the obtained <tt>html</tt> page, you will something crude. To make things pretty, you have to configure <i><b>Thot</b></i> to use CSS stylesheet of your choice (for <tt>html</tt> back-end only). </p>
+<p>
+Basically, <i><b>Thot</b></i> propose a small list of available styles but you may add your own ones: </p>
+<ul >
+<li><p>
+ <tt>minima/initial.css</tt>, </p>
+</li>
+<li><p>
+ <tt>minima/style_blue.css</tt>, </p>
+</li>
+<li><p>
+ <tt>minima/style_brown.css</tt>, </p>
+</li>
+<li><p>
+ <tt>minima/style_gray.css</tt>, </p>
+</li>
+<li><p>
+ <tt>minima/style_green.css</tt>, </p>
+</li>
+<li><p>
+ <tt>minima/style_pink.css</tt>, </p>
+</li>
+<li><p>
+ <tt>minima/style_purple.css</tt>. </p>
+</li>
+</ul>
+<p>
+Once you have done your choice (for example blue), you have just to add the line blow at the head of your document: </p>
+<div class="listing"><pre class="code">
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_blue.css</pre></div><p>
+Then, you have to rebuild the document with <tt>thot</tt> command and you may appreciate the new look of the page on the browser (don't  forget to refresh the page to get the new version). Now, you started to touch the power of <i><b>Thot</b></i>, we can dig further in the details of the lighweight tags. </p>
+<h2><a name="1.2"></a>1.2  Explanation of the Example  </h2>
+<p>
+In this section, we detail the example given above. </p>
+<p>
+The first part of the document contains meta-d&#233;finitions used by <i><b>Thot</b></i> to generate the document. </p>
+<div class="listing"><pre class="code">
+@TITLE=My First Document
+@AUTHORS=Rick Hunter &lt;rick.hunter@policy.org&gt;
+@LANG=en_EN</pre></div><p>
+This three lines gives, respectively, the title, the authors and the language of the document. The language must be defined according to <a href="http://tools.ietf.org/html/rfc4647">RFC4646</a> and <a href="http://tools.ietf.org/html/rfc4647">RFC4647</a> standard rules. <tt>en_EN</tt> means english language of England. <tt>title</tt> and <tt>authors</tt> may contain any free text. </p>
+<div class="listing"><pre class="code">
+@use dokuwiki</pre></div><p>
+This lines registers the syntax of <a href="http://www.dokuwiki.org/dokuwiki">Dokuwiki</a> as the document syntax. Without such a line, no markup is scanned in the document and you would get a flat document output. Note that, from this point, <i><b>Thot</b></i> will accept Dokuwiki syntax. Tags in the previous lines was just pure <i><b>Thot</b></i> meta-information. If you prefer, you can also use a different like <a href="http://txstyle.org/">textile</a>. </p>
+<div class="listing"><pre class="code">
+Hello, I'm Rick Hunter.</pre></div><p>
+Here we have simple text paragraph that is dumped to the output document as-is. Notice that, in Dokuwiki syntax, the paragraphs are separated by blank lines. </p>
+<div class="listing"><pre class="code">
+====== My Life ======</pre></div><p>
+This is also Dokuwiki syntax to define a top-level header title and the sepparation between two sections. The number of '=' defines the level of the header: 6 for top level, 5 for level just below and so on. </p>
+<div class="listing"><pre class="code">
+This is my firts chapter.
+
+====== My Foes ======</pre></div><p>
+Here we still have a simple paragraph and a top level header. </p>
+<div class="listing"><pre class="code">
+  * first one,
+  * second one,
+  * third one.</pre></div><p>
+This paragraph is more interesting. Two spaces and a star are used to denote items of dotted list. One may observe that this syntax is also easy to read and to use. </p>
+<p>
+This example show only a little part of the Dokuwiki syntax. For more details, you can refer to <a href="http://www.dokuwiki.org/syntax">Dokuwiki syntax description</a>. Notice also that <i><b>Thot</b></i> does not enforce the use of Dokuwiki. </p>
+<h2><a name="1.3"></a>1.3 Using a simple module  </h2>
+<p>
+In this last step of the tutorial, we show how the Dokuwiki syntax may be easily augmented to support domain specific languages, like <tt>.dot</tt> graph description language of <a href="http://www.graphviz.org/">GraphViz</a>. </p>
+<p>
+First, you have to inform <i><b>Thot</b></i> about the use of a new module (<tt>dot</tt> in this case). </p>
+<div class="listing"><pre class="code">
+@use dot</pre></div><p>
+Then, you must get documentation about the syntax added by the module. In the case of <tt>dot</tt>, the graph description must be framed by <tt>&lt;dot&gt;</tt> and <tt>&lt;/dot&gt;</tt> marks and the graph description must follow the normal rules of <a href="http://www.graphviz.org/">GraphViz</a>. </p>
+<p>
+For example, you may add the following graph: </p>
+<div class="listing"><pre class="code">
+&lt;dot&gt;
+digraph mine {
+	1 -&gt; 2 ;
+	1 -&gt; 3 ;
+	3 -&gt; 4 ;
+	4 -&gt; 5 ;
+	2 -&gt; 5 ;
+}
+&lt;/dot&gt;</pre></div><p>
+Then, you can generate the page as usually by typing: </p>
+<div class="listing"><pre class="code">
+thot hunter.thot</pre></div><p>
+In this case, the graph description is replaced by the insertion of an image produced by GraphViz. </p>
+<div class="figure"><img src="doc-imports/dot/graph-0.png"/></div><p>
+This image created in a specific directory called <tt>hunter-imports</tt> that contains all images and resources required by the generated document. This directory has to be including with the <tt>html</tt> file if you want to move or send your document. Otherwise, the display will be degraded. </p>
+<p>
+That's it! After this fast introduction to <i><b>Thot</b></i>, you can read the next section to get deeper details and options on the different modules delivered with <i><b>Thot</b></i>. </p>
+<div class="footnotes">
+<p class="footnote">
+<a class="footnumber" name="footnote-1">1</a> You are also allowed to copy'n'paste it</p>
+</div></div>
+</div>
+</body>
+</html>

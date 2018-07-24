@@ -1,0 +1,1 @@
+/usr/bin/cc  -g  -Wl,--enable-auto-import CMakeFiles/test_stabs.dir/test_stabs.c.o  -o test_stabs.exe -Wl,--out-implib,libtest_stabs.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -L/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/src  ../src/libgel.dll.a -ldl 

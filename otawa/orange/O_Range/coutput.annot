@@ -1,0 +1,2268 @@
+"coutput.ml" 13 170 174 "coutput.ml" 13 170 181
+type(
+  string
+)
+ident(
+  def version "coutput.ml" 19 199 199 "coutput.ml" 1 0 -1
+)
+"coutput.ml" 13 170 184 "coutput.ml" 13 170 193
+type(
+  string
+)
+"coutput.ml" 24 406 410 "coutput.ml" 24 406 426
+type(
+  char -> string option
+)
+ident(
+  def pcdata_from_char "coutput.ml" 35 732 732 "coutput.ml" 1 0 -1
+)
+"coutput.ml" 25 438 442 "coutput.ml" 25 438 445
+type(
+  char
+)
+"coutput.ml" 25 438 454 "coutput.ml" 25 438 459
+type(
+  string
+)
+"coutput.ml" 25 438 449 "coutput.ml" 25 438 459
+type(
+  string option
+)
+"coutput.ml" 26 460 464 "coutput.ml" 26 460 467
+type(
+  char
+)
+"coutput.ml" 26 460 476 "coutput.ml" 26 460 480
+type(
+  string
+)
+"coutput.ml" 26 460 471 "coutput.ml" 26 460 480
+type(
+  string option
+)
+"coutput.ml" 27 481 485 "coutput.ml" 27 481 488
+type(
+  char
+)
+"coutput.ml" 27 481 497 "coutput.ml" 27 481 501
+type(
+  string
+)
+"coutput.ml" 27 481 492 "coutput.ml" 27 481 501
+type(
+  string option
+)
+"coutput.ml" 28 502 506 "coutput.ml" 28 502 510
+type(
+  char
+)
+"coutput.ml" 28 502 519 "coutput.ml" 28 502 525
+type(
+  string
+)
+"coutput.ml" 28 502 514 "coutput.ml" 28 502 525
+type(
+  string option
+)
+"coutput.ml" 29 526 530 "coutput.ml" 29 526 533
+type(
+  char
+)
+"coutput.ml" 29 526 542 "coutput.ml" 29 526 548
+type(
+  string
+)
+"coutput.ml" 29 526 537 "coutput.ml" 29 526 548
+type(
+  string option
+)
+"coutput.ml" 30 549 553 "coutput.ml" 30 549 554
+type(
+  char
+)
+"coutput.ml" 30 549 558 "coutput.ml" 30 549 562
+type(
+  string option
+)
+"coutput.ml" 24 406 429 "coutput.ml" 30 549 562
+type(
+  char -> string option
+)
+"coutput.ml" 35 732 736 "coutput.ml" 35 732 754
+type(
+  string -> string
+)
+ident(
+  def pcdata_from_string "coutput.ml" 70 1571 1571 "coutput.ml" 1 0 -1
+)
+"coutput.ml" 35 732 755 "coutput.ml" 35 732 756
+type(
+  string
+)
+ident(
+  def s "coutput.ml" 36 759 761 "coutput.ml" 65 1559 1566
+)
+"coutput.ml" 36 759 765 "coutput.ml" 36 759 773
+type(
+  int
+)
+ident(
+  def s_length "coutput.ml" 37 795 797 "coutput.ml" 65 1559 1566
+)
+"coutput.ml" 36 759 776 "coutput.ml" 36 759 789
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"coutput.ml" 36 759 790 "coutput.ml" 36 759 791
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 35 732 755 "coutput.ml" 35 732 756
+)
+"coutput.ml" 36 759 776 "coutput.ml" 36 759 791
+type(
+  int
+)
+"coutput.ml" 37 795 801 "coutput.ml" 37 795 804
+type(
+  Buffer.t
+)
+ident(
+  def buf "coutput.ml" 38 826 828 "coutput.ml" 65 1559 1566
+)
+"coutput.ml" 37 795 807 "coutput.ml" 37 795 820
+type(
+  int -> Buffer.t
+)
+ident(
+  ext_ref Buffer.create
+)
+"coutput.ml" 37 795 821 "coutput.ml" 37 795 822
+type(
+  int
+)
+"coutput.ml" 37 795 807 "coutput.ml" 37 795 822
+call(
+  stack
+)
+type(
+  Buffer.t
+)
+"coutput.ml" 38 826 832 "coutput.ml" 38 826 836
+type(
+  int ref
+)
+ident(
+  def upto "coutput.ml" 41 971 973 "coutput.ml" 65 1559 1566
+)
+"coutput.ml" 38 826 839 "coutput.ml" 38 826 842
+type(
+  int -> int ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"coutput.ml" 38 826 843 "coutput.ml" 38 826 844
+type(
+  int
+)
+"coutput.ml" 38 826 839 "coutput.ml" 38 826 844
+type(
+  int ref
+)
+"coutput.ml" 41 971 977 "coutput.ml" 41 971 986
+type(
+  int -> unit
+)
+ident(
+  def copy_upto "coutput.ml" 44 1079 1081 "coutput.ml" 65 1559 1566
+)
+"coutput.ml" 41 971 987 "coutput.ml" 41 971 995
+type(
+  int
+)
+ident(
+  def new_upto "coutput.ml" 42 998 1002 "coutput.ml" 43 1055 1075
+)
+"coutput.ml" 42 998 1002 "coutput.ml" 42 998 1022
+type(
+  Buffer.t -> string -> int -> int -> unit
+)
+ident(
+  ext_ref Buffer.add_substring
+)
+"coutput.ml" 42 998 1023 "coutput.ml" 42 998 1026
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "coutput.ml" 37 795 801 "coutput.ml" 37 795 804
+)
+"coutput.ml" 42 998 1027 "coutput.ml" 42 998 1028
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 35 732 755 "coutput.ml" 35 732 756
+)
+"coutput.ml" 42 998 1029 "coutput.ml" 42 998 1030
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"coutput.ml" 42 998 1030 "coutput.ml" 42 998 1034
+type(
+  int ref
+)
+ident(
+  int_ref upto "coutput.ml" 38 826 832 "coutput.ml" 38 826 836
+)
+"coutput.ml" 42 998 1029 "coutput.ml" 42 998 1034
+type(
+  int
+)
+"coutput.ml" 42 998 1036 "coutput.ml" 42 998 1044
+type(
+  int
+)
+ident(
+  int_ref new_upto "coutput.ml" 41 971 987 "coutput.ml" 41 971 995
+)
+"coutput.ml" 42 998 1045 "coutput.ml" 42 998 1046
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"coutput.ml" 42 998 1047 "coutput.ml" 42 998 1048
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"coutput.ml" 42 998 1048 "coutput.ml" 42 998 1052
+type(
+  int ref
+)
+ident(
+  int_ref upto "coutput.ml" 38 826 832 "coutput.ml" 38 826 836
+)
+"coutput.ml" 42 998 1047 "coutput.ml" 42 998 1052
+type(
+  int
+)
+"coutput.ml" 42 998 1035 "coutput.ml" 42 998 1053
+type(
+  int
+)
+"coutput.ml" 42 998 1002 "coutput.ml" 42 998 1053
+call(
+  stack
+)
+type(
+  unit
+)
+"coutput.ml" 43 1055 1059 "coutput.ml" 43 1055 1063
+type(
+  int ref
+)
+ident(
+  int_ref upto "coutput.ml" 38 826 832 "coutput.ml" 38 826 836
+)
+"coutput.ml" 43 1055 1064 "coutput.ml" 43 1055 1066
+type(
+  int ref -> int -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"coutput.ml" 43 1055 1067 "coutput.ml" 43 1055 1075
+type(
+  int
+)
+ident(
+  int_ref new_upto "coutput.ml" 41 971 987 "coutput.ml" 41 971 995
+)
+"coutput.ml" 43 1055 1059 "coutput.ml" 43 1055 1075
+type(
+  unit
+)
+"coutput.ml" 42 998 1002 "coutput.ml" 43 1055 1075
+type(
+  unit
+)
+"coutput.ml" 44 1079 1085 "coutput.ml" 44 1079 1096
+type(
+  string -> unit
+)
+ident(
+  def copy_entity "coutput.ml" 50 1242 1244 "coutput.ml" 65 1559 1566
+)
+"coutput.ml" 44 1079 1097 "coutput.ml" 44 1079 1100
+type(
+  string
+)
+ident(
+  def ent "coutput.ml" 45 1103 1107 "coutput.ml" 48 1192 1205
+)
+"coutput.ml" 45 1103 1107 "coutput.ml" 45 1103 1122
+type(
+  Buffer.t -> char -> unit
+)
+ident(
+  ext_ref Buffer.add_char
+)
+"coutput.ml" 45 1103 1123 "coutput.ml" 45 1103 1126
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "coutput.ml" 37 795 801 "coutput.ml" 37 795 804
+)
+"coutput.ml" 45 1103 1127 "coutput.ml" 45 1103 1130
+type(
+  char
+)
+"coutput.ml" 45 1103 1107 "coutput.ml" 45 1103 1130
+call(
+  stack
+)
+type(
+  unit
+)
+"coutput.ml" 46 1132 1136 "coutput.ml" 46 1132 1153
+type(
+  Buffer.t -> string -> unit
+)
+ident(
+  ext_ref Buffer.add_string
+)
+"coutput.ml" 46 1132 1154 "coutput.ml" 46 1132 1157
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "coutput.ml" 37 795 801 "coutput.ml" 37 795 804
+)
+"coutput.ml" 46 1132 1158 "coutput.ml" 46 1132 1161
+type(
+  string
+)
+ident(
+  int_ref ent "coutput.ml" 44 1079 1097 "coutput.ml" 44 1079 1100
+)
+"coutput.ml" 46 1132 1136 "coutput.ml" 46 1132 1161
+call(
+  stack
+)
+type(
+  unit
+)
+"coutput.ml" 47 1163 1167 "coutput.ml" 47 1163 1182
+type(
+  Buffer.t -> char -> unit
+)
+ident(
+  ext_ref Buffer.add_char
+)
+"coutput.ml" 47 1163 1183 "coutput.ml" 47 1163 1186
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "coutput.ml" 37 795 801 "coutput.ml" 37 795 804
+)
+"coutput.ml" 47 1163 1187 "coutput.ml" 47 1163 1190
+type(
+  char
+)
+"coutput.ml" 47 1163 1167 "coutput.ml" 47 1163 1190
+call(
+  stack
+)
+type(
+  unit
+)
+"coutput.ml" 48 1192 1196 "coutput.ml" 48 1192 1200
+type(
+  int ref -> unit
+)
+ident(
+  ext_ref Pervasives.incr
+)
+"coutput.ml" 48 1192 1201 "coutput.ml" 48 1192 1205
+type(
+  int ref
+)
+ident(
+  int_ref upto "coutput.ml" 38 826 832 "coutput.ml" 38 826 836
+)
+"coutput.ml" 48 1192 1196 "coutput.ml" 48 1192 1205
+type(
+  unit
+)
+"coutput.ml" 47 1163 1167 "coutput.ml" 48 1192 1205
+type(
+  unit
+)
+"coutput.ml" 46 1132 1136 "coutput.ml" 48 1192 1205
+type(
+  unit
+)
+"coutput.ml" 45 1103 1107 "coutput.ml" 48 1192 1205
+type(
+  unit
+)
+"coutput.ml" 50 1242 1252 "coutput.ml" 50 1242 1253
+type(
+  int
+)
+"coutput.ml" 50 1242 1257 "coutput.ml" 50 1242 1265
+type(
+  int
+)
+ident(
+  int_ref s_length "coutput.ml" 36 759 765 "coutput.ml" 36 759 773
+)
+"coutput.ml" 50 1242 1266 "coutput.ml" 50 1242 1267
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"coutput.ml" 50 1242 1268 "coutput.ml" 50 1242 1269
+type(
+  int
+)
+"coutput.ml" 50 1242 1257 "coutput.ml" 50 1242 1269
+type(
+  int
+)
+"coutput.ml" 52 1275 1285 "coutput.ml" 52 1275 1301
+type(
+  char -> string option
+)
+ident(
+  int_ref pcdata_from_char "coutput.ml" 24 406 410 "coutput.ml" 24 406 426
+)
+"coutput.ml" 52 1275 1303 "coutput.ml" 52 1275 1313
+type(
+  string -> int -> char
+)
+ident(
+  ext_ref String.get
+)
+"coutput.ml" 52 1275 1314 "coutput.ml" 52 1275 1315
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 35 732 755 "coutput.ml" 35 732 756
+)
+"coutput.ml" 52 1275 1316 "coutput.ml" 52 1275 1317
+type(
+  int
+)
+ident(
+  int_ref i "coutput.ml" 50 1242 1244 "coutput.ml" 59 1418 1424
+)
+"coutput.ml" 52 1275 1302 "coutput.ml" 52 1275 1318
+type(
+  char
+)
+"coutput.ml" 52 1275 1285 "coutput.ml" 52 1275 1318
+call(
+  stack
+)
+type(
+  string option
+)
+"coutput.ml" 53 1324 1335 "coutput.ml" 53 1324 1341
+type(
+  string
+)
+ident(
+  def entity "coutput.ml" 54 1345 1351 "coutput.ml" 57 1391 1400
+)
+"coutput.ml" 53 1324 1330 "coutput.ml" 53 1324 1341
+type(
+  string option
+)
+"coutput.ml" 55 1357 1358 "coutput.ml" 55 1357 1367
+type(
+  int -> unit
+)
+ident(
+  int_ref copy_upto "coutput.ml" 41 971 977 "coutput.ml" 41 971 986
+)
+"coutput.ml" 55 1357 1368 "coutput.ml" 55 1357 1369
+type(
+  int
+)
+ident(
+  int_ref i "coutput.ml" 50 1242 1244 "coutput.ml" 59 1418 1424
+)
+"coutput.ml" 55 1357 1358 "coutput.ml" 55 1357 1369
+call(
+  stack
+)
+type(
+  unit
+)
+"coutput.ml" 56 1371 1372 "coutput.ml" 56 1371 1383
+type(
+  string -> unit
+)
+ident(
+  int_ref copy_entity "coutput.ml" 44 1079 1085 "coutput.ml" 44 1079 1096
+)
+"coutput.ml" 56 1371 1384 "coutput.ml" 56 1371 1390
+type(
+  string
+)
+ident(
+  int_ref entity "coutput.ml" 53 1324 1335 "coutput.ml" 53 1324 1341
+)
+"coutput.ml" 56 1371 1372 "coutput.ml" 56 1371 1390
+call(
+  stack
+)
+type(
+  unit
+)
+"coutput.ml" 54 1345 1351 "coutput.ml" 57 1391 1400
+type(
+  unit
+)
+"coutput.ml" 58 1401 1407 "coutput.ml" 58 1401 1411
+type(
+  string option
+)
+"coutput.ml" 58 1401 1415 "coutput.ml" 58 1401 1417
+type(
+  unit
+)
+"coutput.ml" 52 1275 1279 "coutput.ml" 58 1401 1417
+type(
+  unit
+)
+"coutput.ml" 50 1242 1244 "coutput.ml" 59 1418 1424
+type(
+  unit
+)
+"coutput.ml" 60 1426 1431 "coutput.ml" 60 1426 1432
+type(
+  int ref -> int
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"coutput.ml" 60 1426 1432 "coutput.ml" 60 1426 1436
+type(
+  int ref
+)
+ident(
+  int_ref upto "coutput.ml" 38 826 832 "coutput.ml" 38 826 836
+)
+"coutput.ml" 60 1426 1431 "coutput.ml" 60 1426 1436
+type(
+  int
+)
+"coutput.ml" 60 1426 1437 "coutput.ml" 60 1426 1438
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"coutput.ml" 60 1426 1439 "coutput.ml" 60 1426 1440
+type(
+  int
+)
+"coutput.ml" 60 1426 1431 "coutput.ml" 60 1426 1440
+type(
+  bool
+)
+"coutput.ml" 60 1426 1446 "coutput.ml" 60 1426 1447
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 35 732 755 "coutput.ml" 35 732 756
+)
+"coutput.ml" 63 1507 1513 "coutput.ml" 63 1507 1522
+type(
+  int -> unit
+)
+ident(
+  int_ref copy_upto "coutput.ml" 41 971 977 "coutput.ml" 41 971 986
+)
+"coutput.ml" 63 1507 1523 "coutput.ml" 63 1507 1531
+type(
+  int
+)
+ident(
+  int_ref s_length "coutput.ml" 36 759 765 "coutput.ml" 36 759 773
+)
+"coutput.ml" 63 1507 1513 "coutput.ml" 63 1507 1531
+call(
+  stack
+)
+type(
+  unit
+)
+"coutput.ml" 64 1533 1539 "coutput.ml" 64 1533 1554
+type(
+  Buffer.t -> string
+)
+ident(
+  ext_ref Buffer.contents
+)
+"coutput.ml" 64 1533 1555 "coutput.ml" 64 1533 1558
+type(
+  Buffer.t
+)
+ident(
+  int_ref buf "coutput.ml" 37 795 801 "coutput.ml" 37 795 804
+)
+"coutput.ml" 64 1533 1539 "coutput.ml" 64 1533 1558
+call(
+  tail
+)
+type(
+  string
+)
+"coutput.ml" 62 1497 1501 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 60 1426 1428 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 50 1242 1244 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 44 1079 1081 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 41 971 973 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 38 826 828 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 37 795 797 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 36 759 761 "coutput.ml" 65 1559 1566
+type(
+  string
+)
+"coutput.ml" 70 1571 1575 "coutput.ml" 70 1571 1591
+type(
+  Cabs.expression -> string
+)
+ident(
+  def string_from_expr "coutput.ml" 134 2932 2932 "coutput.ml" 1 0 -1
+)
+"coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  def aux "coutput.ml" 71 1595 1600 "coutput.ml" 129 2910 2927
+)
+"coutput.ml" 71 1595 1612 "coutput.ml" 71 1595 1623
+type(
+  int
+)
+ident(
+  def currentPrio "coutput.ml" 71 1595 1624 "coutput.ml" 127 2846 2906
+)
+"coutput.ml" 71 1595 1624 "coutput.ml" 71 1595 1625
+type(
+  Cabs.expression
+)
+ident(
+  def e "coutput.ml" 72 1628 1631 "coutput.ml" 127 2846 2906
+)
+"coutput.ml" 72 1628 1636 "coutput.ml" 72 1628 1639
+type(
+  string
+)
+ident(
+  def str "coutput.ml" 73 1667 1670 "coutput.ml" 127 2846 2906
+)
+"coutput.ml" 72 1628 1641 "coutput.ml" 72 1628 1645
+type(
+  int
+)
+ident(
+  def prio "coutput.ml" 73 1667 1670 "coutput.ml" 127 2846 2906
+)
+"coutput.ml" 72 1628 1635 "coutput.ml" 72 1628 1646
+type(
+  string * int
+)
+"coutput.ml" 72 1628 1649 "coutput.ml" 72 1628 1661
+type(
+  Cabs.expression -> string * int
+)
+ident(
+  ext_ref Cprint.get_operator
+)
+"coutput.ml" 72 1628 1662 "coutput.ml" 72 1628 1663
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "coutput.ml" 71 1595 1624 "coutput.ml" 71 1595 1625
+)
+"coutput.ml" 72 1628 1649 "coutput.ml" 72 1628 1663
+call(
+  stack
+)
+type(
+  string * int
+)
+"coutput.ml" 73 1667 1674 "coutput.ml" 73 1667 1680
+type(
+  string
+)
+ident(
+  def result "coutput.ml" 127 2846 2851 "coutput.ml" 127 2846 2906
+)
+"coutput.ml" 73 1667 1689 "coutput.ml" 73 1667 1690
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "coutput.ml" 71 1595 1624 "coutput.ml" 71 1595 1625
+)
+"coutput.ml" 75 1697 1701 "coutput.ml" 75 1697 1708
+type(
+  Cabs.expression
+)
+"coutput.ml" 75 1697 1712 "coutput.ml" 75 1697 1714
+type(
+  string
+)
+"coutput.ml" 77 1716 1727 "coutput.ml" 77 1716 1729
+type(
+  Cabs.unary_operator
+)
+ident(
+  def op "coutput.ml" 78 1741 1744 "coutput.ml" 78 1741 1762
+)
+"coutput.ml" 77 1716 1731 "coutput.ml" 77 1716 1734
+type(
+  Cabs.expression
+)
+ident(
+  def arg "coutput.ml" 78 1741 1744 "coutput.ml" 78 1741 1762
+)
+"coutput.ml" 77 1716 1721 "coutput.ml" 77 1716 1735
+type(
+  Cabs.expression
+)
+"coutput.ml" 78 1741 1744 "coutput.ml" 78 1741 1747
+type(
+  string
+)
+ident(
+  int_ref str "coutput.ml" 72 1628 1636 "coutput.ml" 72 1628 1639
+)
+"coutput.ml" 78 1741 1747 "coutput.ml" 78 1741 1748
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 78 1741 1749 "coutput.ml" 78 1741 1752
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 78 1741 1753 "coutput.ml" 78 1741 1757
+type(
+  int
+)
+ident(
+  int_ref prio "coutput.ml" 72 1628 1641 "coutput.ml" 72 1628 1645
+)
+"coutput.ml" 78 1741 1758 "coutput.ml" 78 1741 1761
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg "coutput.ml" 77 1716 1731 "coutput.ml" 77 1716 1734
+)
+"coutput.ml" 78 1741 1748 "coutput.ml" 78 1741 1762
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 78 1741 1744 "coutput.ml" 78 1741 1762
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 80 1768 1780 "coutput.ml" 80 1768 1782
+type(
+  Cabs.binary_operator
+)
+ident(
+  def op "coutput.ml" 81 1802 1805 "coutput.ml" 81 1802 1846
+)
+"coutput.ml" 80 1768 1784 "coutput.ml" 80 1768 1788
+type(
+  Cabs.expression
+)
+ident(
+  def arg1 "coutput.ml" 81 1802 1805 "coutput.ml" 81 1802 1846
+)
+"coutput.ml" 80 1768 1790 "coutput.ml" 80 1768 1794
+type(
+  Cabs.expression
+)
+ident(
+  def arg2 "coutput.ml" 81 1802 1805 "coutput.ml" 81 1802 1846
+)
+"coutput.ml" 80 1768 1773 "coutput.ml" 80 1768 1795
+type(
+  Cabs.expression
+)
+"coutput.ml" 81 1802 1806 "coutput.ml" 81 1802 1809
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 81 1802 1810 "coutput.ml" 81 1802 1814
+type(
+  int
+)
+ident(
+  int_ref prio "coutput.ml" 72 1628 1641 "coutput.ml" 72 1628 1645
+)
+"coutput.ml" 81 1802 1815 "coutput.ml" 81 1802 1819
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg1 "coutput.ml" 80 1768 1784 "coutput.ml" 80 1768 1788
+)
+"coutput.ml" 81 1802 1805 "coutput.ml" 81 1802 1820
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 81 1802 1820 "coutput.ml" 81 1802 1821
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 81 1802 1821 "coutput.ml" 81 1802 1824
+type(
+  string
+)
+ident(
+  int_ref str "coutput.ml" 72 1628 1636 "coutput.ml" 72 1628 1639
+)
+"coutput.ml" 81 1802 1824 "coutput.ml" 81 1802 1825
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 81 1802 1826 "coutput.ml" 81 1802 1829
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 81 1802 1831 "coutput.ml" 81 1802 1835
+type(
+  int
+)
+ident(
+  int_ref prio "coutput.ml" 72 1628 1641 "coutput.ml" 72 1628 1645
+)
+"coutput.ml" 81 1802 1836 "coutput.ml" 81 1802 1837
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"coutput.ml" 81 1802 1838 "coutput.ml" 81 1802 1839
+type(
+  int
+)
+"coutput.ml" 81 1802 1830 "coutput.ml" 81 1802 1840
+type(
+  int
+)
+"coutput.ml" 81 1802 1841 "coutput.ml" 81 1802 1845
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg2 "coutput.ml" 80 1768 1790 "coutput.ml" 80 1768 1794
+)
+"coutput.ml" 81 1802 1825 "coutput.ml" 81 1802 1846
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 81 1802 1821 "coutput.ml" 81 1802 1846
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 81 1802 1805 "coutput.ml" 81 1802 1846
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 83 1848 1863 "coutput.ml" 83 1848 1867
+type(
+  Cabs.expression
+)
+ident(
+  def arg1 "coutput.ml" 84 1886 1889 "coutput.ml" 84 1886 1931
+)
+"coutput.ml" 83 1848 1869 "coutput.ml" 83 1848 1873
+type(
+  Cabs.expression
+)
+ident(
+  def arg2 "coutput.ml" 84 1886 1889 "coutput.ml" 84 1886 1931
+)
+"coutput.ml" 83 1848 1875 "coutput.ml" 83 1848 1879
+type(
+  Cabs.expression
+)
+ident(
+  def arg3 "coutput.ml" 84 1886 1889 "coutput.ml" 84 1886 1931
+)
+"coutput.ml" 83 1848 1853 "coutput.ml" 83 1848 1880
+type(
+  Cabs.expression
+)
+"coutput.ml" 84 1886 1890 "coutput.ml" 84 1886 1893
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 84 1886 1894 "coutput.ml" 84 1886 1895
+type(
+  int
+)
+"coutput.ml" 84 1886 1896 "coutput.ml" 84 1886 1900
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg1 "coutput.ml" 83 1848 1863 "coutput.ml" 83 1848 1867
+)
+"coutput.ml" 84 1886 1889 "coutput.ml" 84 1886 1901
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 84 1886 1901 "coutput.ml" 84 1886 1902
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 84 1886 1902 "coutput.ml" 84 1886 1905
+type(
+  string
+)
+"coutput.ml" 84 1886 1905 "coutput.ml" 84 1886 1906
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 84 1886 1907 "coutput.ml" 84 1886 1910
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 84 1886 1911 "coutput.ml" 84 1886 1912
+type(
+  int
+)
+"coutput.ml" 84 1886 1913 "coutput.ml" 84 1886 1917
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg2 "coutput.ml" 83 1848 1869 "coutput.ml" 83 1848 1873
+)
+"coutput.ml" 84 1886 1906 "coutput.ml" 84 1886 1918
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 84 1886 1918 "coutput.ml" 84 1886 1919
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 84 1886 1920 "coutput.ml" 84 1886 1923
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 84 1886 1924 "coutput.ml" 84 1886 1925
+type(
+  int
+)
+"coutput.ml" 84 1886 1926 "coutput.ml" 84 1886 1930
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg3 "coutput.ml" 83 1848 1875 "coutput.ml" 83 1848 1879
+)
+"coutput.ml" 84 1886 1919 "coutput.ml" 84 1886 1931
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 84 1886 1906 "coutput.ml" 84 1886 1931
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 84 1886 1902 "coutput.ml" 84 1886 1931
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 84 1886 1889 "coutput.ml" 84 1886 1931
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 86 1933 1944 "coutput.ml" 86 1933 1947
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "coutput.ml" 87 1958 1961 "coutput.ml" 87 1958 1982
+)
+"coutput.ml" 86 1933 1949 "coutput.ml" 86 1933 1952
+type(
+  Cabs.expression
+)
+ident(
+  def arg "coutput.ml" 87 1958 1961 "coutput.ml" 87 1958 1982
+)
+"coutput.ml" 86 1933 1938 "coutput.ml" 86 1933 1953
+type(
+  Cabs.expression
+)
+"coutput.ml" 87 1958 1961 "coutput.ml" 87 1958 1969
+type(
+  string
+)
+"coutput.ml" 87 1958 1969 "coutput.ml" 87 1958 1970
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 87 1958 1971 "coutput.ml" 87 1958 1974
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 87 1958 1975 "coutput.ml" 87 1958 1977
+type(
+  int
+)
+"coutput.ml" 87 1958 1978 "coutput.ml" 87 1958 1981
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg "coutput.ml" 86 1933 1949 "coutput.ml" 86 1933 1952
+)
+"coutput.ml" 87 1958 1970 "coutput.ml" 87 1958 1982
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 87 1958 1961 "coutput.ml" 87 1958 1982
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 89 1985 1996 "coutput.ml" 89 1985 2001
+type(
+  Cabs.expression
+)
+ident(
+  def fexpr "coutput.ml" 90 2012 2015 "coutput.ml" 90 2012 2058
+)
+"coutput.ml" 89 1985 2003 "coutput.ml" 89 1985 2007
+type(
+  Cabs.expression list
+)
+ident(
+  def argl "coutput.ml" 90 2012 2015 "coutput.ml" 90 2012 2058
+)
+"coutput.ml" 89 1985 1990 "coutput.ml" 89 1985 2008
+type(
+  Cabs.expression
+)
+"coutput.ml" 90 2012 2016 "coutput.ml" 90 2012 2019
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 90 2012 2020 "coutput.ml" 90 2012 2022
+type(
+  int
+)
+"coutput.ml" 90 2012 2023 "coutput.ml" 90 2012 2028
+type(
+  Cabs.expression
+)
+ident(
+  int_ref fexpr "coutput.ml" 89 1985 1996 "coutput.ml" 89 1985 2001
+)
+"coutput.ml" 90 2012 2015 "coutput.ml" 90 2012 2029
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 90 2012 2029 "coutput.ml" 90 2012 2030
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 90 2012 2030 "coutput.ml" 90 2012 2033
+type(
+  string
+)
+"coutput.ml" 90 2012 2033 "coutput.ml" 90 2012 2034
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 90 2012 2035 "coutput.ml" 90 2012 2038
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 90 2012 2039 "coutput.ml" 90 2012 2040
+type(
+  int
+)
+"coutput.ml" 90 2012 2048 "coutput.ml" 90 2012 2052
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref argl "coutput.ml" 89 1985 2003 "coutput.ml" 89 1985 2007
+)
+"coutput.ml" 90 2012 2041 "coutput.ml" 90 2012 2053
+type(
+  Cabs.expression
+)
+"coutput.ml" 90 2012 2034 "coutput.ml" 90 2012 2054
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 90 2012 2054 "coutput.ml" 90 2012 2055
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 90 2012 2055 "coutput.ml" 90 2012 2058
+type(
+  string
+)
+"coutput.ml" 90 2012 2034 "coutput.ml" 90 2012 2058
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 90 2012 2030 "coutput.ml" 90 2012 2058
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 90 2012 2015 "coutput.ml" 90 2012 2058
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 92 2060 2072 "coutput.ml" 92 2060 2073
+type(
+  Cabs.expression list
+)
+ident(
+  def l "coutput.ml" 93 2080 2084 "coutput.ml" 93 2080 2162
+)
+"coutput.ml" 92 2060 2065 "coutput.ml" 92 2060 2074
+type(
+  Cabs.expression
+)
+"coutput.ml" 93 2080 2084 "coutput.ml" 93 2080 2098
+type(
+  (string -> Cabs.expression -> string) ->
+  string -> Cabs.expression list -> string
+)
+ident(
+  ext_ref List.fold_left
+)
+"coutput.ml" 93 2080 2104 "coutput.ml" 93 2080 2105
+type(
+  string
+)
+ident(
+  def s "coutput.ml" 93 2080 2106 "coutput.ml" 93 2080 2156
+)
+"coutput.ml" 93 2080 2106 "coutput.ml" 93 2080 2109
+type(
+  Cabs.expression
+)
+ident(
+  def arg "coutput.ml" 93 2080 2113 "coutput.ml" 93 2080 2156
+)
+"coutput.ml" 93 2080 2113 "coutput.ml" 93 2080 2114
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 93 2080 2104 "coutput.ml" 93 2080 2105
+)
+"coutput.ml" 93 2080 2114 "coutput.ml" 93 2080 2115
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 93 2080 2120 "coutput.ml" 93 2080 2121
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 93 2080 2104 "coutput.ml" 93 2080 2105
+)
+"coutput.ml" 93 2080 2122 "coutput.ml" 93 2080 2123
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"coutput.ml" 93 2080 2124 "coutput.ml" 93 2080 2126
+type(
+  string
+)
+"coutput.ml" 93 2080 2119 "coutput.ml" 93 2080 2127
+type(
+  bool
+)
+"coutput.ml" 93 2080 2133 "coutput.ml" 93 2080 2134
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 93 2080 2104 "coutput.ml" 93 2080 2105
+)
+"coutput.ml" 93 2080 2140 "coutput.ml" 93 2080 2143
+type(
+  string
+)
+"coutput.ml" 93 2080 2115 "coutput.ml" 93 2080 2144
+type(
+  string
+)
+"coutput.ml" 93 2080 2144 "coutput.ml" 93 2080 2145
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 93 2080 2146 "coutput.ml" 93 2080 2149
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 93 2080 2150 "coutput.ml" 93 2080 2151
+type(
+  int
+)
+"coutput.ml" 93 2080 2152 "coutput.ml" 93 2080 2155
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg "coutput.ml" 93 2080 2106 "coutput.ml" 93 2080 2109
+)
+"coutput.ml" 93 2080 2145 "coutput.ml" 93 2080 2156
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 93 2080 2115 "coutput.ml" 93 2080 2156
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 93 2080 2113 "coutput.ml" 93 2080 2156
+call(
+  tail
+)
+type(
+  string
+)
+"coutput.ml" 93 2080 2099 "coutput.ml" 93 2080 2157
+type(
+  string -> Cabs.expression -> string
+)
+"coutput.ml" 93 2080 2158 "coutput.ml" 93 2080 2160
+type(
+  string
+)
+"coutput.ml" 93 2080 2161 "coutput.ml" 93 2080 2162
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref l "coutput.ml" 92 2060 2072 "coutput.ml" 92 2060 2073
+)
+"coutput.ml" 93 2080 2084 "coutput.ml" 93 2080 2162
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 95 2164 2178 "coutput.ml" 95 2164 2181
+type(
+  Cabs.constant
+)
+ident(
+  def cst "coutput.ml" 96 2186 2194 "coutput.ml" 104 2442 2451
+)
+"coutput.ml" 95 2164 2169 "coutput.ml" 95 2164 2181
+type(
+  Cabs.expression
+)
+"coutput.ml" 96 2186 2201 "coutput.ml" 96 2186 2204
+type(
+  Cabs.constant
+)
+ident(
+  int_ref cst "coutput.ml" 95 2164 2178 "coutput.ml" 95 2164 2181
+)
+"coutput.ml" 97 2210 2225 "coutput.ml" 97 2210 2226
+type(
+  string
+)
+ident(
+  def i "coutput.ml" 97 2210 2230 "coutput.ml" 97 2210 2231
+)
+"coutput.ml" 97 2210 2215 "coutput.ml" 97 2210 2226
+type(
+  Cabs.constant
+)
+"coutput.ml" 97 2210 2230 "coutput.ml" 97 2210 2231
+type(
+  string
+)
+ident(
+  int_ref i "coutput.ml" 97 2210 2225 "coutput.ml" 97 2210 2226
+)
+"coutput.ml" 98 2235 2251 "coutput.ml" 98 2235 2252
+type(
+  string
+)
+ident(
+  def f "coutput.ml" 98 2235 2256 "coutput.ml" 98 2235 2257
+)
+"coutput.ml" 98 2235 2239 "coutput.ml" 98 2235 2252
+type(
+  Cabs.constant
+)
+"coutput.ml" 98 2235 2256 "coutput.ml" 98 2235 2257
+type(
+  string
+)
+ident(
+  int_ref f "coutput.ml" 98 2235 2251 "coutput.ml" 98 2235 2252
+)
+"coutput.ml" 99 2258 2273 "coutput.ml" 99 2258 2274
+type(
+  int
+)
+ident(
+  def i "coutput.ml" 99 2258 2278 "coutput.ml" 99 2258 2299
+)
+"coutput.ml" 99 2258 2262 "coutput.ml" 99 2258 2274
+type(
+  Cabs.constant
+)
+"coutput.ml" 99 2258 2278 "coutput.ml" 99 2258 2292
+type(
+  (int -> string, unit, string) format -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"coutput.ml" 99 2258 2293 "coutput.ml" 99 2258 2297
+type(
+  (int -> string, unit, string) format
+)
+"coutput.ml" 99 2258 2298 "coutput.ml" 99 2258 2299
+type(
+  int
+)
+ident(
+  int_ref i "coutput.ml" 99 2258 2273 "coutput.ml" 99 2258 2274
+)
+"coutput.ml" 99 2258 2278 "coutput.ml" 99 2258 2299
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 100 2303 2320 "coutput.ml" 100 2303 2321
+type(
+  float
+)
+ident(
+  def f "coutput.ml" 100 2303 2325 "coutput.ml" 100 2303 2346
+)
+"coutput.ml" 100 2303 2307 "coutput.ml" 100 2303 2321
+type(
+  Cabs.constant
+)
+"coutput.ml" 100 2303 2325 "coutput.ml" 100 2303 2339
+type(
+  (float -> string, unit, string) format -> float -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"coutput.ml" 100 2303 2340 "coutput.ml" 100 2303 2344
+type(
+  (float -> string, unit, string) format
+)
+"coutput.ml" 100 2303 2345 "coutput.ml" 100 2303 2346
+type(
+  float
+)
+ident(
+  int_ref f "coutput.ml" 100 2303 2320 "coutput.ml" 100 2303 2321
+)
+"coutput.ml" 100 2303 2325 "coutput.ml" 100 2303 2346
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 101 2347 2362 "coutput.ml" 101 2347 2363
+type(
+  string
+)
+ident(
+  def c "coutput.ml" 101 2347 2367 "coutput.ml" 101 2347 2368
+)
+"coutput.ml" 101 2347 2351 "coutput.ml" 101 2347 2363
+type(
+  Cabs.constant
+)
+"coutput.ml" 101 2347 2367 "coutput.ml" 101 2347 2368
+type(
+  string
+)
+ident(
+  int_ref c "coutput.ml" 101 2347 2362 "coutput.ml" 101 2347 2363
+)
+"coutput.ml" 102 2369 2386 "coutput.ml" 102 2369 2387
+type(
+  string
+)
+ident(
+  def s "coutput.ml" 102 2369 2391 "coutput.ml" 102 2369 2402
+)
+"coutput.ml" 102 2369 2373 "coutput.ml" 102 2369 2387
+type(
+  Cabs.constant
+)
+"coutput.ml" 102 2369 2391 "coutput.ml" 102 2369 2395
+type(
+  string
+)
+"coutput.ml" 102 2369 2395 "coutput.ml" 102 2369 2396
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 102 2369 2396 "coutput.ml" 102 2369 2397
+type(
+  string
+)
+ident(
+  int_ref s "coutput.ml" 102 2369 2386 "coutput.ml" 102 2369 2387
+)
+"coutput.ml" 102 2369 2397 "coutput.ml" 102 2369 2398
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 102 2369 2398 "coutput.ml" 102 2369 2402
+type(
+  string
+)
+"coutput.ml" 102 2369 2396 "coutput.ml" 102 2369 2402
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 102 2369 2391 "coutput.ml" 102 2369 2402
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 103 2403 2422 "coutput.ml" 103 2403 2425
+type(
+  Cabs.expression list
+)
+ident(
+  def cmp "coutput.ml" 103 2403 2429 "coutput.ml" 103 2403 2441
+)
+"coutput.ml" 103 2403 2407 "coutput.ml" 103 2403 2425
+type(
+  Cabs.constant
+)
+"coutput.ml" 103 2403 2429 "coutput.ml" 103 2403 2441
+type(
+  string
+)
+"coutput.ml" 96 2186 2194 "coutput.ml" 104 2442 2451
+type(
+  string
+)
+"coutput.ml" 106 2453 2467 "coutput.ml" 106 2453 2471
+type(
+  string
+)
+ident(
+  def name "coutput.ml" 106 2453 2475 "coutput.ml" 106 2453 2479
+)
+"coutput.ml" 106 2453 2458 "coutput.ml" 106 2453 2471
+type(
+  Cabs.expression
+)
+"coutput.ml" 106 2453 2475 "coutput.ml" 106 2453 2479
+type(
+  string
+)
+ident(
+  int_ref name "coutput.ml" 106 2453 2467 "coutput.ml" 106 2453 2471
+)
+"coutput.ml" 108 2481 2499 "coutput.ml" 108 2481 2502
+type(
+  Cabs.expression
+)
+ident(
+  def arg "coutput.ml" 109 2508 2512 "coutput.ml" 109 2508 2537
+)
+"coutput.ml" 108 2481 2486 "coutput.ml" 108 2481 2503
+type(
+  Cabs.expression
+)
+"coutput.ml" 109 2508 2512 "coutput.ml" 109 2508 2521
+type(
+  string
+)
+"coutput.ml" 109 2508 2521 "coutput.ml" 109 2508 2522
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 109 2508 2523 "coutput.ml" 109 2508 2526
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 109 2508 2527 "coutput.ml" 109 2508 2528
+type(
+  int
+)
+"coutput.ml" 109 2508 2529 "coutput.ml" 109 2508 2532
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg "coutput.ml" 108 2481 2499 "coutput.ml" 108 2481 2502
+)
+"coutput.ml" 109 2508 2522 "coutput.ml" 109 2508 2533
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 109 2508 2533 "coutput.ml" 109 2508 2534
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 109 2508 2534 "coutput.ml" 109 2508 2537
+type(
+  string
+)
+"coutput.ml" 109 2508 2522 "coutput.ml" 109 2508 2537
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 109 2508 2512 "coutput.ml" 109 2508 2537
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 111 2540 2558 "coutput.ml" 111 2540 2561
+type(
+  Cabs.base_type
+)
+ident(
+  def arg "coutput.ml" 111 2540 2565 "coutput.ml" 111 2540 2579
+)
+"coutput.ml" 111 2540 2545 "coutput.ml" 111 2540 2562
+type(
+  Cabs.expression
+)
+"coutput.ml" 111 2540 2565 "coutput.ml" 111 2540 2579
+type(
+  string
+)
+"coutput.ml" 113 2581 2593 "coutput.ml" 113 2581 2596
+type(
+  Cabs.expression
+)
+ident(
+  def arg "coutput.ml" 113 2581 2606 "coutput.ml" 113 2581 2638
+)
+"coutput.ml" 113 2581 2598 "coutput.ml" 113 2581 2601
+type(
+  Cabs.expression
+)
+ident(
+  def idx "coutput.ml" 113 2581 2606 "coutput.ml" 113 2581 2638
+)
+"coutput.ml" 113 2581 2586 "coutput.ml" 113 2581 2602
+type(
+  Cabs.expression
+)
+"coutput.ml" 113 2581 2607 "coutput.ml" 113 2581 2610
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 113 2581 2611 "coutput.ml" 113 2581 2613
+type(
+  int
+)
+"coutput.ml" 113 2581 2614 "coutput.ml" 113 2581 2617
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg "coutput.ml" 113 2581 2593 "coutput.ml" 113 2581 2596
+)
+"coutput.ml" 113 2581 2606 "coutput.ml" 113 2581 2618
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 113 2581 2618 "coutput.ml" 113 2581 2619
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 113 2581 2619 "coutput.ml" 113 2581 2622
+type(
+  string
+)
+"coutput.ml" 113 2581 2622 "coutput.ml" 113 2581 2623
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 113 2581 2624 "coutput.ml" 113 2581 2627
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 113 2581 2628 "coutput.ml" 113 2581 2629
+type(
+  int
+)
+"coutput.ml" 113 2581 2630 "coutput.ml" 113 2581 2633
+type(
+  Cabs.expression
+)
+ident(
+  int_ref idx "coutput.ml" 113 2581 2598 "coutput.ml" 113 2581 2601
+)
+"coutput.ml" 113 2581 2623 "coutput.ml" 113 2581 2634
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 113 2581 2634 "coutput.ml" 113 2581 2635
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 113 2581 2635 "coutput.ml" 113 2581 2638
+type(
+  string
+)
+"coutput.ml" 113 2581 2623 "coutput.ml" 113 2581 2638
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 113 2581 2619 "coutput.ml" 113 2581 2638
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 113 2581 2606 "coutput.ml" 113 2581 2638
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 116 2641 2656 "coutput.ml" 116 2641 2659
+type(
+  Cabs.expression
+)
+ident(
+  def arg "coutput.ml" 116 2641 2671 "coutput.ml" 116 2641 2693
+)
+"coutput.ml" 116 2641 2661 "coutput.ml" 116 2641 2666
+type(
+  string
+)
+ident(
+  def field "coutput.ml" 116 2641 2671 "coutput.ml" 116 2641 2693
+)
+"coutput.ml" 116 2641 2646 "coutput.ml" 116 2641 2667
+type(
+  Cabs.expression
+)
+"coutput.ml" 116 2641 2672 "coutput.ml" 116 2641 2675
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 116 2641 2676 "coutput.ml" 116 2641 2678
+type(
+  int
+)
+"coutput.ml" 116 2641 2679 "coutput.ml" 116 2641 2682
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg "coutput.ml" 116 2641 2656 "coutput.ml" 116 2641 2659
+)
+"coutput.ml" 116 2641 2671 "coutput.ml" 116 2641 2683
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 116 2641 2683 "coutput.ml" 116 2641 2684
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 116 2641 2684 "coutput.ml" 116 2641 2687
+type(
+  string
+)
+"coutput.ml" 116 2641 2687 "coutput.ml" 116 2641 2688
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 116 2641 2688 "coutput.ml" 116 2641 2693
+type(
+  string
+)
+ident(
+  int_ref field "coutput.ml" 116 2641 2661 "coutput.ml" 116 2641 2666
+)
+"coutput.ml" 116 2641 2684 "coutput.ml" 116 2641 2693
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 116 2641 2671 "coutput.ml" 116 2641 2693
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 119 2696 2714 "coutput.ml" 119 2696 2717
+type(
+  Cabs.expression
+)
+ident(
+  def arg "coutput.ml" 119 2696 2729 "coutput.ml" 119 2696 2752
+)
+"coutput.ml" 119 2696 2719 "coutput.ml" 119 2696 2724
+type(
+  string
+)
+ident(
+  def field "coutput.ml" 119 2696 2729 "coutput.ml" 119 2696 2752
+)
+"coutput.ml" 119 2696 2701 "coutput.ml" 119 2696 2725
+type(
+  Cabs.expression
+)
+"coutput.ml" 119 2696 2730 "coutput.ml" 119 2696 2733
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 119 2696 2734 "coutput.ml" 119 2696 2736
+type(
+  int
+)
+"coutput.ml" 119 2696 2737 "coutput.ml" 119 2696 2740
+type(
+  Cabs.expression
+)
+ident(
+  int_ref arg "coutput.ml" 119 2696 2714 "coutput.ml" 119 2696 2717
+)
+"coutput.ml" 119 2696 2729 "coutput.ml" 119 2696 2741
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 119 2696 2741 "coutput.ml" 119 2696 2742
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 119 2696 2742 "coutput.ml" 119 2696 2746
+type(
+  string
+)
+"coutput.ml" 119 2696 2746 "coutput.ml" 119 2696 2747
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 119 2696 2747 "coutput.ml" 119 2696 2752
+type(
+  string
+)
+ident(
+  int_ref field "coutput.ml" 119 2696 2719 "coutput.ml" 119 2696 2724
+)
+"coutput.ml" 119 2696 2742 "coutput.ml" 119 2696 2752
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 119 2696 2729 "coutput.ml" 119 2696 2752
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 122 2755 2769 "coutput.ml" 122 2755 2770
+type(
+  Cabs.body
+)
+"coutput.ml" 122 2755 2760 "coutput.ml" 122 2755 2770
+type(
+  Cabs.expression
+)
+"coutput.ml" 122 2755 2774 "coutput.ml" 122 2755 2786
+type(
+  string
+)
+"coutput.ml" 124 2788 2804 "coutput.ml" 124 2788 2808
+type(
+  Cabs.expression
+)
+ident(
+  def expr "coutput.ml" 124 2788 2819 "coutput.ml" 124 2788 2839
+)
+"coutput.ml" 124 2788 2810 "coutput.ml" 124 2788 2811
+type(
+  string
+)
+"coutput.ml" 124 2788 2812 "coutput.ml" 124 2788 2813
+type(
+  int
+)
+"coutput.ml" 124 2788 2793 "coutput.ml" 124 2788 2815
+type(
+  Cabs.expression
+)
+"coutput.ml" 124 2788 2819 "coutput.ml" 124 2788 2822
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 124 2788 2823 "coutput.ml" 124 2788 2834
+type(
+  int
+)
+ident(
+  int_ref currentPrio "coutput.ml" 71 1595 1612 "coutput.ml" 71 1595 1623
+)
+"coutput.ml" 124 2788 2835 "coutput.ml" 124 2788 2839
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "coutput.ml" 124 2788 2804 "coutput.ml" 124 2788 2808
+)
+"coutput.ml" 124 2788 2819 "coutput.ml" 124 2788 2839
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 73 1667 1683 "coutput.ml" 124 2788 2839
+type(
+  string
+)
+"coutput.ml" 127 2846 2855 "coutput.ml" 127 2846 2859
+type(
+  int
+)
+ident(
+  int_ref prio "coutput.ml" 72 1628 1641 "coutput.ml" 72 1628 1645
+)
+"coutput.ml" 127 2846 2860 "coutput.ml" 127 2846 2861
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"coutput.ml" 127 2846 2862 "coutput.ml" 127 2846 2873
+type(
+  int
+)
+ident(
+  int_ref currentPrio "coutput.ml" 71 1595 1612 "coutput.ml" 71 1595 1623
+)
+"coutput.ml" 127 2846 2854 "coutput.ml" 127 2846 2874
+type(
+  bool
+)
+"coutput.ml" 127 2846 2880 "coutput.ml" 127 2846 2883
+type(
+  string
+)
+"coutput.ml" 127 2846 2883 "coutput.ml" 127 2846 2884
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 127 2846 2884 "coutput.ml" 127 2846 2890
+type(
+  string
+)
+ident(
+  int_ref result "coutput.ml" 73 1667 1674 "coutput.ml" 73 1667 1680
+)
+"coutput.ml" 127 2846 2890 "coutput.ml" 127 2846 2891
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"coutput.ml" 127 2846 2891 "coutput.ml" 127 2846 2894
+type(
+  string
+)
+"coutput.ml" 127 2846 2884 "coutput.ml" 127 2846 2894
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 127 2846 2880 "coutput.ml" 127 2846 2894
+call(
+  tail
+)
+type(
+  string
+)
+"coutput.ml" 127 2846 2900 "coutput.ml" 127 2846 2906
+type(
+  string
+)
+ident(
+  int_ref result "coutput.ml" 73 1667 1674 "coutput.ml" 73 1667 1680
+)
+"coutput.ml" 127 2846 2851 "coutput.ml" 127 2846 2906
+type(
+  string
+)
+"coutput.ml" 73 1667 1670 "coutput.ml" 127 2846 2906
+type(
+  string
+)
+"coutput.ml" 72 1628 1631 "coutput.ml" 127 2846 2906
+type(
+  string
+)
+"coutput.ml" 129 2910 2920 "coutput.ml" 129 2910 2923
+type(
+  int -> Cabs.expression -> string
+)
+ident(
+  int_ref aux "coutput.ml" 71 1595 1608 "coutput.ml" 71 1595 1611
+)
+"coutput.ml" 129 2910 2924 "coutput.ml" 129 2910 2925
+type(
+  int
+)
+"coutput.ml" 129 2910 2919 "coutput.ml" 129 2910 2927
+call(
+  stack
+)
+type(
+  Cabs.expression -> string
+)
+"coutput.ml" 71 1595 1600 "coutput.ml" 129 2910 2927
+type(
+  Cabs.expression -> string
+)
+"coutput.ml" 134 2932 2936 "coutput.ml" 134 2932 2952
+type(
+  Cabs.expression -> string
+)
+ident(
+  def pcdata_from_expr "coutput.ml" 135 2957 2997 "coutput.ml" 1 0 -1
+)
+"coutput.ml" 134 2932 2953 "coutput.ml" 134 2932 2954
+type(
+  Cabs.expression
+)
+ident(
+  def e "coutput.ml" 135 2957 2958 "coutput.ml" 135 2957 2997
+)
+"coutput.ml" 135 2957 2958 "coutput.ml" 135 2957 2976
+type(
+  string -> string
+)
+ident(
+  int_ref pcdata_from_string "coutput.ml" 35 732 736 "coutput.ml" 35 732 754
+)
+"coutput.ml" 135 2957 2978 "coutput.ml" 135 2957 2994
+type(
+  Cabs.expression -> string
+)
+ident(
+  int_ref string_from_expr "coutput.ml" 70 1571 1575 "coutput.ml" 70 1571 1591
+)
+"coutput.ml" 135 2957 2995 "coutput.ml" 135 2957 2996
+type(
+  Cabs.expression
+)
+ident(
+  int_ref e "coutput.ml" 134 2932 2953 "coutput.ml" 134 2932 2954
+)
+"coutput.ml" 135 2957 2977 "coutput.ml" 135 2957 2997
+call(
+  stack
+)
+type(
+  string
+)
+"coutput.ml" 135 2957 2958 "coutput.ml" 135 2957 2997
+call(
+  tail
+)
+type(
+  string
+)

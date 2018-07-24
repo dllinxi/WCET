@@ -1,0 +1,1 @@
+/usr/bin/cc  -g  -Wl,--enable-auto-import CMakeFiles/gel-im.dir/gel-im.c.o  -o gel-im.exe -Wl,--out-implib,libgel-im.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -L/cygdrive/d/Seafile/Workspace/MyProject/WCET/WCET/otawa/gel/src  ../src/libgel.dll.a -ldl 

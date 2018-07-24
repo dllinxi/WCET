@@ -1,0 +1,1087 @@
+@use dokuwiki
+@TITLE=NMP Manual for GLISS V2
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>, J. Barre <barre@irit.fr>
+@VERSION=0.1
+@LANG=en_EN
+@ENCODING=UTF-8
+@HTML_STYLES=gliss.css
+
+This document describes the NMP language used in the GLISS tool.
+This language is freely derivated from the Sim-NML language and extended
+with useful features.
+
+
+====== NMP Syntax ======
+
+This sections described the lexical conventions used as a base of the syntactic
+representation of the NMP language.
+
+===== Notation =====
+
+All along this document, the NMP syntax is described using EBNF (Extended Backus-Naur Form):
+
+<code>
+Item ::= Form1 | Form2 | ...
+</code>
+
+The expression above describes the syntactic ''Item'' as having several alternative forms
+''Form1'', ''Form2'', etc. Each form is a sequence of symbols
+that may be constant string between quotes or other syntactic items.
+
+The sequence supports also grouping between parenthesis. Symbols or group of symbols may be suffixed by ''*'' (repetition 0 of more times), ''+'' (repetition once or more time) and ''?'' (optional item). The group may also encode alternatives by separating them with pipes ''|''.
+
+To represent lexical items, we also use some regular expression syntax:
+  * ''[abc]'', brackets represents a set of possible character whose equivalent EBNF is ''"a' | "b" | "c"'',
+  * ''[a-z]'', range represents all character between ''a'' and ''z'' (in EBNF, "a" | "b" | ... | "z"),
+  * ''[^abc]'', circumflex accent represents a set complement, that is, all characters exception ''a'', ''b'' and ''c''.
+
+
+===== Basic Lexical Items =====
+
+An NMP code is composed of ASCII characters (no support is provided
+or other text encoding for now). Blanks are usually ignored except in strings
+and new line character is not meaningful except in comments:
+
+<code>
+blanks ::= " " | "\t" | "\n"
+</code>
+
+So are the comments that starts with double ''/'' and end at the end of the current line or
+spans between opening "/*" and closing "*/":
+
+<code>
+comment ::= "/" "/" [^\n]* "\n" | "/" "*" ([^*] | "*" [^/]) "*" "/"
+</code>
+
+===== Identifiers and Keywords =====
+
+NMP uses the same identifier form as C. The identifiers are used to name
+most of all elements of NMP: constants, types, memories, operations,
+modes and attributes.
+
+<code>
+Identifier ::= [a-zA-Z_] [a-zA-Z_0-9]*
+</code>
+
+Some identifier are reserved and known as keywords. They must **not*
+be used to name NMP elements. The list is given below in the array below:
+
+| _attr | action | alias | bool |
+| card | case | coerce | default |
+| else | endif | enum | error |
+| exception | false | fix | float |
+| format | if | image | initial |
+| int | let | macro | mode |
+| not | op | ports | reg |
+| resource | switch | syntax | then |
+| true | type | uses | var |
+| volatile |  |  |  |
+
+
+===== Litteral Values =====
+
+The litterals values represents constants used in the specification of NMP elements
+and in computation expressions. There are basically 4 kind of litteral values:
+boolean, integer, float and string.
+<code>
+Litteral ::= Boolean | Integer | Real | String
+</code>
+
+A boolean is simply the value ''true'' or ''false''.
+<code>
+Boolean ::= "true" | "false"
+</code>
+
+An integer litteral accepts several forms according the encoding base.
+Without prefix, decimal base is used. ''0x'' prefix is used for prefixing
+hexadecimal integer and ''0b'' for binary integer.
+<code>
+Integer ::= [1-9] [0-9]+
+          | "0" ("x" | "X") [0-9a-fA-F]+
+          | "0" ("b" | "B") [01]+
+</code>
+
+Except for binary integer, notice that the type of a constant is either ''int(32)'' or ''int(64)'' depending
+on the size of the number. The type of binary integers is ''card(n)'', //n// being the number
+of binary digits in the given number.
+
+
+A real number is composed by an integer part followed, possibly followed
+by a fractional part and an exponent part.
+<code>
+Real ::= [0-9]+ "." [0-9]+
+        | [0-9]+ ("e" | "E") ("+" | "-")? [0-9]+
+        | [0-9]+ "." [0-9]+ ("e" | "E") ("+" | "-")? [0-9]+
+</code>
+
+Finally, a string starts with a quote, contains a sequence of character
+and ends with a quote. Special character or embedding of a quote is performed
+by prefixing them with anti-slash ''\''.
+<code>
+String ::= "\"" ([^\] | "\" [^])* "\""
+</code>
+
+===== Preprocessing =====
+
+Before parsing of the NMP code, a phase of preprocessing is performed.
+This preprocessing may be used to include external file in the main one
+or to reduce typing effort using macro expressions.
+
+The macro command has the following syntax:
+<code>
+Macro ::= "macro" "(" (Identifier ("," Identifier)*)? ")" "=" ([^\n] | "\\" "\n") "\n"
+</code>
+
+The macro is replaced through the code by the body text following
+its parameters. This text ends at the first encountered new line but may
+span over several line if newline are prefixed with ''\''. The macro accepts
+several parameters separated by commas. When the macro is invoked,
+one argument must be given for each parameter that will be replaced
+by the actual value in the body.
+
+There are two forms of inclusion. The first one replaces the include command
+by the file given in the string:
+<code>
+Include ::= "include" String
+</code>
+
+The second one delays the inclusion to the end of the current file.
+<code>
+DelayedInclude ::= "include" ("-" | "_")? "op" String
+</code>
+
+FIXME what's about "-" or "_" ?
+
+The given path given in the inclusion command may be absolute or relative
+to the current directory.
+
+
+====== Types ======
+
+Types are used to describe the nature of different data used in the ISA,
+that is, the state items (registers, memories) and the temporaries and
+parameters.
+
+Types are described by so-called type-expression and commonly used
+types may be named for a fast usage.
+
+===== Type Expressions =====
+
+<code>
+TypeExpression ::=
+	  BoolType
+	| IntType
+	| CardType
+	| FixType
+	| FloatType
+	| RangeType
+	| EnumType
+	| NamedType
+</code>
+
+In the following syntax definitions, ''IntegerExpression'' represents
+any SimNML expression statically evaluated to an integer value and
+supporting only constants identifiers.
+
+==== Boolean Type ====
+
+<code>
+BoolType ::= 'bool'
+</code>
+''BoolType'' is a simple boolean value with a bit value, 0 or 1.
+
+
+==== Integer Type ====
+
+The ''IntType'' represents a signed integer on N bits, represent in
+2's complement, ranging from -2<sup>N - 1</sup> to 2<sup>N - 1</sup> - 1.
+<code>
+IntType ::= 'int' '(' N: IntegerExpression ')'
+</code>
+
+==== Cardinal Type ====
+
+The ''CardType'' represents an unsigned integer on N bits, ranging
+from 0 to 2<sup>N</sup> - 1.
+<code>
+CardType ::= 'card' '(' N: IntegerExpression ')'
+</code>
+
+==== Fixed Point Number Type ====
+
+The ''FixType'' represents real values with fixed point, composed
+of an integer part of I bits and a fractional part of F bits.
+<code>
+FixType ::= 'fix' '(' I: IntegerExpression ',' F: IntegerExpression ')'
+</code>
+
+
+==== Floating Point Number Type ====
+
+''FloatType'' allows to represents real value code with floating points.
+The mantissa expends on M bits and the exponent on E bits (2's complement
+representation).
+<code>
+FloatType ::= 'float' '(' M: IntegerExpression ',' E: IntegerExpression ')'
+</code>
+
+IEEE-754 float and double types are represented, respectively, by
+''float(23, 9)'' and ''float(52, 12)''.
+
+==== Range Type ====
+
+''RangeType'' allows to define an integer value ranging from a lower
+bound L to an upper bound U (bounds included in the range).
+<code>
+RangeType ::= '[' L: IntegerExpression '..' U: IntegerExpression ']'
+</code>
+
+==== Enumerated Type ====
+
+''EnumType'' allows to describe sparse numeric domain by enumerating
+allowed values. ''enum'' list of value accepts simple constants
+or ranges of values separated by ''..'':
+<code>
+EnumType ::= 'enum' '(' Value (',' Value)* ')'
+Value    ::= IntegerExpression | IntegerExpression '..' IntegerExpression
+</code>
+
+A ''NamedType'' refers to a previous definition of a type. The type
+expression passed inthe type definition is substituted to the identifier.
+<code>
+NamedType ::= Identifier
+</code>
+
+
+===== Type specification =====
+
+<code>
+TypeSpecification ::= 'type' Identifier '=' TypeExpression
+</code>
+
+A type specification provides an alias for a type expression.
+The type name must be unique and its usage in subsequent type expressions
+is replaced  by the given type expression.
+
+
+
+
+====== Constants ======
+
+''LetSpecification'' allows to defined constants re-usable throughout
+type, operation and mode definitions. The identifier must be unique
+in the SimNML file.
+
+<code>
+LetSpecification ::= 'let Identifier '=' ConstantExpression
+</code>
+
+The ''ConstantExpression'' is an expression that must evaluates to a constant
+at generation time: it contains either literal constant values or constant identifiers.
+
+
+
+
+====== Registers and Memories ======
+
+NMP provides several ways to represent the state of processor:
+memories, registers and variables.
+
+
+===== Register =====
+
+An NMP register matches the concept of lonely register or register
+bank in the microprocessor. A register represents a small memory that may
+be read or written by the processor. It is part of the processor state.
+
+
+==== Declaration ====
+
+The syntax to declare a register is given below:
+<code>
+RegisterSpecification ::= 'reg' id: Identifier '[' size: Expr ',' type: TypeExpr ' ]' Attributes
+</code>
+
+
+A register is accessed throughout the statement and expression thanks
+to its identifier ''id'' that must be unique throughout the NMP
+description. Its ''size'' may be any expression evaluated to a constant.
+It may be 1 for a lonely register or greater for a bank of register.
+Registers of a bank are number from to 0 to the register ''size''.
+The ''type'' argument gives the type of each register item.
+
+
+In the example below, we have a lonely status register called ''SR''
+and a register bank named ''R'':
+<code>
+let R_SIZE = 16
+reg SR[1, card(32)]
+reg R[R_SIZE, card(32)]
+</code>
+
+
+==== Attributes ====
+
+The attributes allows to tune the behaviour of a register. They are
+composed as a sequence of attributes:
+<code>
+Attributes ::= Attribute*
+Attribute ::=
+  'alias' AliasLocation
+| 'initial' '=' Expr
+| 'volatile' '=' Expr
+| CustomAttribute
+</code>
+
+The ''initial'' attributes allows to define the value of the register
+at the start of execution (the expression must evaluates to a constant).
+The ''volatile'' attribute says that the value of the register may
+change randomly any time: it may used to represent input
+registers. The following argument, that must evaluates to a string,
+represents the underlaying hardware driving the register.
+
+
+The ''alias'' keyword is used not to define an actual register but
+an anlias on another register. The location follows the same rules as
+the set statement and gives a different view of the target register.
+The location must follows the rules below:
+<code>
+AliasLocation ::=
+  id: Identifier
+| id: Identifier '[' index: Expr ']'
+| id: Identifier '<' up: Expr '..' low: Expr '>'
+| id: AliasLocation '::' AliasLocaton
+</code>
+
+The alias may be a simple identifier of another register: it works like
+a renaming of the existing register or a type conversion if both
+registers have not the same type. In the example below, ''FLT'' allows
+to have a float view of the integer ''INT''.
+<code>
+reg INT[1, card(32)]
+reg FLT[1, float(24, 8)] alias INT
+</code>
+
+
+With an index, it allows to access to a sub-part of an existing register
+bank, possibly mapping bigger or smaller registers to the target
+registers. In the example below, a register bank may be viewed
+as a collection of 16 words with ''RL'' or as a collection of 32 half-words
+with ''rh''.
+bank
+<code>
+reg RL[16, card(32)]
+reg RH[32, card(16)] alias RH[0]
+</code>
+
+
+The field notation allows to access part of another register
+using the usual bit field notation (both upper and lower bit expression
+must evaluates to constants). A part of the x86 family register is given
+in the example below:
+<code>
+reg AX[1, card(16)]
+reg AL[1, card(8)] alias AX<7..0>
+reg AH[1, card(8)] alias AX<15..8>
+</code>
+
+The concatenation form with ''::'' allow to consider as a single register
+a group of registers. It is useful when the same register bank may be used
+with several types and bit sizes. The example below shows the declaration
+of ARM ISTATE sub-field inside CPSR register. It split over two bit field
+in CPSR but logically viewed as only one register.
+<code>
+reg CPSR[1, card(32)]
+reg ISTATE[1, card(8)] alias = CPSR<15..10> :: CPSR<26..25>
+</code>
+
+The CustomAttribute are defined below:
+	* ''pc = 1'' -- design this register as the program counter (mandatory in the instruction set description),
+	* ''ppc = 1'' -- design this register as the previous value of PC,
+	* ''npc = 1'' -- design this register as the new value of PC,
+	* ''sp = 1'' -- design this register as the stack pointer,
+	* ''lr = 1'' -- design this register as the link register (for subprogram call).
+
+There must at least one register marked ''pc'' in each ISA. It used to get the address
+of the next fetched instruction. Other custom attributes may be used by other tools for convenient purposes.
+
+
+===== Memories =====
+
+A memory represents the different storages of data found usually out
+of the microprocessor die. A memory is usually defined as an array of
+byte but may also be accessed with different word sizes.
+
+==== Specification ====
+
+A memory is declared as below:
+<code>
+MemorySpecification ::= 'mem' id: Identifier '[' ns: IntegerExpression (',' t: TypeExpression)? ']' MemAttribute*
+</code>
+
+A memory specified as above has for name //id//, that must be unique
+throughout the NMP specifications, and contains elements of type //t//. If //t//
+is omitted, the byte type, ''int(8)'', is assumed.
+Unlike to the register specification, the //ns// integer expression
+(expression supporting only constant references) does not determine
+the number of memory elements but the number of bits required to
+address the memory name space. Actually, the number of elements is
+2<sup>//ns//</sup>.
+
+An ISA description may supports several memory definitions (without
+taking into account the aliases) but the program code must be contained
+in only one (and exactly one). As a default, the first declared memory
+is considered as the one containing the program.
+
+@@ but this default
+@@ behaviour may be changed by marking the concerned memory with
+@@ the attribute .
+
+
+==== Attributes ====
+
+The supported attributes are given below:
+<code>
+MemAttribute ::=
+	| "volatile" "=" STRING
+	| "alias" "=" Location
+	| "initial" "=" Expression
+</code>
+
+''volatile'' shows that the memory may change its value at any time depending on external devices. Its value
+is a string used by the simulator to retrieve the producer of the memory content. It was also basically
+used to design temporary variables (not member of the machine state) with the value ''temporary''.
+It is not currently supported by GLISS2. 
+
+The ''alias'' attribute works exactly as the ''alias'' on registers. It allows to access the same set of bytes
+as the aliased memory through a view / type. See Register Specification for more details.
+
+''initial'' provides an initial value for the set of memory cells at program startup. The given expression
+must evaluates to a constant during the compilation.
+
+
+====== Operation, Modes and Attributes ======
+
+===== Operation and Modes =====
+
+The basic element to describe an instruction is an operation. The operations
+are of two types: AND or OR. An OR operation provides alternatives to
+describe a family of instructions (for example, ALU instructions or
+memory instruction) while an AND operation describe an actual instruction.
+
+The operations follows the syntax below:
+<code>
+OperationSpec ::= OR-OperationSpec | AND-OperationSpec
+
+OR-OperationSpec ::= 'op' id: Identifier '=' Identifier (',' Identifier)*
+
+AND-OperationSpec ::= 'op' id: Identifier '(' (Parameters (',' Parameter)*)? ')' Attributes
+Parameter ::= Identifier ':' (TypeExpression | Identifier)
+</code>
+
+The OR-Operation is named and made of a list of identifiers ofotherf AND- or OR-operations contained in this family.
+
+In the opposite, the AND-operation defines an instruction with a list of
+parameters used by the instruction and as a list of attributes defining
+its different aspects. Aspects includes the disassembly syntax,
+the binary image and its action on the machine state.
+
+The type expressions used for parameters may design usual types or named
+type of NMP or any operations or modes. Classically, the use of mode
+allows to mimics the argument modes found in processor: for example,
+addressing mode.
+
+A mode looks like an operation, it may be defined qualified as AND or OR, but is used
+to represented mode of parameter of an instruction and to evaluates to a value.
+A mode is associated with an expression that is evaluated when
+the parameter, whose type is the current mode, is used..
+
+The syntax of modes follows:
+<code>
+ModeSpec ::= OR-Mode | AND-Mode
+
+OR-ModeSpec ::= 'op' id: Identifier '=' Identifier (',' Identifier)*
+
+AND-ModeSpec ::= 'op' id: Identifier '(' (Parameter (',' Parameter)*)? ')' '=' Expression Attributes
+Parameter ::= Identifier ':' (TypeExpression | Identifier)
+</code>
+
+The example below show the use of a mode to wire automatically register ''r0''
+to 0 (typically used by some RISC processors), non-wired 0 mode and its use in ''add'' instruction:
+<code>
+reg GPR[32, int(32)]
+var TMP[1, int(32)]
+
+mode Rwired0(num: card(5)) = if num == 0 then 0 else GPR[num]
+	set = { if num != 0 then GPR[num] = TMP; endif; }
+	...
+	
+mode R(num: card(5)) = GPR[num]
+	set = { GPR[num] = TMP; }
+	...
+
+op add(rd: Rwired0, ra: Rwired0, b: R)
+	...
+	action = {
+		TMP = ra + rb;
+		rd.set;
+	}
+</code>
+
+The example be low show the use of modes to represent addressing in ARM-like instruction set:
+<code>
+reg R[16, int(32)]
+mem M[32, card(8)]
+
+mode OffsetAddressMode(r: card(4), offset: int(12)) = M[R[r] + offset]
+	...
+
+mode IndexedAddressMode(r: card(4), i: card(5)) = M[R[r] + R[i]]
+	...
+
+mode AddressMode = OffsetAddressMode | IndexedAddressMode | ...
+
+op LDR(r: card(4), addr: AddressMode)
+	...
+	action = { R[r] = addr; }
+
+op STR(r: card(4), addr: AddressMode)
+	...
+	action = { addr = R[r]; }
+</code>
+
+Usually, the description of modes and operations requires at least three attributes:
+  * ''syntax'' -- describe the assembly form of an instruction (used by the disassembler).
+  * ''image'' -- describes the binary image of an instruction (or of a part of an instruction word for modes) (it is used
+to decode instructions from the binary program);
+  * ''action'' -- constains NMP statements between braces, ''{'' and ''}'', and represent the behaviour of the instruction or of the mode
+(it used to generate the simulator);
+
+===== Syntax Attribute =====
+
+''syntax'' attribute provide display of the instruction in assembly language. It may be a simple string
+or a ''format'' function that meets the same syntax as the classic C ''printf'' function. The fast argument
+is a string that may contains escape sequences starting with a ''%'' following by one or several letters
+and digits describing the output format of one of the following argument. ''%'' sequences and arguments
+are matched in the same order. The format string support most of ''printf'' ''%'' escape sequences (and it is advised in fact to use
+the ''printf'' Posix function to implement the dissassembly generation).
+
+If the format contains a ''%s'',
+either the argument must be of type string (literal string or ''format'' function), or it must be
+an operation or mode parameter possibly designing an attribute. If not attribute is given,
+the ''syntax'' attribute of the operation or of the mode is automatically selected.
+
+Notice that in GLISS2, ''%p'' sequence displays not only an address is hexadecimal form
+but may be replace by a matching memory label (if one exists). In this way, the disassembled
+instruction is more used-friendly.
+
+The example below defines the ''add'' instruction of ARM with a literal:
+
+<code>
+op add_literal(c: condition, S: bool, rd: card(4), rs1: card(4), rotate: card(4), immediate: int(8))
+	syntax = format("add%s%s r%d, r%d, #%d",
+		c,
+		if S then "S" else "" endif,
+		rd,
+		rs1,
+		coerce(int(32), immediate) << (rotate * 2)) 
+</code>
+
+
+===== Image attribute =====
+
+The image attribute allows to describe the binary code of an instruction. The code is represented
+by a string containing basically "0" and "1" matching the actual bits of the instruction code.
+To make it easier to read and write, GLISS V2 extends this encoding with spaces or tabulations,
+to make visible packs of bits and with "X", to represent a bit whose value is ignored to encode the instruction.
+
+From a syntactic point of view, this attribute is represented either by a simple string
+or using the ''format'' special function as in the example below:
+
+EXAMPLE: format usage
+<code>
+op AddImm(ra: card(4), rb: ZeroReg, imm: int(16))
+	image = format("1111 XX00 %4b %s %16b", ra, rb, imm)
+</code>
+
+This example shows also the use of percent "%" expressions working like the ''printf'' C function.
+Currently, there are only two supported forms:
+  * ''%''//n//''b'' represents //n// bits whose value is taken from the matching argument in the ''format'' argument list,
+  * ''%s'' is used to insert the image provided by an attribute from an operation or a mode: the actual number of bits
+  depends on the attrute. If no attribute is given, the ''image'' attribute is automatically selected.
+
+The example above creates the following code:
+^ bits ^description ^
+| 31-28 |four bits at ''1111'' |
+| 27-26 |two ignored bits |
+| 25-24 |two bits at ''00'' |
+| 23-20 |four bits replaced by value of ''ra'' parameter |
+| 19-16 |bits replaced by the image provided by ''rb'' |
+| 15-00 |16 bits provided by the ''imm'' parameter |
+
+
+===== Action Attribute =====
+
+The ''action'' attribute specifies the effects of the instruction on the machine state
+(including registers and memories).
+
+The action is expressed as sequence of statements enclosed between braces, ''{'' and ''}''.
+The available symbols to the action statements includes operation / mode parameters,
+other attributes and global symbols that includes memories, temporaries, registers and constants.
+
+See chapter ''Statements'' for more details.
+
+
+====== Expressions ======
+
+SimNML expressions looks like, more or less, C expressions with
+some extensions to support easier handling of bit fields. They are used
+for value computation in assignment and format expression and as conditions
+in ''if'' and ''switch'' statementss and expression.
+
+Expression syntax is given below and detailed in the following paragraphs.
+
+<code>
+Expression ::=
+	| ConstantExpression
+	| ReferenceExpression
+	| DottedExpression
+	| UnaryExpression
+	| BinaryExpression
+	| BitFieldExpression
+	| ConcatExpression
+	| FormatExpression
+	| IfExpression
+	| SwitchExpression
+	| '(' Expression ')'
+</code>
+
+As usual, parentheses allows to cope with operator priority. 
+//ConstantExpression// follows the same syntax as in the specification
+of constants.
+
+===== Reference Expression =====
+
+An identifier expression allows to get value of a constant,
+a register, a memory or a variable. According to the type of the identified entity,
+it may be indexed or not.
+
+<code>
+ReferenceExpression ::=
+	| Identifier
+	| Identifier '[' i: Expression ']'
+</code>
+
+The indexing expression, //i//, must be of type integer between
+0 and the size of the register / memory / variable minus 1.
+Named constants does not support indexation.
+
+The result type is the type of the accessed resource.
+
+
+===== Dotted Expression =====
+
+<code>
+DottedReference ::= pid: ID '.' cid: ID
+</code>
+
+The dotted form allows to access an attribute named //cid// from a mode or an operation designed by the parameter
+named //pid//. The result type is the type of the accessed resource.
+
+
+===== Unary Expression =====
+
+NML expressions support only four unary operations: identity ''+'',
+negation ''-'', bit inversion ''~'' and logical //NOT// ''!''.
+
+<code>
+UnaryExpression ::=
+	| '+' Expression
+	| '-' Expression
+	| '~' Expression
+	| '!' Expression
+</code>
+
+''-'' applies either on integer type, or on float types. For other types
+(except string types), the value is first converted of //int// of same size.
+
+''~'' applies to //card// type: if the operand is of a different type,
+it is automatically converted to //card// of same size.
+
+Finally, ''!'' applies only on boolean value. If the operand is of numeric
+type, it is automatically converted to boolean: //false// if it is equal
+to 0, //true// else.
+
+
+===== Binary Expression =====
+
+There is a lot of binary operators. Whatever the operator, before
+the operation takes place, it may be an implicit converision of one
+operand to the other one: the smaller operand (in bits) is always
+automatically converted to the result of the bigger one. The result
+is in the type of the bigger operand.
+
+The binary operators may be classified in five categories:
+arithmetics, comparisons, logicals, bit operations and shift operations.
+<code>
+BinaryExpression ::=
+	| ArithmeticExpression
+	| ComparisonExpression
+	| LogicalExpression
+	| BitOperation
+	| ShiftOperation
+</code>
+
+Arithmetic operations applies on two integers, signed or unsigned.
+Booleans and other type are converted to integer, strings are not supported.
+If the operands have the same size (in bits) but one is signed and the other
+one not, the latter is converted to signed integer. Arithmetic operations
+are the addition ''+'', the subtraction ''-'', the multiplication ''*'',
+the euclidian division ''/'' and the modulo ''%''.
+
+Except for the modulo, these operations applies also to floating-point
+values. There are also conversion to the bigger operand and from integer
+to float value.
+
+<code>
+ArithmeticExpression ::=
+	| Expression '+' Expression
+	| Expression '-' Expression
+	| Expression '*' Expression
+	| Expression '/' Expression
+	| Expression '%' Expression
+</code>
+
+Comparison operators allows to compare two values: there is also
+automatic conversion from the smaller operand to the bigger one.
+The result of type boolean. These operators applies on any numeric
+type and not to string or bit string types.
+
+<code>
+ComparisonExpression ::=
+	| Expression '==' Expression
+	| Expression '!=' Expression
+	| Expression '<' Expression
+	| Expression '<=' Expression
+	| Expression '>' Expression
+	| Expression '>=' Expression
+</code>
+
+Logical operations allows usually to combine comparisons.
+They work on boolean operands and produces a boolean value.
+If the opetand are numeric value, they are converted to boolean:
+a value equal to 0 is //false// value, different from 0 is //true//.
+There are two logicial operations: //AND//, ''&&'' and //OR//, ''||''.
+
+<code>
+LogicalExpression ::=
+	| Expression '&&' Expression
+	| Expression '||' Expression
+</code>
+
+Bit expression allows to combine values at the bit level. If needed,
+smaller operand is converted to type of bigger one. There are 
+three operations: bit //AND// ''&'', bit //OR// ''|'', bit //XOR// ''^''.
+
+<code>
+BitOperation ::=
+	| Expression '&' Expression
+	| Expression '|' Expression
+	| Expression '^' Expression
+	| Expression '<<' Expression
+	| Expression '>>' Expression
+	| Expression '<<<' Expression
+	| Expression '>>>' Expression
+</code> 
+
+Shift operations allows to shift left ''<<'', shift right ''>>'',
+rotate left ''<<<'' and rotate right ''>>>''.
+The result is in the type of the first operand and, for the right shift,
+the operation is signed or not according to this type.
+
+<code>
+ShiftExpression ::=
+	| Expression ''<<'' Expression
+	| Expression ''>>'' Expression
+	| Expression ''<<<'' Expression
+	| Expression ''>>>'' Expression
+</code>
+
+
+===== Bit Field Expression =====
+
+A bit field expression allows to select a part of a numeric expressions
+from one bit, the lower bit index //l//, to another one, the upper bit index //u//.
+The result is of type //card// and of size //u - l + 1//.
+
+<code>
+BitFieldExpression ::= Expression '<' Expression '..' Expression '>'
+</code>
+
+//u// and //l// expressions must result to an integer type.
+In the expression, the order of //u// and //l// depends on the constant ''bit_order''.
+If ''bit_order'' is equal to ''uppermost'', the first index is //u// and the second //l//.
+(default case). If ''bit_order'' is ''lowermost'', //u// is the second bit index
+and //l// the first. This allows to adapt the NML expressions as closely as possible
+to the convetion of the implemented instruction set.
+
+Whatever the order, if //u// is lower than //l// value, the bit field operator
+inverses the bits in the result. Else, the bit order is maintained.
+Therefore, the bit field operator is also a way to inverse the bit string
+representing an integer. Yet, this operation must not be used too often
+because it is relative expensive in processing time.
+
+
+===== Concatenation Expression =====
+
+The concatenation operation allows to concatenate bit string
+or integer value. The result is of type //card// and of size,
+the sume of sizes of both operands. Before the operation takes place.
+both operands are converted to //card// (no effects of signess).
+
+<code>
+ConcatExpression ::= Expression '::' Expression
+</code>
+
+
+===== Format Expression =====
+
+Format expressions produces values of type //string// representing
+either a true string (as used in ''syntax'' attribute) or a bit string
+(as used in the ''image'' attribute).
+
+<code>
+FormatExpression ::= 'format' '(' StringConst ',' Arguments? ')'
+
+Arguments ::= Expression | Arguments ',' Expression
+</code>
+
+//fmt// is a format string whose meaning depends on the way the string
+is used. For string use, the result is the string itself where each
+''%'' (and some following characters) are replaced by the value of the matching argument.
+This works like the Posix ''printf'' function. ''%'' and arguments are matched
+according to their order in the string and in the argument list.
+Take a look to the documentation of ''printf'' for details on the format.
+In addition, the ''syntax'' attribute accepts ''%l'' that means that the argument
+is an address and the ''%'' is replaced by a representation of an address
+(the address itself in hexadecimal or a matching lable).
+
+For a bit string, only the following content is accepted:
+  * ''0'' -- a bit equal to 0,
+  * ''1'' -- a bit equal to 1,
+  * '' '' (space) -- ignored,
+  * ''X'' -- a bit of any value,
+  * ''%s'' -- replaced by an argument whose type must be a bit string,
+  * ''%Nb'' -- replaced by a bit string (from the arguments) of size //N//.  
+
+
+===== If Expression =====
+
+Conditionals may be applied to expressions: their syntax follow.
+
+<code>
+IfExpression ::=
+	'if' c: Expression 'then' t: Expression 'else' e: Expression 'endif''
+</code>
+
+Notice that, unlike the ''if'' statement, the ''else'' part is mandatory.
+
+The //c// expression is evaluated to a boolean and, according to its value,
+either the //t// is evaluated, and returned, or the //e// expression.
+//t// and //e// must be of same type or the smaller type is automatically
+converted to the bigger type.
+
+
+===== Switch Expression =====
+
+A switch expression allows to choice a value according to an index value.
+They are often used to implement associative tables.
+
+<code>
+SwitchExpression ::=
+	'switch' '(' c: Expression ')' '{' Case* Default? '}'
+
+Case ::=
+	'case' v: Expression ':' r: Expression
+
+Default ::=
+	'default' ':' r: Expression
+
+</code>
+
+One of //r// expressions is returned by the switch and, therefore,
+must be of the same type or, as needed, smaller type expressions
+are automatically converted to the bigger one.
+
+//c// expression must be numeric but not a float value.
+The //v// values must be integer and must evaluate as a constant.
+Either the set of //v// values must be equal to the set of values of //c//
+(and not default part is allowed), or a default part is required.
+
+Only the //r// expression whose //v// expression matches the //c// value
+is executed and its value returned. If there is a default part and no
+case //v// value matches //c//, this //r// is evaluated and returned.
+
+Notice that all //r// expressions must be of the same type.
+
+
+
+===== Priorities and Associativities =====
+
+The table below lists the operators and their associativity. In addition, the priority depends
+on the row order: operators with less priority first.
+
+^ Associativity ^ Operators ^
+| left |:: |
+| left |%%||%% |
+| left |&&	|
+| left |%%|%% |
+| left |%%^%% |
+| left |& |
+| left |==, != |
+| left |<, %%<=%%, >, >= |
+| left |%%<<%%, %%>>%%, %%<<<%%, %%>>>%% |
+| left |+, - |
+| left |*, /, % |
+| right	|%%**%% |
+| left |< .. > |
+
+
+====== Statements ======
+
+The //action// attribute contains statements used to describe the behaviour
+of the microprocessor. The syntax of statements is given below.
+
+<code>
+Sequence ::= Statement*
+
+Statement ::=
+	| ActionStatement
+	| AssignmentStatement
+	| ConditionalStatement
+	| SwitchStatement
+	| CanonStatement
+	| CallStatement
+</code>
+
+===== Action Statement =====
+
+An action statement allows to invoke action contained in another
+operation or mode.
+
+<code>
+ActionStatement ::=
+	| Identifier ';'
+	| Identifier '.' Identifier ';'
+</code>
+
+In the first form, the identifier is replaced by the named attribute
+of the current opereation or mode. In the second form, the first identifier
+must be the name of a parameter of type operation or mode and the second
+identifier is the name of the attribute in this operation or mode.
+Notice that only actions of the current operation / mode or of a paremeter
+can be called this way.
+
+If an action invokes itself, a loop is created
+and therefore, the action must contain a condition with only one part
+performing the recursive invocation. This is a powerful to perform
+loops but it must be handled carefully to avoid unended loops. 
+
+
+===== Assignment Statement =====
+
+An assignment allows to change the state of the machine, that is,
+to change the value stored either in a register, or in memory.
+
+<code>
+AssignmentStatement ::=
+	Location '=' Expression ';'
+
+Location ::=
+	| Identifier							// f1
+	| Identifier '[' Expression ']'					// f2
+	| Location '<' Expression '..' Expression '>'			// f3
+	| Location '::' Location					// f4
+</code>
+ 
+The expression is evaluated. Whatever the type of the location of the
+assignment, the bits of the expression are assigned to the bits of the location.
+
+The location allows to identify which bits of the machine state are
+modified. Form //f1// modify a register or a variable made of only one instance.
+Form //f2// applies to a composed register or a variable or to a memory.
+In the former case, the number of the register or of the variable is given between
+brackets, in the latter, this is the address in memory. Whatever, the subscript
+expression must be of type integer.
+
+Form //f3// allows to only modify a bit range of the location (it is subject
+to same restrictions and rules as the expression bit field access).
+Form //f4// allows to easily assign several locations as if they were
+concatenated.
+
+
+===== Conditional Statement =====
+
+A conditional statement allows to choose between two sub-actions.
+
+<code>
+ConditionalStatement ::=
+	| 'if' c: Expression 'then' a: Sequence 'endif' ';'
+	| 'if' c: Expression 'then' a: Sequence 'else' b: Sequence 'endif' ';'
+</code>
+
+In the first form, the condition //c// is evaluated and, if results in a numeric value,
+is converted to a boolean value (//false// if the value equals to 0, //true// else).
+If the expression //c// is true, the action //a// is executed. Then, whatever
+the evaluation of //c//, the execution continues with the following statement.
+
+The second form evaluates the expression //c// in the same way.
+If it result to //true//, //a// is executed. If false, //b// is executed.
+And then the execution continues with the following statement.
+
+
+===== Switch Statement =====
+
+The switch statement allows to make a choice according to a special enumerated value.
+
+<code>
+SwitchStatement ::=
+	'switch' '(' c: Expression ')' '{' Case* default? '}' ';'
+
+Case ::= 'case' v: Expression ':' s: Sequence
+Default ::= 'default' ':' s: Sequence
+</code>
+
+The //c// expression must be of integer type  and //v// expression
+must be of same type and constants. If one value //v// equals to the
+choice expression //c//, the matching sequence //s// is executed.
+If present and if no value //v// is equal to the choice value //c//,
+the default //s// is executed.
+
+
+===== Canon Statement =====
+
+A canonical statement allows to invoke a function from the host environment.
+In //GLISS//, the called function is a C function and the parameters
+are passed as is to the C function.
+
+<code>
+CanonStatement ::=
+	StringConst '(' Arguments? ')' ';'
+|	'canonical' '(' StringConst (',' Expression)* ')'
+</code>
+
+The arguments must be of a type compatible of the type of the argument
+in the host environment.
+
+
+===== Call Statement =====
+
+A call statement allows to invoke built-in functions or macros.
+
+<code>
+CallStatement ::= Identifier '(' (Expression (',' Expression)*)? ')' ';'
+</code>
+
+Built-in functions includes:
+  * ''error''(message) -- that takes as parameter a message string.

@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   -shared -Wl,--enable-auto-import -o cyggel_arch_20.dll -Wl,--major-image-version,0,--minor-image-version,0 CMakeFiles/gel_arch_20.dir/plugarch20.c.o libgel.dll.a -ldl 

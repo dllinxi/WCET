@@ -1,0 +1,5400 @@
+"cexptostr.ml" 14 204 208 "cexptostr.ml" 14 204 215
+type(
+  string
+)
+ident(
+  def version "cexptostr.ml" 16 251 251 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 14 204 218 "cexptostr.ml" 14 204 249
+type(
+  string
+)
+"cexptostr.ml" 16 251 255 "cexptostr.ml" 16 251 263
+type(
+  Cabs.sign -> string
+)
+ident(
+  def get_sign "cexptostr.ml" 22 350 350 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 16 251 264 "cexptostr.ml" 16 251 266
+type(
+  Cabs.sign
+)
+ident(
+  def si "cexptostr.ml" 17 269 270 "cexptostr.ml" 20 322 348
+)
+"cexptostr.ml" 17 269 276 "cexptostr.ml" 17 269 278
+type(
+  Cabs.sign
+)
+ident(
+  int_ref si "cexptostr.ml" 16 251 264 "cexptostr.ml" 16 251 266
+)
+"cexptostr.ml" 18 284 285 "cexptostr.ml" 18 284 292
+type(
+  Cabs.sign
+)
+"cexptostr.ml" 18 284 296 "cexptostr.ml" 18 284 298
+type(
+  string
+)
+"cexptostr.ml" 19 299 302 "cexptostr.ml" 19 299 308
+type(
+  Cabs.sign
+)
+"cexptostr.ml" 19 299 312 "cexptostr.ml" 19 299 321
+type(
+  string
+)
+"cexptostr.ml" 20 322 325 "cexptostr.ml" 20 322 333
+type(
+  Cabs.sign
+)
+"cexptostr.ml" 20 322 337 "cexptostr.ml" 20 322 348
+type(
+  string
+)
+"cexptostr.ml" 17 269 270 "cexptostr.ml" 20 322 348
+type(
+  string
+)
+"cexptostr.ml" 22 350 354 "cexptostr.ml" 22 350 362
+type(
+  Cabs.size -> string
+)
+ident(
+  def get_size "cexptostr.ml" 30 471 471 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 22 350 363 "cexptostr.ml" 22 350 366
+type(
+  Cabs.size
+)
+ident(
+  def siz "cexptostr.ml" 23 369 370 "cexptostr.ml" 27 440 468
+)
+"cexptostr.ml" 23 369 376 "cexptostr.ml" 23 369 379
+type(
+  Cabs.size
+)
+ident(
+  int_ref siz "cexptostr.ml" 22 350 363 "cexptostr.ml" 22 350 366
+)
+"cexptostr.ml" 24 385 386 "cexptostr.ml" 24 385 393
+type(
+  Cabs.size
+)
+"cexptostr.ml" 24 385 397 "cexptostr.ml" 24 385 399
+type(
+  string
+)
+"cexptostr.ml" 25 400 403 "cexptostr.ml" 25 400 408
+type(
+  Cabs.size
+)
+"cexptostr.ml" 25 400 412 "cexptostr.ml" 25 400 420
+type(
+  string
+)
+"cexptostr.ml" 26 421 424 "cexptostr.ml" 26 421 428
+type(
+  Cabs.size
+)
+"cexptostr.ml" 26 421 432 "cexptostr.ml" 26 421 439
+type(
+  string
+)
+"cexptostr.ml" 27 440 443 "cexptostr.ml" 27 440 452
+type(
+  Cabs.size
+)
+"cexptostr.ml" 27 440 456 "cexptostr.ml" 27 440 468
+type(
+  string
+)
+"cexptostr.ml" 23 369 370 "cexptostr.ml" 27 440 468
+type(
+  string
+)
+"cexptostr.ml" 30 471 479 "cexptostr.ml" 30 471 491
+type(
+  Cabs.expression -> string * int
+)
+ident(
+  def get_operator "cexptostr.ml" 30 471 471 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 30 471 492 "cexptostr.ml" 30 471 495
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 31 498 499 "cexptostr.ml" 88 1830 1876
+)
+"cexptostr.ml" 31 498 505 "cexptostr.ml" 31 498 508
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 30 471 492 "cexptostr.ml" 30 471 495
+)
+"cexptostr.ml" 32 514 515 "cexptostr.ml" 32 514 522
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 32 514 527 "cexptostr.ml" 32 514 529
+type(
+  string
+)
+"cexptostr.ml" 32 514 531 "cexptostr.ml" 32 514 533
+type(
+  int
+)
+"cexptostr.ml" 32 514 526 "cexptostr.ml" 32 514 534
+type(
+  string * int
+)
+"cexptostr.ml" 33 535 545 "cexptostr.ml" 33 535 547
+type(
+  Cabs.unary_operator
+)
+ident(
+  def op "cexptostr.ml" 34 555 557 "cexptostr.ml" 44 783 809
+)
+"cexptostr.ml" 33 535 549 "cexptostr.ml" 33 535 550
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 33 535 538 "cexptostr.ml" 33 535 551
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 34 555 564 "cexptostr.ml" 34 555 566
+type(
+  Cabs.unary_operator
+)
+ident(
+  int_ref op "cexptostr.ml" 33 535 545 "cexptostr.ml" 33 535 547
+)
+"cexptostr.ml" 35 572 574 "cexptostr.ml" 35 572 579
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 35 572 584 "cexptostr.ml" 35 572 587
+type(
+  string
+)
+"cexptostr.ml" 35 572 589 "cexptostr.ml" 35 572 591
+type(
+  int
+)
+"cexptostr.ml" 35 572 583 "cexptostr.ml" 35 572 592
+type(
+  string * int
+)
+"cexptostr.ml" 36 593 597 "cexptostr.ml" 36 593 601
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 36 593 606 "cexptostr.ml" 36 593 609
+type(
+  string
+)
+"cexptostr.ml" 36 593 611 "cexptostr.ml" 36 593 613
+type(
+  int
+)
+"cexptostr.ml" 36 593 605 "cexptostr.ml" 36 593 614
+type(
+  string * int
+)
+"cexptostr.ml" 37 615 619 "cexptostr.ml" 37 615 622
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 37 615 627 "cexptostr.ml" 37 615 630
+type(
+  string
+)
+"cexptostr.ml" 37 615 632 "cexptostr.ml" 37 615 634
+type(
+  int
+)
+"cexptostr.ml" 37 615 626 "cexptostr.ml" 37 615 635
+type(
+  string * int
+)
+"cexptostr.ml" 38 636 640 "cexptostr.ml" 38 636 644
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 38 636 649 "cexptostr.ml" 38 636 652
+type(
+  string
+)
+"cexptostr.ml" 38 636 654 "cexptostr.ml" 38 636 656
+type(
+  int
+)
+"cexptostr.ml" 38 636 648 "cexptostr.ml" 38 636 657
+type(
+  string * int
+)
+"cexptostr.ml" 39 658 662 "cexptostr.ml" 39 658 667
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 39 658 672 "cexptostr.ml" 39 658 675
+type(
+  string
+)
+"cexptostr.ml" 39 658 677 "cexptostr.ml" 39 658 679
+type(
+  int
+)
+"cexptostr.ml" 39 658 671 "cexptostr.ml" 39 658 680
+type(
+  string * int
+)
+"cexptostr.ml" 40 681 685 "cexptostr.ml" 40 681 691
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 40 681 696 "cexptostr.ml" 40 681 699
+type(
+  string
+)
+"cexptostr.ml" 40 681 701 "cexptostr.ml" 40 681 703
+type(
+  int
+)
+"cexptostr.ml" 40 681 695 "cexptostr.ml" 40 681 704
+type(
+  string * int
+)
+"cexptostr.ml" 41 705 709 "cexptostr.ml" 41 705 716
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 41 705 721 "cexptostr.ml" 41 705 725
+type(
+  string
+)
+"cexptostr.ml" 41 705 727 "cexptostr.ml" 41 705 729
+type(
+  int
+)
+"cexptostr.ml" 41 705 720 "cexptostr.ml" 41 705 730
+type(
+  string * int
+)
+"cexptostr.ml" 42 731 735 "cexptostr.ml" 42 731 742
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 42 731 747 "cexptostr.ml" 42 731 751
+type(
+  string
+)
+"cexptostr.ml" 42 731 753 "cexptostr.ml" 42 731 755
+type(
+  int
+)
+"cexptostr.ml" 42 731 746 "cexptostr.ml" 42 731 756
+type(
+  string * int
+)
+"cexptostr.ml" 43 757 761 "cexptostr.ml" 43 757 768
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 43 757 773 "cexptostr.ml" 43 757 777
+type(
+  string
+)
+"cexptostr.ml" 43 757 779 "cexptostr.ml" 43 757 781
+type(
+  int
+)
+"cexptostr.ml" 43 757 772 "cexptostr.ml" 43 757 782
+type(
+  string * int
+)
+"cexptostr.ml" 44 783 787 "cexptostr.ml" 44 783 794
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 44 783 799 "cexptostr.ml" 44 783 803
+type(
+  string
+)
+"cexptostr.ml" 44 783 805 "cexptostr.ml" 44 783 807
+type(
+  int
+)
+"cexptostr.ml" 44 783 798 "cexptostr.ml" 44 783 808
+type(
+  string * int
+)
+"cexptostr.ml" 34 555 557 "cexptostr.ml" 44 783 809
+type(
+  string * int
+)
+"cexptostr.ml" 45 810 821 "cexptostr.ml" 45 810 823
+type(
+  Cabs.binary_operator
+)
+ident(
+  def op "cexptostr.ml" 46 834 836 "cexptostr.ml" 75 1495 1524
+)
+"cexptostr.ml" 45 810 825 "cexptostr.ml" 45 810 826
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 45 810 828 "cexptostr.ml" 45 810 829
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 45 810 813 "cexptostr.ml" 45 810 830
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 46 834 843 "cexptostr.ml" 46 834 845
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "cexptostr.ml" 45 810 821 "cexptostr.ml" 45 810 823
+)
+"cexptostr.ml" 47 851 853 "cexptostr.ml" 47 851 856
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 47 851 861 "cexptostr.ml" 47 851 864
+type(
+  string
+)
+"cexptostr.ml" 47 851 866 "cexptostr.ml" 47 851 868
+type(
+  int
+)
+"cexptostr.ml" 47 851 860 "cexptostr.ml" 47 851 869
+type(
+  string * int
+)
+"cexptostr.ml" 48 870 874 "cexptostr.ml" 48 870 877
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 48 870 882 "cexptostr.ml" 48 870 885
+type(
+  string
+)
+"cexptostr.ml" 48 870 887 "cexptostr.ml" 48 870 889
+type(
+  int
+)
+"cexptostr.ml" 48 870 881 "cexptostr.ml" 48 870 890
+type(
+  string * int
+)
+"cexptostr.ml" 49 891 895 "cexptostr.ml" 49 891 898
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 49 891 903 "cexptostr.ml" 49 891 906
+type(
+  string
+)
+"cexptostr.ml" 49 891 908 "cexptostr.ml" 49 891 910
+type(
+  int
+)
+"cexptostr.ml" 49 891 902 "cexptostr.ml" 49 891 911
+type(
+  string * int
+)
+"cexptostr.ml" 50 912 916 "cexptostr.ml" 50 912 919
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 50 912 924 "cexptostr.ml" 50 912 927
+type(
+  string
+)
+"cexptostr.ml" 50 912 929 "cexptostr.ml" 50 912 931
+type(
+  int
+)
+"cexptostr.ml" 50 912 923 "cexptostr.ml" 50 912 932
+type(
+  string * int
+)
+"cexptostr.ml" 51 933 937 "cexptostr.ml" 51 933 940
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 51 933 945 "cexptostr.ml" 51 933 948
+type(
+  string
+)
+"cexptostr.ml" 51 933 950 "cexptostr.ml" 51 933 952
+type(
+  int
+)
+"cexptostr.ml" 51 933 944 "cexptostr.ml" 51 933 953
+type(
+  string * int
+)
+"cexptostr.ml" 52 954 958 "cexptostr.ml" 52 954 961
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 52 954 966 "cexptostr.ml" 52 954 970
+type(
+  string
+)
+"cexptostr.ml" 52 954 972 "cexptostr.ml" 52 954 974
+type(
+  int
+)
+"cexptostr.ml" 52 954 965 "cexptostr.ml" 52 954 975
+type(
+  string * int
+)
+"cexptostr.ml" 53 976 980 "cexptostr.ml" 53 976 983
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 53 976 988 "cexptostr.ml" 53 976 992
+type(
+  string
+)
+"cexptostr.ml" 53 976 994 "cexptostr.ml" 53 976 996
+type(
+  int
+)
+"cexptostr.ml" 53 976 987 "cexptostr.ml" 53 976 997
+type(
+  string * int
+)
+"cexptostr.ml" 54 998 1002 "cexptostr.ml" 54 998 1004
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 54 998 1009 "cexptostr.ml" 54 998 1012
+type(
+  string
+)
+"cexptostr.ml" 54 998 1014 "cexptostr.ml" 54 998 1015
+type(
+  int
+)
+"cexptostr.ml" 54 998 1008 "cexptostr.ml" 54 998 1016
+type(
+  string * int
+)
+"cexptostr.ml" 55 1017 1021 "cexptostr.ml" 55 1017 1023
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 55 1017 1028 "cexptostr.ml" 55 1017 1032
+type(
+  string
+)
+"cexptostr.ml" 55 1017 1034 "cexptostr.ml" 55 1017 1035
+type(
+  int
+)
+"cexptostr.ml" 55 1017 1027 "cexptostr.ml" 55 1017 1036
+type(
+  string * int
+)
+"cexptostr.ml" 56 1037 1041 "cexptostr.ml" 56 1037 1043
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 56 1037 1048 "cexptostr.ml" 56 1037 1051
+type(
+  string
+)
+"cexptostr.ml" 56 1037 1053 "cexptostr.ml" 56 1037 1054
+type(
+  int
+)
+"cexptostr.ml" 56 1037 1047 "cexptostr.ml" 56 1037 1055
+type(
+  string * int
+)
+"cexptostr.ml" 57 1056 1060 "cexptostr.ml" 57 1056 1062
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 57 1056 1067 "cexptostr.ml" 57 1056 1071
+type(
+  string
+)
+"cexptostr.ml" 57 1056 1073 "cexptostr.ml" 57 1056 1074
+type(
+  int
+)
+"cexptostr.ml" 57 1056 1066 "cexptostr.ml" 57 1056 1075
+type(
+  string * int
+)
+"cexptostr.ml" 58 1076 1080 "cexptostr.ml" 58 1076 1082
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 58 1076 1087 "cexptostr.ml" 58 1076 1091
+type(
+  string
+)
+"cexptostr.ml" 58 1076 1093 "cexptostr.ml" 58 1076 1094
+type(
+  int
+)
+"cexptostr.ml" 58 1076 1086 "cexptostr.ml" 58 1076 1095
+type(
+  string * int
+)
+"cexptostr.ml" 59 1096 1100 "cexptostr.ml" 59 1096 1102
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 59 1096 1107 "cexptostr.ml" 59 1096 1111
+type(
+  string
+)
+"cexptostr.ml" 59 1096 1113 "cexptostr.ml" 59 1096 1114
+type(
+  int
+)
+"cexptostr.ml" 59 1096 1106 "cexptostr.ml" 59 1096 1115
+type(
+  string * int
+)
+"cexptostr.ml" 60 1116 1120 "cexptostr.ml" 60 1116 1124
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 60 1116 1129 "cexptostr.ml" 60 1116 1132
+type(
+  string
+)
+"cexptostr.ml" 60 1116 1134 "cexptostr.ml" 60 1116 1135
+type(
+  int
+)
+"cexptostr.ml" 60 1116 1128 "cexptostr.ml" 60 1116 1136
+type(
+  string * int
+)
+"cexptostr.ml" 61 1137 1141 "cexptostr.ml" 61 1137 1144
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 61 1137 1149 "cexptostr.ml" 61 1137 1152
+type(
+  string
+)
+"cexptostr.ml" 61 1137 1154 "cexptostr.ml" 61 1137 1155
+type(
+  int
+)
+"cexptostr.ml" 61 1137 1148 "cexptostr.ml" 61 1137 1156
+type(
+  string * int
+)
+"cexptostr.ml" 62 1157 1161 "cexptostr.ml" 62 1157 1164
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 62 1157 1169 "cexptostr.ml" 62 1157 1172
+type(
+  string
+)
+"cexptostr.ml" 62 1157 1174 "cexptostr.ml" 62 1157 1175
+type(
+  int
+)
+"cexptostr.ml" 62 1157 1168 "cexptostr.ml" 62 1157 1176
+type(
+  string * int
+)
+"cexptostr.ml" 63 1177 1181 "cexptostr.ml" 63 1177 1184
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 63 1177 1189 "cexptostr.ml" 63 1177 1193
+type(
+  string
+)
+"cexptostr.ml" 63 1177 1195 "cexptostr.ml" 63 1177 1196
+type(
+  int
+)
+"cexptostr.ml" 63 1177 1188 "cexptostr.ml" 63 1177 1197
+type(
+  string * int
+)
+"cexptostr.ml" 64 1198 1202 "cexptostr.ml" 64 1198 1204
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 64 1198 1209 "cexptostr.ml" 64 1198 1213
+type(
+  string
+)
+"cexptostr.ml" 64 1198 1215 "cexptostr.ml" 64 1198 1216
+type(
+  int
+)
+"cexptostr.ml" 64 1198 1208 "cexptostr.ml" 64 1198 1217
+type(
+  string * int
+)
+"cexptostr.ml" 65 1218 1222 "cexptostr.ml" 65 1218 1228
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 65 1218 1233 "cexptostr.ml" 65 1218 1236
+type(
+  string
+)
+"cexptostr.ml" 65 1218 1238 "cexptostr.ml" 65 1218 1239
+type(
+  int
+)
+"cexptostr.ml" 65 1218 1232 "cexptostr.ml" 65 1218 1240
+type(
+  string * int
+)
+"cexptostr.ml" 66 1241 1245 "cexptostr.ml" 66 1241 1255
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 66 1241 1260 "cexptostr.ml" 66 1241 1264
+type(
+  string
+)
+"cexptostr.ml" 66 1241 1266 "cexptostr.ml" 66 1241 1267
+type(
+  int
+)
+"cexptostr.ml" 66 1241 1259 "cexptostr.ml" 66 1241 1268
+type(
+  string * int
+)
+"cexptostr.ml" 67 1269 1273 "cexptostr.ml" 67 1269 1283
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 67 1269 1288 "cexptostr.ml" 67 1269 1292
+type(
+  string
+)
+"cexptostr.ml" 67 1269 1294 "cexptostr.ml" 67 1269 1295
+type(
+  int
+)
+"cexptostr.ml" 67 1269 1287 "cexptostr.ml" 67 1269 1296
+type(
+  string * int
+)
+"cexptostr.ml" 68 1297 1301 "cexptostr.ml" 68 1297 1311
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 68 1297 1316 "cexptostr.ml" 68 1297 1320
+type(
+  string
+)
+"cexptostr.ml" 68 1297 1322 "cexptostr.ml" 68 1297 1323
+type(
+  int
+)
+"cexptostr.ml" 68 1297 1315 "cexptostr.ml" 68 1297 1324
+type(
+  string * int
+)
+"cexptostr.ml" 69 1325 1329 "cexptostr.ml" 69 1325 1339
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 69 1325 1344 "cexptostr.ml" 69 1325 1348
+type(
+  string
+)
+"cexptostr.ml" 69 1325 1350 "cexptostr.ml" 69 1325 1351
+type(
+  int
+)
+"cexptostr.ml" 69 1325 1343 "cexptostr.ml" 69 1325 1352
+type(
+  string * int
+)
+"cexptostr.ml" 70 1353 1357 "cexptostr.ml" 70 1353 1367
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 70 1353 1372 "cexptostr.ml" 70 1353 1376
+type(
+  string
+)
+"cexptostr.ml" 70 1353 1378 "cexptostr.ml" 70 1353 1379
+type(
+  int
+)
+"cexptostr.ml" 70 1353 1371 "cexptostr.ml" 70 1353 1380
+type(
+  string * int
+)
+"cexptostr.ml" 71 1381 1385 "cexptostr.ml" 71 1381 1396
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 71 1381 1401 "cexptostr.ml" 71 1381 1405
+type(
+  string
+)
+"cexptostr.ml" 71 1381 1407 "cexptostr.ml" 71 1381 1408
+type(
+  int
+)
+"cexptostr.ml" 71 1381 1400 "cexptostr.ml" 71 1381 1409
+type(
+  string * int
+)
+"cexptostr.ml" 72 1410 1414 "cexptostr.ml" 72 1410 1424
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 72 1410 1429 "cexptostr.ml" 72 1410 1433
+type(
+  string
+)
+"cexptostr.ml" 72 1410 1435 "cexptostr.ml" 72 1410 1436
+type(
+  int
+)
+"cexptostr.ml" 72 1410 1428 "cexptostr.ml" 72 1410 1437
+type(
+  string * int
+)
+"cexptostr.ml" 73 1438 1442 "cexptostr.ml" 73 1438 1452
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 73 1438 1457 "cexptostr.ml" 73 1438 1461
+type(
+  string
+)
+"cexptostr.ml" 73 1438 1463 "cexptostr.ml" 73 1438 1464
+type(
+  int
+)
+"cexptostr.ml" 73 1438 1456 "cexptostr.ml" 73 1438 1465
+type(
+  string * int
+)
+"cexptostr.ml" 74 1466 1470 "cexptostr.ml" 74 1466 1480
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 74 1466 1485 "cexptostr.ml" 74 1466 1490
+type(
+  string
+)
+"cexptostr.ml" 74 1466 1492 "cexptostr.ml" 74 1466 1493
+type(
+  int
+)
+"cexptostr.ml" 74 1466 1484 "cexptostr.ml" 74 1466 1494
+type(
+  string * int
+)
+"cexptostr.ml" 75 1495 1499 "cexptostr.ml" 75 1495 1509
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 75 1495 1514 "cexptostr.ml" 75 1495 1519
+type(
+  string
+)
+"cexptostr.ml" 75 1495 1521 "cexptostr.ml" 75 1495 1522
+type(
+  int
+)
+"cexptostr.ml" 75 1495 1513 "cexptostr.ml" 75 1495 1523
+type(
+  string * int
+)
+"cexptostr.ml" 46 834 836 "cexptostr.ml" 75 1495 1524
+type(
+  string * int
+)
+"cexptostr.ml" 76 1525 1537 "cexptostr.ml" 76 1525 1538
+type(
+  Cabs.expression
+)
+type(
+  Cabs.expression
+)
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 76 1525 1528 "cexptostr.ml" 76 1525 1538
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 76 1525 1543 "cexptostr.ml" 76 1525 1545
+type(
+  string
+)
+"cexptostr.ml" 76 1525 1547 "cexptostr.ml" 76 1525 1548
+type(
+  int
+)
+"cexptostr.ml" 76 1525 1542 "cexptostr.ml" 76 1525 1549
+type(
+  string * int
+)
+"cexptostr.ml" 77 1550 1558 "cexptostr.ml" 77 1550 1559
+type(
+  Cabs.expression
+)
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 77 1550 1553 "cexptostr.ml" 77 1550 1559
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 77 1550 1564 "cexptostr.ml" 77 1550 1566
+type(
+  string
+)
+"cexptostr.ml" 77 1550 1568 "cexptostr.ml" 77 1550 1570
+type(
+  int
+)
+"cexptostr.ml" 77 1550 1563 "cexptostr.ml" 77 1550 1571
+type(
+  string * int
+)
+"cexptostr.ml" 78 1572 1580 "cexptostr.ml" 78 1572 1581
+type(
+  Cabs.expression list
+)
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 78 1572 1575 "cexptostr.ml" 78 1572 1581
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 78 1572 1586 "cexptostr.ml" 78 1572 1588
+type(
+  string
+)
+"cexptostr.ml" 78 1572 1590 "cexptostr.ml" 78 1572 1592
+type(
+  int
+)
+"cexptostr.ml" 78 1572 1585 "cexptostr.ml" 78 1572 1593
+type(
+  string * int
+)
+"cexptostr.ml" 79 1594 1603 "cexptostr.ml" 79 1594 1604
+type(
+  Cabs.expression list
+)
+"cexptostr.ml" 79 1594 1597 "cexptostr.ml" 79 1594 1604
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 79 1594 1609 "cexptostr.ml" 79 1594 1611
+type(
+  string
+)
+"cexptostr.ml" 79 1594 1613 "cexptostr.ml" 79 1594 1614
+type(
+  int
+)
+"cexptostr.ml" 79 1594 1608 "cexptostr.ml" 79 1594 1615
+type(
+  string * int
+)
+"cexptostr.ml" 80 1616 1628 "cexptostr.ml" 80 1616 1629
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 80 1616 1619 "cexptostr.ml" 80 1616 1629
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 80 1616 1634 "cexptostr.ml" 80 1616 1636
+type(
+  string
+)
+"cexptostr.ml" 80 1616 1638 "cexptostr.ml" 80 1616 1640
+type(
+  int
+)
+"cexptostr.ml" 80 1616 1633 "cexptostr.ml" 80 1616 1641
+type(
+  string * int
+)
+"cexptostr.ml" 81 1642 1654 "cexptostr.ml" 81 1642 1655
+type(
+  string
+)
+"cexptostr.ml" 81 1642 1645 "cexptostr.ml" 81 1642 1655
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 81 1642 1660 "cexptostr.ml" 81 1642 1662
+type(
+  string
+)
+"cexptostr.ml" 81 1642 1664 "cexptostr.ml" 81 1642 1666
+type(
+  int
+)
+"cexptostr.ml" 81 1642 1659 "cexptostr.ml" 81 1642 1667
+type(
+  string * int
+)
+"cexptostr.ml" 82 1668 1683 "cexptostr.ml" 82 1668 1684
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 82 1668 1671 "cexptostr.ml" 82 1668 1684
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 82 1668 1689 "cexptostr.ml" 82 1668 1691
+type(
+  string
+)
+"cexptostr.ml" 82 1668 1693 "cexptostr.ml" 82 1668 1695
+type(
+  int
+)
+"cexptostr.ml" 82 1668 1688 "cexptostr.ml" 82 1668 1696
+type(
+  string * int
+)
+"cexptostr.ml" 83 1697 1712 "cexptostr.ml" 83 1697 1713
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 83 1697 1700 "cexptostr.ml" 83 1697 1713
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 83 1697 1718 "cexptostr.ml" 83 1697 1720
+type(
+  string
+)
+"cexptostr.ml" 83 1697 1722 "cexptostr.ml" 83 1697 1724
+type(
+  int
+)
+"cexptostr.ml" 83 1697 1717 "cexptostr.ml" 83 1697 1725
+type(
+  string * int
+)
+"cexptostr.ml" 84 1726 1735 "cexptostr.ml" 84 1726 1736
+type(
+  Cabs.expression
+)
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 84 1726 1729 "cexptostr.ml" 84 1726 1736
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 84 1726 1741 "cexptostr.ml" 84 1726 1743
+type(
+  string
+)
+"cexptostr.ml" 84 1726 1745 "cexptostr.ml" 84 1726 1747
+type(
+  int
+)
+"cexptostr.ml" 84 1726 1740 "cexptostr.ml" 84 1726 1748
+type(
+  string * int
+)
+"cexptostr.ml" 85 1749 1761 "cexptostr.ml" 85 1749 1762
+type(
+  string
+)
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 85 1749 1752 "cexptostr.ml" 85 1749 1762
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 85 1749 1767 "cexptostr.ml" 85 1749 1769
+type(
+  string
+)
+"cexptostr.ml" 85 1749 1771 "cexptostr.ml" 85 1749 1773
+type(
+  int
+)
+"cexptostr.ml" 85 1749 1766 "cexptostr.ml" 85 1749 1774
+type(
+  string * int
+)
+"cexptostr.ml" 86 1775 1790 "cexptostr.ml" 86 1775 1791
+type(
+  string
+)
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 86 1775 1778 "cexptostr.ml" 86 1775 1791
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 86 1775 1796 "cexptostr.ml" 86 1775 1798
+type(
+  string
+)
+"cexptostr.ml" 86 1775 1800 "cexptostr.ml" 86 1775 1802
+type(
+  int
+)
+"cexptostr.ml" 86 1775 1795 "cexptostr.ml" 86 1775 1803
+type(
+  string * int
+)
+"cexptostr.ml" 87 1804 1816 "cexptostr.ml" 87 1804 1817
+type(
+  Cabs.body
+)
+"cexptostr.ml" 87 1804 1807 "cexptostr.ml" 87 1804 1817
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 87 1804 1822 "cexptostr.ml" 87 1804 1824
+type(
+  string
+)
+"cexptostr.ml" 87 1804 1826 "cexptostr.ml" 87 1804 1828
+type(
+  int
+)
+"cexptostr.ml" 87 1804 1821 "cexptostr.ml" 87 1804 1829
+type(
+  string * int
+)
+"cexptostr.ml" 88 1830 1844 "cexptostr.ml" 88 1830 1848
+type(
+  Cabs.expression
+)
+ident(
+  def expr "cexptostr.ml" 88 1830 1859 "cexptostr.ml" 88 1830 1876
+)
+"cexptostr.ml" 88 1830 1850 "cexptostr.ml" 88 1830 1851
+type(
+  string
+)
+"cexptostr.ml" 88 1830 1853 "cexptostr.ml" 88 1830 1854
+type(
+  int
+)
+"cexptostr.ml" 88 1830 1833 "cexptostr.ml" 88 1830 1855
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 88 1830 1859 "cexptostr.ml" 88 1830 1871
+type(
+  Cabs.expression -> string * int
+)
+ident(
+  int_ref get_operator "cexptostr.ml" 30 471 479 "cexptostr.ml" 30 471 491
+)
+"cexptostr.ml" 88 1830 1872 "cexptostr.ml" 88 1830 1876
+type(
+  Cabs.expression
+)
+ident(
+  int_ref expr "cexptostr.ml" 88 1830 1844 "cexptostr.ml" 88 1830 1848
+)
+"cexptostr.ml" 88 1830 1859 "cexptostr.ml" 88 1830 1876
+call(
+  tail
+)
+type(
+  string * int
+)
+"cexptostr.ml" 31 498 499 "cexptostr.ml" 88 1830 1876
+type(
+  string * int
+)
+"cexptostr.ml" 91 1879 1883 "cexptostr.ml" 91 1879 1896
+type(
+  string -> string
+)
+ident(
+  def escape_string "cexptostr.ml" 117 2581 2581 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 91 1879 1897 "cexptostr.ml" 91 1879 1900
+type(
+  string
+)
+ident(
+  def str "cexptostr.ml" 92 1903 1904 "cexptostr.ml" 115 2570 2578
+)
+"cexptostr.ml" 92 1903 1908 "cexptostr.ml" 92 1903 1911
+type(
+  int
+)
+ident(
+  def lng "cexptostr.ml" 93 1935 1936 "cexptostr.ml" 115 2570 2578
+)
+"cexptostr.ml" 92 1903 1914 "cexptostr.ml" 92 1903 1927
+type(
+  string -> int
+)
+ident(
+  ext_ref String.length
+)
+"cexptostr.ml" 92 1903 1928 "cexptostr.ml" 92 1903 1931
+type(
+  string
+)
+ident(
+  int_ref str "cexptostr.ml" 91 1879 1897 "cexptostr.ml" 91 1879 1900
+)
+"cexptostr.ml" 92 1903 1914 "cexptostr.ml" 92 1903 1931
+type(
+  int
+)
+"cexptostr.ml" 93 1935 1940 "cexptostr.ml" 93 1935 1944
+type(
+  int -> string
+)
+ident(
+  def conv "cexptostr.ml" 95 2058 2059 "cexptostr.ml" 115 2570 2578
+)
+"cexptostr.ml" 93 1935 1945 "cexptostr.ml" 93 1935 1950
+type(
+  int
+)
+ident(
+  def value "cexptostr.ml" 93 1935 1953 "cexptostr.ml" 94 1987 2054
+)
+"cexptostr.ml" 93 1935 1953 "cexptostr.ml" 93 1935 1964
+type(
+  int -> char -> string
+)
+ident(
+  ext_ref String.make
+)
+"cexptostr.ml" 93 1935 1965 "cexptostr.ml" 93 1935 1966
+type(
+  int
+)
+"cexptostr.ml" 93 1935 1968 "cexptostr.ml" 93 1935 1976
+type(
+  int -> char
+)
+ident(
+  ext_ref Char.chr
+)
+"cexptostr.ml" 93 1935 1978 "cexptostr.ml" 93 1935 1983
+type(
+  int
+)
+ident(
+  int_ref value "cexptostr.ml" 93 1935 1945 "cexptostr.ml" 93 1935 1950
+)
+"cexptostr.ml" 93 1935 1984 "cexptostr.ml" 93 1935 1985
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cexptostr.ml" 94 1987 1994 "cexptostr.ml" 94 1987 1999
+type(
+  int
+)
+ident(
+  int_ref value "cexptostr.ml" 93 1935 1945 "cexptostr.ml" 93 1935 1950
+)
+"cexptostr.ml" 94 1987 2000 "cexptostr.ml" 94 1987 2001
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"cexptostr.ml" 94 1987 2002 "cexptostr.ml" 94 1987 2004
+type(
+  int
+)
+"cexptostr.ml" 94 1987 1994 "cexptostr.ml" 94 1987 2004
+type(
+  bool
+)
+"cexptostr.ml" 94 1987 2011 "cexptostr.ml" 94 1987 2020
+type(
+  char -> int
+)
+ident(
+  ext_ref Char.code
+)
+"cexptostr.ml" 94 1987 2021 "cexptostr.ml" 94 1987 2024
+type(
+  char
+)
+"cexptostr.ml" 94 1987 2010 "cexptostr.ml" 94 1987 2025
+type(
+  int
+)
+"cexptostr.ml" 94 1987 2032 "cexptostr.ml" 94 1987 2041
+type(
+  char -> int
+)
+ident(
+  ext_ref Char.code
+)
+"cexptostr.ml" 94 1987 2042 "cexptostr.ml" 94 1987 2045
+type(
+  char
+)
+"cexptostr.ml" 94 1987 2032 "cexptostr.ml" 94 1987 2045
+type(
+  int
+)
+"cexptostr.ml" 94 1987 2046 "cexptostr.ml" 94 1987 2047
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( - )
+)
+"cexptostr.ml" 94 1987 2048 "cexptostr.ml" 94 1987 2050
+type(
+  int
+)
+"cexptostr.ml" 94 1987 2031 "cexptostr.ml" 94 1987 2051
+type(
+  int
+)
+"cexptostr.ml" 94 1987 1990 "cexptostr.ml" 94 1987 2052
+type(
+  int
+)
+"cexptostr.ml" 93 1935 1977 "cexptostr.ml" 94 1987 2053
+type(
+  int
+)
+"cexptostr.ml" 93 1935 1967 "cexptostr.ml" 94 1987 2054
+call(
+  stack
+)
+type(
+  char
+)
+"cexptostr.ml" 93 1935 1953 "cexptostr.ml" 94 1987 2054
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 95 2058 2067 "cexptostr.ml" 95 2058 2072
+type(
+  int -> string
+)
+ident(
+  def build "cexptostr.ml" 95 2058 2059 "cexptostr.ml" 115 2570 2578
+)
+"cexptostr.ml" 95 2058 2073 "cexptostr.ml" 95 2058 2076
+type(
+  int
+)
+ident(
+  def idx "cexptostr.ml" 96 2079 2081 "cexptostr.ml" 114 2540 2566
+)
+"cexptostr.ml" 96 2079 2084 "cexptostr.ml" 96 2079 2087
+type(
+  int
+)
+ident(
+  int_ref idx "cexptostr.ml" 95 2058 2073 "cexptostr.ml" 95 2058 2076
+)
+"cexptostr.ml" 96 2079 2088 "cexptostr.ml" 96 2079 2090
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( >= )
+)
+"cexptostr.ml" 96 2079 2091 "cexptostr.ml" 96 2079 2094
+type(
+  int
+)
+ident(
+  int_ref lng "cexptostr.ml" 92 1903 1908 "cexptostr.ml" 92 1903 1911
+)
+"cexptostr.ml" 96 2079 2084 "cexptostr.ml" 96 2079 2094
+type(
+  bool
+)
+"cexptostr.ml" 96 2079 2100 "cexptostr.ml" 96 2079 2102
+type(
+  string
+)
+"cexptostr.ml" 98 2110 2117 "cexptostr.ml" 98 2110 2120
+type(
+  string
+)
+ident(
+  def sub "cexptostr.ml" 99 2147 2150 "cexptostr.ml" 114 2540 2566
+)
+"cexptostr.ml" 98 2110 2123 "cexptostr.ml" 98 2110 2133
+type(
+  string -> int -> int -> string
+)
+ident(
+  ext_ref String.sub
+)
+"cexptostr.ml" 98 2110 2134 "cexptostr.ml" 98 2110 2137
+type(
+  string
+)
+ident(
+  int_ref str "cexptostr.ml" 91 1879 1897 "cexptostr.ml" 91 1879 1900
+)
+"cexptostr.ml" 98 2110 2138 "cexptostr.ml" 98 2110 2141
+type(
+  int
+)
+ident(
+  int_ref idx "cexptostr.ml" 95 2058 2073 "cexptostr.ml" 95 2058 2076
+)
+"cexptostr.ml" 98 2110 2142 "cexptostr.ml" 98 2110 2143
+type(
+  int
+)
+"cexptostr.ml" 98 2110 2123 "cexptostr.ml" 98 2110 2143
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 99 2147 2154 "cexptostr.ml" 99 2147 2157
+type(
+  string
+)
+ident(
+  def res "cexptostr.ml" 114 2540 2543 "cexptostr.ml" 114 2540 2566
+)
+"cexptostr.ml" 99 2147 2166 "cexptostr.ml" 99 2147 2169
+type(
+  string
+)
+ident(
+  int_ref sub "cexptostr.ml" 98 2110 2117 "cexptostr.ml" 98 2110 2120
+)
+"cexptostr.ml" 100 2175 2179 "cexptostr.ml" 100 2175 2183
+type(
+  string
+)
+"cexptostr.ml" 100 2175 2187 "cexptostr.ml" 100 2175 2192
+type(
+  string
+)
+"cexptostr.ml" 101 2193 2199 "cexptostr.ml" 101 2193 2203
+type(
+  string
+)
+"cexptostr.ml" 101 2193 2207 "cexptostr.ml" 101 2193 2213
+type(
+  string
+)
+"cexptostr.ml" 102 2214 2220 "cexptostr.ml" 102 2214 2223
+type(
+  string
+)
+"cexptostr.ml" 102 2214 2227 "cexptostr.ml" 102 2214 2232
+type(
+  string
+)
+"cexptostr.ml" 103 2233 2239 "cexptostr.ml" 103 2233 2243
+type(
+  string
+)
+"cexptostr.ml" 103 2233 2247 "cexptostr.ml" 103 2233 2252
+type(
+  string
+)
+"cexptostr.ml" 104 2253 2259 "cexptostr.ml" 104 2253 2263
+type(
+  string
+)
+"cexptostr.ml" 104 2253 2267 "cexptostr.ml" 104 2253 2272
+type(
+  string
+)
+"cexptostr.ml" 105 2273 2279 "cexptostr.ml" 105 2273 2283
+type(
+  string
+)
+"cexptostr.ml" 105 2273 2287 "cexptostr.ml" 105 2273 2292
+type(
+  string
+)
+"cexptostr.ml" 106 2293 2299 "cexptostr.ml" 106 2293 2305
+type(
+  string
+)
+"cexptostr.ml" 106 2293 2309 "cexptostr.ml" 106 2293 2314
+type(
+  string
+)
+"cexptostr.ml" 107 2315 2321 "cexptostr.ml" 107 2315 2322
+type(
+  string
+)
+"cexptostr.ml" 107 2315 2329 "cexptostr.ml" 107 2315 2332
+type(
+  string
+)
+ident(
+  int_ref sub "cexptostr.ml" 98 2110 2117 "cexptostr.ml" 98 2110 2120
+)
+"cexptostr.ml" 107 2315 2333 "cexptostr.ml" 107 2315 2334
+type(
+  string -> string -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"cexptostr.ml" 107 2315 2336 "cexptostr.ml" 107 2315 2348
+type(
+  char -> string
+)
+ident(
+  ext_ref Char.escaped
+)
+"cexptostr.ml" 107 2315 2350 "cexptostr.ml" 107 2315 2360
+type(
+  string -> int -> char
+)
+ident(
+  ext_ref String.get
+)
+"cexptostr.ml" 107 2315 2361 "cexptostr.ml" 107 2315 2364
+type(
+  string
+)
+ident(
+  int_ref sub "cexptostr.ml" 98 2110 2117 "cexptostr.ml" 98 2110 2120
+)
+"cexptostr.ml" 107 2315 2365 "cexptostr.ml" 107 2315 2366
+type(
+  int
+)
+"cexptostr.ml" 107 2315 2349 "cexptostr.ml" 107 2315 2367
+type(
+  char
+)
+"cexptostr.ml" 107 2315 2335 "cexptostr.ml" 107 2315 2368
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 107 2315 2329 "cexptostr.ml" 107 2315 2368
+type(
+  bool
+)
+"cexptostr.ml" 108 2369 2379 "cexptostr.ml" 108 2369 2382
+type(
+  string
+)
+ident(
+  int_ref sub "cexptostr.ml" 98 2110 2117 "cexptostr.ml" 98 2110 2120
+)
+"cexptostr.ml" 109 2383 2397 "cexptostr.ml" 109 2383 2401
+type(
+  int
+)
+ident(
+  def code "cexptostr.ml" 110 2436 2442 "cexptostr.ml" 113 2509 2536
+)
+"cexptostr.ml" 109 2383 2404 "cexptostr.ml" 109 2383 2413
+type(
+  char -> int
+)
+ident(
+  ext_ref Char.code
+)
+"cexptostr.ml" 109 2383 2415 "cexptostr.ml" 109 2383 2425
+type(
+  string -> int -> char
+)
+ident(
+  ext_ref String.get
+)
+"cexptostr.ml" 109 2383 2426 "cexptostr.ml" 109 2383 2429
+type(
+  string
+)
+ident(
+  int_ref sub "cexptostr.ml" 98 2110 2117 "cexptostr.ml" 98 2110 2120
+)
+"cexptostr.ml" 109 2383 2430 "cexptostr.ml" 109 2383 2431
+type(
+  int
+)
+"cexptostr.ml" 109 2383 2414 "cexptostr.ml" 109 2383 2432
+type(
+  char
+)
+"cexptostr.ml" 109 2383 2404 "cexptostr.ml" 109 2383 2432
+type(
+  int
+)
+"cexptostr.ml" 110 2436 2442 "cexptostr.ml" 110 2436 2446
+type(
+  string
+)
+"cexptostr.ml" 111 2447 2453 "cexptostr.ml" 111 2447 2454
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 111 2447 2456 "cexptostr.ml" 111 2447 2460
+type(
+  int -> string
+)
+ident(
+  int_ref conv "cexptostr.ml" 93 1935 1940 "cexptostr.ml" 93 1935 1944
+)
+"cexptostr.ml" 111 2447 2462 "cexptostr.ml" 111 2447 2466
+type(
+  int
+)
+ident(
+  int_ref code "cexptostr.ml" 109 2383 2397 "cexptostr.ml" 109 2383 2401
+)
+"cexptostr.ml" 111 2447 2467 "cexptostr.ml" 111 2447 2468
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( / )
+)
+"cexptostr.ml" 111 2447 2469 "cexptostr.ml" 111 2447 2471
+type(
+  int
+)
+"cexptostr.ml" 111 2447 2461 "cexptostr.ml" 111 2447 2472
+type(
+  int
+)
+"cexptostr.ml" 111 2447 2455 "cexptostr.ml" 111 2447 2473
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 112 2474 2480 "cexptostr.ml" 112 2474 2481
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 112 2474 2483 "cexptostr.ml" 112 2474 2487
+type(
+  int -> string
+)
+ident(
+  int_ref conv "cexptostr.ml" 93 1935 1940 "cexptostr.ml" 93 1935 1944
+)
+"cexptostr.ml" 112 2474 2490 "cexptostr.ml" 112 2474 2494
+type(
+  int
+)
+ident(
+  int_ref code "cexptostr.ml" 109 2383 2397 "cexptostr.ml" 109 2383 2401
+)
+"cexptostr.ml" 112 2474 2495 "cexptostr.ml" 112 2474 2498
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( mod )
+)
+"cexptostr.ml" 112 2474 2499 "cexptostr.ml" 112 2474 2501
+type(
+  int
+)
+"cexptostr.ml" 112 2474 2489 "cexptostr.ml" 112 2474 2502
+type(
+  int
+)
+"cexptostr.ml" 112 2474 2503 "cexptostr.ml" 112 2474 2504
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( / )
+)
+"cexptostr.ml" 112 2474 2505 "cexptostr.ml" 112 2474 2506
+type(
+  int
+)
+"cexptostr.ml" 112 2474 2488 "cexptostr.ml" 112 2474 2507
+type(
+  int
+)
+"cexptostr.ml" 112 2474 2482 "cexptostr.ml" 112 2474 2508
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 113 2509 2515 "cexptostr.ml" 113 2509 2516
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 113 2509 2518 "cexptostr.ml" 113 2509 2522
+type(
+  int -> string
+)
+ident(
+  int_ref conv "cexptostr.ml" 93 1935 1940 "cexptostr.ml" 93 1935 1944
+)
+"cexptostr.ml" 113 2509 2524 "cexptostr.ml" 113 2509 2528
+type(
+  int
+)
+ident(
+  int_ref code "cexptostr.ml" 109 2383 2397 "cexptostr.ml" 109 2383 2401
+)
+"cexptostr.ml" 113 2509 2529 "cexptostr.ml" 113 2509 2532
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( mod )
+)
+"cexptostr.ml" 113 2509 2533 "cexptostr.ml" 113 2509 2534
+type(
+  int
+)
+"cexptostr.ml" 113 2509 2523 "cexptostr.ml" 113 2509 2535
+type(
+  int
+)
+"cexptostr.ml" 113 2509 2517 "cexptostr.ml" 113 2509 2536
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 112 2474 2482 "cexptostr.ml" 113 2509 2536
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 111 2447 2455 "cexptostr.ml" 113 2509 2536
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 110 2436 2442 "cexptostr.ml" 113 2509 2536
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 109 2383 2393 "cexptostr.ml" 113 2509 2536
+type(
+  string
+)
+"cexptostr.ml" 107 2315 2326 "cexptostr.ml" 113 2509 2536
+type(
+  string
+)
+"cexptostr.ml" 99 2147 2160 "cexptostr.ml" 113 2509 2536
+type(
+  string
+)
+"cexptostr.ml" 114 2540 2543 "cexptostr.ml" 114 2540 2546
+type(
+  string
+)
+ident(
+  int_ref res "cexptostr.ml" 99 2147 2154 "cexptostr.ml" 99 2147 2157
+)
+"cexptostr.ml" 114 2540 2547 "cexptostr.ml" 114 2540 2548
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 114 2540 2550 "cexptostr.ml" 114 2540 2555
+type(
+  int -> string
+)
+ident(
+  int_ref build "cexptostr.ml" 95 2058 2067 "cexptostr.ml" 95 2058 2072
+)
+"cexptostr.ml" 114 2540 2557 "cexptostr.ml" 114 2540 2560
+type(
+  int
+)
+ident(
+  int_ref idx "cexptostr.ml" 95 2058 2073 "cexptostr.ml" 95 2058 2076
+)
+"cexptostr.ml" 114 2540 2561 "cexptostr.ml" 114 2540 2562
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cexptostr.ml" 114 2540 2563 "cexptostr.ml" 114 2540 2564
+type(
+  int
+)
+"cexptostr.ml" 114 2540 2556 "cexptostr.ml" 114 2540 2565
+type(
+  int
+)
+"cexptostr.ml" 114 2540 2549 "cexptostr.ml" 114 2540 2566
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 114 2540 2543 "cexptostr.ml" 114 2540 2566
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 99 2147 2150 "cexptostr.ml" 114 2540 2566
+type(
+  string
+)
+"cexptostr.ml" 98 2110 2113 "cexptostr.ml" 114 2540 2566
+type(
+  string
+)
+"cexptostr.ml" 96 2079 2081 "cexptostr.ml" 114 2540 2566
+type(
+  string
+)
+"cexptostr.ml" 115 2570 2571 "cexptostr.ml" 115 2570 2576
+type(
+  int -> string
+)
+ident(
+  int_ref build "cexptostr.ml" 95 2058 2067 "cexptostr.ml" 95 2058 2072
+)
+"cexptostr.ml" 115 2570 2577 "cexptostr.ml" 115 2570 2578
+type(
+  int
+)
+"cexptostr.ml" 115 2570 2571 "cexptostr.ml" 115 2570 2578
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 95 2058 2059 "cexptostr.ml" 115 2570 2578
+type(
+  string
+)
+"cexptostr.ml" 93 1935 1936 "cexptostr.ml" 115 2570 2578
+type(
+  string
+)
+"cexptostr.ml" 92 1903 1904 "cexptostr.ml" 115 2570 2578
+type(
+  string
+)
+"cexptostr.ml" 117 2581 2585 "cexptostr.ml" 117 2581 2593
+type(
+  'a -> unit
+)
+ident(
+  def new_line "cexptostr.ml" 133 2981 2982 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 117 2581 2594 "cexptostr.ml" 117 2581 2595
+type(
+  'a
+)
+"cexptostr.ml" 118 2598 2600 "cexptostr.ml" 118 2598 2611
+type(
+  out_channel -> char -> unit
+)
+ident(
+  ext_ref Pervasives.output_char
+)
+"cexptostr.ml" 118 2598 2614 "cexptostr.ml" 118 2598 2620
+type(
+  out_channel
+)
+ident(
+  ext_ref Pervasives.stdout
+)
+"cexptostr.ml" 118 2598 2621 "cexptostr.ml" 118 2598 2625
+type(
+  char
+)
+"cexptostr.ml" 118 2598 2600 "cexptostr.ml" 118 2598 2625
+call(
+  tail
+)
+type(
+  unit
+)
+"cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  def base_typeToString "cexptostr.ml" 133 2981 2982 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+type(
+  string
+)
+ident(
+  def expP "cexptostr.ml" 133 2981 3013 "cexptostr.ml" 154 4240 4273
+)
+"cexptostr.ml" 133 2981 3013 "cexptostr.ml" 133 2981 3016
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 134 3019 3021 "cexptostr.ml" 154 4240 4273
+)
+"cexptostr.ml" 134 3019 3027 "cexptostr.ml" 134 3019 3030
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 133 2981 3013 "cexptostr.ml" 133 2981 3016
+)
+"cexptostr.ml" 136 3039 3043 "cexptostr.ml" 136 3039 3047
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 136 3039 3057 "cexptostr.ml" 136 3039 3061
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 136 3039 3061 "cexptostr.ml" 136 3039 3062
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 136 3039 3063 "cexptostr.ml" 136 3039 3069
+type(
+  string
+)
+"cexptostr.ml" 136 3039 3057 "cexptostr.ml" 136 3039 3069
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 137 3070 3079 "cexptostr.ml" 137 3070 3083
+type(
+  Cabs.sign
+)
+ident(
+  def sign "cexptostr.ml" 137 3070 3092 "cexptostr.ml" 137 3070 3124
+)
+"cexptostr.ml" 137 3070 3074 "cexptostr.ml" 137 3070 3083
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 137 3070 3092 "cexptostr.ml" 137 3070 3096
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 137 3070 3096 "cexptostr.ml" 137 3070 3097
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 137 3070 3100 "cexptostr.ml" 137 3070 3108
+type(
+  Cabs.sign -> string
+)
+ident(
+  int_ref get_sign "cexptostr.ml" 16 251 255 "cexptostr.ml" 16 251 263
+)
+"cexptostr.ml" 137 3070 3109 "cexptostr.ml" 137 3070 3113
+type(
+  Cabs.sign
+)
+ident(
+  int_ref sign "cexptostr.ml" 137 3070 3079 "cexptostr.ml" 137 3070 3083
+)
+"cexptostr.ml" 137 3070 3099 "cexptostr.ml" 137 3070 3114
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 137 3070 3115 "cexptostr.ml" 137 3070 3116
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 137 3070 3117 "cexptostr.ml" 137 3070 3123
+type(
+  string
+)
+"cexptostr.ml" 137 3070 3098 "cexptostr.ml" 137 3070 3124
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 137 3070 3092 "cexptostr.ml" 137 3070 3124
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 138 3125 3134 "cexptostr.ml" 138 3125 3138
+type(
+  Cabs.size
+)
+ident(
+  def size "cexptostr.ml" 138 3125 3152 "cexptostr.ml" 138 3125 3201
+)
+"cexptostr.ml" 138 3125 3140 "cexptostr.ml" 138 3125 3144
+type(
+  Cabs.sign
+)
+ident(
+  def sign "cexptostr.ml" 138 3125 3152 "cexptostr.ml" 138 3125 3201
+)
+"cexptostr.ml" 138 3125 3129 "cexptostr.ml" 138 3125 3145
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 138 3125 3152 "cexptostr.ml" 138 3125 3156
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 138 3125 3156 "cexptostr.ml" 138 3125 3157
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 138 3125 3160 "cexptostr.ml" 138 3125 3168
+type(
+  Cabs.sign -> string
+)
+ident(
+  int_ref get_sign "cexptostr.ml" 16 251 255 "cexptostr.ml" 16 251 263
+)
+"cexptostr.ml" 138 3125 3169 "cexptostr.ml" 138 3125 3173
+type(
+  Cabs.sign
+)
+ident(
+  int_ref sign "cexptostr.ml" 138 3125 3140 "cexptostr.ml" 138 3125 3144
+)
+"cexptostr.ml" 138 3125 3159 "cexptostr.ml" 138 3125 3174
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 138 3125 3175 "cexptostr.ml" 138 3125 3176
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 138 3125 3178 "cexptostr.ml" 138 3125 3186
+type(
+  Cabs.size -> string
+)
+ident(
+  int_ref get_size "cexptostr.ml" 22 350 354 "cexptostr.ml" 22 350 362
+)
+"cexptostr.ml" 138 3125 3187 "cexptostr.ml" 138 3125 3191
+type(
+  Cabs.size
+)
+ident(
+  int_ref size "cexptostr.ml" 138 3125 3134 "cexptostr.ml" 138 3125 3138
+)
+"cexptostr.ml" 138 3125 3177 "cexptostr.ml" 138 3125 3192
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 138 3125 3193 "cexptostr.ml" 138 3125 3194
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 138 3125 3195 "cexptostr.ml" 138 3125 3200
+type(
+  string
+)
+"cexptostr.ml" 138 3125 3177 "cexptostr.ml" 138 3125 3200
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 138 3125 3158 "cexptostr.ml" 138 3125 3201
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 138 3125 3152 "cexptostr.ml" 138 3125 3201
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 139 3202 3216 "cexptostr.ml" 139 3202 3217
+type(
+  Cabs.base_type
+)
+ident(
+  def t "cexptostr.ml" 139 3202 3256 "cexptostr.ml" 139 3202 3282
+)
+"cexptostr.ml" 139 3202 3219 "cexptostr.ml" 139 3202 3220
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 139 3202 3206 "cexptostr.ml" 139 3202 3221
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 139 3202 3256 "cexptostr.ml" 139 3202 3273
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 139 3202 3274 "cexptostr.ml" 139 3202 3278
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 139 3202 3279 "cexptostr.ml" 139 3202 3282
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 133 2981 3013 "cexptostr.ml" 133 2981 3016
+)
+"cexptostr.ml" 139 3202 3256 "cexptostr.ml" 139 3202 3282
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 140 3283 3293 "cexptostr.ml" 140 3283 3297
+type(
+  bool
+)
+ident(
+  def size "cexptostr.ml" 140 3283 3305 "cexptostr.ml" 140 3283 3353
+)
+"cexptostr.ml" 140 3283 3287 "cexptostr.ml" 140 3283 3297
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 140 3283 3305 "cexptostr.ml" 140 3283 3309
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 140 3283 3309 "cexptostr.ml" 140 3283 3310
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 140 3283 3316 "cexptostr.ml" 140 3283 3320
+type(
+  bool
+)
+ident(
+  int_ref size "cexptostr.ml" 140 3283 3293 "cexptostr.ml" 140 3283 3297
+)
+"cexptostr.ml" 140 3283 3326 "cexptostr.ml" 140 3283 3333
+type(
+  string
+)
+"cexptostr.ml" 140 3283 3339 "cexptostr.ml" 140 3283 3341
+type(
+  string
+)
+"cexptostr.ml" 140 3283 3312 "cexptostr.ml" 140 3283 3342
+type(
+  string
+)
+"cexptostr.ml" 140 3283 3343 "cexptostr.ml" 140 3283 3344
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 140 3283 3345 "cexptostr.ml" 140 3283 3352
+type(
+  string
+)
+"cexptostr.ml" 140 3283 3311 "cexptostr.ml" 140 3283 3353
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 140 3283 3305 "cexptostr.ml" 140 3283 3353
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 141 3354 3365 "cexptostr.ml" 141 3354 3369
+type(
+  bool
+)
+ident(
+  def size "cexptostr.ml" 141 3354 3377 "cexptostr.ml" 141 3354 3426
+)
+"cexptostr.ml" 141 3354 3358 "cexptostr.ml" 141 3354 3369
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 141 3354 3377 "cexptostr.ml" 141 3354 3381
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 141 3354 3381 "cexptostr.ml" 141 3354 3382
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 141 3354 3388 "cexptostr.ml" 141 3354 3392
+type(
+  bool
+)
+ident(
+  int_ref size "cexptostr.ml" 141 3354 3365 "cexptostr.ml" 141 3354 3369
+)
+"cexptostr.ml" 141 3354 3398 "cexptostr.ml" 141 3354 3405
+type(
+  string
+)
+"cexptostr.ml" 141 3354 3411 "cexptostr.ml" 141 3354 3413
+type(
+  string
+)
+"cexptostr.ml" 141 3354 3384 "cexptostr.ml" 141 3354 3414
+type(
+  string
+)
+"cexptostr.ml" 141 3354 3415 "cexptostr.ml" 141 3354 3416
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 141 3354 3417 "cexptostr.ml" 141 3354 3425
+type(
+  string
+)
+"cexptostr.ml" 141 3354 3383 "cexptostr.ml" 141 3354 3426
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 141 3354 3377 "cexptostr.ml" 141 3354 3426
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 142 3427 3442 "cexptostr.ml" 142 3427 3444
+type(
+  string
+)
+ident(
+  def id "cexptostr.ml" 142 3427 3452 "cexptostr.ml" 142 3427 3460
+)
+"cexptostr.ml" 142 3427 3431 "cexptostr.ml" 142 3427 3444
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 142 3427 3452 "cexptostr.ml" 142 3427 3456
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 142 3427 3456 "cexptostr.ml" 142 3427 3457
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 142 3427 3458 "cexptostr.ml" 142 3427 3460
+type(
+  string
+)
+ident(
+  int_ref id "cexptostr.ml" 142 3427 3442 "cexptostr.ml" 142 3427 3444
+)
+"cexptostr.ml" 142 3427 3452 "cexptostr.ml" 142 3427 3460
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 143 3461 3477 "cexptostr.ml" 143 3461 3478
+type(
+  string
+)
+"cexptostr.ml" 143 3461 3489 "cexptostr.ml" 143 3461 3490
+type(
+  Cabs.enum_item list
+)
+"cexptostr.ml" 143 3461 3465 "cexptostr.ml" 143 3461 3491
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 143 3461 3495 "cexptostr.ml" 143 3461 3499
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 143 3461 3499 "cexptostr.ml" 143 3461 3500
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 143 3461 3500 "cexptostr.ml" 143 3461 3514
+type(
+  string
+)
+"cexptostr.ml" 143 3461 3495 "cexptostr.ml" 143 3461 3514
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 144 3538 3556 "cexptostr.ml" 144 3538 3557
+type(
+  string
+)
+"cexptostr.ml" 144 3538 3567 "cexptostr.ml" 144 3538 3568
+type(
+  Cabs.name_group list
+)
+"cexptostr.ml" 144 3538 3542 "cexptostr.ml" 144 3538 3569
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 144 3538 3572 "cexptostr.ml" 144 3538 3576
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 144 3538 3576 "cexptostr.ml" 144 3538 3577
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 144 3538 3577 "cexptostr.ml" 144 3538 3599
+type(
+  string
+)
+"cexptostr.ml" 144 3538 3572 "cexptostr.ml" 144 3538 3599
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 145 3638 3655 "cexptostr.ml" 145 3638 3656
+type(
+  string
+)
+"cexptostr.ml" 145 3638 3666 "cexptostr.ml" 145 3638 3667
+type(
+  Cabs.name_group list
+)
+"cexptostr.ml" 145 3638 3642 "cexptostr.ml" 145 3638 3668
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 145 3638 3672 "cexptostr.ml" 145 3638 3676
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 145 3638 3676 "cexptostr.ml" 145 3638 3677
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 145 3638 3677 "cexptostr.ml" 145 3638 3699
+type(
+  string
+)
+"cexptostr.ml" 145 3638 3672 "cexptostr.ml" 145 3638 3699
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 146 3737 3748 "cexptostr.ml" 146 3737 3751
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 146 3737 3765 "cexptostr.ml" 146 3737 3791
+)
+"cexptostr.ml" 146 3737 3753 "cexptostr.ml" 146 3737 3754
+type(
+  Cabs.single_name list
+)
+"cexptostr.ml" 146 3737 3756 "cexptostr.ml" 146 3737 3757
+type(
+  bool
+)
+"cexptostr.ml" 146 3737 3747 "cexptostr.ml" 146 3737 3758
+type(
+  Cabs.proto
+)
+"cexptostr.ml" 146 3737 3741 "cexptostr.ml" 146 3737 3758
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 146 3737 3765 "cexptostr.ml" 146 3737 3782
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 146 3737 3783 "cexptostr.ml" 146 3737 3787
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 146 3737 3788 "cexptostr.ml" 146 3737 3791
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 146 3737 3748 "cexptostr.ml" 146 3737 3751
+)
+"cexptostr.ml" 146 3737 3765 "cexptostr.ml" 146 3737 3791
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 147 3792 3807 "cexptostr.ml" 147 3792 3810
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 147 3792 3822 "cexptostr.ml" 147 3792 3848
+)
+"cexptostr.ml" 147 3792 3812 "cexptostr.ml" 147 3792 3813
+type(
+  string list
+)
+"cexptostr.ml" 147 3792 3815 "cexptostr.ml" 147 3792 3816
+type(
+  bool
+)
+"cexptostr.ml" 147 3792 3806 "cexptostr.ml" 147 3792 3817
+type(
+  Cabs.old_proto
+)
+"cexptostr.ml" 147 3792 3796 "cexptostr.ml" 147 3792 3817
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 147 3792 3822 "cexptostr.ml" 147 3792 3839
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 147 3792 3840 "cexptostr.ml" 147 3792 3844
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 147 3792 3845 "cexptostr.ml" 147 3792 3848
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 147 3792 3807 "cexptostr.ml" 147 3792 3810
+)
+"cexptostr.ml" 147 3792 3822 "cexptostr.ml" 147 3792 3848
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 148 3849 3857 "cexptostr.ml" 148 3849 3860
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 148 3849 3869 "cexptostr.ml" 148 3849 3895
+)
+"cexptostr.ml" 148 3849 3853 "cexptostr.ml" 148 3849 3860
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 148 3849 3869 "cexptostr.ml" 148 3849 3886
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 148 3849 3887 "cexptostr.ml" 148 3849 3891
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 148 3849 3892 "cexptostr.ml" 148 3849 3895
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 148 3849 3857 "cexptostr.ml" 148 3849 3860
+)
+"cexptostr.ml" 148 3849 3869 "cexptostr.ml" 148 3849 3895
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 149 3896 3913 "cexptostr.ml" 149 3896 3916
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 149 3896 3923 "cexptostr.ml" 149 3896 3949
+)
+"cexptostr.ml" 149 3896 3900 "cexptostr.ml" 149 3896 3916
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 149 3896 3923 "cexptostr.ml" 149 3896 3940
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 149 3896 3941 "cexptostr.ml" 149 3896 3945
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 149 3896 3946 "cexptostr.ml" 149 3896 3949
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 149 3896 3913 "cexptostr.ml" 149 3896 3916
+)
+"cexptostr.ml" 149 3896 3923 "cexptostr.ml" 149 3896 3949
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 150 3950 3961 "cexptostr.ml" 150 3950 3964
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 150 3950 3975 "cexptostr.ml" 150 3950 4001
+)
+"cexptostr.ml" 150 3950 3966 "cexptostr.ml" 150 3950 3967
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 150 3950 3954 "cexptostr.ml" 150 3950 3968
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 150 3950 3975 "cexptostr.ml" 150 3950 3992
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 150 3950 3993 "cexptostr.ml" 150 3950 3997
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 150 3950 3998 "cexptostr.ml" 150 3950 4001
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 150 3950 3961 "cexptostr.ml" 150 3950 3964
+)
+"cexptostr.ml" 150 3950 3975 "cexptostr.ml" 150 3950 4001
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 151 4026 4036 "cexptostr.ml" 151 4026 4039
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 151 4026 4048 "cexptostr.ml" 151 4026 4074
+)
+"cexptostr.ml" 151 4026 4030 "cexptostr.ml" 151 4026 4039
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 151 4026 4048 "cexptostr.ml" 151 4026 4065
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 151 4026 4066 "cexptostr.ml" 151 4026 4070
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 151 4026 4071 "cexptostr.ml" 151 4026 4074
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 151 4026 4036 "cexptostr.ml" 151 4026 4039
+)
+"cexptostr.ml" 151 4026 4048 "cexptostr.ml" 151 4026 4074
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 152 4075 4088 "cexptostr.ml" 152 4075 4091
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 152 4075 4099 "cexptostr.ml" 152 4075 4125
+)
+"cexptostr.ml" 152 4075 4079 "cexptostr.ml" 152 4075 4091
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 152 4075 4099 "cexptostr.ml" 152 4075 4116
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 152 4075 4117 "cexptostr.ml" 152 4075 4121
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 152 4075 4122 "cexptostr.ml" 152 4075 4125
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 152 4075 4088 "cexptostr.ml" 152 4075 4091
+)
+"cexptostr.ml" 152 4075 4099 "cexptostr.ml" 152 4075 4125
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 153 4126 4149 "cexptostr.ml" 153 4126 4150
+type(
+  Cabs.gnu_attrs
+)
+"cexptostr.ml" 153 4126 4152 "cexptostr.ml" 153 4126 4155
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 153 4126 4161 "cexptostr.ml" 153 4126 4239
+)
+"cexptostr.ml" 153 4126 4130 "cexptostr.ml" 153 4126 4156
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 153 4126 4161 "cexptostr.ml" 153 4126 4165
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 153 4126 4166 "cexptostr.ml" 153 4126 4167
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 153 4126 4194 "cexptostr.ml" 153 4126 4213
+type(
+  string
+)
+"cexptostr.ml" 153 4126 4213 "cexptostr.ml" 153 4126 4214
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 153 4126 4215 "cexptostr.ml" 153 4126 4232
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 153 4126 4233 "cexptostr.ml" 153 4126 4235
+type(
+  string
+)
+"cexptostr.ml" 153 4126 4236 "cexptostr.ml" 153 4126 4239
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 153 4126 4152 "cexptostr.ml" 153 4126 4155
+)
+"cexptostr.ml" 153 4126 4215 "cexptostr.ml" 153 4126 4239
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 153 4126 4194 "cexptostr.ml" 153 4126 4239
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 153 4126 4161 "cexptostr.ml" 153 4126 4239
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 154 4240 4244 "cexptostr.ml" 154 4240 4245
+type(
+  Cabs.base_type
+)
+"cexptostr.ml" 154 4240 4269 "cexptostr.ml" 154 4240 4273
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 133 2981 3008 "cexptostr.ml" 133 2981 3012
+)
+"cexptostr.ml" 134 3019 3021 "cexptostr.ml" 154 4240 4273
+type(
+  string
+)
+"cexptostr.ml" 156 4278 4284 "cexptostr.ml" 156 4278 4300
+type(
+  Cabs.base_type -> string
+)
+ident(
+  def onlytypeToString "cexptostr.ml" 133 2981 2982 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 156 4278 4301 "cexptostr.ml" 156 4278 4304
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 157 4307 4310 "cexptostr.ml" 157 4307 4335
+)
+"cexptostr.ml" 157 4307 4310 "cexptostr.ml" 157 4307 4327
+type(
+  string -> Cabs.base_type -> string
+)
+ident(
+  int_ref base_typeToString "cexptostr.ml" 133 2981 2990 "cexptostr.ml" 133 2981 3007
+)
+"cexptostr.ml" 157 4307 4328 "cexptostr.ml" 157 4307 4330
+type(
+  string
+)
+"cexptostr.ml" 157 4307 4331 "cexptostr.ml" 157 4307 4334
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 156 4278 4301 "cexptostr.ml" 156 4278 4304
+)
+"cexptostr.ml" 157 4307 4310 "cexptostr.ml" 157 4307 4335
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 161 4414 4420 "cexptostr.ml" 161 4414 4436
+type(
+  Cabs.constant -> string
+)
+ident(
+  def constantToString "cexptostr.ml" 133 2981 2982 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 161 4414 4437 "cexptostr.ml" 161 4414 4440
+type(
+  Cabs.constant
+)
+ident(
+  def cst "cexptostr.ml" 162 4443 4446 "cexptostr.ml" 169 4761 4807
+)
+"cexptostr.ml" 162 4443 4452 "cexptostr.ml" 162 4443 4455
+type(
+  Cabs.constant
+)
+ident(
+  int_ref cst "cexptostr.ml" 161 4414 4437 "cexptostr.ml" 161 4414 4440
+)
+"cexptostr.ml" 163 4461 4474 "cexptostr.ml" 163 4461 4475
+type(
+  string
+)
+ident(
+  def i "cexptostr.ml" 163 4461 4485 "cexptostr.ml" 163 4461 4486
+)
+"cexptostr.ml" 163 4461 4464 "cexptostr.ml" 163 4461 4475
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 163 4461 4485 "cexptostr.ml" 163 4461 4486
+type(
+  string
+)
+ident(
+  int_ref i "cexptostr.ml" 163 4461 4474 "cexptostr.ml" 163 4461 4475
+)
+"cexptostr.ml" 164 4487 4504 "cexptostr.ml" 164 4487 4505
+type(
+  string
+)
+ident(
+  def r "cexptostr.ml" 164 4487 4512 "cexptostr.ml" 164 4487 4513
+)
+"cexptostr.ml" 164 4487 4492 "cexptostr.ml" 164 4487 4505
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 164 4487 4512 "cexptostr.ml" 164 4487 4513
+type(
+  string
+)
+ident(
+  int_ref r "cexptostr.ml" 164 4487 4504 "cexptostr.ml" 164 4487 4505
+)
+"cexptostr.ml" 165 4514 4530 "cexptostr.ml" 165 4514 4531
+type(
+  string
+)
+ident(
+  def c "cexptostr.ml" 165 4514 4539 "cexptostr.ml" 165 4514 4568
+)
+"cexptostr.ml" 165 4514 4519 "cexptostr.ml" 165 4514 4531
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 165 4514 4539 "cexptostr.ml" 165 4514 4542
+type(
+  string
+)
+"cexptostr.ml" 165 4514 4543 "cexptostr.ml" 165 4514 4544
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 165 4514 4546 "cexptostr.ml" 165 4514 4559
+type(
+  string -> string
+)
+ident(
+  int_ref escape_string "cexptostr.ml" 91 1879 1883 "cexptostr.ml" 91 1879 1896
+)
+"cexptostr.ml" 165 4514 4560 "cexptostr.ml" 165 4514 4561
+type(
+  string
+)
+ident(
+  int_ref c "cexptostr.ml" 165 4514 4530 "cexptostr.ml" 165 4514 4531
+)
+"cexptostr.ml" 165 4514 4545 "cexptostr.ml" 165 4514 4562
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 165 4514 4563 "cexptostr.ml" 165 4514 4564
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 165 4514 4565 "cexptostr.ml" 165 4514 4568
+type(
+  string
+)
+"cexptostr.ml" 165 4514 4545 "cexptostr.ml" 165 4514 4568
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 165 4514 4539 "cexptostr.ml" 165 4514 4568
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 166 4569 4587 "cexptostr.ml" 166 4569 4588
+type(
+  string
+)
+ident(
+  def s "cexptostr.ml" 166 4569 4594 "cexptostr.ml" 166 4569 4625
+)
+"cexptostr.ml" 166 4569 4574 "cexptostr.ml" 166 4569 4588
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 166 4569 4594 "cexptostr.ml" 166 4569 4598
+type(
+  string
+)
+"cexptostr.ml" 166 4569 4599 "cexptostr.ml" 166 4569 4600
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 166 4569 4602 "cexptostr.ml" 166 4569 4615
+type(
+  string -> string
+)
+ident(
+  int_ref escape_string "cexptostr.ml" 91 1879 1883 "cexptostr.ml" 91 1879 1896
+)
+"cexptostr.ml" 166 4569 4616 "cexptostr.ml" 166 4569 4617
+type(
+  string
+)
+ident(
+  int_ref s "cexptostr.ml" 166 4569 4587 "cexptostr.ml" 166 4569 4588
+)
+"cexptostr.ml" 166 4569 4601 "cexptostr.ml" 166 4569 4618
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 166 4569 4619 "cexptostr.ml" 166 4569 4620
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 166 4569 4621 "cexptostr.ml" 166 4569 4625
+type(
+  string
+)
+"cexptostr.ml" 166 4569 4601 "cexptostr.ml" 166 4569 4625
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 166 4569 4594 "cexptostr.ml" 166 4569 4625
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 167 4626 4646 "cexptostr.ml" 167 4626 4650
+type(
+  Cabs.expression list
+)
+ident(
+  def exps "cexptostr.ml" 167 4626 4654 "cexptostr.ml" 167 4626 4687
+)
+"cexptostr.ml" 167 4626 4631 "cexptostr.ml" 167 4626 4650
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 167 4626 4654 "cexptostr.ml" 167 4626 4658
+type(
+  string
+)
+"cexptostr.ml" 167 4626 4658 "cexptostr.ml" 167 4626 4659
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 167 4626 4659 "cexptostr.ml" 167 4626 4677
+type(
+  Cabs.expression list -> string
+)
+ident(
+  int_ref comma_expsToString "cexptostr.ml" 172 4815 4821 "cexptostr.ml" 172 4815 4839
+)
+"cexptostr.ml" 167 4626 4678 "cexptostr.ml" 167 4626 4682
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref exps "cexptostr.ml" 167 4626 4646 "cexptostr.ml" 167 4626 4650
+)
+"cexptostr.ml" 167 4626 4659 "cexptostr.ml" 167 4626 4682
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 167 4626 4683 "cexptostr.ml" 167 4626 4684
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 167 4626 4684 "cexptostr.ml" 167 4626 4687
+type(
+  string
+)
+"cexptostr.ml" 167 4626 4659 "cexptostr.ml" 167 4626 4687
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 167 4626 4654 "cexptostr.ml" 167 4626 4687
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 168 4717 4733 "cexptostr.ml" 168 4717 4734
+type(
+  int
+)
+ident(
+  def i "cexptostr.ml" 168 4717 4739 "cexptostr.ml" 168 4717 4760
+)
+"cexptostr.ml" 168 4717 4722 "cexptostr.ml" 168 4717 4734
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 168 4717 4739 "cexptostr.ml" 168 4717 4753
+type(
+  (int -> string, unit, string) format -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"cexptostr.ml" 168 4717 4754 "cexptostr.ml" 168 4717 4758
+type(
+  (int -> string, unit, string) format
+)
+"cexptostr.ml" 168 4717 4759 "cexptostr.ml" 168 4717 4760
+type(
+  int
+)
+ident(
+  int_ref i "cexptostr.ml" 168 4717 4733 "cexptostr.ml" 168 4717 4734
+)
+"cexptostr.ml" 168 4717 4739 "cexptostr.ml" 168 4717 4760
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 169 4761 4779 "cexptostr.ml" 169 4761 4780
+type(
+  float
+)
+ident(
+  def r "cexptostr.ml" 169 4761 4785 "cexptostr.ml" 169 4761 4807
+)
+"cexptostr.ml" 169 4761 4766 "cexptostr.ml" 169 4761 4780
+type(
+  Cabs.constant
+)
+"cexptostr.ml" 169 4761 4785 "cexptostr.ml" 169 4761 4799
+type(
+  (float -> string, unit, string) format -> float -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"cexptostr.ml" 169 4761 4800 "cexptostr.ml" 169 4761 4804
+type(
+  (float -> string, unit, string) format
+)
+"cexptostr.ml" 169 4761 4806 "cexptostr.ml" 169 4761 4807
+type(
+  float
+)
+ident(
+  int_ref r "cexptostr.ml" 169 4761 4779 "cexptostr.ml" 169 4761 4780
+)
+"cexptostr.ml" 169 4761 4785 "cexptostr.ml" 169 4761 4807
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 162 4443 4446 "cexptostr.ml" 169 4761 4807
+type(
+  string
+)
+"cexptostr.ml" 172 4815 4821 "cexptostr.ml" 172 4815 4839
+type(
+  Cabs.expression list -> string
+)
+ident(
+  def comma_expsToString "cexptostr.ml" 133 2981 2982 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 172 4815 4848 "cexptostr.ml" 172 4815 4849
+type(
+  Cabs.expression list
+)
+"cexptostr.ml" 173 4852 4855 "cexptostr.ml" 173 4852 4868
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"cexptostr.ml" 173 4852 4869 "cexptostr.ml" 173 4852 4912
+type(
+  (unit, out_channel, unit) format
+)
+"cexptostr.ml" 173 4852 4855 "cexptostr.ml" 173 4852 4912
+call(
+  stack
+)
+type(
+  unit
+)
+"cexptostr.ml" 174 4914 4917 "cexptostr.ml" 174 4914 4933
+type(
+  string
+)
+"cexptostr.ml" 173 4852 4855 "cexptostr.ml" 174 4914 4933
+type(
+  string
+)
+"cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  def expressionToString "cexptostr.ml" 133 2981 2982 "cexptostr.ml" 1 0 -1
+)
+"cexptostr.ml" 176 4938 4963 "cexptostr.ml" 176 4938 4968
+type(
+  string
+)
+ident(
+  def expPr "cexptostr.ml" 176 4938 4979 "cexptostr.ml" 204 6637 6642
+)
+"cexptostr.ml" 176 4938 4980 "cexptostr.ml" 176 4938 4983
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 176 4938 4998 "cexptostr.ml" 204 6637 6642
+)
+"cexptostr.ml" 176 4938 4999 "cexptostr.ml" 176 4938 5002
+type(
+  int
+)
+ident(
+  def lvl "cexptostr.ml" 177 5012 5014 "cexptostr.ml" 204 6637 6642
+)
+"cexptostr.ml" 177 5012 5019 "cexptostr.ml" 177 5012 5022
+type(
+  string
+)
+ident(
+  def txt "cexptostr.ml" 178 5052 5054 "cexptostr.ml" 204 6637 6642
+)
+"cexptostr.ml" 177 5012 5024 "cexptostr.ml" 177 5012 5028
+type(
+  int
+)
+ident(
+  def lvl1 "cexptostr.ml" 178 5052 5054 "cexptostr.ml" 204 6637 6642
+)
+"cexptostr.ml" 177 5012 5018 "cexptostr.ml" 177 5012 5029
+type(
+  string * int
+)
+"cexptostr.ml" 177 5012 5032 "cexptostr.ml" 177 5012 5044
+type(
+  Cabs.expression -> string * int
+)
+ident(
+  int_ref get_operator "cexptostr.ml" 30 471 479 "cexptostr.ml" 30 471 491
+)
+"cexptostr.ml" 177 5012 5045 "cexptostr.ml" 177 5012 5048
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 176 4938 4980 "cexptostr.ml" 176 4938 4983
+)
+"cexptostr.ml" 177 5012 5032 "cexptostr.ml" 177 5012 5048
+call(
+  stack
+)
+type(
+  string * int
+)
+"cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+type(
+  string
+)
+ident(
+  def expP "cexptostr.ml" 179 5111 5113 "cexptostr.ml" 204 6637 6642
+)
+"cexptostr.ml" 178 5052 5068 "cexptostr.ml" 178 5052 5071
+type(
+  int
+)
+ident(
+  int_ref lvl "cexptostr.ml" 176 4938 4999 "cexptostr.ml" 176 4938 5002
+)
+"cexptostr.ml" 178 5052 5072 "cexptostr.ml" 178 5052 5073
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"cexptostr.ml" 178 5052 5074 "cexptostr.ml" 178 5052 5078
+type(
+  int
+)
+ident(
+  int_ref lvl1 "cexptostr.ml" 177 5012 5024 "cexptostr.ml" 177 5012 5028
+)
+"cexptostr.ml" 178 5052 5068 "cexptostr.ml" 178 5052 5078
+type(
+  bool
+)
+"cexptostr.ml" 178 5052 5087 "cexptostr.ml" 178 5052 5090
+type(
+  string
+)
+"cexptostr.ml" 178 5052 5090 "cexptostr.ml" 178 5052 5091
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 178 5052 5091 "cexptostr.ml" 178 5052 5096
+type(
+  string
+)
+ident(
+  int_ref expPr "cexptostr.ml" 176 4938 4963 "cexptostr.ml" 176 4938 4968
+)
+"cexptostr.ml" 178 5052 5087 "cexptostr.ml" 178 5052 5096
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 178 5052 5102 "cexptostr.ml" 178 5052 5107
+type(
+  string
+)
+ident(
+  int_ref expPr "cexptostr.ml" 176 4938 4963 "cexptostr.ml" 176 4938 4968
+)
+"cexptostr.ml" 178 5052 5065 "cexptostr.ml" 178 5052 5107
+type(
+  string
+)
+"cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+type(
+  string
+)
+ident(
+  def fin "cexptostr.ml" 180 5160 5164 "cexptostr.ml" 204 6637 6642
+)
+"cexptostr.ml" 179 5111 5126 "cexptostr.ml" 179 5111 5129
+type(
+  int
+)
+ident(
+  int_ref lvl "cexptostr.ml" 176 4938 4999 "cexptostr.ml" 176 4938 5002
+)
+"cexptostr.ml" 179 5111 5130 "cexptostr.ml" 179 5111 5131
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( > )
+)
+"cexptostr.ml" 179 5111 5132 "cexptostr.ml" 179 5111 5136
+type(
+  int
+)
+ident(
+  int_ref lvl1 "cexptostr.ml" 177 5012 5024 "cexptostr.ml" 177 5012 5028
+)
+"cexptostr.ml" 179 5111 5126 "cexptostr.ml" 179 5111 5136
+type(
+  bool
+)
+"cexptostr.ml" 179 5111 5145 "cexptostr.ml" 179 5111 5148
+type(
+  string
+)
+"cexptostr.ml" 179 5111 5154 "cexptostr.ml" 179 5111 5156
+type(
+  string
+)
+"cexptostr.ml" 179 5111 5123 "cexptostr.ml" 179 5111 5156
+type(
+  string
+)
+"cexptostr.ml" 180 5160 5171 "cexptostr.ml" 180 5160 5174
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 176 4938 4980 "cexptostr.ml" 176 4938 4983
+)
+"cexptostr.ml" 182 5186 5200 "cexptostr.ml" 182 5186 5202
+type(
+  Cabs.unary_operator
+)
+ident(
+  def op "cexptostr.ml" 183 5215 5222 "cexptostr.ml" 187 5396 5404
+)
+"cexptostr.ml" 182 5186 5204 "cexptostr.ml" 182 5186 5208
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cexptostr.ml" 183 5215 5222 "cexptostr.ml" 187 5396 5404
+)
+"cexptostr.ml" 182 5186 5193 "cexptostr.ml" 182 5186 5209
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 183 5215 5227 "cexptostr.ml" 183 5215 5233
+ident(
+  def chaine "cexptostr.ml" 184 5272 5280 "cexptostr.ml" 187 5396 5404
+)
+"cexptostr.ml" 183 5215 5226 "cexptostr.ml" 183 5215 5234
+type(
+  string
+)
+"cexptostr.ml" 183 5215 5237 "cexptostr.ml" 183 5215 5255
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 183 5215 5256 "cexptostr.ml" 183 5215 5258
+type(
+  string
+)
+"cexptostr.ml" 183 5215 5259 "cexptostr.ml" 183 5215 5263
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cexptostr.ml" 182 5186 5204 "cexptostr.ml" 182 5186 5208
+)
+"cexptostr.ml" 183 5215 5264 "cexptostr.ml" 183 5215 5268
+type(
+  int
+)
+ident(
+  int_ref lvl1 "cexptostr.ml" 177 5012 5024 "cexptostr.ml" 177 5012 5028
+)
+"cexptostr.ml" 183 5215 5237 "cexptostr.ml" 183 5215 5268
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 184 5272 5287 "cexptostr.ml" 184 5272 5289
+type(
+  Cabs.unary_operator
+)
+ident(
+  int_ref op "cexptostr.ml" 182 5186 5200 "cexptostr.ml" 182 5186 5202
+)
+"cexptostr.ml" 185 5295 5304 "cexptostr.ml" 185 5295 5311
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 185 5295 5314 "cexptostr.ml" 185 5295 5321
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 185 5295 5304 "cexptostr.ml" 185 5295 5321
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 185 5295 5327 "cexptostr.ml" 185 5295 5331
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 185 5295 5331 "cexptostr.ml" 185 5295 5332
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 185 5295 5332 "cexptostr.ml" 185 5295 5338
+type(
+  string
+)
+ident(
+  int_ref chaine "cexptostr.ml" 183 5215 5226 "cexptostr.ml" 183 5215 5234
+)
+"cexptostr.ml" 185 5295 5338 "cexptostr.ml" 185 5295 5339
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 185 5295 5339 "cexptostr.ml" 185 5295 5342
+type(
+  string
+)
+ident(
+  int_ref txt "cexptostr.ml" 177 5012 5019 "cexptostr.ml" 177 5012 5022
+)
+"cexptostr.ml" 185 5295 5342 "cexptostr.ml" 185 5295 5343
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 185 5295 5343 "cexptostr.ml" 185 5295 5346
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 185 5295 5339 "cexptostr.ml" 185 5295 5346
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 185 5295 5332 "cexptostr.ml" 185 5295 5346
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 185 5295 5326 "cexptostr.ml" 185 5295 5348
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 186 5355 5366 "cexptostr.ml" 186 5355 5367
+type(
+  Cabs.unary_operator
+)
+"cexptostr.ml" 186 5355 5373 "cexptostr.ml" 186 5355 5377
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 186 5355 5377 "cexptostr.ml" 186 5355 5378
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 186 5355 5378 "cexptostr.ml" 186 5355 5381
+type(
+  string
+)
+ident(
+  int_ref txt "cexptostr.ml" 177 5012 5019 "cexptostr.ml" 177 5012 5022
+)
+"cexptostr.ml" 186 5355 5381 "cexptostr.ml" 186 5355 5382
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 186 5355 5382 "cexptostr.ml" 186 5355 5388
+type(
+  string
+)
+ident(
+  int_ref chaine "cexptostr.ml" 183 5215 5226 "cexptostr.ml" 183 5215 5234
+)
+"cexptostr.ml" 186 5355 5389 "cexptostr.ml" 186 5355 5390
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 186 5355 5390 "cexptostr.ml" 186 5355 5393
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 186 5355 5382 "cexptostr.ml" 186 5355 5393
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 186 5355 5378 "cexptostr.ml" 186 5355 5393
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 186 5355 5372 "cexptostr.ml" 186 5355 5395
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 184 5272 5280 "cexptostr.ml" 187 5396 5404
+type(
+  string
+)
+"cexptostr.ml" 183 5215 5222 "cexptostr.ml" 187 5396 5404
+type(
+  string
+)
+"cexptostr.ml" 188 5405 5420 "cexptostr.ml" 188 5405 5421
+type(
+  Cabs.binary_operator
+)
+"cexptostr.ml" 188 5405 5423 "cexptostr.ml" 188 5405 5427
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cexptostr.ml" 189 5438 5445 "cexptostr.ml" 189 5438 5542
+)
+"cexptostr.ml" 188 5405 5429 "cexptostr.ml" 188 5405 5433
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cexptostr.ml" 189 5438 5445 "cexptostr.ml" 189 5438 5542
+)
+"cexptostr.ml" 188 5405 5412 "cexptostr.ml" 188 5405 5434
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 189 5438 5446 "cexptostr.ml" 189 5438 5450
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 189 5438 5450 "cexptostr.ml" 189 5438 5451
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 189 5438 5452 "cexptostr.ml" 189 5438 5470
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 189 5438 5471 "cexptostr.ml" 189 5438 5473
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5474 "cexptostr.ml" 189 5438 5478
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cexptostr.ml" 188 5405 5423 "cexptostr.ml" 188 5405 5427
+)
+"cexptostr.ml" 189 5438 5479 "cexptostr.ml" 189 5438 5483
+type(
+  int
+)
+ident(
+  int_ref lvl1 "cexptostr.ml" 177 5012 5024 "cexptostr.ml" 177 5012 5028
+)
+"cexptostr.ml" 189 5438 5451 "cexptostr.ml" 189 5438 5484
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5484 "cexptostr.ml" 189 5438 5485
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 189 5438 5485 "cexptostr.ml" 189 5438 5488
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5488 "cexptostr.ml" 189 5438 5489
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 189 5438 5489 "cexptostr.ml" 189 5438 5492
+type(
+  string
+)
+ident(
+  int_ref txt "cexptostr.ml" 177 5012 5019 "cexptostr.ml" 177 5012 5022
+)
+"cexptostr.ml" 189 5438 5492 "cexptostr.ml" 189 5438 5493
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 189 5438 5493 "cexptostr.ml" 189 5438 5496
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5496 "cexptostr.ml" 189 5438 5497
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 189 5438 5498 "cexptostr.ml" 189 5438 5516
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 189 5438 5517 "cexptostr.ml" 189 5438 5519
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5520 "cexptostr.ml" 189 5438 5524
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cexptostr.ml" 188 5405 5429 "cexptostr.ml" 188 5405 5433
+)
+"cexptostr.ml" 189 5438 5526 "cexptostr.ml" 189 5438 5530
+type(
+  int
+)
+ident(
+  int_ref lvl1 "cexptostr.ml" 177 5012 5024 "cexptostr.ml" 177 5012 5028
+)
+"cexptostr.ml" 189 5438 5530 "cexptostr.ml" 189 5438 5531
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"cexptostr.ml" 189 5438 5531 "cexptostr.ml" 189 5438 5532
+type(
+  int
+)
+"cexptostr.ml" 189 5438 5525 "cexptostr.ml" 189 5438 5533
+type(
+  int
+)
+"cexptostr.ml" 189 5438 5497 "cexptostr.ml" 189 5438 5535
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5535 "cexptostr.ml" 189 5438 5536
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 189 5438 5536 "cexptostr.ml" 189 5438 5539
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 189 5438 5497 "cexptostr.ml" 189 5438 5539
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5493 "cexptostr.ml" 189 5438 5539
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5489 "cexptostr.ml" 189 5438 5539
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5485 "cexptostr.ml" 189 5438 5539
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5451 "cexptostr.ml" 189 5438 5539
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 189 5438 5445 "cexptostr.ml" 189 5438 5542
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 190 5547 5564 "cexptostr.ml" 190 5547 5568
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "cexptostr.ml" 191 5587 5594 "cexptostr.ml" 191 5587 5713
+)
+"cexptostr.ml" 190 5547 5570 "cexptostr.ml" 190 5547 5574
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "cexptostr.ml" 191 5587 5594 "cexptostr.ml" 191 5587 5713
+)
+"cexptostr.ml" 190 5547 5576 "cexptostr.ml" 190 5547 5580
+type(
+  Cabs.expression
+)
+ident(
+  def exp3 "cexptostr.ml" 191 5587 5594 "cexptostr.ml" 191 5587 5713
+)
+"cexptostr.ml" 190 5547 5554 "cexptostr.ml" 190 5547 5581
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 191 5587 5595 "cexptostr.ml" 191 5587 5599
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 191 5587 5599 "cexptostr.ml" 191 5587 5600
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 191 5587 5601 "cexptostr.ml" 191 5587 5619
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 191 5587 5620 "cexptostr.ml" 191 5587 5622
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5623 "cexptostr.ml" 191 5587 5627
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "cexptostr.ml" 190 5547 5564 "cexptostr.ml" 190 5547 5568
+)
+"cexptostr.ml" 191 5587 5628 "cexptostr.ml" 191 5587 5629
+type(
+  int
+)
+"cexptostr.ml" 191 5587 5600 "cexptostr.ml" 191 5587 5630
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5630 "cexptostr.ml" 191 5587 5631
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 191 5587 5631 "cexptostr.ml" 191 5587 5636
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5636 "cexptostr.ml" 191 5587 5637
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 191 5587 5639 "cexptostr.ml" 191 5587 5657
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 191 5587 5658 "cexptostr.ml" 191 5587 5660
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5661 "cexptostr.ml" 191 5587 5665
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "cexptostr.ml" 190 5547 5570 "cexptostr.ml" 190 5547 5574
+)
+"cexptostr.ml" 191 5587 5666 "cexptostr.ml" 191 5587 5667
+type(
+  int
+)
+"cexptostr.ml" 191 5587 5638 "cexptostr.ml" 191 5587 5668
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5669 "cexptostr.ml" 191 5587 5670
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 191 5587 5670 "cexptostr.ml" 191 5587 5675
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5675 "cexptostr.ml" 191 5587 5676
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 191 5587 5677 "cexptostr.ml" 191 5587 5695
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 191 5587 5696 "cexptostr.ml" 191 5587 5698
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5699 "cexptostr.ml" 191 5587 5703
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp3 "cexptostr.ml" 190 5547 5576 "cexptostr.ml" 190 5547 5580
+)
+"cexptostr.ml" 191 5587 5704 "cexptostr.ml" 191 5587 5705
+type(
+  int
+)
+"cexptostr.ml" 191 5587 5676 "cexptostr.ml" 191 5587 5707
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5707 "cexptostr.ml" 191 5587 5708
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 191 5587 5708 "cexptostr.ml" 191 5587 5711
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 191 5587 5676 "cexptostr.ml" 191 5587 5711
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5670 "cexptostr.ml" 191 5587 5711
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5638 "cexptostr.ml" 191 5587 5711
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5631 "cexptostr.ml" 191 5587 5711
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5600 "cexptostr.ml" 191 5587 5711
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 191 5587 5594 "cexptostr.ml" 191 5587 5713
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5727 "cexptostr.ml" 192 5714 5730
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 192 5714 5741 "cexptostr.ml" 192 5714 5814
+)
+"cexptostr.ml" 192 5714 5732 "cexptostr.ml" 192 5714 5735
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 192 5714 5741 "cexptostr.ml" 192 5714 5814
+)
+"cexptostr.ml" 192 5714 5721 "cexptostr.ml" 192 5714 5736
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 192 5714 5742 "cexptostr.ml" 192 5714 5746
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 192 5714 5746 "cexptostr.ml" 192 5714 5747
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 192 5714 5747 "cexptostr.ml" 192 5714 5750
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5750 "cexptostr.ml" 192 5714 5751
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 192 5714 5751 "cexptostr.ml" 192 5714 5767
+type(
+  Cabs.base_type -> string
+)
+ident(
+  int_ref onlytypeToString "cexptostr.ml" 156 4278 4284 "cexptostr.ml" 156 4278 4300
+)
+"cexptostr.ml" 192 5714 5768 "cexptostr.ml" 192 5714 5771
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 192 5714 5727 "cexptostr.ml" 192 5714 5730
+)
+"cexptostr.ml" 192 5714 5751 "cexptostr.ml" 192 5714 5771
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5771 "cexptostr.ml" 192 5714 5772
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 192 5714 5774 "cexptostr.ml" 192 5714 5777
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5777 "cexptostr.ml" 192 5714 5778
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 192 5714 5779 "cexptostr.ml" 192 5714 5797
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 192 5714 5798 "cexptostr.ml" 192 5714 5800
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5801 "cexptostr.ml" 192 5714 5804
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 192 5714 5732 "cexptostr.ml" 192 5714 5735
+)
+"cexptostr.ml" 192 5714 5805 "cexptostr.ml" 192 5714 5807
+type(
+  int
+)
+"cexptostr.ml" 192 5714 5778 "cexptostr.ml" 192 5714 5808
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5808 "cexptostr.ml" 192 5714 5809
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 192 5714 5809 "cexptostr.ml" 192 5714 5812
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 192 5714 5778 "cexptostr.ml" 192 5714 5812
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5774 "cexptostr.ml" 192 5714 5812
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5751 "cexptostr.ml" 192 5714 5812
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5747 "cexptostr.ml" 192 5714 5812
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 192 5714 5741 "cexptostr.ml" 192 5714 5814
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5828 "cexptostr.ml" 193 5815 5831
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 193 5815 5844 "cexptostr.ml" 193 5815 5917
+)
+"cexptostr.ml" 193 5815 5833 "cexptostr.ml" 193 5815 5837
+type(
+  Cabs.expression list
+)
+ident(
+  def args "cexptostr.ml" 193 5815 5844 "cexptostr.ml" 193 5815 5917
+)
+"cexptostr.ml" 193 5815 5822 "cexptostr.ml" 193 5815 5838
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 193 5815 5845 "cexptostr.ml" 193 5815 5849
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 193 5815 5849 "cexptostr.ml" 193 5815 5850
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 193 5815 5851 "cexptostr.ml" 193 5815 5869
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 193 5815 5870 "cexptostr.ml" 193 5815 5872
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5873 "cexptostr.ml" 193 5815 5876
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 193 5815 5828 "cexptostr.ml" 193 5815 5831
+)
+"cexptostr.ml" 193 5815 5877 "cexptostr.ml" 193 5815 5879
+type(
+  int
+)
+"cexptostr.ml" 193 5815 5850 "cexptostr.ml" 193 5815 5880
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5880 "cexptostr.ml" 193 5815 5881
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 193 5815 5881 "cexptostr.ml" 193 5815 5885
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5885 "cexptostr.ml" 193 5815 5886
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 193 5815 5887 "cexptostr.ml" 193 5815 5905
+type(
+  Cabs.expression list -> string
+)
+ident(
+  int_ref comma_expsToString "cexptostr.ml" 172 4815 4821 "cexptostr.ml" 172 4815 4839
+)
+"cexptostr.ml" 193 5815 5906 "cexptostr.ml" 193 5815 5910
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref args "cexptostr.ml" 193 5815 5833 "cexptostr.ml" 193 5815 5837
+)
+"cexptostr.ml" 193 5815 5886 "cexptostr.ml" 193 5815 5911
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5911 "cexptostr.ml" 193 5815 5912
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 193 5815 5912 "cexptostr.ml" 193 5815 5915
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5886 "cexptostr.ml" 193 5815 5915
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5881 "cexptostr.ml" 193 5815 5915
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5850 "cexptostr.ml" 193 5815 5915
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 193 5815 5844 "cexptostr.ml" 193 5815 5917
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 194 5918 5931 "cexptostr.ml" 194 5918 5935
+type(
+  Cabs.expression list
+)
+ident(
+  def exps "cexptostr.ml" 194 5918 5941 "cexptostr.ml" 194 5918 5982
+)
+"cexptostr.ml" 194 5918 5925 "cexptostr.ml" 194 5918 5935
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 194 5918 5942 "cexptostr.ml" 194 5918 5946
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 194 5918 5946 "cexptostr.ml" 194 5918 5947
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 194 5918 5947 "cexptostr.ml" 194 5918 5950
+type(
+  string
+)
+"cexptostr.ml" 194 5918 5950 "cexptostr.ml" 194 5918 5951
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 194 5918 5952 "cexptostr.ml" 194 5918 5970
+type(
+  Cabs.expression list -> string
+)
+ident(
+  int_ref comma_expsToString "cexptostr.ml" 172 4815 4821 "cexptostr.ml" 172 4815 4839
+)
+"cexptostr.ml" 194 5918 5971 "cexptostr.ml" 194 5918 5975
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref exps "cexptostr.ml" 194 5918 5931 "cexptostr.ml" 194 5918 5935
+)
+"cexptostr.ml" 194 5918 5951 "cexptostr.ml" 194 5918 5976
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 194 5918 5976 "cexptostr.ml" 194 5918 5977
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 194 5918 5977 "cexptostr.ml" 194 5918 5980
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 194 5918 5951 "cexptostr.ml" 194 5918 5980
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 194 5918 5947 "cexptostr.ml" 194 5918 5980
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 194 5918 5941 "cexptostr.ml" 194 5918 5982
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 195 5983 5999 "cexptostr.ml" 195 5983 6002
+type(
+  Cabs.constant
+)
+ident(
+  def cst "cexptostr.ml" 195 5983 6007 "cexptostr.ml" 195 5983 6039
+)
+"cexptostr.ml" 195 5983 5990 "cexptostr.ml" 195 5983 6002
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 195 5983 6008 "cexptostr.ml" 195 5983 6012
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 195 5983 6012 "cexptostr.ml" 195 5983 6013
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 195 5983 6013 "cexptostr.ml" 195 5983 6029
+type(
+  Cabs.constant -> string
+)
+ident(
+  int_ref constantToString "cexptostr.ml" 161 4414 4420 "cexptostr.ml" 161 4414 4436
+)
+"cexptostr.ml" 195 5983 6031 "cexptostr.ml" 195 5983 6034
+type(
+  Cabs.constant
+)
+ident(
+  int_ref cst "cexptostr.ml" 195 5983 5999 "cexptostr.ml" 195 5983 6002
+)
+"cexptostr.ml" 195 5983 6013 "cexptostr.ml" 195 5983 6034
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 195 5983 6034 "cexptostr.ml" 195 5983 6035
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 195 5983 6035 "cexptostr.ml" 195 5983 6038
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 195 5983 6013 "cexptostr.ml" 195 5983 6038
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 195 5983 6007 "cexptostr.ml" 195 5983 6039
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 196 6040 6056 "cexptostr.ml" 196 6040 6060
+type(
+  string
+)
+ident(
+  def name "cexptostr.ml" 196 6040 6065 "cexptostr.ml" 196 6040 6084
+)
+"cexptostr.ml" 196 6040 6047 "cexptostr.ml" 196 6040 6060
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 196 6040 6066 "cexptostr.ml" 196 6040 6070
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 196 6040 6070 "cexptostr.ml" 196 6040 6071
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 196 6040 6071 "cexptostr.ml" 196 6040 6075
+type(
+  string
+)
+ident(
+  int_ref name "cexptostr.ml" 196 6040 6056 "cexptostr.ml" 196 6040 6060
+)
+"cexptostr.ml" 196 6040 6075 "cexptostr.ml" 196 6040 6076
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 196 6040 6076 "cexptostr.ml" 196 6040 6079
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 196 6040 6071 "cexptostr.ml" 196 6040 6079
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 196 6040 6065 "cexptostr.ml" 196 6040 6084
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6104 "cexptostr.ml" 197 6085 6107
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 197 6085 6113 "cexptostr.ml" 197 6085 6172
+)
+"cexptostr.ml" 197 6085 6092 "cexptostr.ml" 197 6085 6107
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 197 6085 6114 "cexptostr.ml" 197 6085 6118
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 197 6085 6118 "cexptostr.ml" 197 6085 6119
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 197 6085 6119 "cexptostr.ml" 197 6085 6128
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6129 "cexptostr.ml" 197 6085 6130
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 197 6085 6131 "cexptostr.ml" 197 6085 6149
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 197 6085 6150 "cexptostr.ml" 197 6085 6152
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6153 "cexptostr.ml" 197 6085 6156
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 197 6085 6104 "cexptostr.ml" 197 6085 6107
+)
+"cexptostr.ml" 197 6085 6157 "cexptostr.ml" 197 6085 6158
+type(
+  int
+)
+"cexptostr.ml" 197 6085 6130 "cexptostr.ml" 197 6085 6160
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6161 "cexptostr.ml" 197 6085 6162
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 197 6085 6163 "cexptostr.ml" 197 6085 6166
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6166 "cexptostr.ml" 197 6085 6167
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 197 6085 6167 "cexptostr.ml" 197 6085 6170
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 197 6085 6163 "cexptostr.ml" 197 6085 6170
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6130 "cexptostr.ml" 197 6085 6170
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6119 "cexptostr.ml" 197 6085 6170
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 197 6085 6113 "cexptostr.ml" 197 6085 6172
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 198 6173 6192 "cexptostr.ml" 198 6173 6195
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "cexptostr.ml" 198 6173 6200 "cexptostr.ml" 198 6173 6246
+)
+"cexptostr.ml" 198 6173 6180 "cexptostr.ml" 198 6173 6195
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 198 6173 6201 "cexptostr.ml" 198 6173 6205
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 198 6173 6205 "cexptostr.ml" 198 6173 6206
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 198 6173 6206 "cexptostr.ml" 198 6173 6215
+type(
+  string
+)
+"cexptostr.ml" 198 6173 6215 "cexptostr.ml" 198 6173 6216
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 198 6173 6216 "cexptostr.ml" 198 6173 6232
+type(
+  Cabs.base_type -> string
+)
+ident(
+  int_ref onlytypeToString "cexptostr.ml" 156 4278 4284 "cexptostr.ml" 156 4278 4300
+)
+"cexptostr.ml" 198 6173 6233 "cexptostr.ml" 198 6173 6236
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "cexptostr.ml" 198 6173 6192 "cexptostr.ml" 198 6173 6195
+)
+"cexptostr.ml" 198 6173 6216 "cexptostr.ml" 198 6173 6236
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 198 6173 6236 "cexptostr.ml" 198 6173 6237
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 198 6173 6237 "cexptostr.ml" 198 6173 6240
+type(
+  string
+)
+"cexptostr.ml" 198 6173 6240 "cexptostr.ml" 198 6173 6241
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 198 6173 6241 "cexptostr.ml" 198 6173 6244
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 198 6173 6237 "cexptostr.ml" 198 6173 6244
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 198 6173 6216 "cexptostr.ml" 198 6173 6244
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 198 6173 6206 "cexptostr.ml" 198 6173 6244
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 198 6173 6200 "cexptostr.ml" 198 6173 6246
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6267 "cexptostr.ml" 199 6253 6270
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 199 6253 6280 "cexptostr.ml" 199 6253 6361
+)
+"cexptostr.ml" 199 6253 6272 "cexptostr.ml" 199 6253 6275
+type(
+  Cabs.expression
+)
+ident(
+  def idx "cexptostr.ml" 199 6253 6280 "cexptostr.ml" 199 6253 6361
+)
+"cexptostr.ml" 199 6253 6260 "cexptostr.ml" 199 6253 6276
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 199 6253 6281 "cexptostr.ml" 199 6253 6285
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 199 6253 6285 "cexptostr.ml" 199 6253 6286
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 199 6253 6287 "cexptostr.ml" 199 6253 6305
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 199 6253 6306 "cexptostr.ml" 199 6253 6308
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6309 "cexptostr.ml" 199 6253 6312
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 199 6253 6267 "cexptostr.ml" 199 6253 6270
+)
+"cexptostr.ml" 199 6253 6313 "cexptostr.ml" 199 6253 6315
+type(
+  int
+)
+"cexptostr.ml" 199 6253 6286 "cexptostr.ml" 199 6253 6316
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6317 "cexptostr.ml" 199 6253 6318
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 199 6253 6319 "cexptostr.ml" 199 6253 6322
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6322 "cexptostr.ml" 199 6253 6323
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 199 6253 6323 "cexptostr.ml" 199 6253 6341
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 199 6253 6342 "cexptostr.ml" 199 6253 6344
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6345 "cexptostr.ml" 199 6253 6348
+type(
+  Cabs.expression
+)
+ident(
+  int_ref idx "cexptostr.ml" 199 6253 6272 "cexptostr.ml" 199 6253 6275
+)
+"cexptostr.ml" 199 6253 6349 "cexptostr.ml" 199 6253 6350
+type(
+  int
+)
+"cexptostr.ml" 199 6253 6323 "cexptostr.ml" 199 6253 6350
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6350 "cexptostr.ml" 199 6253 6351
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 199 6253 6352 "cexptostr.ml" 199 6253 6355
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6355 "cexptostr.ml" 199 6253 6356
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 199 6253 6356 "cexptostr.ml" 199 6253 6359
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 199 6253 6352 "cexptostr.ml" 199 6253 6359
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6323 "cexptostr.ml" 199 6253 6359
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6319 "cexptostr.ml" 199 6253 6359
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6286 "cexptostr.ml" 199 6253 6359
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 199 6253 6280 "cexptostr.ml" 199 6253 6361
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 200 6362 6379 "cexptostr.ml" 200 6362 6382
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 200 6362 6391 "cexptostr.ml" 200 6362 6444
+)
+"cexptostr.ml" 200 6362 6384 "cexptostr.ml" 200 6362 6387
+type(
+  string
+)
+ident(
+  def fld "cexptostr.ml" 200 6362 6391 "cexptostr.ml" 200 6362 6444
+)
+"cexptostr.ml" 200 6362 6369 "cexptostr.ml" 200 6362 6388
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 200 6362 6392 "cexptostr.ml" 200 6362 6396
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 200 6362 6396 "cexptostr.ml" 200 6362 6397
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 200 6362 6398 "cexptostr.ml" 200 6362 6416
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 200 6362 6417 "cexptostr.ml" 200 6362 6419
+type(
+  string
+)
+"cexptostr.ml" 200 6362 6420 "cexptostr.ml" 200 6362 6423
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 200 6362 6379 "cexptostr.ml" 200 6362 6382
+)
+"cexptostr.ml" 200 6362 6424 "cexptostr.ml" 200 6362 6426
+type(
+  int
+)
+"cexptostr.ml" 200 6362 6397 "cexptostr.ml" 200 6362 6427
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 200 6362 6427 "cexptostr.ml" 200 6362 6428
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 200 6362 6429 "cexptostr.ml" 200 6362 6432
+type(
+  string
+)
+"cexptostr.ml" 200 6362 6433 "cexptostr.ml" 200 6362 6434
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 200 6362 6435 "cexptostr.ml" 200 6362 6438
+type(
+  string
+)
+ident(
+  int_ref fld "cexptostr.ml" 200 6362 6384 "cexptostr.ml" 200 6362 6387
+)
+"cexptostr.ml" 200 6362 6438 "cexptostr.ml" 200 6362 6439
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 200 6362 6439 "cexptostr.ml" 200 6362 6442
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 200 6362 6435 "cexptostr.ml" 200 6362 6442
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 200 6362 6429 "cexptostr.ml" 200 6362 6442
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 200 6362 6397 "cexptostr.ml" 200 6362 6442
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 200 6362 6391 "cexptostr.ml" 200 6362 6444
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 201 6445 6465 "cexptostr.ml" 201 6445 6468
+type(
+  Cabs.expression
+)
+ident(
+  def exp "cexptostr.ml" 201 6445 6478 "cexptostr.ml" 201 6445 6531
+)
+"cexptostr.ml" 201 6445 6470 "cexptostr.ml" 201 6445 6473
+type(
+  string
+)
+ident(
+  def fld "cexptostr.ml" 201 6445 6478 "cexptostr.ml" 201 6445 6531
+)
+"cexptostr.ml" 201 6445 6452 "cexptostr.ml" 201 6445 6474
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 201 6445 6479 "cexptostr.ml" 201 6445 6483
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 201 6445 6483 "cexptostr.ml" 201 6445 6484
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 201 6445 6485 "cexptostr.ml" 201 6445 6503
+type(
+  string -> Cabs.expression -> int -> string
+)
+ident(
+  int_ref expressionToString "cexptostr.ml" 176 4938 4943 "cexptostr.ml" 176 4938 4961
+)
+"cexptostr.ml" 201 6445 6504 "cexptostr.ml" 201 6445 6506
+type(
+  string
+)
+"cexptostr.ml" 201 6445 6507 "cexptostr.ml" 201 6445 6510
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "cexptostr.ml" 201 6445 6465 "cexptostr.ml" 201 6445 6468
+)
+"cexptostr.ml" 201 6445 6511 "cexptostr.ml" 201 6445 6513
+type(
+  int
+)
+"cexptostr.ml" 201 6445 6484 "cexptostr.ml" 201 6445 6514
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 201 6445 6514 "cexptostr.ml" 201 6445 6515
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 201 6445 6515 "cexptostr.ml" 201 6445 6519
+type(
+  string
+)
+"cexptostr.ml" 201 6445 6520 "cexptostr.ml" 201 6445 6521
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 201 6445 6522 "cexptostr.ml" 201 6445 6525
+type(
+  string
+)
+ident(
+  int_ref fld "cexptostr.ml" 201 6445 6470 "cexptostr.ml" 201 6445 6473
+)
+"cexptostr.ml" 201 6445 6525 "cexptostr.ml" 201 6445 6526
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 201 6445 6526 "cexptostr.ml" 201 6445 6529
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 201 6445 6522 "cexptostr.ml" 201 6445 6529
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 201 6445 6515 "cexptostr.ml" 201 6445 6529
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 201 6445 6484 "cexptostr.ml" 201 6445 6529
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 201 6445 6478 "cexptostr.ml" 201 6445 6531
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 202 6532 6557 "cexptostr.ml" 202 6532 6558
+type(
+  Cabs.definition list
+)
+"cexptostr.ml" 202 6532 6568 "cexptostr.ml" 202 6532 6569
+type(
+  Cabs.statement
+)
+"cexptostr.ml" 202 6532 6548 "cexptostr.ml" 202 6532 6570
+type(
+  Cabs.body
+)
+"cexptostr.ml" 202 6532 6539 "cexptostr.ml" 202 6532 6570
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 202 6532 6576 "cexptostr.ml" 202 6532 6580
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 202 6532 6580 "cexptostr.ml" 202 6532 6581
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 202 6532 6581 "cexptostr.ml" 202 6532 6596
+type(
+  string
+)
+"cexptostr.ml" 202 6532 6596 "cexptostr.ml" 202 6532 6597
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 202 6532 6597 "cexptostr.ml" 202 6532 6600
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 202 6532 6581 "cexptostr.ml" 202 6532 6600
+call(
+  stack
+)
+type(
+  string
+)
+"cexptostr.ml" 202 6532 6575 "cexptostr.ml" 202 6532 6602
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 203 6604 6611 "cexptostr.ml" 203 6604 6612
+type(
+  Cabs.expression
+)
+"cexptostr.ml" 203 6604 6620 "cexptostr.ml" 203 6604 6624
+type(
+  string
+)
+ident(
+  int_ref expP "cexptostr.ml" 178 5052 5058 "cexptostr.ml" 178 5052 5062
+)
+"cexptostr.ml" 203 6604 6624 "cexptostr.ml" 203 6604 6625
+type(
+  string -> string -> string
+)
+ident(
+  ext_ref Pervasives.( ^ )
+)
+"cexptostr.ml" 203 6604 6625 "cexptostr.ml" 203 6604 6628
+type(
+  string
+)
+ident(
+  int_ref fin "cexptostr.ml" 179 5111 5117 "cexptostr.ml" 179 5111 5120
+)
+"cexptostr.ml" 203 6604 6619 "cexptostr.ml" 203 6604 6631
+call(
+  tail
+)
+type(
+  string
+)
+"cexptostr.ml" 180 5160 5164 "cexptostr.ml" 204 6637 6642
+type(
+  string
+)
+"cexptostr.ml" 179 5111 5113 "cexptostr.ml" 204 6637 6642
+type(
+  string
+)
+"cexptostr.ml" 178 5052 5054 "cexptostr.ml" 204 6637 6642
+type(
+  string
+)
+"cexptostr.ml" 177 5012 5014 "cexptostr.ml" 204 6637 6642
+type(
+  string
+)

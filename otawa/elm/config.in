@@ -1,0 +1,4 @@
+
+#define CRASH_HANDLER @CRASH_HANDLER@
+#cmakedefine SET_PTRACER
+#cmakedefine ELM_STAT

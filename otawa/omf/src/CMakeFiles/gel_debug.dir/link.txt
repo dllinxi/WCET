@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   -shared -Wl,--enable-auto-import -o cyggel_debug.dll -Wl,--out-implib,libgel_debug.dll.a -Wl,--major-image-version,0,--minor-image-version,0 CMakeFiles/gel_debug.dir/dwarf_line.c.o CMakeFiles/gel_debug.dir/debug_line.c.o CMakeFiles/gel_debug.dir/stabs.c.o libgel.dll.a -ldl 

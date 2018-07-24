@@ -1,0 +1,55 @@
+====== Installing OTAWA ======
+
+===== Dependencies =====
+
+Tools:
+  * Bison
+  * CMake
+  * Flex
+  * G++
+  * LibXML2
+  * LibXSLT
+
+Optional tool:
+  * Doxygen
+  * GraphViz
+  * Thot
+  * CPlex
+
+Internal dependencies (that must be compiled at the same level than OTAWA directory):
+  * GEL
+  * ELM (compiled with XOM extension)
+
+Optional dependencies:
+  * ppc2 (with gliss2)
+  * armv5t (with gliss2)
+  * lp_solve
+
+
+===== Installation ======
+
+To configure the make file, type:
+<code sh>
+cmake . -DCMAKE_INSTALL_PREFIX=path_to_install_to
+</code>
+
+To compile OTAWA, just:
+<code sh>
+make all
+</code>
+
+To install it:
+<code sh>
+make install
+</code>
+
+
+===== Installation with Options =====
+
+To use CPlex, pass the following option at CMake invocation:
+<code sh>
+cmake . -DCMAKE_INSTALL_PREFIX=path_to_install_to -DCPLEX_ROOT=<cplex root>
+</code>
+
+where <cplex root> is the top-level directory of CPlex. This directory should contains at least ''cplex'' and ''concert'' subirectories.
+

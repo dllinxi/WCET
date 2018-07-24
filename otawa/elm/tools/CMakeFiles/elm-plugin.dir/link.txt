@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wall -g  -Wl,--enable-auto-import CMakeFiles/elm-plugin.dir/elm-plugin.cpp.o  -o elm-plugin.exe -Wl,--out-implib,libelm-plugin.dll.a -Wl,--major-image-version,0,--minor-image-version,0  ../src/libelm.dll.a -lxml2 -lxslt -ldl 

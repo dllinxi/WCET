@@ -1,0 +1,53 @@
+@use dokuwiki
+@TITLE=Caption Test
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+
+====== Images ======
+
+Below, an image without caption or label (must not be numbered):
+
+{{ gravure-thot.gif }}
+
+An image with a label (must be numbered):
+
+{{ gravure-thot.gif }}
+@label image1
+
+An image with a caption (must be numbered):
+
+{{ gravure-thot.gif }}
+@caption Thot Image
+
+Now, an image with caption and label (must be numbered):
+{{ gravure-thot.gif }}
+@caption Thot Image
+@label image2
+
+
+====== Codes ======
+
+Code without caption and label:
+<code>
+x = 0;
+</code>
+
+Code with a label:
+<code>
+x = 0;
+</code>
+@label code1
+
+Code with a caption:
+<code>
+x = 0;
+</code>
+@caption My Code !
+
+Code with caption and label:
+<code>
+x = 0;
+</code>
+@caption My Code !
+@label code2

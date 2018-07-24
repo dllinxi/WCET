@@ -1,0 +1,9 @@
+<<<<<<< .cvsignore
+Makefile
+Makefile.in
+cmake_install.cmake
+=======
+Makefile
+Makefile.in
+cmake_install.cmake
+>>>>>>> 1.2

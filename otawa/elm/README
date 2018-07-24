@@ -1,0 +1,13 @@
+====== ELM ======
+
+ELM is a multi-purpose C++ library providing:
+  * a lot of data structure,
+  * XOM XML interface,
+  * OS-independent API
+
+ELM works on 32- and 64-bits hardware and has been ported on:
+  * Linux (x86 but should work on other architectures),
+  * Windows,
+  * MacOSX.
+
+For any contact, mailto:otawa@irit.fr or http://www.irit.fr.

@@ -1,0 +1,1116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Thot 0.8 Manual</title>
+	<meta name="AUTHOR" content="H. Cassé &lt;hugues.casse@laposte.net&gt;">
+	<meta name="GENERATOR" content="Thot - HTML">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="doc-imports/style_green-1..css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+	<div class="title">Thot 0.8 Manual</div>
+	<div class="authors"><a href="mailto:hugues.casse@laposte.net">H. Cassé </a></div>
+</div><div class="toc">
+<h1><a name="toc">Content</name></h1>
+  <ul class="toc">
+  <li>
+  <a href="doc-0.html">1  Tutorial  </a>
+  </li>
+  <li>
+  <a href="doc-1.html">2  Writer Manual  </a>
+    <ul class="toc">
+    <li>
+    <a href="doc-1.html#2.1">2.1  Basic Syntax  </a>
+      <ul class="toc">
+      <li>
+      <a href="doc-1.html#2.1.1">2.1.1  Comments  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.1.2">2.1.2  Definitions and Variables  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.1.3">2.1.3  Default Variables  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.1.4">2.1.4  Module Usage  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.1.5">2.1.5  Inclusion  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.1.6">2.1.6  References, labels and captions  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.1.7">2.1.7  External Blocks  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.1.8">2.1.8  Command  </a>
+      </li>
+      </ul>
+    </li>
+    <li>
+    <a href="doc-1.html#2.2">2.2  Modules  </a>
+      <ul class="toc">
+      <li>
+      <a href="doc-1.html#2.2.1">2.2.1  Dokuwiki Front-end  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.2.2">2.2.2  Textile Module  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.2.3">2.2.3  Dot Module  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.2.4">2.2.4  latexmath Module  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.2.5">2.2.5  gnuplot Module  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.2.6">2.2.6  ditaa Module  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.2.7">2.2.7  aafig Module  </a>
+      </li>
+      </ul>
+    </li>
+    <li>
+    <a href="doc-1.html#2.3">2.3  Back-ends  </a>
+      <ul class="toc">
+      <li>
+      <a href="doc-1.html#2.3.1">2.3.1  HTML Back-end  </a>
+        <ul class="toc">
+        <li>
+        <a href="doc-1.html#2.3.1.1">2.3.1.1  Configuring the output  </a>
+        </li>
+        <li>
+        <a href="doc-1.html#2.3.1.2">2.3.1.2  Generated content  </a>
+        </li>
+        <li>
+        <a href="doc-1.html#2.3.1.3">2.3.1.3  Using CSS  </a>
+        </li>
+        </ul>
+      </li>
+      <li>
+      <a href="doc-1.html#2.3.2">2.3.2  Latex Back-end  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.3.3">2.3.3  DocBook Back-end  </a>
+      </li>
+      <li>
+      <a href="doc-1.html#2.3.4">2.3.4  Slidy Back-end  </a>
+        <ul class="toc">
+        <li>
+        <a href="doc-1.html#2.3.4.1">2.3.4.1  Using Slidy = </a>
+        </li>
+        <li>
+        <a href="doc-1.html#2.3.4.2">2.3.4.2  Variables  </a>
+        </li>
+        <li>
+        <a href="doc-1.html#2.3.4.3">2.3.4.3  Styling  </a>
+        </li>
+        </ul>
+      </li>
+      <li>
+      <a href="doc-1.html#2.3.5">2.3.5  SCORM Back-end  </a>
+        <ul class="toc">
+        <li>
+        <a href="doc-1.html#2.3.5.1">2.3.5.1  Commands  </a>
+        </li>
+        <li>
+        <a href="doc-1.html#2.3.5.2">2.3.5.2  Unsupported Tags  </a>
+        </li>
+        </ul>
+      </li>
+      </ul>
+    </li>
+    </ul>
+  </li>
+  <li>
+  <a href="doc-2.html">3  Developper Manual  </a>
+  </li>
+  </ul>
+</div>
+<div class="page">
+<h2><a name="2"></a>2 Writer Manual  </h2>
+<p>
+This chapter is aimed to writer of documents in <i><b>Thot</b></i>. You will find here the details to benefit from the power of <i><b>Thot</b></i>. </p>
+<h2><a name="2.1"></a>2.1 Basic Syntax  </h2>
+<p>
+This sections describes the minimal <i><b>Thot</b></i> syntax that is independent of any module. </p>
+<h2><a name="2.1.1"></a>2.1.1 Comments  </h2>
+<p>
+<i><b>Thot</b></i> supports comments spanning on a complete line. You just have to use double <tt>@</tt> at the start of the line (notice that most wiki independent syntax is prefixed by <tt>@</tt>). </p>
+<div class="listing"><pre class="code">
+@@ a commend here to the end of the line</pre></div><p>
+The comment is just for author information and disappears in the final output document. </p>
+<h2><a name="2.1.2"></a>2.1.2 Definitions and Variables  </h2>
+<p>
+To share information information and to configure modules, <i><b>Thot</b></i> provides a system of variables. A variable is defined by its name and its textual value. </p>
+<p>
+To define a variable, you have just to type: </p>
+<div class="listing"><pre class="code">
+@IDENTIFIER=VALUE</pre></div><p>
+Where <tt>IDENTIFIER</tt> is the variable identifier and <tt>VALUE</tt> the value of the variable. This value may be any text (including module tags) to the end of the line (without including the final newline). </p>
+<p>
+To use a variable, you have just to type anywhere in the text and in a line. </p>
+<div class="listing"><pre class="code">
+TEXT-BEFORE @(IDENTIFIER) TEXT-AFTER</pre></div><p>
+Where <tt>IDENTIFIER</tt> is the identifier of the variable to get the value from. <tt>TEXT-BEFORE</tt> and <tt>TEXT-AFTER</tt> are any text (possibly containing markup or variable use. </p>
+<p>
+In the example below, we define a variable <tt>THOT</tt> that is used throughout this document and avoid to type boring markup: </p>
+<div class="listing"><pre class="code">
+@THOT=**//THOT//**
+
+This document presents @(THOT), a textual document process. @(THOT)
+...</pre></div><p>
+Notice that the value of a variable may contains variable uses but they are processed in late evaluation: they are replaced by their value only  when the variable is used in the main text. For example, the <i><b>Thot</b></i> text below: </p>
+<div class="listing"><pre class="code">
+@X=--@(Y)--
+@Y=hello
+@(X) World !
+@Y=bye, bye
+@(X) World !</pre></div><p>
+will give: </p>
+<div class="listing"><pre class="code">
+hello World !
+bybe, bye World !</pre></div><h2><a name="2.1.3"></a>2.1.3 Default Variables  </h2>
+<p>
+As seen in the previous section, variables may be used to generate document content but they are also largely used to configure the behaviour of the different components of <i><b>Thot</b></i> or to provide automatic information to the writer. This section describe the standard variables used by <i><b>Thot</b></i>. </p>
+<p>
+The table shows all variables that may be provided to <i><b>Thot</b></i>: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Variable </th>
+<th colspan="1">Usage </th>
+</tr>
+<tr>
+<td colspan="1"><tt>AUTHORS</tt> </td>
+<td colspan="1">List of authors (including email and separated by comma). </td>
+</tr>
+<tr>
+<td colspan="1"><tt>ENCODING</tt> </td>
+<td colspan="1">Character set encoding (as defined by IANA)<a class="footnumber" href="#footnote-1">1</a>. </td>
+</tr>
+<tr>
+<td colspan="1"><tt>LANG</tt> </td>
+<td colspan="1">Language of the document (as in Unix locale). </td>
+</tr>
+<tr>
+<td colspan="1"><tt>OUTPUT</tt> </td>
+<td colspan="1">Used by some back-end to precise output (pdf for example) </td>
+</tr>
+<tr>
+<td colspan="1"><tt>TITLE</tt> </td>
+<td colspan="1">Title of the generated document. </td>
+</tr>
+<tr>
+<td colspan="1"><tt>VERSION</tt> </td>
+<td colspan="1">Version of the document </td>
+</tr>
+<tr>
+<td colspan="1"><tt>SUBTITLE</tt> </td>
+<td colspan="1">sub-title of the documeny (not supported by all back-ends) </td>
+</tr>
+<tr>
+<td colspan="1"><tt>LOGO</tt> </td>
+<td colspan="1">logo(s) of the organization (separated by commas) (not supported by all back-ends) </td>
+</tr>
+<tr>
+<td colspan="1"><tt>ORGANIZATION</tt> </td>
+<td colspan="1">organization producing the document (not supported by all back-ends) </td>
+</tr>
+</table>
+</div><p>
+The variable below are provided by <i><b>Thot</b></i> but must not be changed (unless you know exactly what you do): </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Variable </th>
+<th colspan="1">Content </th>
+</tr>
+<tr>
+<td colspan="1"><tt>THOT_BASE</tt> </td>
+<td colspan="1">Base directory of <i><b>Thot</b></i><a class="footnumber" href="#footnote-2">2</a>. </td>
+</tr>
+<tr>
+<td colspan="1"><tt>THOT_DATE</tt> </td>
+<td colspan="1">Current date. </td>
+</tr>
+<tr>
+<td colspan="1"><tt>THOT_FILE</tt> </td>
+<td colspan="1">Start file containing the <i><b>Thot</b></i> text (as passed in command line). </td>
+</tr>
+<tr>
+<td colspan="1"><tt>THOT_OUT_PATH</tt> </td>
+<td colspan="1">Path of the file to generate (as passed to <tt>-o</tt> option). </td>
+</tr>
+<tr>
+<td colspan="1"><tt>THOT_OUT_TYPE</tt> </td>
+<td colspan="1">Type of output back-end (as passed to <tt>-t</tt> option). </td>
+</tr>
+<tr>
+<td colspan="1"><tt>THOT_USE_PATH</tt> </td>
+<td colspan="1">Colon-separated list of directory containing modules. </td>
+</tr>
+<tr>
+<td colspan="1"><tt>THOT_VERSION</tt> </td>
+<td colspan="1">Current version of <i><b>Thot</b></i> </td>
+</tr>
+</table>
+</div><p>
+There exist other variables according to used modules or back-end that may be found in their documentation. </p>
+<h2><a name="2.1.4"></a>2.1.4 Module Usage  </h2>
+<p>
+As shown in the tutorial example, a	proeminent feature of <i><b>Thot</b></i> is the configuration of the text scanner according needs of the user. This is mainly performed by the use of specific modules that add syntax to the basic parser of <i><b>Thot</b></i>. To use a module, you have just to add the following syntax: </p>
+<div class="listing"><pre class="code">
+@use MODULE_NAME</pre></div><p>
+The module use is usually performed at the start of the document but it is not mandatory. The module is retrieved from the paths found in the <tt>THOT_USE_PATH</tt> variable (separated by colons). This variable is initialized with the path <tt>$(THOT_BASE)/mods</tt>. </p>
+<p>
+Notice that, when you include a front-end module, like <tt>dokuwiki</tt>, syntax from the previous front-end module are removed but other syntax rules are kept. </p>
+<h2><a name="2.1.5"></a>2.1.5 Inclusion  </h2>
+<p>
+<i><b>Thot</b></i> allows to split big document in multiple files. Then, one has to re-assemble the document using inclusion in the main document. The inclusion is performed in textual way as if the included text was replacing the inclusion command. </p>
+<p>
+An inclusion command has the following syntax: </p>
+<div class="listing"><pre class="code">
+@include PATH_TO_FILE_TO_INCLUDE</pre></div><p>
+The passed path may be absolute or relative. In the latter case, the absolute path is built from the path of the directory containing the main file. This ensures that the document is well built whatever the working directory of <i><b>Thot</b></i> invocation. </p>
+<h2><a name="2.1.6"></a>2.1.6 References, labels and captions  </h2>
+<p>
+In Thot terminology, an embedded part is a piece of document that is not part of the main flow of text. Usual embedded parts are figures, tables, listing, etc. </p>
+<p>
+Captions may hooked to embedded in a standard way using the <tt>@caption</tt> syntax. The caption is formed by any word and formatting following the <tt>@caption</tt> keyword to the end of the file. It must be placed just after the embedded part as in the example below. </p>
+<div class="figure"><pre class="file">
+  &lt;code c&gt;
+  int main() {
+    return 0;
+  }
+  &lt;/code&gt;
+  @caption This is //my// listing
+</pre>
+</div><p>
+In the same way, a label may be added to an embedded part or to an header by putting a <tt>@label</tt> definition after an embedded part. This tag is followed by an identifier that may be then used in a reference, <tt>@ ref:</tt><i>identifier</i><tt>@</tt>. The reference is then replaced by the number of the referenced item as in the example below. </p>
+<div class="figure"><pre class="file">
+  ====== Title ======
+  @label my-title
+
+  &lt;code c&gt;
+  int main() {
+    return 0;
+  }
+  &lt;/code&gt;
+  @label my-code
+  
+  The Listing @ref:my-code@ in Section @ref:my-title@.
+</pre>
+</div><h2><a name="2.1.7"></a>2.1.7 External Blocks  </h2>
+<p>
+Several additional modules of <i><b>Thot</b></i> allows including texts, images, etc produced by external tools. This includes, for example, <i>dot</i>, <i>aafig</i>, <i>gnuplot</i> or <i>code</i>. </p>
+<p>
+This means that  <i><b>Thot</b></i> embeds blocks of text targetting a different tool but is able to replace this block by the result (often an image but not only) of an external tool.  </p>
+<p>
+To mark beginning and end of this black, tag between <tt>&lt;</tt> and <tt>&gt;</tt> are used with the name of the external module. For example, the block below target the <i>dot</i> utility: </p>
+<div class="listing"><pre class="code">
+&lt;dot&gt;
+digraph {
+	0 -&gt; 1;
+	1 -&gt; 2;
+&lt;/dot&gt;</pre></div><p>
+Notice the <tt>/</tt> character prefixing the closing tag. </p>
+<p>
+The beginning tag accepts also a list of arguments separated by commas <tt>,</tt>. Depending on the module, this argument may also be structured as an identifier, following an <tt>=</tt> sign and followed by the value itself. </p>
+<p>
+In the example below, the <i>aafig</i> block accepts two arguments: </p>
+<ul >
+<li><p>
+ <tt>foreground</tt> whose value is <tt>#ff0000</tt>, </p>
+</li>
+<li><p>
+ <tt>proportional</tt> whose value is <tt>off</tt>. </p>
+</li>
+</ul>
+<div class="listing"><pre class="code">
+&lt;aafig foreground=#ff0000,proportional=off&gt;
+...
+&lt;/aafig&gt;</pre></div><h2><a name="2.1.8"></a>2.1.8 Command  </h2>
+<p>
+The <tt>thot</tt> command supports the syntax below: </p>
+<div class="listing"><pre class="code">
+&gt; thot MAIN_FILE OPTIONS</pre></div><p>
+The <i>MAIN_FILE</i> is <i><b>Thot</b></i> file matching the syntax described in this chapter. The <i>OPTIONS</i> are described below: </p>
+<ul >
+<li><p>
+ <tt>-h</tt>, <tt>&#8211;help</tt>: display the help of the command ; </p>
+</li>
+<li><p>
+ <tt>-o</tt>, <tt>&#8211;out</tt> <i>FILE</i>: select the output file ; </p>
+</li>
+<li><p>
+ <tt>-D</tt>, <tt>&#8211;define</tt> <i>NAME</i><tt>=</tt><i>VALUE<tt>: defines a variable with its value ; </tt></i></p>
+</li>
+<li><p>
+ <tt>-t</tt>, <tt>&#8211;type</tt> <i>TYPE</i>: define the type of chosen back-end (default value <tt>html</tt>, or one of <tt>docbook</tt> and <tt>latex</tt>) ; </p>
+</li>
+<li><p>
+ <tt>-u</tt>, <tt>&#8211;use</tt> <i>MODULE</i>: load the given module before generation. </p>
+</li>
+</ul>
+<h2><a name="2.2"></a>2.2 Modules  </h2>
+<p>
+This section describes the main modules and back-end provided by <i><b>Thot</b></i>. </p>
+<h2><a name="2.2.1"></a>2.2.1 Dokuwiki Front-end  </h2>
+<p>
+The dokuwiki module is a basic front-end providing the dokuwiki syntax. Please refer <a href="http://www.dokuwiki.org/syntax">Dokuwiki Syntax</a> for more details. </p>
+<p>
+Usually, this module must be included at the head of the file containing dokuwiki syntax: </p>
+<div class="listing"><pre class="code">
+@use dokuwiki</pre></div><p>
+In addition, the dokuwiki module provides a syntax for definition list (notice the two spaces before the question mark): </p>
+<div class="listing"><pre class="code">
+  ? term 1 : definition 1
+  ? term 2 : definition 2
+  ? term 3 : multiline definition
+And there ?
+And here !</pre></div><p>
+That gives: </p>
+<hr/><dl>
+<dt><p>
+ term 1  </p>
+</dt><dd><p>
+ definition 1 </p>
+</dd><dt><p>
+ term 2  </p>
+</dt><dd><p>
+ definition 2 </p>
+</dd><dt><p>
+ term 3  </p>
+</dt><dd><p>
+ multiline definition And there ? And here ! </p>
+</dd></dl>
+<hr/><p>
+This module extents a bit the <tt>&lt;code&gt;</tt> tag of Dokuwiki. Basically, this tag supports as argument the name of the language to display but in this extension, line numbering can be asked: </p>
+<div class="listing"><pre class="code">
+&lt;code c,line&gt;
+#include &lt;stdio.h&gt;
+
+int main(void) {
+	printf("Hello, World!\n");
+...</pre></div><p>
+Will give: </p>
+<div class="listing"><pre class="code">
+#include &lt;stdio.h&gt;
+
+int main(void) {
+	printf("Hello, World!\n");
+...</pre></div><p>
+The start number may also be selected: </p>
+<div class="listing"><pre class="code">
+&lt;code c,line=15&gt;
+#include &lt;stdio.h&gt;
+
+int main(void) {
+	printf("Hello, World!\n");
+...</pre></div><p>
+Produces: </p>
+<div class="listing"><pre class="code">
+#include &lt;stdio.h&gt;
+
+int main(void) {
+	printf("Hello, World!\n");
+...</pre></div><h2><a name="2.2.2"></a>2.2.2 Textile Module  </h2>
+<p>
+<i><b>Thot</b></i> is really independent of the wiki language used to format the document: <tt>textile</tt> module is the proof: it implements the wiki language proposed by <a href="http://txstyle.org/.">http://txstyle.org/.</a> To use it, just type at the head of your text: </p>
+<div class="listing"><pre class="code">
+@use textile</pre></div><p>
+Currently, <i><b>Thot</b></i> only implements 80% of the textile tags but we hope to reach 100% quicly. The unsupported tags includes: </p>
+<ul >
+<li><p>
+ <tt>&lt;notextile&gt;</tt> .. <tt>&lt;/notextile&gt;</tt> </p>
+</li>
+<li><p>
+ <tt>[S</tt> &#8943; <tt>S]</tt> </p>
+</li>
+<li><p>
+ <tt>.clear</tt> </p>
+</li>
+<li><p>
+ <tt>.dl</tt> with style </p>
+</li>
+<li><p>
+ <tt>.pre..</tt> </p>
+</li>
+<li><p>
+ <tt>###..</tt> </p>
+</li>
+<li><p>
+ <tt>.notextile..</tt> </p>
+</li>
+<li><p>
+ style + <tt>*</tt> </p>
+</li>
+<li><p>
+ style + <tt>#*</tt> </p>
+</li>
+<li><p>
+ style + <tt>#n</tt> </p>
+</li>
+<li><p>
+ style + <tt>#_</tt> </p>
+</li>
+<li><p>
+ style + <tt>;</tt> </p>
+</li>
+<li><p>
+ style + <tt>-</tt> </p>
+</li>
+<li><p>
+ table header </p>
+</li>
+<li><p>
+ <tt>[</tt> &#8943; <tt>!]</tt> </p>
+</li>
+<li><p>
+ <tt>[(</tt> &#8943; <tt>)</tt> &#8943; <tt>]</tt> </p>
+</li>
+<li><p>
+ <tt>fn</tt> &#8943; <tt>^.</tt> </p>
+</li>
+<li><p>
+ <tt>note#</tt> </p>
+</li>
+<li><p>
+ <tt>notelist.</tt> </p>
+</li>
+<li><p>
+ <tt>"</tt> &#8943; <tt>":</tt> &#8943; </p>
+</li>
+<li><p>
+ <tt>[</tt> .. <tt>]</tt> &#8943;  </p>
+</li>
+</ul>
+<p>
+Any contributor will be welcome. </p>
+<h2><a name="2.2.3"></a>2.2.3 Dot Module  </h2>
+<p>
+The dot module allows to use <a href="http://www.graphviz.org/">GraphViz</a> graph drawing inside <i><b>Thot</b></i>. </p>
+<p>
+Include the module with: </p>
+<div class="listing"><pre class="code">
+@use dot</pre></div><p>
+The dot graph insertion must implements the syntax below: </p>
+<div class="listing"><pre class="code">
+&lt;dot DRAWER&gt;
+DOT syntax
+&lt;/dot&gt;</pre></div><p>
+The <i>DOT syntax</i> must follows the rules of <tt>.dot</tt>. See <a href="http://www.graphviz.org/doc/info/lang.html">DOT language</a> for more details. </p>
+<p>
+The <i>DRAWER</i> is optional or may be one of the following with the matching effect: </p>
+<ul >
+<li><p>
+ dot &#8211; directed graphs (default) </p>
+</li>
+<li><p>
+ neato &#8211; undirected graphs </p>
+</li>
+<li><p>
+ twopi &#8211; radial layouts of graphs </p>
+</li>
+<li><p>
+ circo &#8211; circular layout of graphs </p>
+</li>
+<li><p>
+ fdp &#8211; undirected graphs </p>
+</li>
+</ul>
+<p>
+<b>NOTE</b>: old form <tt>@&lt;dot&gt;</tt> is now deprecated. </p>
+<h2><a name="2.2.4"></a>2.2.4 latexmath Module  </h2>
+<p>
+This module, to be used, must be imported as below: </p>
+<div class="listing"><pre class="code">
+@use latexmath</pre></div><p>
+In this case, Latex math expressions may be inserted in the text between dollars as in the example below: </p>
+<div class="listing"><pre class="code">
+This is an equation: $\LARGE e^x=\sum_{n=0}^\infty\frac{x^n}{n!}$.</pre></div><p>
+That will produce: </p>
+<p>
+This is an equation: . </p>
+<p>
+Short guide to this syntax may be found <a href="ftp://ftp.ams.org/ams/doc/amsmath/short-math-guide.pdf">here</a>. </p>
+<p>
+To have a lonely dollar, just put a double dollar, <tt>$</tt>. </p>
+<h2><a name="2.2.5"></a>2.2.5 gnuplot Module  </h2>
+<p>
+This module must be imported with the following command at the beginning of the file: </p>
+<div class="listing"><pre class="code">
+@use gnuplot</pre></div><p>
+Use <tt>&lt;gnuplot&gt;</tt> and <tt>&lt;/gnuplot&gt;</tt> tags lonely on a line and put inside the gnuplot script. The opening tag can also contains a dimension specification <tt>?</tt><i>width</i><tt>x</tt><i>height</i> as in the example below: </p>
+<div class="listing"><pre class="code">
+&lt;gnuplot?256x256&gt;
+set key left box
+set samples 50
+plot [-10:10] sin(x),atan(x),cos(atan(x))
+&lt;/gnuplot&gt;</pre></div><p>
+This will gives: </p>
+<p>
+Documentation about GnuPlot can be found <a href="http://gnuplot.info/documentation.html">here</a>. </p>
+<h2><a name="2.2.6"></a>2.2.6 ditaa Module  </h2>
+<p>
+<i>ditaa</i> is tool generating figures from textual description. To use it in <i><b>Thot</b></i>, import the module in your text: </p>
+<div class="listing"><pre class="code">
+@use ditaa</pre></div><p>
+and ensure that the <a href="http://ditaa.sourceforge.net">ditaa</a> is available on your system. </p>
+<p>
+And insert your figure between <tt>&lt;ditaa&gt;</tt> tags: </p>
+<div class="listing"><pre class="code">
+&lt;ditaa&gt;
+/------+    +-----\
+| here |---&gt;|there|
++------/    \-----+
+&lt;/ditaa&gt;</pre></div><p>
+For details on <i>ditaa</i> format, look at <a href="http://ditaa.sourceforge.net/#usage">http://ditaa.sourceforge.net/#usage</a> . </p>
+<p>
+As other figures, <i>ditaa</i> blocks supports labelling and several options: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Option </th>
+<th colspan="1">Argument </th>
+</tr>
+<tr>
+<td colspan="1">no-antialias </td>
+<td colspan="1">yes/no </td>
+</tr>
+<tr>
+<td colspan="1">no-separation </td>
+<td colspan="1">yes/no </td>
+</tr>
+<tr>
+<td colspan="1">round-corners </td>
+<td colspan="1">yes/no </td>
+</tr>
+<tr>
+<td colspan="1">scale </td>
+<td colspan="1">real </td>
+</tr>
+<tr>
+<td colspan="1">no-shadows </td>
+<td colspan="1">yes/no </td>
+</tr>
+<tr>
+<td colspan="1">tabs </td>
+<td colspan="1">integer </td>
+</tr>
+</table>
+</div><p>
+If <tt>ditaa</tt> command is available, the example above will give: </p>
+<h2><a name="2.2.7"></a>2.2.7 aafig Module  </h2>
+<p>
+<i>aafig</i> is tool generating figures from textual description. To use it in <i><b>Thot</b></i>, import the module in your text: </p>
+<div class="listing"><pre class="code">
+@use aafig</pre></div><p>
+and ensure that the <a href="https://launchpad.net/aafigure">aafigure</a> is available on your system. </p>
+<p>
+And insert your figure between <tt>&lt;aafig&gt;</tt> tags: </p>
+<div class="listing"><pre class="code">
+&lt;aafig&gt;
++------+    +-----+
+| here |---&gt;|there|
++------+    +-----+
+&lt;/aafig&gt;</pre></div><p>
+For details on <i>aafig</i> format, look at <a href="https://launchpadlibrarian.net/41870218/aafigure.pdf">https://launchpadlibrarian.net/41870218/aafigure.pdf</a> . </p>
+<p>
+As other figures, <i>aafig</i> blocks supports labelling and several options: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Option </th>
+<th colspan="1">Argument </th>
+</tr>
+<tr>
+<td colspan="1">wide-chars </td>
+<td colspan="1">yes/no </td>
+</tr>
+<tr>
+<td colspan="1">textual </td>
+<td colspan="1">yes/no </td>
+</tr>
+<tr>
+<td colspan="1">scale </td>
+<td colspan="1">real </td>
+</tr>
+<tr>
+<td colspan="1">aspect </td>
+<td colspan="1">&#8943; </td>
+</tr>
+<tr>
+<td colspan="1">linewidth </td>
+<td colspan="1">real </td>
+</tr>
+<tr>
+<td colspan="1">proportional </td>
+<td colspan="1">yes/no </td>
+</tr>
+<tr>
+<td colspan="1">foreground </td>
+<td colspan="1">#RRGGBB </td>
+</tr>
+<tr>
+<td colspan="1">fill </td>
+<td colspan="1">#RRGGBB </td>
+</tr>
+<tr>
+<td colspan="1">background </td>
+<td colspan="1">#RRGGBB </td>
+</tr>
+<tr>
+<td colspan="1">option </td>
+<td colspan="1">&#8943; </td>
+</tr>
+</table>
+</div><p>
+If <tt>aafigure</tt> command is available, the example above will give: </p>
+<h2><a name="2.3"></a>2.3 Back-ends  </h2>
+<p>
+<i><b>Thot</b></i> supports several output back-ends whose work is described here. </p>
+<h2><a name="2.3.1"></a>2.3.1 HTML Back-end  </h2>
+<p>
+This back-end is maybe the more used one as it only requires a web brower to use the documentation. It is usually called by passing the option <tt>-t html</tt> to the <i><b>Thot</b></i> invocation. </p>
+<h2><a name="2.3.1.1"></a>2.3.1.1 Configuring the output  </h2>
+<p>
+This back-end may be configured using different variables as presented below. </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Variable </th>
+<th colspan="1">Value </th>
+<th colspan="1">Description </th>
+</tr>
+<tr>
+<td colspan="1"><tt>HTML_STYLES</tt> </td>
+<td colspan="1">CSS file path </td>
+<td colspan="1">use the given CSS in the generated file </td>
+</tr>
+<tr>
+<td colspan="1"><tt>HTML_SHORT_ICON</tt> </td>
+<td colspan="1">image file path </td>
+<td colspan="1">short icon for HTML file </td>
+</tr>
+<tr>
+<td colspan="1"><tt>HTML_ONE_FILE_PER</tt> </td>
+<td colspan="1">document, chapter, section </td>
+<td colspan="1">generation structure: one file per &#8943; </td>
+</tr>
+<tr>
+<td colspan="1"><tt>HTML_TEMPLATE</tt> </td>
+<td colspan="1">HTML/XML file </td>
+<td colspan="1">template file used to generate pages </td>
+</tr>
+</table>
+</div><p>
+Whatever the option, this back-end creates two things whose name is based on a ROOT name. It may be either the original <i><b>Thot</b></i> path without suffix, or the <tt>THOT_OUT_PATH</tt> path. </p>
+<ul >
+<li><p>
+ <tt>ROOT.html</tt> &#8211; the entry page of the documentation </p>
+</li>
+<li><p>
+ <tt>ROOT-n.html</tt> &#8211; page n of the documentation </p>
+</li>
+<li><p>
+ <tt>ROOT-imports/</tt> &#8211; contains all file used from the entry page (other pages, images, CSS, etc) </p>
+</li>
+</ul>
+<p>
+So to copy the result documentation, you have just to move these files and directories to your target directory. </p>
+<p>
+The back-end supports CSS stylesheet. To get your own stylesheet, you have just to provide styles matching the tags generated by this back-end. The tables below sum-up these tags. </p>
+<p>
+In addition, it also supports templating. The template file must be a normal HTML or XML file containing the following special tags that will be replaced by content generated by <i><b>Thot</b></i>: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Tag </th>
+<th colspan="1">Content </th>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;authors/&gt;</tt> </td>
+<td colspan="1">list of authors </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;content/&gt;</tt> </td>
+<td colspan="1">main content of the page (depend on the structure) </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;header/&gt;</tt> </td>
+<td colspan="1">header of the current content (chapter or section title) </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;title/&gt;</tt> </td>
+<td colspan="1">title of the document </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;toc/&gt;</tt> </td>
+<td colspan="1">table of content of the document </td>
+</tr>
+</table>
+</div><h2><a name="2.3.1.2"></a>2.3.1.2 Generated content  </h2>
+<p>
+Text items: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Tag </th>
+<th colspan="1"><i><b>Thot</b></i> Item </th>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;b&gt; &#8943; &lt;/b&gt;</tt> </td>
+<td colspan="1">bold area </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;i&gt; &#8943; &lt;/i&gt;</tt> </td>
+<td colspan="1">italic area </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;u&gt; &#8943; &lt;/u&gt;</tt> </td>
+<td colspan="1">underline area </td>
+</tr>
+<tr>
+<td colspan="1"><tt><sub> &#8943; </sub></tt> </td>
+<td colspan="1">subscript area </td>
+</tr>
+<tr>
+<td colspan="1"><tt><sup> &#8943; </sup></tt> </td>
+<td colspan="1">superscript area </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;tt&gt; &#8943; &lt;/tt&gt;</tt> </td>
+<td colspan="1">monospace area </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;s&gt; &#8943; &lt;/s&gt;</tt> </td>
+<td colspan="1">deleted area </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;a &#8943;&gt; &#8943; &lt;/a&gt;</tt> </td>
+<td colspan="1">link </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;img &#8943;&gt; &#8943; &lt;/img&gt; </tt></td>
+<td colspan="1">embedded image </td>
+</tr>
+</table>
+</div><p>
+Paragraphs: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Tag </th>
+<th colspan="1"><i><b>Thot</b></i> Item </th>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;hn&gt; &#8943; &lt;/hn&gt;</tt> </td>
+<td colspan="1">header of level n </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;blockquote&gt; &#8943; &lt;/blockquote&gt;</tt> </td>
+<td colspan="1">quote paragraph </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;hr/&gt;</tt> </td>
+<td colspan="1">horizontal rule </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;p&gt; &#8943; &lt;/p&gt;</tt> </td>
+<td colspan="1">paragraph </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;ul&gt; &#8943; &lt;/ul&gt;</tt> </td>
+<td colspan="1">unnummbered list </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;ol&gt; &#8943; &lt;/ol&gt;</tt> </td>
+<td colspan="1">numbered list </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;li&gt; &#8943; &lt;/li&gt;</tt> </td>
+<td colspan="1">list item </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;div class="listing"&gt; &#8943; &lt;/div&gt;</tt> </td>
+<td colspan="1">embedded listing </td>
+</tr>
+</table>
+</div><p>
+Structural items: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Tag </th>
+<th colspan="1"><i><b>Thot</b></i> Item </th>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;div class="body"&gt; &#8943; &lt;/div&gt;</tt> </td>
+<td colspan="1">main part of the page </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;ul class="toc"&gt; &#8943; &lt;/ul&gt;</tt> </td>
+<td colspan="1">content table </td>
+</tr>
+</table>
+</div><p>
+Tables: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Tag </th>
+<th colspan="1"><i><b>Thot</b></i> Item </th>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;table&gt; &#8943; &lt;/table&gt;</tt> </td>
+<td colspan="1">table </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;tr&gt; &#8943; &lt;/tr&gt;</tt> </td>
+<td colspan="1">table row </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;td&gt; &#8943; &lt;/td&gt;</tt> </td>
+<td colspan="1">table cell </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;th&gt; &#8943; &lt;/th&gt;</tt> </td>
+<td colspan="1">table header cell </td>
+</tr>
+</table>
+</div><p>
+Foot notes: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Tag </th>
+<th colspan="1"><i><b>Thot</b></i> Item </th>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;a class="footnumber" &#8943;&gt; &#8943; &lt;/a&gt;</tt> </td>
+<td colspan="1">foot note reference </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;div class="footnotes"&gt; &#8943; &lt;/div&gt;</tt> </td>
+<td colspan="1">foot note part </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;p class="footnote"&gt; &#8943; &lt;/p&gt;</tt> </td>
+<td colspan="1">foot note entry </td>
+</tr>
+<tr>
+<td colspan="1"><tt>&lt;a class="footnumber" &#8943;&gt; &#8943; &lt;/a&gt;</tt> </td>
+<td colspan="1">foot note number </td>
+</tr>
+</table>
+</div><p>
+The header of the page have the following structure: </p>
+<div class="listing"><pre class="code">
+&lt;div class="header"&gt;
+	&lt;div class="title"&gt; TITLE &lt;/div&gt;
+	&lt;div class="authors"
+		&lt;a href="mailto:AUTHOR_MAIL"&gt; AUTHOR_NAME &lt;/a&gt;
+		...
+	&lt;/div&gt;
+&lt;/div&gt;</pre></div><h2><a name="2.3.1.3"></a>2.3.1.3 Using CSS  </h2>
+<p>
+Instead of using a template to customize the lookup of your page, you can simply uses dedicated CSS style sheets by defining the variable <tt>HTML_STYLES</tt>. This documentation is itself produced with this method: </p>
+<div class="listing"><pre class="code">
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_green.css</pre></div><p>
+The stylesheet called <tt>minima</tt> is used: it is a free stylsheet dedicated to website (see copyright and credits in <tt>css/minima/</tt>) but we have adapted it to display documents. It comes in different color flavors that you can use: </p>
+<ul >
+<li><p>
+ <tt>style_blue.css</tt> </p>
+</li>
+<li><p>
+ <tt>style_gray.css</tt> </p>
+</li>
+<li><p>
+ <tt>style_pink.css</tt> </p>
+</li>
+<li><p>
+ <tt>style_brown.css</tt> </p>
+</li>
+<li><p>
+ <tt>style_green.css</tt> </p>
+</li>
+<li><p>
+ <tt>style_purple.css</tt> </p>
+</li>
+</ul>
+<p>
+However, these stylesheets are not mandatory and you can use any other CSS or write your own one. In the future, more CSS stylesheets will provided: contributors are welcome! </p>
+<h2><a name="2.3.2"></a>2.3.2 Latex Back-end  </h2>
+<p>
+The Latex back-end produces output as lonely Latex file that may be compiled to produces PDF output. </p>
+<p>
+The following variables may be used to control the generation process: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Variable </th>
+<th colspan="1">Description </th>
+</tr>
+<tr>
+<td colspan="1">OUTPUT </td>
+<td colspan="1"><tt>latex</tt> for simple Latex generation, <tt>pdf</tt> for also generating PDF. </td>
+</tr>
+<tr>
+<td colspan="1">SUBTITLE </td>
+<td colspan="1">document subtitle (only for Koma document classes) </td>
+</tr>
+<tr>
+<td colspan="1">ORGANIZATION </td>
+<td colspan="1">producer organization (only for Koma document classes) </td>
+</tr>
+<tr>
+<td colspan="1">LOGO </td>
+<td colspan="1">logo(s) to display </td>
+</tr>
+<tr>
+<td colspan="1">LATEX_CLASS </td>
+<td colspan="1">Select the class of generated document (<tt>book</tt> as a default). </td>
+</tr>
+<tr>
+<td colspan="1">LATEX_PREAMBLE </td>
+<td colspan="1">The variable value is appended as-is just after class definition (it may be used to included specific Latex modules) </td>
+</tr>
+<tr>
+<td colspan="1">LATEX_PAPER </td>
+<td colspan="1">Select the paper type of the generated document (<tt>a4paper</tt> as a default). </td>
+</tr>
+</table>
+</div><h2><a name="2.3.3"></a>2.3.3 DocBook Back-end  </h2>
+<p>
+This back-end generates <a href="http://www.docbook.org/">DockBook</a> XML format. </p>
+<p>
+The following variables may be used to control the generation process: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Variable </th>
+<th colspan="1">Description </th>
+</tr>
+<tr>
+<td colspan="1">DOCBOOK_BACKEND </td>
+<td align="right" colspan="1">one of <tt>openjade</tt> (default) or <tt>dblatex</tt><a class="footnumber" href="#footnote-3">3</a> </td>
+</tr>
+</table>
+</div><h2><a name="2.3.4"></a>2.3.4 Slidy Back-end  </h2>
+<p>
+Slidy is basically an HTML back-end specialized in the generation of presentation. It is based on the <a href="https://www.w3.org/Talks/Tools/Slidy2">Slidy</a> set of CSS and scripts provided by the W3C. </p>
+<h2><a name="2.3.4.1"></a>2.3.4.1 Using Slidy = </h2>
+<p>
+To generate a Slidy presentation from a <i><b>Thot</b></i> document named <tt>doc.thot</tt>, just type: </p>
+<div class="listing"><pre class="code">
+thot.py -t slidy doc.thot</pre></div><p>
+As for the <tt>html</tt> back-end, a file named <tt>doc.html</tt> is created with associated files stored in <tt>doc-imports</tt>. So if you have to copy or send the presentation, do not forget to include the <tt>doc-imports</tt> directory. </p>
+<p>
+The slide are created according to the folowing policy: </p>
+<ul >
+<li><p>
+ a first cover slide containing title, authors, organization is created. </p>
+</li>
+<li><p>
+ the first paragraphs (not in a section) makes a slide whose title is <tt>Introduction</tt> (possibly translated in the document language), </p>
+</li>
+<li><p>
+ each header creates a new slide, </p>
+</li>
+<li><p>
+ <tt>&lt;slide&gt;</tt> alone on a line creates a new slide. </p>
+</li>
+</ul>
+<p>
+The slides can contain anything that is found usually in <i><b>Thot</b></i> document. In addition, incremental display is also supported: </p>
+<ul >
+<li><p>
+ <tt>&lt;inc&gt;</tt> alone on a line makes the following document element displayed incrementally, </p>
+</li>
+<li><p>
+ <tt>&lt;non-inc&gt;</tt> disables the incremental display. </p>
+</li>
+</ul>
+<h2><a name="2.3.4.2"></a>2.3.4.2 Variables  </h2>
+<p>
+The modules is driven by the following variables: </p>
+<p>
+? TITLE : title of the presentation, ? SUBTITLE : sub-title (displayed just under the title), ? AUTHORS : document authors, ? ORGANZATION : authors organization, ? STYLE : style to use (only w3c-blue for now) or an absolute path to a CSS, ? COPYRIGHT : to display in the footer of slides, ? COVER_IMAGE : image to display on the cover slide, ? ORG_LOGO : to display in the title bar of each slide, ? DOC_LOG : to display in the title of each slide. ? OUTLINE : select the generation of outline page (<tt>top</tt>) or not (<tt>none</tt>) </p>
+<h2><a name="2.3.4.3"></a>2.3.4.3 Styling  </h2>
+<p>
+Slidy is only delivered with <tt>w3c-blue</tt> theme from W3C but we hope to add more styles in the future. However, it is very easy to make your own theme by customize it (requiring at least that you understand the CSS language): (a) copy the file $(THOT_HOME)/slidy/style/w3c-blue.css to another CSS file and (b) modify its content. Then pass the absolute path to the <tt>STYLE</tt> variable described below. </p>
+<p>
+Outlinge generation uses styles to achieve visual effect like transition between different parts of the presentation. There is on <tt>&lt;li&gt;</tt>  for each entry and the used styles are: </p>
+<div class="table"><table>
+<tr>
+<th colspan="1">Style </th>
+<th colspan="1">Entry type </th>
+</tr>
+<tr>
+<td colspan="1"><tt>header-done</tt> </td>
+<td colspan="1">performed part </td>
+</tr>
+<tr>
+<td colspan="1"><tt>header-last</tt> </td>
+<td colspan="1">ending part </td>
+</tr>
+<tr>
+<td colspan="1"><tt>header-current</tt> </td>
+<td colspan="1">starting part </td>
+</tr>
+<tr>
+<td colspan="1"><tt>header-todo</tt> </td>
+<td colspan="1">parts not already presented </td>
+</tr>
+</table>
+</div><h2><a name="2.3.5"></a>2.3.5 SCORM Back-end  </h2>
+<p>
+This back-end implements partially the <a href="http://www.adlnet.org/scorm/scorm-2004-4th/">SCORM 2004 format</a> dedicated to publication of e-learning courses. To invoke it, pass the option <tt>-t scorm</tt> to the <i><b>Thot</b></i> command. The result is a <tt>.zip</tt> archive that may be submitted, as is, to software or LMS/CMS supporting the SCORM format. </p>
+<p>
+The <i>scorm</i> back-end is basically an <i>html</i> back-end with option <tt>HTML_ONE_PAGE_PER=chapter</tt>. The resulting SCORM course contains one SCO<a class="footnumber" href="#footnote-4">4</a> per chapter and one organization containing the SCOs as a sequential list. Resources are automatically handled by this back-end if they are images or styles included in the <i><b>Thot</b></i> file. If not, just define a variable named SCORM_FILES with the list of files to add. </p>
+<p>
+To use specific SCORM command, you have to include the following line <a class="footnumber" href="#footnote-5">5</a>: </p>
+<div class="listing"><pre class="code">
+@use scorm</pre></div><h2><a name="2.3.5.1"></a>2.3.5.1 Commands  </h2>
+<p>
+The following commands are supported (refer to <a href="http://www.adlnet.org/scorm/scorm-2004-4th/">SCORM documentation</a> for details on the options). These commands must be put on a single line. Boolean options must be prefixed either by <tt>+</tt> for true value or <tt>-</tt> for false value. </p>
+<ul >
+<li><p>
+ <tt>@scorm:controlMode:</tt> <i>options</i> with possible boolean <tt>choice</tt>, <tt>choiceExit</tt>, <tt>flow</tt>, <tt>forwardOnly</tt>, <tt>useCurrentAttemptObjectiveInfo</tt> or <tt>useCurrentAttemptProgressInfo</tt>. </p>
+</li>
+<li><p>
+ <tt>@scorm:pre:</tt> <i>selection</i> implements a pre-condition. </p>
+</li>
+<li><p>
+ <tt>@scorm:post:</tt> <i>selection</i> implements a post-condition. </p>
+</li>
+<li><p>
+ <tt>@scorm:exit:</tt> <i>selection</i> implements an exitcondition. </p>
+</li>
+</ul>
+<p>
+<i>selection</i> has the following format: <tt>if</tt> (<tt>all</tt>|<tt>any</tt>)? <i>tests</i> <tt>then</tt> <i>action</i>. </p>
+<p>
+<i>tests</i> is a list of comma-separated <i>test</i>. </p>
+<p>
+<i>test</i> matches (<i>objective identifier</i>)? <tt>is</tt> (<tt>not</tt>)? <i>condition</i>. </p>
+<p>
+<i>condition</i> is one of <tt>satisfied</tt>, <tt>objectiveStatusKnown</tt>, <tt>objectiveMeasureKnown</tt> <tt>objectiveMeasureGreaterThan(</tt><i>value</i><tt>)</tt>,  <tt>objectiveMeasureLessThan(</tt><i>value</i><tt>)</tt>, <tt>completed</tt>, <tt>activityProgressKnown</tt>, <tt>attempted</tt>, <tt>attemptLimitExceeded</tt>, <tt>timeLimitExceeded</tt>, <tt>outsideAvailableTimeRange</tt>, <tt>always</tt>. </p>
+<p>
+<i>action</i> is one of <tt>skip</tt>, <tt>disabled</tt>, <tt>hiddenFromChoice</tt>, <tt>stopForwardTraversal</tt>, <tt>exitParent</tt>, <tt>exitAll</tt>, <tt>retry</tt>, <tt>retryAll</tt>, <tt>continue</tt>, <tt>previous</tt>, <tt>exit</tt>. </p>
+<h2><a name="2.3.5.2"></a>2.3.5.2 Unsupported Tags  </h2>
+<ul >
+<li><p>
+ <tt>&lt;auxiliaryResources&gt;</tt> </p>
+</li>
+</ul>
+<div class="footnotes">
+<p class="footnote">
+<a class="footnumber" name="footnote-1">1</a> if not given, current character set is assumed.</p>
+<p class="footnote">
+<a class="footnumber" name="footnote-2">2</a> It may be used to retrieve resources provided by <i><b>Thot</b></i> like CSS stylesheets.</p>
+<p class="footnote">
+<a class="footnumber" name="footnote-3">3</a> This may depends on the software installed of your OS</p>
+<p class="footnote">
+<a class="footnumber" name="footnote-4">4</a> Sharable Content Object</p>
+<p class="footnote">
+<a class="footnumber" name="footnote-5">5</a> SCORM is a back-end and an associated module.</p>
+</div></div>
+</div>
+</body>
+</html>

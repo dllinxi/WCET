@@ -1,0 +1,830 @@
+// embedded scalar single-precision floating-pont instructions
+
+// canonicals
+canon flots "truncf"(flots)
+
+// SPE state
+reg SPEFSCR [ 1 , long ]
+
+// SPE Status and Control Register 
+
+let FP_FRMC_TONEAREST = 0
+let FP_FRMC_TOWARDZERO =1
+let FP_FRMC_UPWARD =2
+let FP_FRMC_DOWNWARD =3
+let FP_SOVH  = 31
+let FP_OVH   = 30
+let FP_FGH   = 29
+reg SPEFSCR_FGH [1, card(1)] alias = SPEFSCR<FP_FGH..FP_FGH>
+let FP_FXH   = 28
+reg SPEFSCR_FXH [1, card(1)] alias = SPEFSCR<FP_FXH..FP_FXH>
+let FP_FINVH = 27
+let FP_FDBZH = 26
+let FP_FUNFH = 25
+let FP_FOVFH = 24
+let FP_FINXS = 21
+reg SPEFSCR_FINXS [1, card(1)] alias = SPEFSCR<FP_FINXS..FP_FINXS>
+let FP_FINVS = 20
+let FP_FDBZS = 19
+let FP_FUNFS = 18
+let FP_FOVFS = 17
+let FP_MODE  = 16
+let FP_SOV   = 15
+let FP_OV    = 14
+let FP_FG    = 13
+reg SPEFSCR_FG [1, card(1)] alias = SPEFSCR<FP_FG..FP_FG>
+let FP_FX    = 12
+reg SPEFSCR_FX [1, card(1)] alias = SPEFSCR<FP_FX..FP_FX>
+let FP_FINV  = 11
+let FP_FDBZ  = 10
+let FP_FUNF  = 9
+let FP_FOVF  = 8
+let FP_FINXE = 6
+reg SPEFSCR_FINXE [1, card(1)] alias = SPEFSCR<FP_FINXE..FP_FINXE>
+let FP_FINVE = 5
+let FP_FDBZE = 4
+let FP_FUNFE = 3
+let FP_FOVFE = 2
+reg SPEFSCR_FRMC [1, card(2)] alias = SPEFSCR<1..0>
+
+
+let EFPARITH = IS_ALU | IS_FLOAT    // Floating-Point Arithmetic Instructions
+let EFPMUL = IS_ALU | IS_MUL | IS_FLOAT 
+let EFPDIV = IS_ALU | IS_DIV | IS_FLOAT 
+let EFPRC = IS_ALU | IS_FLOAT | IS_INT // FP rounding and convert
+let EFPCMP = IS_ALU | IS_FLOAT  // FP compare
+
+
+var TMP_FLOT32    [ 1 , flots ]
+var TMP_FLOAT32_A [ 1 , flots ]
+var TMP_FLOAT32_B [ 1 , flots ]
+var TMP_FLOAT32_D [ 1 , flots ]
+var efs_result		[1, card(32)]
+var efs_maxexp		[1, card(32)]
+var efs_ml1			[1, card(32)]
+var efs_pow			[1, card(32)]
+var efs_sc			[1, card(32)]
+var efs_guard		[1, bool]
+var efs_sticky		[1, bool]
+var efs_v			[1, card(32)]
+var efs_bits		[1, card(32)]
+var efs_shift		[1, card(32)]
+var efs_al			[1, flots]
+var efs_bl			[1, flots]
+var efs_cl			[1, card(1)]
+		
+
+let EFS_SIGN = 0
+let EFS_UNSIGN = 1
+let EFS_UPPER = 0
+let EFS_LOWER = 1
+let EFS_F = 0
+let EFS_I = 1
+let EFS_ROUND= 0
+let EFS_TRUNC = 1
+
+
+//SPE values
+
+let FP_PMAX = 0x7f7fffff
+let FP_PMIN = 0x00800000
+let FP_MMAX = 0x00ffffff
+
+let S32_MIN = -0x80000000
+let S32_MAX =  0x7fffffff
+
+
+
+// macros
+
+macro EFS_SIGN_OF(x) = x<31..31>
+macro EFS_EXP_OF(x)  = x<30..23>
+macro EFS_FRAC_OF(x) = x<22..0>
+
+macro Round32(fp, v, guard, sticky) = \
+	if SPEFSCR_FINXE == 0 then \
+		if SPEFSCR_FRMC == 0b00 then \
+			if guard then \
+				if sticky || fp<9..9> then \
+					v<31..8> = EFS_FRAC_OF(fp) + 1; \
+					if v<31..31> then \
+						if EFS_EXP_OF(fp) >= 254 then \
+							fp = EFS_SIGN_OF(fp) :: 0b1111111011111111111111111111111; \
+						else \
+							EFS_EXP_OF(fp) = EFS_EXP_OF(fp) + 1; \
+							EFS_FRAC_OF(fp) = v<30..8>; \
+						endif; \
+					else \
+						EFS_FRAC_OF(fp) = v<30..8>;	\
+					endif; \
+				endif; \
+			endif; \
+		else if (SPEFSCR_FRMC & 0b10) == 0b10 then \
+		endif; endif; \
+	endif;
+
+macro MostLeft1(r, v) = \
+	r = 1<<16; \
+	efs_pow = 8; \
+	if r > GPR[v] then r = r >> efs_pow; else r = r << efs_pow; endif; \
+	efs_pow = efs_pow >> 1; \
+	if r > GPR[v] then r = r >> efs_pow; else r = r << efs_pow; endif; \
+	efs_pow = efs_pow >> 1;  \
+	if r > GPR[v] then r = r >> efs_pow; else r = r << efs_pow; endif; \
+	efs_pow = efs_pow >> 1; \
+	if r > GPR[v] then r = r >> efs_pow; else r = r << efs_pow; endif; \
+	efs_pow = efs_pow >> 1; \
+	if r > GPR[v] then r = r >> efs_pow; else r = r << efs_pow; endif;
+
+macro CnvtI32ToFP32Sat(r, v, signed, upper_lower, fractional) = \
+	efs_v = v; \
+	efs_result<31..31> = 0; \
+	if efs_v == 0 then \
+		efs_result = 0; \
+		if upper_lower == EFS_UPPER then \
+			SPEFSCR_FGH = 0; \
+			SPEFSCR_FXH = 0; \
+		else \
+			SPEFSCR_FG = 0; \
+			SPEFSCR_FX = 0;	\			
+		endif; \
+	else \
+		if signed == EFS_SIGN then \
+			if efs_v<31..31> == 1 then \
+				efs_v = ~efs_v + 1; \
+				efs_result<31..31> = 1; \
+			endif; \
+		endif; \
+		if fractional == EFS_F then \
+			efs_maxexp = 127; \
+			if signed == EFS_UNSIGN then \
+				efs_maxexp = efs_maxexp - 1; \
+			endif; \
+		else \
+			efs_maxexp = 158; \
+		endif; \
+		MostLeft1(efs_ml1, efs_v); \
+		efs_sc = 31 - efs_ml1; \
+		efs_v = efs_v << efs_sc; \
+		EFS_EXP_OF(efs_result) = efs_maxexp - efs_sc; \
+		efs_guard = v<7..7>; \
+		efs_sticky = v<6..0> != 0; \
+		if upper_lower == EFS_UPPER then \
+			SPEFSCR_FGH = efs_guard; \
+			SPEFSCR_FXH = efs_sticky; \
+		else \
+			SPEFSCR_FG = efs_guard; \
+			SPEFSCR_FX = efs_sticky; \
+		endif; \
+		if efs_guard || efs_sticky then \
+			SPEFSCR_FINXS = 1; \
+		endif; \
+		EFS_FRAC_OF(efs_result) = efs_v<30..8>; \
+		Round32(efs_result, efs_v, efs_guard, efs_sticky); \
+		r = efs_result; \
+	endif
+
+macro CnvtFP32ToI32Sat(result, fp, signed, upper_lower, round, fractional) = \
+	if Isa32NaNOrInfinity(fp) then \
+		SignalFPError(upper_lower, FP_FINV); \
+		if Isa32NaN(fp) then \
+			result = 0x00000000; \
+		else if signed == EFS_SIGN then \
+			if EFS_SIGN_OF(fp) == 1 then \
+				result = 0x80000000; \
+			else \
+				result = 0x7fffffff; \
+			endif; \
+		else \
+			if EFS_SIGN_OF(fp) == 1 then \
+				result = 0x00000000; \
+			else \
+				result = 0xffffffff; \
+			endif; \
+		endif; endif; \
+	else if Isa32Denorm(fp) then \
+		SignalFPError(upper_lower, FP_FINV); \
+		result = 0x00000000; \
+	else if signed == EFS_UNSIGN && EFS_SIGN_OF(fp) == 1 then \
+		SignalFPError(upper_lower, FP_FOVF); \
+		result = 0x00000000; \
+	else if EFS_EXP_OF(fp) == 0 && EFS_FRAC_OF(fp) == 0 then \
+		result = 0x00000000; \
+	else \
+	\
+		if fractional == EFS_I then \
+			efs_maxexp = 158; \
+			efs_shift = 158 - EFS_EXP_OF(fp); \
+			if signed == EFS_SIGN then \
+				if EFS_EXP_OF(fp) != 158 \
+				|| EFS_FRAC_OF(fp) != 0 \
+				|| EFS_SIGN_OF(fp) != 1 then \
+					efs_maxexp = efs_maxexp - 1; \
+				endif; \
+			endif; \
+		else \
+			efs_maxexp = 126; \
+			efs_shift = efs_maxexp - EFS_EXP_OF(fp); \
+			if signed == EFS_SIGN then \
+				efs_shift = efs_shift - 1; \
+			endif; \
+		endif; \
+		\
+		if EFS_EXP_OF(fp) > efs_maxexp then \
+			SignalFPError(upper_lower, FP_FOVF); \
+			if signed == EFS_SIGN then \
+				if EFS_SIGN_OF(fp) == 1 then \
+					result = 0x80000000; \
+				else \
+					result = 0x7fffffff; \
+				endif; \
+			else \
+				result = 0x7fffffff; \
+			endif; \
+		else \
+		\
+			result = 0b1 :: EFS_FRAC_OF(fp) :: 0b00000000; \
+			efs_guard = 0; \
+			efs_sticky = 0; \
+		\
+			efs_guard = result<efs_shift -1 .. efs_shift -1>; \
+			if efs_shift > 16 then \
+				efs_sticky = efs_sticky | (result<15..0> != 0); \
+				result = result >> efs_shift; \
+				efs_shift = efs_shift - 16; \
+			endif; \
+			if efs_shift > 8 then \
+				efs_sticky = efs_sticky | (result<7..0> != 0); \
+				result = result >> efs_shift; \
+				efs_shift = efs_shift - 8; \
+			endif; \
+			if efs_shift > 4 then \
+				efs_sticky = efs_sticky | (result<3..0> != 0); \
+				result = result >> efs_shift; \
+				efs_shift = efs_shift - 4; \
+			endif; \
+			if efs_shift > 2 then \
+				efs_sticky = efs_sticky | (result<1..0> != 0); \
+				result = result >> efs_shift; \
+				efs_shift = efs_shift - 2; \
+			endif; \
+			if efs_shift > 1 then \
+				efs_sticky = efs_sticky | (result<0..0> != 0); \
+				result = result >> efs_shift; \
+			endif; \
+	\
+			if upper_lower == EFS_UPPER then \
+				SPEFSCR_FGH = efs_guard; \
+				SPEFSCR_FXH = efs_sticky; \
+			else \
+				SPEFSCR_FG = efs_guard; \
+				SPEFSCR_FX = efs_sticky; \
+			endif; \
+			if efs_guard || efs_sticky then \
+				SPEFSCR_FINXS = 1; \
+			endif; \
+	\
+			if round == EFS_ROUND && SPEFSCR_FINXE == 0 then \
+				if SPEFSCR_FRMC == 0b00 then \
+					if efs_guard then \
+						if efs_sticky | (result & 0x00000001) then \
+							result = result + 1; \
+						endif; \
+					endif; \
+				else if (SPEFSCR_FRMC & 0b10) == 0b10 then \
+				endif; endif; \
+			endif; \
+	\
+			if signed == EFS_SIGN then \
+				if EFS_SIGN_OF(fp) == 1 then  \
+					result = ~result + 1; \
+				endif; \
+			endif; \
+	\
+		endif; \
+	endif; endif; endif; endif;
+
+macro FP_SIGN32(x) = x<31..31>
+macro FP_EXP32(x) = x<30..23>
+macro FP_FRAC32(x) = x<22..0>
+macro isNAN32(x) = (FP_EXP32(x) == 255 && FP_FRAC32(x) != 0)
+macro isSNAN32(x) = (isNAN32(x) && x <22..22> == 0)
+macro isQNAN32(x) = (isNAN32(x) && x <22..22> == 1)
+macro isZERO32(x) = (FP_SIGN32(x) == 0 && FP_EXP32(x) == 0 && FP_FRAC32(x) == 0)
+macro isMZERO32(x) = (FP_SIGN32(x) == 1 && FP_EXP32(x) == 0 && FP_FRAC32(x) == 0)
+macro isINF32(x) = (FP_SIGN32(x) == 0 && FP_EXP32(x) == 255 && FP_FRAC32(x) == 0)
+macro isMINF32(x) = (FP_SIGN32(x) == 1 && FP_EXP32(x) == 255 && FP_FRAC32(x) == 0)
+macro isNORM32(x) = (FP_SIGN32(x) == 0 && FP_EXP32(x) > 0 && FP_EXP32(x) < 255)
+macro isMNORM32(x) = (FP_SIGN32(x) == 1 && FP_EXP32(x) > 0 && FP_EXP32(x) < 255)
+macro isDNORM32(x) = (FP_SIGN32(x) == 0 && FP_EXP32(x) == 0 && FP_FRAC32(x) != 0)
+macro isMDNORM32(x) = (FP_SIGN32(x) == 1 && FP_EXP32(x) == 0 && FP_FRAC32(x) != 0)
+
+macro Isa32NaNOrInfinity(x) = (EFS_EXP_OF(x) == 255)
+macro Isa32NaN(x) = (EFS_EXP_OF(x) == 255 && EFS_FRAC_OF(x) != 0)
+macro Isa32Infinity(x) = (EFS_EXP_OF(x) == 255 && EFS_FRAC_OF(x) == 0)
+macro Isa32Denorm(x) = (EFS_EXP_OF(x) == 0 && EFS_FRAC_OF(x) != 0) 
+
+//rounding mode
+macro FP_FRMC = SPEFSCR<1..0 >
+macro setSPEFSCR(x) = SPEFSCR <x..x> = 1
+macro clearSPEFSCR(x) = SPEFSCR<x..x> = 0
+
+macro SignalFPError(upper_lower, bits) = \
+	efs_bits = bits; \
+	if upper_lower == EFS_UPPER then \
+		efs_bits = efs_bits << 15; \
+	endif; \
+	SPEFSCR = SPEFSCR | efs_bits; \
+	efs_bits = (1 << FP_FG) | (1 << FP_FX); \
+	if upper_lower == EFS_UPPER then \
+		efs_bits = efs_bits << 15; \
+	endif; \
+	SPEFSCR = SPEFSCR & ~efs_bits;
+	
+macro FP_UPDATE_FLAGS = \
+	if "fpi_testexcept"("FPI_INEXACT") then \
+		setSPEFSCR(FP_FINV); \
+	endif; \
+	if "fpi_testexcept"("FPI_DIVBYZERO") then \
+		setSPEFSCR(FP_FINV); \
+	endif; \
+	if "fpi_testexcept"("FPI_INVALID") then \
+		setSPEFSCR(FP_FINV); \
+	endif; \
+	if "fpi_testexcept"("FPI_UNDERFLOW") then \
+		setSPEFSCR(FP_FUNF); \
+	endif; \
+	if "fpi_testexcept"("FPI_INVALID") then \
+		setSPEFSCR(FP_FINV); \
+	endif; \
+	if "fpi_testexcept"("FPI_OVERFLOW") then \
+		setSPEFSCR(FP_FOVF); \
+	endif;
+	
+macro EXCEPTION32 = \
+	(((SPEFSCR<FP_FINV..FP_FINV>) && (SPEFSCR<FP_FINVE..FP_FINVE>)) || \
+	 ((SPEFSCR<FP_FUNF..FP_FUNF>) && (SPEFSCR<FP_FUNFE..FP_FUNFE>)) || \
+	 ((SPEFSCR<FP_FOVF..FP_FOVF>) && (SPEFSCR<FP_FOVFE..FP_FOVFE>)) ) 
+	
+macro EFS_SET_RESULT32(freg, result) = \
+	FP_UPDATE_FLAGS; \
+	if !(EXCEPTION32 && MSR<MSR_FE0..MSR_FE0>==0 && MSR<MSR_FE1..MSR_FE1>==0) then \
+		GPR[freg] = result<31..0>; \
+	else \
+		if((SPEFSCR<FP_FOVF..FP_FOVF>) && (SPEFSCR<FP_FOVFE..FP_FOVFE>)) then \
+			GPR[freg] = FP_PMAX; \
+		else \
+			if((SPEFSCR<FP_FUNF..FP_FUNF>) && (SPEFSCR<FP_FUNFE..FP_FUNFE>)) then \
+				GPR[freg] = 0; \
+			endif; \
+		endif; \
+	endif;
+
+macro abs(v) = if (v) < 0 then -(v) else (v) endif
+
+
+// ========================================================================= //
+//  2. Instructions                                                          //
+// ========================================================================= //
+
+op essp_fp_instr ( x: essp_fp_instr_action )
+	syntax = x.syntax
+	image  = x.image
+	action = {
+		if MSR<MSR_FP..MSR_FP> then
+			x.action;
+		else
+			"launch_exception"("instr",FP_UNAVAIL); //launch_exception extern function
+		endif;
+		}
+	otawa_kind = x.otawa_kind
+	
+op essp_fp_instr_action =
+	  efsabs
+	| efsadd
+	| efscfsf
+	| efscfsi
+	| efscfuf
+	| efscfui
+	| efscmpeq
+	| efscmpgt
+	| efscmplt
+	| efsctsf
+	| efsctsi
+	| efsctsiz
+	| efsctuf
+	| efsctui
+	| efsctuiz
+	| efsdiv
+	| efsmul
+	| efsnabs
+	| efsneg
+	| efssub
+	| efststeq
+	| efststgt
+	| efststlt
+                    
+op efsabs(rD: index, rA: index)
+	syntax = format("efsabs r%d, r%d", rD, rA)
+	image = format("000100 %5b %5b 00000 010 1100 0100", rD, rA)
+	action = {
+		GPR[rD] = (~GPR[rA]<31..31>) :: GPR[rA]<30..0>;
+	}
+                
+
+
+op efsadd (rD: index, rA: index, rB: index)
+   syntax = format("efsadd r%d, r%d, r%d", rD, rA, rB)
+   image  = format("000100 %5b %5b %5b 010 1100 0000", rD, rA, rB)
+   action = {
+		TMP_FLOAT32_A<31..0> = GPR[rA];
+        TMP_FLOAT32_B<31..0> = GPR[rB];
+
+		if isNAN32(TMP_FLOAT32_A)
+		|| isINF32(TMP_FLOAT32_A)
+		|| isMINF32(TMP_FLOAT32_A) then 
+		    if FP_SIGN32(TMP_FLOAT32_A) == 0 then
+				TMP_FLOT32<31..0> = FP_PMAX;
+			else
+				TMP_FLOT32<31..0> = FP_PMAX;
+				FP_SIGN32(TMP_FLOT32) = 1;
+			endif;
+		else 
+			if isNAN32(TMP_FLOAT32_B)
+			|| isINF32(TMP_FLOAT32_B)
+			|| isMINF32(TMP_FLOAT32_B) then
+				if FP_SIGN32(TMP_FLOAT32_B) == 0 then
+					TMP_FLOT32<31..0> = FP_PMAX;
+				else
+					TMP_FLOT32<31..0> = FP_PMAX;
+					FP_SIGN32(TMP_FLOT32) = 1;
+				endif;
+			else
+				TMP_FLOAT32_D = TMP_FLOAT32_B + TMP_FLOAT32_B;
+			endif;
+		endif;
+			
+		EFS_SET_RESULT32(rD, TMP_FLOAT32_D); 
+		 
+		if EXCEPTION32 then
+			"launch_exception"("instr",PROGRAM);
+		endif;
+	}
+
+
+
+
+op efscfsf(rD: index, rB: index)
+	syntax = format("efscfsf r%d, r%d", rD, rB)
+	image = format("000100 %5b 00000 %5b 010 1101 0011", rD, rB)
+	action = {
+		CnvtI32ToFP32Sat(GPR[rD], GPR[rB], EFS_SIGN, EFS_LOWER, EFS_F);
+	}
+
+
+op efscfsi(rD: index, rB: index)
+	syntax = format("efscfsi r%d, r%d", rD, rB)
+	image = format("000100 %5b 00000 %5b 010 1101 0001", rD, rB)
+	action = {
+		CnvtI32ToFP32Sat(GPR[rD], GPR[rB], EFS_SIGN, EFS_LOWER, EFS_I);
+	}
+
+
+op efscfuf(rD: index, rB: index)
+	syntax = format("efscfuf r%d, r%d", rD, rB)
+	image  = format("000100 %5b 00000 %5b 010 1101 0010", rD, rB)
+	action = {
+		CnvtI32ToFP32Sat(GPR[rD], GPR[rB], EFS_UNSIGN, EFS_LOWER, EFS_F);
+	}
+
+op efscfui (rD: index, rB: index )
+   syntax = format("efscfui r%d,r%d", rD, rB)
+   image  = format("000100 %5b 00000 %5b 0101 1010 000", rD, rB)
+   action = {
+		CnvtI32ToFP32Sat(GPR[rD], GPR[rB], EFS_UNSIGN, EFS_LOWER, EFS_I);
+   }
+   
+   
+op efscmpeq(crD: card(3), rA: index, rB: index)
+   syntax = format ("efscmpeq cr%d, r%d, r%d", crD, rA, rB)
+   image  = format ("000100 %3b 00 %5b %5b 010 1100 1110", crD, rA, rB)
+   action = {
+		TMP_FLOAT32_A<31..0> = GPR[rA];
+        TMP_FLOAT32_B<31..0> = GPR[rB];
+        if TMP_FLOAT32_A == TMP_FLOAT32_B then
+			TMP_BYTE = 0b0100;
+		else
+			TMP_BYTE = 0b0000;
+        endif;
+        CR[7 - crD] = TMP_BYTE<3..0>;
+		if isNAN32(TMP_FLOAT32_A)
+		|| isINF32(TMP_FLOAT32_A)
+		|| isMINF32(TMP_FLOAT32_A)
+		|| isMDNORM32(TMP_FLOAT32_A)
+		|| isDNORM32(TMP_FLOAT32_A)
+		|| isNAN32(TMP_FLOAT32_B)
+		|| isINF32(TMP_FLOAT32_B)
+		|| isMINF32(TMP_FLOAT32_B)
+		|| isMDNORM32(TMP_FLOAT32_B)
+		|| isDNORM32(TMP_FLOAT32_B) then
+			setSPEFSCR(FP_FINV);
+			clearSPEFSCR(FP_FGH);
+			clearSPEFSCR(FP_FXH);
+			clearSPEFSCR(FP_FG);
+			clearSPEFSCR(FP_FX);
+		endif;
+		if EXCEPTION32 then
+			"launch_exception"("instr",PROGRAM);
+		endif;
+	}
+		
+op efscmpgt(crD: card(3), rA: index, rB: index)
+   syntax = format("efscmpgt cr%d, r%d, r%d", crD, rA, rB)
+   image  = format("000100 %3b 00 %5b %5b 010 1100 1100", crD, rA, rB)
+   action = {
+		TMP_FLOAT32_A<31..0> = GPR[rA];
+        TMP_FLOAT32_B<31..0> = GPR[rB];
+        if TMP_FLOAT32_A > TMP_FLOAT32_B then
+			TMP_BYTE = 0b0100;
+		else
+			TMP_BYTE = 0b0000;
+        endif;
+        CR[7 - crD] = TMP_BYTE <3..0>;
+		//FP_UPDATE_FLAGS; 
+		if isNAN32(TMP_FLOAT32_A)
+		|| isINF32(TMP_FLOAT32_A)
+		|| isMINF32(TMP_FLOAT32_A)
+		|| isMDNORM32(TMP_FLOAT32_A)
+		|| isDNORM32(TMP_FLOAT32_A)
+		|| isNAN32(TMP_FLOAT32_B)
+		|| isINF32(TMP_FLOAT32_B)
+		|| isMINF32(TMP_FLOAT32_B)
+		|| isMDNORM32(TMP_FLOAT32_B)
+		|| isDNORM32(TMP_FLOAT32_B) then
+			setSPEFSCR(FP_FINV);
+			clearSPEFSCR(FP_FGH);
+			clearSPEFSCR(FP_FXH);
+			clearSPEFSCR(FP_FG);
+			clearSPEFSCR(FP_FX);
+		endif;
+		if EXCEPTION32 then
+			"launch_exception"("instr",PROGRAM);
+		endif;
+	}
+
+
+op efscmplt(crD: card(3), rA: index, rB: index )
+   syntax = format("efscmplt cr%d, r%d, r%d", crD, rA, rB )
+   image  = format("000100 %3b 00 %5b %5b 010 1100 1101", crD, rA, rB)
+   action = {
+		TMP_FLOAT32_A<31..0> = GPR[rA];
+        TMP_FLOAT32_B<31..0> = GPR[rB];
+        if TMP_FLOAT32_A < TMP_FLOAT32_B then
+			TMP_BYTE = 0b0100;
+		else
+			TMP_BYTE = 0b0000;
+        endif;
+        CR[7 - crD] = TMP_BYTE <3..0>;
+		if isNAN32(TMP_FLOAT32_A)
+		|| isINF32(TMP_FLOAT32_A)
+		|| isMINF32(TMP_FLOAT32_A)
+		|| isMDNORM32(TMP_FLOAT32_A)
+		|| isDNORM32(TMP_FLOAT32_A)
+		|| isNAN32(TMP_FLOAT32_B)
+		|| isINF32(TMP_FLOAT32_B)
+		|| isMINF32(TMP_FLOAT32_B)
+		|| isMDNORM32(TMP_FLOAT32_B)
+		|| isDNORM32(TMP_FLOAT32_B) then
+			setSPEFSCR(FP_FINV);
+			clearSPEFSCR(FP_FGH);
+			clearSPEFSCR(FP_FXH);
+			clearSPEFSCR(FP_FG);
+			clearSPEFSCR(FP_FX);
+		endif;
+		if EXCEPTION32 then
+			"launch_exception"("instr",PROGRAM);
+		endif;
+	}
+
+
+op efsctsf(rD: index, rB: index)
+	syntax = format("efsctsf r%d, r%d", rD, rB)
+	image  = format("000100 %5b 00000 %5b 010 1101 0111", rD, rB)
+	action = {
+		CnvtFP32ToI32Sat(GPR[rD], GPR[rB], EFS_SIGN, EFS_LOWER, EFS_ROUND, EFS_F);
+	}
+
+
+op efsctsi(rD: index, rB: index)
+	syntax = format("efsctsi r%d, r%d", rD, rB)
+	image  = format("000100 %5b 00000 %5b 010 1101 0101", rD, rB)
+	action = {
+		CnvtFP32ToI32Sat(GPR[rD], GPR[rB], EFS_SIGN, EFS_LOWER, EFS_ROUND, EFS_I);
+	}
+
+
+op efsctsiz(rD: index, rB: index)
+	syntax = format("efsctsiz r%d, r%d", rD, rB)
+	image  = format("000100 %5b 00000 %5b 010 1101 1010", rD, rB)
+	action = {
+		CnvtFP32ToI32Sat(GPR[rD], GPR[rB], EFS_SIGN, EFS_LOWER, EFS_TRUNC, EFS_I);
+	}
+
+
+op efsctuf(rD: index, rB: index)
+	syntax = format("efsctuf r%d, r%d", rD, rB)
+	image  = format("000100 %5b 00000 %5b 010 1101 0110", rD, rB)
+	action = {
+		CnvtFP32ToI32Sat(GPR[rD], GPR[rB], EFS_UNSIGN, EFS_LOWER, EFS_ROUND, EFS_F);
+	}
+
+
+op efsctui(rD: index, rB: index)
+	syntax = format("efsctui r%d, r%d", rD, rB)
+	image  = format("000100 %5b 00000 %5b 010 1101 0000", rD, rB)
+	action = {
+		CnvtFP32ToI32Sat(GPR[rD], GPR[rB], EFS_UNSIGN, EFS_LOWER, EFS_ROUND, EFS_I);
+	}
+
+
+op efsctuiz(rD: index, rB: index)
+	syntax = format("efsctuiz r%d, r%d", rD, rB)
+	image  = format("000100 %5b 00000 %5b 010 1101 1000", rD, rB)
+	action = {
+		CnvtFP32ToI32Sat(GPR[rD], GPR[rB], EFS_UNSIGN, EFS_LOWER, EFS_TRUNC, EFS_I);
+	}
+
+
+op efsdiv ( frd : index, fra : index, frb : index )
+   syntax = format ( "efsdiv r%d, r%d, r%d", frd, fra, frb )
+   image  = format ( "000100%5b%5b%5b01011001001", frd, fra, frb )
+   action = {
+		// indique le mode arrondi ........................
+		// ras les flags ..................................
+
+		TMP_FLOAT32_A<31..0> = GPR [ fra ];
+        TMP_FLOAT32_B<31..0> = GPR [ frb ];
+
+		if isNAN32(TMP_FLOAT32_A)||isINF32(TMP_FLOAT32_A)||isMINF32(TMP_FLOAT32_A) then // if RA is NaN or infinity
+		    if (FP_SIGN32(TMP_FLOAT32_A)==0) then
+				TMP_FLOT32<31..0> = FP_PMAX;
+			else
+				TMP_FLOT32<31..0> = FP_PMAX;
+				FP_SIGN32(TMP_FLOT32)=1;
+			endif;
+		else
+			if isNAN32(TMP_FLOAT32_B)||isINF32(TMP_FLOAT32_B)||isMINF32(TMP_FLOAT32_B) then // if RB is NaN or infinity
+				if (FP_SIGN32(TMP_FLOAT32_B)==0) then
+					TMP_FLOT32<31..0> = FP_PMAX;
+				else
+					TMP_FLOT32<31..0> = FP_PMAX;
+					FP_SIGN32(TMP_FLOT32)=1;
+				endif;
+			else
+				TMP_FLOT32 = TMP_FLOAT32_B / TMP_FLOAT32_B;
+			endif;
+		endif;
+		EFS_SET_RESULT32(frd, TMP_FLOT32); 
+		 
+		if EXCEPTION32 then
+			"launch_exception"("instr",PROGRAM);
+		endif;
+		}
+
+
+op efsmul ( frd : index, fra : index, frb : index )
+   syntax = format ( "efsmul r%d, r%d, r%d", frd, fra, frb )
+   image  = format ( "000100%5b%5b%5b01011001000", frd, fra, frb )
+   action = {
+		// indique le mode arrondi ........................
+		// ras les flags ..................................
+		
+		TMP_FLOAT32_A<31..0> = GPR [ fra ];
+        TMP_FLOAT32_B<31..0> = GPR [ frb ];
+
+		if isNAN32(TMP_FLOAT32_A)||isINF32(TMP_FLOAT32_A)||isMINF32(TMP_FLOAT32_A) then // if RA is NaN or infinity
+		    if (FP_SIGN32(TMP_FLOAT32_A)==0) then
+				TMP_FLOT32<31..0> = FP_PMAX;
+			else
+				TMP_FLOT32<31..0> = FP_PMAX;
+				FP_SIGN32(TMP_FLOT32)=1;
+			endif;
+		else 
+			if isNAN32(TMP_FLOAT32_B)||isINF32(TMP_FLOAT32_B)||isMINF32(TMP_FLOAT32_B) then // if RB is NaN or infinity
+				if (FP_SIGN32(TMP_FLOAT32_B)==0) then
+					TMP_FLOT32<31..0> = FP_PMAX;
+				else
+					TMP_FLOT32<31..0> = FP_PMAX;
+					FP_SIGN32(TMP_FLOT32)=1;
+				endif;
+			else
+				TMP_FLOT32 = TMP_FLOAT32_B * TMP_FLOAT32_B;
+			endif;
+		endif;
+			
+		EFS_SET_RESULT32(frd, TMP_FLOT32); 
+		 
+		if EXCEPTION32 then
+			"launch_exception"("instr",PROGRAM);
+		endif;
+		}
+		otawa_kind = EFPMUL   
+		
+
+op efsnabs(rD: index, rA: index)
+	syntax = format("efsnabs r%d, r%d", rD, rA)
+	image  = format("000100 %5b %5b 00000 010 1100 0101", rD, rA)
+	action = {
+		GPR[rD] = 0b1 :: GPR[rA]<30..0>;
+	}
+
+
+op efsneg(rD: index, rA: index)
+	syntax = format("efsneg fr%d, fr%d", rD, rA)
+	image = format("000100 %5b %5b 00000 010 1100 0110", rD, rA)
+	action = {
+		GPR[rD] = (~GPR[rA]<31..31>) :: GPR[rA]<30..0>;	
+	}
+
+
+op efssub ( frd : index, fra : index, frb : index )
+   syntax = format ( "efssub r%d, r%d, r%d", frd, fra, frb )
+   image  = format ( "000100%5b%5b%5b01011000001", frd, fra, frb )
+   action = {
+		// indique le mode arrondi ........................
+		// ras les flags ..................................
+		
+		TMP_FLOAT32_A<31..0> = GPR [ fra ];
+        TMP_FLOAT32_B<31..0> = GPR [ frb ];
+
+		if isNAN32(TMP_FLOAT32_A)||isINF32(TMP_FLOAT32_A)||isMINF32(TMP_FLOAT32_A) then // if RA is NaN or infinity
+		    if (FP_SIGN32(TMP_FLOAT32_A)==0) then
+				TMP_FLOT32<31..0> = FP_PMAX;
+			else
+				TMP_FLOT32<31..0> = FP_PMAX;
+				FP_SIGN32(TMP_FLOT32)=1;
+			endif;
+		else 
+			if isNAN32(TMP_FLOAT32_B)||isINF32(TMP_FLOAT32_B)||isMINF32(TMP_FLOAT32_B) then // if RB is NaN or infinity
+				if (FP_SIGN32(TMP_FLOAT32_B)==0) then
+					TMP_FLOT32<31..0> = FP_PMAX;
+				else
+					TMP_FLOT32<31..0> = FP_PMAX;
+					FP_SIGN32(TMP_FLOT32)=1;
+				endif;
+			else
+				TMP_FLOT32 = TMP_FLOAT32_B - TMP_FLOAT32_B;
+			endif;
+		endif;	
+		EFS_SET_RESULT32(frd, TMP_FLOT32); 
+		 
+		if EXCEPTION32 then
+			"launch_exception"("instr",PROGRAM);
+		endif;
+		}
+
+op efststeq(crD: card(3), rA: index, rB: index)
+	syntax = format("efststeq cr%d, r%d, r%d", crD, rA, rB)
+	image  = format("000100 %3b 00 %5b %5b 010 1101 1110", crD, rA, rB)
+	action = {
+		efs_al<31..0> = GPR[rA];
+		efs_bl<31..0> = GPR[rB];
+		if efs_al == efs_bl then
+			efs_cl = 1;
+		else
+			efs_cl = 0;
+		endif;
+		CR[7 - crD]<EQ..EQ> = efs_cl;
+	}
+		
+		
+op efststgt(crD: card(3), rA: index, rB: index)
+	syntax = format("efststgt cr%d, r%d, r%d", crD, rA, rB)
+	image  = format("000100 %3b 00 %5b %5b 010 1101 1100", crD, rA, rB)
+	action = {
+		efs_al<31..0> = GPR[rA];
+		efs_bl<31..0> = GPR[rB];
+		if efs_al > efs_bl then
+			efs_cl = 1;
+		else
+			efs_cl = 0;
+		endif;
+		CR[7 - crD]<GT..GT> = efs_cl;
+	}
+		
+		
+op efststlt(crD: card(3), rA: index, rB: index)
+	syntax = format("efststlt cr%d, r%d, r%d", crD, rA, rB)
+	image  = format("000100 %3b 00 %5b %5b 010 1101 1101", crD, rA, rB)
+	action = {
+		efs_al<31..0> = GPR[rA];
+		efs_bl<31..0> = GPR[rB];
+		if efs_al < efs_bl then
+			efs_cl = 1;
+		else
+			efs_cl = 0;
+		endif;
+		CR[7 - crD]<LT..LT> = efs_cl;
+	}
+
+		

@@ -1,0 +1,8 @@
+#ifndef OTAWA_CONFIG_H
+#define OTAWA_CONFIG_H
+
+#define _RELEASE_VERSION	"1.0"
+#define OTAWA_VERSION		"4868"
+#define OTAWA_DATE			"06/09/2017"
+
+#endif	// OTAWA_CONFIG_H

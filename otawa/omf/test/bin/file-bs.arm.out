@@ -1,0 +1,13 @@
+file name = /home/casse/otawa/gel/test/bin/bs.arm
+type = ET_EXEC (0x0002)
+machine = EM_ARM (0x0028)
+version = 1
+entry = 0x00008110
+identification
+7f454c46	.ELF
+01010161	...a
+00000000	....
+00000000	....
+ident[EI_CLASS] = ELFCLASS32 (1)
+ident[EI_DATA] = ELFDATA2LSB (1)
+ident[EI_OSABI] = 97

@@ -1,0 +1,52 @@
+@use dokuwiki
+@use gnuplot
+@TITLE=Label / Reference test
+@AUTHORS=H. Cassé <hugues.casse@laposte.net>
+@VERSION=0.1
+@LANG=en_EN
+
+@label mylabel
+
+====== My title ======
+@label my-title
+
+Un saut là-bas à @ref:labas@.
+
+Reference au listing @ref:simple-code@.
+
+===== Subtitle 1 =====
+Je fais référence à @ref:my-title@.
+
+<code c>
+if(tr[0] == 'a')
+	f();
+</code>
+@caption Simple code
+@label simple-code
+
+
+===== Subtitle 2 =====
+
+====== Big title 2 ======
+Nouvelle référence à @ref:my-title@!
+
+{{ gravure-thot.gif |image de thot}}
+@label image-thot
+
+And an image without label and caption:
+{{ gravure-thot.gif }}
+
+And an image with caption:
+{{ gravure-thot.gif |Only caption !}}
+
+===== Subtitle 2.1 =====
+@label labas
+
+Et puis là à @ref:simple-code@.
+
+===== Subtitle 2.2 =====
+
+| a | b | c |
+| 1 | 2 | 3 |
+@label mon-tableau
+@caption Mon tableau !

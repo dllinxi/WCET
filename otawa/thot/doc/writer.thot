@@ -1,0 +1,749 @@
+====== Writer Manual ======
+
+This chapter is aimed to writer of documents in @(THOT). You will find
+here the details to benefit from the power of @(THOT).
+
+
+===== Basic Syntax =====
+
+This sections describes the minimal @(THOT) syntax that is independent
+of any module.
+
+
+==== Comments ====
+
+@(THOT) supports comments spanning on a complete line. You just have to
+use double ''@'' at the start of the line (notice that most wiki
+independent syntax is prefixed by ''@'').
+
+<code>
+@@ a commend here to the end of the line
+</code>
+
+The comment is just for author information and disappears in the final
+output document.
+
+
+==== Definitions and Variables ====
+
+To share information information and to configure modules, @(THOT)
+provides a system of variables. A variable is defined by its name
+and its textual value.
+
+To define a variable, you have just to type:
+<code>
+@IDENTIFIER=VALUE
+</code>
+Where ''IDENTIFIER'' is the variable identifier and ''VALUE'' the value
+of the variable. This value may be any text (including module tags)
+to the end of the line (without including the final newline).
+
+To use a variable, you have just to type anywhere in the text and in
+a line.
+<code>
+TEXT-BEFORE @(IDENTIFIER) TEXT-AFTER
+</code>
+Where ''IDENTIFIER'' is the identifier of the variable to get the value
+from. ''TEXT-BEFORE'' and ''TEXT-AFTER'' are any text (possibly
+containing markup or variable use.
+
+In the example below, we define a variable ''THOT'' that is used
+throughout this document and avoid to type boring markup:
+<code>
+@THOT=**//THOT//**
+
+This document presents @(THOT), a textual document process. @(THOT)
+...
+</code>
+
+Notice that the value of a variable may contains variable uses but
+they are processed in late evaluation: they are replaced by their value
+only  when the variable is used in
+the main text. For example, the @(THOT) text below:
+<code>
+@X=--@(Y)--
+@Y=hello
+@(X) World !
+@Y=bye, bye
+@(X) World !
+</code>
+will give:
+<code>
+hello World !
+bybe, bye World !
+</code>
+
+
+==== Default Variables ====
+
+As seen in the previous section, variables may be used to generate
+document content but they are also largely used to configure the
+behaviour of the different components of @(THOT) or to provide
+automatic information to the writer. This section
+describe the standard variables used by @(THOT).
+
+The table shows all variables that may be provided to @(THOT):
+
+^ Variable ^Usage ^
+| ''AUTHORS'' |List of authors (including email and separated by comma). |
+| ''ENCODING'' |Character set encoding (as defined by IANA)((if not given, current character set is assumed.)). |
+| ''LANG'' |Language of the document (as in Unix locale). |
+| ''OUTPUT'' |Used by some back-end to precise output (pdf for example) |
+| ''TITLE'' |Title of the generated document. |
+| ''VERSION'' |Version of the document |
+| ''SUBTITLE'' |sub-title of the documeny (not supported by all back-ends) |
+| ''LOGO'' |logo(s) of the organization (separated by commas) (not supported by all back-ends) |
+| ''ORGANIZATION'' |organization producing the document (not supported by all back-ends) |
+
+The variable below are provided by @(THOT) but must not be changed
+(unless you know exactly what you do):
+^ Variable ^Content ^
+| ''THOT_BASE'' |Base directory of @(THOT)((It may be used to retrieve resources provided by @(THOT) like CSS stylesheets.)). |
+| ''THOT_DATE'' |Current date. |
+| ''THOT_FILE'' |Start file containing the @(THOT) text (as passed in command line). |
+| ''THOT_OUT_PATH'' |Path of the file to generate (as passed to ''-o'' option). |
+| ''THOT_OUT_TYPE'' |Type of output back-end (as passed to ''-t'' option). |
+| ''THOT_USE_PATH'' |Colon-separated list of directory containing modules. |
+| ''THOT_VERSION'' |Current version of @(THOT) |
+
+There exist other variables according to used modules or back-end
+that may be found in their documentation.
+
+
+==== Module Usage ====
+
+As shown in the tutorial example, a	proeminent feature of @(THOT) is
+the configuration of the text scanner according needs of the user.
+This is mainly performed by the use of specific modules that add
+syntax to the basic parser of @(THOT). To use a module, you have
+just to add the following syntax:
+<code>
+@use MODULE_NAME
+</code>
+
+The module use is usually performed at the start of the document but
+it is not mandatory. The module is retrieved from the paths found
+in the ''THOT_USE_PATH'' variable (separated by colons). This variable
+is initialized with the path ''$(THOT_BASE)/mods''.
+
+Notice that, when you include a front-end module, like ''dokuwiki'',
+syntax from the previous front-end module are removed but other
+syntax rules are kept.
+
+
+==== Inclusion ====
+
+@(THOT) allows to split big document in multiple files. Then, one has
+to re-assemble the document using inclusion in the main document. The
+inclusion is performed in textual way as if the included text was
+replacing the inclusion command.
+
+An inclusion command has the following syntax:
+<code>
+@include PATH_TO_FILE_TO_INCLUDE
+</code>
+
+The passed path may be absolute or relative. In the latter case, the
+absolute path is built from the path of the directory containing the
+main file. This ensures that the document is well built whatever the
+working directory of @(THOT) invocation.
+
+
+==== References, labels and captions ====
+
+In Thot terminology, an embedded part is a piece of document that is
+not part of the main flow of text. Usual embedded parts are figures,
+tables, listing, etc.
+
+Captions may hooked to embedded in a standard way using the ''@caption''
+syntax. The caption is formed by any word and formatting following
+the ''@caption'' keyword to the end of the file. It must be placed
+just after the embedded part as in the example below.
+
+<file>
+  <code c>
+  int main() {
+    return 0;
+  }
+  </code>
+  @caption This is //my// listing
+</file>
+
+In the same way, a label may be added to an embedded part or to an header by putting
+a ''@label'' definition after an embedded part. This tag is followed
+by an identifier that may be then used in a reference, ''@ ref:''//identifier//''@''.
+The reference is then replaced by the number of the referenced item as in the example below.
+
+<file>
+  ====== Title ======
+  @label my-title
+
+  <code c>
+  int main() {
+    return 0;
+  }
+  </code>
+  @label my-code
+  
+  The Listing @ref:my-code@ in Section @ref:my-title@.
+</file>
+
+
+
+==== External Blocks ====
+
+Several additional modules of @(THOT) allows including texts, images, etc
+produced by external tools. This includes, for example, //dot//, //aafig//,
+//gnuplot// or //code//.
+
+This means that  @(THOT) embeds blocks of text targetting a different
+tool but is able to replace this block by the result (often an image
+but not only) of an external tool. 
+
+To mark beginning and end of this black, tag between ''<'' and ''>'' are used
+with the name of the external module. For example, the block below
+target the //dot// utility:
+<code>
+<dot>
+digraph {
+	0 -> 1;
+	1 -> 2;
+</dot>
+</code>
+Notice the ''/'' character prefixing the closing tag.
+
+The beginning tag accepts also a list of arguments
+separated by commas '',''. Depending on the module, this argument may
+also be structured as an identifier, following an ''='' sign and
+followed by the value itself.
+
+In the example below, the //aafig// block accepts two arguments:
+  * ''foreground'' whose value is ''#ff0000'',
+  * ''proportional'' whose value is ''off''.
+
+<code>
+<aafig foreground=#ff0000,proportional=off>
+...
+</aafig>
+</code>
+
+
+
+==== Command ====
+
+The ''thot'' command supports the syntax below:
+<code sh>
+> thot MAIN_FILE OPTIONS
+</code>
+
+The //MAIN_FILE// is @(THOT) file matching the syntax described in
+this chapter. The //OPTIONS// are described below:
+  * ''-h'', ''--help'': display the help of the command ;
+  * ''-o'', ''--out'' //FILE//: select the output file ;
+  * ''-D'', ''--define'' //NAME//''=''//VALUE'': defines a variable with its value ;
+  * ''-t'', ''--type'' //TYPE//: define the type of chosen back-end
+(default value ''html'', or one of ''docbook'' and ''latex'') ;
+  * ''-u'', ''--use'' //MODULE//: load the given module before generation.
+
+
+===== Modules =====
+
+This section describes the main modules and back-end provided by
+@(THOT).
+
+==== Dokuwiki Front-end ====
+
+The dokuwiki module is a basic front-end providing the dokuwiki syntax.
+Please refer [[http://www.dokuwiki.org/syntax|Dokuwiki Syntax]] for more details.
+
+Usually, this module must be included at the head of the file
+containing dokuwiki syntax:
+<code>
+@use dokuwiki
+</code>
+
+In addition, the dokuwiki module provides a syntax for definition list
+(notice the two spaces before the question mark):
+<code>
+  ? term 1 : definition 1
+  ? term 2 : definition 2
+  ? term 3 : multiline definition
+And there ?
+And here !
+</code>
+
+That gives:
+----
+  ? term 1 : definition 1
+  ? term 2 : definition 2
+  ? term 3 : multiline definition
+And there ?
+And here !
+----
+
+This module extents a bit the ''<code>'' tag of Dokuwiki. Basically,
+this tag supports as argument the name of the language to display but
+in this extension, line numbering can be asked:
+<code>
+<code c,line>
+#include <stdio.h>
+
+int main(void) {
+	printf("Hello, World!\n");
+...
+</code>
+Will give:
+<code c,line>
+#include <stdio.h>
+
+int main(void) {
+	printf("Hello, World!\n");
+...
+</code>
+
+The start number may also be selected:
+<code>
+<code c,line=15>
+#include <stdio.h>
+
+int main(void) {
+	printf("Hello, World!\n");
+...
+</code>
+Produces:
+<code c,line=15>
+#include <stdio.h>
+
+int main(void) {
+	printf("Hello, World!\n");
+...
+</code>
+
+
+==== Textile Module ====
+
+@(THOT) is really independent of the wiki language used to format the document: ''textile'' module is the proof: it implements the wiki language proposed by http://txstyle.org/. To use it, just type at the head of your text:
+<code>
+@use textile
+</code>
+
+Currently, @(THOT) only implements 80% of the textile tags but we hope to reach 100% quicly. The unsupported tags includes:
+  * ''<notextile>'' .. ''</notextile>''
+  * ''[S'' ... ''S]''
+  * ''.clear''
+  * ''.dl'' with style
+  * ''.pre..''
+  * ''###..''
+  * ''.notextile..''
+  * style + ''*''
+  * style + ''#*''
+  * style + ''#n''
+  * style + ''#_''
+  * style + '';''
+  * style + ''-''
+  * table header
+  * ''['' ... ''!]''
+  * ''[('' ... '')'' ... '']''
+  * ''fn'' ... ''^.''
+  * ''note#''
+  * ''notelist.''
+  * ''"'' ... ''":'' ...
+  * ''['' .. '']'' ... 
+
+Any contributor will be welcome.
+
+
+==== Dot Module ====
+
+The dot module allows to use [[http://www.graphviz.org/|GraphViz]] graph drawing inside @(THOT).
+
+Include the module with:
+<code>
+@use dot
+</code>
+
+The dot graph insertion must implements the syntax below:
+<code>
+<dot DRAWER>
+DOT syntax
+</dot>
+</code>
+
+The //DOT syntax// must follows the rules of ''.dot''. See
+[[http://www.graphviz.org/doc/info/lang.html|DOT language]] for more details.
+
+The //DRAWER// is optional or may be one of the following with the matching effect:
+  * dot -- directed graphs (default)
+  * neato -- undirected graphs
+  * twopi -- radial layouts of graphs
+  * circo -- circular layout of graphs
+  * fdp -- undirected graphs
+
+**NOTE**: old form ''@<dot>'' is now deprecated.
+
+
+==== latexmath Module ====
+
+This module, to be used, must be imported as below:
+<code>
+@use latexmath
+</code>
+@use latexmath
+
+In this case, Latex math expressions may be inserted in the text between
+dollars as in the example below:
+<code>
+This is an equation: $\LARGE e^x=\sum_{n=0}^\infty\frac{x^n}{n!}$.
+</code>
+That will produce:
+
+This is an equation: $\LARGE e^x=\sum_{n=0}^\infty\frac{x^n}{n!}$.
+
+
+Short guide to this syntax may be found [[ftp://ftp.ams.org/ams/doc/amsmath/short-math-guide.pdf|here]].
+
+To have a lonely dollar, just put a double dollar, ''$$''.
+
+
+==== gnuplot Module ====
+
+This module must be imported with the following command at the beginning of the file:
+<code>
+@use gnuplot
+</code>
+@use gnuplot
+
+Use ''<gnuplot>'' and ''</gnuplot>'' tags lonely on a line and put inside
+the gnuplot script. The opening tag can also contains a dimension specification
+''?''//width//''x''//height// as in the example below:
+<code>
+<gnuplot?256x256>
+set key left box
+set samples 50
+plot [-10:10] sin(x),atan(x),cos(atan(x))
+</gnuplot>
+</code>
+
+This will gives:
+<gnuplot?256x256>
+set key left box
+set samples 50
+plot [-10:10] sin(x),atan(x),cos(atan(x))
+</gnuplot>
+
+Documentation about GnuPlot can be found [[http://gnuplot.info/documentation.html|here]].
+
+==== ditaa Module ====
+
+//ditaa// is tool generating figures from textual description. To use it
+in @(THOT), import the module in your text:
+<code>
+@use ditaa
+</code>
+and ensure that the [[http://ditaa.sourceforge.net|ditaa]] is available on your system.
+
+And insert your figure between ''<ditaa>'' tags:
+<code>
+<ditaa>
+/------+    +-----\
+| here |--->|there|
++------/    \-----+
+</ditaa>
+</code>
+
+For details on //ditaa// format, look at http://ditaa.sourceforge.net/#usage .
+
+As other figures, //ditaa// blocks supports labelling and several
+options:
+^ Option ^ Argument ^
+| no-antialias | yes/no |
+| no-separation | yes/no |
+| round-corners | yes/no |
+| scale | real |
+| no-shadows | yes/no |
+| tabs | integer |
+
+If ''ditaa'' command is available, the example above will give:
+
+@use ditaa
+<ditaa>
+/------+    +-----\
+| here |--->|there|
++------/    \-----+
+</ditaa>
+
+
+==== aafig Module ====
+
+//aafig// is tool generating figures from textual description. To use it
+in @(THOT), import the module in your text:
+<code>
+@use aafig
+</code>
+and ensure that the [[https://launchpad.net/aafigure|aafigure]] is available on your system.
+
+And insert your figure between ''<aafig>'' tags:
+<code>
+<aafig>
++------+    +-----+
+| here |--->|there|
++------+    +-----+
+</aafig>
+</code>
+
+For details on //aafig// format, look at https://launchpadlibrarian.net/41870218/aafigure.pdf .
+
+As other figures, //aafig// blocks supports labelling and several
+options:
+^ Option ^ Argument ^
+| wide-chars | yes/no |
+| textual | yes/no |
+| scale | real |
+| aspect | ... |
+| linewidth | real |
+| proportional | yes/no |
+| foreground | #RRGGBB |
+| fill | #RRGGBB |
+| background | #RRGGBB |
+| option | ... |
+
+If ''aafigure'' command is available, the example above will give:
+
+@use aafig
+<aafig>
++------+    +-----+
+| here |--->|there|
++------+    +-----+
+</aafig>
+
+
+
+
+
+
+
+
+
+
+
+
+
+===== Back-ends =====
+
+@(THOT) supports several output back-ends whose work is described here.
+
+==== HTML Back-end ====
+
+This back-end is maybe the more used one as it only requires a web
+brower to use the documentation. It is usually called by passing the
+option ''-t html'' to the @(THOT) invocation.
+
+=== Configuring the output ===
+
+This back-end may be configured using different variables as presented
+below.
+
+^ Variable ^ Value ^Description ^
+| ''HTML_STYLES'' | CSS file path | use the given CSS in the generated file |
+| ''HTML_SHORT_ICON'' | image file path | short icon for HTML file |
+| ''HTML_ONE_FILE_PER'' | document, chapter, section | generation structure: one file per ... |
+| ''HTML_TEMPLATE'' | HTML/XML file | template file used to generate pages |
+
+Whatever the option, this back-end creates two things whose name
+is based on a ROOT name. It may be either the original @(THOT) path without suffix,
+or the ''THOT_OUT_PATH'' path.
+  * ''ROOT.html'' -- the entry page of the documentation
+  * ''ROOT-n.html'' -- page n of the documentation
+  * ''ROOT-imports/'' -- contains all file used from the entry page (other pages, images, CSS, etc)
+
+So to copy the result documentation, you have just to move these files
+and directories to your target directory.
+
+The back-end supports CSS stylesheet. To get your own stylesheet,
+you have just to provide styles matching the tags generated by this
+back-end. The tables below sum-up these tags.
+
+In addition, it also supports templating. The template file must be a normal HTML or XML file containing the following special tags that will be replaced by content generated by @(THOT):
+^ Tag ^ Content ^
+| ''<authors/>'' | list of authors |
+| ''<content/>'' | main content of the page (depend on the structure) |
+| ''<header/>'' | header of the current content (chapter or section title) |
+| ''<title/>'' | title of the document |
+| ''<toc/>'' | table of content of the document |
+
+
+=== Generated content ===
+
+Text items:
+^ Tag ^ @(THOT) Item ^
+| ''<b> ... </b>'' | bold area |
+| ''<i> ... </i>'' | italic area |
+| ''<u> ... </u>'' | underline area |
+| ''<sub> ... </sub>'' | subscript area |
+| ''<sup> ... </sup>'' | superscript area |
+| ''<tt> ... </tt>'' | monospace area |
+| ''<s> ... </s>'' | deleted area |
+| ''<a ...> ... </a>'' | link |
+| ''<img ...> ... </img> | embedded image |
+
+Paragraphs:
+^ Tag ^ @(THOT) Item ^
+| ''<hn> ... </hn>'' | header of level n |
+| ''<blockquote> ... </blockquote>'' | quote paragraph |
+| ''<hr/>'' | horizontal rule |
+| ''<p> ... </p>'' | paragraph |
+| ''<ul> ... </ul>'' | unnummbered list |
+| ''<ol> ... </ol>'' | numbered list |
+| ''<li> ... </li>'' | list item |
+| ''<div class="listing"> ... </div>'' | embedded listing |
+
+Structural items:
+^ Tag ^ @(THOT) Item ^
+| ''<div class="body"> ... </div>'' | main part of the page |
+| ''<ul class="toc"> ... </ul>'' | content table |
+
+
+Tables:
+^ Tag ^ @(THOT) Item ^
+| ''<table> ... </table>'' | table |
+| ''<tr> ... </tr>'' | table row |
+| ''<td> ... </td>'' | table cell |
+| ''<th> ... </th>'' | table header cell |
+
+Foot notes:
+^ Tag ^ @(THOT) Item ^
+| ''<a class="footnumber" ...> ... </a>'' | foot note reference |
+| ''<div class="footnotes"> ... </div>'' | foot note part |
+| ''<p class="footnote"> ... </p>'' | foot note entry |
+| ''<a class="footnumber" ...> ... </a>'' | foot note number |
+
+
+The header of the page have the following structure:
+<code html>
+<div class="header">
+	<div class="title"> TITLE </div>
+	<div class="authors"
+		<a href="mailto:AUTHOR_MAIL"> AUTHOR_NAME </a>
+		...
+	</div>
+</div>
+</code>
+
+
+=== Using CSS ===
+
+Instead of using a template to customize the lookup of your page, you can simply uses dedicated CSS style sheets by defining the variable ''HTML_STYLES''.
+This documentation is itself produced with this method:
+<code>
+@HTML_STYLES=@(THOT_BASE)/css/minima/style_green.css
+</code>
+
+The stylesheet called ''minima'' is used: it is a free stylsheet dedicated to website (see copyright and credits in ''css/minima/'') but we have adapted it to display documents. It comes in different color flavors that you can use:
+  * ''style_blue.css''
+  * ''style_gray.css''
+  * ''style_pink.css''
+  * ''style_brown.css''
+  * ''style_green.css''
+  * ''style_purple.css''
+
+However, these stylesheets are not mandatory and you can use any other CSS or write your own one. In the future, more CSS stylesheets will provided: contributors are welcome!
+
+
+==== Latex Back-end ====
+
+The Latex back-end produces output as lonely Latex file that may be
+compiled to produces PDF output.
+
+The following variables may be used to control the generation process:
+
+^ Variable ^ Description ^
+| OUTPUT | ''latex'' for simple Latex generation, ''pdf'' for also generating PDF. |
+| SUBTITLE | document subtitle (only for Koma document classes) |
+| ORGANIZATION | producer organization (only for Koma document classes) |
+| LOGO | logo(s) to display |
+| LATEX_CLASS | Select the class of generated document (''book'' as a default). |
+| LATEX_PREAMBLE | The variable value is appended as-is just after class definition (it may be used to included specific Latex modules) |
+| LATEX_PAPER | Select the paper type of the generated document (''a4paper'' as a default). |
+
+
+
+==== DocBook Back-end ====
+
+This back-end generates [[http://www.docbook.org/|DockBook]] XML format.
+
+The following variables may be used to control the generation process:
+
+^ Variable ^ Description ^
+| DOCBOOK_BACKEND | one of ''openjade'' (default) or ''dblatex''((This may depends on the software installed of your OS))|
+
+
+==== Slidy Back-end ====
+
+Slidy is basically an HTML back-end specialized in the generation of
+presentation. It is based on the [[https://www.w3.org/Talks/Tools/Slidy2|Slidy]]
+set of CSS and scripts provided by the W3C.
+
+=== Using Slidy ====
+
+To generate a Slidy presentation from a @(THOT) document named
+''doc.thot'', just type:
+<code sh>
+thot.py -t slidy doc.thot
+</code>
+
+As for the ''html'' back-end, a file named ''doc.html'' is created
+with associated files stored in ''doc-imports''. So if you have to copy
+or send the presentation, do not forget to include the ''doc-imports''
+directory.
+
+The slide are created according to the folowing policy:
+  * a first cover slide containing title, authors, organization is created.
+  * the first paragraphs (not in a section) makes a slide whose title
+is ''Introduction'' (possibly translated in the document language),
+  * each header creates a new slide,
+  * ''<slide>'' alone on a line creates a new slide.
+
+The slides can contain anything that is found usually in @(THOT) document.
+In addition, incremental display is also supported:
+  * ''<inc>'' alone on a line makes the following document element
+displayed incrementally,
+  * ''<non-inc>'' disables the incremental display.
+
+
+=== Variables ===
+
+The modules is driven by the following variables:
+
+? TITLE : title of the presentation,
+? SUBTITLE : sub-title (displayed just under the title),
+? AUTHORS : document authors,
+? ORGANZATION : authors organization,
+? STYLE : style to use (only w3c-blue for now) or an absolute path to a CSS,
+? COPYRIGHT : to display in the footer of slides,
+? COVER_IMAGE : image to display on the cover slide,
+? ORG_LOGO : to display in the title bar of each slide,
+? DOC_LOG : to display in the title of each slide.
+? OUTLINE : select the generation of outline page (''top'') or not (''none'')
+
+
+=== Styling ===
+
+Slidy is only delivered with ''w3c-blue'' theme from W3C but we hope to add
+more styles in the future. However, it is very easy to make your own theme
+by customize it (requiring at least that you understand the CSS language):
+(a) copy the file $(THOT_HOME)/slidy/style/w3c-blue.css to another CSS
+file and (b) modify its content. Then pass the absolute path to the
+''STYLE'' variable described below.
+
+Outlinge generation uses styles to achieve visual effect like transition
+between different parts of the presentation. There is on ''<li>'' 
+for each entry and the used styles are:
+
+^ Style ^ Entry type ^
+| ''header-done'' | performed part |
+| ''header-last'' | ending part |
+| ''header-current'' | starting part |
+| ''header-todo'' | parts not already presented |
+
+
+@include scorm-back.thot

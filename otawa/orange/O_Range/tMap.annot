@@ -1,0 +1,5015 @@
+"tMap.ml" 8 135 145 "tMap.ml" 8 135 158
+call(
+  stack
+)
+"tMap.ml" 9 159 165 "tMap.ml" 9 159 170
+type(
+  ?first:(unit, Format.formatter, unit) format ->
+  ?sep:(unit, Format.formatter, unit) format ->
+  ?last:(unit, Format.formatter, unit) format ->
+  ?firstbind:(unit, Format.formatter, unit) format ->
+  ?sepbind:(unit, Format.formatter, unit) format ->
+  ?lastbind:(unit, Format.formatter, unit) format ->
+  (Format.formatter -> Ord.t -> unit) ->
+  (Format.formatter -> 'b -> unit) -> Format.formatter -> 'b t -> unit
+)
+ident(
+  def print "tMap.ml" 34 1338 1371 "tMap.ml" 35 1372 1375
+)
+"tMap.ml" 10 171 179 "tMap.ml" 10 171 184
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 10 171 228 "tMap.ml" 10 171 237
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 11 280 288 "tMap.ml" 11 280 291
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 11 280 335 "tMap.ml" 11 280 340
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 12 381 389 "tMap.ml" 12 381 393
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 12 381 437 "tMap.ml" 12 381 442
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 13 483 491 "tMap.ml" 13 483 500
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 13 483 544 "tMap.ml" 13 483 546
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 14 589 597 "tMap.ml" 14 589 604
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 14 589 648 "tMap.ml" 14 589 654
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 15 695 703 "tMap.ml" 15 695 711
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 15 695 755 "tMap.ml" 15 695 757
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 16 798 805 "tMap.ml" 16 798 814
+type(
+  Format.formatter -> Ord.t -> unit
+)
+ident(
+  def print_key "tMap.ml" 17 850 856 "tMap.ml" 34 1338 1371
+)
+"tMap.ml" 17 850 857 "tMap.ml" 17 850 867
+type(
+  Format.formatter -> 'b -> unit
+)
+ident(
+  def print_data "tMap.ml" 18 900 906 "tMap.ml" 34 1338 1371
+)
+"tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+type(
+  Format.formatter
+)
+ident(
+  def formatter "tMap.ml" 19 935 941 "tMap.ml" 34 1338 1371
+)
+"tMap.ml" 19 935 942 "tMap.ml" 19 935 945
+type(
+  'b t
+)
+ident(
+  def map "tMap.ml" 20 952 958 "tMap.ml" 34 1338 1371
+)
+"tMap.ml" 22 973 977 "tMap.ml" 22 973 991
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 22 973 992 "tMap.ml" 22 973 1001
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 22 973 1002 "tMap.ml" 22 973 1007
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref first "tMap.ml" 10 171 179 "tMap.ml" 10 171 184
+)
+"tMap.ml" 22 973 977 "tMap.ml" 22 973 1007
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 23 1009 1017 "tMap.ml" 23 1009 1026
+type(
+  bool ref
+)
+ident(
+  def firstitem "tMap.ml" 24 1041 1045 "tMap.ml" 34 1338 1371
+)
+"tMap.ml" 23 1009 1029 "tMap.ml" 23 1009 1032
+type(
+  bool -> bool ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"tMap.ml" 23 1009 1033 "tMap.ml" 23 1009 1037
+type(
+  bool
+)
+"tMap.ml" 23 1009 1029 "tMap.ml" 23 1009 1037
+type(
+  bool ref
+)
+"tMap.ml" 24 1041 1045 "tMap.ml" 24 1041 1049
+type(
+  (key -> 'b -> unit) -> 'b t -> unit
+)
+ident(
+  ext_ref iter
+)
+"tMap.ml" 25 1050 1067 "tMap.ml" 25 1050 1070
+type(
+  key
+)
+ident(
+  def key "tMap.ml" 25 1050 1071 "tMap.ml" 31 1279 1314
+)
+"tMap.ml" 25 1050 1071 "tMap.ml" 25 1050 1075
+type(
+  'b
+)
+ident(
+  def data "tMap.ml" 26 1079 1080 "tMap.ml" 31 1279 1314
+)
+"tMap.ml" 26 1079 1083 "tMap.ml" 26 1079 1084
+type(
+  bool ref -> bool
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"tMap.ml" 26 1079 1084 "tMap.ml" 26 1079 1093
+type(
+  bool ref
+)
+ident(
+  int_ref firstitem "tMap.ml" 23 1009 1017 "tMap.ml" 23 1009 1026
+)
+"tMap.ml" 26 1079 1083 "tMap.ml" 26 1079 1093
+type(
+  bool
+)
+"tMap.ml" 26 1079 1099 "tMap.ml" 26 1079 1108
+type(
+  bool ref
+)
+ident(
+  int_ref firstitem "tMap.ml" 23 1009 1017 "tMap.ml" 23 1009 1026
+)
+"tMap.ml" 26 1079 1109 "tMap.ml" 26 1079 1111
+type(
+  bool ref -> bool -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"tMap.ml" 26 1079 1112 "tMap.ml" 26 1079 1117
+type(
+  bool
+)
+"tMap.ml" 26 1079 1099 "tMap.ml" 26 1079 1117
+type(
+  unit
+)
+"tMap.ml" 26 1079 1123 "tMap.ml" 26 1079 1137
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 26 1079 1138 "tMap.ml" 26 1079 1147
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 26 1079 1148 "tMap.ml" 26 1079 1151
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sep "tMap.ml" 11 280 288 "tMap.ml" 11 280 291
+)
+"tMap.ml" 26 1079 1123 "tMap.ml" 26 1079 1151
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 26 1079 1080 "tMap.ml" 26 1079 1151
+type(
+  unit
+)
+"tMap.ml" 27 1153 1154 "tMap.ml" 27 1153 1168
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 27 1153 1169 "tMap.ml" 27 1153 1178
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 27 1153 1179 "tMap.ml" 27 1153 1188
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref firstbind "tMap.ml" 13 483 491 "tMap.ml" 13 483 500
+)
+"tMap.ml" 27 1153 1154 "tMap.ml" 27 1153 1188
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 28 1190 1191 "tMap.ml" 28 1190 1200
+type(
+  Format.formatter -> key -> unit
+)
+ident(
+  int_ref print_key "tMap.ml" 16 798 805 "tMap.ml" 16 798 814
+)
+"tMap.ml" 28 1190 1201 "tMap.ml" 28 1190 1210
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 28 1190 1211 "tMap.ml" 28 1190 1214
+type(
+  key
+)
+ident(
+  int_ref key "tMap.ml" 25 1050 1067 "tMap.ml" 25 1050 1070
+)
+"tMap.ml" 28 1190 1191 "tMap.ml" 28 1190 1214
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 29 1216 1217 "tMap.ml" 29 1216 1231
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 29 1216 1232 "tMap.ml" 29 1216 1241
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 29 1216 1242 "tMap.ml" 29 1216 1249
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sepbind "tMap.ml" 14 589 597 "tMap.ml" 14 589 604
+)
+"tMap.ml" 29 1216 1217 "tMap.ml" 29 1216 1249
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 30 1251 1252 "tMap.ml" 30 1251 1262
+type(
+  Format.formatter -> 'b -> unit
+)
+ident(
+  int_ref print_data "tMap.ml" 17 850 857 "tMap.ml" 17 850 867
+)
+"tMap.ml" 30 1251 1263 "tMap.ml" 30 1251 1272
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 30 1251 1273 "tMap.ml" 30 1251 1277
+type(
+  'b
+)
+ident(
+  int_ref data "tMap.ml" 25 1050 1071 "tMap.ml" 25 1050 1075
+)
+"tMap.ml" 30 1251 1252 "tMap.ml" 30 1251 1277
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 31 1279 1280 "tMap.ml" 31 1279 1294
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 31 1279 1295 "tMap.ml" 31 1279 1304
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 31 1279 1305 "tMap.ml" 31 1279 1313
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref lastbind "tMap.ml" 15 695 703 "tMap.ml" 15 695 711
+)
+"tMap.ml" 31 1279 1280 "tMap.ml" 31 1279 1314
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 30 1251 1252 "tMap.ml" 31 1279 1314
+type(
+  unit
+)
+"tMap.ml" 29 1216 1217 "tMap.ml" 31 1279 1314
+type(
+  unit
+)
+"tMap.ml" 28 1190 1191 "tMap.ml" 31 1279 1314
+type(
+  unit
+)
+"tMap.ml" 27 1153 1154 "tMap.ml" 31 1279 1314
+type(
+  unit
+)
+"tMap.ml" 26 1079 1080 "tMap.ml" 31 1279 1314
+type(
+  unit
+)
+"tMap.ml" 25 1050 1056 "tMap.ml" 32 1315 1326
+type(
+  key -> 'b -> unit
+)
+"tMap.ml" 33 1327 1333 "tMap.ml" 33 1327 1336
+type(
+  'b t
+)
+ident(
+  int_ref map "tMap.ml" 19 935 942 "tMap.ml" 19 935 945
+)
+"tMap.ml" 24 1041 1045 "tMap.ml" 33 1327 1336
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 34 1338 1342 "tMap.ml" 34 1338 1356
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 34 1338 1357 "tMap.ml" 34 1338 1366
+type(
+  Format.formatter
+)
+ident(
+  int_ref formatter "tMap.ml" 18 900 907 "tMap.ml" 18 900 916
+)
+"tMap.ml" 34 1338 1367 "tMap.ml" 34 1338 1371
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref last "tMap.ml" 12 381 389 "tMap.ml" 12 381 393
+)
+"tMap.ml" 34 1338 1342 "tMap.ml" 34 1338 1371
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 24 1041 1045 "tMap.ml" 34 1338 1371
+type(
+  unit
+)
+"tMap.ml" 23 1009 1013 "tMap.ml" 34 1338 1371
+type(
+  unit
+)
+"tMap.ml" 22 973 977 "tMap.ml" 34 1338 1371
+type(
+  unit
+)
+type(
+  unit
+)
+"tMap.ml" 42 1464 1470 "tMap.ml" 42 1464 1474
+type(
+  ?first:(unit, Format.formatter, unit) format ->
+  ?sep:(unit, Format.formatter, unit) format ->
+  ?last:(unit, Format.formatter, unit) format ->
+  (Format.formatter -> 'a -> unit) -> Format.formatter -> 'a list -> unit
+)
+ident(
+  def list "tMap.ml" 64 2089 2096 "tMap.ml" 65 2097 2100
+)
+"tMap.ml" 43 1475 1483 "tMap.ml" 43 1475 1488
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 43 1475 1490 "tMap.ml" 43 1475 1495
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 44 1534 1542 "tMap.ml" 44 1534 1545
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 44 1534 1549 "tMap.ml" 44 1534 1554
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 45 1593 1601 "tMap.ml" 45 1593 1605
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 45 1593 1609 "tMap.ml" 45 1593 1614
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 46 1653 1660 "tMap.ml" 46 1653 1669
+type(
+  Format.formatter -> 'a -> unit
+)
+ident(
+  def print_elt "tMap.ml" 47 1703 1709 "tMap.ml" 64 2089 2096
+)
+"tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+type(
+  Format.formatter
+)
+ident(
+  def fmt "tMap.ml" 48 1732 1738 "tMap.ml" 64 2089 2096
+)
+"tMap.ml" 48 1732 1739 "tMap.ml" 48 1732 1743
+type(
+  'a list
+)
+ident(
+  def list "tMap.ml" 49 1754 1760 "tMap.ml" 64 2089 2096
+)
+"tMap.ml" 51 1775 1782 "tMap.ml" 51 1775 1786
+type(
+  'a list
+)
+ident(
+  int_ref list "tMap.ml" 48 1732 1739 "tMap.ml" 48 1732 1743
+)
+"tMap.ml" 51 1775 1786 "tMap.ml" 51 1775 1787
+type(
+  'a list -> 'a list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"tMap.ml" 51 1775 1787 "tMap.ml" 51 1775 1789
+type(
+  'a list
+)
+"tMap.ml" 51 1775 1782 "tMap.ml" 51 1775 1789
+type(
+  bool
+)
+"tMap.ml" 52 1801 1807 "tMap.ml" 52 1801 1814
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 52 1801 1815 "tMap.ml" 52 1801 1818
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+)
+"tMap.ml" 52 1801 1819 "tMap.ml" 52 1801 1824
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref first "tMap.ml" 43 1475 1483 "tMap.ml" 43 1475 1488
+)
+"tMap.ml" 52 1801 1807 "tMap.ml" 52 1801 1824
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 53 1826 1832 "tMap.ml" 53 1826 1839
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 53 1826 1840 "tMap.ml" 53 1826 1843
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+)
+"tMap.ml" 53 1826 1844 "tMap.ml" 53 1826 1848
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref last "tMap.ml" 45 1593 1601 "tMap.ml" 45 1593 1605
+)
+"tMap.ml" 53 1826 1832 "tMap.ml" 53 1826 1849
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 51 1775 1795 "tMap.ml" 54 1850 1857
+type(
+  unit
+)
+"tMap.ml" 56 1873 1879 "tMap.ml" 56 1873 1886
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 56 1873 1887 "tMap.ml" 56 1873 1890
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+)
+"tMap.ml" 56 1873 1891 "tMap.ml" 56 1873 1896
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref first "tMap.ml" 43 1475 1483 "tMap.ml" 43 1475 1488
+)
+"tMap.ml" 56 1873 1879 "tMap.ml" 56 1873 1896
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 57 1898 1912 "tMap.ml" 57 1898 1918
+type(
+  'a list -> unit
+)
+ident(
+  def do_sep "tMap.ml" 57 1898 1904 "tMap.ml" 63 2065 2088
+)
+"tMap.ml" 58 1930 1937 "tMap.ml" 58 1930 1938
+type(
+  'a
+)
+ident(
+  def e "tMap.ml" 58 1930 1943 "tMap.ml" 58 1930 1958
+)
+"tMap.ml" 58 1930 1936 "tMap.ml" 58 1930 1939
+type(
+  'a list
+)
+"tMap.ml" 58 1930 1943 "tMap.ml" 58 1930 1952
+type(
+  Format.formatter -> 'a -> unit
+)
+ident(
+  int_ref print_elt "tMap.ml" 46 1653 1660 "tMap.ml" 46 1653 1669
+)
+"tMap.ml" 58 1930 1953 "tMap.ml" 58 1930 1956
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+)
+"tMap.ml" 58 1930 1957 "tMap.ml" 58 1930 1958
+type(
+  'a
+)
+ident(
+  int_ref e "tMap.ml" 58 1930 1937 "tMap.ml" 58 1930 1938
+)
+"tMap.ml" 58 1930 1943 "tMap.ml" 58 1930 1958
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 59 1959 1962 "tMap.ml" 59 1959 1963
+type(
+  'a
+)
+ident(
+  def e "tMap.ml" 59 1959 1970 "tMap.ml" 59 1959 2015
+)
+"tMap.ml" 59 1959 1965 "tMap.ml" 59 1959 1966
+type(
+  'a list
+)
+ident(
+  def l "tMap.ml" 59 1959 1970 "tMap.ml" 59 1959 2015
+)
+"tMap.ml" 59 1959 1962 "tMap.ml" 59 1959 1966
+type(
+  'a list
+)
+"tMap.ml" 59 1959 1971 "tMap.ml" 59 1959 1980
+type(
+  Format.formatter -> 'a -> unit
+)
+ident(
+  int_ref print_elt "tMap.ml" 46 1653 1660 "tMap.ml" 46 1653 1669
+)
+"tMap.ml" 59 1959 1981 "tMap.ml" 59 1959 1984
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+)
+"tMap.ml" 59 1959 1985 "tMap.ml" 59 1959 1986
+type(
+  'a
+)
+ident(
+  int_ref e "tMap.ml" 59 1959 1962 "tMap.ml" 59 1959 1963
+)
+"tMap.ml" 59 1959 1971 "tMap.ml" 59 1959 1986
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 59 1959 1989 "tMap.ml" 59 1959 1996
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 59 1959 1997 "tMap.ml" 59 1959 2000
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+)
+"tMap.ml" 59 1959 2001 "tMap.ml" 59 1959 2004
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sep "tMap.ml" 44 1534 1542 "tMap.ml" 44 1534 1545
+)
+"tMap.ml" 59 1959 1989 "tMap.ml" 59 1959 2004
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 59 1959 2006 "tMap.ml" 59 1959 2012
+type(
+  'a list -> unit
+)
+ident(
+  int_ref do_sep "tMap.ml" 57 1898 1912 "tMap.ml" 57 1898 1918
+)
+"tMap.ml" 59 1959 2013 "tMap.ml" 59 1959 2014
+type(
+  'a list
+)
+ident(
+  int_ref l "tMap.ml" 59 1959 1965 "tMap.ml" 59 1959 1966
+)
+"tMap.ml" 59 1959 2006 "tMap.ml" 59 1959 2014
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 59 1959 1989 "tMap.ml" 59 1959 2014
+type(
+  unit
+)
+"tMap.ml" 59 1959 1970 "tMap.ml" 59 1959 2015
+type(
+  unit
+)
+"tMap.ml" 60 2016 2019 "tMap.ml" 60 2016 2021
+type(
+  'a list
+)
+"tMap.ml" 60 2016 2025 "tMap.ml" 60 2016 2033
+type(
+  string -> unit
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"tMap.ml" 60 2016 2034 "tMap.ml" 60 2016 2036
+type(
+  string
+)
+"tMap.ml" 60 2016 2025 "tMap.ml" 60 2016 2036
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 57 1898 1921 "tMap.ml" 60 2016 2036
+type(
+  'a list -> unit
+)
+"tMap.ml" 62 2046 2052 "tMap.ml" 62 2046 2058
+type(
+  'a list -> unit
+)
+ident(
+  int_ref do_sep "tMap.ml" 57 1898 1912 "tMap.ml" 57 1898 1918
+)
+"tMap.ml" 62 2046 2059 "tMap.ml" 62 2046 2063
+type(
+  'a list
+)
+ident(
+  int_ref list "tMap.ml" 48 1732 1739 "tMap.ml" 48 1732 1743
+)
+"tMap.ml" 62 2046 2052 "tMap.ml" 62 2046 2063
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 63 2065 2071 "tMap.ml" 63 2065 2078
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 63 2065 2079 "tMap.ml" 63 2065 2082
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 47 1703 1710 "tMap.ml" 47 1703 1713
+)
+"tMap.ml" 63 2065 2083 "tMap.ml" 63 2065 2087
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref last "tMap.ml" 45 1593 1601 "tMap.ml" 45 1593 1605
+)
+"tMap.ml" 63 2065 2071 "tMap.ml" 63 2065 2088
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 62 2046 2052 "tMap.ml" 63 2065 2088
+type(
+  unit
+)
+"tMap.ml" 57 1898 1904 "tMap.ml" 63 2065 2088
+type(
+  unit
+)
+"tMap.ml" 55 1858 1867 "tMap.ml" 64 2089 2096
+type(
+  unit
+)
+"tMap.ml" 51 1775 1779 "tMap.ml" 64 2089 2096
+type(
+  unit
+)
+type(
+  unit
+)
+"tMap.ml" 84 2660 2664 "tMap.ml" 84 2660 2668
+type(
+  'c -> 'c t
+)
+ident(
+  def make "tMap.ml" 86 2714 2714 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 84 2660 2669 "tMap.ml" 84 2660 2670
+type(
+  'c
+)
+ident(
+  def d "tMap.ml" 84 2660 2673 "tMap.ml" 84 2660 2712
+)
+"tMap.ml" 84 2660 2685 "tMap.ml" 84 2660 2696
+type(
+  'c Mappe.t
+)
+ident(
+  ext_ref Mappe.empty
+)
+"tMap.ml" 84 2660 2708 "tMap.ml" 84 2660 2709
+type(
+  'c
+)
+ident(
+  int_ref d "tMap.ml" 84 2660 2669 "tMap.ml" 84 2660 2670
+)
+"tMap.ml" 84 2660 2673 "tMap.ml" 84 2660 2712
+type(
+  'c t
+)
+"tMap.ml" 88 2737 2741 "tMap.ml" 88 2737 2748
+type(
+  'd t -> 'd
+)
+ident(
+  def default "tMap.ml" 90 2766 2766 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 88 2737 2749 "tMap.ml" 88 2737 2750
+type(
+  'd t
+)
+ident(
+  def m "tMap.ml" 88 2737 2753 "tMap.ml" 88 2737 2762
+)
+"tMap.ml" 88 2737 2753 "tMap.ml" 88 2737 2754
+type(
+  'd t
+)
+ident(
+  int_ref m "tMap.ml" 88 2737 2749 "tMap.ml" 88 2737 2750
+)
+"tMap.ml" 88 2737 2753 "tMap.ml" 88 2737 2762
+type(
+  'd
+)
+"tMap.ml" 90 2766 2770 "tMap.ml" 90 2766 2786
+type(
+  'e t -> 'e Mappe.t
+)
+ident(
+  def special_bindings "tMap.ml" 96 2859 2859 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 90 2766 2787 "tMap.ml" 90 2766 2788
+type(
+  'e t
+)
+ident(
+  def m "tMap.ml" 90 2766 2791 "tMap.ml" 90 2766 2800
+)
+"tMap.ml" 90 2766 2791 "tMap.ml" 90 2766 2792
+type(
+  'e t
+)
+ident(
+  int_ref m "tMap.ml" 90 2766 2787 "tMap.ml" 90 2766 2788
+)
+"tMap.ml" 90 2766 2791 "tMap.ml" 90 2766 2800
+type(
+  'e Mappe.t
+)
+"tMap.ml" 96 2859 2863 "tMap.ml" 96 2859 2876
+type(
+  'f t -> int
+)
+ident(
+  def special_count "tMap.ml" 98 2907 2907 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 96 2859 2877 "tMap.ml" 96 2859 2878
+type(
+  'f t
+)
+ident(
+  def m "tMap.ml" 96 2859 2881 "tMap.ml" 96 2859 2905
+)
+"tMap.ml" 96 2859 2881 "tMap.ml" 96 2859 2895
+type(
+  'f Mappe.t -> int
+)
+ident(
+  ext_ref Mappe.cardinal
+)
+"tMap.ml" 96 2859 2896 "tMap.ml" 96 2859 2897
+type(
+  'f t
+)
+ident(
+  int_ref m "tMap.ml" 96 2859 2877 "tMap.ml" 96 2859 2878
+)
+"tMap.ml" 96 2859 2896 "tMap.ml" 96 2859 2905
+type(
+  'f Mappe.t
+)
+"tMap.ml" 96 2859 2881 "tMap.ml" 96 2859 2905
+call(
+  tail
+)
+type(
+  int
+)
+"tMap.ml" 98 2907 2911 "tMap.ml" 98 2907 2925
+type(
+  'g t -> bool
+)
+ident(
+  def has_no_special "tMap.ml" 100 2958 2958 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 98 2907 2926 "tMap.ml" 98 2907 2927
+type(
+  'g t
+)
+ident(
+  def m "tMap.ml" 98 2907 2930 "tMap.ml" 98 2907 2954
+)
+"tMap.ml" 98 2907 2930 "tMap.ml" 98 2907 2944
+type(
+  'g Mappe.t -> bool
+)
+ident(
+  ext_ref Mappe.is_empty
+)
+"tMap.ml" 98 2907 2945 "tMap.ml" 98 2907 2946
+type(
+  'g t
+)
+ident(
+  int_ref m "tMap.ml" 98 2907 2926 "tMap.ml" 98 2907 2927
+)
+"tMap.ml" 98 2907 2945 "tMap.ml" 98 2907 2954
+type(
+  'g Mappe.t
+)
+"tMap.ml" 98 2907 2930 "tMap.ml" 98 2907 2954
+call(
+  tail
+)
+type(
+  bool
+)
+"tMap.ml" 102 2993 2997 "tMap.ml" 102 2993 3000
+type(
+  Mappe.key -> 'h t -> 'h
+)
+ident(
+  def get "tMap.ml" 105 3066 3066 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 102 2993 3001 "tMap.ml" 102 2993 3002
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 102 2993 3003 "tMap.ml" 104 3036 3065
+)
+"tMap.ml" 102 2993 3003 "tMap.ml" 102 2993 3004
+type(
+  'h t
+)
+ident(
+  def m "tMap.ml" 103 3007 3009 "tMap.ml" 104 3036 3065
+)
+"tMap.ml" 103 3007 3013 "tMap.ml" 103 3007 3023
+type(
+  Mappe.key -> 'h Mappe.t -> 'h
+)
+ident(
+  ext_ref Mappe.find
+)
+"tMap.ml" 103 3007 3024 "tMap.ml" 103 3007 3025
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 102 2993 3001 "tMap.ml" 102 2993 3002
+)
+"tMap.ml" 103 3007 3026 "tMap.ml" 103 3007 3027
+type(
+  'h t
+)
+ident(
+  int_ref m "tMap.ml" 102 2993 3003 "tMap.ml" 102 2993 3004
+)
+"tMap.ml" 103 3007 3026 "tMap.ml" 103 3007 3035
+type(
+  'h Mappe.t
+)
+"tMap.ml" 103 3007 3013 "tMap.ml" 103 3007 3035
+call(
+  stack
+)
+type(
+  'h
+)
+"tMap.ml" 104 3036 3043 "tMap.ml" 104 3036 3052
+type(
+  exn
+)
+"tMap.ml" 104 3036 3056 "tMap.ml" 104 3036 3057
+type(
+  'h t
+)
+ident(
+  int_ref m "tMap.ml" 102 2993 3003 "tMap.ml" 102 2993 3004
+)
+"tMap.ml" 104 3036 3056 "tMap.ml" 104 3036 3065
+type(
+  'h
+)
+"tMap.ml" 103 3007 3009 "tMap.ml" 104 3036 3065
+type(
+  'h
+)
+"tMap.ml" 105 3066 3070 "tMap.ml" 105 3066 3073
+type(
+  Mappe.key -> 'i -> 'i t -> 'i t
+)
+ident(
+  def set "tMap.ml" 108 3187 3187 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 105 3066 3074 "tMap.ml" 105 3066 3075
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 105 3066 3076 "tMap.ml" 107 3152 3186
+)
+"tMap.ml" 105 3066 3076 "tMap.ml" 105 3066 3077
+type(
+  'i
+)
+ident(
+  def v "tMap.ml" 105 3066 3078 "tMap.ml" 107 3152 3186
+)
+"tMap.ml" 105 3066 3078 "tMap.ml" 105 3066 3079
+type(
+  'i t
+)
+ident(
+  def m "tMap.ml" 105 3066 3082 "tMap.ml" 107 3152 3186
+)
+"tMap.ml" 105 3066 3084 "tMap.ml" 105 3066 3085
+type(
+  'i t
+)
+ident(
+  int_ref m "tMap.ml" 105 3066 3078 "tMap.ml" 105 3066 3079
+)
+"tMap.ml" 106 3101 3108 "tMap.ml" 106 3101 3109
+type(
+  'i
+)
+ident(
+  int_ref v "tMap.ml" 105 3066 3076 "tMap.ml" 105 3066 3077
+)
+"tMap.ml" 106 3101 3110 "tMap.ml" 106 3101 3111
+type(
+  'i -> 'i -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"tMap.ml" 106 3101 3112 "tMap.ml" 106 3101 3113
+type(
+  'i t
+)
+ident(
+  int_ref m "tMap.ml" 105 3066 3078 "tMap.ml" 105 3066 3079
+)
+"tMap.ml" 106 3101 3112 "tMap.ml" 106 3101 3121
+type(
+  'i
+)
+"tMap.ml" 106 3101 3108 "tMap.ml" 106 3101 3121
+type(
+  bool
+)
+"tMap.ml" 106 3101 3127 "tMap.ml" 106 3101 3139
+type(
+  Mappe.key -> 'i Mappe.t -> 'i Mappe.t
+)
+ident(
+  ext_ref Mappe.remove
+)
+"tMap.ml" 106 3101 3140 "tMap.ml" 106 3101 3141
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 105 3066 3074 "tMap.ml" 105 3066 3075
+)
+"tMap.ml" 106 3101 3142 "tMap.ml" 106 3101 3143
+type(
+  'i t
+)
+ident(
+  int_ref m "tMap.ml" 105 3066 3078 "tMap.ml" 105 3066 3079
+)
+"tMap.ml" 106 3101 3142 "tMap.ml" 106 3101 3151
+type(
+  'i Mappe.t
+)
+"tMap.ml" 106 3101 3127 "tMap.ml" 106 3101 3151
+call(
+  stack
+)
+type(
+  'i Mappe.t
+)
+"tMap.ml" 107 3152 3161 "tMap.ml" 107 3152 3170
+type(
+  Mappe.key -> 'i -> 'i Mappe.t -> 'i Mappe.t
+)
+ident(
+  ext_ref Mappe.add
+)
+"tMap.ml" 107 3152 3171 "tMap.ml" 107 3152 3172
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 105 3066 3074 "tMap.ml" 105 3066 3075
+)
+"tMap.ml" 107 3152 3173 "tMap.ml" 107 3152 3174
+type(
+  'i
+)
+ident(
+  int_ref v "tMap.ml" 105 3066 3076 "tMap.ml" 105 3066 3077
+)
+"tMap.ml" 107 3152 3175 "tMap.ml" 107 3152 3176
+type(
+  'i t
+)
+ident(
+  int_ref m "tMap.ml" 105 3066 3078 "tMap.ml" 105 3066 3079
+)
+"tMap.ml" 107 3152 3175 "tMap.ml" 107 3152 3184
+type(
+  'i Mappe.t
+)
+"tMap.ml" 107 3152 3161 "tMap.ml" 107 3152 3184
+call(
+  stack
+)
+type(
+  'i Mappe.t
+)
+"tMap.ml" 106 3101 3105 "tMap.ml" 107 3152 3184
+type(
+  'i Mappe.t
+)
+"tMap.ml" 105 3066 3082 "tMap.ml" 107 3152 3186
+type(
+  'i t
+)
+"tMap.ml" 108 3187 3191 "tMap.ml" 108 3187 3196
+type(
+  Mappe.key -> 'j t -> 'j t
+)
+ident(
+  def reset "tMap.ml" 109 3249 3249 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 108 3187 3197 "tMap.ml" 108 3187 3198
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 108 3187 3199 "tMap.ml" 108 3187 3248
+)
+"tMap.ml" 108 3187 3199 "tMap.ml" 108 3187 3200
+type(
+  'j t
+)
+ident(
+  def m "tMap.ml" 108 3187 3203 "tMap.ml" 108 3187 3248
+)
+"tMap.ml" 108 3187 3205 "tMap.ml" 108 3187 3206
+type(
+  'j t
+)
+ident(
+  int_ref m "tMap.ml" 108 3187 3199 "tMap.ml" 108 3187 3200
+)
+"tMap.ml" 108 3187 3222 "tMap.ml" 108 3187 3234
+type(
+  Mappe.key -> 'j Mappe.t -> 'j Mappe.t
+)
+ident(
+  ext_ref Mappe.remove
+)
+"tMap.ml" 108 3187 3235 "tMap.ml" 108 3187 3236
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 108 3187 3197 "tMap.ml" 108 3187 3198
+)
+"tMap.ml" 108 3187 3237 "tMap.ml" 108 3187 3238
+type(
+  'j t
+)
+ident(
+  int_ref m "tMap.ml" 108 3187 3199 "tMap.ml" 108 3187 3200
+)
+"tMap.ml" 108 3187 3237 "tMap.ml" 108 3187 3246
+type(
+  'j Mappe.t
+)
+"tMap.ml" 108 3187 3222 "tMap.ml" 108 3187 3246
+call(
+  stack
+)
+type(
+  'j Mappe.t
+)
+"tMap.ml" 108 3187 3203 "tMap.ml" 108 3187 3248
+type(
+  'j t
+)
+"tMap.ml" 109 3249 3253 "tMap.ml" 109 3249 3259
+type(
+  ('k -> 'k) -> Mappe.key -> 'k t -> 'k t
+)
+ident(
+  def update "tMap.ml" 111 3295 3295 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 109 3249 3260 "tMap.ml" 109 3249 3261
+type(
+  'k -> 'k
+)
+ident(
+  def f "tMap.ml" 109 3249 3262 "tMap.ml" 109 3249 3289
+)
+"tMap.ml" 109 3249 3262 "tMap.ml" 109 3249 3263
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 109 3249 3264 "tMap.ml" 109 3249 3289
+)
+"tMap.ml" 109 3249 3264 "tMap.ml" 109 3249 3265
+type(
+  'k t
+)
+ident(
+  def m "tMap.ml" 109 3249 3268 "tMap.ml" 109 3249 3289
+)
+"tMap.ml" 109 3249 3268 "tMap.ml" 109 3249 3271
+type(
+  Mappe.key -> 'k -> 'k t -> 'k t
+)
+ident(
+  int_ref set "tMap.ml" 105 3066 3070 "tMap.ml" 105 3066 3073
+)
+"tMap.ml" 109 3249 3272 "tMap.ml" 109 3249 3273
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 109 3249 3262 "tMap.ml" 109 3249 3263
+)
+"tMap.ml" 109 3249 3275 "tMap.ml" 109 3249 3276
+type(
+  'k -> 'k
+)
+ident(
+  int_ref f "tMap.ml" 109 3249 3260 "tMap.ml" 109 3249 3261
+)
+"tMap.ml" 109 3249 3278 "tMap.ml" 109 3249 3281
+type(
+  Mappe.key -> 'k t -> 'k
+)
+ident(
+  int_ref get "tMap.ml" 102 2993 2997 "tMap.ml" 102 2993 3000
+)
+"tMap.ml" 109 3249 3282 "tMap.ml" 109 3249 3283
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 109 3249 3262 "tMap.ml" 109 3249 3263
+)
+"tMap.ml" 109 3249 3284 "tMap.ml" 109 3249 3285
+type(
+  'k t
+)
+ident(
+  int_ref m "tMap.ml" 109 3249 3264 "tMap.ml" 109 3249 3265
+)
+"tMap.ml" 109 3249 3277 "tMap.ml" 109 3249 3286
+call(
+  stack
+)
+type(
+  'k
+)
+"tMap.ml" 109 3249 3274 "tMap.ml" 109 3249 3287
+call(
+  stack
+)
+type(
+  'k
+)
+"tMap.ml" 109 3249 3288 "tMap.ml" 109 3249 3289
+type(
+  'k t
+)
+ident(
+  int_ref m "tMap.ml" 109 3249 3264 "tMap.ml" 109 3249 3265
+)
+"tMap.ml" 109 3249 3268 "tMap.ml" 109 3249 3289
+call(
+  tail
+)
+type(
+  'k t
+)
+"tMap.ml" 113 3316 3320 "tMap.ml" 113 3316 3325
+type(
+  ?first:(unit, Format.formatter, unit) format ->
+  ?sep:(unit, Format.formatter, unit) format ->
+  ?last:(unit, Format.formatter, unit) format ->
+  ?firstbind:(unit, Format.formatter, unit) format ->
+  ?sepbind:(unit, Format.formatter, unit) format ->
+  ?lastbind:(unit, Format.formatter, unit) format ->
+  ?others:(unit, Format.formatter, unit) format ->
+  (Format.formatter -> Ord.t -> unit) ->
+  (Format.formatter -> 'l -> unit) -> Format.formatter -> 'l t -> unit
+)
+ident(
+  def print "tMap.ml" 133 4467 4467 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 114 3326 3332 "tMap.ml" 114 3326 3337
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 114 3326 3381 "tMap.ml" 114 3326 3390
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 115 3433 3439 "tMap.ml" 115 3433 3442
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 115 3433 3486 "tMap.ml" 115 3433 3491
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 116 3532 3538 "tMap.ml" 116 3532 3542
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 116 3532 3586 "tMap.ml" 116 3532 3591
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 117 3632 3638 "tMap.ml" 117 3632 3647
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 117 3632 3691 "tMap.ml" 117 3632 3693
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 118 3736 3742 "tMap.ml" 118 3736 3749
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 118 3736 3793 "tMap.ml" 118 3736 3799
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 119 3840 3846 "tMap.ml" 119 3840 3854
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 119 3840 3898 "tMap.ml" 119 3840 3900
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 120 3941 3947 "tMap.ml" 120 3941 3953
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 120 3941 3997 "tMap.ml" 120 3941 4000
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 121 4041 4045 "tMap.ml" 121 4041 4054
+type(
+  Format.formatter -> Ord.t -> unit
+)
+ident(
+  def print_key "tMap.ml" 121 4041 4055 "tMap.ml" 131 4440 4465
+)
+"tMap.ml" 121 4041 4055 "tMap.ml" 121 4041 4064
+type(
+  Format.formatter -> 'l -> unit
+)
+ident(
+  def print_val "tMap.ml" 121 4041 4065 "tMap.ml" 131 4440 4465
+)
+"tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+type(
+  Format.formatter
+)
+ident(
+  def fmt "tMap.ml" 121 4041 4069 "tMap.ml" 131 4440 4465
+)
+"tMap.ml" 121 4041 4069 "tMap.ml" 121 4041 4070
+type(
+  'l t
+)
+ident(
+  def m "tMap.ml" 122 4073 4075 "tMap.ml" 131 4440 4465
+)
+"tMap.ml" 122 4073 4075 "tMap.ml" 122 4073 4086
+type(
+  ?first:(unit, Format.formatter, unit) format ->
+  ?sep:(unit, Format.formatter, unit) format ->
+  ?last:(unit, Format.formatter, unit) format ->
+  ?firstbind:(unit, Format.formatter, unit) format ->
+  ?sepbind:(unit, Format.formatter, unit) format ->
+  ?lastbind:(unit, Format.formatter, unit) format ->
+  (Format.formatter -> Ord.t -> unit) ->
+  (Format.formatter -> 'l -> unit) -> Format.formatter -> 'l Mappe.t -> unit
+)
+ident(
+  int_ref Mappe.print "tMap.ml" 9 159 165 "tMap.ml" 9 159 170
+)
+"tMap.ml" 122 4073 4094 "tMap.ml" 122 4073 4099
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref first "tMap.ml" 114 3326 3332 "tMap.ml" 114 3326 3337
+)
+"tMap.ml" 122 4073 4105 "tMap.ml" 122 4073 4108
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sep "tMap.ml" 115 3433 3439 "tMap.ml" 115 3433 3442
+)
+"tMap.ml" 122 4073 4120 "tMap.ml" 122 4073 4129
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref firstbind "tMap.ml" 117 3632 3638 "tMap.ml" 117 3632 3647
+)
+"tMap.ml" 122 4073 4139 "tMap.ml" 122 4073 4146
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sepbind "tMap.ml" 118 3736 3742 "tMap.ml" 118 3736 3749
+)
+"tMap.ml" 122 4073 4157 "tMap.ml" 122 4073 4165
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref lastbind "tMap.ml" 119 3840 3846 "tMap.ml" 119 3840 3854
+)
+"tMap.ml" 122 4073 4172 "tMap.ml" 122 4073 4174
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 123 4175 4179 "tMap.ml" 123 4175 4188
+type(
+  Format.formatter -> Ord.t -> unit
+)
+ident(
+  int_ref print_key "tMap.ml" 121 4041 4045 "tMap.ml" 121 4041 4054
+)
+"tMap.ml" 123 4175 4189 "tMap.ml" 123 4175 4198
+type(
+  Format.formatter -> 'l -> unit
+)
+ident(
+  int_ref print_val "tMap.ml" 121 4041 4055 "tMap.ml" 121 4041 4064
+)
+"tMap.ml" 123 4175 4199 "tMap.ml" 123 4175 4202
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 123 4175 4203 "tMap.ml" 123 4175 4204
+type(
+  'l t
+)
+ident(
+  int_ref m "tMap.ml" 121 4041 4069 "tMap.ml" 121 4041 4070
+)
+"tMap.ml" 123 4175 4203 "tMap.ml" 123 4175 4212
+type(
+  'l Mappe.t
+)
+"tMap.ml" 122 4073 4075 "tMap.ml" 123 4175 4212
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 124 4214 4219 "tMap.ml" 124 4214 4222
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"tMap.ml" 124 4214 4224 "tMap.ml" 124 4214 4238
+type(
+  'l Mappe.t -> bool
+)
+ident(
+  ext_ref Mappe.is_empty
+)
+"tMap.ml" 124 4214 4239 "tMap.ml" 124 4214 4240
+type(
+  'l t
+)
+ident(
+  int_ref m "tMap.ml" 121 4041 4069 "tMap.ml" 121 4041 4070
+)
+"tMap.ml" 124 4214 4239 "tMap.ml" 124 4214 4248
+type(
+  'l Mappe.t
+)
+"tMap.ml" 124 4214 4223 "tMap.ml" 124 4214 4249
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 124 4214 4219 "tMap.ml" 124 4214 4249
+type(
+  bool
+)
+"tMap.ml" 125 4250 4263 "tMap.ml" 125 4250 4277
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 125 4250 4278 "tMap.ml" 125 4250 4281
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 125 4250 4282 "tMap.ml" 125 4250 4285
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sep "tMap.ml" 115 3433 3439 "tMap.ml" 115 3433 3442
+)
+"tMap.ml" 125 4250 4257 "tMap.ml" 125 4250 4289
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 124 4214 4216 "tMap.ml" 125 4250 4289
+type(
+  unit
+)
+"tMap.ml" 126 4291 4293 "tMap.ml" 126 4291 4307
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 126 4291 4308 "tMap.ml" 126 4291 4311
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 126 4291 4312 "tMap.ml" 126 4291 4321
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref firstbind "tMap.ml" 117 3632 3638 "tMap.ml" 117 3632 3647
+)
+"tMap.ml" 126 4291 4293 "tMap.ml" 126 4291 4321
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 127 4323 4325 "tMap.ml" 127 4323 4339
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 127 4323 4340 "tMap.ml" 127 4323 4343
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 127 4323 4344 "tMap.ml" 127 4323 4350
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref others "tMap.ml" 120 3941 3947 "tMap.ml" 120 3941 3953
+)
+"tMap.ml" 127 4323 4325 "tMap.ml" 127 4323 4350
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 128 4352 4354 "tMap.ml" 128 4352 4368
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 128 4352 4369 "tMap.ml" 128 4352 4372
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 128 4352 4373 "tMap.ml" 128 4352 4380
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sepbind "tMap.ml" 118 3736 3742 "tMap.ml" 118 3736 3749
+)
+"tMap.ml" 128 4352 4354 "tMap.ml" 128 4352 4380
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 129 4382 4384 "tMap.ml" 129 4382 4393
+type(
+  Format.formatter -> 'l -> unit
+)
+ident(
+  int_ref print_val "tMap.ml" 121 4041 4055 "tMap.ml" 121 4041 4064
+)
+"tMap.ml" 129 4382 4394 "tMap.ml" 129 4382 4397
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 129 4382 4398 "tMap.ml" 129 4382 4399
+type(
+  'l t
+)
+ident(
+  int_ref m "tMap.ml" 121 4041 4069 "tMap.ml" 121 4041 4070
+)
+"tMap.ml" 129 4382 4398 "tMap.ml" 129 4382 4407
+type(
+  'l
+)
+"tMap.ml" 129 4382 4384 "tMap.ml" 129 4382 4407
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 130 4409 4411 "tMap.ml" 130 4409 4425
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 130 4409 4426 "tMap.ml" 130 4409 4429
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 130 4409 4430 "tMap.ml" 130 4409 4438
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref lastbind "tMap.ml" 119 3840 3846 "tMap.ml" 119 3840 3854
+)
+"tMap.ml" 130 4409 4411 "tMap.ml" 130 4409 4438
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 131 4440 4442 "tMap.ml" 131 4440 4456
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 131 4440 4457 "tMap.ml" 131 4440 4460
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 121 4041 4065 "tMap.ml" 121 4041 4068
+)
+"tMap.ml" 131 4440 4461 "tMap.ml" 131 4440 4465
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref last "tMap.ml" 116 3532 3538 "tMap.ml" 116 3532 3542
+)
+"tMap.ml" 131 4440 4442 "tMap.ml" 131 4440 4465
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 130 4409 4411 "tMap.ml" 131 4440 4465
+type(
+  unit
+)
+"tMap.ml" 129 4382 4384 "tMap.ml" 131 4440 4465
+type(
+  unit
+)
+"tMap.ml" 128 4352 4354 "tMap.ml" 131 4440 4465
+type(
+  unit
+)
+"tMap.ml" 127 4323 4325 "tMap.ml" 131 4440 4465
+type(
+  unit
+)
+"tMap.ml" 126 4291 4293 "tMap.ml" 131 4440 4465
+type(
+  unit
+)
+"tMap.ml" 124 4214 4216 "tMap.ml" 131 4440 4465
+type(
+  unit
+)
+"tMap.ml" 122 4073 4075 "tMap.ml" 131 4440 4465
+type(
+  unit
+)
+"tMap.ml" 133 4467 4471 "tMap.ml" 133 4467 4481
+type(
+  ?first:(unit, Format.formatter, unit) format ->
+  ?sep:(unit, Format.formatter, unit) format ->
+  ?last:(unit, Format.formatter, unit) format ->
+  ?firstbind:(unit, Format.formatter, unit) format ->
+  ?sepbind:(unit, Format.formatter, unit) format ->
+  ?lastbind:(unit, Format.formatter, unit) format ->
+  (Format.formatter -> Mappe.key -> 'm) ->
+  Mappe.key list ->
+  (Format.formatter -> 'n -> 'o) -> Format.formatter -> 'n t -> unit
+)
+ident(
+  def print_list "tMap.ml" 149 5381 5381 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 134 4482 4488 "tMap.ml" 134 4482 4493
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 134 4482 4537 "tMap.ml" 134 4482 4546
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 135 4589 4595 "tMap.ml" 135 4589 4598
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 135 4589 4642 "tMap.ml" 135 4589 4647
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 136 4688 4694 "tMap.ml" 136 4688 4698
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 136 4688 4742 "tMap.ml" 136 4688 4747
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 137 4788 4794 "tMap.ml" 137 4788 4803
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 137 4788 4847 "tMap.ml" 137 4788 4849
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 138 4892 4898 "tMap.ml" 138 4892 4905
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 138 4892 4949 "tMap.ml" 138 4892 4955
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 139 4996 5002 "tMap.ml" 139 4996 5010
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 139 4996 5054 "tMap.ml" 139 4996 5056
+type(
+  (unit, Format.formatter, unit) format
+)
+type(
+  (unit, Format.formatter, unit) format
+)
+"tMap.ml" 140 5097 5101 "tMap.ml" 140 5097 5110
+type(
+  Format.formatter -> Mappe.key -> 'm
+)
+ident(
+  def print_key "tMap.ml" 140 5097 5111 "tMap.ml" 147 5332 5379
+)
+"tMap.ml" 140 5097 5111 "tMap.ml" 140 5097 5119
+type(
+  Mappe.key list
+)
+ident(
+  def key_list "tMap.ml" 140 5097 5120 "tMap.ml" 147 5332 5379
+)
+"tMap.ml" 140 5097 5120 "tMap.ml" 140 5097 5129
+type(
+  Format.formatter -> 'n -> 'o
+)
+ident(
+  def print_val "tMap.ml" 140 5097 5130 "tMap.ml" 147 5332 5379
+)
+"tMap.ml" 140 5097 5130 "tMap.ml" 140 5097 5133
+type(
+  Format.formatter
+)
+ident(
+  def fmt "tMap.ml" 140 5097 5134 "tMap.ml" 147 5332 5379
+)
+"tMap.ml" 140 5097 5134 "tMap.ml" 140 5097 5135
+type(
+  'n t
+)
+ident(
+  def m "tMap.ml" 141 5138 5140 "tMap.ml" 147 5332 5379
+)
+"tMap.ml" 141 5138 5140 "tMap.ml" 141 5138 5150
+type(
+  ?first:(unit, Format.formatter, unit) format ->
+  ?sep:(unit, Format.formatter, unit) format ->
+  ?last:(unit, Format.formatter, unit) format ->
+  (Format.formatter -> Mappe.key -> unit) ->
+  Format.formatter -> Mappe.key list -> unit
+)
+ident(
+  int_ref Print.list "tMap.ml" 42 1464 1470 "tMap.ml" 42 1464 1474
+)
+"tMap.ml" 141 5138 5158 "tMap.ml" 141 5138 5163
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref first "tMap.ml" 134 4482 4488 "tMap.ml" 134 4482 4493
+)
+"tMap.ml" 141 5138 5169 "tMap.ml" 141 5138 5172
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sep "tMap.ml" 135 4589 4595 "tMap.ml" 135 4589 4598
+)
+"tMap.ml" 141 5138 5179 "tMap.ml" 141 5138 5183
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref last "tMap.ml" 136 4688 4694 "tMap.ml" 136 4688 4698
+)
+"tMap.ml" 142 5184 5193 "tMap.ml" 142 5184 5196
+type(
+  Format.formatter
+)
+ident(
+  def fmt "tMap.ml" 142 5184 5197 "tMap.ml" 147 5332 5365
+)
+"tMap.ml" 142 5184 5197 "tMap.ml" 142 5184 5200
+type(
+  Mappe.key
+)
+ident(
+  def key "tMap.ml" 143 5204 5210 "tMap.ml" 147 5332 5365
+)
+"tMap.ml" 143 5204 5210 "tMap.ml" 143 5204 5224
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 143 5204 5225 "tMap.ml" 143 5204 5228
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 142 5184 5193 "tMap.ml" 142 5184 5196
+)
+"tMap.ml" 143 5204 5229 "tMap.ml" 143 5204 5238
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref firstbind "tMap.ml" 137 4788 4794 "tMap.ml" 137 4788 4803
+)
+"tMap.ml" 143 5204 5210 "tMap.ml" 143 5204 5238
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 144 5240 5246 "tMap.ml" 144 5240 5255
+type(
+  Format.formatter -> Mappe.key -> 'm
+)
+ident(
+  int_ref print_key "tMap.ml" 140 5097 5101 "tMap.ml" 140 5097 5110
+)
+"tMap.ml" 144 5240 5256 "tMap.ml" 144 5240 5259
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 142 5184 5193 "tMap.ml" 142 5184 5196
+)
+"tMap.ml" 144 5240 5260 "tMap.ml" 144 5240 5263
+type(
+  Mappe.key
+)
+ident(
+  int_ref key "tMap.ml" 142 5184 5197 "tMap.ml" 142 5184 5200
+)
+"tMap.ml" 144 5240 5246 "tMap.ml" 144 5240 5263
+call(
+  stack
+)
+type(
+  'm
+)
+"tMap.ml" 145 5265 5271 "tMap.ml" 145 5265 5285
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 145 5265 5286 "tMap.ml" 145 5265 5289
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 142 5184 5193 "tMap.ml" 142 5184 5196
+)
+"tMap.ml" 145 5265 5290 "tMap.ml" 145 5265 5297
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref sepbind "tMap.ml" 138 4892 4898 "tMap.ml" 138 4892 4905
+)
+"tMap.ml" 145 5265 5271 "tMap.ml" 145 5265 5297
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 146 5299 5305 "tMap.ml" 146 5299 5314
+type(
+  Format.formatter -> 'n -> 'o
+)
+ident(
+  int_ref print_val "tMap.ml" 140 5097 5120 "tMap.ml" 140 5097 5129
+)
+"tMap.ml" 146 5299 5315 "tMap.ml" 146 5299 5318
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 142 5184 5193 "tMap.ml" 142 5184 5196
+)
+"tMap.ml" 146 5299 5320 "tMap.ml" 146 5299 5323
+type(
+  Mappe.key -> 'n t -> 'n
+)
+ident(
+  int_ref get "tMap.ml" 102 2993 2997 "tMap.ml" 102 2993 3000
+)
+"tMap.ml" 146 5299 5324 "tMap.ml" 146 5299 5327
+type(
+  Mappe.key
+)
+ident(
+  int_ref key "tMap.ml" 142 5184 5197 "tMap.ml" 142 5184 5200
+)
+"tMap.ml" 146 5299 5328 "tMap.ml" 146 5299 5329
+type(
+  'n t
+)
+ident(
+  int_ref m "tMap.ml" 140 5097 5134 "tMap.ml" 140 5097 5135
+)
+"tMap.ml" 146 5299 5319 "tMap.ml" 146 5299 5330
+call(
+  stack
+)
+type(
+  'n
+)
+"tMap.ml" 146 5299 5305 "tMap.ml" 146 5299 5330
+call(
+  stack
+)
+type(
+  'o
+)
+"tMap.ml" 147 5332 5338 "tMap.ml" 147 5332 5352
+type(
+  Format.formatter -> (unit, Format.formatter, unit) format -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"tMap.ml" 147 5332 5353 "tMap.ml" 147 5332 5356
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 142 5184 5193 "tMap.ml" 142 5184 5196
+)
+"tMap.ml" 147 5332 5357 "tMap.ml" 147 5332 5365
+type(
+  (unit, Format.formatter, unit) format
+)
+ident(
+  int_ref lastbind "tMap.ml" 139 4996 5002 "tMap.ml" 139 4996 5010
+)
+"tMap.ml" 147 5332 5338 "tMap.ml" 147 5332 5365
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 146 5299 5305 "tMap.ml" 147 5332 5365
+type(
+  unit
+)
+"tMap.ml" 145 5265 5271 "tMap.ml" 147 5332 5365
+type(
+  unit
+)
+"tMap.ml" 144 5240 5246 "tMap.ml" 147 5332 5365
+type(
+  unit
+)
+"tMap.ml" 143 5204 5210 "tMap.ml" 147 5332 5365
+type(
+  unit
+)
+"tMap.ml" 142 5184 5188 "tMap.ml" 147 5332 5366
+type(
+  Format.formatter -> Mappe.key -> unit
+)
+"tMap.ml" 147 5332 5367 "tMap.ml" 147 5332 5370
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "tMap.ml" 140 5097 5130 "tMap.ml" 140 5097 5133
+)
+"tMap.ml" 147 5332 5371 "tMap.ml" 147 5332 5379
+type(
+  Mappe.key list
+)
+ident(
+  int_ref key_list "tMap.ml" 140 5097 5111 "tMap.ml" 140 5097 5119
+)
+"tMap.ml" 141 5138 5140 "tMap.ml" 147 5332 5379
+call(
+  tail
+)
+type(
+  unit
+)
+"tMap.ml" 160 5901 5905 "tMap.ml" 160 5901 5907
+type(
+  ((Ord.t -> 'p -> 'q) -> ('p -> 'q) -> 'r) -> (key -> 'p -> 'q) -> 'r
+)
+ident(
+  def v1 "tMap.ml" 162 5970 5970 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 160 5901 5908 "tMap.ml" 160 5901 5910
+type(
+  (Ord.t -> 'p -> 'q) -> ('p -> 'q) -> 'r
+)
+ident(
+  def op "tMap.ml" 160 5901 5911 "tMap.ml" 160 5901 5968
+)
+"tMap.ml" 160 5901 5911 "tMap.ml" 160 5901 5912
+type(
+  key -> 'p -> 'q
+)
+ident(
+  def f "tMap.ml" 160 5901 5915 "tMap.ml" 160 5901 5968
+)
+"tMap.ml" 160 5901 5915 "tMap.ml" 160 5901 5917
+type(
+  (Ord.t -> 'p -> 'q) -> ('p -> 'q) -> 'r
+)
+ident(
+  int_ref op "tMap.ml" 160 5901 5908 "tMap.ml" 160 5901 5910
+)
+"tMap.ml" 160 5901 5923 "tMap.ml" 160 5901 5924
+type(
+  Ord.t
+)
+ident(
+  def k "tMap.ml" 160 5901 5925 "tMap.ml" 160 5901 5945
+)
+"tMap.ml" 160 5901 5925 "tMap.ml" 160 5901 5926
+type(
+  'p
+)
+ident(
+  def v "tMap.ml" 160 5901 5930 "tMap.ml" 160 5901 5945
+)
+"tMap.ml" 160 5901 5930 "tMap.ml" 160 5901 5931
+type(
+  key -> 'p -> 'q
+)
+ident(
+  int_ref f "tMap.ml" 160 5901 5911 "tMap.ml" 160 5901 5912
+)
+"tMap.ml" 160 5901 5941 "tMap.ml" 160 5901 5942
+type(
+  Ord.t
+)
+ident(
+  int_ref k "tMap.ml" 160 5901 5923 "tMap.ml" 160 5901 5924
+)
+"tMap.ml" 160 5901 5932 "tMap.ml" 160 5901 5943
+type(
+  key
+)
+"tMap.ml" 160 5901 5944 "tMap.ml" 160 5901 5945
+type(
+  'p
+)
+ident(
+  int_ref v "tMap.ml" 160 5901 5925 "tMap.ml" 160 5901 5926
+)
+"tMap.ml" 160 5901 5930 "tMap.ml" 160 5901 5945
+call(
+  tail
+)
+type(
+  'q
+)
+"tMap.ml" 160 5901 5918 "tMap.ml" 160 5901 5946
+type(
+  Ord.t -> 'p -> 'q
+)
+"tMap.ml" 160 5901 5952 "tMap.ml" 160 5901 5953
+type(
+  'p
+)
+ident(
+  def v "tMap.ml" 160 5901 5957 "tMap.ml" 160 5901 5967
+)
+"tMap.ml" 160 5901 5957 "tMap.ml" 160 5901 5958
+type(
+  key -> 'p -> 'q
+)
+ident(
+  int_ref f "tMap.ml" 160 5901 5911 "tMap.ml" 160 5901 5912
+)
+"tMap.ml" 160 5901 5959 "tMap.ml" 160 5901 5965
+type(
+  key
+)
+"tMap.ml" 160 5901 5966 "tMap.ml" 160 5901 5967
+type(
+  'p
+)
+ident(
+  int_ref v "tMap.ml" 160 5901 5952 "tMap.ml" 160 5901 5953
+)
+"tMap.ml" 160 5901 5957 "tMap.ml" 160 5901 5967
+call(
+  tail
+)
+type(
+  'q
+)
+"tMap.ml" 160 5901 5947 "tMap.ml" 160 5901 5968
+type(
+  'p -> 'q
+)
+"tMap.ml" 160 5901 5915 "tMap.ml" 160 5901 5968
+call(
+  tail
+)
+type(
+  'r
+)
+"tMap.ml" 162 5970 5974 "tMap.ml" 162 5970 5978
+type(
+  (Mappe.key -> 's -> 't -> 't) -> ('s -> 't -> 'u) -> 's t -> 't -> 'u
+)
+ident(
+  def fold "tMap.ml" 163 6044 6044 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 162 5970 5979 "tMap.ml" 162 5970 5983
+type(
+  Mappe.key -> 's -> 't -> 't
+)
+ident(
+  def fspe "tMap.ml" 162 5970 5984 "tMap.ml" 162 5970 6043
+)
+"tMap.ml" 162 5970 5984 "tMap.ml" 162 5970 5988
+type(
+  's -> 't -> 'u
+)
+ident(
+  def fdef "tMap.ml" 162 5970 5989 "tMap.ml" 162 5970 6043
+)
+"tMap.ml" 162 5970 5989 "tMap.ml" 162 5970 5990
+type(
+  's t
+)
+ident(
+  def m "tMap.ml" 162 5970 5991 "tMap.ml" 162 5970 6043
+)
+"tMap.ml" 162 5970 5991 "tMap.ml" 162 5970 5994
+type(
+  't
+)
+ident(
+  def acc "tMap.ml" 162 5970 5997 "tMap.ml" 162 5970 6043
+)
+"tMap.ml" 162 5970 5997 "tMap.ml" 162 5970 6001
+type(
+  's -> 't -> 'u
+)
+ident(
+  int_ref fdef "tMap.ml" 162 5970 5984 "tMap.ml" 162 5970 5988
+)
+"tMap.ml" 162 5970 6002 "tMap.ml" 162 5970 6003
+type(
+  's t
+)
+ident(
+  int_ref m "tMap.ml" 162 5970 5989 "tMap.ml" 162 5970 5990
+)
+"tMap.ml" 162 5970 6002 "tMap.ml" 162 5970 6011
+type(
+  's
+)
+"tMap.ml" 162 5970 6013 "tMap.ml" 162 5970 6023
+type(
+  (Mappe.key -> 's -> 't -> 't) -> 's Mappe.t -> 't -> 't
+)
+ident(
+  ext_ref Mappe.fold
+)
+"tMap.ml" 162 5970 6024 "tMap.ml" 162 5970 6028
+type(
+  Mappe.key -> 's -> 't -> 't
+)
+ident(
+  int_ref fspe "tMap.ml" 162 5970 5979 "tMap.ml" 162 5970 5983
+)
+"tMap.ml" 162 5970 6029 "tMap.ml" 162 5970 6030
+type(
+  's t
+)
+ident(
+  int_ref m "tMap.ml" 162 5970 5989 "tMap.ml" 162 5970 5990
+)
+"tMap.ml" 162 5970 6029 "tMap.ml" 162 5970 6038
+type(
+  's Mappe.t
+)
+"tMap.ml" 162 5970 6039 "tMap.ml" 162 5970 6042
+type(
+  't
+)
+ident(
+  int_ref acc "tMap.ml" 162 5970 5991 "tMap.ml" 162 5970 5994
+)
+"tMap.ml" 162 5970 6012 "tMap.ml" 162 5970 6043
+call(
+  stack
+)
+type(
+  't
+)
+"tMap.ml" 162 5970 5997 "tMap.ml" 162 5970 6043
+call(
+  tail
+)
+type(
+  'u
+)
+"tMap.ml" 163 6044 6048 "tMap.ml" 163 6044 6053
+type(
+  (key -> 'v -> 'w -> 'w) -> 'v t -> 'w -> 'w
+)
+ident(
+  def fold1 "tMap.ml" 165 6071 6071 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 163 6044 6054 "tMap.ml" 163 6044 6055
+type(
+  key -> 'v -> 'w -> 'w
+)
+ident(
+  def f "tMap.ml" 163 6044 6058 "tMap.ml" 163 6044 6069
+)
+"tMap.ml" 163 6044 6059 "tMap.ml" 163 6044 6061
+type(
+  ((Mappe.key -> 'v -> 'w -> 'w) -> ('v -> 'w -> 'w) -> 'v t -> 'w -> 'w) ->
+  (key -> 'v -> 'w -> 'w) -> 'v t -> 'w -> 'w
+)
+ident(
+  int_ref v1 "tMap.ml" 160 5901 5905 "tMap.ml" 160 5901 5907
+)
+"tMap.ml" 163 6044 6062 "tMap.ml" 163 6044 6066
+type(
+  (Mappe.key -> 'v -> 'w -> 'w) -> ('v -> 'w -> 'w) -> 'v t -> 'w -> 'w
+)
+ident(
+  int_ref fold "tMap.ml" 162 5970 5974 "tMap.ml" 162 5970 5978
+)
+"tMap.ml" 163 6044 6058 "tMap.ml" 163 6044 6067
+call(
+  stack
+)
+type(
+  (key -> 'v -> 'w -> 'w) -> 'v t -> 'w -> 'w
+)
+"tMap.ml" 163 6044 6068 "tMap.ml" 163 6044 6069
+type(
+  key -> 'v -> 'w -> 'w
+)
+ident(
+  int_ref f "tMap.ml" 163 6044 6054 "tMap.ml" 163 6044 6055
+)
+"tMap.ml" 163 6044 6058 "tMap.ml" 163 6044 6069
+call(
+  tail
+)
+type(
+  'v t -> 'w -> 'w
+)
+"tMap.ml" 165 6071 6075 "tMap.ml" 165 6071 6079
+type(
+  (Mappe.key -> 'x -> unit) -> ('x -> 'y) -> 'x t -> 'y
+)
+ident(
+  def iter "tMap.ml" 166 6136 6136 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 165 6071 6080 "tMap.ml" 165 6071 6084
+type(
+  Mappe.key -> 'x -> unit
+)
+ident(
+  def fspe "tMap.ml" 165 6071 6085 "tMap.ml" 165 6071 6135
+)
+"tMap.ml" 165 6071 6085 "tMap.ml" 165 6071 6089
+type(
+  'x -> 'y
+)
+ident(
+  def fdef "tMap.ml" 165 6071 6090 "tMap.ml" 165 6071 6135
+)
+"tMap.ml" 165 6071 6090 "tMap.ml" 165 6071 6091
+type(
+  'x t
+)
+ident(
+  def m "tMap.ml" 165 6071 6094 "tMap.ml" 165 6071 6135
+)
+"tMap.ml" 165 6071 6094 "tMap.ml" 165 6071 6104
+type(
+  (Mappe.key -> 'x -> unit) -> 'x Mappe.t -> unit
+)
+ident(
+  ext_ref Mappe.iter
+)
+"tMap.ml" 165 6071 6105 "tMap.ml" 165 6071 6109
+type(
+  Mappe.key -> 'x -> unit
+)
+ident(
+  int_ref fspe "tMap.ml" 165 6071 6080 "tMap.ml" 165 6071 6084
+)
+"tMap.ml" 165 6071 6110 "tMap.ml" 165 6071 6111
+type(
+  'x t
+)
+ident(
+  int_ref m "tMap.ml" 165 6071 6090 "tMap.ml" 165 6071 6091
+)
+"tMap.ml" 165 6071 6110 "tMap.ml" 165 6071 6119
+type(
+  'x Mappe.t
+)
+"tMap.ml" 165 6071 6094 "tMap.ml" 165 6071 6119
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 165 6071 6121 "tMap.ml" 165 6071 6125
+type(
+  'x -> 'y
+)
+ident(
+  int_ref fdef "tMap.ml" 165 6071 6085 "tMap.ml" 165 6071 6089
+)
+"tMap.ml" 165 6071 6126 "tMap.ml" 165 6071 6127
+type(
+  'x t
+)
+ident(
+  int_ref m "tMap.ml" 165 6071 6090 "tMap.ml" 165 6071 6091
+)
+"tMap.ml" 165 6071 6126 "tMap.ml" 165 6071 6135
+type(
+  'x
+)
+"tMap.ml" 165 6071 6121 "tMap.ml" 165 6071 6135
+call(
+  tail
+)
+type(
+  'y
+)
+"tMap.ml" 165 6071 6094 "tMap.ml" 165 6071 6135
+type(
+  'y
+)
+"tMap.ml" 166 6136 6140 "tMap.ml" 166 6136 6145
+type(
+  (key -> 'z -> unit) -> 'z t -> unit
+)
+ident(
+  def iter1 "tMap.ml" 168 6163 6163 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 166 6136 6146 "tMap.ml" 166 6136 6147
+type(
+  key -> 'z -> unit
+)
+ident(
+  def f "tMap.ml" 166 6136 6150 "tMap.ml" 166 6136 6161
+)
+"tMap.ml" 166 6136 6151 "tMap.ml" 166 6136 6153
+type(
+  ((Mappe.key -> 'z -> unit) -> ('z -> unit) -> 'z t -> unit) ->
+  (key -> 'z -> unit) -> 'z t -> unit
+)
+ident(
+  int_ref v1 "tMap.ml" 160 5901 5905 "tMap.ml" 160 5901 5907
+)
+"tMap.ml" 166 6136 6154 "tMap.ml" 166 6136 6158
+type(
+  (Mappe.key -> 'z -> unit) -> ('z -> unit) -> 'z t -> unit
+)
+ident(
+  int_ref iter "tMap.ml" 165 6071 6075 "tMap.ml" 165 6071 6079
+)
+"tMap.ml" 166 6136 6150 "tMap.ml" 166 6136 6159
+call(
+  stack
+)
+type(
+  (key -> 'z -> unit) -> 'z t -> unit
+)
+"tMap.ml" 166 6136 6160 "tMap.ml" 166 6136 6161
+type(
+  key -> 'z -> unit
+)
+ident(
+  int_ref f "tMap.ml" 166 6136 6146 "tMap.ml" 166 6136 6147
+)
+"tMap.ml" 166 6136 6150 "tMap.ml" 166 6136 6161
+call(
+  tail
+)
+type(
+  'z t -> unit
+)
+"tMap.ml" 169 6179 6183 "tMap.ml" 169 6179 6195
+type(
+  (Mappe.key -> 'a1 -> bool) -> 'a1 Mappe.t -> bool
+)
+ident(
+  def mappe_exists "tMap.ml" 172 6289 6289 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 169 6179 6196 "tMap.ml" 169 6179 6197
+type(
+  Mappe.key -> 'a1 -> bool
+)
+ident(
+  def p "tMap.ml" 169 6179 6198 "tMap.ml" 171 6268 6288
+)
+"tMap.ml" 169 6179 6198 "tMap.ml" 169 6179 6199
+type(
+  'a1 Mappe.t
+)
+ident(
+  def m "tMap.ml" 170 6203 6205 "tMap.ml" 171 6268 6288
+)
+"tMap.ml" 170 6203 6209 "tMap.ml" 170 6203 6219
+type(
+  (Mappe.key -> 'a1 -> unit) -> 'a1 Mappe.t -> unit
+)
+ident(
+  ext_ref Mappe.iter
+)
+"tMap.ml" 170 6203 6225 "tMap.ml" 170 6203 6226
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 170 6203 6227 "tMap.ml" 170 6203 6257
+)
+"tMap.ml" 170 6203 6227 "tMap.ml" 170 6203 6228
+type(
+  'a1
+)
+ident(
+  def v "tMap.ml" 170 6203 6232 "tMap.ml" 170 6203 6257
+)
+"tMap.ml" 170 6203 6235 "tMap.ml" 170 6203 6236
+type(
+  Mappe.key -> 'a1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 169 6179 6196 "tMap.ml" 169 6179 6197
+)
+"tMap.ml" 170 6203 6237 "tMap.ml" 170 6203 6238
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 170 6203 6225 "tMap.ml" 170 6203 6226
+)
+"tMap.ml" 170 6203 6239 "tMap.ml" 170 6203 6240
+type(
+  'a1
+)
+ident(
+  int_ref v "tMap.ml" 170 6203 6227 "tMap.ml" 170 6203 6228
+)
+"tMap.ml" 170 6203 6235 "tMap.ml" 170 6203 6240
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 170 6203 6246 "tMap.ml" 170 6203 6251
+type(
+  exn -> unit
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"tMap.ml" 170 6203 6252 "tMap.ml" 170 6203 6257
+type(
+  exn
+)
+"tMap.ml" 170 6203 6246 "tMap.ml" 170 6203 6257
+type(
+  unit
+)
+"tMap.ml" 170 6203 6232 "tMap.ml" 170 6203 6257
+type(
+  unit
+)
+"tMap.ml" 170 6203 6220 "tMap.ml" 170 6203 6258
+type(
+  Mappe.key -> 'a1 -> unit
+)
+"tMap.ml" 170 6203 6259 "tMap.ml" 170 6203 6260
+type(
+  'a1 Mappe.t
+)
+ident(
+  int_ref m "tMap.ml" 169 6179 6198 "tMap.ml" 169 6179 6199
+)
+"tMap.ml" 170 6203 6209 "tMap.ml" 170 6203 6260
+call(
+  stack
+)
+type(
+  unit
+)
+"tMap.ml" 170 6203 6262 "tMap.ml" 170 6203 6267
+type(
+  bool
+)
+"tMap.ml" 170 6203 6209 "tMap.ml" 170 6203 6267
+type(
+  bool
+)
+"tMap.ml" 171 6268 6275 "tMap.ml" 171 6268 6280
+type(
+  exn
+)
+"tMap.ml" 171 6268 6284 "tMap.ml" 171 6268 6288
+type(
+  bool
+)
+"tMap.ml" 170 6203 6205 "tMap.ml" 171 6268 6288
+type(
+  bool
+)
+"tMap.ml" 172 6289 6293 "tMap.ml" 172 6289 6303
+type(
+  (Mappe.key -> 'b1 -> bool) -> 'b1 Mappe.t -> (Mappe.key * 'b1) option
+)
+ident(
+  def mappe_find "tMap.ml" 177 6421 6421 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 172 6289 6304 "tMap.ml" 172 6289 6305
+type(
+  Mappe.key -> 'b1 -> bool
+)
+ident(
+  def p "tMap.ml" 172 6289 6306 "tMap.ml" 175 6399 6419
+)
+"tMap.ml" 172 6289 6306 "tMap.ml" 172 6289 6307
+type(
+  'b1 Mappe.t
+)
+ident(
+  def m "tMap.ml" 173 6310 6312 "tMap.ml" 175 6399 6419
+)
+"tMap.ml" 173 6310 6312 "tMap.ml" 173 6310 6322
+type(
+  (Mappe.key -> 'b1 -> (Mappe.key * 'b1) option -> (Mappe.key * 'b1) option) ->
+  'b1 Mappe.t -> (Mappe.key * 'b1) option -> (Mappe.key * 'b1) option
+)
+ident(
+  ext_ref Mappe.fold
+)
+"tMap.ml" 173 6310 6328 "tMap.ml" 173 6310 6329
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 173 6310 6330 "tMap.ml" 175 6399 6411
+)
+"tMap.ml" 173 6310 6330 "tMap.ml" 173 6310 6331
+type(
+  'b1
+)
+ident(
+  def v "tMap.ml" 173 6310 6332 "tMap.ml" 175 6399 6411
+)
+"tMap.ml" 173 6310 6332 "tMap.ml" 173 6310 6335
+type(
+  (Mappe.key * 'b1) option
+)
+ident(
+  def acc "tMap.ml" 174 6339 6343 "tMap.ml" 175 6399 6411
+)
+"tMap.ml" 174 6339 6346 "tMap.ml" 174 6339 6349
+type(
+  (Mappe.key * 'b1) option
+)
+ident(
+  int_ref acc "tMap.ml" 173 6310 6332 "tMap.ml" 173 6310 6335
+)
+"tMap.ml" 174 6339 6350 "tMap.ml" 174 6339 6351
+type(
+  (Mappe.key * 'b1) option -> (Mappe.key * 'b1) option -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"tMap.ml" 174 6339 6352 "tMap.ml" 174 6339 6356
+type(
+  (Mappe.key * 'b1) option
+)
+"tMap.ml" 174 6339 6346 "tMap.ml" 174 6339 6356
+type(
+  bool
+)
+"tMap.ml" 174 6339 6366 "tMap.ml" 174 6339 6367
+type(
+  Mappe.key -> 'b1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 172 6289 6304 "tMap.ml" 172 6289 6305
+)
+"tMap.ml" 174 6339 6368 "tMap.ml" 174 6339 6369
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 173 6310 6328 "tMap.ml" 173 6310 6329
+)
+"tMap.ml" 174 6339 6370 "tMap.ml" 174 6339 6371
+type(
+  'b1
+)
+ident(
+  int_ref v "tMap.ml" 173 6310 6330 "tMap.ml" 173 6310 6331
+)
+"tMap.ml" 174 6339 6366 "tMap.ml" 174 6339 6371
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 174 6339 6383 "tMap.ml" 174 6339 6384
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 173 6310 6328 "tMap.ml" 173 6310 6329
+)
+"tMap.ml" 174 6339 6385 "tMap.ml" 174 6339 6386
+type(
+  'b1
+)
+ident(
+  int_ref v "tMap.ml" 173 6310 6330 "tMap.ml" 173 6310 6331
+)
+"tMap.ml" 174 6339 6382 "tMap.ml" 174 6339 6387
+type(
+  Mappe.key * 'b1
+)
+"tMap.ml" 174 6339 6377 "tMap.ml" 174 6339 6387
+type(
+  (Mappe.key * 'b1) option
+)
+"tMap.ml" 174 6339 6393 "tMap.ml" 174 6339 6397
+type(
+  (Mappe.key * 'b1) option
+)
+"tMap.ml" 174 6339 6362 "tMap.ml" 174 6339 6398
+type(
+  (Mappe.key * 'b1) option
+)
+"tMap.ml" 175 6399 6408 "tMap.ml" 175 6399 6411
+type(
+  (Mappe.key * 'b1) option
+)
+ident(
+  int_ref acc "tMap.ml" 173 6310 6332 "tMap.ml" 173 6310 6335
+)
+"tMap.ml" 174 6339 6343 "tMap.ml" 175 6399 6411
+type(
+  (Mappe.key * 'b1) option
+)
+"tMap.ml" 173 6310 6323 "tMap.ml" 175 6399 6412
+type(
+  Mappe.key -> 'b1 -> (Mappe.key * 'b1) option -> (Mappe.key * 'b1) option
+)
+"tMap.ml" 175 6399 6413 "tMap.ml" 175 6399 6414
+type(
+  'b1 Mappe.t
+)
+ident(
+  int_ref m "tMap.ml" 172 6289 6306 "tMap.ml" 172 6289 6307
+)
+"tMap.ml" 175 6399 6415 "tMap.ml" 175 6399 6419
+type(
+  (Mappe.key * 'b1) option
+)
+"tMap.ml" 173 6310 6312 "tMap.ml" 175 6399 6419
+call(
+  tail
+)
+type(
+  (Mappe.key * 'b1) option
+)
+"tMap.ml" 177 6421 6425 "tMap.ml" 177 6421 6431
+type(
+  (Mappe.key -> 'c1 -> bool) -> ('c1 -> bool) -> 'c1 t -> bool
+)
+ident(
+  def exists "tMap.ml" 178 6492 6492 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 177 6421 6432 "tMap.ml" 177 6421 6436
+type(
+  Mappe.key -> 'c1 -> bool
+)
+ident(
+  def pspe "tMap.ml" 177 6421 6437 "tMap.ml" 177 6421 6491
+)
+"tMap.ml" 177 6421 6437 "tMap.ml" 177 6421 6441
+type(
+  'c1 -> bool
+)
+ident(
+  def pdef "tMap.ml" 177 6421 6442 "tMap.ml" 177 6421 6491
+)
+"tMap.ml" 177 6421 6442 "tMap.ml" 177 6421 6443
+type(
+  'c1 t
+)
+ident(
+  def m "tMap.ml" 177 6421 6446 "tMap.ml" 177 6421 6491
+)
+"tMap.ml" 177 6421 6446 "tMap.ml" 177 6421 6458
+type(
+  (Mappe.key -> 'c1 -> bool) -> 'c1 Mappe.t -> bool
+)
+ident(
+  int_ref mappe_exists "tMap.ml" 169 6179 6183 "tMap.ml" 169 6179 6195
+)
+"tMap.ml" 177 6421 6459 "tMap.ml" 177 6421 6463
+type(
+  Mappe.key -> 'c1 -> bool
+)
+ident(
+  int_ref pspe "tMap.ml" 177 6421 6432 "tMap.ml" 177 6421 6436
+)
+"tMap.ml" 177 6421 6464 "tMap.ml" 177 6421 6465
+type(
+  'c1 t
+)
+ident(
+  int_ref m "tMap.ml" 177 6421 6442 "tMap.ml" 177 6421 6443
+)
+"tMap.ml" 177 6421 6464 "tMap.ml" 177 6421 6473
+type(
+  'c1 Mappe.t
+)
+"tMap.ml" 177 6421 6446 "tMap.ml" 177 6421 6473
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 177 6421 6474 "tMap.ml" 177 6421 6476
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"tMap.ml" 177 6421 6477 "tMap.ml" 177 6421 6481
+type(
+  'c1 -> bool
+)
+ident(
+  int_ref pdef "tMap.ml" 177 6421 6437 "tMap.ml" 177 6421 6441
+)
+"tMap.ml" 177 6421 6482 "tMap.ml" 177 6421 6483
+type(
+  'c1 t
+)
+ident(
+  int_ref m "tMap.ml" 177 6421 6442 "tMap.ml" 177 6421 6443
+)
+"tMap.ml" 177 6421 6482 "tMap.ml" 177 6421 6491
+type(
+  'c1
+)
+"tMap.ml" 177 6421 6477 "tMap.ml" 177 6421 6491
+call(
+  tail
+)
+type(
+  bool
+)
+"tMap.ml" 177 6421 6446 "tMap.ml" 177 6421 6491
+type(
+  bool
+)
+"tMap.ml" 178 6492 6496 "tMap.ml" 178 6492 6503
+type(
+  (key -> 'd1 -> bool) -> 'd1 t -> bool
+)
+ident(
+  def exists1 "tMap.ml" 180 6523 6523 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 178 6492 6504 "tMap.ml" 178 6492 6505
+type(
+  key -> 'd1 -> bool
+)
+ident(
+  def p "tMap.ml" 178 6492 6508 "tMap.ml" 178 6492 6521
+)
+"tMap.ml" 178 6492 6509 "tMap.ml" 178 6492 6511
+type(
+  ((Mappe.key -> 'd1 -> bool) -> ('d1 -> bool) -> 'd1 t -> bool) ->
+  (key -> 'd1 -> bool) -> 'd1 t -> bool
+)
+ident(
+  int_ref v1 "tMap.ml" 160 5901 5905 "tMap.ml" 160 5901 5907
+)
+"tMap.ml" 178 6492 6512 "tMap.ml" 178 6492 6518
+type(
+  (Mappe.key -> 'd1 -> bool) -> ('d1 -> bool) -> 'd1 t -> bool
+)
+ident(
+  int_ref exists "tMap.ml" 177 6421 6425 "tMap.ml" 177 6421 6431
+)
+"tMap.ml" 178 6492 6508 "tMap.ml" 178 6492 6519
+call(
+  stack
+)
+type(
+  (key -> 'd1 -> bool) -> 'd1 t -> bool
+)
+"tMap.ml" 178 6492 6520 "tMap.ml" 178 6492 6521
+type(
+  key -> 'd1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 178 6492 6504 "tMap.ml" 178 6492 6505
+)
+"tMap.ml" 178 6492 6508 "tMap.ml" 178 6492 6521
+call(
+  tail
+)
+type(
+  'd1 t -> bool
+)
+"tMap.ml" 180 6523 6527 "tMap.ml" 180 6523 6534
+type(
+  (Mappe.key -> 'e1 -> bool) -> ('e1 -> bool) -> 'e1 t -> bool
+)
+ident(
+  def for_all "tMap.ml" 181 6616 6616 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 180 6523 6535 "tMap.ml" 180 6523 6539
+type(
+  Mappe.key -> 'e1 -> bool
+)
+ident(
+  def pspe "tMap.ml" 180 6523 6540 "tMap.ml" 180 6523 6615
+)
+"tMap.ml" 180 6523 6540 "tMap.ml" 180 6523 6544
+type(
+  'e1 -> bool
+)
+ident(
+  def pdef "tMap.ml" 180 6523 6545 "tMap.ml" 180 6523 6615
+)
+"tMap.ml" 180 6523 6545 "tMap.ml" 180 6523 6546
+type(
+  'e1 t
+)
+ident(
+  def m "tMap.ml" 180 6523 6549 "tMap.ml" 180 6523 6615
+)
+"tMap.ml" 180 6523 6549 "tMap.ml" 180 6523 6552
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"tMap.ml" 180 6523 6554 "tMap.ml" 180 6523 6560
+type(
+  (Mappe.key -> 'e1 -> bool) -> ('e1 -> bool) -> 'e1 t -> bool
+)
+ident(
+  int_ref exists "tMap.ml" 177 6421 6425 "tMap.ml" 177 6421 6431
+)
+"tMap.ml" 180 6523 6566 "tMap.ml" 180 6523 6567
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 180 6523 6568 "tMap.ml" 180 6523 6587
+)
+"tMap.ml" 180 6523 6568 "tMap.ml" 180 6523 6569
+type(
+  'e1
+)
+ident(
+  def v "tMap.ml" 180 6523 6573 "tMap.ml" 180 6523 6587
+)
+"tMap.ml" 180 6523 6573 "tMap.ml" 180 6523 6576
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"tMap.ml" 180 6523 6578 "tMap.ml" 180 6523 6582
+type(
+  Mappe.key -> 'e1 -> bool
+)
+ident(
+  int_ref pspe "tMap.ml" 180 6523 6535 "tMap.ml" 180 6523 6539
+)
+"tMap.ml" 180 6523 6583 "tMap.ml" 180 6523 6584
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 180 6523 6566 "tMap.ml" 180 6523 6567
+)
+"tMap.ml" 180 6523 6585 "tMap.ml" 180 6523 6586
+type(
+  'e1
+)
+ident(
+  int_ref v "tMap.ml" 180 6523 6568 "tMap.ml" 180 6523 6569
+)
+"tMap.ml" 180 6523 6577 "tMap.ml" 180 6523 6587
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 180 6523 6573 "tMap.ml" 180 6523 6587
+type(
+  bool
+)
+"tMap.ml" 180 6523 6561 "tMap.ml" 180 6523 6588
+type(
+  Mappe.key -> 'e1 -> bool
+)
+"tMap.ml" 180 6523 6594 "tMap.ml" 180 6523 6595
+type(
+  'e1
+)
+ident(
+  def v "tMap.ml" 180 6523 6599 "tMap.ml" 180 6523 6611
+)
+"tMap.ml" 180 6523 6599 "tMap.ml" 180 6523 6602
+type(
+  bool -> bool
+)
+ident(
+  ext_ref Pervasives.not
+)
+"tMap.ml" 180 6523 6604 "tMap.ml" 180 6523 6608
+type(
+  'e1 -> bool
+)
+ident(
+  int_ref pdef "tMap.ml" 180 6523 6540 "tMap.ml" 180 6523 6544
+)
+"tMap.ml" 180 6523 6609 "tMap.ml" 180 6523 6610
+type(
+  'e1
+)
+ident(
+  int_ref v "tMap.ml" 180 6523 6594 "tMap.ml" 180 6523 6595
+)
+"tMap.ml" 180 6523 6603 "tMap.ml" 180 6523 6611
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 180 6523 6599 "tMap.ml" 180 6523 6611
+type(
+  bool
+)
+"tMap.ml" 180 6523 6589 "tMap.ml" 180 6523 6612
+type(
+  'e1 -> bool
+)
+"tMap.ml" 180 6523 6613 "tMap.ml" 180 6523 6614
+type(
+  'e1 t
+)
+ident(
+  int_ref m "tMap.ml" 180 6523 6545 "tMap.ml" 180 6523 6546
+)
+"tMap.ml" 180 6523 6553 "tMap.ml" 180 6523 6615
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 180 6523 6549 "tMap.ml" 180 6523 6615
+type(
+  bool
+)
+"tMap.ml" 181 6616 6620 "tMap.ml" 181 6616 6628
+type(
+  (key -> 'f1 -> bool) -> 'f1 t -> bool
+)
+ident(
+  def for_all1 "tMap.ml" 183 6651 6651 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 181 6616 6629 "tMap.ml" 181 6616 6630
+type(
+  key -> 'f1 -> bool
+)
+ident(
+  def p "tMap.ml" 181 6616 6633 "tMap.ml" 181 6616 6647
+)
+"tMap.ml" 181 6616 6634 "tMap.ml" 181 6616 6636
+type(
+  ((Mappe.key -> 'f1 -> bool) -> ('f1 -> bool) -> 'f1 t -> bool) ->
+  (key -> 'f1 -> bool) -> 'f1 t -> bool
+)
+ident(
+  int_ref v1 "tMap.ml" 160 5901 5905 "tMap.ml" 160 5901 5907
+)
+"tMap.ml" 181 6616 6637 "tMap.ml" 181 6616 6644
+type(
+  (Mappe.key -> 'f1 -> bool) -> ('f1 -> bool) -> 'f1 t -> bool
+)
+ident(
+  int_ref for_all "tMap.ml" 180 6523 6527 "tMap.ml" 180 6523 6534
+)
+"tMap.ml" 181 6616 6633 "tMap.ml" 181 6616 6645
+call(
+  stack
+)
+type(
+  (key -> 'f1 -> bool) -> 'f1 t -> bool
+)
+"tMap.ml" 181 6616 6646 "tMap.ml" 181 6616 6647
+type(
+  key -> 'f1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 181 6616 6629 "tMap.ml" 181 6616 6630
+)
+"tMap.ml" 181 6616 6633 "tMap.ml" 181 6616 6647
+call(
+  tail
+)
+type(
+  'f1 t -> bool
+)
+"tMap.ml" 183 6651 6655 "tMap.ml" 183 6651 6659
+type(
+  (Mappe.key -> 'g1 -> 'h1) -> ('g1 -> 'h1) -> 'g1 t -> 'h1 t
+)
+ident(
+  def mapi "tMap.ml" 187 6810 6810 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 183 6651 6660 "tMap.ml" 183 6651 6664
+type(
+  Mappe.key -> 'g1 -> 'h1
+)
+ident(
+  def fspe "tMap.ml" 183 6651 6665 "tMap.ml" 186 6743 6809
+)
+"tMap.ml" 183 6651 6665 "tMap.ml" 183 6651 6669
+type(
+  'g1 -> 'h1
+)
+ident(
+  def fdef "tMap.ml" 183 6651 6670 "tMap.ml" 186 6743 6809
+)
+"tMap.ml" 183 6651 6670 "tMap.ml" 183 6651 6671
+type(
+  'g1 t
+)
+ident(
+  def m "tMap.ml" 184 6674 6676 "tMap.ml" 186 6743 6809
+)
+"tMap.ml" 184 6674 6680 "tMap.ml" 184 6674 6682
+type(
+  'h1 Mappe.t
+)
+ident(
+  def s' "tMap.ml" 185 6714 6716 "tMap.ml" 186 6743 6809
+)
+"tMap.ml" 184 6674 6685 "tMap.ml" 184 6674 6695
+type(
+  (Mappe.key -> 'g1 -> 'h1) -> 'g1 Mappe.t -> 'h1 Mappe.t
+)
+ident(
+  ext_ref Mappe.mapi
+)
+"tMap.ml" 184 6674 6696 "tMap.ml" 184 6674 6700
+type(
+  Mappe.key -> 'g1 -> 'h1
+)
+ident(
+  int_ref fspe "tMap.ml" 183 6651 6660 "tMap.ml" 183 6651 6664
+)
+"tMap.ml" 184 6674 6701 "tMap.ml" 184 6674 6702
+type(
+  'g1 t
+)
+ident(
+  int_ref m "tMap.ml" 183 6651 6670 "tMap.ml" 183 6651 6671
+)
+"tMap.ml" 184 6674 6701 "tMap.ml" 184 6674 6710
+type(
+  'g1 Mappe.t
+)
+"tMap.ml" 184 6674 6685 "tMap.ml" 184 6674 6710
+call(
+  stack
+)
+type(
+  'h1 Mappe.t
+)
+"tMap.ml" 185 6714 6720 "tMap.ml" 185 6714 6722
+type(
+  'h1
+)
+ident(
+  def d' "tMap.ml" 186 6743 6745 "tMap.ml" 186 6743 6809
+)
+"tMap.ml" 185 6714 6725 "tMap.ml" 185 6714 6729
+type(
+  'g1 -> 'h1
+)
+ident(
+  int_ref fdef "tMap.ml" 183 6651 6665 "tMap.ml" 183 6651 6669
+)
+"tMap.ml" 185 6714 6730 "tMap.ml" 185 6714 6731
+type(
+  'g1 t
+)
+ident(
+  int_ref m "tMap.ml" 183 6651 6670 "tMap.ml" 183 6651 6671
+)
+"tMap.ml" 185 6714 6730 "tMap.ml" 185 6714 6739
+type(
+  'g1
+)
+"tMap.ml" 185 6714 6725 "tMap.ml" 185 6714 6739
+call(
+  stack
+)
+type(
+  'h1
+)
+"tMap.ml" 186 6743 6757 "tMap.ml" 186 6743 6769
+type(
+  (Mappe.key -> 'h1 -> bool) -> 'h1 Mappe.t -> 'h1 Mappe.t
+)
+ident(
+  ext_ref Mappe.filter
+)
+"tMap.ml" 186 6743 6775 "tMap.ml" 186 6743 6776
+type(
+  Mappe.key
+)
+"tMap.ml" 186 6743 6777 "tMap.ml" 186 6743 6778
+type(
+  'h1
+)
+ident(
+  def v "tMap.ml" 186 6743 6782 "tMap.ml" 186 6743 6789
+)
+"tMap.ml" 186 6743 6782 "tMap.ml" 186 6743 6783
+type(
+  'h1
+)
+ident(
+  int_ref v "tMap.ml" 186 6743 6777 "tMap.ml" 186 6743 6778
+)
+"tMap.ml" 186 6743 6784 "tMap.ml" 186 6743 6786
+type(
+  'h1 -> 'h1 -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"tMap.ml" 186 6743 6787 "tMap.ml" 186 6743 6789
+type(
+  'h1
+)
+ident(
+  int_ref d' "tMap.ml" 185 6714 6720 "tMap.ml" 185 6714 6722
+)
+"tMap.ml" 186 6743 6782 "tMap.ml" 186 6743 6789
+type(
+  bool
+)
+"tMap.ml" 186 6743 6770 "tMap.ml" 186 6743 6790
+type(
+  Mappe.key -> 'h1 -> bool
+)
+"tMap.ml" 186 6743 6791 "tMap.ml" 186 6743 6793
+type(
+  'h1 Mappe.t
+)
+ident(
+  int_ref s' "tMap.ml" 184 6674 6680 "tMap.ml" 184 6674 6682
+)
+"tMap.ml" 186 6743 6757 "tMap.ml" 186 6743 6793
+call(
+  stack
+)
+type(
+  'h1 Mappe.t
+)
+"tMap.ml" 186 6743 6805 "tMap.ml" 186 6743 6807
+type(
+  'h1
+)
+ident(
+  int_ref d' "tMap.ml" 185 6714 6720 "tMap.ml" 185 6714 6722
+)
+"tMap.ml" 186 6743 6745 "tMap.ml" 186 6743 6809
+type(
+  'h1 t
+)
+"tMap.ml" 185 6714 6716 "tMap.ml" 186 6743 6809
+type(
+  'h1 t
+)
+"tMap.ml" 184 6674 6676 "tMap.ml" 186 6743 6809
+type(
+  'h1 t
+)
+"tMap.ml" 187 6810 6814 "tMap.ml" 187 6810 6819
+type(
+  (key -> 'i1 -> 'j1) -> 'i1 t -> 'j1 t
+)
+ident(
+  def mapi1 "tMap.ml" 189 6837 6837 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 187 6810 6820 "tMap.ml" 187 6810 6821
+type(
+  key -> 'i1 -> 'j1
+)
+ident(
+  def f "tMap.ml" 187 6810 6824 "tMap.ml" 187 6810 6835
+)
+"tMap.ml" 187 6810 6825 "tMap.ml" 187 6810 6827
+type(
+  ((Mappe.key -> 'i1 -> 'j1) -> ('i1 -> 'j1) -> 'i1 t -> 'j1 t) ->
+  (key -> 'i1 -> 'j1) -> 'i1 t -> 'j1 t
+)
+ident(
+  int_ref v1 "tMap.ml" 160 5901 5905 "tMap.ml" 160 5901 5907
+)
+"tMap.ml" 187 6810 6828 "tMap.ml" 187 6810 6832
+type(
+  (Mappe.key -> 'i1 -> 'j1) -> ('i1 -> 'j1) -> 'i1 t -> 'j1 t
+)
+ident(
+  int_ref mapi "tMap.ml" 183 6651 6655 "tMap.ml" 183 6651 6659
+)
+"tMap.ml" 187 6810 6824 "tMap.ml" 187 6810 6833
+call(
+  stack
+)
+type(
+  (key -> 'i1 -> 'j1) -> 'i1 t -> 'j1 t
+)
+"tMap.ml" 187 6810 6834 "tMap.ml" 187 6810 6835
+type(
+  key -> 'i1 -> 'j1
+)
+ident(
+  int_ref f "tMap.ml" 187 6810 6820 "tMap.ml" 187 6810 6821
+)
+"tMap.ml" 187 6810 6824 "tMap.ml" 187 6810 6835
+call(
+  tail
+)
+type(
+  'i1 t -> 'j1 t
+)
+"tMap.ml" 189 6837 6841 "tMap.ml" 189 6837 6845
+type(
+  (Mappe.key -> 'k1 -> bool) -> ('k1 -> bool) -> 'k1 t -> (key * 'k1) option
+)
+ident(
+  def find "tMap.ml" 193 7005 7005 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 189 6837 6846 "tMap.ml" 189 6837 6850
+type(
+  Mappe.key -> 'k1 -> bool
+)
+ident(
+  def pspe "tMap.ml" 189 6837 6851 "tMap.ml" 192 6936 7004
+)
+"tMap.ml" 189 6837 6851 "tMap.ml" 189 6837 6855
+type(
+  'k1 -> bool
+)
+ident(
+  def pdef "tMap.ml" 189 6837 6856 "tMap.ml" 192 6936 7004
+)
+"tMap.ml" 189 6837 6856 "tMap.ml" 189 6837 6857
+type(
+  'k1 t
+)
+ident(
+  def m "tMap.ml" 190 6860 6862 "tMap.ml" 192 6936 7004
+)
+"tMap.ml" 190 6860 6868 "tMap.ml" 190 6860 6878
+type(
+  (Mappe.key -> 'k1 -> bool) -> 'k1 Mappe.t -> (Mappe.key * 'k1) option
+)
+ident(
+  int_ref mappe_find "tMap.ml" 172 6289 6293 "tMap.ml" 172 6289 6303
+)
+"tMap.ml" 190 6860 6879 "tMap.ml" 190 6860 6883
+type(
+  Mappe.key -> 'k1 -> bool
+)
+ident(
+  int_ref pspe "tMap.ml" 189 6837 6846 "tMap.ml" 189 6837 6850
+)
+"tMap.ml" 190 6860 6884 "tMap.ml" 190 6860 6885
+type(
+  'k1 t
+)
+ident(
+  int_ref m "tMap.ml" 189 6837 6856 "tMap.ml" 189 6837 6857
+)
+"tMap.ml" 190 6860 6884 "tMap.ml" 190 6860 6893
+type(
+  'k1 Mappe.t
+)
+"tMap.ml" 190 6860 6868 "tMap.ml" 190 6860 6893
+call(
+  stack
+)
+type(
+  (Mappe.key * 'k1) option
+)
+"tMap.ml" 191 6899 6909 "tMap.ml" 191 6899 6910
+type(
+  Mappe.key
+)
+ident(
+  def k "tMap.ml" 191 6899 6917 "tMap.ml" 191 6899 6935
+)
+"tMap.ml" 191 6899 6911 "tMap.ml" 191 6899 6912
+type(
+  'k1
+)
+ident(
+  def v "tMap.ml" 191 6899 6917 "tMap.ml" 191 6899 6935
+)
+"tMap.ml" 191 6899 6908 "tMap.ml" 191 6899 6913
+type(
+  Mappe.key * 'k1
+)
+"tMap.ml" 191 6899 6903 "tMap.ml" 191 6899 6913
+type(
+  (Mappe.key * 'k1) option
+)
+"tMap.ml" 191 6899 6931 "tMap.ml" 191 6899 6932
+type(
+  Mappe.key
+)
+ident(
+  int_ref k "tMap.ml" 191 6899 6909 "tMap.ml" 191 6899 6910
+)
+"tMap.ml" 191 6899 6923 "tMap.ml" 191 6899 6932
+type(
+  key
+)
+"tMap.ml" 191 6899 6933 "tMap.ml" 191 6899 6934
+type(
+  'k1
+)
+ident(
+  int_ref v "tMap.ml" 191 6899 6911 "tMap.ml" 191 6899 6912
+)
+"tMap.ml" 191 6899 6922 "tMap.ml" 191 6899 6935
+type(
+  key * 'k1
+)
+"tMap.ml" 191 6899 6917 "tMap.ml" 191 6899 6935
+type(
+  (key * 'k1) option
+)
+"tMap.ml" 192 6936 6940 "tMap.ml" 192 6936 6944
+type(
+  (Mappe.key * 'k1) option
+)
+"tMap.ml" 192 6936 6951 "tMap.ml" 192 6936 6955
+type(
+  'k1 -> bool
+)
+ident(
+  int_ref pdef "tMap.ml" 189 6837 6851 "tMap.ml" 189 6837 6855
+)
+"tMap.ml" 192 6936 6956 "tMap.ml" 192 6936 6957
+type(
+  'k1 t
+)
+ident(
+  int_ref m "tMap.ml" 189 6837 6856 "tMap.ml" 189 6837 6857
+)
+"tMap.ml" 192 6936 6956 "tMap.ml" 192 6936 6965
+type(
+  'k1
+)
+"tMap.ml" 192 6936 6951 "tMap.ml" 192 6936 6965
+call(
+  stack
+)
+type(
+  bool
+)
+"tMap.ml" 192 6936 6977 "tMap.ml" 192 6936 6983
+type(
+  key
+)
+"tMap.ml" 192 6936 6984 "tMap.ml" 192 6936 6985
+type(
+  'k1 t
+)
+ident(
+  int_ref m "tMap.ml" 189 6837 6856 "tMap.ml" 189 6837 6857
+)
+"tMap.ml" 192 6936 6984 "tMap.ml" 192 6936 6993
+type(
+  'k1
+)
+"tMap.ml" 192 6936 6976 "tMap.ml" 192 6936 6994
+type(
+  key * 'k1
+)
+"tMap.ml" 192 6936 6971 "tMap.ml" 192 6936 6994
+type(
+  (key * 'k1) option
+)
+"tMap.ml" 192 6936 7000 "tMap.ml" 192 6936 7004
+type(
+  (key * 'k1) option
+)
+"tMap.ml" 192 6936 6948 "tMap.ml" 192 6936 7004
+type(
+  (key * 'k1) option
+)
+"tMap.ml" 190 6860 6862 "tMap.ml" 192 6936 7004
+type(
+  (key * 'k1) option
+)
+"tMap.ml" 193 7005 7009 "tMap.ml" 193 7005 7014
+type(
+  (key -> 'l1 -> bool) -> 'l1 t -> (key * 'l1) option
+)
+ident(
+  def find1 "tMap.ml" 195 7032 7032 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 193 7005 7015 "tMap.ml" 193 7005 7016
+type(
+  key -> 'l1 -> bool
+)
+ident(
+  def p "tMap.ml" 193 7005 7019 "tMap.ml" 193 7005 7030
+)
+"tMap.ml" 193 7005 7020 "tMap.ml" 193 7005 7022
+type(
+  ((Mappe.key -> 'l1 -> bool) -> ('l1 -> bool) -> 'l1 t -> (key * 'l1) option) ->
+  (key -> 'l1 -> bool) -> 'l1 t -> (key * 'l1) option
+)
+ident(
+  int_ref v1 "tMap.ml" 160 5901 5905 "tMap.ml" 160 5901 5907
+)
+"tMap.ml" 193 7005 7023 "tMap.ml" 193 7005 7027
+type(
+  (Mappe.key -> 'l1 -> bool) -> ('l1 -> bool) -> 'l1 t -> (key * 'l1) option
+)
+ident(
+  int_ref find "tMap.ml" 189 6837 6841 "tMap.ml" 189 6837 6845
+)
+"tMap.ml" 193 7005 7019 "tMap.ml" 193 7005 7028
+call(
+  stack
+)
+type(
+  (key -> 'l1 -> bool) -> 'l1 t -> (key * 'l1) option
+)
+"tMap.ml" 193 7005 7029 "tMap.ml" 193 7005 7030
+type(
+  key -> 'l1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 193 7005 7015 "tMap.ml" 193 7005 7016
+)
+"tMap.ml" 193 7005 7019 "tMap.ml" 193 7005 7030
+call(
+  tail
+)
+type(
+  'l1 t -> (key * 'l1) option
+)
+"tMap.ml" 197 7078 7082 "tMap.ml" 197 7078 7094
+type(
+  (Mappe.key -> 'm1 -> 'n1 -> 'n1) -> 'm1 t -> 'n1 -> 'n1
+)
+ident(
+  def fold_special "tMap.ml" 198 7121 7121 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 197 7078 7095 "tMap.ml" 197 7078 7096
+type(
+  Mappe.key -> 'm1 -> 'n1 -> 'n1
+)
+ident(
+  def f "tMap.ml" 197 7078 7099 "tMap.ml" 197 7078 7120
+)
+"tMap.ml" 197 7078 7099 "tMap.ml" 197 7078 7103
+type(
+  (Mappe.key -> 'm1 -> 'n1 -> 'n1) ->
+  ('m1 -> 'n1 -> 'n1) -> 'm1 t -> 'n1 -> 'n1
+)
+ident(
+  int_ref fold "tMap.ml" 162 5970 5974 "tMap.ml" 162 5970 5978
+)
+"tMap.ml" 197 7078 7104 "tMap.ml" 197 7078 7105
+type(
+  Mappe.key -> 'm1 -> 'n1 -> 'n1
+)
+ident(
+  int_ref f "tMap.ml" 197 7078 7095 "tMap.ml" 197 7078 7096
+)
+"tMap.ml" 197 7078 7111 "tMap.ml" 197 7078 7112
+type(
+  'm1
+)
+"tMap.ml" 197 7078 7113 "tMap.ml" 197 7078 7114
+type(
+  'n1
+)
+ident(
+  def x "tMap.ml" 197 7078 7118 "tMap.ml" 197 7078 7119
+)
+"tMap.ml" 197 7078 7118 "tMap.ml" 197 7078 7119
+type(
+  'n1
+)
+ident(
+  int_ref x "tMap.ml" 197 7078 7113 "tMap.ml" 197 7078 7114
+)
+"tMap.ml" 197 7078 7106 "tMap.ml" 197 7078 7120
+type(
+  'm1 -> 'n1 -> 'n1
+)
+"tMap.ml" 197 7078 7099 "tMap.ml" 197 7078 7120
+call(
+  tail
+)
+type(
+  'm1 t -> 'n1 -> 'n1
+)
+"tMap.ml" 198 7121 7125 "tMap.ml" 198 7121 7137
+type(
+  (Mappe.key -> 'o1 -> unit) -> 'o1 t -> unit
+)
+ident(
+  def iter_special "tMap.ml" 199 7163 7163 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 198 7121 7138 "tMap.ml" 198 7121 7139
+type(
+  Mappe.key -> 'o1 -> unit
+)
+ident(
+  def f "tMap.ml" 198 7121 7142 "tMap.ml" 198 7121 7162
+)
+"tMap.ml" 198 7121 7142 "tMap.ml" 198 7121 7146
+type(
+  (Mappe.key -> 'o1 -> unit) -> ('o1 -> unit) -> 'o1 t -> unit
+)
+ident(
+  int_ref iter "tMap.ml" 165 6071 6075 "tMap.ml" 165 6071 6079
+)
+"tMap.ml" 198 7121 7147 "tMap.ml" 198 7121 7148
+type(
+  Mappe.key -> 'o1 -> unit
+)
+ident(
+  int_ref f "tMap.ml" 198 7121 7138 "tMap.ml" 198 7121 7139
+)
+"tMap.ml" 198 7121 7154 "tMap.ml" 198 7121 7155
+type(
+  'o1
+)
+"tMap.ml" 198 7121 7159 "tMap.ml" 198 7121 7161
+type(
+  unit
+)
+"tMap.ml" 198 7121 7149 "tMap.ml" 198 7121 7162
+type(
+  'o1 -> unit
+)
+"tMap.ml" 198 7121 7142 "tMap.ml" 198 7121 7162
+call(
+  tail
+)
+type(
+  'o1 t -> unit
+)
+"tMap.ml" 199 7163 7167 "tMap.ml" 199 7163 7181
+type(
+  (Mappe.key -> 'p1 -> bool) -> 'p1 t -> bool
+)
+ident(
+  def exists_special "tMap.ml" 200 7212 7212 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 199 7163 7182 "tMap.ml" 199 7163 7183
+type(
+  Mappe.key -> 'p1 -> bool
+)
+ident(
+  def p "tMap.ml" 199 7163 7186 "tMap.ml" 199 7163 7211
+)
+"tMap.ml" 199 7163 7186 "tMap.ml" 199 7163 7192
+type(
+  (Mappe.key -> 'p1 -> bool) -> ('p1 -> bool) -> 'p1 t -> bool
+)
+ident(
+  int_ref exists "tMap.ml" 177 6421 6425 "tMap.ml" 177 6421 6431
+)
+"tMap.ml" 199 7163 7193 "tMap.ml" 199 7163 7194
+type(
+  Mappe.key -> 'p1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 199 7163 7182 "tMap.ml" 199 7163 7183
+)
+"tMap.ml" 199 7163 7200 "tMap.ml" 199 7163 7201
+type(
+  'p1
+)
+"tMap.ml" 199 7163 7205 "tMap.ml" 199 7163 7210
+type(
+  bool
+)
+"tMap.ml" 199 7163 7195 "tMap.ml" 199 7163 7211
+type(
+  'p1 -> bool
+)
+"tMap.ml" 199 7163 7186 "tMap.ml" 199 7163 7211
+call(
+  tail
+)
+type(
+  'p1 t -> bool
+)
+"tMap.ml" 200 7212 7216 "tMap.ml" 200 7212 7231
+type(
+  (Mappe.key -> 'q1 -> bool) -> 'q1 t -> bool
+)
+ident(
+  def for_all_special "tMap.ml" 201 7262 7262 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 200 7212 7232 "tMap.ml" 200 7212 7233
+type(
+  Mappe.key -> 'q1 -> bool
+)
+ident(
+  def p "tMap.ml" 200 7212 7236 "tMap.ml" 200 7212 7261
+)
+"tMap.ml" 200 7212 7236 "tMap.ml" 200 7212 7243
+type(
+  (Mappe.key -> 'q1 -> bool) -> ('q1 -> bool) -> 'q1 t -> bool
+)
+ident(
+  int_ref for_all "tMap.ml" 180 6523 6527 "tMap.ml" 180 6523 6534
+)
+"tMap.ml" 200 7212 7244 "tMap.ml" 200 7212 7245
+type(
+  Mappe.key -> 'q1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 200 7212 7232 "tMap.ml" 200 7212 7233
+)
+"tMap.ml" 200 7212 7251 "tMap.ml" 200 7212 7252
+type(
+  'q1
+)
+"tMap.ml" 200 7212 7256 "tMap.ml" 200 7212 7260
+type(
+  bool
+)
+"tMap.ml" 200 7212 7246 "tMap.ml" 200 7212 7261
+type(
+  'q1 -> bool
+)
+"tMap.ml" 200 7212 7236 "tMap.ml" 200 7212 7261
+call(
+  tail
+)
+type(
+  'q1 t -> bool
+)
+"tMap.ml" 201 7262 7266 "tMap.ml" 201 7262 7278
+type(
+  (Mappe.key -> 'r1 -> 'r1) -> 'r1 t -> 'r1 t
+)
+ident(
+  def mapi_special "tMap.ml" 202 7303 7303 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 201 7262 7279 "tMap.ml" 201 7262 7280
+type(
+  Mappe.key -> 'r1 -> 'r1
+)
+ident(
+  def f "tMap.ml" 201 7262 7283 "tMap.ml" 201 7262 7302
+)
+"tMap.ml" 201 7262 7283 "tMap.ml" 201 7262 7287
+type(
+  (Mappe.key -> 'r1 -> 'r1) -> ('r1 -> 'r1) -> 'r1 t -> 'r1 t
+)
+ident(
+  int_ref mapi "tMap.ml" 183 6651 6655 "tMap.ml" 183 6651 6659
+)
+"tMap.ml" 201 7262 7288 "tMap.ml" 201 7262 7289
+type(
+  Mappe.key -> 'r1 -> 'r1
+)
+ident(
+  int_ref f "tMap.ml" 201 7262 7279 "tMap.ml" 201 7262 7280
+)
+"tMap.ml" 201 7262 7295 "tMap.ml" 201 7262 7296
+type(
+  'r1
+)
+ident(
+  def v "tMap.ml" 201 7262 7300 "tMap.ml" 201 7262 7301
+)
+"tMap.ml" 201 7262 7300 "tMap.ml" 201 7262 7301
+type(
+  'r1
+)
+ident(
+  int_ref v "tMap.ml" 201 7262 7295 "tMap.ml" 201 7262 7296
+)
+"tMap.ml" 201 7262 7290 "tMap.ml" 201 7262 7302
+type(
+  'r1 -> 'r1
+)
+"tMap.ml" 201 7262 7283 "tMap.ml" 201 7262 7302
+call(
+  tail
+)
+type(
+  'r1 t -> 'r1 t
+)
+"tMap.ml" 202 7303 7307 "tMap.ml" 202 7303 7319
+type(
+  (Mappe.key -> 's1 -> bool) -> 's1 t -> (Mappe.key * 's1) option
+)
+ident(
+  def find_special "tMap.ml" 204 7350 7350 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 202 7303 7320 "tMap.ml" 202 7303 7321
+type(
+  Mappe.key -> 's1 -> bool
+)
+ident(
+  def p "tMap.ml" 202 7303 7322 "tMap.ml" 202 7303 7348
+)
+"tMap.ml" 202 7303 7322 "tMap.ml" 202 7303 7323
+type(
+  's1 t
+)
+ident(
+  def m "tMap.ml" 202 7303 7326 "tMap.ml" 202 7303 7348
+)
+"tMap.ml" 202 7303 7326 "tMap.ml" 202 7303 7336
+type(
+  (Mappe.key -> 's1 -> bool) -> 's1 Mappe.t -> (Mappe.key * 's1) option
+)
+ident(
+  int_ref mappe_find "tMap.ml" 172 6289 6293 "tMap.ml" 172 6289 6303
+)
+"tMap.ml" 202 7303 7337 "tMap.ml" 202 7303 7338
+type(
+  Mappe.key -> 's1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 202 7303 7320 "tMap.ml" 202 7303 7321
+)
+"tMap.ml" 202 7303 7339 "tMap.ml" 202 7303 7340
+type(
+  's1 t
+)
+ident(
+  int_ref m "tMap.ml" 202 7303 7322 "tMap.ml" 202 7303 7323
+)
+"tMap.ml" 202 7303 7339 "tMap.ml" 202 7303 7348
+type(
+  's1 Mappe.t
+)
+"tMap.ml" 202 7303 7326 "tMap.ml" 202 7303 7348
+call(
+  tail
+)
+type(
+  (Mappe.key * 's1) option
+)
+"tMap.ml" 204 7350 7354 "tMap.ml" 204 7350 7368
+type(
+  't1 t -> (Mappe.key * 't1) option
+)
+ident(
+  def choose_special "tMap.ml" 208 7435 7435 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 204 7350 7369 "tMap.ml" 204 7350 7370
+type(
+  't1 t
+)
+ident(
+  def m "tMap.ml" 205 7373 7375 "tMap.ml" 206 7409 7433
+)
+"tMap.ml" 205 7373 7385 "tMap.ml" 205 7373 7397
+type(
+  't1 Mappe.t -> Mappe.key * 't1
+)
+ident(
+  ext_ref Mappe.choose
+)
+"tMap.ml" 205 7373 7398 "tMap.ml" 205 7373 7399
+type(
+  't1 t
+)
+ident(
+  int_ref m "tMap.ml" 204 7350 7369 "tMap.ml" 204 7350 7370
+)
+"tMap.ml" 205 7373 7398 "tMap.ml" 205 7373 7407
+type(
+  't1 Mappe.t
+)
+"tMap.ml" 205 7373 7384 "tMap.ml" 205 7373 7408
+call(
+  stack
+)
+type(
+  Mappe.key * 't1
+)
+"tMap.ml" 205 7373 7379 "tMap.ml" 205 7373 7408
+type(
+  (Mappe.key * 't1) option
+)
+"tMap.ml" 206 7409 7416 "tMap.ml" 206 7409 7425
+type(
+  exn
+)
+"tMap.ml" 206 7409 7429 "tMap.ml" 206 7409 7433
+type(
+  (Mappe.key * 't1) option
+)
+"tMap.ml" 205 7373 7375 "tMap.ml" 206 7409 7433
+type(
+  (Mappe.key * 't1) option
+)
+"tMap.ml" 208 7435 7439 "tMap.ml" 208 7435 7457
+type(
+  'u1 t -> Mappe.key * 'u1
+)
+ident(
+  def choose_special_exn "tMap.ml" 213 7537 7537 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 208 7435 7458 "tMap.ml" 208 7435 7459
+type(
+  'u1 t
+)
+ident(
+  def m "tMap.ml" 209 7462 7464 "tMap.ml" 211 7508 7535
+)
+"tMap.ml" 209 7462 7470 "tMap.ml" 209 7462 7484
+type(
+  'u1 t -> (Mappe.key * 'u1) option
+)
+ident(
+  int_ref choose_special "tMap.ml" 204 7350 7354 "tMap.ml" 204 7350 7368
+)
+"tMap.ml" 209 7462 7485 "tMap.ml" 209 7462 7486
+type(
+  'u1 t
+)
+ident(
+  int_ref m "tMap.ml" 208 7435 7458 "tMap.ml" 208 7435 7459
+)
+"tMap.ml" 209 7462 7470 "tMap.ml" 209 7462 7486
+call(
+  stack
+)
+type(
+  (Mappe.key * 'u1) option
+)
+"tMap.ml" 210 7492 7501 "tMap.ml" 210 7492 7502
+type(
+  Mappe.key * 'u1
+)
+ident(
+  def x "tMap.ml" 210 7492 7506 "tMap.ml" 210 7492 7507
+)
+"tMap.ml" 210 7492 7496 "tMap.ml" 210 7492 7502
+type(
+  (Mappe.key * 'u1) option
+)
+"tMap.ml" 210 7492 7506 "tMap.ml" 210 7492 7507
+type(
+  Mappe.key * 'u1
+)
+ident(
+  int_ref x "tMap.ml" 210 7492 7501 "tMap.ml" 210 7492 7502
+)
+"tMap.ml" 211 7508 7512 "tMap.ml" 211 7508 7516
+type(
+  (Mappe.key * 'u1) option
+)
+"tMap.ml" 211 7508 7520 "tMap.ml" 211 7508 7525
+type(
+  exn -> Mappe.key * 'u1
+)
+ident(
+  ext_ref Pervasives.raise
+)
+"tMap.ml" 211 7508 7526 "tMap.ml" 211 7508 7535
+type(
+  exn
+)
+"tMap.ml" 211 7508 7520 "tMap.ml" 211 7508 7535
+type(
+  Mappe.key * 'u1
+)
+"tMap.ml" 209 7462 7464 "tMap.ml" 211 7508 7535
+type(
+  Mappe.key * 'u1
+)
+"tMap.ml" 215 7573 7577 "tMap.ml" 215 7573 7587
+type(
+  ('v1 -> bool) -> 'v1 t -> bool
+)
+ident(
+  def exists_val "tMap.ml" 216 7618 7618 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 215 7573 7588 "tMap.ml" 215 7573 7589
+type(
+  'v1 -> bool
+)
+ident(
+  def p "tMap.ml" 215 7573 7592 "tMap.ml" 215 7573 7617
+)
+"tMap.ml" 215 7573 7592 "tMap.ml" 215 7573 7598
+type(
+  (Mappe.key -> 'v1 -> bool) -> ('v1 -> bool) -> 'v1 t -> bool
+)
+ident(
+  int_ref exists "tMap.ml" 177 6421 6425 "tMap.ml" 177 6421 6431
+)
+"tMap.ml" 215 7573 7604 "tMap.ml" 215 7573 7605
+type(
+  Mappe.key
+)
+"tMap.ml" 215 7573 7606 "tMap.ml" 215 7573 7607
+type(
+  'v1
+)
+ident(
+  def v "tMap.ml" 215 7573 7611 "tMap.ml" 215 7573 7614
+)
+"tMap.ml" 215 7573 7611 "tMap.ml" 215 7573 7612
+type(
+  'v1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 215 7573 7588 "tMap.ml" 215 7573 7589
+)
+"tMap.ml" 215 7573 7613 "tMap.ml" 215 7573 7614
+type(
+  'v1
+)
+ident(
+  int_ref v "tMap.ml" 215 7573 7606 "tMap.ml" 215 7573 7607
+)
+"tMap.ml" 215 7573 7611 "tMap.ml" 215 7573 7614
+call(
+  tail
+)
+type(
+  bool
+)
+"tMap.ml" 215 7573 7599 "tMap.ml" 215 7573 7615
+type(
+  Mappe.key -> 'v1 -> bool
+)
+"tMap.ml" 215 7573 7616 "tMap.ml" 215 7573 7617
+type(
+  'v1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 215 7573 7588 "tMap.ml" 215 7573 7589
+)
+"tMap.ml" 215 7573 7592 "tMap.ml" 215 7573 7617
+call(
+  tail
+)
+type(
+  'v1 t -> bool
+)
+"tMap.ml" 216 7618 7622 "tMap.ml" 216 7618 7633
+type(
+  ('w1 -> bool) -> 'w1 t -> bool
+)
+ident(
+  def for_all_val "tMap.ml" 217 7665 7665 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 216 7618 7634 "tMap.ml" 216 7618 7635
+type(
+  'w1 -> bool
+)
+ident(
+  def p "tMap.ml" 216 7618 7638 "tMap.ml" 216 7618 7664
+)
+"tMap.ml" 216 7618 7638 "tMap.ml" 216 7618 7645
+type(
+  (Mappe.key -> 'w1 -> bool) -> ('w1 -> bool) -> 'w1 t -> bool
+)
+ident(
+  int_ref for_all "tMap.ml" 180 6523 6527 "tMap.ml" 180 6523 6534
+)
+"tMap.ml" 216 7618 7651 "tMap.ml" 216 7618 7652
+type(
+  Mappe.key
+)
+"tMap.ml" 216 7618 7653 "tMap.ml" 216 7618 7654
+type(
+  'w1
+)
+ident(
+  def v "tMap.ml" 216 7618 7658 "tMap.ml" 216 7618 7661
+)
+"tMap.ml" 216 7618 7658 "tMap.ml" 216 7618 7659
+type(
+  'w1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 216 7618 7634 "tMap.ml" 216 7618 7635
+)
+"tMap.ml" 216 7618 7660 "tMap.ml" 216 7618 7661
+type(
+  'w1
+)
+ident(
+  int_ref v "tMap.ml" 216 7618 7653 "tMap.ml" 216 7618 7654
+)
+"tMap.ml" 216 7618 7658 "tMap.ml" 216 7618 7661
+call(
+  tail
+)
+type(
+  bool
+)
+"tMap.ml" 216 7618 7646 "tMap.ml" 216 7618 7662
+type(
+  Mappe.key -> 'w1 -> bool
+)
+"tMap.ml" 216 7618 7663 "tMap.ml" 216 7618 7664
+type(
+  'w1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 216 7618 7634 "tMap.ml" 216 7618 7635
+)
+"tMap.ml" 216 7618 7638 "tMap.ml" 216 7618 7664
+call(
+  tail
+)
+type(
+  'w1 t -> bool
+)
+"tMap.ml" 217 7665 7669 "tMap.ml" 217 7665 7672
+type(
+  ('x1 -> 'y1) -> 'x1 t -> 'y1 t
+)
+ident(
+  def map "tMap.ml" 218 7701 7701 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 217 7665 7673 "tMap.ml" 217 7665 7674
+type(
+  'x1 -> 'y1
+)
+ident(
+  def f "tMap.ml" 217 7665 7677 "tMap.ml" 217 7665 7700
+)
+"tMap.ml" 217 7665 7677 "tMap.ml" 217 7665 7681
+type(
+  (Mappe.key -> 'x1 -> 'y1) -> ('x1 -> 'y1) -> 'x1 t -> 'y1 t
+)
+ident(
+  int_ref mapi "tMap.ml" 183 6651 6655 "tMap.ml" 183 6651 6659
+)
+"tMap.ml" 217 7665 7687 "tMap.ml" 217 7665 7688
+type(
+  Mappe.key
+)
+"tMap.ml" 217 7665 7689 "tMap.ml" 217 7665 7690
+type(
+  'x1
+)
+ident(
+  def v "tMap.ml" 217 7665 7694 "tMap.ml" 217 7665 7697
+)
+"tMap.ml" 217 7665 7694 "tMap.ml" 217 7665 7695
+type(
+  'x1 -> 'y1
+)
+ident(
+  int_ref f "tMap.ml" 217 7665 7673 "tMap.ml" 217 7665 7674
+)
+"tMap.ml" 217 7665 7696 "tMap.ml" 217 7665 7697
+type(
+  'x1
+)
+ident(
+  int_ref v "tMap.ml" 217 7665 7689 "tMap.ml" 217 7665 7690
+)
+"tMap.ml" 217 7665 7694 "tMap.ml" 217 7665 7697
+call(
+  tail
+)
+type(
+  'y1
+)
+"tMap.ml" 217 7665 7682 "tMap.ml" 217 7665 7698
+type(
+  Mappe.key -> 'x1 -> 'y1
+)
+"tMap.ml" 217 7665 7699 "tMap.ml" 217 7665 7700
+type(
+  'x1 -> 'y1
+)
+ident(
+  int_ref f "tMap.ml" 217 7665 7673 "tMap.ml" 217 7665 7674
+)
+"tMap.ml" 217 7665 7677 "tMap.ml" 217 7665 7700
+call(
+  tail
+)
+type(
+  'x1 t -> 'y1 t
+)
+"tMap.ml" 218 7701 7705 "tMap.ml" 218 7701 7713
+type(
+  ('z1 -> bool) -> 'z1 t -> (key * 'z1) option
+)
+ident(
+  def find_val "tMap.ml" 219 7742 7742 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 218 7701 7714 "tMap.ml" 218 7701 7715
+type(
+  'z1 -> bool
+)
+ident(
+  def p "tMap.ml" 218 7701 7718 "tMap.ml" 218 7701 7741
+)
+"tMap.ml" 218 7701 7718 "tMap.ml" 218 7701 7722
+type(
+  (Mappe.key -> 'z1 -> bool) -> ('z1 -> bool) -> 'z1 t -> (key * 'z1) option
+)
+ident(
+  int_ref find "tMap.ml" 189 6837 6841 "tMap.ml" 189 6837 6845
+)
+"tMap.ml" 218 7701 7728 "tMap.ml" 218 7701 7729
+type(
+  Mappe.key
+)
+"tMap.ml" 218 7701 7730 "tMap.ml" 218 7701 7731
+type(
+  'z1
+)
+ident(
+  def v "tMap.ml" 218 7701 7735 "tMap.ml" 218 7701 7738
+)
+"tMap.ml" 218 7701 7735 "tMap.ml" 218 7701 7736
+type(
+  'z1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 218 7701 7714 "tMap.ml" 218 7701 7715
+)
+"tMap.ml" 218 7701 7737 "tMap.ml" 218 7701 7738
+type(
+  'z1
+)
+ident(
+  int_ref v "tMap.ml" 218 7701 7730 "tMap.ml" 218 7701 7731
+)
+"tMap.ml" 218 7701 7735 "tMap.ml" 218 7701 7738
+call(
+  tail
+)
+type(
+  bool
+)
+"tMap.ml" 218 7701 7723 "tMap.ml" 218 7701 7739
+type(
+  Mappe.key -> 'z1 -> bool
+)
+"tMap.ml" 218 7701 7740 "tMap.ml" 218 7701 7741
+type(
+  'z1 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 218 7701 7714 "tMap.ml" 218 7701 7715
+)
+"tMap.ml" 218 7701 7718 "tMap.ml" 218 7701 7741
+call(
+  tail
+)
+type(
+  'z1 t -> (key * 'z1) option
+)
+"tMap.ml" 219 7742 7746 "tMap.ml" 219 7742 7762
+type(
+  ('a2 -> bool) -> 'a2 t -> (Mappe.key * 'a2) option
+)
+ident(
+  def find_special_val "tMap.ml" 225 7870 7870 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 219 7742 7763 "tMap.ml" 219 7742 7764
+type(
+  'a2 -> bool
+)
+ident(
+  def p "tMap.ml" 219 7742 7767 "tMap.ml" 219 7742 7796
+)
+"tMap.ml" 219 7742 7767 "tMap.ml" 219 7742 7779
+type(
+  (Mappe.key -> 'a2 -> bool) -> 'a2 t -> (Mappe.key * 'a2) option
+)
+ident(
+  int_ref find_special "tMap.ml" 202 7303 7307 "tMap.ml" 202 7303 7319
+)
+"tMap.ml" 219 7742 7785 "tMap.ml" 219 7742 7786
+type(
+  Mappe.key
+)
+"tMap.ml" 219 7742 7787 "tMap.ml" 219 7742 7788
+type(
+  'a2
+)
+ident(
+  def v "tMap.ml" 219 7742 7792 "tMap.ml" 219 7742 7795
+)
+"tMap.ml" 219 7742 7792 "tMap.ml" 219 7742 7793
+type(
+  'a2 -> bool
+)
+ident(
+  int_ref p "tMap.ml" 219 7742 7763 "tMap.ml" 219 7742 7764
+)
+"tMap.ml" 219 7742 7794 "tMap.ml" 219 7742 7795
+type(
+  'a2
+)
+ident(
+  int_ref v "tMap.ml" 219 7742 7787 "tMap.ml" 219 7742 7788
+)
+"tMap.ml" 219 7742 7792 "tMap.ml" 219 7742 7795
+call(
+  tail
+)
+type(
+  bool
+)
+"tMap.ml" 219 7742 7780 "tMap.ml" 219 7742 7796
+type(
+  Mappe.key -> 'a2 -> bool
+)
+"tMap.ml" 219 7742 7767 "tMap.ml" 219 7742 7796
+call(
+  tail
+)
+type(
+  'a2 t -> (Mappe.key * 'a2) option
+)
+"tMap.ml" 227 7904 7908 "tMap.ml" 227 7904 7915
+type(
+  ('b2 -> 'c2 -> 'd2) -> 'b2 t -> 'c2 t -> 'd2 t
+)
+ident(
+  def combine "tMap.ml" 236 8257 8257 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 227 7904 7916 "tMap.ml" 227 7904 7917
+type(
+  'b2 -> 'c2 -> 'd2
+)
+ident(
+  def f "tMap.ml" 227 7904 7918 "tMap.ml" 234 8221 8253
+)
+"tMap.ml" 227 7904 7918 "tMap.ml" 227 7904 7920
+type(
+  'b2 t
+)
+ident(
+  def m1 "tMap.ml" 227 7904 7921 "tMap.ml" 234 8221 8253
+)
+"tMap.ml" 227 7904 7921 "tMap.ml" 227 7904 7923
+type(
+  'c2 t
+)
+ident(
+  def m2 "tMap.ml" 228 7926 7928 "tMap.ml" 234 8221 8253
+)
+"tMap.ml" 228 7926 7932 "tMap.ml" 228 7926 7934
+type(
+  'd2
+)
+ident(
+  def d' "tMap.ml" 229 7964 7966 "tMap.ml" 234 8221 8253
+)
+"tMap.ml" 228 7926 7937 "tMap.ml" 228 7926 7938
+type(
+  'b2 -> 'c2 -> 'd2
+)
+ident(
+  int_ref f "tMap.ml" 227 7904 7916 "tMap.ml" 227 7904 7917
+)
+"tMap.ml" 228 7926 7939 "tMap.ml" 228 7926 7941
+type(
+  'b2 t
+)
+ident(
+  int_ref m1 "tMap.ml" 227 7904 7918 "tMap.ml" 227 7904 7920
+)
+"tMap.ml" 228 7926 7939 "tMap.ml" 228 7926 7949
+type(
+  'b2
+)
+"tMap.ml" 228 7926 7950 "tMap.ml" 228 7926 7952
+type(
+  'c2 t
+)
+ident(
+  int_ref m2 "tMap.ml" 227 7904 7921 "tMap.ml" 227 7904 7923
+)
+"tMap.ml" 228 7926 7950 "tMap.ml" 228 7926 7960
+type(
+  'c2
+)
+"tMap.ml" 228 7926 7937 "tMap.ml" 228 7926 7960
+call(
+  stack
+)
+type(
+  'd2
+)
+"tMap.ml" 229 7964 7970 "tMap.ml" 229 7964 7972
+type(
+  'd2 Mappe.t
+)
+ident(
+  def s' "tMap.ml" 234 8221 8223 "tMap.ml" 234 8221 8253
+)
+"tMap.ml" 229 7964 7975 "tMap.ml" 229 7964 7986
+type(
+  (Mappe.key -> 'b2 option -> 'c2 option -> 'd2 option) ->
+  'b2 Mappe.t -> 'c2 Mappe.t -> 'd2 Mappe.t
+)
+ident(
+  ext_ref Mappe.merge
+)
+"tMap.ml" 229 7964 7992 "tMap.ml" 229 7964 7993
+type(
+  Mappe.key
+)
+"tMap.ml" 229 7964 7994 "tMap.ml" 229 7964 7997
+type(
+  'b2 option
+)
+ident(
+  def ov1 "tMap.ml" 229 7964 7998 "tMap.ml" 233 8157 8194
+)
+"tMap.ml" 229 7964 7998 "tMap.ml" 229 7964 8001
+type(
+  'c2 option
+)
+ident(
+  def ov2 "tMap.ml" 230 8005 8009 "tMap.ml" 233 8157 8194
+)
+"tMap.ml" 230 8005 8013 "tMap.ml" 230 8005 8015
+type(
+  'b2
+)
+ident(
+  def v1 "tMap.ml" 231 8069 8073 "tMap.ml" 233 8157 8194
+)
+"tMap.ml" 230 8005 8024 "tMap.ml" 230 8005 8027
+type(
+  'b2 option
+)
+ident(
+  int_ref ov1 "tMap.ml" 229 7964 7994 "tMap.ml" 229 7964 7997
+)
+"tMap.ml" 230 8005 8033 "tMap.ml" 230 8005 8037
+type(
+  'b2 option
+)
+"tMap.ml" 230 8005 8041 "tMap.ml" 230 8005 8043
+type(
+  'b2 t
+)
+ident(
+  int_ref m1 "tMap.ml" 227 7904 7918 "tMap.ml" 227 7904 7920
+)
+"tMap.ml" 230 8005 8041 "tMap.ml" 230 8005 8051
+type(
+  'b2
+)
+"tMap.ml" 230 8005 8059 "tMap.ml" 230 8005 8060
+type(
+  'b2
+)
+ident(
+  def x "tMap.ml" 230 8005 8064 "tMap.ml" 230 8005 8065
+)
+"tMap.ml" 230 8005 8054 "tMap.ml" 230 8005 8060
+type(
+  'b2 option
+)
+"tMap.ml" 230 8005 8064 "tMap.ml" 230 8005 8065
+type(
+  'b2
+)
+ident(
+  int_ref x "tMap.ml" 230 8005 8059 "tMap.ml" 230 8005 8060
+)
+"tMap.ml" 230 8005 8018 "tMap.ml" 230 8005 8065
+type(
+  'b2
+)
+"tMap.ml" 231 8069 8077 "tMap.ml" 231 8069 8079
+type(
+  'c2
+)
+ident(
+  def v2 "tMap.ml" 232 8133 8137 "tMap.ml" 233 8157 8194
+)
+"tMap.ml" 231 8069 8088 "tMap.ml" 231 8069 8091
+type(
+  'c2 option
+)
+ident(
+  int_ref ov2 "tMap.ml" 229 7964 7998 "tMap.ml" 229 7964 8001
+)
+"tMap.ml" 231 8069 8097 "tMap.ml" 231 8069 8101
+type(
+  'c2 option
+)
+"tMap.ml" 231 8069 8105 "tMap.ml" 231 8069 8107
+type(
+  'c2 t
+)
+ident(
+  int_ref m2 "tMap.ml" 227 7904 7921 "tMap.ml" 227 7904 7923
+)
+"tMap.ml" 231 8069 8105 "tMap.ml" 231 8069 8115
+type(
+  'c2
+)
+"tMap.ml" 231 8069 8123 "tMap.ml" 231 8069 8124
+type(
+  'c2
+)
+ident(
+  def x "tMap.ml" 231 8069 8128 "tMap.ml" 231 8069 8129
+)
+"tMap.ml" 231 8069 8118 "tMap.ml" 231 8069 8124
+type(
+  'c2 option
+)
+"tMap.ml" 231 8069 8128 "tMap.ml" 231 8069 8129
+type(
+  'c2
+)
+ident(
+  int_ref x "tMap.ml" 231 8069 8123 "tMap.ml" 231 8069 8124
+)
+"tMap.ml" 231 8069 8082 "tMap.ml" 231 8069 8129
+type(
+  'c2
+)
+"tMap.ml" 232 8133 8141 "tMap.ml" 232 8133 8143
+type(
+  'd2
+)
+ident(
+  def v3 "tMap.ml" 233 8157 8161 "tMap.ml" 233 8157 8194
+)
+"tMap.ml" 232 8133 8146 "tMap.ml" 232 8133 8147
+type(
+  'b2 -> 'c2 -> 'd2
+)
+ident(
+  int_ref f "tMap.ml" 227 7904 7916 "tMap.ml" 227 7904 7917
+)
+"tMap.ml" 232 8133 8148 "tMap.ml" 232 8133 8150
+type(
+  'b2
+)
+ident(
+  int_ref v1 "tMap.ml" 230 8005 8013 "tMap.ml" 230 8005 8015
+)
+"tMap.ml" 232 8133 8151 "tMap.ml" 232 8133 8153
+type(
+  'c2
+)
+ident(
+  int_ref v2 "tMap.ml" 231 8069 8077 "tMap.ml" 231 8069 8079
+)
+"tMap.ml" 232 8133 8146 "tMap.ml" 232 8133 8153
+call(
+  stack
+)
+type(
+  'd2
+)
+"tMap.ml" 233 8157 8164 "tMap.ml" 233 8157 8166
+type(
+  'd2
+)
+ident(
+  int_ref v3 "tMap.ml" 232 8133 8141 "tMap.ml" 232 8133 8143
+)
+"tMap.ml" 233 8157 8167 "tMap.ml" 233 8157 8168
+type(
+  'd2 -> 'd2 -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"tMap.ml" 233 8157 8169 "tMap.ml" 233 8157 8171
+type(
+  'd2
+)
+ident(
+  int_ref d' "tMap.ml" 228 7926 7932 "tMap.ml" 228 7926 7934
+)
+"tMap.ml" 233 8157 8164 "tMap.ml" 233 8157 8171
+type(
+  bool
+)
+"tMap.ml" 233 8157 8177 "tMap.ml" 233 8157 8181
+type(
+  'd2 option
+)
+"tMap.ml" 233 8157 8192 "tMap.ml" 233 8157 8194
+type(
+  'd2
+)
+ident(
+  int_ref v3 "tMap.ml" 232 8133 8141 "tMap.ml" 232 8133 8143
+)
+"tMap.ml" 233 8157 8187 "tMap.ml" 233 8157 8194
+type(
+  'd2 option
+)
+"tMap.ml" 233 8157 8161 "tMap.ml" 233 8157 8194
+type(
+  'd2 option
+)
+"tMap.ml" 232 8133 8137 "tMap.ml" 233 8157 8194
+type(
+  'd2 option
+)
+"tMap.ml" 231 8069 8073 "tMap.ml" 233 8157 8194
+type(
+  'd2 option
+)
+"tMap.ml" 230 8005 8009 "tMap.ml" 233 8157 8194
+type(
+  'd2 option
+)
+"tMap.ml" 229 7964 7987 "tMap.ml" 233 8157 8195
+type(
+  Mappe.key -> 'b2 option -> 'c2 option -> 'd2 option
+)
+"tMap.ml" 233 8157 8196 "tMap.ml" 233 8157 8198
+type(
+  'b2 t
+)
+ident(
+  int_ref m1 "tMap.ml" 227 7904 7918 "tMap.ml" 227 7904 7920
+)
+"tMap.ml" 233 8157 8196 "tMap.ml" 233 8157 8206
+type(
+  'b2 Mappe.t
+)
+"tMap.ml" 233 8157 8207 "tMap.ml" 233 8157 8209
+type(
+  'c2 t
+)
+ident(
+  int_ref m2 "tMap.ml" 227 7904 7921 "tMap.ml" 227 7904 7923
+)
+"tMap.ml" 233 8157 8207 "tMap.ml" 233 8157 8217
+type(
+  'c2 Mappe.t
+)
+"tMap.ml" 229 7964 7975 "tMap.ml" 233 8157 8217
+call(
+  stack
+)
+type(
+  'd2 Mappe.t
+)
+"tMap.ml" 234 8221 8235 "tMap.ml" 234 8221 8237
+type(
+  'd2 Mappe.t
+)
+ident(
+  int_ref s' "tMap.ml" 229 7964 7970 "tMap.ml" 229 7964 7972
+)
+"tMap.ml" 234 8221 8249 "tMap.ml" 234 8221 8251
+type(
+  'd2
+)
+ident(
+  int_ref d' "tMap.ml" 228 7926 7932 "tMap.ml" 228 7926 7934
+)
+"tMap.ml" 234 8221 8223 "tMap.ml" 234 8221 8253
+type(
+  'd2 t
+)
+"tMap.ml" 229 7964 7966 "tMap.ml" 234 8221 8253
+type(
+  'd2 t
+)
+"tMap.ml" 228 7926 7928 "tMap.ml" 234 8221 8253
+type(
+  'd2 t
+)
+"tMap.ml" 236 8257 8261 "tMap.ml" 236 8257 8266
+type(
+  ('e2 -> 'f2 -> bool) -> 'e2 t -> 'f2 t -> bool
+)
+ident(
+  def holds "tMap.ml" 236 8257 8319 "tMap.ml" 238 8321 8324
+)
+"tMap.ml" 236 8257 8267 "tMap.ml" 236 8257 8268
+type(
+  'e2 -> 'f2 -> bool
+)
+ident(
+  def r "tMap.ml" 236 8257 8269 "tMap.ml" 236 8257 8319
+)
+"tMap.ml" 236 8257 8269 "tMap.ml" 236 8257 8271
+type(
+  'e2 t
+)
+ident(
+  def m1 "tMap.ml" 236 8257 8272 "tMap.ml" 236 8257 8319
+)
+"tMap.ml" 236 8257 8272 "tMap.ml" 236 8257 8274
+type(
+  'f2 t
+)
+ident(
+  def m2 "tMap.ml" 236 8257 8277 "tMap.ml" 236 8257 8319
+)
+"tMap.ml" 236 8257 8277 "tMap.ml" 236 8257 8288
+type(
+  (bool -> bool) -> bool t -> bool
+)
+ident(
+  int_ref for_all_val "tMap.ml" 216 7618 7622 "tMap.ml" 216 7618 7633
+)
+"tMap.ml" 236 8257 8294 "tMap.ml" 236 8257 8295
+type(
+  bool
+)
+ident(
+  def b "tMap.ml" 236 8257 8299 "tMap.ml" 236 8257 8300
+)
+"tMap.ml" 236 8257 8299 "tMap.ml" 236 8257 8300
+type(
+  bool
+)
+ident(
+  int_ref b "tMap.ml" 236 8257 8294 "tMap.ml" 236 8257 8295
+)
+"tMap.ml" 236 8257 8289 "tMap.ml" 236 8257 8301
+type(
+  bool -> bool
+)
+"tMap.ml" 236 8257 8303 "tMap.ml" 236 8257 8310
+type(
+  ('e2 -> 'f2 -> bool) -> 'e2 t -> 'f2 t -> bool t
+)
+ident(
+  int_ref combine "tMap.ml" 227 7904 7908 "tMap.ml" 227 7904 7915
+)
+"tMap.ml" 236 8257 8311 "tMap.ml" 236 8257 8312
+type(
+  'e2 -> 'f2 -> bool
+)
+ident(
+  int_ref r "tMap.ml" 236 8257 8267 "tMap.ml" 236 8257 8268
+)
+"tMap.ml" 236 8257 8313 "tMap.ml" 236 8257 8315
+type(
+  'e2 t
+)
+ident(
+  int_ref m1 "tMap.ml" 236 8257 8269 "tMap.ml" 236 8257 8271
+)
+"tMap.ml" 236 8257 8316 "tMap.ml" 236 8257 8318
+type(
+  'f2 t
+)
+ident(
+  int_ref m2 "tMap.ml" 236 8257 8272 "tMap.ml" 236 8257 8274
+)
+"tMap.ml" 236 8257 8302 "tMap.ml" 236 8257 8319
+call(
+  stack
+)
+type(
+  bool t
+)
+"tMap.ml" 236 8257 8277 "tMap.ml" 236 8257 8319
+call(
+  tail
+)
+type(
+  bool
+)

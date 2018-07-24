@@ -1,0 +1,8156 @@
+"rename.ml" 14 289 293 "rename.ml" 14 289 300
+type(
+  string
+)
+ident(
+  def version "rename.ml" 16 333 333 "rename.ml" 1 0 -1
+)
+"rename.ml" 14 289 303 "rename.ml" 14 289 331
+type(
+  string
+)
+"rename.ml" 16 333 341 "rename.ml" 16 333 348
+type(
+  Cabs.base_type -> bool
+)
+ident(
+  def isProto "rename.ml" 16 333 333 "rename.ml" 1 0 -1
+)
+"rename.ml" 16 333 349 "rename.ml" 16 333 352
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 17 355 356 "rename.ml" 21 466 479
+)
+"rename.ml" 17 355 362 "rename.ml" 17 355 365
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 16 333 349 "rename.ml" 16 333 352
+)
+"rename.ml" 18 371 381 "rename.ml" 18 371 382
+type(
+  Cabs.base_type
+)
+"rename.ml" 18 371 384 "rename.ml" 18 371 385
+type(
+  Cabs.single_name list
+)
+"rename.ml" 18 371 387 "rename.ml" 18 371 388
+type(
+  bool
+)
+"rename.ml" 18 371 380 "rename.ml" 18 371 389
+type(
+  Cabs.proto
+)
+"rename.ml" 18 371 374 "rename.ml" 18 371 389
+type(
+  Cabs.base_type
+)
+"rename.ml" 18 371 395 "rename.ml" 18 371 399
+type(
+  bool
+)
+"rename.ml" 19 400 414 "rename.ml" 19 400 415
+type(
+  Cabs.base_type
+)
+"rename.ml" 19 400 417 "rename.ml" 19 400 418
+type(
+  string list
+)
+"rename.ml" 19 400 420 "rename.ml" 19 400 421
+type(
+  bool
+)
+"rename.ml" 19 400 413 "rename.ml" 19 400 422
+type(
+  Cabs.old_proto
+)
+"rename.ml" 19 400 403 "rename.ml" 19 400 422
+type(
+  Cabs.base_type
+)
+"rename.ml" 19 400 426 "rename.ml" 19 400 430
+type(
+  bool
+)
+"rename.ml" 20 431 444 "rename.ml" 20 431 445
+type(
+  Cabs.gnu_attrs
+)
+"rename.ml" 20 431 447 "rename.ml" 20 431 450
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 20 431 454 "rename.ml" 20 431 465
+)
+"rename.ml" 20 431 434 "rename.ml" 20 431 451
+type(
+  Cabs.base_type
+)
+"rename.ml" 20 431 454 "rename.ml" 20 431 461
+type(
+  Cabs.base_type -> bool
+)
+ident(
+  int_ref isProto "rename.ml" 16 333 341 "rename.ml" 16 333 348
+)
+"rename.ml" 20 431 462 "rename.ml" 20 431 465
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 20 431 447 "rename.ml" 20 431 450
+)
+"rename.ml" 20 431 454 "rename.ml" 20 431 465
+call(
+  tail
+)
+type(
+  bool
+)
+"rename.ml" 21 466 469 "rename.ml" 21 466 470
+type(
+  Cabs.base_type
+)
+"rename.ml" 21 466 474 "rename.ml" 21 466 479
+type(
+  bool
+)
+"rename.ml" 17 355 356 "rename.ml" 21 466 479
+type(
+  bool
+)
+"rename.ml" 51 1656 1662 "rename.ml" 51 1656 1667
+type(
+  funcon
+)
+ident(
+  def empty "rename.ml" 52 1691 1693 "rename.ml" 74 2872 2875
+)
+"rename.ml" 51 1656 1672 "rename.ml" 51 1656 1674
+type(
+  string list
+)
+"rename.ml" 51 1656 1675 "rename.ml" 51 1656 1677
+type(
+  string list
+)
+"rename.ml" 51 1656 1678 "rename.ml" 51 1656 1680
+type(
+  string list
+)
+"rename.ml" 51 1656 1681 "rename.ml" 51 1656 1683
+type(
+  string list
+)
+"rename.ml" 51 1656 1684 "rename.ml" 51 1656 1686
+type(
+  string list
+)
+"rename.ml" 51 1656 1687 "rename.ml" 51 1656 1689
+type(
+  string list
+)
+"rename.ml" 51 1656 1670 "rename.ml" 51 1656 1690
+type(
+  funcon
+)
+"rename.ml" 52 1691 1697 "rename.ml" 52 1691 1705
+type(
+  string list -> funcon -> funcon
+)
+ident(
+  def setInput "rename.ml" 53 1747 1749 "rename.ml" 74 2872 2875
+)
+"rename.ml" 52 1691 1706 "rename.ml" 52 1691 1707
+type(
+  string list
+)
+ident(
+  def x "rename.ml" 52 1691 1708 "rename.ml" 52 1691 1746
+)
+"rename.ml" 52 1691 1711 "rename.ml" 52 1691 1712
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 52 1691 1730 "rename.ml" 52 1691 1746
+)
+"rename.ml" 52 1691 1713 "rename.ml" 52 1691 1714
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 52 1691 1730 "rename.ml" 52 1691 1746
+)
+"rename.ml" 52 1691 1715 "rename.ml" 52 1691 1717
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 52 1691 1730 "rename.ml" 52 1691 1746
+)
+"rename.ml" 52 1691 1718 "rename.ml" 52 1691 1720
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 52 1691 1730 "rename.ml" 52 1691 1746
+)
+"rename.ml" 52 1691 1721 "rename.ml" 52 1691 1722
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 52 1691 1730 "rename.ml" 52 1691 1746
+)
+"rename.ml" 52 1691 1723 "rename.ml" 52 1691 1724
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 52 1691 1730 "rename.ml" 52 1691 1746
+)
+"rename.ml" 52 1691 1708 "rename.ml" 52 1691 1726
+type(
+  funcon
+)
+"rename.ml" 52 1691 1732 "rename.ml" 52 1691 1733
+type(
+  string list
+)
+ident(
+  int_ref x "rename.ml" 52 1691 1706 "rename.ml" 52 1691 1707
+)
+"rename.ml" 52 1691 1734 "rename.ml" 52 1691 1735
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 52 1691 1713 "rename.ml" 52 1691 1714
+)
+"rename.ml" 52 1691 1736 "rename.ml" 52 1691 1738
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 52 1691 1715 "rename.ml" 52 1691 1717
+)
+"rename.ml" 52 1691 1739 "rename.ml" 52 1691 1741
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 52 1691 1718 "rename.ml" 52 1691 1720
+)
+"rename.ml" 52 1691 1742 "rename.ml" 52 1691 1743
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 52 1691 1721 "rename.ml" 52 1691 1722
+)
+"rename.ml" 52 1691 1744 "rename.ml" 52 1691 1745
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 52 1691 1723 "rename.ml" 52 1691 1724
+)
+"rename.ml" 52 1691 1730 "rename.ml" 52 1691 1746
+type(
+  funcon
+)
+"rename.ml" 53 1747 1753 "rename.ml" 53 1747 1762
+type(
+  string list -> funcon -> funcon
+)
+ident(
+  def setOutput "rename.ml" 54 1804 1806 "rename.ml" 74 2872 2875
+)
+"rename.ml" 53 1747 1763 "rename.ml" 53 1747 1764
+type(
+  string list
+)
+ident(
+  def x "rename.ml" 53 1747 1765 "rename.ml" 53 1747 1803
+)
+"rename.ml" 53 1747 1768 "rename.ml" 53 1747 1769
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 53 1747 1787 "rename.ml" 53 1747 1803
+)
+"rename.ml" 53 1747 1770 "rename.ml" 53 1747 1771
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 53 1747 1787 "rename.ml" 53 1747 1803
+)
+"rename.ml" 53 1747 1772 "rename.ml" 53 1747 1774
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 53 1747 1787 "rename.ml" 53 1747 1803
+)
+"rename.ml" 53 1747 1775 "rename.ml" 53 1747 1777
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 53 1747 1787 "rename.ml" 53 1747 1803
+)
+"rename.ml" 53 1747 1778 "rename.ml" 53 1747 1779
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 53 1747 1787 "rename.ml" 53 1747 1803
+)
+"rename.ml" 53 1747 1780 "rename.ml" 53 1747 1781
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 53 1747 1787 "rename.ml" 53 1747 1803
+)
+"rename.ml" 53 1747 1765 "rename.ml" 53 1747 1783
+type(
+  funcon
+)
+"rename.ml" 53 1747 1789 "rename.ml" 53 1747 1790
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 53 1747 1768 "rename.ml" 53 1747 1769
+)
+"rename.ml" 53 1747 1791 "rename.ml" 53 1747 1792
+type(
+  string list
+)
+ident(
+  int_ref x "rename.ml" 53 1747 1763 "rename.ml" 53 1747 1764
+)
+"rename.ml" 53 1747 1793 "rename.ml" 53 1747 1795
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 53 1747 1772 "rename.ml" 53 1747 1774
+)
+"rename.ml" 53 1747 1796 "rename.ml" 53 1747 1798
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 53 1747 1775 "rename.ml" 53 1747 1777
+)
+"rename.ml" 53 1747 1799 "rename.ml" 53 1747 1800
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 53 1747 1778 "rename.ml" 53 1747 1779
+)
+"rename.ml" 53 1747 1801 "rename.ml" 53 1747 1802
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 53 1747 1780 "rename.ml" 53 1747 1781
+)
+"rename.ml" 53 1747 1787 "rename.ml" 53 1747 1803
+type(
+  funcon
+)
+"rename.ml" 54 1804 1810 "rename.ml" 54 1804 1815
+type(
+  string list -> funcon -> funcon
+)
+ident(
+  def setGF "rename.ml" 55 1858 1860 "rename.ml" 74 2872 2875
+)
+"rename.ml" 54 1804 1816 "rename.ml" 54 1804 1817
+type(
+  string list
+)
+ident(
+  def x "rename.ml" 54 1804 1820 "rename.ml" 54 1804 1857
+)
+"rename.ml" 54 1804 1823 "rename.ml" 54 1804 1824
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 54 1804 1842 "rename.ml" 54 1804 1857
+)
+"rename.ml" 54 1804 1825 "rename.ml" 54 1804 1826
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 54 1804 1842 "rename.ml" 54 1804 1857
+)
+"rename.ml" 54 1804 1827 "rename.ml" 54 1804 1829
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 54 1804 1842 "rename.ml" 54 1804 1857
+)
+"rename.ml" 54 1804 1830 "rename.ml" 54 1804 1832
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 54 1804 1842 "rename.ml" 54 1804 1857
+)
+"rename.ml" 54 1804 1833 "rename.ml" 54 1804 1834
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 54 1804 1842 "rename.ml" 54 1804 1857
+)
+"rename.ml" 54 1804 1835 "rename.ml" 54 1804 1836
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 54 1804 1842 "rename.ml" 54 1804 1857
+)
+"rename.ml" 54 1804 1820 "rename.ml" 54 1804 1838
+type(
+  funcon
+)
+"rename.ml" 54 1804 1844 "rename.ml" 54 1804 1845
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 54 1804 1823 "rename.ml" 54 1804 1824
+)
+"rename.ml" 54 1804 1846 "rename.ml" 54 1804 1847
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 54 1804 1825 "rename.ml" 54 1804 1826
+)
+"rename.ml" 54 1804 1848 "rename.ml" 54 1804 1849
+type(
+  string list
+)
+ident(
+  int_ref x "rename.ml" 54 1804 1816 "rename.ml" 54 1804 1817
+)
+"rename.ml" 54 1804 1850 "rename.ml" 54 1804 1852
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 54 1804 1830 "rename.ml" 54 1804 1832
+)
+"rename.ml" 54 1804 1853 "rename.ml" 54 1804 1854
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 54 1804 1833 "rename.ml" 54 1804 1834
+)
+"rename.ml" 54 1804 1855 "rename.ml" 54 1804 1856
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 54 1804 1835 "rename.ml" 54 1804 1836
+)
+"rename.ml" 54 1804 1842 "rename.ml" 54 1804 1857
+type(
+  funcon
+)
+"rename.ml" 55 1858 1864 "rename.ml" 55 1858 1869
+type(
+  string list -> funcon -> funcon
+)
+ident(
+  def setGA "rename.ml" 56 1910 1912 "rename.ml" 74 2872 2875
+)
+"rename.ml" 55 1858 1870 "rename.ml" 55 1858 1871
+type(
+  string list
+)
+ident(
+  def x "rename.ml" 55 1858 1872 "rename.ml" 55 1858 1909
+)
+"rename.ml" 55 1858 1875 "rename.ml" 55 1858 1876
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 55 1858 1894 "rename.ml" 55 1858 1909
+)
+"rename.ml" 55 1858 1877 "rename.ml" 55 1858 1878
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 55 1858 1894 "rename.ml" 55 1858 1909
+)
+"rename.ml" 55 1858 1879 "rename.ml" 55 1858 1881
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 55 1858 1894 "rename.ml" 55 1858 1909
+)
+"rename.ml" 55 1858 1882 "rename.ml" 55 1858 1884
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 55 1858 1894 "rename.ml" 55 1858 1909
+)
+"rename.ml" 55 1858 1885 "rename.ml" 55 1858 1886
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 55 1858 1894 "rename.ml" 55 1858 1909
+)
+"rename.ml" 55 1858 1887 "rename.ml" 55 1858 1888
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 55 1858 1894 "rename.ml" 55 1858 1909
+)
+"rename.ml" 55 1858 1872 "rename.ml" 55 1858 1890
+type(
+  funcon
+)
+"rename.ml" 55 1858 1896 "rename.ml" 55 1858 1897
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 55 1858 1875 "rename.ml" 55 1858 1876
+)
+"rename.ml" 55 1858 1898 "rename.ml" 55 1858 1899
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 55 1858 1877 "rename.ml" 55 1858 1878
+)
+"rename.ml" 55 1858 1900 "rename.ml" 55 1858 1902
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 55 1858 1879 "rename.ml" 55 1858 1881
+)
+"rename.ml" 55 1858 1903 "rename.ml" 55 1858 1904
+type(
+  string list
+)
+ident(
+  int_ref x "rename.ml" 55 1858 1870 "rename.ml" 55 1858 1871
+)
+"rename.ml" 55 1858 1905 "rename.ml" 55 1858 1906
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 55 1858 1885 "rename.ml" 55 1858 1886
+)
+"rename.ml" 55 1858 1907 "rename.ml" 55 1858 1908
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 55 1858 1887 "rename.ml" 55 1858 1888
+)
+"rename.ml" 55 1858 1894 "rename.ml" 55 1858 1909
+type(
+  funcon
+)
+"rename.ml" 56 1910 1916 "rename.ml" 56 1910 1924
+type(
+  string list -> funcon -> funcon
+)
+ident(
+  def setLocal "rename.ml" 57 1966 1968 "rename.ml" 74 2872 2875
+)
+"rename.ml" 56 1910 1925 "rename.ml" 56 1910 1926
+type(
+  string list
+)
+ident(
+  def x "rename.ml" 56 1910 1927 "rename.ml" 56 1910 1965
+)
+"rename.ml" 56 1910 1930 "rename.ml" 56 1910 1931
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 56 1910 1949 "rename.ml" 56 1910 1965
+)
+"rename.ml" 56 1910 1932 "rename.ml" 56 1910 1933
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 56 1910 1949 "rename.ml" 56 1910 1965
+)
+"rename.ml" 56 1910 1934 "rename.ml" 56 1910 1936
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 56 1910 1949 "rename.ml" 56 1910 1965
+)
+"rename.ml" 56 1910 1937 "rename.ml" 56 1910 1939
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 56 1910 1949 "rename.ml" 56 1910 1965
+)
+"rename.ml" 56 1910 1940 "rename.ml" 56 1910 1941
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 56 1910 1949 "rename.ml" 56 1910 1965
+)
+"rename.ml" 56 1910 1942 "rename.ml" 56 1910 1943
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 56 1910 1949 "rename.ml" 56 1910 1965
+)
+"rename.ml" 56 1910 1927 "rename.ml" 56 1910 1945
+type(
+  funcon
+)
+"rename.ml" 56 1910 1951 "rename.ml" 56 1910 1952
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 56 1910 1930 "rename.ml" 56 1910 1931
+)
+"rename.ml" 56 1910 1953 "rename.ml" 56 1910 1954
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 56 1910 1932 "rename.ml" 56 1910 1933
+)
+"rename.ml" 56 1910 1955 "rename.ml" 56 1910 1957
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 56 1910 1934 "rename.ml" 56 1910 1936
+)
+"rename.ml" 56 1910 1958 "rename.ml" 56 1910 1960
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 56 1910 1937 "rename.ml" 56 1910 1939
+)
+"rename.ml" 56 1910 1961 "rename.ml" 56 1910 1962
+type(
+  string list
+)
+ident(
+  int_ref x "rename.ml" 56 1910 1925 "rename.ml" 56 1910 1926
+)
+"rename.ml" 56 1910 1963 "rename.ml" 56 1910 1964
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 56 1910 1942 "rename.ml" 56 1910 1943
+)
+"rename.ml" 56 1910 1949 "rename.ml" 56 1910 1965
+type(
+  funcon
+)
+"rename.ml" 57 1966 1972 "rename.ml" 57 1966 1977
+type(
+  string list -> funcon -> funcon
+)
+ident(
+  def setOU "rename.ml" 58 2019 2021 "rename.ml" 74 2872 2875
+)
+"rename.ml" 57 1966 1978 "rename.ml" 57 1966 1979
+type(
+  string list
+)
+ident(
+  def x "rename.ml" 57 1966 1980 "rename.ml" 57 1966 2018
+)
+"rename.ml" 57 1966 1983 "rename.ml" 57 1966 1984
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 57 1966 2002 "rename.ml" 57 1966 2018
+)
+"rename.ml" 57 1966 1985 "rename.ml" 57 1966 1986
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 57 1966 2002 "rename.ml" 57 1966 2018
+)
+"rename.ml" 57 1966 1987 "rename.ml" 57 1966 1989
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 57 1966 2002 "rename.ml" 57 1966 2018
+)
+"rename.ml" 57 1966 1990 "rename.ml" 57 1966 1992
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 57 1966 2002 "rename.ml" 57 1966 2018
+)
+"rename.ml" 57 1966 1993 "rename.ml" 57 1966 1994
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 57 1966 2002 "rename.ml" 57 1966 2018
+)
+"rename.ml" 57 1966 1995 "rename.ml" 57 1966 1996
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 57 1966 2002 "rename.ml" 57 1966 2018
+)
+"rename.ml" 57 1966 1980 "rename.ml" 57 1966 1998
+type(
+  funcon
+)
+"rename.ml" 57 1966 2004 "rename.ml" 57 1966 2005
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 57 1966 1983 "rename.ml" 57 1966 1984
+)
+"rename.ml" 57 1966 2006 "rename.ml" 57 1966 2007
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 57 1966 1985 "rename.ml" 57 1966 1986
+)
+"rename.ml" 57 1966 2008 "rename.ml" 57 1966 2010
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 57 1966 1987 "rename.ml" 57 1966 1989
+)
+"rename.ml" 57 1966 2011 "rename.ml" 57 1966 2013
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 57 1966 1990 "rename.ml" 57 1966 1992
+)
+"rename.ml" 57 1966 2014 "rename.ml" 57 1966 2015
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 57 1966 1993 "rename.ml" 57 1966 1994
+)
+"rename.ml" 57 1966 2016 "rename.ml" 57 1966 2017
+type(
+  string list
+)
+ident(
+  int_ref x "rename.ml" 57 1966 1978 "rename.ml" 57 1966 1979
+)
+"rename.ml" 57 1966 2002 "rename.ml" 57 1966 2018
+type(
+  funcon
+)
+"rename.ml" 58 2019 2025 "rename.ml" 58 2019 2033
+type(
+  funcon -> string list
+)
+ident(
+  def getInput "rename.ml" 59 2058 2060 "rename.ml" 74 2872 2875
+)
+"rename.ml" 58 2019 2037 "rename.ml" 58 2019 2038
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 58 2019 2056 "rename.ml" 58 2019 2057
+)
+"rename.ml" 58 2019 2039 "rename.ml" 58 2019 2040
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 58 2019 2056 "rename.ml" 58 2019 2057
+)
+"rename.ml" 58 2019 2041 "rename.ml" 58 2019 2043
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 58 2019 2056 "rename.ml" 58 2019 2057
+)
+"rename.ml" 58 2019 2044 "rename.ml" 58 2019 2046
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 58 2019 2056 "rename.ml" 58 2019 2057
+)
+"rename.ml" 58 2019 2047 "rename.ml" 58 2019 2048
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 58 2019 2056 "rename.ml" 58 2019 2057
+)
+"rename.ml" 58 2019 2049 "rename.ml" 58 2019 2050
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 58 2019 2056 "rename.ml" 58 2019 2057
+)
+"rename.ml" 58 2019 2034 "rename.ml" 58 2019 2052
+type(
+  funcon
+)
+"rename.ml" 58 2019 2056 "rename.ml" 58 2019 2057
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 58 2019 2037 "rename.ml" 58 2019 2038
+)
+"rename.ml" 59 2058 2064 "rename.ml" 59 2058 2073
+type(
+  funcon -> string list
+)
+ident(
+  def getOutput "rename.ml" 60 2099 2101 "rename.ml" 74 2872 2875
+)
+"rename.ml" 59 2058 2076 "rename.ml" 59 2058 2077
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 59 2058 2097 "rename.ml" 59 2058 2098
+)
+"rename.ml" 59 2058 2078 "rename.ml" 59 2058 2079
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 59 2058 2097 "rename.ml" 59 2058 2098
+)
+"rename.ml" 59 2058 2080 "rename.ml" 59 2058 2082
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 59 2058 2097 "rename.ml" 59 2058 2098
+)
+"rename.ml" 59 2058 2083 "rename.ml" 59 2058 2085
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 59 2058 2097 "rename.ml" 59 2058 2098
+)
+"rename.ml" 59 2058 2086 "rename.ml" 59 2058 2087
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 59 2058 2097 "rename.ml" 59 2058 2098
+)
+"rename.ml" 59 2058 2088 "rename.ml" 59 2058 2089
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 59 2058 2097 "rename.ml" 59 2058 2098
+)
+"rename.ml" 59 2058 2073 "rename.ml" 59 2058 2091
+type(
+  funcon
+)
+"rename.ml" 59 2058 2097 "rename.ml" 59 2058 2098
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 59 2058 2078 "rename.ml" 59 2058 2079
+)
+"rename.ml" 60 2099 2105 "rename.ml" 60 2099 2110
+type(
+  funcon -> string list
+)
+ident(
+  def getGF "rename.ml" 61 2135 2137 "rename.ml" 74 2872 2875
+)
+"rename.ml" 60 2099 2114 "rename.ml" 60 2099 2115
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 60 2099 2132 "rename.ml" 60 2099 2134
+)
+"rename.ml" 60 2099 2116 "rename.ml" 60 2099 2117
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 60 2099 2132 "rename.ml" 60 2099 2134
+)
+"rename.ml" 60 2099 2118 "rename.ml" 60 2099 2120
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 60 2099 2132 "rename.ml" 60 2099 2134
+)
+"rename.ml" 60 2099 2121 "rename.ml" 60 2099 2123
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 60 2099 2132 "rename.ml" 60 2099 2134
+)
+"rename.ml" 60 2099 2124 "rename.ml" 60 2099 2125
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 60 2099 2132 "rename.ml" 60 2099 2134
+)
+"rename.ml" 60 2099 2126 "rename.ml" 60 2099 2127
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 60 2099 2132 "rename.ml" 60 2099 2134
+)
+"rename.ml" 60 2099 2111 "rename.ml" 60 2099 2129
+type(
+  funcon
+)
+"rename.ml" 60 2099 2132 "rename.ml" 60 2099 2134
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 60 2099 2118 "rename.ml" 60 2099 2120
+)
+"rename.ml" 61 2135 2141 "rename.ml" 61 2135 2146
+type(
+  funcon -> string list
+)
+ident(
+  def getGA "rename.ml" 62 2172 2174 "rename.ml" 74 2872 2875
+)
+"rename.ml" 61 2135 2151 "rename.ml" 61 2135 2152
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 61 2135 2169 "rename.ml" 61 2135 2171
+)
+"rename.ml" 61 2135 2153 "rename.ml" 61 2135 2154
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 61 2135 2169 "rename.ml" 61 2135 2171
+)
+"rename.ml" 61 2135 2155 "rename.ml" 61 2135 2157
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 61 2135 2169 "rename.ml" 61 2135 2171
+)
+"rename.ml" 61 2135 2158 "rename.ml" 61 2135 2160
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 61 2135 2169 "rename.ml" 61 2135 2171
+)
+"rename.ml" 61 2135 2161 "rename.ml" 61 2135 2162
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 61 2135 2169 "rename.ml" 61 2135 2171
+)
+"rename.ml" 61 2135 2163 "rename.ml" 61 2135 2164
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 61 2135 2169 "rename.ml" 61 2135 2171
+)
+"rename.ml" 61 2135 2148 "rename.ml" 61 2135 2166
+type(
+  funcon
+)
+"rename.ml" 61 2135 2169 "rename.ml" 61 2135 2171
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 61 2135 2158 "rename.ml" 61 2135 2160
+)
+"rename.ml" 62 2172 2178 "rename.ml" 62 2172 2186
+type(
+  funcon -> string list
+)
+ident(
+  def getLocal "rename.ml" 63 2211 2213 "rename.ml" 74 2872 2875
+)
+"rename.ml" 62 2172 2190 "rename.ml" 62 2172 2191
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 62 2172 2209 "rename.ml" 62 2172 2210
+)
+"rename.ml" 62 2172 2192 "rename.ml" 62 2172 2193
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 62 2172 2209 "rename.ml" 62 2172 2210
+)
+"rename.ml" 62 2172 2194 "rename.ml" 62 2172 2196
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 62 2172 2209 "rename.ml" 62 2172 2210
+)
+"rename.ml" 62 2172 2197 "rename.ml" 62 2172 2199
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 62 2172 2209 "rename.ml" 62 2172 2210
+)
+"rename.ml" 62 2172 2200 "rename.ml" 62 2172 2201
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 62 2172 2209 "rename.ml" 62 2172 2210
+)
+"rename.ml" 62 2172 2202 "rename.ml" 62 2172 2203
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 62 2172 2209 "rename.ml" 62 2172 2210
+)
+"rename.ml" 62 2172 2187 "rename.ml" 62 2172 2205
+type(
+  funcon
+)
+"rename.ml" 62 2172 2209 "rename.ml" 62 2172 2210
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 62 2172 2200 "rename.ml" 62 2172 2201
+)
+"rename.ml" 63 2211 2217 "rename.ml" 63 2211 2229
+type(
+  funcon -> string list
+)
+ident(
+  def getOtherUsed "rename.ml" 65 2256 2258 "rename.ml" 74 2872 2875
+)
+"rename.ml" 63 2211 2233 "rename.ml" 63 2211 2234
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 63 2211 2252 "rename.ml" 63 2211 2253
+)
+"rename.ml" 63 2211 2235 "rename.ml" 63 2211 2236
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 63 2211 2252 "rename.ml" 63 2211 2253
+)
+"rename.ml" 63 2211 2237 "rename.ml" 63 2211 2239
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 63 2211 2252 "rename.ml" 63 2211 2253
+)
+"rename.ml" 63 2211 2240 "rename.ml" 63 2211 2242
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 63 2211 2252 "rename.ml" 63 2211 2253
+)
+"rename.ml" 63 2211 2243 "rename.ml" 63 2211 2244
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 63 2211 2252 "rename.ml" 63 2211 2253
+)
+"rename.ml" 63 2211 2245 "rename.ml" 63 2211 2246
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 63 2211 2252 "rename.ml" 63 2211 2253
+)
+"rename.ml" 63 2211 2230 "rename.ml" 63 2211 2248
+type(
+  funcon
+)
+"rename.ml" 63 2211 2252 "rename.ml" 63 2211 2253
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 63 2211 2245 "rename.ml" 63 2211 2246
+)
+"rename.ml" 65 2256 2262 "rename.ml" 65 2256 2267
+type(
+  funcon -> unit
+)
+ident(
+  def print "rename.ml" 73 2824 2826 "rename.ml" 74 2872 2875
+)
+"rename.ml" 65 2256 2271 "rename.ml" 65 2256 2272
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 66 2290 2291 "rename.ml" 71 2719 2821
+)
+"rename.ml" 65 2256 2273 "rename.ml" 65 2256 2274
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 66 2290 2291 "rename.ml" 71 2719 2821
+)
+"rename.ml" 65 2256 2275 "rename.ml" 65 2256 2277
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 66 2290 2291 "rename.ml" 71 2719 2821
+)
+"rename.ml" 65 2256 2278 "rename.ml" 65 2256 2280
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 66 2290 2291 "rename.ml" 71 2719 2821
+)
+"rename.ml" 65 2256 2281 "rename.ml" 65 2256 2282
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 66 2290 2291 "rename.ml" 71 2719 2821
+)
+"rename.ml" 65 2256 2283 "rename.ml" 65 2256 2284
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 66 2290 2291 "rename.ml" 71 2719 2821
+)
+"rename.ml" 65 2256 2268 "rename.ml" 65 2256 2286
+type(
+  funcon
+)
+"rename.ml" 66 2290 2291 "rename.ml" 66 2290 2304
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 66 2290 2305 "rename.ml" 66 2290 2323
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 66 2290 2291 "rename.ml" 66 2290 2323
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 66 2290 2325 "rename.ml" 66 2290 2334
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"rename.ml" 66 2290 2340 "rename.ml" 66 2290 2341
+type(
+  string
+)
+ident(
+  def x "rename.ml" 66 2290 2345 "rename.ml" 66 2290 2366
+)
+"rename.ml" 66 2290 2345 "rename.ml" 66 2290 2358
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 66 2290 2359 "rename.ml" 66 2290 2364
+type(
+  (string -> unit, out_channel, unit) format
+)
+"rename.ml" 66 2290 2365 "rename.ml" 66 2290 2366
+type(
+  string
+)
+ident(
+  int_ref x "rename.ml" 66 2290 2340 "rename.ml" 66 2290 2341
+)
+"rename.ml" 66 2290 2345 "rename.ml" 66 2290 2366
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 66 2290 2335 "rename.ml" 66 2290 2367
+type(
+  string -> unit
+)
+"rename.ml" 66 2290 2367 "rename.ml" 66 2290 2368
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 65 2256 2271 "rename.ml" 65 2256 2272
+)
+"rename.ml" 66 2290 2325 "rename.ml" 66 2290 2368
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 67 2371 2372 "rename.ml" 67 2371 2385
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 67 2371 2386 "rename.ml" 67 2371 2405
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 67 2371 2372 "rename.ml" 67 2371 2405
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 67 2371 2407 "rename.ml" 67 2371 2416
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"rename.ml" 67 2371 2422 "rename.ml" 67 2371 2423
+type(
+  string
+)
+ident(
+  def x "rename.ml" 67 2371 2427 "rename.ml" 67 2371 2448
+)
+"rename.ml" 67 2371 2427 "rename.ml" 67 2371 2440
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 67 2371 2441 "rename.ml" 67 2371 2446
+type(
+  (string -> unit, out_channel, unit) format
+)
+"rename.ml" 67 2371 2447 "rename.ml" 67 2371 2448
+type(
+  string
+)
+ident(
+  int_ref x "rename.ml" 67 2371 2422 "rename.ml" 67 2371 2423
+)
+"rename.ml" 67 2371 2427 "rename.ml" 67 2371 2448
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 67 2371 2417 "rename.ml" 67 2371 2449
+type(
+  string -> unit
+)
+"rename.ml" 67 2371 2449 "rename.ml" 67 2371 2450
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 65 2256 2273 "rename.ml" 65 2256 2274
+)
+"rename.ml" 67 2371 2407 "rename.ml" 67 2371 2450
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 68 2452 2453 "rename.ml" 68 2452 2466
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 68 2452 2467 "rename.ml" 68 2452 2498
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 68 2452 2453 "rename.ml" 68 2452 2498
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 68 2452 2500 "rename.ml" 68 2452 2509
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"rename.ml" 68 2452 2515 "rename.ml" 68 2452 2516
+type(
+  string
+)
+ident(
+  def x "rename.ml" 68 2452 2520 "rename.ml" 68 2452 2541
+)
+"rename.ml" 68 2452 2520 "rename.ml" 68 2452 2533
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 68 2452 2534 "rename.ml" 68 2452 2539
+type(
+  (string -> unit, out_channel, unit) format
+)
+"rename.ml" 68 2452 2540 "rename.ml" 68 2452 2541
+type(
+  string
+)
+ident(
+  int_ref x "rename.ml" 68 2452 2515 "rename.ml" 68 2452 2516
+)
+"rename.ml" 68 2452 2520 "rename.ml" 68 2452 2541
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 68 2452 2510 "rename.ml" 68 2452 2542
+type(
+  string -> unit
+)
+"rename.ml" 68 2452 2542 "rename.ml" 68 2452 2544
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 65 2256 2275 "rename.ml" 65 2256 2277
+)
+"rename.ml" 68 2452 2500 "rename.ml" 68 2452 2544
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 69 2546 2547 "rename.ml" 69 2546 2560
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 69 2546 2561 "rename.ml" 69 2546 2590
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 69 2546 2547 "rename.ml" 69 2546 2590
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 69 2546 2592 "rename.ml" 69 2546 2601
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"rename.ml" 69 2546 2607 "rename.ml" 69 2546 2608
+type(
+  string
+)
+ident(
+  def x "rename.ml" 69 2546 2612 "rename.ml" 69 2546 2633
+)
+"rename.ml" 69 2546 2612 "rename.ml" 69 2546 2625
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 69 2546 2626 "rename.ml" 69 2546 2631
+type(
+  (string -> unit, out_channel, unit) format
+)
+"rename.ml" 69 2546 2632 "rename.ml" 69 2546 2633
+type(
+  string
+)
+ident(
+  int_ref x "rename.ml" 69 2546 2607 "rename.ml" 69 2546 2608
+)
+"rename.ml" 69 2546 2612 "rename.ml" 69 2546 2633
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 69 2546 2602 "rename.ml" 69 2546 2634
+type(
+  string -> unit
+)
+"rename.ml" 69 2546 2634 "rename.ml" 69 2546 2636
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 65 2256 2278 "rename.ml" 65 2256 2280
+)
+"rename.ml" 69 2546 2592 "rename.ml" 69 2546 2636
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 70 2638 2639 "rename.ml" 70 2638 2652
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 70 2638 2653 "rename.ml" 70 2638 2670
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 70 2638 2639 "rename.ml" 70 2638 2670
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 70 2638 2672 "rename.ml" 70 2638 2681
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"rename.ml" 70 2638 2687 "rename.ml" 70 2638 2688
+type(
+  string
+)
+ident(
+  def x "rename.ml" 70 2638 2692 "rename.ml" 70 2638 2713
+)
+"rename.ml" 70 2638 2692 "rename.ml" 70 2638 2705
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 70 2638 2706 "rename.ml" 70 2638 2711
+type(
+  (string -> unit, out_channel, unit) format
+)
+"rename.ml" 70 2638 2712 "rename.ml" 70 2638 2713
+type(
+  string
+)
+ident(
+  int_ref x "rename.ml" 70 2638 2687 "rename.ml" 70 2638 2688
+)
+"rename.ml" 70 2638 2692 "rename.ml" 70 2638 2713
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 70 2638 2682 "rename.ml" 70 2638 2714
+type(
+  string -> unit
+)
+"rename.ml" 70 2638 2714 "rename.ml" 70 2638 2715
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 65 2256 2281 "rename.ml" 65 2256 2282
+)
+"rename.ml" 70 2638 2672 "rename.ml" 70 2638 2715
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 71 2719 2720 "rename.ml" 71 2719 2733
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 71 2719 2734 "rename.ml" 71 2719 2756
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 71 2719 2720 "rename.ml" 71 2719 2756
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 71 2719 2758 "rename.ml" 71 2719 2767
+type(
+  (string -> unit) -> string list -> unit
+)
+ident(
+  ext_ref List.iter
+)
+"rename.ml" 71 2719 2773 "rename.ml" 71 2719 2774
+type(
+  string
+)
+ident(
+  def x "rename.ml" 71 2719 2778 "rename.ml" 71 2719 2799
+)
+"rename.ml" 71 2719 2778 "rename.ml" 71 2719 2791
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 71 2719 2792 "rename.ml" 71 2719 2797
+type(
+  (string -> unit, out_channel, unit) format
+)
+"rename.ml" 71 2719 2798 "rename.ml" 71 2719 2799
+type(
+  string
+)
+ident(
+  int_ref x "rename.ml" 71 2719 2773 "rename.ml" 71 2719 2774
+)
+"rename.ml" 71 2719 2778 "rename.ml" 71 2719 2799
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 71 2719 2768 "rename.ml" 71 2719 2800
+type(
+  string -> unit
+)
+"rename.ml" 71 2719 2800 "rename.ml" 71 2719 2801
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 65 2256 2283 "rename.ml" 65 2256 2284
+)
+"rename.ml" 71 2719 2758 "rename.ml" 71 2719 2801
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 71 2719 2803 "rename.ml" 71 2719 2816
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 71 2719 2817 "rename.ml" 71 2719 2821
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 71 2719 2803 "rename.ml" 71 2719 2821
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 71 2719 2758 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 71 2719 2720 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 70 2638 2672 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 70 2638 2639 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 69 2546 2592 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 69 2546 2547 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 68 2452 2500 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 68 2452 2453 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 67 2371 2407 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 67 2371 2372 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 66 2290 2325 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 66 2290 2291 "rename.ml" 71 2719 2821
+type(
+  unit
+)
+"rename.ml" 73 2824 2830 "rename.ml" 73 2824 2838
+type(
+  string list ->
+  string list ->
+  string list -> string list -> string list -> string list -> funcon
+)
+ident(
+  def setMulti "rename.ml" 73 2824 2871 "rename.ml" 74 2872 2875
+)
+"rename.ml" 73 2824 2839 "rename.ml" 73 2824 2840
+type(
+  string list
+)
+ident(
+  def i "rename.ml" 73 2824 2841 "rename.ml" 73 2824 2871
+)
+"rename.ml" 73 2824 2841 "rename.ml" 73 2824 2842
+type(
+  string list
+)
+ident(
+  def o "rename.ml" 73 2824 2843 "rename.ml" 73 2824 2871
+)
+"rename.ml" 73 2824 2843 "rename.ml" 73 2824 2845
+type(
+  string list
+)
+ident(
+  def gf "rename.ml" 73 2824 2846 "rename.ml" 73 2824 2871
+)
+"rename.ml" 73 2824 2846 "rename.ml" 73 2824 2848
+type(
+  string list
+)
+ident(
+  def ga "rename.ml" 73 2824 2849 "rename.ml" 73 2824 2871
+)
+"rename.ml" 73 2824 2849 "rename.ml" 73 2824 2850
+type(
+  string list
+)
+ident(
+  def l "rename.ml" 73 2824 2852 "rename.ml" 73 2824 2871
+)
+"rename.ml" 73 2824 2852 "rename.ml" 73 2824 2853
+type(
+  string list
+)
+ident(
+  def u "rename.ml" 73 2824 2855 "rename.ml" 73 2824 2871
+)
+"rename.ml" 73 2824 2857 "rename.ml" 73 2824 2858
+type(
+  string list
+)
+ident(
+  int_ref i "rename.ml" 73 2824 2839 "rename.ml" 73 2824 2840
+)
+"rename.ml" 73 2824 2859 "rename.ml" 73 2824 2860
+type(
+  string list
+)
+ident(
+  int_ref o "rename.ml" 73 2824 2841 "rename.ml" 73 2824 2842
+)
+"rename.ml" 73 2824 2861 "rename.ml" 73 2824 2863
+type(
+  string list
+)
+ident(
+  int_ref gf "rename.ml" 73 2824 2843 "rename.ml" 73 2824 2845
+)
+"rename.ml" 73 2824 2864 "rename.ml" 73 2824 2866
+type(
+  string list
+)
+ident(
+  int_ref ga "rename.ml" 73 2824 2846 "rename.ml" 73 2824 2848
+)
+"rename.ml" 73 2824 2867 "rename.ml" 73 2824 2868
+type(
+  string list
+)
+ident(
+  int_ref l "rename.ml" 73 2824 2849 "rename.ml" 73 2824 2850
+)
+"rename.ml" 73 2824 2869 "rename.ml" 73 2824 2870
+type(
+  string list
+)
+ident(
+  int_ref u "rename.ml" 73 2824 2852 "rename.ml" 73 2824 2853
+)
+"rename.ml" 73 2824 2855 "rename.ml" 73 2824 2871
+type(
+  funcon
+)
+"rename.ml" 78 2960 2966 "rename.ml" 78 2960 2971
+type(
+  t
+)
+ident(
+  def empty "rename.ml" 79 2981 2982 "rename.ml" 92 3349 3352
+)
+"rename.ml" 78 2960 2978 "rename.ml" 78 2960 2980
+type(
+  t
+)
+type(
+  t
+)
+"rename.ml" 79 2981 2986 "rename.ml" 79 2981 2989
+type(
+  ('a * 'b) list -> 'a -> 'b
+)
+ident(
+  def get "rename.ml" 80 3011 3012 "rename.ml" 92 3349 3352
+)
+"rename.ml" 79 2981 2990 "rename.ml" 79 2981 2991
+type(
+  ('a * 'b) list
+)
+ident(
+  def s "rename.ml" 79 2981 2992 "rename.ml" 79 2981 3010
+)
+"rename.ml" 79 2981 2992 "rename.ml" 79 2981 2993
+type(
+  'a
+)
+ident(
+  def n "rename.ml" 79 2981 2996 "rename.ml" 79 2981 3010
+)
+"rename.ml" 79 2981 2996 "rename.ml" 79 2981 3006
+type(
+  'a -> ('a * 'b) list -> 'b
+)
+ident(
+  ext_ref List.assoc
+)
+"rename.ml" 79 2981 3007 "rename.ml" 79 2981 3008
+type(
+  'a
+)
+ident(
+  int_ref n "rename.ml" 79 2981 2992 "rename.ml" 79 2981 2993
+)
+"rename.ml" 79 2981 3009 "rename.ml" 79 2981 3010
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref s "rename.ml" 79 2981 2990 "rename.ml" 79 2981 2991
+)
+"rename.ml" 79 2981 2996 "rename.ml" 79 2981 3010
+call(
+  tail
+)
+type(
+  'b
+)
+"rename.ml" 80 3011 3016 "rename.ml" 80 3011 3019
+type(
+  ('c * 'd) list -> 'c -> bool
+)
+ident(
+  def mem "rename.ml" 81 3045 3046 "rename.ml" 92 3349 3352
+)
+"rename.ml" 80 3011 3020 "rename.ml" 80 3011 3021
+type(
+  ('c * 'd) list
+)
+ident(
+  def s "rename.ml" 80 3011 3022 "rename.ml" 80 3011 3044
+)
+"rename.ml" 80 3011 3022 "rename.ml" 80 3011 3023
+type(
+  'c
+)
+ident(
+  def n "rename.ml" 80 3011 3026 "rename.ml" 80 3011 3044
+)
+"rename.ml" 80 3011 3026 "rename.ml" 80 3011 3040
+type(
+  'c -> ('c * 'd) list -> bool
+)
+ident(
+  ext_ref List.mem_assoc
+)
+"rename.ml" 80 3011 3041 "rename.ml" 80 3011 3042
+type(
+  'c
+)
+ident(
+  int_ref n "rename.ml" 80 3011 3022 "rename.ml" 80 3011 3023
+)
+"rename.ml" 80 3011 3043 "rename.ml" 80 3011 3044
+type(
+  ('c * 'd) list
+)
+ident(
+  int_ref s "rename.ml" 80 3011 3020 "rename.ml" 80 3011 3021
+)
+"rename.ml" 80 3011 3026 "rename.ml" 80 3011 3044
+call(
+  tail
+)
+type(
+  bool
+)
+"rename.ml" 81 3045 3054 "rename.ml" 81 3045 3057
+type(
+  ('e * 'f) list -> 'e -> 'f -> ('e * 'f) list
+)
+ident(
+  def set "rename.ml" 81 3045 3046 "rename.ml" 92 3349 3352
+)
+"rename.ml" 81 3045 3058 "rename.ml" 81 3045 3059
+type(
+  ('e * 'f) list
+)
+ident(
+  def s "rename.ml" 81 3045 3060 "rename.ml" 87 3188 3213
+)
+"rename.ml" 81 3045 3060 "rename.ml" 81 3045 3061
+type(
+  'e
+)
+ident(
+  def n "rename.ml" 81 3045 3062 "rename.ml" 87 3188 3213
+)
+"rename.ml" 81 3045 3062 "rename.ml" 81 3045 3063
+type(
+  'f
+)
+ident(
+  def v "rename.ml" 82 3066 3068 "rename.ml" 87 3188 3213
+)
+"rename.ml" 82 3066 3074 "rename.ml" 82 3066 3075
+type(
+  ('e * 'f) list
+)
+ident(
+  int_ref s "rename.ml" 81 3045 3058 "rename.ml" 81 3045 3059
+)
+"rename.ml" 83 3081 3085 "rename.ml" 83 3081 3087
+type(
+  ('e * 'f) list
+)
+"rename.ml" 83 3081 3092 "rename.ml" 83 3081 3093
+type(
+  'e
+)
+ident(
+  int_ref n "rename.ml" 81 3045 3060 "rename.ml" 81 3045 3061
+)
+"rename.ml" 83 3081 3095 "rename.ml" 83 3081 3096
+type(
+  'f
+)
+ident(
+  int_ref v "rename.ml" 81 3045 3062 "rename.ml" 81 3045 3063
+)
+"rename.ml" 83 3081 3091 "rename.ml" 83 3081 3097
+type(
+  'e * 'f
+)
+"rename.ml" 83 3081 3090 "rename.ml" 83 3081 3098
+type(
+  ('e * 'f) list
+)
+"rename.ml" 84 3099 3104 "rename.ml" 84 3099 3106
+type(
+  'e
+)
+ident(
+  def np "rename.ml" 85 3119 3122 "rename.ml" 87 3188 3213
+)
+"rename.ml" 84 3099 3108 "rename.ml" 84 3099 3110
+type(
+  'f
+)
+ident(
+  def vp "rename.ml" 85 3119 3122 "rename.ml" 87 3188 3213
+)
+"rename.ml" 84 3099 3103 "rename.ml" 84 3099 3111
+type(
+  'e * 'f
+)
+"rename.ml" 84 3099 3113 "rename.ml" 84 3099 3115
+type(
+  ('e * 'f) list
+)
+ident(
+  def sp "rename.ml" 85 3119 3122 "rename.ml" 87 3188 3213
+)
+"rename.ml" 84 3099 3103 "rename.ml" 84 3099 3115
+type(
+  ('e * 'f) list
+)
+"rename.ml" 85 3119 3125 "rename.ml" 85 3119 3126
+type(
+  'e
+)
+ident(
+  int_ref n "rename.ml" 81 3045 3060 "rename.ml" 81 3045 3061
+)
+"rename.ml" 85 3119 3127 "rename.ml" 85 3119 3128
+type(
+  'e -> 'e -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"rename.ml" 85 3119 3129 "rename.ml" 85 3119 3131
+type(
+  'e
+)
+ident(
+  int_ref np "rename.ml" 84 3099 3104 "rename.ml" 84 3099 3106
+)
+"rename.ml" 85 3119 3125 "rename.ml" 85 3119 3131
+type(
+  bool
+)
+"rename.ml" 85 3119 3138 "rename.ml" 85 3119 3140
+type(
+  'e
+)
+ident(
+  int_ref np "rename.ml" 84 3099 3104 "rename.ml" 84 3099 3106
+)
+"rename.ml" 85 3119 3142 "rename.ml" 85 3119 3143
+type(
+  'f
+)
+ident(
+  int_ref v "rename.ml" 81 3045 3062 "rename.ml" 81 3045 3063
+)
+"rename.ml" 85 3119 3137 "rename.ml" 85 3119 3144
+type(
+  'e * 'f
+)
+"rename.ml" 85 3119 3146 "rename.ml" 85 3119 3148
+type(
+  ('e * 'f) list
+)
+ident(
+  int_ref sp "rename.ml" 84 3099 3113 "rename.ml" 84 3099 3115
+)
+"rename.ml" 85 3119 3137 "rename.ml" 85 3119 3148
+type(
+  ('e * 'f) list
+)
+"rename.ml" 86 3154 3160 "rename.ml" 86 3154 3161
+type(
+  'e
+)
+ident(
+  int_ref n "rename.ml" 81 3045 3060 "rename.ml" 81 3045 3061
+)
+"rename.ml" 86 3154 3162 "rename.ml" 86 3154 3163
+type(
+  'e -> 'e -> bool
+)
+ident(
+  ext_ref Pervasives.( < )
+)
+"rename.ml" 86 3154 3164 "rename.ml" 86 3154 3166
+type(
+  'e
+)
+ident(
+  int_ref np "rename.ml" 84 3099 3104 "rename.ml" 84 3099 3106
+)
+"rename.ml" 86 3154 3160 "rename.ml" 86 3154 3166
+type(
+  bool
+)
+"rename.ml" 86 3154 3173 "rename.ml" 86 3154 3174
+type(
+  'e
+)
+ident(
+  int_ref n "rename.ml" 81 3045 3060 "rename.ml" 81 3045 3061
+)
+"rename.ml" 86 3154 3176 "rename.ml" 86 3154 3177
+type(
+  'f
+)
+ident(
+  int_ref v "rename.ml" 81 3045 3062 "rename.ml" 81 3045 3063
+)
+"rename.ml" 86 3154 3172 "rename.ml" 86 3154 3178
+type(
+  'e * 'f
+)
+"rename.ml" 86 3154 3180 "rename.ml" 86 3154 3181
+type(
+  ('e * 'f) list
+)
+ident(
+  int_ref s "rename.ml" 81 3045 3058 "rename.ml" 81 3045 3059
+)
+"rename.ml" 86 3154 3172 "rename.ml" 86 3154 3181
+type(
+  ('e * 'f) list
+)
+"rename.ml" 87 3188 3192 "rename.ml" 87 3188 3194
+type(
+  'e
+)
+ident(
+  int_ref np "rename.ml" 84 3099 3104 "rename.ml" 84 3099 3106
+)
+"rename.ml" 87 3188 3196 "rename.ml" 87 3188 3198
+type(
+  'f
+)
+ident(
+  int_ref vp "rename.ml" 84 3099 3108 "rename.ml" 84 3099 3110
+)
+"rename.ml" 87 3188 3191 "rename.ml" 87 3188 3199
+type(
+  'e * 'f
+)
+"rename.ml" 87 3188 3202 "rename.ml" 87 3188 3205
+type(
+  ('e * 'f) list -> 'e -> 'f -> ('e * 'f) list
+)
+ident(
+  int_ref set "rename.ml" 81 3045 3054 "rename.ml" 81 3045 3057
+)
+"rename.ml" 87 3188 3206 "rename.ml" 87 3188 3208
+type(
+  ('e * 'f) list
+)
+ident(
+  int_ref sp "rename.ml" 84 3099 3113 "rename.ml" 84 3099 3115
+)
+"rename.ml" 87 3188 3209 "rename.ml" 87 3188 3210
+type(
+  'e
+)
+ident(
+  int_ref n "rename.ml" 81 3045 3060 "rename.ml" 81 3045 3061
+)
+"rename.ml" 87 3188 3211 "rename.ml" 87 3188 3212
+type(
+  'f
+)
+ident(
+  int_ref v "rename.ml" 81 3045 3062 "rename.ml" 81 3045 3063
+)
+"rename.ml" 87 3188 3201 "rename.ml" 87 3188 3213
+call(
+  stack
+)
+type(
+  ('e * 'f) list
+)
+"rename.ml" 87 3188 3191 "rename.ml" 87 3188 3213
+type(
+  ('e * 'f) list
+)
+"rename.ml" 86 3154 3157 "rename.ml" 87 3188 3213
+type(
+  ('e * 'f) list
+)
+"rename.ml" 85 3119 3122 "rename.ml" 87 3188 3213
+type(
+  ('e * 'f) list
+)
+"rename.ml" 82 3066 3068 "rename.ml" 87 3188 3213
+type(
+  ('e * 'f) list
+)
+"rename.ml" 88 3215 3224 "rename.ml" 88 3215 3229
+type(
+  (string * MyFunCont.funcon) list -> unit
+)
+ident(
+  def print "rename.ml" 88 3215 3216 "rename.ml" 92 3349 3352
+)
+"rename.ml" 88 3215 3230 "rename.ml" 88 3215 3231
+type(
+  (string * MyFunCont.funcon) list
+)
+ident(
+  def s "rename.ml" 89 3234 3235 "rename.ml" 91 3275 3348
+)
+"rename.ml" 89 3234 3241 "rename.ml" 89 3234 3242
+type(
+  (string * MyFunCont.funcon) list
+)
+ident(
+  int_ref s "rename.ml" 88 3215 3230 "rename.ml" 88 3215 3231
+)
+"rename.ml" 90 3248 3250 "rename.ml" 90 3248 3252
+type(
+  (string * MyFunCont.funcon) list
+)
+"rename.ml" 90 3248 3254 "rename.ml" 90 3248 3267
+type(
+  (unit, out_channel, unit) format -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 90 3248 3268 "rename.ml" 90 3248 3274
+type(
+  (unit, out_channel, unit) format
+)
+"rename.ml" 90 3248 3254 "rename.ml" 90 3248 3274
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 91 3275 3281 "rename.ml" 91 3275 3283
+type(
+  string
+)
+ident(
+  def np "rename.ml" 91 3275 3295 "rename.ml" 91 3275 3348
+)
+"rename.ml" 91 3275 3285 "rename.ml" 91 3275 3287
+type(
+  MyFunCont.funcon
+)
+ident(
+  def vp "rename.ml" 91 3275 3295 "rename.ml" 91 3275 3348
+)
+"rename.ml" 91 3275 3280 "rename.ml" 91 3275 3288
+type(
+  string * MyFunCont.funcon
+)
+"rename.ml" 91 3275 3290 "rename.ml" 91 3275 3292
+type(
+  (string * MyFunCont.funcon) list
+)
+ident(
+  def sp "rename.ml" 91 3275 3295 "rename.ml" 91 3275 3348
+)
+"rename.ml" 91 3275 3280 "rename.ml" 91 3275 3292
+type(
+  (string * MyFunCont.funcon) list
+)
+"rename.ml" 91 3275 3295 "rename.ml" 91 3275 3308
+type(
+  (string -> unit, out_channel, unit) format -> string -> unit
+)
+ident(
+  ext_ref Printf.printf
+)
+"rename.ml" 91 3275 3309 "rename.ml" 91 3275 3315
+type(
+  (string -> unit, out_channel, unit) format
+)
+"rename.ml" 91 3275 3316 "rename.ml" 91 3275 3318
+type(
+  string
+)
+ident(
+  int_ref np "rename.ml" 91 3275 3281 "rename.ml" 91 3275 3283
+)
+"rename.ml" 91 3275 3295 "rename.ml" 91 3275 3318
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 91 3275 3320 "rename.ml" 91 3275 3335
+type(
+  MyFunCont.funcon -> unit
+)
+ident(
+  int_ref MyFunCont.print "rename.ml" 39 1165 1167 "rename.ml" 39 1165 1192
+)
+"rename.ml" 91 3275 3336 "rename.ml" 91 3275 3338
+type(
+  MyFunCont.funcon
+)
+ident(
+  int_ref vp "rename.ml" 91 3275 3285 "rename.ml" 91 3275 3287
+)
+"rename.ml" 91 3275 3320 "rename.ml" 91 3275 3338
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 91 3275 3340 "rename.ml" 91 3275 3345
+type(
+  (string * MyFunCont.funcon) list -> unit
+)
+ident(
+  int_ref print "rename.ml" 88 3215 3224 "rename.ml" 88 3215 3229
+)
+"rename.ml" 91 3275 3346 "rename.ml" 91 3275 3348
+type(
+  (string * MyFunCont.funcon) list
+)
+ident(
+  int_ref sp "rename.ml" 91 3275 3290 "rename.ml" 91 3275 3292
+)
+"rename.ml" 91 3275 3340 "rename.ml" 91 3275 3348
+call(
+  tail
+)
+type(
+  unit
+)
+"rename.ml" 91 3275 3320 "rename.ml" 91 3275 3348
+type(
+  unit
+)
+"rename.ml" 91 3275 3295 "rename.ml" 91 3275 3348
+type(
+  unit
+)
+"rename.ml" 89 3234 3235 "rename.ml" 91 3275 3348
+type(
+  unit
+)
+"rename.ml" 93 3354 3374 "rename.ml" 93 3354 3395
+call(
+  stack
+)
+"rename.ml" 94 3396 3400 "rename.ml" 94 3396 3404
+type(
+  (string * MyFunCont.funcon) list ref
+)
+ident(
+  def myAF "rename.ml" 103 3465 3465 "rename.ml" 1 0 -1
+)
+"rename.ml" 94 3396 3408 "rename.ml" 94 3396 3411
+type(
+  (string * MyFunCont.funcon) list -> (string * MyFunCont.funcon) list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"rename.ml" 94 3396 3412 "rename.ml" 94 3396 3414
+type(
+  (string * MyFunCont.funcon) list
+)
+"rename.ml" 94 3396 3408 "rename.ml" 94 3396 3414
+type(
+  (string * MyFunCont.funcon) list ref
+)
+"rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+type(
+  (string * string) list ref
+)
+ident(
+  def monContexte "rename.ml" 104 3511 3511 "rename.ml" 1 0 -1
+)
+"rename.ml" 103 3465 3483 "rename.ml" 103 3465 3486
+type(
+  (string * string) list -> (string * string) list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"rename.ml" 103 3465 3487 "rename.ml" 103 3465 3489
+type(
+  (string * string) list
+)
+"rename.ml" 103 3465 3483 "rename.ml" 103 3465 3489
+type(
+  (string * string) list ref
+)
+"rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+type(
+  string list ref
+)
+ident(
+  def monContexteNotRenammed "rename.ml" 105 3568 3568 "rename.ml" 1 0 -1
+)
+"rename.ml" 104 3511 3540 "rename.ml" 104 3511 3543
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"rename.ml" 104 3511 3544 "rename.ml" 104 3511 3546
+type(
+  string list
+)
+"rename.ml" 104 3511 3540 "rename.ml" 104 3511 3546
+type(
+  string list ref
+)
+"rename.ml" 105 3568 3572 "rename.ml" 105 3568 3576
+type(
+  string list ref
+)
+ident(
+  def used "rename.ml" 109 3610 3610 "rename.ml" 1 0 -1
+)
+"rename.ml" 105 3568 3579 "rename.ml" 105 3568 3582
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"rename.ml" 105 3568 3583 "rename.ml" 105 3568 3585
+type(
+  string list
+)
+"rename.ml" 105 3568 3579 "rename.ml" 105 3568 3585
+type(
+  string list ref
+)
+"rename.ml" 109 3610 3614 "rename.ml" 109 3610 3634
+type(
+  string list ref
+)
+ident(
+  def listeDesVariablesFic "rename.ml" 110 3661 3661 "rename.ml" 1 0 -1
+)
+"rename.ml" 109 3610 3637 "rename.ml" 109 3610 3640
+type(
+  string list -> string list ref
+)
+ident(
+  ext_ref Pervasives.ref
+)
+"rename.ml" 109 3610 3641 "rename.ml" 109 3610 3643
+type(
+  string list
+)
+"rename.ml" 109 3610 3637 "rename.ml" 109 3610 3643
+type(
+  string list ref
+)
+"rename.ml" 110 3661 3665 "rename.ml" 110 3661 3674
+type(
+  string -> bool
+)
+ident(
+  def existsVar "rename.ml" 111 3718 3718 "rename.ml" 1 0 -1
+)
+"rename.ml" 110 3661 3675 "rename.ml" 110 3661 3678
+type(
+  string
+)
+ident(
+  def var "rename.ml" 110 3661 3682 "rename.ml" 110 3661 3717
+)
+"rename.ml" 110 3661 3682 "rename.ml" 110 3661 3690
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"rename.ml" 110 3661 3692 "rename.ml" 110 3661 3695
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 110 3661 3675 "rename.ml" 110 3661 3678
+)
+"rename.ml" 110 3661 3696 "rename.ml" 110 3661 3697
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 110 3661 3697 "rename.ml" 110 3661 3717
+type(
+  string list ref
+)
+ident(
+  int_ref listeDesVariablesFic "rename.ml" 109 3610 3614 "rename.ml" 109 3610 3634
+)
+"rename.ml" 110 3661 3696 "rename.ml" 110 3661 3717
+type(
+  string list
+)
+"rename.ml" 110 3661 3682 "rename.ml" 110 3661 3717
+call(
+  tail
+)
+type(
+  bool
+)
+"rename.ml" 111 3718 3722 "rename.ml" 111 3718 3728
+type(
+  string -> unit
+)
+ident(
+  def addVar "rename.ml" 114 3803 3803 "rename.ml" 1 0 -1
+)
+"rename.ml" 111 3718 3729 "rename.ml" 111 3718 3732
+type(
+  string
+)
+ident(
+  def var "rename.ml" 112 3736 3738 "rename.ml" 112 3736 3801
+)
+"rename.ml" 112 3736 3738 "rename.ml" 112 3736 3758
+type(
+  string list ref
+)
+ident(
+  int_ref listeDesVariablesFic "rename.ml" 109 3610 3614 "rename.ml" 109 3610 3634
+)
+"rename.ml" 112 3736 3759 "rename.ml" 112 3736 3761
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 112 3736 3762 "rename.ml" 112 3736 3773
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref List.append
+)
+"rename.ml" 112 3736 3775 "rename.ml" 112 3736 3778
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 111 3718 3729 "rename.ml" 111 3718 3732
+)
+"rename.ml" 112 3736 3774 "rename.ml" 112 3736 3779
+type(
+  string list
+)
+"rename.ml" 112 3736 3780 "rename.ml" 112 3736 3781
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 112 3736 3781 "rename.ml" 112 3736 3801
+type(
+  string list ref
+)
+ident(
+  int_ref listeDesVariablesFic "rename.ml" 109 3610 3614 "rename.ml" 109 3610 3634
+)
+"rename.ml" 112 3736 3780 "rename.ml" 112 3736 3801
+type(
+  string list
+)
+"rename.ml" 112 3736 3762 "rename.ml" 112 3736 3801
+call(
+  stack
+)
+type(
+  string list
+)
+"rename.ml" 112 3736 3738 "rename.ml" 112 3736 3801
+type(
+  unit
+)
+"rename.ml" 114 3803 3807 "rename.ml" 114 3803 3827
+type(
+  'a -> ('a * 'b) list -> bool
+)
+ident(
+  def existeAssosVarNewVal "rename.ml" 115 3872 3872 "rename.ml" 1 0 -1
+)
+"rename.ml" 114 3803 3828 "rename.ml" 114 3803 3831
+type(
+  'a
+)
+ident(
+  def var "rename.ml" 114 3803 3832 "rename.ml" 114 3803 3871
+)
+"rename.ml" 114 3803 3832 "rename.ml" 114 3803 3840
+type(
+  ('a * 'b) list
+)
+ident(
+  def contexte "rename.ml" 114 3803 3843 "rename.ml" 114 3803 3871
+)
+"rename.ml" 114 3803 3843 "rename.ml" 114 3803 3857
+type(
+  'a -> ('a * 'b) list -> bool
+)
+ident(
+  ext_ref List.mem_assoc
+)
+"rename.ml" 114 3803 3858 "rename.ml" 114 3803 3861
+type(
+  'a
+)
+ident(
+  int_ref var "rename.ml" 114 3803 3828 "rename.ml" 114 3803 3831
+)
+"rename.ml" 114 3803 3863 "rename.ml" 114 3803 3871
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contexte "rename.ml" 114 3803 3832 "rename.ml" 114 3803 3840
+)
+"rename.ml" 114 3803 3843 "rename.ml" 114 3803 3871
+call(
+  tail
+)
+type(
+  bool
+)
+"rename.ml" 115 3872 3876 "rename.ml" 115 3872 3893
+type(
+  'a -> ('a * 'b) list -> 'b
+)
+ident(
+  def getAssosVarNewVal "rename.ml" 117 3934 3934 "rename.ml" 1 0 -1
+)
+"rename.ml" 115 3872 3894 "rename.ml" 115 3872 3897
+type(
+  'a
+)
+ident(
+  def var "rename.ml" 115 3872 3898 "rename.ml" 115 3872 3932
+)
+"rename.ml" 115 3872 3898 "rename.ml" 115 3872 3906
+type(
+  ('a * 'b) list
+)
+ident(
+  def contexte "rename.ml" 115 3872 3909 "rename.ml" 115 3872 3932
+)
+"rename.ml" 115 3872 3909 "rename.ml" 115 3872 3919
+type(
+  'a -> ('a * 'b) list -> 'b
+)
+ident(
+  ext_ref List.assoc
+)
+"rename.ml" 115 3872 3920 "rename.ml" 115 3872 3923
+type(
+  'a
+)
+ident(
+  int_ref var "rename.ml" 115 3872 3894 "rename.ml" 115 3872 3897
+)
+"rename.ml" 115 3872 3924 "rename.ml" 115 3872 3932
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contexte "rename.ml" 115 3872 3898 "rename.ml" 115 3872 3906
+)
+"rename.ml" 115 3872 3909 "rename.ml" 115 3872 3932
+call(
+  tail
+)
+type(
+  'b
+)
+"rename.ml" 117 3934 3942 "rename.ml" 117 3934 3953
+type(
+  string -> int -> string
+)
+ident(
+  def getNewIdent "rename.ml" 117 3934 3934 "rename.ml" 1 0 -1
+)
+"rename.ml" 117 3934 3954 "rename.ml" 117 3934 3957
+type(
+  string
+)
+ident(
+  def var "rename.ml" 117 3934 3958 "rename.ml" 120 4085 4097
+)
+"rename.ml" 117 3934 3958 "rename.ml" 117 3934 3966
+type(
+  int
+)
+ident(
+  def instance "rename.ml" 118 3969 3970 "rename.ml" 120 4085 4097
+)
+"rename.ml" 118 3969 3974 "rename.ml" 118 3969 3980
+type(
+  string
+)
+ident(
+  def newStr "rename.ml" 119 4024 4025 "rename.ml" 120 4085 4097
+)
+"rename.ml" 118 3969 3984 "rename.ml" 118 3969 3998
+type(
+  (string -> int -> string, unit, string) format -> string -> int -> string
+)
+ident(
+  ext_ref Printf.sprintf
+)
+"rename.ml" 118 3969 3999 "rename.ml" 118 3969 4006
+type(
+  (string -> int -> string, unit, string) format
+)
+"rename.ml" 118 3969 4007 "rename.ml" 118 3969 4010
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 117 3934 3954 "rename.ml" 117 3934 3957
+)
+"rename.ml" 118 3969 4011 "rename.ml" 118 3969 4019
+type(
+  int
+)
+ident(
+  int_ref instance "rename.ml" 117 3934 3958 "rename.ml" 117 3934 3966
+)
+"rename.ml" 118 3969 3983 "rename.ml" 118 3969 4020
+call(
+  stack
+)
+type(
+  string
+)
+"rename.ml" 119 4024 4029 "rename.ml" 119 4024 4038
+type(
+  string -> bool
+)
+ident(
+  int_ref existsVar "rename.ml" 110 3661 3665 "rename.ml" 110 3661 3674
+)
+"rename.ml" 119 4024 4039 "rename.ml" 119 4024 4045
+type(
+  string
+)
+ident(
+  int_ref newStr "rename.ml" 118 3969 3974 "rename.ml" 118 3969 3980
+)
+"rename.ml" 119 4024 4028 "rename.ml" 119 4024 4046
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 119 4024 4052 "rename.ml" 119 4024 4063
+type(
+  string -> int -> string
+)
+ident(
+  int_ref getNewIdent "rename.ml" 117 3934 3942 "rename.ml" 117 3934 3953
+)
+"rename.ml" 119 4024 4064 "rename.ml" 119 4024 4067
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 117 3934 3954 "rename.ml" 117 3934 3957
+)
+"rename.ml" 119 4024 4070 "rename.ml" 119 4024 4078
+type(
+  int
+)
+ident(
+  int_ref instance "rename.ml" 117 3934 3958 "rename.ml" 117 3934 3966
+)
+"rename.ml" 119 4024 4079 "rename.ml" 119 4024 4080
+type(
+  int -> int -> int
+)
+ident(
+  ext_ref Pervasives.( + )
+)
+"rename.ml" 119 4024 4081 "rename.ml" 119 4024 4082
+type(
+  int
+)
+"rename.ml" 119 4024 4069 "rename.ml" 119 4024 4083
+type(
+  int
+)
+"rename.ml" 119 4024 4052 "rename.ml" 119 4024 4083
+call(
+  tail
+)
+type(
+  string
+)
+"rename.ml" 120 4085 4091 "rename.ml" 120 4085 4097
+type(
+  string
+)
+ident(
+  int_ref newStr "rename.ml" 118 3969 3974 "rename.ml" 118 3969 3980
+)
+"rename.ml" 119 4024 4025 "rename.ml" 120 4085 4097
+type(
+  string
+)
+"rename.ml" 118 3969 3970 "rename.ml" 120 4085 4097
+type(
+  string
+)
+"rename.ml" 122 4099 4103 "rename.ml" 122 4099 4120
+type(
+  string -> string
+)
+ident(
+  def renameIfNecessary "rename.ml" 137 4432 4432 "rename.ml" 1 0 -1
+)
+"rename.ml" 122 4099 4121 "rename.ml" 122 4099 4124
+type(
+  string
+)
+ident(
+  def var "rename.ml" 123 4127 4128 "rename.ml" 134 4423 4429
+)
+"rename.ml" 123 4127 4132 "rename.ml" 123 4127 4138
+type(
+  string
+)
+ident(
+  def newVar "rename.ml" 132 4334 4334 "rename.ml" 134 4423 4429
+)
+"rename.ml" 123 4127 4146 "rename.ml" 123 4127 4155
+type(
+  string -> bool
+)
+ident(
+  int_ref existsVar "rename.ml" 110 3661 3665 "rename.ml" 110 3661 3674
+)
+"rename.ml" 123 4127 4156 "rename.ml" 123 4127 4159
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 122 4099 4121 "rename.ml" 122 4099 4124
+)
+"rename.ml" 123 4127 4146 "rename.ml" 123 4127 4159
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 125 4178 4188 "rename.ml" 125 4178 4194
+type(
+  string
+)
+ident(
+  def newStr "rename.ml" 127 4225 4231 "rename.ml" 128 4288 4300
+)
+"rename.ml" 125 4178 4197 "rename.ml" 125 4178 4208
+type(
+  string -> int -> string
+)
+ident(
+  int_ref getNewIdent "rename.ml" 117 3934 3942 "rename.ml" 117 3934 3953
+)
+"rename.ml" 125 4178 4209 "rename.ml" 125 4178 4212
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 122 4099 4121 "rename.ml" 122 4099 4124
+)
+"rename.ml" 125 4178 4213 "rename.ml" 125 4178 4214
+type(
+  int
+)
+"rename.ml" 125 4178 4197 "rename.ml" 125 4178 4214
+call(
+  stack
+)
+type(
+  string
+)
+"rename.ml" 127 4225 4231 "rename.ml" 127 4225 4242
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 127 4225 4243 "rename.ml" 127 4225 4245
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 127 4225 4246 "rename.ml" 127 4225 4257
+type(
+  (string * string) list -> (string * string) list -> (string * string) list
+)
+ident(
+  ext_ref List.append
+)
+"rename.ml" 127 4225 4258 "rename.ml" 127 4225 4259
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 127 4225 4259 "rename.ml" 127 4225 4270
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 127 4225 4258 "rename.ml" 127 4225 4270
+type(
+  (string * string) list
+)
+"rename.ml" 127 4225 4273 "rename.ml" 127 4225 4276
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 122 4099 4121 "rename.ml" 122 4099 4124
+)
+"rename.ml" 127 4225 4278 "rename.ml" 127 4225 4284
+type(
+  string
+)
+ident(
+  int_ref newStr "rename.ml" 125 4178 4188 "rename.ml" 125 4178 4194
+)
+"rename.ml" 127 4225 4272 "rename.ml" 127 4225 4285
+type(
+  string * string
+)
+"rename.ml" 127 4225 4271 "rename.ml" 127 4225 4286
+type(
+  (string * string) list
+)
+"rename.ml" 127 4225 4246 "rename.ml" 127 4225 4286
+call(
+  stack
+)
+type(
+  (string * string) list
+)
+"rename.ml" 127 4225 4231 "rename.ml" 127 4225 4286
+type(
+  unit
+)
+"rename.ml" 128 4288 4294 "rename.ml" 128 4288 4300
+type(
+  string
+)
+ident(
+  int_ref newStr "rename.ml" 125 4178 4188 "rename.ml" 125 4178 4194
+)
+"rename.ml" 127 4225 4231 "rename.ml" 128 4288 4300
+type(
+  string
+)
+"rename.ml" 124 4166 4171 "rename.ml" 129 4301 4309
+type(
+  string
+)
+"rename.ml" 130 4311 4321 "rename.ml" 130 4311 4328
+type(
+  string
+)
+ident(
+  int_ref var "rename.ml" 122 4099 4121 "rename.ml" 122 4099 4124
+)
+"rename.ml" 123 4127 4141 "rename.ml" 130 4311 4329
+type(
+  string
+)
+"rename.ml" 132 4334 4334 "rename.ml" 132 4334 4356
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 132 4334 4357 "rename.ml" 132 4334 4359
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 132 4334 4360 "rename.ml" 132 4334 4371
+type(
+  string list -> string list -> string list
+)
+ident(
+  ext_ref List.append
+)
+"rename.ml" 132 4334 4374 "rename.ml" 132 4334 4380
+type(
+  string
+)
+ident(
+  int_ref newVar "rename.ml" 123 4127 4132 "rename.ml" 123 4127 4138
+)
+"rename.ml" 132 4334 4373 "rename.ml" 132 4334 4381
+type(
+  string list
+)
+"rename.ml" 132 4334 4382 "rename.ml" 132 4334 4383
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 132 4334 4383 "rename.ml" 132 4334 4405
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 132 4334 4382 "rename.ml" 132 4334 4405
+type(
+  string list
+)
+"rename.ml" 132 4334 4360 "rename.ml" 132 4334 4405
+call(
+  stack
+)
+type(
+  string list
+)
+"rename.ml" 132 4334 4334 "rename.ml" 132 4334 4405
+type(
+  unit
+)
+"rename.ml" 133 4408 4408 "rename.ml" 133 4408 4414
+type(
+  string -> unit
+)
+ident(
+  int_ref addVar "rename.ml" 111 3718 3722 "rename.ml" 111 3718 3728
+)
+"rename.ml" 133 4408 4415 "rename.ml" 133 4408 4421
+type(
+  string
+)
+ident(
+  int_ref newVar "rename.ml" 123 4127 4132 "rename.ml" 123 4127 4138
+)
+"rename.ml" 133 4408 4408 "rename.ml" 133 4408 4421
+call(
+  stack
+)
+type(
+  unit
+)
+"rename.ml" 134 4423 4423 "rename.ml" 134 4423 4429
+type(
+  string
+)
+ident(
+  int_ref newVar "rename.ml" 123 4127 4132 "rename.ml" 123 4127 4138
+)
+"rename.ml" 133 4408 4408 "rename.ml" 134 4423 4429
+type(
+  string
+)
+"rename.ml" 132 4334 4334 "rename.ml" 134 4423 4429
+type(
+  string
+)
+"rename.ml" 123 4127 4128 "rename.ml" 134 4423 4429
+type(
+  string
+)
+"rename.ml" 137 4432 4441 "rename.ml" 137 4432 4455
+type(
+  ('a * 'b) list -> ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  def concatContexte "rename.ml" 137 4432 4432 "rename.ml" 1 0 -1
+)
+"rename.ml" 137 4432 4456 "rename.ml" 137 4432 4464
+type(
+  ('a * 'b) list
+)
+ident(
+  def contCour "rename.ml" 137 4432 4465 "rename.ml" 145 4719 4722
+)
+"rename.ml" 137 4432 4465 "rename.ml" 137 4432 4472
+type(
+  ('a * 'b) list
+)
+ident(
+  def contEng "rename.ml" 138 4475 4475 "rename.ml" 145 4719 4722
+)
+"rename.ml" 138 4475 4478 "rename.ml" 138 4475 4485
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contEng "rename.ml" 137 4432 4465 "rename.ml" 137 4432 4472
+)
+"rename.ml" 138 4475 4486 "rename.ml" 138 4475 4487
+type(
+  ('a * 'b) list -> ('a * 'b) list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"rename.ml" 138 4475 4488 "rename.ml" 138 4475 4490
+type(
+  ('a * 'b) list
+)
+"rename.ml" 138 4475 4478 "rename.ml" 138 4475 4490
+type(
+  bool
+)
+"rename.ml" 138 4475 4496 "rename.ml" 138 4475 4504
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contCour "rename.ml" 137 4432 4456 "rename.ml" 137 4432 4464
+)
+"rename.ml" 141 4516 4522 "rename.ml" 141 4516 4525
+type(
+  'a
+)
+ident(
+  def var "rename.ml" 142 4552 4553 "rename.ml" 143 4637 4716
+)
+"rename.ml" 141 4516 4528 "rename.ml" 141 4516 4529
+type(
+  'b
+)
+"rename.ml" 141 4516 4521 "rename.ml" 141 4516 4530
+type(
+  'a * 'b
+)
+"rename.ml" 141 4516 4533 "rename.ml" 141 4516 4540
+type(
+  ('a * 'b) list -> 'a * 'b
+)
+ident(
+  ext_ref List.hd
+)
+"rename.ml" 141 4516 4541 "rename.ml" 141 4516 4548
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contEng "rename.ml" 137 4432 4465 "rename.ml" 137 4432 4472
+)
+"rename.ml" 141 4516 4533 "rename.ml" 141 4516 4548
+call(
+  stack
+)
+type(
+  'a * 'b
+)
+"rename.ml" 142 4552 4556 "rename.ml" 142 4552 4576
+type(
+  'a -> ('a * 'b) list -> bool
+)
+ident(
+  int_ref existeAssosVarNewVal "rename.ml" 114 3803 3807 "rename.ml" 114 3803 3827
+)
+"rename.ml" 142 4552 4577 "rename.ml" 142 4552 4580
+type(
+  'a
+)
+ident(
+  int_ref var "rename.ml" 141 4516 4522 "rename.ml" 141 4516 4525
+)
+"rename.ml" 142 4552 4581 "rename.ml" 142 4552 4589
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contCour "rename.ml" 137 4432 4456 "rename.ml" 137 4432 4464
+)
+"rename.ml" 142 4552 4556 "rename.ml" 142 4552 4589
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 142 4552 4595 "rename.ml" 142 4552 4609
+type(
+  ('a * 'b) list -> ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  int_ref concatContexte "rename.ml" 137 4432 4441 "rename.ml" 137 4432 4455
+)
+"rename.ml" 142 4552 4610 "rename.ml" 142 4552 4618
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contCour "rename.ml" 137 4432 4456 "rename.ml" 137 4432 4464
+)
+"rename.ml" 142 4552 4620 "rename.ml" 142 4552 4627
+type(
+  ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  ext_ref List.tl
+)
+"rename.ml" 142 4552 4628 "rename.ml" 142 4552 4635
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contEng "rename.ml" 137 4432 4465 "rename.ml" 137 4432 4472
+)
+"rename.ml" 142 4552 4619 "rename.ml" 142 4552 4636
+call(
+  stack
+)
+type(
+  ('a * 'b) list
+)
+"rename.ml" 142 4552 4595 "rename.ml" 142 4552 4636
+call(
+  tail
+)
+type(
+  ('a * 'b) list
+)
+"rename.ml" 143 4637 4643 "rename.ml" 143 4637 4654
+type(
+  ('a * 'b) list -> ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  ext_ref List.append
+)
+"rename.ml" 143 4637 4656 "rename.ml" 143 4637 4663
+type(
+  ('a * 'b) list -> 'a * 'b
+)
+ident(
+  ext_ref List.hd
+)
+"rename.ml" 143 4637 4664 "rename.ml" 143 4637 4671
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contEng "rename.ml" 137 4432 4465 "rename.ml" 137 4432 4472
+)
+"rename.ml" 143 4637 4656 "rename.ml" 143 4637 4671
+call(
+  stack
+)
+type(
+  'a * 'b
+)
+"rename.ml" 143 4637 4655 "rename.ml" 143 4637 4672
+type(
+  ('a * 'b) list
+)
+"rename.ml" 143 4637 4674 "rename.ml" 143 4637 4688
+type(
+  ('a * 'b) list -> ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  int_ref concatContexte "rename.ml" 137 4432 4441 "rename.ml" 137 4432 4455
+)
+"rename.ml" 143 4637 4689 "rename.ml" 143 4637 4697
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contCour "rename.ml" 137 4432 4456 "rename.ml" 137 4432 4464
+)
+"rename.ml" 143 4637 4699 "rename.ml" 143 4637 4706
+type(
+  ('a * 'b) list -> ('a * 'b) list
+)
+ident(
+  ext_ref List.tl
+)
+"rename.ml" 143 4637 4707 "rename.ml" 143 4637 4714
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref contEng "rename.ml" 137 4432 4465 "rename.ml" 137 4432 4472
+)
+"rename.ml" 143 4637 4698 "rename.ml" 143 4637 4715
+call(
+  stack
+)
+type(
+  ('a * 'b) list
+)
+"rename.ml" 143 4637 4673 "rename.ml" 143 4637 4716
+call(
+  stack
+)
+type(
+  ('a * 'b) list
+)
+"rename.ml" 143 4637 4643 "rename.ml" 143 4637 4716
+call(
+  tail
+)
+type(
+  ('a * 'b) list
+)
+"rename.ml" 142 4552 4553 "rename.ml" 143 4637 4716
+type(
+  ('a * 'b) list
+)
+"rename.ml" 140 4510 4510 "rename.ml" 145 4719 4722
+type(
+  ('a * 'b) list
+)
+"rename.ml" 138 4475 4475 "rename.ml" 145 4719 4722
+type(
+  ('a * 'b) list
+)
+"rename.ml" 150 4727 4731 "rename.ml" 150 4727 4750
+type(
+  Cabs.single_name list ->
+  (Cabs.base_type * Cabs.storage *
+   (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression))
+  list
+)
+ident(
+  def convertListeParamES "rename.ml" 160 4954 4954 "rename.ml" 1 0 -1
+)
+"rename.ml" 150 4727 4752 "rename.ml" 150 4727 4756
+type(
+  Cabs.single_name list
+)
+ident(
+  def pars "rename.ml" 151 4779 4780 "rename.ml" 157 4944 4951
+)
+"rename.ml" 151 4779 4780 "rename.ml" 151 4779 4788
+type(
+  (Cabs.single_name ->
+   Cabs.base_type * Cabs.storage *
+   (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression)) ->
+  Cabs.single_name list ->
+  (Cabs.base_type * Cabs.storage *
+   (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression))
+  list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 152 4789 4795 "rename.ml" 152 4789 4802
+type(
+  Cabs.single_name
+)
+ident(
+  def courant "rename.ml" 153 4807 4810 "rename.ml" 156 4923 4940
+)
+"rename.ml" 153 4807 4815 "rename.ml" 153 4807 4818
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 154 4842 4845 "rename.ml" 156 4923 4940
+)
+"rename.ml" 153 4807 4820 "rename.ml" 153 4807 4821
+type(
+  Cabs.storage
+)
+ident(
+  def a "rename.ml" 154 4842 4845 "rename.ml" 156 4923 4940
+)
+"rename.ml" 153 4807 4823 "rename.ml" 153 4807 4827
+type(
+  Cabs.name
+)
+ident(
+  def name "rename.ml" 154 4842 4845 "rename.ml" 156 4923 4940
+)
+"rename.ml" 153 4807 4814 "rename.ml" 153 4807 4828
+type(
+  Cabs.single_name
+)
+"rename.ml" 153 4807 4831 "rename.ml" 153 4807 4838
+type(
+  Cabs.single_name
+)
+ident(
+  int_ref courant "rename.ml" 152 4789 4795 "rename.ml" 152 4789 4802
+)
+"rename.ml" 154 4842 4850 "rename.ml" 154 4842 4853
+type(
+  string
+)
+ident(
+  def nom "rename.ml" 155 4874 4877 "rename.ml" 156 4923 4940
+)
+"rename.ml" 154 4842 4855 "rename.ml" 154 4842 4856
+type(
+  Cabs.base_type
+)
+ident(
+  def x "rename.ml" 155 4874 4877 "rename.ml" 156 4923 4940
+)
+"rename.ml" 154 4842 4858 "rename.ml" 154 4842 4859
+type(
+  Cabs.gnu_attrs
+)
+ident(
+  def y "rename.ml" 155 4874 4877 "rename.ml" 156 4923 4940
+)
+"rename.ml" 154 4842 4861 "rename.ml" 154 4842 4862
+type(
+  Cabs.expression
+)
+ident(
+  def z "rename.ml" 155 4874 4877 "rename.ml" 156 4923 4940
+)
+"rename.ml" 154 4842 4849 "rename.ml" 154 4842 4863
+type(
+  Cabs.name
+)
+"rename.ml" 154 4842 4866 "rename.ml" 154 4842 4870
+type(
+  Cabs.name
+)
+ident(
+  int_ref name "rename.ml" 153 4807 4823 "rename.ml" 153 4807 4827
+)
+"rename.ml" 155 4874 4881 "rename.ml" 155 4874 4885
+type(
+  string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression
+)
+ident(
+  def name "rename.ml" 156 4923 4926 "rename.ml" 156 4923 4940
+)
+"rename.ml" 155 4874 4889 "rename.ml" 155 4874 4906
+type(
+  string -> string
+)
+ident(
+  int_ref renameIfNecessary "rename.ml" 122 4099 4103 "rename.ml" 122 4099 4120
+)
+"rename.ml" 155 4874 4907 "rename.ml" 155 4874 4910
+type(
+  string
+)
+ident(
+  int_ref nom "rename.ml" 154 4842 4850 "rename.ml" 154 4842 4853
+)
+"rename.ml" 155 4874 4889 "rename.ml" 155 4874 4910
+call(
+  stack
+)
+type(
+  string
+)
+"rename.ml" 155 4874 4912 "rename.ml" 155 4874 4913
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref x "rename.ml" 154 4842 4855 "rename.ml" 154 4842 4856
+)
+"rename.ml" 155 4874 4915 "rename.ml" 155 4874 4916
+type(
+  Cabs.gnu_attrs
+)
+ident(
+  int_ref y "rename.ml" 154 4842 4858 "rename.ml" 154 4842 4859
+)
+"rename.ml" 155 4874 4917 "rename.ml" 155 4874 4918
+type(
+  Cabs.expression
+)
+ident(
+  int_ref z "rename.ml" 154 4842 4861 "rename.ml" 154 4842 4862
+)
+"rename.ml" 155 4874 4888 "rename.ml" 155 4874 4919
+type(
+  string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression
+)
+"rename.ml" 156 4923 4927 "rename.ml" 156 4923 4930
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 153 4807 4815 "rename.ml" 153 4807 4818
+)
+"rename.ml" 156 4923 4932 "rename.ml" 156 4923 4933
+type(
+  Cabs.storage
+)
+ident(
+  int_ref a "rename.ml" 153 4807 4820 "rename.ml" 153 4807 4821
+)
+"rename.ml" 156 4923 4935 "rename.ml" 156 4923 4939
+type(
+  string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression
+)
+ident(
+  int_ref name "rename.ml" 155 4874 4881 "rename.ml" 155 4874 4885
+)
+"rename.ml" 156 4923 4926 "rename.ml" 156 4923 4940
+type(
+  Cabs.base_type * Cabs.storage *
+  (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression)
+)
+"rename.ml" 155 4874 4877 "rename.ml" 156 4923 4940
+type(
+  Cabs.base_type * Cabs.storage *
+  (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression)
+)
+"rename.ml" 154 4842 4845 "rename.ml" 156 4923 4940
+type(
+  Cabs.base_type * Cabs.storage *
+  (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression)
+)
+"rename.ml" 153 4807 4810 "rename.ml" 156 4923 4940
+type(
+  Cabs.base_type * Cabs.storage *
+  (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression)
+)
+"rename.ml" 152 4789 4790 "rename.ml" 157 4944 4946
+type(
+  Cabs.single_name ->
+  Cabs.base_type * Cabs.storage *
+  (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression)
+)
+"rename.ml" 157 4944 4947 "rename.ml" 157 4944 4951
+type(
+  Cabs.single_name list
+)
+ident(
+  int_ref pars "rename.ml" 150 4727 4752 "rename.ml" 150 4727 4756
+)
+"rename.ml" 151 4779 4780 "rename.ml" 157 4944 4951
+call(
+  tail
+)
+type(
+  (Cabs.base_type * Cabs.storage *
+   (string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression))
+  list
+)
+"rename.ml" 160 4954 4958 "rename.ml" 160 4954 4970
+type(
+  Cabs.base_type -> Cabs.base_type
+)
+ident(
+  def convert_type "rename.ml" 165 5096 5096 "rename.ml" 1 0 -1
+)
+"rename.ml" 160 4954 4972 "rename.ml" 160 4954 4975
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 161 4992 4994 "rename.ml" 163 5082 5094
+)
+"rename.ml" 161 4992 5000 "rename.ml" 161 4992 5003
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 160 4954 4972 "rename.ml" 160 4954 4975
+)
+"rename.ml" 162 5009 5018 "rename.ml" 162 5009 5022
+type(
+  Cabs.base_type
+)
+ident(
+  def typ1 "rename.ml" 162 5009 5039 "rename.ml" 162 5009 5080
+)
+"rename.ml" 162 5009 5024 "rename.ml" 162 5009 5028
+type(
+  Cabs.single_name list
+)
+ident(
+  def pars "rename.ml" 162 5009 5039 "rename.ml" 162 5009 5080
+)
+"rename.ml" 162 5009 5030 "rename.ml" 162 5009 5033
+type(
+  bool
+)
+ident(
+  def ell "rename.ml" 162 5009 5039 "rename.ml" 162 5009 5080
+)
+"rename.ml" 162 5009 5017 "rename.ml" 162 5009 5034
+type(
+  Cabs.proto
+)
+"rename.ml" 162 5009 5011 "rename.ml" 162 5009 5034
+type(
+  Cabs.base_type
+)
+"rename.ml" 162 5009 5045 "rename.ml" 162 5009 5049
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ1 "rename.ml" 162 5009 5018 "rename.ml" 162 5009 5022
+)
+"rename.ml" 162 5009 5050 "rename.ml" 162 5009 5069
+type(
+  Cabs.single_name list -> Cabs.single_name list
+)
+ident(
+  int_ref convertListeParamES "rename.ml" 150 4727 4731 "rename.ml" 150 4727 4750
+)
+"rename.ml" 162 5009 5070 "rename.ml" 162 5009 5074
+type(
+  Cabs.single_name list
+)
+ident(
+  int_ref pars "rename.ml" 162 5009 5024 "rename.ml" 162 5009 5028
+)
+"rename.ml" 162 5009 5050 "rename.ml" 162 5009 5074
+call(
+  stack
+)
+type(
+  Cabs.single_name list
+)
+"rename.ml" 162 5009 5076 "rename.ml" 162 5009 5079
+type(
+  bool
+)
+ident(
+  int_ref ell "rename.ml" 162 5009 5030 "rename.ml" 162 5009 5033
+)
+"rename.ml" 162 5009 5044 "rename.ml" 162 5009 5080
+type(
+  Cabs.proto
+)
+"rename.ml" 162 5009 5039 "rename.ml" 162 5009 5080
+type(
+  Cabs.base_type
+)
+"rename.ml" 163 5082 5086 "rename.ml" 163 5082 5087
+type(
+  Cabs.base_type
+)
+"rename.ml" 163 5082 5091 "rename.ml" 163 5082 5094
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 160 4954 4972 "rename.ml" 160 4954 4975
+)
+"rename.ml" 161 4992 4994 "rename.ml" 163 5082 5094
+type(
+  Cabs.base_type
+)
+"rename.ml" 165 5096 5100 "rename.ml" 165 5096 5110
+type(
+  ('a * 'b) list -> 'b list
+)
+ident(
+  def onlyNewVar "rename.ml" 166 5153 5153 "rename.ml" 1 0 -1
+)
+"rename.ml" 165 5096 5111 "rename.ml" 165 5096 5118
+type(
+  ('a * 'b) list
+)
+ident(
+  def context "rename.ml" 165 5096 5121 "rename.ml" 165 5096 5152
+)
+"rename.ml" 165 5096 5121 "rename.ml" 165 5096 5129
+type(
+  ('a * 'b -> 'b) -> ('a * 'b) list -> 'b list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 165 5096 5136 "rename.ml" 165 5096 5137
+type(
+  'a
+)
+ident(
+  def o "rename.ml" 165 5096 5143 "rename.ml" 165 5096 5144
+)
+"rename.ml" 165 5096 5138 "rename.ml" 165 5096 5139
+type(
+  'b
+)
+ident(
+  def n "rename.ml" 165 5096 5143 "rename.ml" 165 5096 5144
+)
+"rename.ml" 165 5096 5135 "rename.ml" 165 5096 5140
+type(
+  'a * 'b
+)
+"rename.ml" 165 5096 5143 "rename.ml" 165 5096 5144
+type(
+  'b
+)
+ident(
+  int_ref n "rename.ml" 165 5096 5138 "rename.ml" 165 5096 5139
+)
+"rename.ml" 165 5096 5130 "rename.ml" 165 5096 5145
+type(
+  'a * 'b -> 'b
+)
+"rename.ml" 165 5096 5145 "rename.ml" 165 5096 5152
+type(
+  ('a * 'b) list
+)
+ident(
+  int_ref context "rename.ml" 165 5096 5111 "rename.ml" 165 5096 5118
+)
+"rename.ml" 165 5096 5121 "rename.ml" 165 5096 5152
+call(
+  tail
+)
+type(
+  'b list
+)
+"rename.ml" 166 5153 5157 "rename.ml" 166 5153 5169
+type(
+  'a list -> 'a list -> 'a list -> 'a list
+)
+ident(
+  def mfilterLocal "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 166 5153 5171 "rename.ml" 166 5153 5180
+type(
+  'a list
+)
+ident(
+  def mContexte "rename.ml" 166 5153 5181 "rename.ml" 167 5209 5317
+)
+"rename.ml" 166 5153 5181 "rename.ml" 166 5153 5188
+type(
+  'a list
+)
+ident(
+  def myParam "rename.ml" 166 5153 5189 "rename.ml" 167 5209 5317
+)
+"rename.ml" 166 5153 5189 "rename.ml" 166 5153 5206
+type(
+  'a list
+)
+ident(
+  def contexteEnglobant "rename.ml" 167 5209 5211 "rename.ml" 167 5209 5317
+)
+"rename.ml" 167 5209 5211 "rename.ml" 167 5209 5222
+type(
+  ('a -> bool) -> 'a list -> 'a list
+)
+ident(
+  ext_ref List.filter
+)
+"rename.ml" 167 5209 5228 "rename.ml" 167 5209 5229
+type(
+  'a
+)
+ident(
+  def c "rename.ml" 167 5209 5233 "rename.ml" 167 5209 5307
+)
+"rename.ml" 167 5209 5236 "rename.ml" 167 5209 5244
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"rename.ml" 167 5209 5245 "rename.ml" 167 5209 5246
+type(
+  'a
+)
+ident(
+  int_ref c "rename.ml" 167 5209 5228 "rename.ml" 167 5209 5229
+)
+"rename.ml" 167 5209 5247 "rename.ml" 167 5209 5254
+type(
+  'a list
+)
+ident(
+  int_ref myParam "rename.ml" 166 5153 5181 "rename.ml" 166 5153 5188
+)
+"rename.ml" 167 5209 5236 "rename.ml" 167 5209 5254
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 167 5209 5255 "rename.ml" 167 5209 5257
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"rename.ml" 167 5209 5258 "rename.ml" 167 5209 5266
+type(
+  'a -> 'a list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"rename.ml" 167 5209 5267 "rename.ml" 167 5209 5268
+type(
+  'a
+)
+ident(
+  int_ref c "rename.ml" 167 5209 5228 "rename.ml" 167 5209 5229
+)
+"rename.ml" 167 5209 5269 "rename.ml" 167 5209 5286
+type(
+  'a list
+)
+ident(
+  int_ref contexteEnglobant "rename.ml" 166 5153 5189 "rename.ml" 166 5153 5206
+)
+"rename.ml" 167 5209 5258 "rename.ml" 167 5209 5286
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 167 5209 5236 "rename.ml" 167 5209 5286
+type(
+  bool
+)
+"rename.ml" 167 5209 5292 "rename.ml" 167 5209 5297
+type(
+  bool
+)
+"rename.ml" 167 5209 5303 "rename.ml" 167 5209 5307
+type(
+  bool
+)
+"rename.ml" 167 5209 5233 "rename.ml" 167 5209 5307
+type(
+  bool
+)
+"rename.ml" 167 5209 5223 "rename.ml" 167 5209 5308
+type(
+  'a -> bool
+)
+"rename.ml" 167 5209 5308 "rename.ml" 167 5209 5317
+type(
+  'a list
+)
+ident(
+  int_ref mContexte "rename.ml" 166 5153 5171 "rename.ml" 166 5153 5180
+)
+"rename.ml" 167 5209 5211 "rename.ml" 167 5209 5317
+call(
+  tail
+)
+type(
+  'a list
+)
+"rename.ml" 169 5319 5327 "rename.ml" 169 5319 5340
+type(
+  Cabs.name -> Cabs.name
+)
+ident(
+  def convert_param "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 169 5319 5343 "rename.ml" 169 5319 5345
+type(
+  string
+)
+ident(
+  def id "rename.ml" 170 5373 5375 "rename.ml" 170 5373 5427
+)
+"rename.ml" 169 5319 5347 "rename.ml" 169 5319 5350
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 170 5373 5375 "rename.ml" 170 5373 5427
+)
+"rename.ml" 169 5319 5352 "rename.ml" 169 5319 5356
+type(
+  Cabs.gnu_attrs
+)
+ident(
+  def attr "rename.ml" 170 5373 5375 "rename.ml" 170 5373 5427
+)
+"rename.ml" 169 5319 5358 "rename.ml" 169 5319 5361
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 170 5373 5375 "rename.ml" 170 5373 5427
+)
+"rename.ml" 169 5319 5342 "rename.ml" 169 5319 5362
+type(
+  Cabs.name
+)
+"rename.ml" 170 5373 5376 "rename.ml" 170 5373 5378
+type(
+  string
+)
+ident(
+  int_ref id "rename.ml" 169 5319 5343 "rename.ml" 169 5319 5345
+)
+"rename.ml" 170 5373 5380 "rename.ml" 170 5373 5392
+type(
+  Cabs.base_type -> Cabs.base_type
+)
+ident(
+  int_ref convert_type "rename.ml" 160 4954 4958 "rename.ml" 160 4954 4970
+)
+"rename.ml" 170 5373 5393 "rename.ml" 170 5373 5396
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 169 5319 5347 "rename.ml" 169 5319 5350
+)
+"rename.ml" 170 5373 5380 "rename.ml" 170 5373 5396
+call(
+  stack
+)
+type(
+  Cabs.base_type
+)
+"rename.ml" 170 5373 5398 "rename.ml" 170 5373 5402
+type(
+  Cabs.gnu_attrs
+)
+ident(
+  int_ref attr "rename.ml" 169 5319 5352 "rename.ml" 169 5319 5356
+)
+"rename.ml" 170 5373 5404 "rename.ml" 170 5373 5422
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 170 5373 5423 "rename.ml" 170 5373 5426
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 169 5319 5358 "rename.ml" 169 5319 5361
+)
+"rename.ml" 170 5373 5404 "rename.ml" 170 5373 5426
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 170 5373 5375 "rename.ml" 170 5373 5427
+type(
+  string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression
+)
+"rename.ml" 174 5431 5435 "rename.ml" 174 5431 5453
+type(
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  def convert_comma_exps "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 174 5431 5454 "rename.ml" 174 5431 5458
+type(
+  Cabs.expression list
+)
+ident(
+  def exps "rename.ml" 174 5431 5461 "rename.ml" 174 5431 5495
+)
+"rename.ml" 174 5431 5461 "rename.ml" 174 5431 5469
+type(
+  (Cabs.expression -> Cabs.expression) ->
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 174 5431 5471 "rename.ml" 174 5431 5489
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 174 5431 5491 "rename.ml" 174 5431 5495
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref exps "rename.ml" 174 5431 5454 "rename.ml" 174 5431 5458
+)
+"rename.ml" 174 5431 5461 "rename.ml" 174 5431 5495
+call(
+  tail
+)
+type(
+  Cabs.expression list
+)
+"rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  def convert_expression "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 177 5498 5522 "rename.ml" 177 5498 5525
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 178 5542 5545 "rename.ml" 208 7056 7069
+)
+"rename.ml" 178 5542 5551 "rename.ml" 178 5542 5554
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 177 5498 5522 "rename.ml" 177 5498 5525
+)
+"rename.ml" 179 5560 5572 "rename.ml" 179 5560 5574
+type(
+  Cabs.unary_operator
+)
+ident(
+  def op "rename.ml" 179 5560 5585 "rename.ml" 179 5560 5622
+)
+"rename.ml" 179 5560 5576 "rename.ml" 179 5560 5580
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "rename.ml" 179 5560 5585 "rename.ml" 179 5560 5622
+)
+"rename.ml" 179 5560 5565 "rename.ml" 179 5560 5581
+type(
+  Cabs.expression
+)
+"rename.ml" 179 5560 5592 "rename.ml" 179 5560 5594
+type(
+  Cabs.unary_operator
+)
+ident(
+  int_ref op "rename.ml" 179 5560 5572 "rename.ml" 179 5560 5574
+)
+"rename.ml" 179 5560 5597 "rename.ml" 179 5560 5615
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 179 5560 5616 "rename.ml" 179 5560 5620
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "rename.ml" 179 5560 5576 "rename.ml" 179 5560 5580
+)
+"rename.ml" 179 5560 5596 "rename.ml" 179 5560 5621
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 179 5560 5585 "rename.ml" 179 5560 5622
+type(
+  Cabs.expression
+)
+"rename.ml" 180 5623 5636 "rename.ml" 180 5623 5638
+type(
+  Cabs.binary_operator
+)
+ident(
+  def op "rename.ml" 181 5656 5661 "rename.ml" 181 5656 5726
+)
+"rename.ml" 180 5623 5640 "rename.ml" 180 5623 5644
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "rename.ml" 181 5656 5661 "rename.ml" 181 5656 5726
+)
+"rename.ml" 180 5623 5646 "rename.ml" 180 5623 5650
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "rename.ml" 181 5656 5661 "rename.ml" 181 5656 5726
+)
+"rename.ml" 180 5623 5628 "rename.ml" 180 5623 5651
+type(
+  Cabs.expression
+)
+"rename.ml" 181 5656 5669 "rename.ml" 181 5656 5671
+type(
+  Cabs.binary_operator
+)
+ident(
+  int_ref op "rename.ml" 180 5623 5636 "rename.ml" 180 5623 5638
+)
+"rename.ml" 181 5656 5674 "rename.ml" 181 5656 5692
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 181 5656 5693 "rename.ml" 181 5656 5697
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "rename.ml" 180 5623 5640 "rename.ml" 180 5623 5644
+)
+"rename.ml" 181 5656 5673 "rename.ml" 181 5656 5698
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 181 5656 5701 "rename.ml" 181 5656 5719
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 181 5656 5720 "rename.ml" 181 5656 5724
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "rename.ml" 180 5623 5646 "rename.ml" 180 5623 5650
+)
+"rename.ml" 181 5656 5700 "rename.ml" 181 5656 5725
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 181 5656 5661 "rename.ml" 181 5656 5726
+type(
+  Cabs.expression
+)
+"rename.ml" 182 5727 5742 "rename.ml" 182 5727 5746
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "rename.ml" 183 5763 5768 "rename.ml" 183 5763 5858
+)
+"rename.ml" 182 5727 5748 "rename.ml" 182 5727 5752
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "rename.ml" 183 5763 5768 "rename.ml" 183 5763 5858
+)
+"rename.ml" 182 5727 5754 "rename.ml" 182 5727 5758
+type(
+  Cabs.expression
+)
+ident(
+  def exp3 "rename.ml" 183 5763 5768 "rename.ml" 183 5763 5858
+)
+"rename.ml" 182 5727 5732 "rename.ml" 182 5727 5759
+type(
+  Cabs.expression
+)
+"rename.ml" 183 5763 5779 "rename.ml" 183 5763 5797
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 183 5763 5798 "rename.ml" 183 5763 5802
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "rename.ml" 182 5727 5742 "rename.ml" 182 5727 5746
+)
+"rename.ml" 183 5763 5778 "rename.ml" 183 5763 5803
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 183 5763 5806 "rename.ml" 183 5763 5824
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 183 5763 5825 "rename.ml" 183 5763 5829
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "rename.ml" 182 5727 5748 "rename.ml" 182 5727 5752
+)
+"rename.ml" 183 5763 5805 "rename.ml" 183 5763 5830
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 183 5763 5833 "rename.ml" 183 5763 5851
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 183 5763 5852 "rename.ml" 183 5763 5856
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp3 "rename.ml" 182 5727 5754 "rename.ml" 182 5727 5758
+)
+"rename.ml" 183 5763 5832 "rename.ml" 183 5763 5857
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 183 5763 5768 "rename.ml" 183 5763 5858
+type(
+  Cabs.expression
+)
+"rename.ml" 184 5859 5870 "rename.ml" 184 5859 5873
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 184 5859 5884 "rename.ml" 184 5859 5920
+)
+"rename.ml" 184 5859 5875 "rename.ml" 184 5859 5878
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 184 5859 5884 "rename.ml" 184 5859 5920
+)
+"rename.ml" 184 5859 5864 "rename.ml" 184 5859 5879
+type(
+  Cabs.expression
+)
+"rename.ml" 184 5859 5890 "rename.ml" 184 5859 5893
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 184 5859 5870 "rename.ml" 184 5859 5873
+)
+"rename.ml" 184 5859 5896 "rename.ml" 184 5859 5914
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 184 5859 5915 "rename.ml" 184 5859 5918
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 184 5859 5875 "rename.ml" 184 5859 5878
+)
+"rename.ml" 184 5859 5895 "rename.ml" 184 5859 5919
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 184 5859 5884 "rename.ml" 184 5859 5920
+type(
+  Cabs.expression
+)
+"rename.ml" 185 5921 5932 "rename.ml" 185 5921 5935
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 191 6159 6172 "rename.ml" 191 6159 6205
+)
+"rename.ml" 185 5921 5937 "rename.ml" 185 5921 5941
+type(
+  Cabs.expression list
+)
+ident(
+  def args "rename.ml" 191 6159 6172 "rename.ml" 191 6159 6205
+)
+"rename.ml" 185 5921 5926 "rename.ml" 185 5921 5942
+type(
+  Cabs.expression
+)
+"rename.ml" 191 6159 6177 "rename.ml" 191 6159 6180
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 185 5921 5932 "rename.ml" 185 5921 5935
+)
+"rename.ml" 191 6159 6181 "rename.ml" 191 6159 6199
+type(
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  int_ref convert_comma_exps "rename.ml" 174 5431 5435 "rename.ml" 174 5431 5453
+)
+"rename.ml" 191 6159 6200 "rename.ml" 191 6159 6204
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref args "rename.ml" 185 5921 5937 "rename.ml" 185 5921 5941
+)
+"rename.ml" 191 6159 6181 "rename.ml" 191 6159 6204
+call(
+  stack
+)
+type(
+  Cabs.expression list
+)
+"rename.ml" 191 6159 6172 "rename.ml" 191 6159 6205
+type(
+  Cabs.expression
+)
+"rename.ml" 192 6206 6217 "rename.ml" 192 6206 6221
+type(
+  Cabs.expression list
+)
+ident(
+  def exps "rename.ml" 192 6206 6228 "rename.ml" 192 6206 6258
+)
+"rename.ml" 192 6206 6211 "rename.ml" 192 6206 6221
+type(
+  Cabs.expression
+)
+"rename.ml" 192 6206 6234 "rename.ml" 192 6206 6252
+type(
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  int_ref convert_comma_exps "rename.ml" 174 5431 5435 "rename.ml" 174 5431 5453
+)
+"rename.ml" 192 6206 6253 "rename.ml" 192 6206 6257
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref exps "rename.ml" 192 6206 6217 "rename.ml" 192 6206 6221
+)
+"rename.ml" 192 6206 6233 "rename.ml" 192 6206 6258
+call(
+  stack
+)
+type(
+  Cabs.expression list
+)
+"rename.ml" 192 6206 6228 "rename.ml" 192 6206 6258
+type(
+  Cabs.expression
+)
+"rename.ml" 193 6259 6273 "rename.ml" 193 6259 6276
+type(
+  Cabs.constant
+)
+ident(
+  def cst "rename.ml" 193 6259 6283 "rename.ml" 193 6259 6295
+)
+"rename.ml" 193 6259 6264 "rename.ml" 193 6259 6276
+type(
+  Cabs.expression
+)
+"rename.ml" 193 6259 6292 "rename.ml" 193 6259 6295
+type(
+  Cabs.constant
+)
+ident(
+  int_ref cst "rename.ml" 193 6259 6273 "rename.ml" 193 6259 6276
+)
+"rename.ml" 193 6259 6283 "rename.ml" 193 6259 6295
+type(
+  Cabs.expression
+)
+"rename.ml" 194 6297 6311 "rename.ml" 194 6297 6315
+type(
+  string
+)
+ident(
+  def name "rename.ml" 195 6322 6327 "rename.ml" 198 6512 6534
+)
+"rename.ml" 194 6297 6302 "rename.ml" 194 6297 6315
+type(
+  Cabs.expression
+)
+"rename.ml" 195 6322 6331 "rename.ml" 195 6322 6337
+type(
+  string
+)
+ident(
+  def newvar "rename.ml" 197 6446 6451 "rename.ml" 198 6512 6534
+)
+"rename.ml" 195 6322 6343 "rename.ml" 195 6322 6363
+type(
+  string -> (string * string) list -> bool
+)
+ident(
+  int_ref existeAssosVarNewVal "rename.ml" 114 3803 3807 "rename.ml" 114 3803 3827
+)
+"rename.ml" 195 6322 6364 "rename.ml" 195 6322 6368
+type(
+  string
+)
+ident(
+  int_ref name "rename.ml" 194 6297 6311 "rename.ml" 194 6297 6315
+)
+"rename.ml" 195 6322 6369 "rename.ml" 195 6322 6370
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 195 6322 6370 "rename.ml" 195 6322 6381
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 195 6322 6369 "rename.ml" 195 6322 6381
+type(
+  (string * string) list
+)
+"rename.ml" 195 6322 6343 "rename.ml" 195 6322 6381
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 195 6322 6387 "rename.ml" 195 6322 6404
+type(
+  string -> (string * string) list -> string
+)
+ident(
+  int_ref getAssosVarNewVal "rename.ml" 115 3872 3876 "rename.ml" 115 3872 3893
+)
+"rename.ml" 195 6322 6405 "rename.ml" 195 6322 6409
+type(
+  string
+)
+ident(
+  int_ref name "rename.ml" 194 6297 6311 "rename.ml" 194 6297 6315
+)
+"rename.ml" 195 6322 6410 "rename.ml" 195 6322 6411
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 195 6322 6411 "rename.ml" 195 6322 6422
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 195 6322 6410 "rename.ml" 195 6322 6422
+type(
+  (string * string) list
+)
+"rename.ml" 195 6322 6387 "rename.ml" 195 6322 6422
+call(
+  stack
+)
+type(
+  string
+)
+"rename.ml" 196 6423 6438 "rename.ml" 196 6423 6442
+type(
+  string
+)
+ident(
+  int_ref name "rename.ml" 194 6297 6311 "rename.ml" 194 6297 6315
+)
+"rename.ml" 195 6322 6340 "rename.ml" 196 6423 6442
+type(
+  string
+)
+"rename.ml" 197 6446 6454 "rename.ml" 197 6446 6462
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"rename.ml" 197 6446 6463 "rename.ml" 197 6446 6469
+type(
+  string
+)
+ident(
+  int_ref newvar "rename.ml" 195 6322 6331 "rename.ml" 195 6322 6337
+)
+"rename.ml" 197 6446 6470 "rename.ml" 197 6446 6471
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 197 6446 6471 "rename.ml" 197 6446 6475
+type(
+  string list ref
+)
+ident(
+  int_ref used "rename.ml" 105 3568 3572 "rename.ml" 105 3568 3576
+)
+"rename.ml" 197 6446 6470 "rename.ml" 197 6446 6475
+type(
+  string list
+)
+"rename.ml" 197 6446 6454 "rename.ml" 197 6446 6475
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 197 6446 6476 "rename.ml" 197 6446 6477
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"rename.ml" 197 6446 6478 "rename.ml" 197 6446 6483
+type(
+  bool
+)
+"rename.ml" 197 6446 6454 "rename.ml" 197 6446 6483
+type(
+  bool
+)
+"rename.ml" 197 6446 6489 "rename.ml" 197 6446 6493
+type(
+  string list ref
+)
+ident(
+  int_ref used "rename.ml" 105 3568 3572 "rename.ml" 105 3568 3576
+)
+"rename.ml" 197 6446 6494 "rename.ml" 197 6446 6496
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 197 6446 6497 "rename.ml" 197 6446 6503
+type(
+  string
+)
+ident(
+  int_ref newvar "rename.ml" 195 6322 6331 "rename.ml" 195 6322 6337
+)
+"rename.ml" 197 6446 6505 "rename.ml" 197 6446 6506
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 197 6446 6506 "rename.ml" 197 6446 6510
+type(
+  string list ref
+)
+ident(
+  int_ref used "rename.ml" 105 3568 3572 "rename.ml" 105 3568 3576
+)
+"rename.ml" 197 6446 6505 "rename.ml" 197 6446 6510
+type(
+  string list
+)
+"rename.ml" 197 6446 6497 "rename.ml" 197 6446 6510
+type(
+  string list
+)
+"rename.ml" 197 6446 6489 "rename.ml" 197 6446 6510
+type(
+  unit
+)
+"rename.ml" 197 6446 6451 "rename.ml" 197 6446 6510
+type(
+  unit
+)
+"rename.ml" 198 6512 6526 "rename.ml" 198 6512 6534
+type(
+  string
+)
+ident(
+  int_ref newvar "rename.ml" 195 6322 6331 "rename.ml" 195 6322 6337
+)
+"rename.ml" 198 6512 6518 "rename.ml" 198 6512 6534
+type(
+  Cabs.expression
+)
+"rename.ml" 197 6446 6451 "rename.ml" 198 6512 6534
+type(
+  Cabs.expression
+)
+"rename.ml" 195 6322 6327 "rename.ml" 198 6512 6534
+type(
+  Cabs.expression
+)
+"rename.ml" 200 6541 6558 "rename.ml" 200 6541 6561
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 200 6541 6566 "rename.ml" 200 6541 6602
+)
+"rename.ml" 200 6541 6546 "rename.ml" 200 6541 6561
+type(
+  Cabs.expression
+)
+"rename.ml" 200 6541 6579 "rename.ml" 200 6541 6597
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 200 6541 6598 "rename.ml" 200 6541 6601
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 200 6541 6558 "rename.ml" 200 6541 6561
+)
+"rename.ml" 200 6541 6578 "rename.ml" 200 6541 6602
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 200 6541 6566 "rename.ml" 200 6541 6602
+type(
+  Cabs.expression
+)
+"rename.ml" 201 6603 6620 "rename.ml" 201 6603 6623
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 201 6603 6628 "rename.ml" 201 6603 6643
+)
+"rename.ml" 201 6603 6608 "rename.ml" 201 6603 6623
+type(
+  Cabs.expression
+)
+"rename.ml" 201 6603 6640 "rename.ml" 201 6603 6643
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 201 6603 6620 "rename.ml" 201 6603 6623
+)
+"rename.ml" 201 6603 6628 "rename.ml" 201 6603 6643
+type(
+  Cabs.expression
+)
+"rename.ml" 202 6644 6656 "rename.ml" 202 6644 6659
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 202 6644 6670 "rename.ml" 202 6644 6707
+)
+"rename.ml" 202 6644 6661 "rename.ml" 202 6644 6664
+type(
+  Cabs.expression
+)
+ident(
+  def idx "rename.ml" 202 6644 6670 "rename.ml" 202 6644 6707
+)
+"rename.ml" 202 6644 6649 "rename.ml" 202 6644 6665
+type(
+  Cabs.expression
+)
+"rename.ml" 202 6644 6678 "rename.ml" 202 6644 6696
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 202 6644 6697 "rename.ml" 202 6644 6700
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 202 6644 6656 "rename.ml" 202 6644 6659
+)
+"rename.ml" 202 6644 6677 "rename.ml" 202 6644 6701
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 202 6644 6703 "rename.ml" 202 6644 6706
+type(
+  Cabs.expression
+)
+ident(
+  int_ref idx "rename.ml" 202 6644 6661 "rename.ml" 202 6644 6664
+)
+"rename.ml" 202 6644 6670 "rename.ml" 202 6644 6707
+type(
+  Cabs.expression
+)
+"rename.ml" 203 6708 6723 "rename.ml" 203 6708 6726
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 203 6708 6736 "rename.ml" 203 6708 6776
+)
+"rename.ml" 203 6708 6728 "rename.ml" 203 6708 6731
+type(
+  string
+)
+ident(
+  def fld "rename.ml" 203 6708 6736 "rename.ml" 203 6708 6776
+)
+"rename.ml" 203 6708 6713 "rename.ml" 203 6708 6732
+type(
+  Cabs.expression
+)
+"rename.ml" 203 6708 6747 "rename.ml" 203 6708 6765
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 203 6708 6766 "rename.ml" 203 6708 6769
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 203 6708 6723 "rename.ml" 203 6708 6726
+)
+"rename.ml" 203 6708 6746 "rename.ml" 203 6708 6770
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 203 6708 6772 "rename.ml" 203 6708 6775
+type(
+  string
+)
+ident(
+  int_ref fld "rename.ml" 203 6708 6728 "rename.ml" 203 6708 6731
+)
+"rename.ml" 203 6708 6736 "rename.ml" 203 6708 6776
+type(
+  Cabs.expression
+)
+"rename.ml" 204 6777 6795 "rename.ml" 204 6777 6798
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 204 6777 6808 "rename.ml" 204 6777 6851
+)
+"rename.ml" 204 6777 6800 "rename.ml" 204 6777 6803
+type(
+  string
+)
+ident(
+  def fld "rename.ml" 204 6777 6808 "rename.ml" 204 6777 6851
+)
+"rename.ml" 204 6777 6782 "rename.ml" 204 6777 6804
+type(
+  Cabs.expression
+)
+"rename.ml" 204 6777 6822 "rename.ml" 204 6777 6840
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 204 6777 6841 "rename.ml" 204 6777 6844
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 204 6777 6795 "rename.ml" 204 6777 6798
+)
+"rename.ml" 204 6777 6821 "rename.ml" 204 6777 6845
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 204 6777 6847 "rename.ml" 204 6777 6850
+type(
+  string
+)
+ident(
+  int_ref fld "rename.ml" 204 6777 6800 "rename.ml" 204 6777 6803
+)
+"rename.ml" 204 6777 6808 "rename.ml" 204 6777 6851
+type(
+  Cabs.expression
+)
+"rename.ml" 205 6852 6868 "rename.ml" 205 6852 6871
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 205 6852 6886 "rename.ml" 205 6852 6934
+)
+"rename.ml" 205 6852 6873 "rename.ml" 205 6852 6877
+type(
+  string
+)
+ident(
+  def file "rename.ml" 205 6852 6886 "rename.ml" 205 6852 6934
+)
+"rename.ml" 205 6852 6879 "rename.ml" 205 6852 6883
+type(
+  int
+)
+ident(
+  def line "rename.ml" 205 6852 6886 "rename.ml" 205 6852 6934
+)
+"rename.ml" 205 6852 6857 "rename.ml" 205 6852 6884
+type(
+  Cabs.expression
+)
+"rename.ml" 205 6852 6898 "rename.ml" 205 6852 6916
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 205 6852 6917 "rename.ml" 205 6852 6920
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 205 6852 6868 "rename.ml" 205 6852 6871
+)
+"rename.ml" 205 6852 6897 "rename.ml" 205 6852 6921
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 205 6852 6923 "rename.ml" 205 6852 6927
+type(
+  string
+)
+ident(
+  int_ref file "rename.ml" 205 6852 6873 "rename.ml" 205 6852 6877
+)
+"rename.ml" 205 6852 6929 "rename.ml" 205 6852 6933
+type(
+  int
+)
+ident(
+  int_ref line "rename.ml" 205 6852 6879 "rename.ml" 205 6852 6883
+)
+"rename.ml" 205 6852 6886 "rename.ml" 205 6852 6934
+type(
+  Cabs.expression
+)
+"rename.ml" 206 6935 6950 "rename.ml" 206 6935 6954
+type(
+  Cabs.definition list
+)
+ident(
+  def decs "rename.ml" 206 6935 6966 "rename.ml" 207 7006 7054
+)
+"rename.ml" 206 6935 6956 "rename.ml" 206 6935 6960
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 206 6935 6966 "rename.ml" 207 7006 7054
+)
+"rename.ml" 206 6935 6949 "rename.ml" 206 6935 6961
+type(
+  Cabs.body
+)
+"rename.ml" 206 6935 6940 "rename.ml" 206 6935 6961
+type(
+  Cabs.expression
+)
+"rename.ml" 206 6935 6970 "rename.ml" 206 6935 6974
+type(
+  Cabs.definition list
+)
+ident(
+  def decs "rename.ml" 207 7006 7016 "rename.ml" 207 7006 7054
+)
+"rename.ml" 206 6935 6977 "rename.ml" 206 6935 6985
+type(
+  (Cabs.definition -> Cabs.definition) ->
+  Cabs.definition list -> Cabs.definition list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 206 6935 6986 "rename.ml" 206 6935 6997
+type(
+  Cabs.definition -> Cabs.definition
+)
+ident(
+  int_ref convert_def "rename.ml" 264 9510 9514 "rename.ml" 264 9510 9525
+)
+"rename.ml" 206 6935 6998 "rename.ml" 206 6935 7002
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref decs "rename.ml" 206 6935 6950 "rename.ml" 206 6935 6954
+)
+"rename.ml" 206 6935 6977 "rename.ml" 206 6935 7002
+call(
+  stack
+)
+type(
+  Cabs.definition list
+)
+"rename.ml" 207 7006 7026 "rename.ml" 207 7006 7030
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref decs "rename.ml" 206 6935 6970 "rename.ml" 206 6935 6974
+)
+"rename.ml" 207 7006 7031 "rename.ml" 207 7006 7048
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 207 7006 7049 "rename.ml" 207 7006 7053
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 206 6935 6956 "rename.ml" 206 6935 6960
+)
+"rename.ml" 207 7006 7031 "rename.ml" 207 7006 7053
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 207 7006 7025 "rename.ml" 207 7006 7054
+type(
+  Cabs.body
+)
+"rename.ml" 207 7006 7016 "rename.ml" 207 7006 7054
+type(
+  Cabs.expression
+)
+"rename.ml" 206 6935 6966 "rename.ml" 207 7006 7054
+type(
+  Cabs.expression
+)
+"rename.ml" 208 7056 7061 "rename.ml" 208 7056 7062
+type(
+  Cabs.expression
+)
+"rename.ml" 208 7056 7066 "rename.ml" 208 7056 7069
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 177 5498 5522 "rename.ml" 177 5498 5525
+)
+"rename.ml" 178 5542 5545 "rename.ml" 208 7056 7069
+type(
+  Cabs.expression
+)
+"rename.ml" 211 7072 7076 "rename.ml" 211 7072 7080
+type(
+  string list -> string list -> string list
+)
+ident(
+  def conc "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 211 7072 7081 "rename.ml" 211 7072 7083
+type(
+  string list
+)
+ident(
+  def l1 "rename.ml" 211 7072 7084 "rename.ml" 214 7132 7238
+)
+"rename.ml" 211 7072 7084 "rename.ml" 211 7072 7086
+type(
+  string list
+)
+ident(
+  def l2 "rename.ml" 212 7089 7089 "rename.ml" 214 7132 7238
+)
+"rename.ml" 212 7089 7092 "rename.ml" 212 7089 7094
+type(
+  string list
+)
+ident(
+  int_ref l1 "rename.ml" 211 7072 7081 "rename.ml" 211 7072 7083
+)
+"rename.ml" 212 7089 7095 "rename.ml" 212 7089 7096
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"rename.ml" 212 7089 7097 "rename.ml" 212 7089 7099
+type(
+  string list
+)
+"rename.ml" 212 7089 7092 "rename.ml" 212 7089 7099
+type(
+  bool
+)
+"rename.ml" 212 7089 7105 "rename.ml" 212 7089 7107
+type(
+  string list
+)
+ident(
+  int_ref l2 "rename.ml" 211 7072 7084 "rename.ml" 211 7072 7086
+)
+"rename.ml" 213 7108 7116 "rename.ml" 213 7108 7118
+type(
+  string list
+)
+ident(
+  int_ref l2 "rename.ml" 211 7072 7084 "rename.ml" 211 7072 7086
+)
+"rename.ml" 213 7108 7119 "rename.ml" 213 7108 7120
+type(
+  string list -> string list -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"rename.ml" 213 7108 7121 "rename.ml" 213 7108 7123
+type(
+  string list
+)
+"rename.ml" 213 7108 7116 "rename.ml" 213 7108 7123
+type(
+  bool
+)
+"rename.ml" 213 7108 7129 "rename.ml" 213 7108 7131
+type(
+  string list
+)
+ident(
+  int_ref l1 "rename.ml" 211 7072 7081 "rename.ml" 211 7072 7083
+)
+"rename.ml" 214 7132 7142 "rename.ml" 214 7132 7150
+type(
+  string -> string list -> bool
+)
+ident(
+  ext_ref List.mem
+)
+"rename.ml" 214 7132 7152 "rename.ml" 214 7132 7159
+type(
+  string list -> string
+)
+ident(
+  ext_ref List.hd
+)
+"rename.ml" 214 7132 7160 "rename.ml" 214 7132 7162
+type(
+  string list
+)
+ident(
+  int_ref l1 "rename.ml" 211 7072 7081 "rename.ml" 211 7072 7083
+)
+"rename.ml" 214 7132 7151 "rename.ml" 214 7132 7163
+call(
+  stack
+)
+type(
+  string
+)
+"rename.ml" 214 7132 7164 "rename.ml" 214 7132 7166
+type(
+  string list
+)
+ident(
+  int_ref l2 "rename.ml" 211 7072 7084 "rename.ml" 211 7072 7086
+)
+"rename.ml" 214 7132 7142 "rename.ml" 214 7132 7166
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 214 7132 7172 "rename.ml" 214 7132 7176
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref conc "rename.ml" 211 7072 7076 "rename.ml" 211 7072 7080
+)
+"rename.ml" 214 7132 7178 "rename.ml" 214 7132 7185
+type(
+  string list -> string list
+)
+ident(
+  ext_ref List.tl
+)
+"rename.ml" 214 7132 7186 "rename.ml" 214 7132 7188
+type(
+  string list
+)
+ident(
+  int_ref l1 "rename.ml" 211 7072 7081 "rename.ml" 211 7072 7083
+)
+"rename.ml" 214 7132 7177 "rename.ml" 214 7132 7189
+call(
+  stack
+)
+type(
+  string list
+)
+"rename.ml" 214 7132 7190 "rename.ml" 214 7132 7192
+type(
+  string list
+)
+ident(
+  int_ref l2 "rename.ml" 211 7072 7084 "rename.ml" 211 7072 7086
+)
+"rename.ml" 214 7132 7172 "rename.ml" 214 7132 7192
+call(
+  tail
+)
+type(
+  string list
+)
+"rename.ml" 214 7132 7198 "rename.ml" 214 7132 7202
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref conc "rename.ml" 211 7072 7076 "rename.ml" 211 7072 7080
+)
+"rename.ml" 214 7132 7205 "rename.ml" 214 7132 7212
+type(
+  string list -> string list
+)
+ident(
+  ext_ref List.tl
+)
+"rename.ml" 214 7132 7213 "rename.ml" 214 7132 7215
+type(
+  string list
+)
+ident(
+  int_ref l1 "rename.ml" 211 7072 7081 "rename.ml" 211 7072 7083
+)
+"rename.ml" 214 7132 7204 "rename.ml" 214 7132 7216
+call(
+  stack
+)
+type(
+  string list
+)
+"rename.ml" 214 7132 7220 "rename.ml" 214 7132 7227
+type(
+  string list -> string
+)
+ident(
+  ext_ref List.hd
+)
+"rename.ml" 214 7132 7228 "rename.ml" 214 7132 7230
+type(
+  string list
+)
+ident(
+  int_ref l1 "rename.ml" 211 7072 7081 "rename.ml" 211 7072 7083
+)
+"rename.ml" 214 7132 7219 "rename.ml" 214 7132 7231
+call(
+  stack
+)
+type(
+  string
+)
+"rename.ml" 214 7132 7234 "rename.ml" 214 7132 7236
+type(
+  string list
+)
+ident(
+  int_ref l2 "rename.ml" 211 7072 7084 "rename.ml" 211 7072 7086
+)
+"rename.ml" 214 7132 7217 "rename.ml" 214 7132 7238
+type(
+  string list
+)
+"rename.ml" 214 7132 7198 "rename.ml" 214 7132 7238
+call(
+  tail
+)
+type(
+  string list
+)
+"rename.ml" 214 7132 7139 "rename.ml" 214 7132 7238
+type(
+  string list
+)
+"rename.ml" 213 7108 7113 "rename.ml" 214 7132 7238
+type(
+  string list
+)
+"rename.ml" 212 7089 7089 "rename.ml" 214 7132 7238
+type(
+  string list
+)
+"rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  def convert_statement "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 216 7241 7263 "rename.ml" 216 7241 7267
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 217 7271 7273 "rename.ml" 250 9111 9124
+)
+"rename.ml" 217 7271 7279 "rename.ml" 217 7271 7283
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 216 7241 7263 "rename.ml" 216 7241 7267
+)
+"rename.ml" 218 7289 7305 "rename.ml" 218 7289 7308
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 218 7289 7312 "rename.ml" 218 7289 7348
+)
+"rename.ml" 218 7289 7293 "rename.ml" 218 7289 7308
+type(
+  Cabs.statement
+)
+"rename.ml" 218 7289 7325 "rename.ml" 218 7289 7343
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 218 7289 7344 "rename.ml" 218 7289 7347
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 218 7289 7305 "rename.ml" 218 7289 7308
+)
+"rename.ml" 218 7289 7324 "rename.ml" 218 7289 7348
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 218 7289 7312 "rename.ml" 218 7289 7348
+type(
+  Cabs.statement
+)
+"rename.ml" 219 7349 7360 "rename.ml" 219 7349 7364
+type(
+  Cabs.definition list
+)
+ident(
+  def defs "rename.ml" 220 7376 7379 "rename.ml" 231 8001 8007
+)
+"rename.ml" 219 7349 7366 "rename.ml" 219 7349 7370
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 220 7376 7379 "rename.ml" 231 8001 8007
+)
+"rename.ml" 219 7349 7359 "rename.ml" 219 7349 7371
+type(
+  Cabs.body
+)
+"rename.ml" 219 7349 7353 "rename.ml" 219 7349 7371
+type(
+  Cabs.statement
+)
+"rename.ml" 220 7376 7383 "rename.ml" 220 7376 7400
+type(
+  (string * string) list
+)
+ident(
+  def contexteEnglobant "rename.ml" 221 7419 7422 "rename.ml" 231 8001 8007
+)
+"rename.ml" 220 7376 7403 "rename.ml" 220 7376 7404
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 220 7376 7404 "rename.ml" 220 7376 7415
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 220 7376 7403 "rename.ml" 220 7376 7415
+type(
+  (string * string) list
+)
+"rename.ml" 221 7419 7426 "rename.ml" 221 7419 7457
+type(
+  string list
+)
+ident(
+  def monContexteNotRenammedEnglobant "rename.ml" 222 7487 7490 "rename.ml" 231 8001 8007
+)
+"rename.ml" 221 7419 7460 "rename.ml" 221 7419 7461
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 221 7419 7461 "rename.ml" 221 7419 7483
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 221 7419 7460 "rename.ml" 221 7419 7483
+type(
+  string list
+)
+"rename.ml" 222 7487 7490 "rename.ml" 222 7487 7512
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 222 7487 7513 "rename.ml" 222 7487 7515
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 222 7487 7516 "rename.ml" 222 7487 7518
+type(
+  string list
+)
+"rename.ml" 222 7487 7490 "rename.ml" 222 7487 7518
+type(
+  unit
+)
+"rename.ml" 223 7520 7523 "rename.ml" 223 7520 7534
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 223 7520 7535 "rename.ml" 223 7520 7537
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 223 7520 7538 "rename.ml" 223 7520 7540
+type(
+  (string * string) list
+)
+"rename.ml" 223 7520 7523 "rename.ml" 223 7520 7540
+type(
+  unit
+)
+"rename.ml" 224 7542 7549 "rename.ml" 224 7542 7553
+type(
+  Cabs.definition list
+)
+ident(
+  def defs "rename.ml" 225 7585 7588 "rename.ml" 231 8001 8007
+)
+"rename.ml" 224 7542 7556 "rename.ml" 224 7542 7564
+type(
+  (Cabs.definition -> Cabs.definition) ->
+  Cabs.definition list -> Cabs.definition list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 224 7542 7565 "rename.ml" 224 7542 7576
+type(
+  Cabs.definition -> Cabs.definition
+)
+ident(
+  int_ref convert_def "rename.ml" 264 9510 9514 "rename.ml" 264 9510 9525
+)
+"rename.ml" 224 7542 7577 "rename.ml" 224 7542 7581
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref defs "rename.ml" 219 7349 7360 "rename.ml" 219 7349 7364
+)
+"rename.ml" 224 7542 7556 "rename.ml" 224 7542 7581
+call(
+  stack
+)
+type(
+  Cabs.definition list
+)
+"rename.ml" 225 7585 7588 "rename.ml" 225 7585 7599
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 225 7585 7600 "rename.ml" 225 7585 7602
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 225 7585 7603 "rename.ml" 225 7585 7617
+type(
+  (string * string) list -> (string * string) list -> (string * string) list
+)
+ident(
+  int_ref concatContexte "rename.ml" 137 4432 4441 "rename.ml" 137 4432 4455
+)
+"rename.ml" 225 7585 7618 "rename.ml" 225 7585 7619
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 225 7585 7619 "rename.ml" 225 7585 7630
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 225 7585 7618 "rename.ml" 225 7585 7630
+type(
+  (string * string) list
+)
+"rename.ml" 225 7585 7631 "rename.ml" 225 7585 7648
+type(
+  (string * string) list
+)
+ident(
+  int_ref contexteEnglobant "rename.ml" 220 7376 7383 "rename.ml" 220 7376 7400
+)
+"rename.ml" 225 7585 7603 "rename.ml" 225 7585 7648
+call(
+  stack
+)
+type(
+  (string * string) list
+)
+"rename.ml" 225 7585 7588 "rename.ml" 225 7585 7648
+type(
+  unit
+)
+"rename.ml" 226 7650 7653 "rename.ml" 226 7650 7675
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 226 7650 7676 "rename.ml" 226 7650 7678
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 226 7650 7679 "rename.ml" 226 7650 7683
+type(
+  string list -> string list -> string list
+)
+ident(
+  int_ref conc "rename.ml" 211 7072 7076 "rename.ml" 211 7072 7080
+)
+"rename.ml" 226 7650 7684 "rename.ml" 226 7650 7685
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 226 7650 7685 "rename.ml" 226 7650 7707
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 226 7650 7684 "rename.ml" 226 7650 7707
+type(
+  string list
+)
+"rename.ml" 226 7650 7709 "rename.ml" 226 7650 7740
+type(
+  string list
+)
+ident(
+  int_ref monContexteNotRenammedEnglobant "rename.ml" 221 7419 7426 "rename.ml" 221 7419 7457
+)
+"rename.ml" 226 7650 7679 "rename.ml" 226 7650 7740
+call(
+  stack
+)
+type(
+  string list
+)
+"rename.ml" 226 7650 7653 "rename.ml" 226 7650 7740
+type(
+  unit
+)
+"rename.ml" 227 7743 7750 "rename.ml" 227 7743 7753
+type(
+  Cabs.statement
+)
+ident(
+  def res "rename.ml" 228 7848 7852 "rename.ml" 231 8001 8007
+)
+"rename.ml" 227 7743 7760 "rename.ml" 227 7743 7764
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 219 7349 7366 "rename.ml" 219 7349 7370
+)
+"rename.ml" 227 7743 7765 "rename.ml" 227 7743 7767
+type(
+  Cabs.statement -> Cabs.statement -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"rename.ml" 227 7743 7768 "rename.ml" 227 7743 7771
+type(
+  Cabs.statement
+)
+"rename.ml" 227 7743 7760 "rename.ml" 227 7743 7771
+type(
+  bool
+)
+"rename.ml" 227 7743 7786 "rename.ml" 227 7743 7790
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref defs "rename.ml" 224 7542 7549 "rename.ml" 224 7542 7553
+)
+"rename.ml" 227 7743 7793 "rename.ml" 227 7743 7810
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 227 7743 7811 "rename.ml" 227 7743 7815
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 219 7349 7366 "rename.ml" 219 7349 7370
+)
+"rename.ml" 227 7743 7792 "rename.ml" 227 7743 7816
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 227 7743 7785 "rename.ml" 227 7743 7817
+type(
+  Cabs.body
+)
+"rename.ml" 227 7743 7779 "rename.ml" 227 7743 7817
+type(
+  Cabs.statement
+)
+"rename.ml" 227 7743 7832 "rename.ml" 227 7743 7836
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref defs "rename.ml" 224 7542 7549 "rename.ml" 224 7542 7553
+)
+"rename.ml" 227 7743 7838 "rename.ml" 227 7743 7841
+type(
+  Cabs.statement
+)
+"rename.ml" 227 7743 7831 "rename.ml" 227 7743 7842
+type(
+  Cabs.body
+)
+"rename.ml" 227 7743 7825 "rename.ml" 227 7743 7842
+type(
+  Cabs.statement
+)
+"rename.ml" 227 7743 7756 "rename.ml" 227 7743 7844
+type(
+  Cabs.statement
+)
+"rename.ml" 228 7848 7852 "rename.ml" 228 7848 7863
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 228 7848 7864 "rename.ml" 228 7848 7866
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 228 7848 7867 "rename.ml" 228 7848 7884
+type(
+  (string * string) list
+)
+ident(
+  int_ref contexteEnglobant "rename.ml" 220 7376 7383 "rename.ml" 220 7376 7400
+)
+"rename.ml" 228 7848 7852 "rename.ml" 228 7848 7884
+type(
+  unit
+)
+"rename.ml" 231 8001 8004 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+ident(
+  int_ref res "rename.ml" 227 7743 7750 "rename.ml" 227 7743 7753
+)
+"rename.ml" 228 7848 7852 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 227 7743 7746 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 226 7650 7653 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 225 7585 7588 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 224 7542 7545 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 223 7520 7523 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 222 7487 7490 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 221 7419 7422 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 220 7376 7379 "rename.ml" 231 8001 8007
+type(
+  Cabs.statement
+)
+"rename.ml" 232 8008 8022 "rename.ml" 232 8008 8024
+type(
+  Cabs.statement
+)
+ident(
+  def s1 "rename.ml" 233 8034 8038 "rename.ml" 233 8034 8091
+)
+"rename.ml" 232 8008 8026 "rename.ml" 232 8008 8028
+type(
+  Cabs.statement
+)
+ident(
+  def s2 "rename.ml" 233 8034 8038 "rename.ml" 233 8034 8091
+)
+"rename.ml" 232 8008 8012 "rename.ml" 232 8008 8029
+type(
+  Cabs.statement
+)
+"rename.ml" 233 8034 8048 "rename.ml" 233 8034 8065
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 233 8034 8066 "rename.ml" 233 8034 8068
+type(
+  Cabs.statement
+)
+ident(
+  int_ref s1 "rename.ml" 232 8008 8022 "rename.ml" 232 8008 8024
+)
+"rename.ml" 233 8034 8048 "rename.ml" 233 8034 8068
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 233 8034 8070 "rename.ml" 233 8034 8087
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 233 8034 8088 "rename.ml" 233 8034 8090
+type(
+  Cabs.statement
+)
+ident(
+  int_ref s2 "rename.ml" 232 8008 8026 "rename.ml" 232 8008 8028
+)
+"rename.ml" 233 8034 8070 "rename.ml" 233 8034 8090
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 233 8034 8038 "rename.ml" 233 8034 8091
+type(
+  Cabs.statement
+)
+"rename.ml" 234 8092 8100 "rename.ml" 234 8092 8103
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 234 8092 8117 "rename.ml" 234 8092 8188
+)
+"rename.ml" 234 8092 8105 "rename.ml" 234 8092 8107
+type(
+  Cabs.statement
+)
+ident(
+  def s1 "rename.ml" 234 8092 8117 "rename.ml" 234 8092 8188
+)
+"rename.ml" 234 8092 8109 "rename.ml" 234 8092 8111
+type(
+  Cabs.statement
+)
+ident(
+  def s2 "rename.ml" 234 8092 8117 "rename.ml" 234 8092 8188
+)
+"rename.ml" 234 8092 8096 "rename.ml" 234 8092 8112
+type(
+  Cabs.statement
+)
+"rename.ml" 234 8092 8121 "rename.ml" 234 8092 8139
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 234 8092 8140 "rename.ml" 234 8092 8143
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 234 8092 8100 "rename.ml" 234 8092 8103
+)
+"rename.ml" 234 8092 8121 "rename.ml" 234 8092 8143
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 234 8092 8145 "rename.ml" 234 8092 8162
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 234 8092 8163 "rename.ml" 234 8092 8165
+type(
+  Cabs.statement
+)
+ident(
+  int_ref s1 "rename.ml" 234 8092 8105 "rename.ml" 234 8092 8107
+)
+"rename.ml" 234 8092 8145 "rename.ml" 234 8092 8165
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 234 8092 8167 "rename.ml" 234 8092 8184
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 234 8092 8185 "rename.ml" 234 8092 8187
+type(
+  Cabs.statement
+)
+ident(
+  int_ref s2 "rename.ml" 234 8092 8109 "rename.ml" 234 8092 8111
+)
+"rename.ml" 234 8092 8167 "rename.ml" 234 8092 8187
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 234 8092 8117 "rename.ml" 234 8092 8188
+type(
+  Cabs.statement
+)
+"rename.ml" 235 8189 8200 "rename.ml" 235 8189 8203
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 235 8189 8214 "rename.ml" 235 8189 8269
+)
+"rename.ml" 235 8189 8205 "rename.ml" 235 8189 8209
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 235 8189 8214 "rename.ml" 235 8189 8269
+)
+"rename.ml" 235 8189 8193 "rename.ml" 235 8189 8210
+type(
+  Cabs.statement
+)
+"rename.ml" 235 8189 8221 "rename.ml" 235 8189 8239
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 235 8189 8241 "rename.ml" 235 8189 8244
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 235 8189 8200 "rename.ml" 235 8189 8203
+)
+"rename.ml" 235 8189 8221 "rename.ml" 235 8189 8244
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 235 8189 8246 "rename.ml" 235 8189 8263
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 235 8189 8264 "rename.ml" 235 8189 8268
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 235 8189 8205 "rename.ml" 235 8189 8209
+)
+"rename.ml" 235 8189 8246 "rename.ml" 235 8189 8268
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 235 8189 8214 "rename.ml" 235 8189 8269
+type(
+  Cabs.statement
+)
+"rename.ml" 236 8270 8283 "rename.ml" 236 8270 8286
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 236 8270 8295 "rename.ml" 236 8270 8352
+)
+"rename.ml" 236 8270 8288 "rename.ml" 236 8270 8292
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 236 8270 8295 "rename.ml" 236 8270 8352
+)
+"rename.ml" 236 8270 8274 "rename.ml" 236 8270 8293
+type(
+  Cabs.statement
+)
+"rename.ml" 236 8270 8304 "rename.ml" 236 8270 8322
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 236 8270 8324 "rename.ml" 236 8270 8327
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 236 8270 8283 "rename.ml" 236 8270 8286
+)
+"rename.ml" 236 8270 8304 "rename.ml" 236 8270 8327
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 236 8270 8329 "rename.ml" 236 8270 8346
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 236 8270 8347 "rename.ml" 236 8270 8351
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 236 8270 8288 "rename.ml" 236 8270 8292
+)
+"rename.ml" 236 8270 8329 "rename.ml" 236 8270 8351
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 236 8270 8295 "rename.ml" 236 8270 8352
+type(
+  Cabs.statement
+)
+"rename.ml" 237 8354 8363 "rename.ml" 237 8354 8367
+type(
+  Cabs.expression
+)
+ident(
+  def exp1 "rename.ml" 238 8390 8393 "rename.ml" 238 8390 8498
+)
+"rename.ml" 237 8354 8369 "rename.ml" 237 8354 8373
+type(
+  Cabs.expression
+)
+ident(
+  def exp2 "rename.ml" 238 8390 8393 "rename.ml" 238 8390 8498
+)
+"rename.ml" 237 8354 8375 "rename.ml" 237 8354 8379
+type(
+  Cabs.expression
+)
+ident(
+  def exp3 "rename.ml" 238 8390 8393 "rename.ml" 238 8390 8498
+)
+"rename.ml" 237 8354 8381 "rename.ml" 237 8354 8385
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 238 8390 8393 "rename.ml" 238 8390 8498
+)
+"rename.ml" 237 8354 8358 "rename.ml" 237 8354 8386
+type(
+  Cabs.statement
+)
+"rename.ml" 238 8390 8398 "rename.ml" 238 8390 8416
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 238 8390 8418 "rename.ml" 238 8390 8422
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp1 "rename.ml" 237 8354 8363 "rename.ml" 237 8354 8367
+)
+"rename.ml" 238 8390 8398 "rename.ml" 238 8390 8422
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 238 8390 8424 "rename.ml" 238 8390 8442
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 238 8390 8444 "rename.ml" 238 8390 8448
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp2 "rename.ml" 237 8354 8369 "rename.ml" 237 8354 8373
+)
+"rename.ml" 238 8390 8424 "rename.ml" 238 8390 8448
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 238 8390 8449 "rename.ml" 238 8390 8467
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 238 8390 8469 "rename.ml" 238 8390 8473
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp3 "rename.ml" 237 8354 8375 "rename.ml" 237 8354 8379
+)
+"rename.ml" 238 8390 8449 "rename.ml" 238 8390 8473
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 238 8390 8475 "rename.ml" 238 8390 8492
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 238 8390 8493 "rename.ml" 238 8390 8497
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 237 8354 8381 "rename.ml" 237 8354 8385
+)
+"rename.ml" 238 8390 8475 "rename.ml" 238 8390 8497
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 238 8390 8393 "rename.ml" 238 8390 8498
+type(
+  Cabs.statement
+)
+"rename.ml" 239 8499 8503 "rename.ml" 239 8499 8508
+type(
+  Cabs.statement
+)
+"rename.ml" 239 8499 8515 "rename.ml" 239 8499 8520
+type(
+  Cabs.statement
+)
+"rename.ml" 240 8521 8525 "rename.ml" 240 8521 8533
+type(
+  Cabs.statement
+)
+"rename.ml" 240 8521 8539 "rename.ml" 240 8521 8547
+type(
+  Cabs.statement
+)
+"rename.ml" 241 8548 8559 "rename.ml" 241 8548 8562
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 241 8548 8568 "rename.ml" 241 8548 8599
+)
+"rename.ml" 241 8548 8552 "rename.ml" 241 8548 8562
+type(
+  Cabs.statement
+)
+"rename.ml" 241 8548 8576 "rename.ml" 241 8548 8594
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 241 8548 8595 "rename.ml" 241 8548 8598
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 241 8548 8559 "rename.ml" 241 8548 8562
+)
+"rename.ml" 241 8548 8575 "rename.ml" 241 8548 8599
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 241 8548 8568 "rename.ml" 241 8548 8599
+type(
+  Cabs.statement
+)
+"rename.ml" 242 8600 8612 "rename.ml" 242 8600 8615
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 242 8600 8626 "rename.ml" 242 8600 8681
+)
+"rename.ml" 242 8600 8617 "rename.ml" 242 8600 8621
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 242 8600 8626 "rename.ml" 242 8600 8681
+)
+"rename.ml" 242 8600 8604 "rename.ml" 242 8600 8622
+type(
+  Cabs.statement
+)
+"rename.ml" 242 8600 8634 "rename.ml" 242 8600 8652
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 242 8600 8653 "rename.ml" 242 8600 8656
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 242 8600 8612 "rename.ml" 242 8600 8615
+)
+"rename.ml" 242 8600 8634 "rename.ml" 242 8600 8656
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 242 8600 8658 "rename.ml" 242 8600 8675
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 242 8600 8676 "rename.ml" 242 8600 8680
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 242 8600 8617 "rename.ml" 242 8600 8621
+)
+"rename.ml" 242 8600 8658 "rename.ml" 242 8600 8680
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 242 8600 8626 "rename.ml" 242 8600 8681
+type(
+  Cabs.statement
+)
+"rename.ml" 243 8682 8692 "rename.ml" 243 8682 8695
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 243 8682 8706 "rename.ml" 243 8682 8759
+)
+"rename.ml" 243 8682 8697 "rename.ml" 243 8682 8701
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 243 8682 8706 "rename.ml" 243 8682 8759
+)
+"rename.ml" 243 8682 8686 "rename.ml" 243 8682 8702
+type(
+  Cabs.statement
+)
+"rename.ml" 243 8682 8712 "rename.ml" 243 8682 8730
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 243 8682 8731 "rename.ml" 243 8682 8734
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 243 8682 8692 "rename.ml" 243 8682 8695
+)
+"rename.ml" 243 8682 8712 "rename.ml" 243 8682 8734
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 243 8682 8736 "rename.ml" 243 8682 8753
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 243 8682 8754 "rename.ml" 243 8682 8758
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 243 8682 8697 "rename.ml" 243 8682 8701
+)
+"rename.ml" 243 8682 8736 "rename.ml" 243 8682 8758
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 243 8682 8706 "rename.ml" 243 8682 8759
+type(
+  Cabs.statement
+)
+"rename.ml" 244 8760 8772 "rename.ml" 244 8760 8776
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 244 8760 8782 "rename.ml" 244 8760 8814
+)
+"rename.ml" 244 8760 8764 "rename.ml" 244 8760 8776
+type(
+  Cabs.statement
+)
+"rename.ml" 244 8760 8791 "rename.ml" 244 8760 8808
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 244 8760 8809 "rename.ml" 244 8760 8813
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 244 8760 8772 "rename.ml" 244 8760 8776
+)
+"rename.ml" 244 8760 8790 "rename.ml" 244 8760 8814
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 244 8760 8782 "rename.ml" 244 8760 8814
+type(
+  Cabs.statement
+)
+"rename.ml" 245 8815 8826 "rename.ml" 245 8815 8830
+type(
+  string
+)
+ident(
+  def name "rename.ml" 245 8815 8841 "rename.ml" 245 8815 8877
+)
+"rename.ml" 245 8815 8832 "rename.ml" 245 8815 8836
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 245 8815 8841 "rename.ml" 245 8815 8877
+)
+"rename.ml" 245 8815 8819 "rename.ml" 245 8815 8837
+type(
+  Cabs.statement
+)
+"rename.ml" 245 8815 8848 "rename.ml" 245 8815 8852
+type(
+  string
+)
+ident(
+  int_ref name "rename.ml" 245 8815 8826 "rename.ml" 245 8815 8830
+)
+"rename.ml" 245 8815 8854 "rename.ml" 245 8815 8871
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 245 8815 8872 "rename.ml" 245 8815 8876
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 245 8815 8832 "rename.ml" 245 8815 8836
+)
+"rename.ml" 245 8815 8854 "rename.ml" 245 8815 8876
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 245 8815 8841 "rename.ml" 245 8815 8877
+type(
+  Cabs.statement
+)
+"rename.ml" 246 8879 8888 "rename.ml" 246 8879 8892
+type(
+  string
+)
+ident(
+  def name "rename.ml" 246 8879 8898 "rename.ml" 246 8879 8907
+)
+"rename.ml" 246 8879 8883 "rename.ml" 246 8879 8892
+type(
+  Cabs.statement
+)
+"rename.ml" 246 8879 8903 "rename.ml" 246 8879 8907
+type(
+  string
+)
+ident(
+  int_ref name "rename.ml" 246 8879 8888 "rename.ml" 246 8879 8892
+)
+"rename.ml" 246 8879 8898 "rename.ml" 246 8879 8907
+type(
+  Cabs.statement
+)
+"rename.ml" 247 8909 8917 "rename.ml" 247 8909 8921
+type(
+  string
+)
+ident(
+  def desc "rename.ml" 247 8909 8927 "rename.ml" 247 8909 8935
+)
+"rename.ml" 247 8909 8913 "rename.ml" 247 8909 8921
+type(
+  Cabs.statement
+)
+"rename.ml" 247 8909 8931 "rename.ml" 247 8909 8935
+type(
+  string
+)
+ident(
+  int_ref desc "rename.ml" 247 8909 8917 "rename.ml" 247 8909 8921
+)
+"rename.ml" 247 8909 8927 "rename.ml" 247 8909 8935
+type(
+  Cabs.statement
+)
+"rename.ml" 248 8936 8949 "rename.ml" 248 8936 8953
+type(
+  string
+)
+ident(
+  def desc "rename.ml" 248 8936 8978 "rename.ml" 248 8936 9013
+)
+"rename.ml" 248 8936 8955 "rename.ml" 248 8936 8961
+type(
+  Cabs.gnu_asm_arg list
+)
+ident(
+  def output "rename.ml" 248 8936 8978 "rename.ml" 248 8936 9013
+)
+"rename.ml" 248 8936 8963 "rename.ml" 248 8936 8968
+type(
+  Cabs.gnu_asm_arg list
+)
+ident(
+  def input "rename.ml" 248 8936 8978 "rename.ml" 248 8936 9013
+)
+"rename.ml" 248 8936 8970 "rename.ml" 248 8936 8974
+type(
+  string list
+)
+ident(
+  def mods "rename.ml" 248 8936 8978 "rename.ml" 248 8936 9013
+)
+"rename.ml" 248 8936 8940 "rename.ml" 248 8936 8975
+type(
+  Cabs.statement
+)
+"rename.ml" 248 8936 8987 "rename.ml" 248 8936 8991
+type(
+  string
+)
+ident(
+  int_ref desc "rename.ml" 248 8936 8949 "rename.ml" 248 8936 8953
+)
+"rename.ml" 248 8936 8993 "rename.ml" 248 8936 8999
+type(
+  Cabs.gnu_asm_arg list
+)
+ident(
+  int_ref output "rename.ml" 248 8936 8955 "rename.ml" 248 8936 8961
+)
+"rename.ml" 248 8936 9001 "rename.ml" 248 8936 9006
+type(
+  Cabs.gnu_asm_arg list
+)
+ident(
+  int_ref input "rename.ml" 248 8936 8963 "rename.ml" 248 8936 8968
+)
+"rename.ml" 248 8936 9008 "rename.ml" 248 8936 9012
+type(
+  string list
+)
+ident(
+  int_ref mods "rename.ml" 248 8936 8970 "rename.ml" 248 8936 8974
+)
+"rename.ml" 248 8936 8978 "rename.ml" 248 8936 9013
+type(
+  Cabs.statement
+)
+"rename.ml" 249 9027 9042 "rename.ml" 249 9027 9046
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 249 9027 9063 "rename.ml" 249 9027 9109
+)
+"rename.ml" 249 9027 9048 "rename.ml" 249 9027 9052
+type(
+  string
+)
+ident(
+  def file "rename.ml" 249 9027 9063 "rename.ml" 249 9027 9109
+)
+"rename.ml" 249 9027 9054 "rename.ml" 249 9027 9058
+type(
+  int
+)
+ident(
+  def line "rename.ml" 249 9027 9063 "rename.ml" 249 9027 9109
+)
+"rename.ml" 249 9027 9031 "rename.ml" 249 9027 9059
+type(
+  Cabs.statement
+)
+"rename.ml" 249 9027 9074 "rename.ml" 249 9027 9091
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 249 9027 9092 "rename.ml" 249 9027 9096
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 249 9027 9042 "rename.ml" 249 9027 9046
+)
+"rename.ml" 249 9027 9074 "rename.ml" 249 9027 9096
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 249 9027 9098 "rename.ml" 249 9027 9102
+type(
+  string
+)
+ident(
+  int_ref file "rename.ml" 249 9027 9048 "rename.ml" 249 9027 9052
+)
+"rename.ml" 249 9027 9104 "rename.ml" 249 9027 9108
+type(
+  int
+)
+ident(
+  int_ref line "rename.ml" 249 9027 9054 "rename.ml" 249 9027 9058
+)
+"rename.ml" 249 9027 9063 "rename.ml" 249 9027 9109
+type(
+  Cabs.statement
+)
+"rename.ml" 250 9111 9115 "rename.ml" 250 9111 9116
+type(
+  Cabs.statement
+)
+"rename.ml" 250 9111 9120 "rename.ml" 250 9111 9124
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 216 7241 7263 "rename.ml" 216 7241 7267
+)
+"rename.ml" 217 7271 7273 "rename.ml" 250 9111 9124
+type(
+  Cabs.statement
+)
+"rename.ml" 254 9129 9134 "rename.ml" 254 9129 9146
+type(
+  Cabs.name -> Cabs.name
+)
+ident(
+  def convert_name "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 254 9129 9149 "rename.ml" 254 9129 9151
+type(
+  string
+)
+ident(
+  def id "rename.ml" 256 9219 9221 "rename.ml" 258 9391 9419
+)
+"rename.ml" 254 9129 9153 "rename.ml" 254 9129 9156
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 256 9219 9221 "rename.ml" 258 9391 9419
+)
+"rename.ml" 254 9129 9158 "rename.ml" 254 9129 9162
+type(
+  Cabs.gnu_attrs
+)
+ident(
+  def attr "rename.ml" 256 9219 9221 "rename.ml" 258 9391 9419
+)
+"rename.ml" 254 9129 9164 "rename.ml" 254 9129 9167
+type(
+  Cabs.expression
+)
+ident(
+  def exp "rename.ml" 256 9219 9221 "rename.ml" 258 9391 9419
+)
+"rename.ml" 254 9129 9148 "rename.ml" 254 9129 9168
+type(
+  Cabs.name
+)
+"rename.ml" 256 9219 9225 "rename.ml" 256 9219 9230
+type(
+  string
+)
+ident(
+  def nouId "rename.ml" 257 9315 9317 "rename.ml" 258 9391 9419
+)
+"rename.ml" 256 9219 9233 "rename.ml" 256 9219 9250
+type(
+  string -> string
+)
+ident(
+  int_ref renameIfNecessary "rename.ml" 122 4099 4103 "rename.ml" 122 4099 4120
+)
+"rename.ml" 256 9219 9251 "rename.ml" 256 9219 9253
+type(
+  string
+)
+ident(
+  int_ref id "rename.ml" 254 9129 9149 "rename.ml" 254 9129 9151
+)
+"rename.ml" 256 9219 9233 "rename.ml" 256 9219 9253
+call(
+  stack
+)
+type(
+  string
+)
+"rename.ml" 257 9315 9321 "rename.ml" 257 9315 9327
+type(
+  Cabs.expression
+)
+ident(
+  def nouExp "rename.ml" 258 9391 9393 "rename.ml" 258 9391 9419
+)
+"rename.ml" 257 9315 9334 "rename.ml" 257 9315 9337
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 254 9129 9164 "rename.ml" 254 9129 9167
+)
+"rename.ml" 257 9315 9338 "rename.ml" 257 9315 9340
+type(
+  Cabs.expression -> Cabs.expression -> bool
+)
+ident(
+  ext_ref Pervasives.( <> )
+)
+"rename.ml" 257 9315 9341 "rename.ml" 257 9315 9348
+type(
+  Cabs.expression
+)
+"rename.ml" 257 9315 9334 "rename.ml" 257 9315 9348
+type(
+  bool
+)
+"rename.ml" 257 9315 9355 "rename.ml" 257 9315 9373
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 257 9315 9374 "rename.ml" 257 9315 9377
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 254 9129 9164 "rename.ml" 254 9129 9167
+)
+"rename.ml" 257 9315 9355 "rename.ml" 257 9315 9377
+call(
+  stack
+)
+type(
+  Cabs.expression
+)
+"rename.ml" 257 9315 9383 "rename.ml" 257 9315 9386
+type(
+  Cabs.expression
+)
+ident(
+  int_ref exp "rename.ml" 254 9129 9164 "rename.ml" 254 9129 9167
+)
+"rename.ml" 257 9315 9330 "rename.ml" 257 9315 9387
+type(
+  Cabs.expression
+)
+"rename.ml" 258 9391 9394 "rename.ml" 258 9391 9399
+type(
+  string
+)
+ident(
+  int_ref nouId "rename.ml" 256 9219 9225 "rename.ml" 256 9219 9230
+)
+"rename.ml" 258 9391 9401 "rename.ml" 258 9391 9404
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 254 9129 9153 "rename.ml" 254 9129 9156
+)
+"rename.ml" 258 9391 9406 "rename.ml" 258 9391 9410
+type(
+  Cabs.gnu_attrs
+)
+ident(
+  int_ref attr "rename.ml" 254 9129 9158 "rename.ml" 254 9129 9162
+)
+"rename.ml" 258 9391 9412 "rename.ml" 258 9391 9418
+type(
+  Cabs.expression
+)
+ident(
+  int_ref nouExp "rename.ml" 257 9315 9321 "rename.ml" 257 9315 9327
+)
+"rename.ml" 258 9391 9393 "rename.ml" 258 9391 9419
+type(
+  string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression
+)
+"rename.ml" 257 9315 9317 "rename.ml" 258 9391 9419
+type(
+  string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression
+)
+"rename.ml" 256 9219 9221 "rename.ml" 258 9391 9419
+type(
+  string * Cabs.base_type * Cabs.gnu_attrs * Cabs.expression
+)
+"rename.ml" 260 9421 9426 "rename.ml" 260 9421 9444
+type(
+  Cabs.name_group -> Cabs.name_group
+)
+ident(
+  def convert_name_group "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 260 9421 9447 "rename.ml" 260 9421 9450
+type(
+  Cabs.base_type
+)
+ident(
+  def typ "rename.ml" 261 9466 9468 "rename.ml" 261 9466 9507
+)
+"rename.ml" 260 9421 9452 "rename.ml" 260 9421 9455
+type(
+  Cabs.storage
+)
+ident(
+  def sto "rename.ml" 261 9466 9468 "rename.ml" 261 9466 9507
+)
+"rename.ml" 260 9421 9457 "rename.ml" 260 9421 9462
+type(
+  Cabs.name list
+)
+ident(
+  def names "rename.ml" 261 9466 9468 "rename.ml" 261 9466 9507
+)
+"rename.ml" 260 9421 9446 "rename.ml" 260 9421 9463
+type(
+  Cabs.name_group
+)
+"rename.ml" 261 9466 9469 "rename.ml" 261 9466 9472
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typ "rename.ml" 260 9421 9447 "rename.ml" 260 9421 9450
+)
+"rename.ml" 261 9466 9474 "rename.ml" 261 9466 9477
+type(
+  Cabs.storage
+)
+ident(
+  int_ref sto "rename.ml" 260 9421 9452 "rename.ml" 260 9421 9455
+)
+"rename.ml" 261 9466 9479 "rename.ml" 261 9466 9487
+type(
+  (Cabs.name -> Cabs.name) -> Cabs.name list -> Cabs.name list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 261 9466 9488 "rename.ml" 261 9466 9500
+type(
+  Cabs.name -> Cabs.name
+)
+ident(
+  int_ref convert_name "rename.ml" 254 9129 9134 "rename.ml" 254 9129 9146
+)
+"rename.ml" 261 9466 9501 "rename.ml" 261 9466 9506
+type(
+  Cabs.name list
+)
+ident(
+  int_ref names "rename.ml" 260 9421 9457 "rename.ml" 260 9421 9462
+)
+"rename.ml" 261 9466 9479 "rename.ml" 261 9466 9506
+call(
+  stack
+)
+type(
+  Cabs.name list
+)
+"rename.ml" 261 9466 9468 "rename.ml" 261 9466 9507
+type(
+  Cabs.base_type * Cabs.storage * Cabs.name list
+)
+"rename.ml" 264 9510 9514 "rename.ml" 264 9510 9525
+type(
+  Cabs.definition -> Cabs.definition
+)
+ident(
+  def convert_def "rename.ml" 169 5319 5319 "rename.ml" 1 0 -1
+)
+"rename.ml" 264 9510 9526 "rename.ml" 264 9510 9529
+type(
+  Cabs.definition
+)
+ident(
+  def def "rename.ml" 265 9532 9534 "rename.ml" 318 11354 11367
+)
+"rename.ml" 265 9532 9540 "rename.ml" 265 9532 9543
+type(
+  Cabs.definition
+)
+ident(
+  int_ref def "rename.ml" 264 9510 9526 "rename.ml" 264 9510 9529
+)
+"rename.ml" 266 9549 9560 "rename.ml" 266 9549 9565
+type(
+  Cabs.single_name
+)
+ident(
+  def proto "rename.ml" 267 9576 9580 "rename.ml" 302 10743 10749
+)
+"rename.ml" 266 9549 9567 "rename.ml" 266 9549 9571
+type(
+  Cabs.body
+)
+ident(
+  def body "rename.ml" 267 9576 9580 "rename.ml" 302 10743 10749
+)
+"rename.ml" 266 9549 9552 "rename.ml" 266 9549 9572
+type(
+  Cabs.definition
+)
+"rename.ml" 267 9576 9580 "rename.ml" 267 9576 9584
+type(
+  string list ref
+)
+ident(
+  int_ref used "rename.ml" 105 3568 3572 "rename.ml" 105 3568 3576
+)
+"rename.ml" 267 9576 9585 "rename.ml" 267 9576 9587
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 267 9576 9588 "rename.ml" 267 9576 9590
+type(
+  string list
+)
+"rename.ml" 267 9576 9580 "rename.ml" 267 9576 9590
+type(
+  unit
+)
+"rename.ml" 268 9592 9600 "rename.ml" 268 9592 9617
+type(
+  (string * string) list
+)
+ident(
+  def contexteEnglobant "rename.ml" 269 9636 9640 "rename.ml" 302 10743 10749
+)
+"rename.ml" 268 9592 9620 "rename.ml" 268 9592 9621
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 268 9592 9621 "rename.ml" 268 9592 9632
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 268 9592 9620 "rename.ml" 268 9592 9632
+type(
+  (string * string) list
+)
+"rename.ml" 269 9636 9644 "rename.ml" 269 9636 9675
+type(
+  string list
+)
+ident(
+  def monContexteNotRenammedEnglobant "rename.ml" 270 9706 9710 "rename.ml" 302 10743 10749
+)
+"rename.ml" 269 9636 9678 "rename.ml" 269 9636 9679
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 269 9636 9679 "rename.ml" 269 9636 9701
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 269 9636 9678 "rename.ml" 269 9636 9701
+type(
+  string list
+)
+"rename.ml" 270 9706 9710 "rename.ml" 270 9706 9732
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 270 9706 9733 "rename.ml" 270 9706 9735
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 270 9706 9736 "rename.ml" 270 9706 9738
+type(
+  string list
+)
+"rename.ml" 270 9706 9710 "rename.ml" 270 9706 9738
+type(
+  unit
+)
+"rename.ml" 271 9740 9744 "rename.ml" 271 9740 9755
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 271 9740 9756 "rename.ml" 271 9740 9758
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 271 9740 9759 "rename.ml" 271 9740 9761
+type(
+  (string * string) list
+)
+"rename.ml" 271 9740 9744 "rename.ml" 271 9740 9761
+type(
+  unit
+)
+"rename.ml" 272 9763 9772 "rename.ml" 272 9763 9777
+type(
+  Cabs.base_type
+)
+ident(
+  def typeP "rename.ml" 273 9803 9807 "rename.ml" 302 10743 10749
+)
+"rename.ml" 272 9763 9778 "rename.ml" 272 9763 9786
+type(
+  Cabs.storage
+)
+ident(
+  def storageP "rename.ml" 273 9803 9807 "rename.ml" 302 10743 10749
+)
+"rename.ml" 272 9763 9787 "rename.ml" 272 9763 9792
+type(
+  Cabs.name
+)
+ident(
+  def nameP "rename.ml" 273 9803 9807 "rename.ml" 302 10743 10749
+)
+"rename.ml" 272 9763 9771 "rename.ml" 272 9763 9793
+type(
+  Cabs.single_name
+)
+"rename.ml" 272 9763 9794 "rename.ml" 272 9763 9799
+type(
+  Cabs.single_name
+)
+ident(
+  int_ref proto "rename.ml" 266 9549 9560 "rename.ml" 266 9549 9565
+)
+"rename.ml" 273 9803 9811 "rename.ml" 273 9803 9816
+type(
+  Cabs.base_type * Cabs.storage * Cabs.name
+)
+ident(
+  def proto "rename.ml" 274 9860 9864 "rename.ml" 302 10743 10749
+)
+"rename.ml" 273 9803 9820 "rename.ml" 273 9803 9825
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref typeP "rename.ml" 272 9763 9772 "rename.ml" 272 9763 9777
+)
+"rename.ml" 273 9803 9827 "rename.ml" 273 9803 9835
+type(
+  Cabs.storage
+)
+ident(
+  int_ref storageP "rename.ml" 272 9763 9778 "rename.ml" 272 9763 9786
+)
+"rename.ml" 273 9803 9836 "rename.ml" 273 9803 9849
+type(
+  Cabs.name -> Cabs.name
+)
+ident(
+  int_ref convert_param "rename.ml" 169 5319 5327 "rename.ml" 169 5319 5340
+)
+"rename.ml" 273 9803 9850 "rename.ml" 273 9803 9855
+type(
+  Cabs.name
+)
+ident(
+  int_ref nameP "rename.ml" 272 9763 9787 "rename.ml" 272 9763 9792
+)
+"rename.ml" 273 9803 9836 "rename.ml" 273 9803 9855
+call(
+  stack
+)
+type(
+  Cabs.name
+)
+"rename.ml" 273 9803 9819 "rename.ml" 273 9803 9856
+type(
+  Cabs.base_type * Cabs.storage * Cabs.name
+)
+"rename.ml" 274 9860 9868 "rename.ml" 274 9860 9883
+type(
+  (string * string) list
+)
+ident(
+  def contexteDecFunc "rename.ml" 275 9902 9906 "rename.ml" 302 10743 10749
+)
+"rename.ml" 274 9860 9886 "rename.ml" 274 9860 9887
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 274 9860 9887 "rename.ml" 274 9860 9898
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 274 9860 9886 "rename.ml" 274 9860 9898
+type(
+  (string * string) list
+)
+"rename.ml" 275 9902 9906 "rename.ml" 275 9902 9917
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 275 9902 9918 "rename.ml" 275 9902 9920
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 275 9902 9921 "rename.ml" 275 9902 9936
+type(
+  (string * string) list
+)
+ident(
+  int_ref contexteDecFunc "rename.ml" 274 9860 9868 "rename.ml" 274 9860 9883
+)
+"rename.ml" 275 9902 9906 "rename.ml" 275 9902 9936
+type(
+  unit
+)
+"rename.ml" 276 9938 9946 "rename.ml" 276 9938 9953
+type(
+  string list
+)
+ident(
+  def myParam "rename.ml" 277 9983 9987 "rename.ml" 302 10743 10749
+)
+"rename.ml" 276 9938 9956 "rename.ml" 276 9938 9957
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 276 9938 9957 "rename.ml" 276 9938 9979
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 276 9938 9956 "rename.ml" 276 9938 9979
+type(
+  string list
+)
+"rename.ml" 277 9983 9987 "rename.ml" 277 9983 10009
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 277 9983 10009 "rename.ml" 277 9983 10011
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 277 9983 10011 "rename.ml" 277 9983 10013
+type(
+  string list
+)
+"rename.ml" 277 9983 9987 "rename.ml" 277 9983 10013
+type(
+  unit
+)
+"rename.ml" 278 10015 10025 "rename.ml" 278 10015 10026
+type(
+  Cabs.base_type
+)
+"rename.ml" 278 10015 10029 "rename.ml" 278 10015 10030
+type(
+  Cabs.storage
+)
+"rename.ml" 278 10015 10033 "rename.ml" 278 10015 10036
+type(
+  Cabs.name
+)
+ident(
+  def fct "rename.ml" 279 10048 10058 "rename.ml" 302 10743 10749
+)
+"rename.ml" 278 10015 10024 "rename.ml" 278 10015 10038
+type(
+  Cabs.base_type * Cabs.storage * Cabs.name
+)
+"rename.ml" 278 10015 10039 "rename.ml" 278 10015 10044
+type(
+  Cabs.base_type * Cabs.storage * Cabs.name
+)
+ident(
+  int_ref proto "rename.ml" 273 9803 9811 "rename.ml" 273 9803 9816
+)
+"rename.ml" 279 10048 10063 "rename.ml" 279 10048 10066
+type(
+  string
+)
+ident(
+  def nom "rename.ml" 280 10083 10090 "rename.ml" 302 10743 10749
+)
+"rename.ml" 279 10048 10067 "rename.ml" 279 10048 10068
+type(
+  Cabs.base_type
+)
+"rename.ml" 279 10048 10069 "rename.ml" 279 10048 10070
+type(
+  Cabs.gnu_attrs
+)
+"rename.ml" 279 10048 10071 "rename.ml" 279 10048 10072
+type(
+  Cabs.expression
+)
+"rename.ml" 279 10048 10062 "rename.ml" 279 10048 10073
+type(
+  Cabs.name
+)
+"rename.ml" 279 10048 10075 "rename.ml" 279 10048 10078
+type(
+  Cabs.name
+)
+ident(
+  int_ref fct "rename.ml" 278 10015 10033 "rename.ml" 278 10015 10036
+)
+"rename.ml" 280 10083 10095 "rename.ml" 280 10083 10099
+type(
+  Cabs.definition list
+)
+ident(
+  def decs "rename.ml" 282 10123 10127 "rename.ml" 302 10743 10749
+)
+"rename.ml" 280 10083 10101 "rename.ml" 280 10083 10105
+type(
+  Cabs.statement
+)
+ident(
+  def stat "rename.ml" 282 10123 10127 "rename.ml" 302 10743 10749
+)
+"rename.ml" 280 10083 10094 "rename.ml" 280 10083 10106
+type(
+  Cabs.body
+)
+"rename.ml" 280 10083 10109 "rename.ml" 280 10083 10113
+type(
+  Cabs.body
+)
+ident(
+  int_ref body "rename.ml" 266 9549 9567 "rename.ml" 266 9549 9571
+)
+"rename.ml" 282 10123 10131 "rename.ml" 282 10123 10135
+type(
+  Cabs.definition list
+)
+ident(
+  def decs "rename.ml" 285 10196 10200 "rename.ml" 302 10743 10749
+)
+"rename.ml" 282 10123 10138 "rename.ml" 282 10123 10146
+type(
+  (Cabs.definition -> Cabs.definition) ->
+  Cabs.definition list -> Cabs.definition list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 282 10123 10152 "rename.ml" 282 10123 10155
+type(
+  Cabs.definition
+)
+ident(
+  def dec "rename.ml" 282 10123 10159 "rename.ml" 282 10123 10174
+)
+"rename.ml" 282 10123 10159 "rename.ml" 282 10123 10170
+type(
+  Cabs.definition -> Cabs.definition
+)
+ident(
+  int_ref convert_def "rename.ml" 264 9510 9514 "rename.ml" 264 9510 9525
+)
+"rename.ml" 282 10123 10171 "rename.ml" 282 10123 10174
+type(
+  Cabs.definition
+)
+ident(
+  int_ref dec "rename.ml" 282 10123 10152 "rename.ml" 282 10123 10155
+)
+"rename.ml" 282 10123 10159 "rename.ml" 282 10123 10174
+call(
+  tail
+)
+type(
+  Cabs.definition
+)
+"rename.ml" 282 10123 10147 "rename.ml" 282 10123 10175
+type(
+  Cabs.definition -> Cabs.definition
+)
+"rename.ml" 282 10123 10177 "rename.ml" 282 10123 10181
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref decs "rename.ml" 280 10083 10095 "rename.ml" 280 10083 10099
+)
+"rename.ml" 282 10123 10138 "rename.ml" 282 10123 10181
+call(
+  stack
+)
+type(
+  Cabs.definition list
+)
+"rename.ml" 285 10196 10200 "rename.ml" 285 10196 10211
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 285 10196 10212 "rename.ml" 285 10196 10214
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 285 10196 10215 "rename.ml" 285 10196 10229
+type(
+  (string * string) list -> (string * string) list -> (string * string) list
+)
+ident(
+  int_ref concatContexte "rename.ml" 137 4432 4441 "rename.ml" 137 4432 4455
+)
+"rename.ml" 285 10196 10232 "rename.ml" 285 10196 10233
+type(
+  (string * string) list ref -> (string * string) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 285 10196 10233 "rename.ml" 285 10196 10244
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 285 10196 10232 "rename.ml" 285 10196 10244
+type(
+  (string * string) list
+)
+"rename.ml" 285 10196 10245 "rename.ml" 285 10196 10262
+type(
+  (string * string) list
+)
+ident(
+  int_ref contexteEnglobant "rename.ml" 268 9592 9600 "rename.ml" 268 9592 9617
+)
+"rename.ml" 285 10196 10215 "rename.ml" 285 10196 10262
+call(
+  stack
+)
+type(
+  (string * string) list
+)
+"rename.ml" 285 10196 10200 "rename.ml" 285 10196 10262
+type(
+  unit
+)
+"rename.ml" 287 10269 10277 "rename.ml" 287 10269 10280
+type(
+  Cabs.definition
+)
+ident(
+  def res "rename.ml" 288 10337 10341 "rename.ml" 302 10743 10749
+)
+"rename.ml" 287 10269 10293 "rename.ml" 287 10269 10298
+type(
+  Cabs.single_name
+)
+ident(
+  int_ref proto "rename.ml" 273 9803 9811 "rename.ml" 273 9803 9816
+)
+"rename.ml" 287 10269 10302 "rename.ml" 287 10269 10306
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref decs "rename.ml" 282 10123 10131 "rename.ml" 282 10123 10135
+)
+"rename.ml" 287 10269 10309 "rename.ml" 287 10269 10326
+type(
+  Cabs.statement -> Cabs.statement
+)
+ident(
+  int_ref convert_statement "rename.ml" 216 7241 7245 "rename.ml" 216 7241 7262
+)
+"rename.ml" 287 10269 10327 "rename.ml" 287 10269 10331
+type(
+  Cabs.statement
+)
+ident(
+  int_ref stat "rename.ml" 280 10083 10101 "rename.ml" 280 10083 10105
+)
+"rename.ml" 287 10269 10309 "rename.ml" 287 10269 10331
+call(
+  stack
+)
+type(
+  Cabs.statement
+)
+"rename.ml" 287 10269 10301 "rename.ml" 287 10269 10332
+type(
+  Cabs.body
+)
+"rename.ml" 287 10269 10283 "rename.ml" 287 10269 10333
+type(
+  Cabs.definition
+)
+"rename.ml" 288 10337 10345 "rename.ml" 288 10337 10352
+type(
+  string list
+)
+ident(
+  def myLocal "rename.ml" 291 10385 10389 "rename.ml" 302 10743 10749
+)
+"rename.ml" 288 10337 10355 "rename.ml" 288 10337 10356
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 288 10337 10356 "rename.ml" 288 10337 10378
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 288 10337 10355 "rename.ml" 288 10337 10378
+type(
+  string list
+)
+"rename.ml" 291 10385 10393 "rename.ml" 291 10385 10395
+type(
+  MyFunCont.funcon
+)
+ident(
+  def nc "rename.ml" 297 10474 10478 "rename.ml" 302 10743 10749
+)
+"rename.ml" 291 10385 10399 "rename.ml" 291 10385 10417
+type(
+  string list ->
+  string list ->
+  string list ->
+  string list -> string list -> string list -> MyFunCont.funcon
+)
+ident(
+  int_ref MyFunCont.setMulti "rename.ml" 38 1057 1059 "rename.ml" 38 1057 1164
+)
+"rename.ml" 292 10419 10427 "rename.ml" 292 10419 10434
+type(
+  string list
+)
+ident(
+  int_ref myParam "rename.ml" 276 9938 9946 "rename.ml" 276 9938 9953
+)
+"rename.ml" 292 10419 10435 "rename.ml" 292 10419 10437
+type(
+  string list
+)
+"rename.ml" 292 10419 10438 "rename.ml" 292 10419 10440
+type(
+  string list
+)
+"rename.ml" 292 10419 10441 "rename.ml" 292 10419 10443
+type(
+  string list
+)
+"rename.ml" 293 10445 10453 "rename.ml" 293 10445 10460
+type(
+  string list
+)
+ident(
+  int_ref myLocal "rename.ml" 288 10337 10345 "rename.ml" 288 10337 10352
+)
+"rename.ml" 293 10445 10461 "rename.ml" 293 10445 10462
+type(
+  string list ref -> string list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 293 10445 10462 "rename.ml" 293 10445 10466
+type(
+  string list ref
+)
+ident(
+  int_ref used "rename.ml" 105 3568 3572 "rename.ml" 105 3568 3576
+)
+"rename.ml" 293 10445 10461 "rename.ml" 293 10445 10466
+type(
+  string list
+)
+"rename.ml" 291 10385 10399 "rename.ml" 293 10445 10466
+call(
+  stack
+)
+type(
+  MyFunCont.funcon
+)
+"rename.ml" 297 10474 10481 "rename.ml" 297 10474 10494
+type(
+  (string * MyFunCont.funcon) list -> string -> bool
+)
+ident(
+  int_ref AFContext.mem "rename.ml" 80 3011 3016 "rename.ml" 80 3011 3019
+)
+"rename.ml" 297 10474 10495 "rename.ml" 297 10474 10496
+type(
+  (string * MyFunCont.funcon) list ref -> (string * MyFunCont.funcon) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 297 10474 10496 "rename.ml" 297 10474 10500
+type(
+  (string * MyFunCont.funcon) list ref
+)
+ident(
+  int_ref myAF "rename.ml" 94 3396 3400 "rename.ml" 94 3396 3404
+)
+"rename.ml" 297 10474 10495 "rename.ml" 297 10474 10500
+type(
+  (string * MyFunCont.funcon) list
+)
+"rename.ml" 297 10474 10501 "rename.ml" 297 10474 10504
+type(
+  string
+)
+ident(
+  int_ref nom "rename.ml" 279 10048 10063 "rename.ml" 279 10048 10066
+)
+"rename.ml" 297 10474 10481 "rename.ml" 297 10474 10504
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 297 10474 10507 "rename.ml" 297 10474 10508
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"rename.ml" 297 10474 10509 "rename.ml" 297 10474 10514
+type(
+  bool
+)
+"rename.ml" 297 10474 10481 "rename.ml" 297 10474 10514
+type(
+  bool
+)
+"rename.ml" 297 10474 10520 "rename.ml" 297 10474 10524
+type(
+  (string * MyFunCont.funcon) list ref
+)
+ident(
+  int_ref myAF "rename.ml" 94 3396 3400 "rename.ml" 94 3396 3404
+)
+"rename.ml" 297 10474 10525 "rename.ml" 297 10474 10527
+type(
+  (string * MyFunCont.funcon) list ref ->
+  (string * MyFunCont.funcon) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 297 10474 10529 "rename.ml" 297 10474 10542
+type(
+  (string * MyFunCont.funcon) list ->
+  string -> MyFunCont.funcon -> (string * MyFunCont.funcon) list
+)
+ident(
+  int_ref AFContext.set "rename.ml" 81 3045 3054 "rename.ml" 81 3045 3057
+)
+"rename.ml" 297 10474 10543 "rename.ml" 297 10474 10544
+type(
+  (string * MyFunCont.funcon) list ref -> (string * MyFunCont.funcon) list
+)
+ident(
+  ext_ref Pervasives.( ! )
+)
+"rename.ml" 297 10474 10544 "rename.ml" 297 10474 10548
+type(
+  (string * MyFunCont.funcon) list ref
+)
+ident(
+  int_ref myAF "rename.ml" 94 3396 3400 "rename.ml" 94 3396 3404
+)
+"rename.ml" 297 10474 10543 "rename.ml" 297 10474 10548
+type(
+  (string * MyFunCont.funcon) list
+)
+"rename.ml" 297 10474 10549 "rename.ml" 297 10474 10552
+type(
+  string
+)
+ident(
+  int_ref nom "rename.ml" 279 10048 10063 "rename.ml" 279 10048 10066
+)
+"rename.ml" 297 10474 10554 "rename.ml" 297 10474 10556
+type(
+  MyFunCont.funcon
+)
+ident(
+  int_ref nc "rename.ml" 291 10385 10393 "rename.ml" 291 10385 10395
+)
+"rename.ml" 297 10474 10529 "rename.ml" 297 10474 10556
+call(
+  stack
+)
+type(
+  (string * MyFunCont.funcon) list
+)
+"rename.ml" 297 10474 10520 "rename.ml" 297 10474 10556
+type(
+  unit
+)
+"rename.ml" 297 10474 10478 "rename.ml" 297 10474 10556
+type(
+  unit
+)
+"rename.ml" 298 10561 10565 "rename.ml" 298 10561 10576
+type(
+  (string * string) list ref
+)
+ident(
+  int_ref monContexte "rename.ml" 103 3465 3469 "rename.ml" 103 3465 3480
+)
+"rename.ml" 298 10561 10577 "rename.ml" 298 10561 10579
+type(
+  (string * string) list ref -> (string * string) list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 298 10561 10580 "rename.ml" 298 10561 10597
+type(
+  (string * string) list
+)
+ident(
+  int_ref contexteEnglobant "rename.ml" 268 9592 9600 "rename.ml" 268 9592 9617
+)
+"rename.ml" 298 10561 10565 "rename.ml" 298 10561 10597
+type(
+  unit
+)
+"rename.ml" 299 10599 10603 "rename.ml" 299 10599 10607
+type(
+  string list ref
+)
+ident(
+  int_ref used "rename.ml" 105 3568 3572 "rename.ml" 105 3568 3576
+)
+"rename.ml" 299 10599 10608 "rename.ml" 299 10599 10610
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 299 10599 10611 "rename.ml" 299 10599 10613
+type(
+  string list
+)
+"rename.ml" 299 10599 10603 "rename.ml" 299 10599 10613
+type(
+  unit
+)
+"rename.ml" 300 10615 10619 "rename.ml" 300 10615 10641
+type(
+  string list ref
+)
+ident(
+  int_ref monContexteNotRenammed "rename.ml" 104 3511 3515 "rename.ml" 104 3511 3537
+)
+"rename.ml" 300 10615 10642 "rename.ml" 300 10615 10644
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 300 10615 10647 "rename.ml" 300 10615 10678
+type(
+  string list
+)
+ident(
+  int_ref monContexteNotRenammedEnglobant "rename.ml" 269 9636 9644 "rename.ml" 269 9636 9675
+)
+"rename.ml" 300 10615 10619 "rename.ml" 300 10615 10678
+type(
+  unit
+)
+"rename.ml" 302 10743 10746 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+ident(
+  int_ref res "rename.ml" 287 10269 10277 "rename.ml" 287 10269 10280
+)
+"rename.ml" 300 10615 10619 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 299 10599 10603 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 298 10561 10565 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 297 10474 10478 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 291 10385 10389 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 288 10337 10341 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 287 10269 10273 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 285 10196 10200 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 282 10123 10127 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 280 10083 10090 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 279 10048 10058 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 278 10015 10020 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 277 9983 9987 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 276 9938 9942 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 275 9902 9906 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 274 9860 9864 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 273 9803 9807 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 272 9763 9767 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 271 9740 9744 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 270 9706 9710 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 269 9636 9640 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 268 9592 9596 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 267 9576 9580 "rename.ml" 302 10743 10749
+type(
+  Cabs.definition
+)
+"rename.ml" 303 10750 10766 "rename.ml" 303 10750 10771
+type(
+  Cabs.single_name
+)
+ident(
+  def proto "rename.ml" 304 10834 10838 "rename.ml" 304 10834 10841
+)
+"rename.ml" 303 10750 10773 "rename.ml" 303 10750 10777
+type(
+  Cabs.name_group list
+)
+ident(
+  def decs "rename.ml" 304 10834 10838 "rename.ml" 304 10834 10841
+)
+"rename.ml" 303 10750 10779 "rename.ml" 303 10750 10783
+type(
+  Cabs.body
+)
+ident(
+  def body "rename.ml" 304 10834 10838 "rename.ml" 304 10834 10841
+)
+"rename.ml" 303 10750 10755 "rename.ml" 303 10750 10784
+type(
+  Cabs.definition
+)
+"rename.ml" 304 10834 10838 "rename.ml" 304 10834 10841
+type(
+  Cabs.definition
+)
+ident(
+  int_ref def "rename.ml" 264 9510 9526 "rename.ml" 264 9510 9529
+)
+"rename.ml" 313 11199 11211 "rename.ml" 313 11199 11216
+type(
+  Cabs.name_group
+)
+ident(
+  def names "rename.ml" 314 11221 11225 "rename.ml" 317 11341 11353
+)
+"rename.ml" 313 11199 11204 "rename.ml" 313 11199 11216
+type(
+  Cabs.definition
+)
+"rename.ml" 314 11221 11230 "rename.ml" 314 11221 11238
+type(
+  Cabs.base_type
+)
+ident(
+  def baseType "rename.ml" 315 11264 11268 "rename.ml" 317 11341 11353
+)
+"rename.ml" 314 11221 11240 "rename.ml" 314 11221 11241
+type(
+  Cabs.storage
+)
+"rename.ml" 314 11221 11243 "rename.ml" 314 11221 11251
+type(
+  Cabs.name list
+)
+ident(
+  def namelist "rename.ml" 315 11264 11268 "rename.ml" 317 11341 11353
+)
+"rename.ml" 314 11221 11229 "rename.ml" 314 11221 11252
+type(
+  Cabs.name_group
+)
+"rename.ml" 314 11221 11255 "rename.ml" 314 11221 11260
+type(
+  Cabs.name_group
+)
+ident(
+  int_ref names "rename.ml" 313 11199 11211 "rename.ml" 313 11199 11216
+)
+"rename.ml" 315 11264 11271 "rename.ml" 315 11264 11278
+type(
+  Cabs.base_type -> bool
+)
+ident(
+  int_ref isProto "rename.ml" 16 333 341 "rename.ml" 16 333 348
+)
+"rename.ml" 315 11264 11279 "rename.ml" 315 11264 11287
+type(
+  Cabs.base_type
+)
+ident(
+  int_ref baseType "rename.ml" 314 11221 11230 "rename.ml" 314 11221 11238
+)
+"rename.ml" 315 11264 11271 "rename.ml" 315 11264 11287
+call(
+  stack
+)
+type(
+  bool
+)
+"rename.ml" 315 11264 11288 "rename.ml" 315 11264 11289
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"rename.ml" 315 11264 11290 "rename.ml" 315 11264 11295
+type(
+  bool
+)
+"rename.ml" 315 11264 11271 "rename.ml" 315 11264 11295
+type(
+  bool
+)
+"rename.ml" 316 11302 11315 "rename.ml" 316 11302 11333
+type(
+  Cabs.name_group -> Cabs.name_group
+)
+ident(
+  int_ref convert_name_group "rename.ml" 260 9421 9426 "rename.ml" 260 9421 9444
+)
+"rename.ml" 316 11302 11334 "rename.ml" 316 11302 11339
+type(
+  Cabs.name_group
+)
+ident(
+  int_ref names "rename.ml" 313 11199 11211 "rename.ml" 313 11199 11216
+)
+"rename.ml" 316 11302 11314 "rename.ml" 316 11302 11340
+call(
+  stack
+)
+type(
+  Cabs.name_group
+)
+"rename.ml" 316 11302 11307 "rename.ml" 316 11302 11340
+type(
+  Cabs.definition
+)
+"rename.ml" 317 11341 11350 "rename.ml" 317 11341 11353
+type(
+  Cabs.definition
+)
+ident(
+  int_ref def "rename.ml" 264 9510 9526 "rename.ml" 264 9510 9529
+)
+"rename.ml" 315 11264 11268 "rename.ml" 317 11341 11353
+type(
+  Cabs.definition
+)
+"rename.ml" 314 11221 11225 "rename.ml" 317 11341 11353
+type(
+  Cabs.definition
+)
+"rename.ml" 318 11354 11359 "rename.ml" 318 11354 11360
+type(
+  Cabs.definition
+)
+"rename.ml" 318 11354 11364 "rename.ml" 318 11354 11367
+type(
+  Cabs.definition
+)
+ident(
+  int_ref def "rename.ml" 264 9510 9526 "rename.ml" 264 9510 9529
+)
+"rename.ml" 265 9532 9534 "rename.ml" 318 11354 11367
+type(
+  Cabs.definition
+)
+"rename.ml" 321 11371 11375 "rename.ml" 321 11371 11393
+type(
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  def convert_comma_exps "rename.ml" 324 11506 11506 "rename.ml" 1 0 -1
+)
+"rename.ml" 321 11371 11394 "rename.ml" 321 11371 11398
+type(
+  Cabs.expression list
+)
+ident(
+  def exps "rename.ml" 321 11371 11401 "rename.ml" 321 11371 11435
+)
+"rename.ml" 321 11371 11401 "rename.ml" 321 11371 11409
+type(
+  (Cabs.expression -> Cabs.expression) ->
+  Cabs.expression list -> Cabs.expression list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 321 11371 11411 "rename.ml" 321 11371 11429
+type(
+  Cabs.expression -> Cabs.expression
+)
+ident(
+  int_ref convert_expression "rename.ml" 177 5498 5502 "rename.ml" 177 5498 5520
+)
+"rename.ml" 321 11371 11431 "rename.ml" 321 11371 11435
+type(
+  Cabs.expression list
+)
+ident(
+  int_ref exps "rename.ml" 321 11371 11394 "rename.ml" 321 11371 11398
+)
+"rename.ml" 321 11371 11401 "rename.ml" 321 11371 11435
+call(
+  tail
+)
+type(
+  Cabs.expression list
+)
+"rename.ml" 324 11506 11510 "rename.ml" 324 11506 11512
+type(
+  Cabs.file -> Cabs.definition list
+)
+ident(
+  def go "rename.ml" 332 11689 11693 "rename.ml" 1 0 -1
+)
+"rename.ml" 324 11506 11515 "rename.ml" 324 11506 11519
+type(
+  Cabs.file
+)
+ident(
+  def defs "rename.ml" 327 11573 11573 "rename.ml" 332 11689 11693
+)
+"rename.ml" 327 11573 11573 "rename.ml" 327 11573 11593
+type(
+  string list ref
+)
+ident(
+  int_ref listeDesVariablesFic "rename.ml" 109 3610 3614 "rename.ml" 109 3610 3634
+)
+"rename.ml" 327 11573 11594 "rename.ml" 327 11573 11596
+type(
+  string list ref -> string list -> unit
+)
+ident(
+  ext_ref Pervasives.( := )
+)
+"rename.ml" 327 11573 11596 "rename.ml" 327 11573 11598
+type(
+  string list
+)
+"rename.ml" 327 11573 11573 "rename.ml" 327 11573 11598
+type(
+  unit
+)
+"rename.ml" 328 11600 11606 "rename.ml" 328 11600 11610
+type(
+  Cabs.definition list
+)
+ident(
+  def decs "rename.ml" 332 11689 11689 "rename.ml" 332 11689 11693
+)
+"rename.ml" 328 11600 11613 "rename.ml" 328 11600 11621
+type(
+  (Cabs.definition -> Cabs.definition) -> Cabs.file -> Cabs.definition list
+)
+ident(
+  ext_ref List.map
+)
+"rename.ml" 328 11600 11627 "rename.ml" 328 11600 11630
+type(
+  Cabs.definition
+)
+ident(
+  def dec "rename.ml" 328 11600 11634 "rename.ml" 328 11600 11649
+)
+"rename.ml" 328 11600 11634 "rename.ml" 328 11600 11645
+type(
+  Cabs.definition -> Cabs.definition
+)
+ident(
+  int_ref convert_def "rename.ml" 264 9510 9514 "rename.ml" 264 9510 9525
+)
+"rename.ml" 328 11600 11646 "rename.ml" 328 11600 11649
+type(
+  Cabs.definition
+)
+ident(
+  int_ref dec "rename.ml" 328 11600 11627 "rename.ml" 328 11600 11630
+)
+"rename.ml" 328 11600 11634 "rename.ml" 328 11600 11649
+call(
+  tail
+)
+type(
+  Cabs.definition
+)
+"rename.ml" 328 11600 11622 "rename.ml" 328 11600 11650
+type(
+  Cabs.definition -> Cabs.definition
+)
+"rename.ml" 328 11600 11652 "rename.ml" 328 11600 11656
+type(
+  Cabs.file
+)
+ident(
+  int_ref defs "rename.ml" 324 11506 11515 "rename.ml" 324 11506 11519
+)
+"rename.ml" 328 11600 11613 "rename.ml" 328 11600 11656
+call(
+  stack
+)
+type(
+  Cabs.definition list
+)
+"rename.ml" 332 11689 11689 "rename.ml" 332 11689 11693
+type(
+  Cabs.definition list
+)
+ident(
+  int_ref decs "rename.ml" 328 11600 11606 "rename.ml" 328 11600 11610
+)
+"rename.ml" 328 11600 11602 "rename.ml" 332 11689 11693
+type(
+  Cabs.definition list
+)
+"rename.ml" 327 11573 11573 "rename.ml" 332 11689 11693
+type(
+  Cabs.definition list
+)

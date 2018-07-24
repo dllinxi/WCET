@@ -1,0 +1,2578 @@
+"maxima.ml" 20 690 696 "maxima.ml" 20 690 701
+type(
+  Format.formatter -> t -> unit
+)
+ident(
+  def print "maxima.ml" 24 799 816 "maxima.ml" 25 817 820
+)
+"maxima.ml" 20 690 702 "maxima.ml" 20 690 705
+type(
+  Format.formatter
+)
+ident(
+  def fmt "maxima.ml" 20 690 706 "maxima.ml" 24 799 816
+)
+"maxima.ml" 20 690 706 "maxima.ml" 20 690 707
+type(
+  t
+)
+ident(
+  def o "maxima.ml" 20 690 710 "maxima.ml" 24 799 816
+)
+"maxima.ml" 20 690 710 "maxima.ml" 20 690 732
+type(
+  Format.formatter -> string -> unit
+)
+ident(
+  ext_ref Format.pp_print_string
+)
+"maxima.ml" 20 690 733 "maxima.ml" 20 690 736
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maxima.ml" 20 690 702 "maxima.ml" 20 690 705
+)
+"maxima.ml" 20 690 744 "maxima.ml" 20 690 745
+type(
+  t
+)
+ident(
+  int_ref o "maxima.ml" 20 690 706 "maxima.ml" 20 690 707
+)
+"maxima.ml" 21 751 757 "maxima.ml" 21 751 759
+type(
+  t
+)
+"maxima.ml" 21 751 763 "maxima.ml" 21 751 766
+type(
+  string
+)
+"maxima.ml" 22 767 773 "maxima.ml" 22 767 775
+type(
+  t
+)
+"maxima.ml" 22 767 779 "maxima.ml" 22 767 782
+type(
+  string
+)
+"maxima.ml" 23 783 789 "maxima.ml" 23 783 791
+type(
+  t
+)
+"maxima.ml" 23 783 795 "maxima.ml" 23 783 798
+type(
+  string
+)
+"maxima.ml" 24 799 805 "maxima.ml" 24 799 807
+type(
+  t
+)
+"maxima.ml" 24 799 811 "maxima.ml" 24 799 815
+type(
+  string
+)
+"maxima.ml" 20 690 737 "maxima.ml" 24 799 816
+type(
+  string
+)
+"maxima.ml" 20 690 710 "maxima.ml" 24 799 816
+call(
+  tail
+)
+type(
+  unit
+)
+"maxima.ml" 56 1597 1603 "maxima.ml" 56 1597 1608
+type(
+  Format.formatter -> P.t list -> unit
+)
+ident(
+  def print "maxima.ml" 65 1831 1833 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 56 1597 1609 "maxima.ml" 56 1597 1612
+type(
+  Format.formatter
+)
+ident(
+  def fmt "maxima.ml" 56 1597 1613 "maxima.ml" 62 1769 1803
+)
+"maxima.ml" 56 1597 1613 "maxima.ml" 56 1597 1616
+type(
+  P.t list
+)
+ident(
+  def set "maxima.ml" 57 1619 1623 "maxima.ml" 62 1769 1803
+)
+"maxima.ml" 57 1619 1623 "maxima.ml" 57 1619 1633
+type(
+  (int -> P.t -> unit) -> P.t list -> unit
+)
+ident(
+  ext_ref List.iteri
+)
+"maxima.ml" 57 1619 1639 "maxima.ml" 57 1619 1641
+type(
+  int
+)
+ident(
+  def rg "maxima.ml" 57 1619 1642 "maxima.ml" 60 1710 1756
+)
+"maxima.ml" 57 1619 1642 "maxima.ml" 57 1619 1643
+type(
+  P.t
+)
+ident(
+  def x "maxima.ml" 58 1647 1653 "maxima.ml" 60 1710 1756
+)
+"maxima.ml" 58 1647 1656 "maxima.ml" 58 1647 1658
+type(
+  int
+)
+ident(
+  int_ref rg "maxima.ml" 57 1619 1639 "maxima.ml" 57 1619 1641
+)
+"maxima.ml" 58 1647 1659 "maxima.ml" 58 1647 1660
+type(
+  int -> int -> bool
+)
+ident(
+  ext_ref Pervasives.( = )
+)
+"maxima.ml" 58 1647 1661 "maxima.ml" 58 1647 1662
+type(
+  int
+)
+"maxima.ml" 58 1647 1656 "maxima.ml" 58 1647 1662
+type(
+  bool
+)
+"maxima.ml" 59 1663 1674 "maxima.ml" 59 1663 1688
+type(
+  Format.formatter ->
+  ((Format.formatter -> P.t -> unit) -> P.t -> unit, Format.formatter, unit)
+  format -> (Format.formatter -> P.t -> unit) -> P.t -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"maxima.ml" 59 1663 1689 "maxima.ml" 59 1663 1692
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maxima.ml" 56 1597 1609 "maxima.ml" 56 1597 1612
+)
+"maxima.ml" 59 1663 1693 "maxima.ml" 59 1663 1699
+type(
+  ((Format.formatter -> P.t -> unit) -> P.t -> unit, Format.formatter, unit)
+  format
+)
+"maxima.ml" 59 1663 1700 "maxima.ml" 59 1663 1707
+type(
+  Format.formatter -> P.t -> unit
+)
+ident(
+  int_ref P.print "maxima.ml" 44 1266 1268 "maxima.ml" 44 1266 1309
+)
+"maxima.ml" 59 1663 1708 "maxima.ml" 59 1663 1709
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 57 1619 1642 "maxima.ml" 57 1619 1643
+)
+"maxima.ml" 59 1663 1674 "maxima.ml" 59 1663 1709
+call(
+  tail
+)
+type(
+  unit
+)
+"maxima.ml" 60 1710 1721 "maxima.ml" 60 1710 1735
+type(
+  Format.formatter ->
+  ((Format.formatter -> P.t -> unit) -> P.t -> unit, Format.formatter, unit)
+  format -> (Format.formatter -> P.t -> unit) -> P.t -> unit
+)
+ident(
+  ext_ref Format.fprintf
+)
+"maxima.ml" 60 1710 1736 "maxima.ml" 60 1710 1739
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maxima.ml" 56 1597 1609 "maxima.ml" 56 1597 1612
+)
+"maxima.ml" 60 1710 1740 "maxima.ml" 60 1710 1746
+type(
+  ((Format.formatter -> P.t -> unit) -> P.t -> unit, Format.formatter, unit)
+  format
+)
+"maxima.ml" 60 1710 1747 "maxima.ml" 60 1710 1754
+type(
+  Format.formatter -> P.t -> unit
+)
+ident(
+  int_ref P.print "maxima.ml" 44 1266 1268 "maxima.ml" 44 1266 1309
+)
+"maxima.ml" 60 1710 1755 "maxima.ml" 60 1710 1756
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 57 1619 1642 "maxima.ml" 57 1619 1643
+)
+"maxima.ml" 60 1710 1721 "maxima.ml" 60 1710 1756
+call(
+  tail
+)
+type(
+  unit
+)
+"maxima.ml" 58 1647 1653 "maxima.ml" 60 1710 1756
+type(
+  unit
+)
+"maxima.ml" 57 1619 1634 "maxima.ml" 60 1710 1757
+type(
+  int -> P.t -> unit
+)
+"maxima.ml" 61 1758 1764 "maxima.ml" 61 1758 1767
+type(
+  P.t list
+)
+ident(
+  int_ref set "maxima.ml" 56 1597 1613 "maxima.ml" 56 1597 1616
+)
+"maxima.ml" 57 1619 1623 "maxima.ml" 61 1758 1767
+call(
+  stack
+)
+type(
+  unit
+)
+"maxima.ml" 62 1769 1773 "maxima.ml" 62 1769 1795
+type(
+  Format.formatter -> string -> unit
+)
+ident(
+  ext_ref Format.pp_print_string
+)
+"maxima.ml" 62 1769 1796 "maxima.ml" 62 1769 1799
+type(
+  Format.formatter
+)
+ident(
+  int_ref fmt "maxima.ml" 56 1597 1609 "maxima.ml" 56 1597 1612
+)
+"maxima.ml" 62 1769 1800 "maxima.ml" 62 1769 1803
+type(
+  string
+)
+"maxima.ml" 62 1769 1773 "maxima.ml" 62 1769 1803
+call(
+  tail
+)
+type(
+  unit
+)
+"maxima.ml" 57 1619 1623 "maxima.ml" 62 1769 1803
+type(
+  unit
+)
+"maxima.ml" 65 1831 1837 "maxima.ml" 65 1831 1845
+type(
+  'a list -> int
+)
+ident(
+  def cardinal "maxima.ml" 68 1904 1906 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 65 1831 1846 "maxima.ml" 65 1831 1849
+type(
+  'a list
+)
+ident(
+  def set "maxima.ml" 65 1831 1852 "maxima.ml" 65 1831 1867
+)
+"maxima.ml" 65 1831 1852 "maxima.ml" 65 1831 1863
+type(
+  'a list -> int
+)
+ident(
+  ext_ref List.length
+)
+"maxima.ml" 65 1831 1864 "maxima.ml" 65 1831 1867
+type(
+  'a list
+)
+ident(
+  int_ref set "maxima.ml" 65 1831 1846 "maxima.ml" 65 1831 1849
+)
+"maxima.ml" 65 1831 1852 "maxima.ml" 65 1831 1867
+call(
+  tail
+)
+type(
+  int
+)
+"maxima.ml" 68 1904 1910 "maxima.ml" 68 1904 1914
+type(
+  'b -> 'b list
+)
+ident(
+  def just "maxima.ml" 75 2175 2177 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 68 1904 1915 "maxima.ml" 68 1904 1916
+type(
+  'b
+)
+ident(
+  def x "maxima.ml" 68 1904 1919 "maxima.ml" 68 1904 1922
+)
+"maxima.ml" 68 1904 1920 "maxima.ml" 68 1904 1921
+type(
+  'b
+)
+ident(
+  int_ref x "maxima.ml" 68 1904 1915 "maxima.ml" 68 1904 1916
+)
+"maxima.ml" 68 1904 1919 "maxima.ml" 68 1904 1922
+type(
+  'b list
+)
+"maxima.ml" 75 2175 2181 "maxima.ml" 75 2175 2191
+type(
+  ('c -> 'c -> PosetOrder.t) -> 'c list -> 'c -> 'c list
+)
+ident(
+  def extend_gen "maxima.ml" 87 2488 2490 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 75 2175 2192 "maxima.ml" 75 2175 2197
+type(
+  'c -> 'c -> PosetOrder.t
+)
+ident(
+  def order "maxima.ml" 75 2175 2198 "maxima.ml" 84 2414 2422
+)
+"maxima.ml" 75 2175 2198 "maxima.ml" 75 2175 2199
+type(
+  'c list
+)
+ident(
+  def m "maxima.ml" 75 2175 2200 "maxima.ml" 84 2414 2422
+)
+"maxima.ml" 75 2175 2200 "maxima.ml" 75 2175 2201
+type(
+  'c
+)
+ident(
+  def x "maxima.ml" 76 2204 2208 "maxima.ml" 84 2414 2422
+)
+"maxima.ml" 76 2204 2216 "maxima.ml" 76 2204 2218
+type(
+  'c list -> 'c list
+)
+ident(
+  def re "maxima.ml" 76 2204 2208 "maxima.ml" 84 2414 2422
+)
+"maxima.ml" 77 2230 2238 "maxima.ml" 77 2230 2240
+type(
+  'c list
+)
+"maxima.ml" 77 2230 2245 "maxima.ml" 77 2230 2246
+type(
+  'c
+)
+ident(
+  int_ref x "maxima.ml" 75 2175 2200 "maxima.ml" 75 2175 2201
+)
+"maxima.ml" 77 2230 2244 "maxima.ml" 77 2230 2247
+type(
+  'c list
+)
+"maxima.ml" 78 2248 2256 "maxima.ml" 78 2248 2257
+type(
+  'c
+)
+ident(
+  def y "maxima.ml" 79 2264 2265 "maxima.ml" 83 2392 2410
+)
+"maxima.ml" 78 2248 2259 "maxima.ml" 78 2248 2260
+type(
+  'c list
+)
+ident(
+  def r "maxima.ml" 79 2264 2265 "maxima.ml" 83 2392 2410
+)
+"maxima.ml" 78 2248 2256 "maxima.ml" 78 2248 2260
+type(
+  'c list
+)
+"maxima.ml" 80 2288 2295 "maxima.ml" 80 2288 2300
+type(
+  'c -> 'c -> PosetOrder.t
+)
+ident(
+  int_ref order "maxima.ml" 75 2175 2192 "maxima.ml" 75 2175 2197
+)
+"maxima.ml" 80 2288 2301 "maxima.ml" 80 2288 2302
+type(
+  'c
+)
+ident(
+  int_ref x "maxima.ml" 75 2175 2200 "maxima.ml" 75 2175 2201
+)
+"maxima.ml" 80 2288 2303 "maxima.ml" 80 2288 2304
+type(
+  'c
+)
+ident(
+  int_ref y "maxima.ml" 78 2248 2256 "maxima.ml" 78 2248 2257
+)
+"maxima.ml" 80 2288 2295 "maxima.ml" 80 2288 2304
+call(
+  stack
+)
+type(
+  PosetOrder.t
+)
+"maxima.ml" 81 2310 2313 "maxima.ml" 81 2310 2315
+type(
+  PosetOrder.t
+)
+"maxima.ml" 81 2310 2318 "maxima.ml" 81 2310 2320
+type(
+  PosetOrder.t
+)
+"maxima.ml" 81 2310 2313 "maxima.ml" 81 2310 2320
+type(
+  PosetOrder.t
+)
+"maxima.ml" 81 2310 2324 "maxima.ml" 81 2310 2325
+type(
+  'c
+)
+ident(
+  int_ref y "maxima.ml" 78 2248 2256 "maxima.ml" 78 2248 2257
+)
+"maxima.ml" 81 2310 2327 "maxima.ml" 81 2310 2328
+type(
+  'c list
+)
+ident(
+  int_ref r "maxima.ml" 78 2248 2259 "maxima.ml" 78 2248 2260
+)
+"maxima.ml" 81 2310 2324 "maxima.ml" 81 2310 2328
+type(
+  'c list
+)
+"maxima.ml" 82 2351 2354 "maxima.ml" 82 2351 2356
+type(
+  PosetOrder.t
+)
+"maxima.ml" 82 2351 2360 "maxima.ml" 82 2351 2362
+type(
+  'c list -> 'c list
+)
+ident(
+  int_ref re "maxima.ml" 76 2204 2216 "maxima.ml" 76 2204 2218
+)
+"maxima.ml" 82 2351 2363 "maxima.ml" 82 2351 2364
+type(
+  'c list
+)
+ident(
+  int_ref r "maxima.ml" 78 2248 2259 "maxima.ml" 78 2248 2260
+)
+"maxima.ml" 82 2351 2360 "maxima.ml" 82 2351 2364
+call(
+  tail
+)
+type(
+  'c list
+)
+"maxima.ml" 83 2392 2395 "maxima.ml" 83 2392 2397
+type(
+  PosetOrder.t
+)
+"maxima.ml" 83 2392 2401 "maxima.ml" 83 2392 2402
+type(
+  'c
+)
+ident(
+  int_ref y "maxima.ml" 78 2248 2256 "maxima.ml" 78 2248 2257
+)
+"maxima.ml" 83 2392 2405 "maxima.ml" 83 2392 2407
+type(
+  'c list -> 'c list
+)
+ident(
+  int_ref re "maxima.ml" 76 2204 2216 "maxima.ml" 76 2204 2218
+)
+"maxima.ml" 83 2392 2408 "maxima.ml" 83 2392 2409
+type(
+  'c list
+)
+ident(
+  int_ref r "maxima.ml" 78 2248 2259 "maxima.ml" 78 2248 2260
+)
+"maxima.ml" 83 2392 2404 "maxima.ml" 83 2392 2410
+call(
+  stack
+)
+type(
+  'c list
+)
+"maxima.ml" 83 2392 2401 "maxima.ml" 83 2392 2410
+type(
+  'c list
+)
+"maxima.ml" 80 2288 2289 "maxima.ml" 83 2392 2410
+type(
+  'c list
+)
+"maxima.ml" 76 2204 2221 "maxima.ml" 83 2392 2410
+type(
+  'c list -> 'c list
+)
+"maxima.ml" 84 2414 2418 "maxima.ml" 84 2414 2420
+type(
+  'c list -> 'c list
+)
+ident(
+  int_ref re "maxima.ml" 76 2204 2216 "maxima.ml" 76 2204 2218
+)
+"maxima.ml" 84 2414 2421 "maxima.ml" 84 2414 2422
+type(
+  'c list
+)
+ident(
+  int_ref m "maxima.ml" 75 2175 2198 "maxima.ml" 75 2175 2199
+)
+"maxima.ml" 84 2414 2418 "maxima.ml" 84 2414 2422
+call(
+  tail
+)
+type(
+  'c list
+)
+"maxima.ml" 76 2204 2208 "maxima.ml" 84 2414 2422
+type(
+  'c list
+)
+"maxima.ml" 87 2488 2494 "maxima.ml" 87 2488 2500
+type(
+  P.t list -> P.t -> P.t list
+)
+ident(
+  def extend "maxima.ml" 92 2683 2685 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 87 2488 2503 "maxima.ml" 87 2488 2513
+type(
+  (P.t -> P.t -> PosetOrder.t) -> P.t list -> P.t -> P.t list
+)
+ident(
+  int_ref extend_gen "maxima.ml" 75 2175 2181 "maxima.ml" 75 2175 2191
+)
+"maxima.ml" 87 2488 2514 "maxima.ml" 87 2488 2521
+type(
+  P.t -> P.t -> PosetOrder.t
+)
+ident(
+  int_ref P.order "maxima.ml" 33 997 999 "maxima.ml" 33 997 1033
+)
+"maxima.ml" 87 2488 2503 "maxima.ml" 87 2488 2521
+call(
+  stack
+)
+type(
+  P.t list -> P.t -> P.t list
+)
+"maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+type(
+  ?oorder:('d -> 'd -> PosetOrder.t) option ->
+  ('e -> 'd) -> 'e list -> 'd list
+)
+ident(
+  def map_gen "maxima.ml" 100 3001 3003 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 92 2683 2699 "maxima.ml" 92 2683 2705
+type(
+  ('d -> 'd -> PosetOrder.t) option
+)
+"maxima.ml" 92 2683 2706 "maxima.ml" 92 2683 2710
+type(
+  ('d -> 'd -> PosetOrder.t) option
+)
+type(
+  ('d -> 'd -> PosetOrder.t) option
+)
+ident(
+  int_ref *sth* "maxima.ml" 92 2683 2706 "maxima.ml" 92 2683 2710
+)
+type(
+  ('d -> 'd -> PosetOrder.t) option option
+)
+type(
+  ('d -> 'd -> PosetOrder.t) option option
+)
+type(
+  ('d -> 'd -> PosetOrder.t) option
+)
+"maxima.ml" 92 2683 2712 "maxima.ml" 92 2683 2713
+type(
+  'e -> 'd
+)
+ident(
+  def f "maxima.ml" 92 2683 2714 "maxima.ml" 95 2767 2848
+)
+"maxima.ml" 92 2683 2714 "maxima.ml" 92 2683 2715
+type(
+  'e list
+)
+ident(
+  def m "maxima.ml" 93 2718 2722 "maxima.ml" 95 2767 2848
+)
+"maxima.ml" 93 2718 2728 "maxima.ml" 93 2718 2734
+type(
+  ('d -> 'd -> PosetOrder.t) option
+)
+ident(
+  int_ref oorder "maxima.ml" 92 2683 2699 "maxima.ml" 92 2683 2705
+)
+"maxima.ml" 94 2740 2746 "maxima.ml" 94 2740 2750
+type(
+  ('d -> 'd -> PosetOrder.t) option
+)
+"maxima.ml" 94 2740 2754 "maxima.ml" 94 2740 2762
+type(
+  ('e -> 'd) -> 'e list -> 'd list
+)
+ident(
+  ext_ref List.map
+)
+"maxima.ml" 94 2740 2763 "maxima.ml" 94 2740 2764
+type(
+  'e -> 'd
+)
+ident(
+  int_ref f "maxima.ml" 92 2683 2712 "maxima.ml" 92 2683 2713
+)
+"maxima.ml" 94 2740 2765 "maxima.ml" 94 2740 2766
+type(
+  'e list
+)
+ident(
+  int_ref m "maxima.ml" 92 2683 2714 "maxima.ml" 92 2683 2715
+)
+"maxima.ml" 94 2740 2754 "maxima.ml" 94 2740 2766
+call(
+  tail
+)
+type(
+  'd list
+)
+"maxima.ml" 95 2767 2778 "maxima.ml" 95 2767 2783
+type(
+  'd -> 'd -> PosetOrder.t
+)
+ident(
+  def order "maxima.ml" 95 2767 2787 "maxima.ml" 95 2767 2848
+)
+"maxima.ml" 95 2767 2773 "maxima.ml" 95 2767 2783
+type(
+  ('d -> 'd -> PosetOrder.t) option
+)
+"maxima.ml" 95 2767 2787 "maxima.ml" 95 2767 2801
+type(
+  ('d list -> 'e -> 'd list) -> 'd list -> 'e list -> 'd list
+)
+ident(
+  ext_ref List.fold_left
+)
+"maxima.ml" 95 2767 2807 "maxima.ml" 95 2767 2810
+type(
+  'd list
+)
+ident(
+  def acc "maxima.ml" 95 2767 2811 "maxima.ml" 95 2767 2842
+)
+"maxima.ml" 95 2767 2811 "maxima.ml" 95 2767 2812
+type(
+  'e
+)
+ident(
+  def x "maxima.ml" 95 2767 2816 "maxima.ml" 95 2767 2842
+)
+"maxima.ml" 95 2767 2816 "maxima.ml" 95 2767 2826
+type(
+  ('d -> 'd -> PosetOrder.t) -> 'd list -> 'd -> 'd list
+)
+ident(
+  int_ref extend_gen "maxima.ml" 75 2175 2181 "maxima.ml" 75 2175 2191
+)
+"maxima.ml" 95 2767 2827 "maxima.ml" 95 2767 2832
+type(
+  'd -> 'd -> PosetOrder.t
+)
+ident(
+  int_ref order "maxima.ml" 95 2767 2778 "maxima.ml" 95 2767 2783
+)
+"maxima.ml" 95 2767 2833 "maxima.ml" 95 2767 2836
+type(
+  'd list
+)
+ident(
+  int_ref acc "maxima.ml" 95 2767 2807 "maxima.ml" 95 2767 2810
+)
+"maxima.ml" 95 2767 2838 "maxima.ml" 95 2767 2839
+type(
+  'e -> 'd
+)
+ident(
+  int_ref f "maxima.ml" 92 2683 2712 "maxima.ml" 92 2683 2713
+)
+"maxima.ml" 95 2767 2840 "maxima.ml" 95 2767 2841
+type(
+  'e
+)
+ident(
+  int_ref x "maxima.ml" 95 2767 2811 "maxima.ml" 95 2767 2812
+)
+"maxima.ml" 95 2767 2837 "maxima.ml" 95 2767 2842
+call(
+  stack
+)
+type(
+  'd
+)
+"maxima.ml" 95 2767 2816 "maxima.ml" 95 2767 2842
+call(
+  tail
+)
+type(
+  'd list
+)
+"maxima.ml" 95 2767 2802 "maxima.ml" 95 2767 2843
+type(
+  'd list -> 'e -> 'd list
+)
+"maxima.ml" 95 2767 2844 "maxima.ml" 95 2767 2846
+type(
+  'd list
+)
+"maxima.ml" 95 2767 2847 "maxima.ml" 95 2767 2848
+type(
+  'e list
+)
+ident(
+  int_ref m "maxima.ml" 92 2683 2714 "maxima.ml" 92 2683 2715
+)
+"maxima.ml" 95 2767 2787 "maxima.ml" 95 2767 2848
+call(
+  tail
+)
+type(
+  'd list
+)
+"maxima.ml" 93 2718 2722 "maxima.ml" 95 2767 2848
+type(
+  'd list
+)
+"maxima.ml" 100 3001 3007 "maxima.ml" 100 3001 3010
+type(
+  ?iso:bool -> ('f -> P.t) -> 'f list -> P.t list
+)
+ident(
+  def map "maxima.ml" 106 3184 3186 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 100 3001 3013 "maxima.ml" 100 3001 3016
+type(
+  bool
+)
+"maxima.ml" 100 3001 3017 "maxima.ml" 100 3001 3022
+type(
+  bool
+)
+type(
+  bool
+)
+ident(
+  int_ref *sth* "maxima.ml" 100 3001 3017 "maxima.ml" 100 3001 3022
+)
+type(
+  bool option
+)
+type(
+  bool option
+)
+type(
+  bool
+)
+"maxima.ml" 100 3001 3024 "maxima.ml" 100 3001 3025
+type(
+  'f -> P.t
+)
+ident(
+  def f "maxima.ml" 100 3001 3026 "maxima.ml" 102 3071 3114
+)
+"maxima.ml" 100 3001 3026 "maxima.ml" 100 3001 3027
+type(
+  'f list
+)
+ident(
+  def m "maxima.ml" 101 3030 3034 "maxima.ml" 102 3071 3114
+)
+"maxima.ml" 101 3030 3037 "maxima.ml" 101 3030 3040
+type(
+  bool
+)
+ident(
+  int_ref iso "maxima.ml" 100 3001 3013 "maxima.ml" 100 3001 3016
+)
+"maxima.ml" 101 3030 3046 "maxima.ml" 101 3030 3053
+type(
+  ?oorder:(P.t -> P.t -> PosetOrder.t) option ->
+  ('f -> P.t) -> 'f list -> P.t list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 101 3030 3062 "maxima.ml" 101 3030 3066
+type(
+  (P.t -> P.t -> PosetOrder.t) option
+)
+"maxima.ml" 101 3030 3067 "maxima.ml" 101 3030 3068
+type(
+  'f -> P.t
+)
+ident(
+  int_ref f "maxima.ml" 100 3001 3024 "maxima.ml" 100 3001 3025
+)
+"maxima.ml" 101 3030 3069 "maxima.ml" 101 3030 3070
+type(
+  'f list
+)
+ident(
+  int_ref m "maxima.ml" 100 3001 3026 "maxima.ml" 100 3001 3027
+)
+"maxima.ml" 101 3030 3046 "maxima.ml" 101 3030 3070
+call(
+  tail
+)
+type(
+  P.t list
+)
+"maxima.ml" 102 3071 3080 "maxima.ml" 102 3071 3087
+type(
+  ?oorder:(P.t -> P.t -> PosetOrder.t) option ->
+  ('f -> P.t) -> 'f list -> P.t list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 102 3071 3102 "maxima.ml" 102 3071 3109
+type(
+  P.t -> P.t -> PosetOrder.t
+)
+ident(
+  int_ref P.order "maxima.ml" 33 997 999 "maxima.ml" 33 997 1033
+)
+"maxima.ml" 102 3071 3096 "maxima.ml" 102 3071 3110
+type(
+  (P.t -> P.t -> PosetOrder.t) option
+)
+"maxima.ml" 102 3071 3111 "maxima.ml" 102 3071 3112
+type(
+  'f -> P.t
+)
+ident(
+  int_ref f "maxima.ml" 100 3001 3024 "maxima.ml" 100 3001 3025
+)
+"maxima.ml" 102 3071 3113 "maxima.ml" 102 3071 3114
+type(
+  'f list
+)
+ident(
+  int_ref m "maxima.ml" 100 3001 3026 "maxima.ml" 100 3001 3027
+)
+"maxima.ml" 102 3071 3080 "maxima.ml" 102 3071 3114
+call(
+  tail
+)
+type(
+  P.t list
+)
+"maxima.ml" 101 3030 3034 "maxima.ml" 102 3071 3114
+type(
+  P.t list
+)
+"maxima.ml" 106 3184 3190 "maxima.ml" 106 3184 3193
+type(
+  P.t list -> P.t list -> P.t list
+)
+ident(
+  def max "maxima.ml" 119 3586 3588 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 106 3184 3194 "maxima.ml" 106 3184 3196
+type(
+  P.t list
+)
+ident(
+  def m1 "maxima.ml" 106 3184 3197 "maxima.ml" 114 3484 3489
+)
+"maxima.ml" 106 3184 3197 "maxima.ml" 106 3184 3199
+type(
+  P.t list
+)
+ident(
+  def m2 "maxima.ml" 107 3202 3206 "maxima.ml" 114 3484 3489
+)
+"maxima.ml" 107 3202 3210 "maxima.ml" 107 3202 3213
+type(
+  (P.t list * P.t) list
+)
+ident(
+  def m1' "maxima.ml" 108 3246 3250 "maxima.ml" 114 3484 3489
+)
+"maxima.ml" 107 3202 3216 "maxima.ml" 107 3202 3223
+type(
+  ?oorder:(P.t list * P.t -> P.t list * P.t -> PosetOrder.t) option ->
+  (P.t -> P.t list * P.t) -> P.t list -> (P.t list * P.t) list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 107 3202 3229 "maxima.ml" 107 3202 3230
+type(
+  P.t
+)
+ident(
+  def x "maxima.ml" 107 3202 3234 "maxima.ml" 107 3202 3238
+)
+"maxima.ml" 107 3202 3234 "maxima.ml" 107 3202 3236
+type(
+  P.t list
+)
+ident(
+  int_ref m1 "maxima.ml" 106 3184 3194 "maxima.ml" 106 3184 3196
+)
+"maxima.ml" 107 3202 3237 "maxima.ml" 107 3202 3238
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 107 3202 3229 "maxima.ml" 107 3202 3230
+)
+"maxima.ml" 107 3202 3234 "maxima.ml" 107 3202 3238
+type(
+  P.t list * P.t
+)
+"maxima.ml" 107 3202 3224 "maxima.ml" 107 3202 3239
+type(
+  P.t -> P.t list * P.t
+)
+"maxima.ml" 107 3202 3240 "maxima.ml" 107 3202 3242
+type(
+  P.t list
+)
+ident(
+  int_ref m1 "maxima.ml" 106 3184 3194 "maxima.ml" 106 3184 3196
+)
+"maxima.ml" 107 3202 3216 "maxima.ml" 107 3202 3242
+call(
+  stack
+)
+type(
+  (P.t list * P.t) list
+)
+"maxima.ml" 108 3246 3254 "maxima.ml" 108 3246 3257
+type(
+  (P.t list * P.t) list
+)
+ident(
+  def m2' "maxima.ml" 109 3290 3294 "maxima.ml" 114 3484 3489
+)
+"maxima.ml" 108 3246 3260 "maxima.ml" 108 3246 3267
+type(
+  ?oorder:(P.t list * P.t -> P.t list * P.t -> PosetOrder.t) option ->
+  (P.t -> P.t list * P.t) -> P.t list -> (P.t list * P.t) list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 108 3246 3273 "maxima.ml" 108 3246 3274
+type(
+  P.t
+)
+ident(
+  def x "maxima.ml" 108 3246 3278 "maxima.ml" 108 3246 3282
+)
+"maxima.ml" 108 3246 3278 "maxima.ml" 108 3246 3280
+type(
+  P.t list
+)
+ident(
+  int_ref m2 "maxima.ml" 106 3184 3197 "maxima.ml" 106 3184 3199
+)
+"maxima.ml" 108 3246 3281 "maxima.ml" 108 3246 3282
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 108 3246 3273 "maxima.ml" 108 3246 3274
+)
+"maxima.ml" 108 3246 3278 "maxima.ml" 108 3246 3282
+type(
+  P.t list * P.t
+)
+"maxima.ml" 108 3246 3268 "maxima.ml" 108 3246 3283
+type(
+  P.t -> P.t list * P.t
+)
+"maxima.ml" 108 3246 3284 "maxima.ml" 108 3246 3286
+type(
+  P.t list
+)
+ident(
+  int_ref m2 "maxima.ml" 106 3184 3197 "maxima.ml" 106 3184 3199
+)
+"maxima.ml" 108 3246 3260 "maxima.ml" 108 3246 3286
+call(
+  stack
+)
+type(
+  (P.t list * P.t) list
+)
+"maxima.ml" 109 3290 3298 "maxima.ml" 109 3290 3303
+type(
+  'g * P.t -> 'g * P.t -> PosetOrder.t
+)
+ident(
+  def order "maxima.ml" 112 3383 3387 "maxima.ml" 114 3484 3489
+)
+"maxima.ml" 109 3290 3305 "maxima.ml" 109 3290 3307
+type(
+  'g
+)
+ident(
+  def ma "maxima.ml" 109 3290 3311 "maxima.ml" 111 3357 3379
+)
+"maxima.ml" 109 3290 3308 "maxima.ml" 109 3290 3309
+type(
+  P.t
+)
+ident(
+  def x "maxima.ml" 109 3290 3311 "maxima.ml" 111 3357 3379
+)
+"maxima.ml" 109 3290 3304 "maxima.ml" 109 3290 3310
+type(
+  'g * P.t
+)
+"maxima.ml" 109 3290 3312 "maxima.ml" 109 3290 3314
+type(
+  'g
+)
+ident(
+  def mb "maxima.ml" 110 3320 3326 "maxima.ml" 111 3357 3379
+)
+"maxima.ml" 109 3290 3315 "maxima.ml" 109 3290 3316
+type(
+  P.t
+)
+ident(
+  def y "maxima.ml" 110 3320 3326 "maxima.ml" 111 3357 3379
+)
+"maxima.ml" 109 3290 3311 "maxima.ml" 109 3290 3317
+type(
+  'g * P.t
+)
+"maxima.ml" 110 3320 3329 "maxima.ml" 110 3320 3331
+type(
+  'g
+)
+ident(
+  int_ref ma "maxima.ml" 109 3290 3305 "maxima.ml" 109 3290 3307
+)
+"maxima.ml" 110 3320 3332 "maxima.ml" 110 3320 3334
+type(
+  'g -> 'g -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"maxima.ml" 110 3320 3335 "maxima.ml" 110 3320 3337
+type(
+  'g
+)
+ident(
+  int_ref mb "maxima.ml" 109 3290 3312 "maxima.ml" 109 3290 3314
+)
+"maxima.ml" 110 3320 3329 "maxima.ml" 110 3320 3337
+type(
+  bool
+)
+"maxima.ml" 110 3320 3343 "maxima.ml" 110 3320 3356
+type(
+  PosetOrder.t
+)
+"maxima.ml" 111 3357 3368 "maxima.ml" 111 3357 3375
+type(
+  P.t -> P.t -> PosetOrder.t
+)
+ident(
+  int_ref P.order "maxima.ml" 33 997 999 "maxima.ml" 33 997 1033
+)
+"maxima.ml" 111 3357 3376 "maxima.ml" 111 3357 3377
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 109 3290 3308 "maxima.ml" 109 3290 3309
+)
+"maxima.ml" 111 3357 3378 "maxima.ml" 111 3357 3379
+type(
+  P.t
+)
+ident(
+  int_ref y "maxima.ml" 109 3290 3315 "maxima.ml" 109 3290 3316
+)
+"maxima.ml" 111 3357 3368 "maxima.ml" 111 3357 3379
+call(
+  tail
+)
+type(
+  PosetOrder.t
+)
+"maxima.ml" 110 3320 3326 "maxima.ml" 111 3357 3379
+type(
+  PosetOrder.t
+)
+"maxima.ml" 112 3383 3391 "maxima.ml" 112 3383 3393
+type(
+  (P.t list * P.t) list
+)
+ident(
+  def m' "maxima.ml" 113 3441 3445 "maxima.ml" 114 3484 3489
+)
+"maxima.ml" 112 3383 3396 "maxima.ml" 112 3383 3410
+type(
+  ((P.t list * P.t) list -> P.t list * P.t -> (P.t list * P.t) list) ->
+  (P.t list * P.t) list -> (P.t list * P.t) list -> (P.t list * P.t) list
+)
+ident(
+  ext_ref List.fold_left
+)
+"maxima.ml" 112 3383 3412 "maxima.ml" 112 3383 3422
+type(
+  (P.t list * P.t -> P.t list * P.t -> PosetOrder.t) ->
+  (P.t list * P.t) list -> P.t list * P.t -> (P.t list * P.t) list
+)
+ident(
+  int_ref extend_gen "maxima.ml" 75 2175 2181 "maxima.ml" 75 2175 2191
+)
+"maxima.ml" 112 3383 3423 "maxima.ml" 112 3383 3428
+type(
+  P.t list * P.t -> P.t list * P.t -> PosetOrder.t
+)
+ident(
+  int_ref order "maxima.ml" 109 3290 3298 "maxima.ml" 109 3290 3303
+)
+"maxima.ml" 112 3383 3411 "maxima.ml" 112 3383 3429
+call(
+  stack
+)
+type(
+  (P.t list * P.t) list -> P.t list * P.t -> (P.t list * P.t) list
+)
+"maxima.ml" 112 3383 3430 "maxima.ml" 112 3383 3433
+type(
+  (P.t list * P.t) list
+)
+ident(
+  int_ref m1' "maxima.ml" 107 3202 3210 "maxima.ml" 107 3202 3213
+)
+"maxima.ml" 112 3383 3434 "maxima.ml" 112 3383 3437
+type(
+  (P.t list * P.t) list
+)
+ident(
+  int_ref m2' "maxima.ml" 108 3246 3254 "maxima.ml" 108 3246 3257
+)
+"maxima.ml" 112 3383 3396 "maxima.ml" 112 3383 3437
+call(
+  stack
+)
+type(
+  (P.t list * P.t) list
+)
+"maxima.ml" 113 3441 3449 "maxima.ml" 113 3441 3450
+type(
+  P.t list
+)
+ident(
+  def m "maxima.ml" 114 3484 3488 "maxima.ml" 114 3484 3489
+)
+"maxima.ml" 113 3441 3453 "maxima.ml" 113 3441 3460
+type(
+  ?oorder:(P.t -> P.t -> PosetOrder.t) option ->
+  (P.t list * P.t -> P.t) -> (P.t list * P.t) list -> P.t list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 113 3441 3467 "maxima.ml" 113 3441 3468
+type(
+  P.t list
+)
+"maxima.ml" 113 3441 3469 "maxima.ml" 113 3441 3470
+type(
+  P.t
+)
+ident(
+  def x "maxima.ml" 113 3441 3475 "maxima.ml" 113 3441 3476
+)
+"maxima.ml" 113 3441 3466 "maxima.ml" 113 3441 3471
+type(
+  P.t list * P.t
+)
+"maxima.ml" 113 3441 3475 "maxima.ml" 113 3441 3476
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 113 3441 3469 "maxima.ml" 113 3441 3470
+)
+"maxima.ml" 113 3441 3461 "maxima.ml" 113 3441 3477
+type(
+  P.t list * P.t -> P.t
+)
+"maxima.ml" 113 3441 3478 "maxima.ml" 113 3441 3480
+type(
+  (P.t list * P.t) list
+)
+ident(
+  int_ref m' "maxima.ml" 112 3383 3391 "maxima.ml" 112 3383 3393
+)
+"maxima.ml" 113 3441 3453 "maxima.ml" 113 3441 3480
+call(
+  stack
+)
+type(
+  P.t list
+)
+"maxima.ml" 114 3484 3488 "maxima.ml" 114 3484 3489
+type(
+  P.t list
+)
+ident(
+  int_ref m "maxima.ml" 113 3441 3449 "maxima.ml" 113 3441 3450
+)
+"maxima.ml" 113 3441 3445 "maxima.ml" 114 3484 3489
+type(
+  P.t list
+)
+"maxima.ml" 112 3383 3387 "maxima.ml" 114 3484 3489
+type(
+  P.t list
+)
+"maxima.ml" 109 3290 3294 "maxima.ml" 114 3484 3489
+type(
+  P.t list
+)
+"maxima.ml" 108 3246 3250 "maxima.ml" 114 3484 3489
+type(
+  P.t list
+)
+"maxima.ml" 107 3202 3206 "maxima.ml" 114 3484 3489
+type(
+  P.t list
+)
+"maxima.ml" 119 3586 3592 "maxima.ml" 119 3586 3595
+type(
+  P.t list -> P.t
+)
+ident(
+  def glb "maxima.ml" 126 3768 3770 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 120 3607 3613 "maxima.ml" 120 3607 3614
+type(
+  P.t
+)
+ident(
+  def x "maxima.ml" 120 3607 3621 "maxima.ml" 120 3607 3645
+)
+"maxima.ml" 120 3607 3616 "maxima.ml" 120 3607 3617
+type(
+  P.t list
+)
+ident(
+  def r "maxima.ml" 120 3607 3621 "maxima.ml" 120 3607 3645
+)
+"maxima.ml" 120 3607 3613 "maxima.ml" 120 3607 3617
+type(
+  P.t list
+)
+"maxima.ml" 120 3607 3621 "maxima.ml" 120 3607 3635
+type(
+  (P.t -> P.t -> P.t) -> P.t -> P.t list -> P.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"maxima.ml" 120 3607 3636 "maxima.ml" 120 3607 3641
+type(
+  P.t -> P.t -> P.t
+)
+ident(
+  int_ref P.glb "maxima.ml" 37 1113 1115 "maxima.ml" 37 1113 1136
+)
+"maxima.ml" 120 3607 3642 "maxima.ml" 120 3607 3643
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 120 3607 3613 "maxima.ml" 120 3607 3614
+)
+"maxima.ml" 120 3607 3644 "maxima.ml" 120 3607 3645
+type(
+  P.t list
+)
+ident(
+  int_ref r "maxima.ml" 120 3607 3616 "maxima.ml" 120 3607 3617
+)
+"maxima.ml" 120 3607 3621 "maxima.ml" 120 3607 3645
+call(
+  tail
+)
+type(
+  P.t
+)
+"maxima.ml" 121 3646 3652 "maxima.ml" 121 3646 3654
+type(
+  P.t list
+)
+"maxima.ml" 121 3646 3658 "maxima.ml" 121 3646 3666
+type(
+  string -> P.t
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"maxima.ml" 121 3646 3667 "maxima.ml" 121 3646 3674
+type(
+  string
+)
+"maxima.ml" 121 3646 3658 "maxima.ml" 121 3646 3674
+call(
+  tail
+)
+type(
+  P.t
+)
+"maxima.ml" 119 3586 3598 "maxima.ml" 121 3646 3674
+type(
+  P.t list -> P.t
+)
+"maxima.ml" 126 3768 3774 "maxima.ml" 126 3768 3777
+type(
+  P.t list -> P.t
+)
+ident(
+  def lub "maxima.ml" 133 3986 3988 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 127 3789 3795 "maxima.ml" 127 3789 3796
+type(
+  P.t
+)
+ident(
+  def x "maxima.ml" 127 3789 3803 "maxima.ml" 127 3789 3827
+)
+"maxima.ml" 127 3789 3798 "maxima.ml" 127 3789 3799
+type(
+  P.t list
+)
+ident(
+  def r "maxima.ml" 127 3789 3803 "maxima.ml" 127 3789 3827
+)
+"maxima.ml" 127 3789 3795 "maxima.ml" 127 3789 3799
+type(
+  P.t list
+)
+"maxima.ml" 127 3789 3803 "maxima.ml" 127 3789 3817
+type(
+  (P.t -> P.t -> P.t) -> P.t -> P.t list -> P.t
+)
+ident(
+  ext_ref List.fold_left
+)
+"maxima.ml" 127 3789 3818 "maxima.ml" 127 3789 3823
+type(
+  P.t -> P.t -> P.t
+)
+ident(
+  int_ref P.lub "maxima.ml" 41 1215 1217 "maxima.ml" 41 1215 1238
+)
+"maxima.ml" 127 3789 3824 "maxima.ml" 127 3789 3825
+type(
+  P.t
+)
+ident(
+  int_ref x "maxima.ml" 127 3789 3795 "maxima.ml" 127 3789 3796
+)
+"maxima.ml" 127 3789 3826 "maxima.ml" 127 3789 3827
+type(
+  P.t list
+)
+ident(
+  int_ref r "maxima.ml" 127 3789 3798 "maxima.ml" 127 3789 3799
+)
+"maxima.ml" 127 3789 3803 "maxima.ml" 127 3789 3827
+call(
+  tail
+)
+type(
+  P.t
+)
+"maxima.ml" 128 3828 3834 "maxima.ml" 128 3828 3836
+type(
+  P.t list
+)
+"maxima.ml" 128 3828 3840 "maxima.ml" 128 3828 3848
+type(
+  string -> P.t
+)
+ident(
+  ext_ref Pervasives.failwith
+)
+"maxima.ml" 128 3828 3849 "maxima.ml" 128 3828 3856
+type(
+  string
+)
+"maxima.ml" 128 3828 3840 "maxima.ml" 128 3828 3856
+call(
+  tail
+)
+type(
+  P.t
+)
+"maxima.ml" 126 3768 3780 "maxima.ml" 128 3828 3856
+type(
+  P.t list -> P.t
+)
+"maxima.ml" 133 3986 3992 "maxima.ml" 133 3986 4003
+type(
+  ('h -> 'h -> PosetOrder.t) ->
+  ('i -> 'j -> 'h) -> 'i list -> 'j list -> 'h list
+)
+ident(
+  def combine_gen "maxima.ml" 143 4431 4433 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 133 3986 4004 "maxima.ml" 133 3986 4009
+type(
+  'h -> 'h -> PosetOrder.t
+)
+ident(
+  def order "maxima.ml" 133 3986 4010 "maxima.ml" 135 4054 4135
+)
+"maxima.ml" 133 3986 4010 "maxima.ml" 133 3986 4011
+type(
+  'i -> 'j -> 'h
+)
+ident(
+  def f "maxima.ml" 133 3986 4012 "maxima.ml" 135 4054 4135
+)
+"maxima.ml" 133 3986 4012 "maxima.ml" 133 3986 4014
+type(
+  'i list
+)
+ident(
+  def m1 "maxima.ml" 133 3986 4015 "maxima.ml" 135 4054 4135
+)
+"maxima.ml" 133 3986 4015 "maxima.ml" 133 3986 4017
+type(
+  'j list
+)
+ident(
+  def m2 "maxima.ml" 134 4020 4024 "maxima.ml" 135 4054 4135
+)
+"maxima.ml" 134 4020 4024 "maxima.ml" 134 4020 4038
+type(
+  ('h list -> 'i -> 'h list) -> 'h list -> 'i list -> 'h list
+)
+ident(
+  ext_ref List.fold_left
+)
+"maxima.ml" 134 4020 4044 "maxima.ml" 134 4020 4047
+type(
+  'h list
+)
+ident(
+  def acc "maxima.ml" 134 4020 4048 "maxima.ml" 135 4054 4128
+)
+"maxima.ml" 134 4020 4048 "maxima.ml" 134 4020 4050
+type(
+  'i
+)
+ident(
+  def x1 "maxima.ml" 135 4054 4060 "maxima.ml" 135 4054 4128
+)
+"maxima.ml" 135 4054 4060 "maxima.ml" 135 4054 4074
+type(
+  ('h list -> 'j -> 'h list) -> 'h list -> 'j list -> 'h list
+)
+ident(
+  ext_ref List.fold_left
+)
+"maxima.ml" 135 4054 4080 "maxima.ml" 135 4054 4083
+type(
+  'h list
+)
+ident(
+  def acc "maxima.ml" 135 4054 4084 "maxima.ml" 135 4054 4120
+)
+"maxima.ml" 135 4054 4084 "maxima.ml" 135 4054 4086
+type(
+  'j
+)
+ident(
+  def x2 "maxima.ml" 135 4054 4090 "maxima.ml" 135 4054 4120
+)
+"maxima.ml" 135 4054 4090 "maxima.ml" 135 4054 4100
+type(
+  ('h -> 'h -> PosetOrder.t) -> 'h list -> 'h -> 'h list
+)
+ident(
+  int_ref extend_gen "maxima.ml" 75 2175 2181 "maxima.ml" 75 2175 2191
+)
+"maxima.ml" 135 4054 4101 "maxima.ml" 135 4054 4106
+type(
+  'h -> 'h -> PosetOrder.t
+)
+ident(
+  int_ref order "maxima.ml" 133 3986 4004 "maxima.ml" 133 3986 4009
+)
+"maxima.ml" 135 4054 4107 "maxima.ml" 135 4054 4110
+type(
+  'h list
+)
+ident(
+  int_ref acc "maxima.ml" 135 4054 4080 "maxima.ml" 135 4054 4083
+)
+"maxima.ml" 135 4054 4112 "maxima.ml" 135 4054 4113
+type(
+  'i -> 'j -> 'h
+)
+ident(
+  int_ref f "maxima.ml" 133 3986 4010 "maxima.ml" 133 3986 4011
+)
+"maxima.ml" 135 4054 4114 "maxima.ml" 135 4054 4116
+type(
+  'i
+)
+ident(
+  int_ref x1 "maxima.ml" 134 4020 4048 "maxima.ml" 134 4020 4050
+)
+"maxima.ml" 135 4054 4117 "maxima.ml" 135 4054 4119
+type(
+  'j
+)
+ident(
+  int_ref x2 "maxima.ml" 135 4054 4084 "maxima.ml" 135 4054 4086
+)
+"maxima.ml" 135 4054 4111 "maxima.ml" 135 4054 4120
+call(
+  stack
+)
+type(
+  'h
+)
+"maxima.ml" 135 4054 4090 "maxima.ml" 135 4054 4120
+call(
+  tail
+)
+type(
+  'h list
+)
+"maxima.ml" 135 4054 4075 "maxima.ml" 135 4054 4121
+type(
+  'h list -> 'j -> 'h list
+)
+"maxima.ml" 135 4054 4122 "maxima.ml" 135 4054 4125
+type(
+  'h list
+)
+ident(
+  int_ref acc "maxima.ml" 134 4020 4044 "maxima.ml" 134 4020 4047
+)
+"maxima.ml" 135 4054 4126 "maxima.ml" 135 4054 4128
+type(
+  'j list
+)
+ident(
+  int_ref m2 "maxima.ml" 133 3986 4015 "maxima.ml" 133 3986 4017
+)
+"maxima.ml" 135 4054 4060 "maxima.ml" 135 4054 4128
+call(
+  tail
+)
+type(
+  'h list
+)
+"maxima.ml" 134 4020 4039 "maxima.ml" 135 4054 4129
+type(
+  'h list -> 'i -> 'h list
+)
+"maxima.ml" 135 4054 4130 "maxima.ml" 135 4054 4132
+type(
+  'h list
+)
+"maxima.ml" 135 4054 4133 "maxima.ml" 135 4054 4135
+type(
+  'i list
+)
+ident(
+  int_ref m1 "maxima.ml" 133 3986 4012 "maxima.ml" 133 3986 4014
+)
+"maxima.ml" 134 4020 4024 "maxima.ml" 135 4054 4135
+call(
+  tail
+)
+type(
+  'h list
+)
+"maxima.ml" 143 4431 4437 "maxima.ml" 143 4431 4444
+type(
+  ?iso1:bool ->
+  ?iso2:bool -> ('k -> 'l -> P.t) -> 'k list -> 'l list -> P.t list
+)
+ident(
+  def combine "maxima.ml" 156 5066 5101 "maxima.ml" 158 5103 5106
+)
+"maxima.ml" 143 4431 4447 "maxima.ml" 143 4431 4451
+type(
+  bool
+)
+"maxima.ml" 143 4431 4452 "maxima.ml" 143 4431 4457
+type(
+  bool
+)
+type(
+  bool
+)
+ident(
+  int_ref *sth* "maxima.ml" 143 4431 4452 "maxima.ml" 143 4431 4457
+)
+type(
+  bool option
+)
+type(
+  bool option
+)
+type(
+  bool
+)
+"maxima.ml" 143 4431 4461 "maxima.ml" 143 4431 4465
+type(
+  bool
+)
+"maxima.ml" 143 4431 4466 "maxima.ml" 143 4431 4471
+type(
+  bool
+)
+type(
+  bool
+)
+ident(
+  int_ref *sth* "maxima.ml" 143 4431 4466 "maxima.ml" 143 4431 4471
+)
+type(
+  bool option
+)
+type(
+  bool option
+)
+type(
+  bool
+)
+"maxima.ml" 143 4431 4473 "maxima.ml" 143 4431 4474
+type(
+  'k -> 'l -> P.t
+)
+ident(
+  def f "maxima.ml" 143 4431 4475 "maxima.ml" 156 5066 5101
+)
+"maxima.ml" 143 4431 4475 "maxima.ml" 143 4431 4477
+type(
+  'k list
+)
+ident(
+  def m1 "maxima.ml" 143 4431 4478 "maxima.ml" 156 5066 5101
+)
+"maxima.ml" 143 4431 4478 "maxima.ml" 143 4431 4480
+type(
+  'l list
+)
+ident(
+  def m2 "maxima.ml" 143 4431 4483 "maxima.ml" 156 5066 5101
+)
+"maxima.ml" 143 4431 4489 "maxima.ml" 143 4431 4493
+type(
+  bool
+)
+ident(
+  int_ref iso1 "maxima.ml" 143 4431 4447 "maxima.ml" 143 4431 4451
+)
+"maxima.ml" 143 4431 4495 "maxima.ml" 143 4431 4499
+type(
+  bool
+)
+ident(
+  int_ref iso2 "maxima.ml" 143 4431 4461 "maxima.ml" 143 4431 4465
+)
+"maxima.ml" 143 4431 4489 "maxima.ml" 143 4431 4499
+type(
+  bool * bool
+)
+"maxima.ml" 144 4505 4511 "maxima.ml" 144 4505 4516
+type(
+  bool
+)
+"maxima.ml" 144 4505 4518 "maxima.ml" 144 4505 4523
+type(
+  bool
+)
+"maxima.ml" 144 4505 4511 "maxima.ml" 144 4505 4523
+type(
+  bool * bool
+)
+"maxima.ml" 144 4505 4527 "maxima.ml" 144 4505 4538
+type(
+  (P.t -> P.t -> PosetOrder.t) ->
+  ('k -> 'l -> P.t) -> 'k list -> 'l list -> P.t list
+)
+ident(
+  int_ref combine_gen "maxima.ml" 133 3986 3992 "maxima.ml" 133 3986 4003
+)
+"maxima.ml" 144 4505 4539 "maxima.ml" 144 4505 4546
+type(
+  P.t -> P.t -> PosetOrder.t
+)
+ident(
+  int_ref P.order "maxima.ml" 33 997 999 "maxima.ml" 33 997 1033
+)
+"maxima.ml" 144 4505 4547 "maxima.ml" 144 4505 4548
+type(
+  'k -> 'l -> P.t
+)
+ident(
+  int_ref f "maxima.ml" 143 4431 4473 "maxima.ml" 143 4431 4474
+)
+"maxima.ml" 144 4505 4549 "maxima.ml" 144 4505 4551
+type(
+  'k list
+)
+ident(
+  int_ref m1 "maxima.ml" 143 4431 4475 "maxima.ml" 143 4431 4477
+)
+"maxima.ml" 144 4505 4552 "maxima.ml" 144 4505 4554
+type(
+  'l list
+)
+ident(
+  int_ref m2 "maxima.ml" 143 4431 4478 "maxima.ml" 143 4431 4480
+)
+"maxima.ml" 144 4505 4527 "maxima.ml" 144 4505 4554
+call(
+  tail
+)
+type(
+  P.t list
+)
+"maxima.ml" 145 4555 4561 "maxima.ml" 145 4555 4565
+type(
+  bool
+)
+"maxima.ml" 145 4555 4567 "maxima.ml" 145 4555 4572
+type(
+  bool
+)
+"maxima.ml" 145 4555 4561 "maxima.ml" 145 4555 4572
+type(
+  bool * bool
+)
+"maxima.ml" 145 4555 4576 "maxima.ml" 145 4555 4583
+type(
+  ?oorder:(P.t -> P.t -> PosetOrder.t) option ->
+  ('k * P.t -> P.t) -> ('k * P.t) list -> P.t list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 145 4555 4590 "maxima.ml" 145 4555 4591
+type(
+  'k
+)
+"maxima.ml" 145 4555 4592 "maxima.ml" 145 4555 4593
+type(
+  P.t
+)
+ident(
+  def r "maxima.ml" 145 4555 4598 "maxima.ml" 145 4555 4599
+)
+"maxima.ml" 145 4555 4589 "maxima.ml" 145 4555 4594
+type(
+  'k * P.t
+)
+"maxima.ml" 145 4555 4598 "maxima.ml" 145 4555 4599
+type(
+  P.t
+)
+ident(
+  int_ref r "maxima.ml" 145 4555 4592 "maxima.ml" 145 4555 4593
+)
+"maxima.ml" 145 4555 4584 "maxima.ml" 145 4555 4600
+type(
+  'k * P.t -> P.t
+)
+"maxima.ml" 146 4601 4608 "maxima.ml" 146 4601 4619
+type(
+  ('k * P.t -> 'k * P.t -> PosetOrder.t) ->
+  ('k -> 'l -> 'k * P.t) -> 'k list -> 'l list -> ('k * P.t) list
+)
+ident(
+  int_ref combine_gen "maxima.ml" 133 3986 3992 "maxima.ml" 133 3986 4003
+)
+"maxima.ml" 147 4620 4628 "maxima.ml" 147 4620 4630
+type(
+  'k
+)
+ident(
+  def xa "maxima.ml" 147 4620 4635 "maxima.ml" 147 4620 4695
+)
+"maxima.ml" 147 4620 4631 "maxima.ml" 147 4620 4633
+type(
+  P.t
+)
+ident(
+  def ra "maxima.ml" 147 4620 4635 "maxima.ml" 147 4620 4695
+)
+"maxima.ml" 147 4620 4627 "maxima.ml" 147 4620 4634
+type(
+  'k * P.t
+)
+"maxima.ml" 147 4620 4636 "maxima.ml" 147 4620 4638
+type(
+  'k
+)
+ident(
+  def xb "maxima.ml" 147 4620 4646 "maxima.ml" 147 4620 4695
+)
+"maxima.ml" 147 4620 4639 "maxima.ml" 147 4620 4641
+type(
+  P.t
+)
+ident(
+  def rb "maxima.ml" 147 4620 4646 "maxima.ml" 147 4620 4695
+)
+"maxima.ml" 147 4620 4635 "maxima.ml" 147 4620 4642
+type(
+  'k * P.t
+)
+"maxima.ml" 147 4620 4649 "maxima.ml" 147 4620 4651
+type(
+  'k
+)
+ident(
+  int_ref xa "maxima.ml" 147 4620 4628 "maxima.ml" 147 4620 4630
+)
+"maxima.ml" 147 4620 4652 "maxima.ml" 147 4620 4654
+type(
+  'k -> 'k -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"maxima.ml" 147 4620 4655 "maxima.ml" 147 4620 4657
+type(
+  'k
+)
+ident(
+  int_ref xb "maxima.ml" 147 4620 4636 "maxima.ml" 147 4620 4638
+)
+"maxima.ml" 147 4620 4649 "maxima.ml" 147 4620 4657
+type(
+  bool
+)
+"maxima.ml" 147 4620 4663 "maxima.ml" 147 4620 4676
+type(
+  PosetOrder.t
+)
+"maxima.ml" 147 4620 4682 "maxima.ml" 147 4620 4689
+type(
+  P.t -> P.t -> PosetOrder.t
+)
+ident(
+  int_ref P.order "maxima.ml" 33 997 999 "maxima.ml" 33 997 1033
+)
+"maxima.ml" 147 4620 4690 "maxima.ml" 147 4620 4692
+type(
+  P.t
+)
+ident(
+  int_ref ra "maxima.ml" 147 4620 4631 "maxima.ml" 147 4620 4633
+)
+"maxima.ml" 147 4620 4693 "maxima.ml" 147 4620 4695
+type(
+  P.t
+)
+ident(
+  int_ref rb "maxima.ml" 147 4620 4639 "maxima.ml" 147 4620 4641
+)
+"maxima.ml" 147 4620 4682 "maxima.ml" 147 4620 4695
+call(
+  tail
+)
+type(
+  PosetOrder.t
+)
+"maxima.ml" 147 4620 4646 "maxima.ml" 147 4620 4695
+type(
+  PosetOrder.t
+)
+"maxima.ml" 147 4620 4622 "maxima.ml" 147 4620 4696
+type(
+  'k * P.t -> 'k * P.t -> PosetOrder.t
+)
+"maxima.ml" 148 4697 4704 "maxima.ml" 148 4697 4705
+type(
+  'k
+)
+ident(
+  def x "maxima.ml" 148 4697 4706 "maxima.ml" 148 4697 4721
+)
+"maxima.ml" 148 4697 4706 "maxima.ml" 148 4697 4707
+type(
+  'l
+)
+ident(
+  def y "maxima.ml" 148 4697 4711 "maxima.ml" 148 4697 4721
+)
+"maxima.ml" 148 4697 4712 "maxima.ml" 148 4697 4713
+type(
+  'k
+)
+ident(
+  int_ref x "maxima.ml" 148 4697 4704 "maxima.ml" 148 4697 4705
+)
+"maxima.ml" 148 4697 4715 "maxima.ml" 148 4697 4716
+type(
+  'k -> 'l -> P.t
+)
+ident(
+  int_ref f "maxima.ml" 143 4431 4473 "maxima.ml" 143 4431 4474
+)
+"maxima.ml" 148 4697 4717 "maxima.ml" 148 4697 4718
+type(
+  'k
+)
+ident(
+  int_ref x "maxima.ml" 148 4697 4704 "maxima.ml" 148 4697 4705
+)
+"maxima.ml" 148 4697 4719 "maxima.ml" 148 4697 4720
+type(
+  'l
+)
+ident(
+  int_ref y "maxima.ml" 148 4697 4706 "maxima.ml" 148 4697 4707
+)
+"maxima.ml" 148 4697 4715 "maxima.ml" 148 4697 4720
+call(
+  stack
+)
+type(
+  P.t
+)
+"maxima.ml" 148 4697 4711 "maxima.ml" 148 4697 4721
+type(
+  'k * P.t
+)
+"maxima.ml" 148 4697 4699 "maxima.ml" 148 4697 4722
+type(
+  'k -> 'l -> 'k * P.t
+)
+"maxima.ml" 148 4697 4723 "maxima.ml" 148 4697 4725
+type(
+  'k list
+)
+ident(
+  int_ref m1 "maxima.ml" 143 4431 4475 "maxima.ml" 143 4431 4477
+)
+"maxima.ml" 148 4697 4726 "maxima.ml" 148 4697 4728
+type(
+  'l list
+)
+ident(
+  int_ref m2 "maxima.ml" 143 4431 4478 "maxima.ml" 143 4431 4480
+)
+"maxima.ml" 146 4601 4607 "maxima.ml" 148 4697 4729
+call(
+  stack
+)
+type(
+  ('k * P.t) list
+)
+"maxima.ml" 145 4555 4576 "maxima.ml" 148 4697 4729
+call(
+  tail
+)
+type(
+  P.t list
+)
+"maxima.ml" 149 4730 4736 "maxima.ml" 149 4730 4741
+type(
+  bool
+)
+"maxima.ml" 149 4730 4743 "maxima.ml" 149 4730 4747
+type(
+  bool
+)
+"maxima.ml" 149 4730 4736 "maxima.ml" 149 4730 4747
+type(
+  bool * bool
+)
+"maxima.ml" 149 4730 4751 "maxima.ml" 149 4730 4758
+type(
+  ?oorder:(P.t -> P.t -> PosetOrder.t) option ->
+  ('l * P.t -> P.t) -> ('l * P.t) list -> P.t list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 149 4730 4765 "maxima.ml" 149 4730 4766
+type(
+  'l
+)
+"maxima.ml" 149 4730 4767 "maxima.ml" 149 4730 4768
+type(
+  P.t
+)
+ident(
+  def r "maxima.ml" 149 4730 4773 "maxima.ml" 149 4730 4774
+)
+"maxima.ml" 149 4730 4764 "maxima.ml" 149 4730 4769
+type(
+  'l * P.t
+)
+"maxima.ml" 149 4730 4773 "maxima.ml" 149 4730 4774
+type(
+  P.t
+)
+ident(
+  int_ref r "maxima.ml" 149 4730 4767 "maxima.ml" 149 4730 4768
+)
+"maxima.ml" 149 4730 4759 "maxima.ml" 149 4730 4775
+type(
+  'l * P.t -> P.t
+)
+"maxima.ml" 150 4776 4783 "maxima.ml" 150 4776 4794
+type(
+  ('l * P.t -> 'l * P.t -> PosetOrder.t) ->
+  ('k -> 'l -> 'l * P.t) -> 'k list -> 'l list -> ('l * P.t) list
+)
+ident(
+  int_ref combine_gen "maxima.ml" 133 3986 3992 "maxima.ml" 133 3986 4003
+)
+"maxima.ml" 151 4795 4803 "maxima.ml" 151 4795 4805
+type(
+  'l
+)
+ident(
+  def ya "maxima.ml" 151 4795 4810 "maxima.ml" 151 4795 4870
+)
+"maxima.ml" 151 4795 4806 "maxima.ml" 151 4795 4808
+type(
+  P.t
+)
+ident(
+  def ra "maxima.ml" 151 4795 4810 "maxima.ml" 151 4795 4870
+)
+"maxima.ml" 151 4795 4802 "maxima.ml" 151 4795 4809
+type(
+  'l * P.t
+)
+"maxima.ml" 151 4795 4811 "maxima.ml" 151 4795 4813
+type(
+  'l
+)
+ident(
+  def yb "maxima.ml" 151 4795 4821 "maxima.ml" 151 4795 4870
+)
+"maxima.ml" 151 4795 4814 "maxima.ml" 151 4795 4816
+type(
+  P.t
+)
+ident(
+  def rb "maxima.ml" 151 4795 4821 "maxima.ml" 151 4795 4870
+)
+"maxima.ml" 151 4795 4810 "maxima.ml" 151 4795 4817
+type(
+  'l * P.t
+)
+"maxima.ml" 151 4795 4824 "maxima.ml" 151 4795 4826
+type(
+  'l
+)
+ident(
+  int_ref ya "maxima.ml" 151 4795 4803 "maxima.ml" 151 4795 4805
+)
+"maxima.ml" 151 4795 4827 "maxima.ml" 151 4795 4829
+type(
+  'l -> 'l -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"maxima.ml" 151 4795 4830 "maxima.ml" 151 4795 4832
+type(
+  'l
+)
+ident(
+  int_ref yb "maxima.ml" 151 4795 4811 "maxima.ml" 151 4795 4813
+)
+"maxima.ml" 151 4795 4824 "maxima.ml" 151 4795 4832
+type(
+  bool
+)
+"maxima.ml" 151 4795 4838 "maxima.ml" 151 4795 4851
+type(
+  PosetOrder.t
+)
+"maxima.ml" 151 4795 4857 "maxima.ml" 151 4795 4864
+type(
+  P.t -> P.t -> PosetOrder.t
+)
+ident(
+  int_ref P.order "maxima.ml" 33 997 999 "maxima.ml" 33 997 1033
+)
+"maxima.ml" 151 4795 4865 "maxima.ml" 151 4795 4867
+type(
+  P.t
+)
+ident(
+  int_ref ra "maxima.ml" 151 4795 4806 "maxima.ml" 151 4795 4808
+)
+"maxima.ml" 151 4795 4868 "maxima.ml" 151 4795 4870
+type(
+  P.t
+)
+ident(
+  int_ref rb "maxima.ml" 151 4795 4814 "maxima.ml" 151 4795 4816
+)
+"maxima.ml" 151 4795 4857 "maxima.ml" 151 4795 4870
+call(
+  tail
+)
+type(
+  PosetOrder.t
+)
+"maxima.ml" 151 4795 4821 "maxima.ml" 151 4795 4870
+type(
+  PosetOrder.t
+)
+"maxima.ml" 151 4795 4797 "maxima.ml" 151 4795 4871
+type(
+  'l * P.t -> 'l * P.t -> PosetOrder.t
+)
+"maxima.ml" 152 4872 4879 "maxima.ml" 152 4872 4880
+type(
+  'k
+)
+ident(
+  def x "maxima.ml" 152 4872 4881 "maxima.ml" 152 4872 4896
+)
+"maxima.ml" 152 4872 4881 "maxima.ml" 152 4872 4882
+type(
+  'l
+)
+ident(
+  def y "maxima.ml" 152 4872 4886 "maxima.ml" 152 4872 4896
+)
+"maxima.ml" 152 4872 4887 "maxima.ml" 152 4872 4888
+type(
+  'l
+)
+ident(
+  int_ref y "maxima.ml" 152 4872 4881 "maxima.ml" 152 4872 4882
+)
+"maxima.ml" 152 4872 4890 "maxima.ml" 152 4872 4891
+type(
+  'k -> 'l -> P.t
+)
+ident(
+  int_ref f "maxima.ml" 143 4431 4473 "maxima.ml" 143 4431 4474
+)
+"maxima.ml" 152 4872 4892 "maxima.ml" 152 4872 4893
+type(
+  'k
+)
+ident(
+  int_ref x "maxima.ml" 152 4872 4879 "maxima.ml" 152 4872 4880
+)
+"maxima.ml" 152 4872 4894 "maxima.ml" 152 4872 4895
+type(
+  'l
+)
+ident(
+  int_ref y "maxima.ml" 152 4872 4881 "maxima.ml" 152 4872 4882
+)
+"maxima.ml" 152 4872 4890 "maxima.ml" 152 4872 4895
+call(
+  stack
+)
+type(
+  P.t
+)
+"maxima.ml" 152 4872 4886 "maxima.ml" 152 4872 4896
+type(
+  'l * P.t
+)
+"maxima.ml" 152 4872 4874 "maxima.ml" 152 4872 4897
+type(
+  'k -> 'l -> 'l * P.t
+)
+"maxima.ml" 152 4872 4898 "maxima.ml" 152 4872 4900
+type(
+  'k list
+)
+ident(
+  int_ref m1 "maxima.ml" 143 4431 4475 "maxima.ml" 143 4431 4477
+)
+"maxima.ml" 152 4872 4901 "maxima.ml" 152 4872 4903
+type(
+  'l list
+)
+ident(
+  int_ref m2 "maxima.ml" 143 4431 4478 "maxima.ml" 143 4431 4480
+)
+"maxima.ml" 150 4776 4782 "maxima.ml" 152 4872 4904
+call(
+  stack
+)
+type(
+  ('l * P.t) list
+)
+"maxima.ml" 149 4730 4751 "maxima.ml" 152 4872 4904
+call(
+  tail
+)
+type(
+  P.t list
+)
+"maxima.ml" 153 4905 4911 "maxima.ml" 153 4905 4915
+type(
+  bool
+)
+"maxima.ml" 153 4905 4917 "maxima.ml" 153 4905 4921
+type(
+  bool
+)
+"maxima.ml" 153 4905 4911 "maxima.ml" 153 4905 4921
+type(
+  bool * bool
+)
+"maxima.ml" 153 4905 4925 "maxima.ml" 153 4905 4932
+type(
+  ?oorder:(P.t -> P.t -> PosetOrder.t) option ->
+  ('k * 'l * P.t -> P.t) -> ('k * 'l * P.t) list -> P.t list
+)
+ident(
+  int_ref map_gen "maxima.ml" 92 2683 2689 "maxima.ml" 92 2683 2696
+)
+"maxima.ml" 153 4905 4939 "maxima.ml" 153 4905 4940
+type(
+  'k
+)
+"maxima.ml" 153 4905 4941 "maxima.ml" 153 4905 4942
+type(
+  'l
+)
+"maxima.ml" 153 4905 4943 "maxima.ml" 153 4905 4944
+type(
+  P.t
+)
+ident(
+  def r "maxima.ml" 153 4905 4949 "maxima.ml" 153 4905 4950
+)
+"maxima.ml" 153 4905 4938 "maxima.ml" 153 4905 4945
+type(
+  'k * 'l * P.t
+)
+"maxima.ml" 153 4905 4949 "maxima.ml" 153 4905 4950
+type(
+  P.t
+)
+ident(
+  int_ref r "maxima.ml" 153 4905 4943 "maxima.ml" 153 4905 4944
+)
+"maxima.ml" 153 4905 4933 "maxima.ml" 153 4905 4951
+type(
+  'k * 'l * P.t -> P.t
+)
+"maxima.ml" 154 4952 4959 "maxima.ml" 154 4952 4970
+type(
+  ('k * 'l * P.t -> 'k * 'l * P.t -> PosetOrder.t) ->
+  ('k -> 'l -> 'k * 'l * P.t) -> 'k list -> 'l list -> ('k * 'l * P.t) list
+)
+ident(
+  int_ref combine_gen "maxima.ml" 133 3986 3992 "maxima.ml" 133 3986 4003
+)
+"maxima.ml" 155 4971 4979 "maxima.ml" 155 4971 4981
+type(
+  'k
+)
+ident(
+  def xa "maxima.ml" 155 4971 4989 "maxima.ml" 155 4971 5064
+)
+"maxima.ml" 155 4971 4982 "maxima.ml" 155 4971 4984
+type(
+  'l
+)
+ident(
+  def ya "maxima.ml" 155 4971 4989 "maxima.ml" 155 4971 5064
+)
+"maxima.ml" 155 4971 4985 "maxima.ml" 155 4971 4987
+type(
+  P.t
+)
+ident(
+  def ra "maxima.ml" 155 4971 4989 "maxima.ml" 155 4971 5064
+)
+"maxima.ml" 155 4971 4978 "maxima.ml" 155 4971 4988
+type(
+  'k * 'l * P.t
+)
+"maxima.ml" 155 4971 4990 "maxima.ml" 155 4971 4992
+type(
+  'k
+)
+ident(
+  def xb "maxima.ml" 155 4971 5003 "maxima.ml" 155 4971 5064
+)
+"maxima.ml" 155 4971 4993 "maxima.ml" 155 4971 4995
+type(
+  'l
+)
+ident(
+  def yb "maxima.ml" 155 4971 5003 "maxima.ml" 155 4971 5064
+)
+"maxima.ml" 155 4971 4996 "maxima.ml" 155 4971 4998
+type(
+  P.t
+)
+ident(
+  def rb "maxima.ml" 155 4971 5003 "maxima.ml" 155 4971 5064
+)
+"maxima.ml" 155 4971 4989 "maxima.ml" 155 4971 4999
+type(
+  'k * 'l * P.t
+)
+"maxima.ml" 155 4971 5006 "maxima.ml" 155 4971 5008
+type(
+  'k
+)
+ident(
+  int_ref xa "maxima.ml" 155 4971 4979 "maxima.ml" 155 4971 4981
+)
+"maxima.ml" 155 4971 5009 "maxima.ml" 155 4971 5011
+type(
+  'k -> 'k -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"maxima.ml" 155 4971 5012 "maxima.ml" 155 4971 5014
+type(
+  'k
+)
+ident(
+  int_ref xb "maxima.ml" 155 4971 4990 "maxima.ml" 155 4971 4992
+)
+"maxima.ml" 155 4971 5006 "maxima.ml" 155 4971 5014
+type(
+  bool
+)
+"maxima.ml" 155 4971 5015 "maxima.ml" 155 4971 5017
+type(
+  bool -> bool -> bool
+)
+ident(
+  ext_ref Pervasives.( || )
+)
+"maxima.ml" 155 4971 5018 "maxima.ml" 155 4971 5020
+type(
+  'l
+)
+ident(
+  int_ref ya "maxima.ml" 155 4971 4982 "maxima.ml" 155 4971 4984
+)
+"maxima.ml" 155 4971 5021 "maxima.ml" 155 4971 5023
+type(
+  'l -> 'l -> bool
+)
+ident(
+  ext_ref Pervasives.( == )
+)
+"maxima.ml" 155 4971 5024 "maxima.ml" 155 4971 5026
+type(
+  'l
+)
+ident(
+  int_ref yb "maxima.ml" 155 4971 4993 "maxima.ml" 155 4971 4995
+)
+"maxima.ml" 155 4971 5018 "maxima.ml" 155 4971 5026
+type(
+  bool
+)
+"maxima.ml" 155 4971 5006 "maxima.ml" 155 4971 5026
+type(
+  bool
+)
+"maxima.ml" 155 4971 5032 "maxima.ml" 155 4971 5045
+type(
+  PosetOrder.t
+)
+"maxima.ml" 155 4971 5051 "maxima.ml" 155 4971 5058
+type(
+  P.t -> P.t -> PosetOrder.t
+)
+ident(
+  int_ref P.order "maxima.ml" 33 997 999 "maxima.ml" 33 997 1033
+)
+"maxima.ml" 155 4971 5059 "maxima.ml" 155 4971 5061
+type(
+  P.t
+)
+ident(
+  int_ref ra "maxima.ml" 155 4971 4985 "maxima.ml" 155 4971 4987
+)
+"maxima.ml" 155 4971 5062 "maxima.ml" 155 4971 5064
+type(
+  P.t
+)
+ident(
+  int_ref rb "maxima.ml" 155 4971 4996 "maxima.ml" 155 4971 4998
+)
+"maxima.ml" 155 4971 5051 "maxima.ml" 155 4971 5064
+call(
+  tail
+)
+type(
+  PosetOrder.t
+)
+"maxima.ml" 155 4971 5003 "maxima.ml" 155 4971 5064
+type(
+  PosetOrder.t
+)
+"maxima.ml" 155 4971 4973 "maxima.ml" 155 4971 5065
+type(
+  'k * 'l * P.t -> 'k * 'l * P.t -> PosetOrder.t
+)
+"maxima.ml" 156 5066 5073 "maxima.ml" 156 5066 5074
+type(
+  'k
+)
+ident(
+  def x "maxima.ml" 156 5066 5075 "maxima.ml" 156 5066 5093
+)
+"maxima.ml" 156 5066 5075 "maxima.ml" 156 5066 5076
+type(
+  'l
+)
+ident(
+  def y "maxima.ml" 156 5066 5080 "maxima.ml" 156 5066 5093
+)
+"maxima.ml" 156 5066 5081 "maxima.ml" 156 5066 5082
+type(
+  'k
+)
+ident(
+  int_ref x "maxima.ml" 156 5066 5073 "maxima.ml" 156 5066 5074
+)
+"maxima.ml" 156 5066 5084 "maxima.ml" 156 5066 5085
+type(
+  'l
+)
+ident(
+  int_ref y "maxima.ml" 156 5066 5075 "maxima.ml" 156 5066 5076
+)
+"maxima.ml" 156 5066 5087 "maxima.ml" 156 5066 5088
+type(
+  'k -> 'l -> P.t
+)
+ident(
+  int_ref f "maxima.ml" 143 4431 4473 "maxima.ml" 143 4431 4474
+)
+"maxima.ml" 156 5066 5089 "maxima.ml" 156 5066 5090
+type(
+  'k
+)
+ident(
+  int_ref x "maxima.ml" 156 5066 5073 "maxima.ml" 156 5066 5074
+)
+"maxima.ml" 156 5066 5091 "maxima.ml" 156 5066 5092
+type(
+  'l
+)
+ident(
+  int_ref y "maxima.ml" 156 5066 5075 "maxima.ml" 156 5066 5076
+)
+"maxima.ml" 156 5066 5087 "maxima.ml" 156 5066 5092
+call(
+  stack
+)
+type(
+  P.t
+)
+"maxima.ml" 156 5066 5080 "maxima.ml" 156 5066 5093
+type(
+  'k * 'l * P.t
+)
+"maxima.ml" 156 5066 5068 "maxima.ml" 156 5066 5094
+type(
+  'k -> 'l -> 'k * 'l * P.t
+)
+"maxima.ml" 156 5066 5095 "maxima.ml" 156 5066 5097
+type(
+  'k list
+)
+ident(
+  int_ref m1 "maxima.ml" 143 4431 4475 "maxima.ml" 143 4431 4477
+)
+"maxima.ml" 156 5066 5098 "maxima.ml" 156 5066 5100
+type(
+  'l list
+)
+ident(
+  int_ref m2 "maxima.ml" 143 4431 4478 "maxima.ml" 143 4431 4480
+)
+"maxima.ml" 154 4952 4958 "maxima.ml" 156 5066 5101
+call(
+  stack
+)
+type(
+  ('k * 'l * P.t) list
+)
+"maxima.ml" 153 4905 4925 "maxima.ml" 156 5066 5101
+call(
+  tail
+)
+type(
+  P.t list
+)
+"maxima.ml" 143 4431 4483 "maxima.ml" 156 5066 5101
+type(
+  P.t list
+)
