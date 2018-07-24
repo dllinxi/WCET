@@ -1,0 +1,95 @@
+<!-- CACHES ::= -->
+<cache-config>
+	(<icache ref="ID"/> | <icache> CACHE </icache>)
+	(<dcache ref="ID"/> | <dcache> CACHE </dcache>)
+	(<cache id="ID"/> | <cache> CACHE </cache>)*
+<cache-config>
+A cache configuration may:
+have without cache – cache-config is empty,
+contain only instruction cache – cache-config contains only an icache element,
+be split (Harvard architecture) – cache-config contains an element icache and an element dcache,
+or unified – cache-config contains only an element named cache.
+<!-- CACHE ::= -->
+	<block_bits>INT</block_bits> defines the size of the cache blocks  2^B 
+	<row_bits>INT</row_bits>determines the number of sets in the cache
+	<set_bits>INT<set_bits>determines the number of blocks in each set
+	(<next ref="ID"/> | <next> CACHE </next>)?
+	allows to link the current cache at level Li to a cache at level Li+1.
+	
+  	<replace>NONE|OTHER||LRU|RANDOM|FIFO|PLRU</replace>?	<!-- default: LRU -->
+ 	<write>WRITE_THROUGH|WRITE_BACK</write>?				<!-- default: WRITE_THROUGH --> 
+	<allocate>BOOL</allocate>?	
+replace describes the replacement policy that may be:
+
+NONE – null value (usually unused in this format),
+
+OTHER – unknown policy,
+
+LRU (Least Recently Used) – the replaced block is the least recently used,
+
+RANDOM – the replaced block is selected randomly,
+
+FIFO (First-In First-Out) – also called Round-Robin, blocks are organized as a queue and the last block is replaced,
+
+PLRU (Pseudo-LRU) – this policy mimics LRU but with a lower hardware cost.
+
+write describes the write policy of the cache (when a block is modified):
+
+WRITE_THROUGH – means that a write to block is immediately propagated
+ to the main memory to avoid to write-back the block when it is wiped out;
+ if the allocate element is set to true, a write-through is performed but, 
+ if the block is not already in the cache, it is allocated and loaded.
+
+WRITE_BACK – means that a write to a block is just performed in the cache 
+and the memory modification will be propagated to the main memory 
+only when the block is wiped out; if the block is not in the cache, it is loaded; 
+allocate element is not used.
+
+a simple configuration of an architecture with only one instruction cache:
+block of 16 bytes, 4-way associative, 128 sets, 8 Kb size:
+<cache-config>
+	<icache>
+		<block_bits>4</block_bits>
+		<row_bits>7</row_bits>
+		<way_bits>2</way_bits>
+		<replace>LRU</replace>
+	</icache>
+</cache-config>
+
+ARM9:64 ways, 32 b per block, 15Kb size
+<cache-config>
+	<icache>
+		<block_bits>6</block_bits>
+		<row_bits>3</row_bits>
+		<way_bits>5</way_bits>
+		<replace>RANDOM</replace>
+	</icache>
+	<dcache>
+		<block_bits>6</block_bits>
+		<row_bits>3</row_bits>
+		<way_bits>5</way_bits>
+		<replace>RANDOM</replace>
+	</dcache>
+</cache-config>
+
+split L1 cache (16 Kb) and unified L2 (256 Kb):
+<cache-config>
+	<icache>
+		<block_bits>5</block_bits>
+		<row_bits>9</row_bits>
+		<way_bits>2</way_bits>
+		<replace>RANDOM</replace>
+		<next id="M2">
+			<block_bits>6</block_bits>
+			<row_bits>8</row_bits>
+			<way_bits>4</way_bits>
+			<replace>RANDOM</replace>
+		</next>
+	</icache>
+	<dcache>
+		<block_bits>5</block_bits>
+		<row_bits>9</row_bits>
+		<way_bits>2</way_bits>
+		<replace>RANDOM</replace>
+		<next ref="L2"/>
+	</dcache>

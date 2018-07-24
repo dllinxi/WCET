@@ -1,0 +1,201 @@
+<!-- pipeline ::= -->
+	<processor class="otawa::hard::Processor">
+		<arch>ARCH</arch>
+		<model>MODEL</model>
+		<builder>BUILDER</builder>
+		<stages> <!-- stage -->+ </stages>
+		<queues> <!-- queue -->+ </qeues>
+	</processor>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE processor SYSTEM "/home/casse/otawa/otawa/data/dtd/pipeline.dtd">
+<processor class="otawa::hard::Processor"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<arch></arch>
+	<!-- gives the programming model (instruction set, registers, etc) 
+	supported by the pipeline. Current values includes arm, ppc, sparc, tricore, etc.
+	-->
+	<model>generic</model>
+	<!--represents the accurate model of the hardware: 
+	for example, if ARCH is arm, usual models includes armv5t, cortexa8.
+	-->
+	<builder>OTAWA</builder>
+	<!-- gives the name of the microprocessor builder 
+	like atmel, nxp, etc for an arm architecture.
+	-->
+	
+	<!-- stage ::= -->
+<!--The stages elements gives the list of stages composing the pipeline 
+that are detailed in the following sections. 
+Notice this list is ordered according to the order of stages in the actual pipeline.
+ The first stage must be of type fetch while the last stage must be of type commit.
+ -->
+ <stage id="ID">
+		<name>STRING</name>?
+		<width>INT</width>?
+		<!--represents the number of instructions that are processed in parallel by the stage.
+			If not given, the default is 1.
+		-->
+		<latency>INT</latency>?
+		<!--gives the basic latency (in cycle) of the stage in order to 
+		process as many instructions as its width. As a default, the latency is of 1 cycle.
+		-->
+		<type>fetch|lazy|commit|exec</type>?
+		<!--fetch – ever the first stage of the pipeline, 
+		it is reponsible for fetching instrucions from the memory. 
+		Consequently, its throughput depends not only on its own properties
+		but also on the time spent to access the memory.
+		-->
+		
+		<!--lazy – the simpler stage type whose only goal 
+		is to spent time in the instruction execution.
+		-->
+		
+		<!--commit – the last stage where the instructions go out of the pipeline.-->
+		
+		<!--exec – represents the stage where an instruction is executed. 
+		It is complexe because 
+		(a) it is often split in different function units(see below) and 
+		(b) this stage handles the data dependencies between the instruction.
+		-->
+   <!-- exec-stage ::= -->
+	...
+	<dispatch> <!-- instruction match -->+ </dispatch>
+	<fus> <!-- fu -->+ </fus>
+	The fus element gives the list of functional unit . 
+	The dispatch allows to dispatch instruction for functional unit. 
+	It is made of a list of inst elements:
+	<!-- instruction match ::= -->
+	<inst>
+		<type>masks</type>
+		<fu ref="ID"/>
+	</inst>
+	
+	<!-- fu ::= -->
+	<name>STRING</name>? 
+	<width>INT</width>? 
+	defines the number of functional unit existing, that is, 
+	the number of instruction that may be executed in the 
+	current functional unit. Its value is 1 instruction as a default.
+	
+	<latency>INT</latency>?
+	escribes how many cycles is required for an instruction to traverse
+	the functional unit. Its value is 1 cycle as a default.
+	<pipelined>BOOL</pipelined>	
+	 express a fact that a multiple-cycle functional unit is not 
+	 blocked until the end of the instruction: at each cycle, 
+	 it can accept another instruction. Considered false as default.
+	
+	a multiple ALU functional unit in a superscalar microprocessor:
+	<fu>
+	<name>ALU</name>
+	<width>4</width>
+	<latency>1</latency>
+    </fu>
+	
+	a multiplication of 4-cycles supporting pipelining of operations:
+	<fu>
+	<name>MUL</name>
+	<latency>4</latency>
+	<pipelined>true</pipelined>
+    </fu>
+	
+	 a floating-point division functional unit 
+	 of 10-cyles but that does not support pipelinging :
+	 <fu>
+	<name>FDIV</name>
+	<latency>10</latency>
+	<pipelined>false</false>
+    </fu>
+	
+	</stage>
+	<!-- queue ::= -->
+	A queue is a small data structure containing and buffering instruction between stages. 
+<queue>
+	<name>STRING</name>?
+	<size>INT</size>
+	 gives the maximum number of instructions the queue can contain
+	 
+	<input ref="ID"/>
+	represents the stage that deposits instructions in the queue.
+	
+	<output ref="ID"/>
+	represents the stage that extract instructions from the queue.
+	
+	<intern>  <stage ref="ID"/>+ </intern>?
+	only used in the case of queues implementing a re-order buffer.
+</queue>
+
+ simple FIFO queue between a fetch stage and a decode stage:
+<queue>
+	<name>FETCH_QUEUE</name>
+	<size>8</size>
+	<input ref="FI"/>
+	<output ref="DI"/>
+</queue>
+
+a reorder buffer stores instructions until they have been executed by the EX stage:
+<queue>
+	<name>ROB_QUEUE</name>
+	<size>16</size>
+	<input ref="DI"/>
+	<intern>
+		<stage ref="EX"/>
+	</intern>
+	<ouput ref="CM"/>
+</queue>
+	
+	
+	<stages>
+		<stage id="FE">
+			<name>FE</name>
+			<width>1</width>
+			<type>FETCH</type>
+		</stage>
+		<stage id="DE">
+			<name>DE</name>
+			<width>1</width>
+			<type>LAZY</type>
+		</stage>
+
+		<stage id="EX">
+			<name>EX</name>
+			<type>EXEC</type>
+			<width>1</width>
+			<ordered>true</ordered>
+			<fus>
+				<fu id="ALL">
+					<name>ALL</name>
+					<width>1</width>
+					<mem>true</mem>
+				</fu>
+			</fus>
+			<dispatch>
+				<inst>
+					<type/>
+					<fu ref="ALL"/>
+				</inst>
+			</dispatch>
+
+		</stage>
+
+		<stage id="CM">
+			<name>CM</name>
+			<type>COMMIT</type>
+			<width>1</width>
+			<latency>0</latency>
+		</stage>
+
+
+	</stages>
+
+	<queues>
+		<queue>
+			<name>FQ</name>
+			<size>8</size>
+			<input ref="FE"/>
+			<output ref="DE"/>
+		</queue>
+	</queues>
+
+</processor>

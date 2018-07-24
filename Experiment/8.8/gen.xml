@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?>
+<otawa-script xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<!--Description-->
+<name>Generic WCET Computation</name> <!--display to user-->
+
+<info><!-- contain a whole documentation describing the script, its applications and its limitation(XHtML)-->
+This script proposes a generic approach to compute WCET. Mainly, this approach
+is based on IPET (Implicit Enumeration Technique) and is composed of:
+<ul>
+<li>support for L1 instruction cache if any (LRU replacement only),</li>
+<li>very basic support for L1 data cache if any (LRU replacement only),</li>
+<li>support for branch prediction by category if any,</li>
+<li>computation by execution graph of block timing.</li>
+</ul>
+
+If no processor configuration is given, a 5-level stage pipeline is considered.
+Other hardware components are optional and must be provided by the user expressed
+in the OTAWA XML formats.
+
+In addition to the pure WCET time in cycle, the user can request other information
+to be provided:
+<ul>
+<li>time and frequency by block,</li>
+<li>output of CFG used  by the calculation,</li>
+<li>dump in HTML of the produced ILP system of the IPET approach.</li>
+</ul>
+<path to="PATH"/>* <!--The to attributes contain paths that are used to retrieve plugins used in the WCET computation.-->
+</info>
+
+<!-- IDENTIFICATION ::= -->
+<!--mainly identifier about the hardware (architecture, model, ABI)-->
+<id>
+    <arch>TEXT</arch>
+	<!--dentify the progamming model,
+	also called the ISA (Instruction Set Architecture) of the supported hardware.
+	Common values include arm, powerpc, sparc, x86, etc.-->
+	<abi>TEXT<abi>
+	<!--gives the Application Binary Interface 
+	with common values being eabi, elf, linux, etc.-->
+	<mach>TEXT</mach>
+	<!--allows to precisely identify the processor model the script is targetting. 
+	-->
+	<!--note: Only the arch element is mandatory to be able to check 
+	if it supports the instruction set used in the processed executable file.
+-->
+</id>
+
+
+<!-- PLATFORM :: -->
+<!-- provide details about the hardware feature of the targeted system.
+     The items found in the PLATFORM may described directly 
+	 in the script or in a separate file included by XInclude. 
+-->
+<platform>
+	<!-- PIPELINE -->?
+	<!-- CACHES -->?
+	<!-- MEMORY -->?
+	<xi:include href="mpc5554/pipeline.xml"/>
+    <xi:include href="mpc5554/cache.xml"/>
+    <xi:include href="mpc5554/memory.xml"/>
+	<!-- relative paths -->
+</platform>
+
+
+<!-- CONFIGURATION ::= -->
+<!-- lists a set of items to let the human user parameterize the computation -->
+<configuration>
+    <!-- CONFIGURATION-ITEM -->*
+
+
+<!-- CONFIGURATION-ITEM ::= -->
+<item
+    name="TEXT"
+    type="bool|int|string|range|enum"
+    default="TEXT"?
+    label="TEXT"?>
+    	<help> <!-- TEXT --> </help>
+</item>
+  
+<item name="flash_prefetch" type="bool" default="true" label="Flash Prefetch">
+	<help>MPC5554 provides flash prefetching to improve performances.
+	You may activate it or no.</help>
+	<!-- allows to activate or not the use of prefetching from a flash memory -->
+</item>
+
+<item name="ramwws" type="int" default="0" label="SRAM write wait states">
+<help>Defines the number of wait state for a SRAM write. One wait cycle delays one cycle.</help>
+</item>
+
+<item name="x" type="String" default="" label=" ">
+<help> A common usage of this type of item is to pass a path in the file system to 
+a specific resource used in the computation but any use of a string is supported.</help>
+</item>
+
+<item name="trp" type="range" default="2" label="SDRAM precharge time" low="2" high="3">
+<!-- range configuration item is a bit like the int type
+    but with bounds on the possible given value. 
+-->
+	<help>In cycles.</help>
+	<!-- the range in action to define the pre-charge time 
+	of a dynamic ram in the range of [2, 3].
+	-->
+</item>
+
+<item name="multiplier" type="enum" label="multiplier" default="m32x32">
+		<help>Multiplier implementation: defines the multiplier latency.</help>
+		<value label="iterative" value="0" default="true"/>
+		<value label="m16x16 + pipeline" value="1"/>
+		<value label="m16x16" value="2"/>
+		<value label="m32x8" value="3"/>
+		<value label="m32x16" value="4"/>
+		<value label="m32x32" value="5"/>
+		<!-- allows to select a multiplier implementation 
+		in order to compute for a processor delivered as an IP.
+	    -->
+</item>
+
+</configuration>
+
+
+<configuration>
+	<item name="pipeline" type="string" label="pipeline description file">
+		<help>Select the path of the pipeline description file to use.
+		If not configured, use a default 5-stage pipeline.</help>
+	</item>
+	<item name="cache" type="string" label="cache description file">
+		<help>Select the path of the cache description file to use.
+		If none is provided, the hardware is considered without caches.</help>
+	</item>
+	<item name="memory" type="string" label="memory description file">
+		<help>Select the path of the memory description file to use.
+		If none is provided, the memory is made of only one 32-bits bank with 10-cycles access.</help>
+	</item>
+	<item name="bbstats" type="bool" default="false" label="BB stat">
+		<help>Set to true, display statistics on execution time
+		and execution occurrence count of BBs.</help>
+	</item>
+</configuration>
+
+<script>
+
+<!-- SCRIPT ::= -->
+    <script>
+    	<!-- CONFIG -->*
+    	<!-- STEP -->+
+    </script>
+	<!-- A step may invoke a code processor (attribute processor) 
+	or require a feature (attribute feature). 
+	If a step contains configuration items,
+	they are only applied to this step and to code processors 
+	automatically invoked from this step.
+	-->
+	
+
+	<!-- pipeline configuration -->
+	<xsl:variable name="pipeline_path">
+		<xsl:if test="$pipeline=''"><xsl:value-of select="$ORIGIN"/>/generic/pipeline.xml</xsl:if>
+		<xsl:if test="$pipeline!=''"><xsl:value-of select="$pipeline"/></xsl:if>
+	</xsl:variable>
+	<config name="otawa::PROCESSOR_PATH" value="{$pipeline_path}"/>
+	<xsl:if test="$VERBOSE > 0">
+		<xsl:message> pipeline = <xsl:value-of select="$pipeline_path"/></xsl:message>
+	</xsl:if>
+
+	<!-- cache configuration -->
+	<xsl:if test="$cache!=''">
+		<config name="otawa::CACHE_CONFIG_PATH" value="{$cache}"/>
+	</xsl:if>
+	<xsl:if test="$VERBOSE > 0">
+		<xsl:message> cache = <xsl:value-of select="$cache"/></xsl:message>
+	</xsl:if>
+
+	<!-- memory configuration -->
+	<xsl:if test="$memory!=''">
+		<config name="otawa::MEMORY_PATH" value="{$memory}"/>
+	</xsl:if>
+
+	<!-- CFG building -->
+	<step processor="otawa::Virtualizer"/>
+
+	<!-- cache analysis -->
+	<step require="otawa::ipet::CACHE_SUPPORT_FEATURE"/>
+
+	<!-- timing analysis -->
+	<step require="otawa::etime::EDGE_TIME_FEATURE"/>
+	<step require="otawa::ipet::WCET_FEATURE"/>
+
+	<!-- outputs -->
+	<xsl:if test="$bbstats">
+		<step processor="otawa::BBRatioDisplayer"/>
+	</xsl:if>
+
+</script>
+
+</otawa-script>

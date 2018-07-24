@@ -1,0 +1,3 @@
+checksum "loop_powerpc_elf" 0x3cfd991f;
+// Function main (test.c:1)
+loop "main" + 0x44 ?; // 01800244 (test.c:5)
